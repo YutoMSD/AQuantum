@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  29 OCT 2024 18:27
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  29 OCT 2024 18:44
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2258,32 +2258,9 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 6.73553pt on input line 5.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 4.8111pt on input line 5.
-
-
-LaTeX Warning: Reference `minimum' on page 1 undefined on input line 5.
-
 (load cache: extra_lmroman10-italic.luc)
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 (Font)              No change on input line 12.
-
-LaTeX Warning: Reference `basis_expansion2' on page 1 undefined on input line 2
-0.
-
-
-LaTeX Warning: Reference `basis_expansion' on page 1 undefined on input line 20
-.
-
-
-LaTeX Warning: Reference `basis_expansion3' on page 1 undefined on input line 2
-5.
-
-
-LaTeX Warning: Reference `minimum' on page 1 undefined on input line 25.
-
-
-LaTeX Warning: Reference `proposition-ref:principle_of_varidation' on page 1 un
-defined on input line 45.
-
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
 (Font)              scaled to size 6.73553pt on input line 65.
 (load cache: extra_lmroman7-italic.luc)
@@ -2305,13 +2282,11 @@ LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
 (Font)              scaled to size 5.77332pt on input line 65.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 (Font)              No change on input line 65.
-
-LaTeX Warning: Reference `minimum' on page 1 undefined on input line 70.
-
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 (Font)              No change on input line 76.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 (Font)              No change on input line 81.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2353,13 +2328,6 @@ See the caption package documentation for explanation.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2368,20 +2336,19 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51477 strings out of 476447
+ 51475 strings out of 476447
  195698,2373549 words of node,token memory allocated
  2505 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 48 sub_mlist, 1 glyph, 742 attribu
 te, 77 glue_spec, 79 attribute_list, 3 write, 14 user_defined nodes
-   avail lists: 1:40,2:49772,3:823,4:1232,5:659,6:74,7:5480,8:37,9:3636,10:17,11
+   avail lists: 1:41,2:50083,3:849,4:1213,5:659,6:81,7:5625,8:39,9:3678,10:17,11
 :6
- 72387 multiletter control sequences out of 65536+600000
+ 72385 multiletter control sequences out of 65536+600000
  89 fonts using 47051671 bytes
  115i,18n,118p,1925b,1025s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
 f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic.o
 tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-italic
-.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold
 .otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.
 otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAj
 iGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/har
@@ -2399,10 +2366,10 @@ cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
 .pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b>
-Output written on main.pdf (2 pages, 158876 bytes).
+Output written on main.pdf (2 pages, 157702 bytes).
 
-PDF statistics: 154 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+PDF statistics: 155 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
  27 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
