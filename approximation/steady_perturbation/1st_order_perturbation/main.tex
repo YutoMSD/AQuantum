@@ -1,52 +1,52 @@
-\documentclass{standalone}
+\documentclass{report}
 \input{../../../head.tex}
 \begin{document}
-  式(\ref{1st})の両辺に$\bra{n^1}$を作用すると
-  \begin{equation}
-    \bra{n^0}E_n^1\ket{n^0}=\bra{n^0}\hat{V}\ket{n^0}
-  \end{equation}
+  \refe{1st}の両辺に$\bra{n^1}$を作用すると
+  \begin{align}
+    \bra{n^0}E_n^1\ket{n^0} = \bra{n^0}\hat{V}\ket{n^0}
+  \end{align}
   を得る．よって，1次摂動によるエネルギー補正は
   \begin{itembox}[l]{1次摂動によるエネルギー補正}
-  \begin{equation}
-    E_n^1=\bra{n^0}\hat{V}\ket{n^0}
-  \end{equation}
+    \begin{align}
+      E_n^1 = \bra{n^0}\hat{V}\ket{n^0}
+    \end{align}
   \end{itembox}
   である．
-  \begin{myex}{}{}ヘリウム原子の基底エネルギー
-    \begin{equation}
-      \hat{H}=\hat{H}^0+\frac{e^2}{4\pi\epsilon_0r_{12}}\equiv\hat{H}^0+\hat{V}
-    \end{equation}
+  \begin{myex}{ヘリウム原子の基底エネルギー}{}
+    \begin{align}
+      \hat{H} = \hat{H}^0 + \frac{e^2}{4\pi\epsilon_0r_{12}}\equiv\hat{H}^0 + \hat{V}
+    \end{align}
     $\hat{H}^0$の基底エネルギーは
-    \begin{equation}
-      \psi^0=\frac{Z^3}{\pi a_0^3}\mathrm{e}^{-Z(r_1+r_2)/a_0}
-    \end{equation}
+    \begin{align}
+      \psi^0 = \frac{Z^3}{\pi a_0^3}\e^{-Z(r_1+r_2)/a_0}
+    \end{align}
     である．よって，$\hat{V}$による1次のエネルギー補正は以下のように計算できる．
     \begin{align}
-      E^1&=\bra{\psi^0}\hat{V}\ket{\psi^0}\\
-      &=\int{\psi^0}^{*}\frac{e^2}{4\pi\epsilon_0r_{12}}\psi^0d\bm{r}_1\bm{r}_2\\
-      &=\frac{5}{4}Z\ \mathrm{Ry}
+      E^1 &= \bra{\psi^0}\hat{V}\ket{\psi^0}\\
+      &= \int{\psi^0}^{*}\frac{e^2}{4\pi\epsilon_0r_{12}}\psi^0\dd{\bm{r}_1}\dd{\bm{r}_2} \\
+      &= \frac{5}{4}Z\ \mathrm{Ry}
     \end{align}
     よって，基底エネルギー
     \begin{align}
       E_0&=E^0+E^1\\
-      &=-8\ \mathrm{Ry}+\frac{5}{4}\times{2}\ \mathrm{Ry}\\
-      &=-74.8\ \mathrm{eV}
+      &= -8\ \mathrm{Ry}+\frac{5}{4}\times{2}\ \mathrm{Ry}\\
+      &= -74.8\ \mathrm{eV}
     \end{align}
     を得る\footnote{測定値は$-78.6\ \mathrm{eV}$}．
   \end{myex}
-  次に固有ベクトルの補正を求める．式(\ref{1st})の両辺に$\bra{m^0}\ (m\ne n)$を作用する．
+  次に固有ベクトルの補正を求める．\refe{1st}の両辺に$\bra{m^0}\ (m\ne n)$を作用する．
   \begin{align}
     (E_n^0-\hat{H}^0)\bra{m^0}\ket{n^1}+0=\bra{m^0}\hat{V}\ket{n^0}\\
     \braket{m^0}{n^1}=\frac{\bra{m^0}\hat{V}\ket{n^0}}{E_n^0-E_m^0}\\
   \end{align}
   ただし，エネルギー縮退は無く，$E_n^0-E_m^0$とする．以上より，
-  \begin{equation}
-    \ket{n^1}=\sum_{m}\ket{m^0}\braket{m^0}{n^1}
-  \end{equation}
-  \begin{screen}
-  \begin{equation}
-    \ket{n^1}=\sum_{m\ne n}\frac{\bra{m^0}\hat{V}\ket{n^0}}{E_n^0-E_m^0}\ket{m^0}
-  \end{equation}
-  \end{screen}
+  \begin{align}
+    \ket{n^1} = \sum_{m}\ket{m^0}\braket{m^0}{n^1}
+  \end{align}
+    \begin{screen}
+      \begin{align}
+        \ket{n^1} = \sum_{m\ne n}\frac{\bra{m^0}\hat{V}\ket{n^0}}{E_n^0 - E_m^0}\ket{m^0}
+      \end{align}
+    \end{screen}
   を得る．
 \end{document}
