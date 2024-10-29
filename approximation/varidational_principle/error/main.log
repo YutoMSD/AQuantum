@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  29 OCT 2024 01:39
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  29 OCT 2024 20:17
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -58,8 +58,9 @@ var/luatex-cache/generic/names/luaotfload-names.luc.gz)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen139
-) (../../head.tex (/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/luate
-xja.sty
+)
+(../../../head.tex
+(/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/luatexja.sty
 Package: luatexja 2024-02-19 Japanese Typesetting with Lua(La)TeX
 
 (/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/luatexja-core.sty
@@ -1160,6 +1161,33 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/background/background.sty
+Package: background 2014/03/04 v2.1 background material
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/everypage/everypage.sty
+Package: everypage 2020/10/17 R2.0b Hooks to run on every page
+
+
+Package everypage Warning: Functionality similar to this package has recently
+(everypage)                been implemented in LaTeX. This package is now in
+(everypage)                legacy status.
+(everypage)                Please, don't use it in new documents and packages.
+
+
+Package everypage Warning: You appear to be running a version of LaTeX
+(everypage)                providing the new functionality.
+(everypage)                Doing the best to deliver the original `everypage`
+(everypage)                interface on top of it. Strict equivalence is
+(everypage)                not possible, breakage may occur.
+(everypage)                If truly needed, Use `everypage-1x` to force the
+(everypage)                loading of an older code base.
+
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
+\AP@output=\toks56
+\AP@partial=\box117
+\AP@footins=\box118
+))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
@@ -1192,10 +1220,10 @@ Package caption Info: New subtype `subtable' on input line 238.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count361
-\float@exts=\toks56
-\float@box=\box117
-\@float@everytoks=\toks57
-\@floatcapt=\box118
+\float@exts=\toks57
+\float@box=\box119
+\@float@everytoks=\toks58
+\@floatcapt=\box120
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/here/here.sty)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
@@ -1228,19 +1256,19 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen371
 \Gm@layouthoffset=\dimen372
 \Gm@layoutvoffset=\dimen373
-\Gm@dimlist=\toks58
+\Gm@dimlist=\toks59
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/fancybox/fancybox.sty
 Package: fancybox 2010/05/15 1.4
 
 Style option: `fancybox' v1.4 <2010/05/15> (tvz)
-\@fancybox=\box119
+\@fancybox=\box121
 \shadowsize=\dimen374
-\@Sbox=\box120
-\do@VerbBox=\toks59
-\the@fancyput=\toks60
-\this@fancyput=\toks61
-\EndVerbatimTokens=\toks62
+\@Sbox=\box122
+\do@VerbBox=\toks60
+\the@fancyput=\toks61
+\this@fancyput=\toks62
+\EndVerbatimTokens=\toks63
 \Verbatim@Outfile=\write4
 \Verbatim@Infile=\read3
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/ascmac/ascmac.sty
@@ -1251,19 +1279,19 @@ Package: tascmac 2020/01/15 v2.1 ascmac package (community edition)
 Package tascmac Info: Patch from LuaTeX-ja will be applied on input line 44.
 \@savetbaselineshift=\dimen375
 \@saveybaselineshift=\dimen376
-\scb@x=\box121
-\scscb@x=\box122
+\scb@x=\box123
+\scscb@x=\box124
 \@bw=\dimen377
-\@nbox=\box123
-\@nbody=\box124
+\@nbox=\box125
+\@nbody=\box126
 \@scw=\dimen378
-\ascmac@hoboxa=\box125
-\ascmac@hoboxb=\box126
+\ascmac@hoboxa=\box127
+\ascmac@hoboxb=\box128
 \@itemh=\dimen379
-\@iboxpos=\toks63
-\@iboxstr=\box127
-\@bwsp=\box128
-\@@bwsp=\box129
+\@iboxpos=\toks64
+\@iboxstr=\box129
+\@bwsp=\box130
+\@@bwsp=\box131
 \@bcal=\count365
 \shaderule=\dimen380
 ))
@@ -1272,8 +1300,8 @@ Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks64
-\verbatim@line=\toks65
+\every@verbatim=\toks65
+\verbatim@line=\toks66
 \verbatim@in@stream=\read4
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/environ/environ.sty
@@ -1282,24 +1310,24 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (/usr/local/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box130
-\tcb@upperbox=\box131
-\tcb@lowerbox=\box132
-\tcb@phantombox=\box133
+\tcb@titlebox=\box132
+\tcb@upperbox=\box133
+\tcb@lowerbox=\box134
+\tcb@phantombox=\box135
 \c@tcbbreakpart=\count366
 \c@tcblayer=\count367
 \c@tcolorbox@number=\count368
-\l__tcobox_tmpa_box=\box134
+\l__tcobox_tmpa_box=\box136
 \l__tcobox_tmpa_dim=\dimen381
-\tcb@temp=\box135
-\tcb@temp=\box136
 \tcb@temp=\box137
 \tcb@temp=\box138
+\tcb@temp=\box139
+\tcb@temp=\box140
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count369
-\lst@gtempboxa=\box139
-\lst@token=\toks66
+\lst@gtempboxa=\box141
+\lst@token=\toks67
 \lst@length=\count370
 \lst@currlwidth=\dimen382
 \lst@column=\count371
@@ -1317,7 +1345,7 @@ File: lstpatch.sty 2024/02/21 1.10 (Carsten Heinz)
 File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 \c@lstnumber=\count375
 \lst@skipnumbers=\count376
-\lst@framebox=\box140
+\lst@framebox=\box142
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/02/21 1.10 listings configuration
@@ -1336,7 +1364,7 @@ Package: luatexbase-cctb 2015/10/04 v1.3 luatexbase interface to LuaTeX (legacy
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
-\lst@WFtoken=\toks67
+\lst@WFtoken=\toks68
 \lst@WF=\write5
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/jvlisting/jvlisting.sty
@@ -1703,7 +1731,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip111
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2023/07/05 v6.0f a miscellany of footnote facilities
-\FN@temptoken=\toks68
+\FN@temptoken=\toks69
 \footnotemargin=\dimen392
 \@outputbox@depth=\dimen393
 Package footmisc Info: Declaring symbol style bringhurst on input line 696.
@@ -1718,7 +1746,7 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 765
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \c@tracingmulticols=\count520
-\mult@box=\box141
+\mult@box=\box143
 \multicol@leftmargin=\dimen394
 \c@unbalance=\count521
 \c@collectmore=\count522
@@ -1731,16 +1759,14 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \postmulticols=\dimen398
 \multicolsep=\skip112
 \multicolbaselineskip=\skip113
-\partial@page=\box142
-\last@line=\box143
-\mc@boxedresult=\box144
+\partial@page=\box144
+\last@line=\box145
+\mc@boxedresult=\box146
 \maxbalancingoverflow=\dimen399
-\mult@rightbox=\box145
-\mult@grightbox=\box146
-\mult@firstbox=\box147
-\mult@gfirstbox=\box148
-\@tempa=\box149
-\@tempa=\box150
+\mult@rightbox=\box147
+\mult@grightbox=\box148
+\mult@firstbox=\box149
+\mult@gfirstbox=\box150
 \@tempa=\box151
 \@tempa=\box152
 \@tempa=\box153
@@ -1775,14 +1801,16 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box182
 \@tempa=\box183
 \@tempa=\box184
+\@tempa=\box185
+\@tempa=\box186
 \c@minrows=\count526
 \c@columnbadness=\count527
 \c@finalcolumnbadness=\count528
 \last@try=\dimen400
 \multicolovershoot=\dimen401
 \multicolundershoot=\dimen402
-\mult@nat@firstbox=\box185
-\colbreak@box=\box186
+\mult@nat@firstbox=\box187
+\colbreak@box=\box188
 \mc@col@check@num=\count529
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/comment/comment.sty
@@ -1802,22 +1830,22 @@ Package: siunitx 2024-02-15 v3.3.12 A comprehensive (SI) units package
 \l__siunitx_number_group_size_int=\count538
 \l__siunitx_number_group_minimum_int=\count539
 \l__siunitx_angle_tmp_dim=\dimen403
-\l__siunitx_angle_marker_box=\box187
-\l__siunitx_angle_unit_box=\box188
+\l__siunitx_angle_marker_box=\box189
+\l__siunitx_angle_unit_box=\box190
 \l__siunitx_compound_count_int=\count540
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
  (CN)
 )
-\l__siunitx_table_tmp_box=\box189
+\l__siunitx_table_tmp_box=\box191
 \l__siunitx_table_tmp_dim=\dimen404
 \l__siunitx_table_column_width_dim=\dimen405
-\l__siunitx_table_integer_box=\box190
-\l__siunitx_table_decimal_box=\box191
-\l__siunitx_table_uncert_box=\box192
-\l__siunitx_table_before_box=\box193
-\l__siunitx_table_after_box=\box194
+\l__siunitx_table_integer_box=\box192
+\l__siunitx_table_decimal_box=\box193
+\l__siunitx_table_uncert_box=\box194
+\l__siunitx_table_before_box=\box195
+\l__siunitx_table_after_box=\box196
 \l__siunitx_table_before_dim=\dimen406
 \l__siunitx_table_carry_dim=\dimen407
 \l__siunitx_unit_tmp_int=\count541
@@ -1836,9 +1864,9 @@ Library (tcolorbox): 'tcbbreakable.code.tex' version '6.2.0'
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box195
-\tcb@totalupperbox=\box196
-\tcb@totallowerbox=\box197
+\tcb@testbox=\box197
+\tcb@totalupperbox=\box198
+\tcb@totallowerbox=\box199
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.markings.code.tex
@@ -1855,7 +1883,7 @@ s.code.tex
 \pgfdecorationsegmentamplitude=\dimen413
 \pgfdecorationsegmentlength=\dimen414
 )
-\tikz@lib@dec@box=\box198
+\tikz@lib@dec@box=\box256
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
 brarydecorations.markings.code.tex))
@@ -1871,20 +1899,20 @@ File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
 s/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-Package hyperref Info: Option `setpagesize' set `false' on input line 59.
+Package hyperref Info: Option `setpagesize' set `false' on input line 58.
 
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 59.
+(hyperref)                setting the option has no effect on input line 58.
 
 
 Package hyperref Warning: Unknown document division name (tocdepth) on input li
-ne 59.
+ne 58.
 
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 59.
-Package hyperref Info: Option `colorlinks' set `false' on input line 59.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 58.
+Package hyperref Info: Option `colorlinks' set `false' on input line 58.
 
-Package array Warning: Redefining primitive column b on input line 80.
+Package array Warning: Redefining primitive column b on input line 79.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
@@ -1957,7 +1985,7 @@ Intuitive Functional Programming Interface for LaTeX2
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box199
+\@vwid@box=\box257
 \sift@deathcycles=\count576
 \@vwid@loff=\dimen450
 \@vwid@roff=\dimen451
@@ -1975,16 +2003,15 @@ Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 ))
-\c@tcb@cnt@myreq=\count577
-\c@tcb@cnt@mydef=\count578
-\c@tcb@cnt@myprop=\count579
-\c@tcb@cnt@myrem=\count580
-\c@tcb@cnt@myex=\count581
-\c@tcb@cnt@req=\count582
-\c@tcb@cnt@definition=\count583
-\c@tcb@cnt@prop=\count584
-\c@tcb@cnt@rem=\count585
-\c@tcb@cnt@ex=\count586
+\c@tcb@cnt@myexc=\count577
+\c@tcb@cnt@myprop=\count578
+\c@tcb@cnt@myrem=\count579
+\c@tcb@cnt@myex=\count580
+\c@tcb@cnt@exc=\count581
+\c@tcb@cnt@definition=\count582
+\c@tcb@cnt@prop=\count583
+\c@tcb@cnt@rem=\count584
+\c@tcb@cnt@ex=\count585
 )
 (/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/patches/lltjp-footmisc.
 sty
@@ -1999,8 +2026,8 @@ warning  (map file): entry for 'ascgrp' already exists, duplicates ignored
 (/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/patches/lltjp-array.sty
 Package: lltjp-array 2019-07-18 Patch to array for LuaTeX-ja
 )
-\@quotelevel=\count587
-\@quotereset=\count588
+\@quotelevel=\count586
+\@quotereset=\count587
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 3.
  (./main.aux)
@@ -2097,17 +2124,17 @@ Package chemgreek Info: Activating mapping `default' on line 3.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count589
+\scratchcounter=\count588
 \scratchdimen=\dimen452
-\scratchbox=\box256
-\nofMPsegments=\count590
-\nofMParguments=\count591
-\everyMPshowfont=\toks69
-\MPscratchCnt=\count592
+\scratchbox=\box258
+\nofMPsegments=\count589
+\nofMParguments=\count590
+\everyMPshowfont=\toks70
+\MPscratchCnt=\count591
 \MPscratchDim=\dimen453
-\MPnumerator=\count593
-\makeMPintoPDFobject=\count594
-\everyMPtoPDFconversion=\toks70
+\MPnumerator=\count592
+\makeMPintoPDFobject=\count593
+\everyMPtoPDFconversion=\toks71
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -2167,7 +2194,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count595
+\c@lstlisting=\count594
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -2210,7 +2237,7 @@ nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 3.
-\docmute@nestinglevel=\count596
+\docmute@nestinglevel=\count595
 (load cache: extra_lmroman7-regular.luc)(load cache: extra_lmroman5-regular.luc)
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
 (Font)              scaled to size 6.73553pt on input line 4.
@@ -2232,42 +2259,26 @@ LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <10> not available
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 9.6222pt on input line 12.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 30.
+(Font)              scaled to size 6.73553pt on input line 35.
 (load cache: extra_lmroman7-italic.luc)
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 30.
+(Font)              No change on input line 35.
 (load cache: extra_lmroman8-regular.luc)
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 30.
+(Font)              scaled to size 7.69775pt on input line 35.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 30.
+(Font)              scaled to size 7.69775pt on input line 35.
 (load cache: extra_lmroman6-regular.luc)
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 30.
+(Font)              scaled to size 5.77332pt on input line 35.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 30.
+(Font)              scaled to size 7.69775pt on input line 35.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 30.
+(Font)              scaled to size 5.77332pt on input line 35.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 30.
+(Font)              scaled to size 5.77332pt on input line 35.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 30.
-
-
-Package caption Warning: Unused \captionsetup[figure] on input line 83.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: Unused \captionsetup[table] on input line 84.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: Unused \captionsetup[lstlisting] on input line 85.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: Unused \captionsetup[subfigure] on input line 86.
-See the caption package documentation for explanation.
+(Font)              No change on input line 35.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2279,7 +2290,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1
 
-] (./main.aux)
+]
+
+Package caption Warning: Unused \captionsetup[figure] on input line 82.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Unused \captionsetup[table] on input line 83.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Unused \captionsetup[lstlisting] on input line 84.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Unused \captionsetup[subfigure] on input line 85.
+See the caption package documentation for explanation.
+
+(./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -2292,35 +2320,33 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51264 strings out of 476447
+ 51437 strings out of 476447
  125244,2373549 words of node,token memory allocated
- 1284 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 249 attribute, 77 glue_sp
-ec, 35 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:10,2:15984,3:428,4:611,5:267,6:52,7:2822,8:54,9:1846,10:10,11:
-3
- 72212 multiletter control sequences out of 65536+600000
- 88 fonts using 46919983 bytes
- 115i,16n,118p,1922b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic.otf
-></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.o
-tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.ot
-f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiG
-othic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lm
-roman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/ha
-ranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy7.pfb>
-Output written on main.pdf (1 page, 103068 bytes).
+ 2175 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 32 sub_mlist, 1 glyph, 612 attribu
+te, 77 glue_spec, 68 attribute_list, 3 write, 14 user_defined nodes
+   avail lists: 1:8,2:21401,3:649,4:842,5:318,6:58,7:3554,8:60,9:2434,10:10,11:3
 
-PDF statistics: 94 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 131072)
+ 72361 multiletter control sequences out of 65536+600000
+ 88 fonts using 46919983 bytes
+ 115i,17n,118p,1925b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic.otf
+></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf>
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGot
+hic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoa
+ji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentyp
+e/public/lm/lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy7.pfb>
+Output written on main.pdf (1 page, 100706 bytes).
+
+PDF statistics: 92 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
