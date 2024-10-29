@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  29 OCT 2024 01:15
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  29 OCT 2024 18:41
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -58,8 +58,9 @@ var/luatex-cache/generic/names/luaotfload-names.luc.gz)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen139
-) (../../head.tex (/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/luate
-xja.sty
+)
+(../../../head.tex
+(/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/luatexja.sty
 Package: luatexja 2024-02-19 Japanese Typesetting with Lua(La)TeX
 
 (/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/luatexja-core.sty
@@ -2002,11 +2003,15 @@ Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 ))
-\c@tcb@cnt@myreq=\count577
-\c@tcb@cnt@mydef=\count578
-\c@tcb@cnt@myprop=\count579
-\c@tcb@cnt@myrem=\count580
-\c@tcb@cnt@myex=\count581
+\c@tcb@cnt@myexc=\count577
+\c@tcb@cnt@myprop=\count578
+\c@tcb@cnt@myrem=\count579
+\c@tcb@cnt@myex=\count580
+\c@tcb@cnt@exc=\count581
+\c@tcb@cnt@definition=\count582
+\c@tcb@cnt@prop=\count583
+\c@tcb@cnt@rem=\count584
+\c@tcb@cnt@ex=\count585
 )
 (/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/patches/lltjp-footmisc.
 sty
@@ -2021,8 +2026,8 @@ warning  (map file): entry for 'ascgrp' already exists, duplicates ignored
 (/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/patches/lltjp-array.sty
 Package: lltjp-array 2019-07-18 Patch to array for LuaTeX-ja
 )
-\@quotelevel=\count582
-\@quotereset=\count583
+\@quotelevel=\count586
+\@quotereset=\count587
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 3.
  (./main.aux)
@@ -2119,16 +2124,16 @@ Package chemgreek Info: Activating mapping `default' on line 3.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count584
+\scratchcounter=\count588
 \scratchdimen=\dimen452
 \scratchbox=\box258
-\nofMPsegments=\count585
-\nofMParguments=\count586
+\nofMPsegments=\count589
+\nofMParguments=\count590
 \everyMPshowfont=\toks70
-\MPscratchCnt=\count587
+\MPscratchCnt=\count591
 \MPscratchDim=\dimen453
-\MPnumerator=\count588
-\makeMPintoPDFobject=\count589
+\MPnumerator=\count592
+\makeMPintoPDFobject=\count593
 \everyMPtoPDFconversion=\toks71
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -2189,7 +2194,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count590
+\c@lstlisting=\count594
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -2232,7 +2237,7 @@ nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 3.
-\docmute@nestinglevel=\count591
+\docmute@nestinglevel=\count595
 (load cache: extra_lmroman7-regular.luc)(load cache: extra_lmroman5-regular.luc)
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
 (Font)              scaled to size 6.73553pt on input line 4.
@@ -2258,6 +2263,9 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 5.77332pt on input line 12.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
 (Font)              scaled to size 5.77332pt on input line 12.
+
+
+Package hyperref Warning: Suppressing empty link on input line 12.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2303,34 +2311,35 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51281 strings out of 476447
+ 51383 strings out of 476447
  125244,2373549 words of node,token memory allocated
- 1294 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 3 glue, 4 kern, 1 glyph, 249 attribute, 77 glue_sp
-ec, 35 attribute_list, 3 write, 14 user_defined nodes
-   avail lists: 1:10,2:8874,3:199,4:266,5:102,6:28,7:1361,8:13,9:745,10:10,11:27
-
- 72215 multiletter control sequences out of 65536+600000
+ 1240 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 3 glue, 4 kern, 1 glyph, 225 attribute, 77 glue_sp
+ec, 32 attribute_list, 3 write, 14 user_defined nodes
+   avail lists: 1:9,2:13452,3:234,4:285,5:109,6:28,7:2148,8:13,9:1122,10:11,11:2
+7
+ 72316 multiletter control sequences out of 65536+600000
  84 fonts using 46392847 bytes
- 115i,12n,118p,1922b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,12n,118p,1925b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
 f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.
-otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-regula
-r.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/Harano
-AjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/
-lm/lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
-b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAj
+iGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/
+lmroman7-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/h
+aranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/o
+pentype/public/lm/lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb>
+Output written on main.pdf (1 page, 93986 bytes).
 
-Output written on main.pdf (1 page, 85180 bytes).
-
-PDF statistics: 86 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 131072)
+PDF statistics: 94 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
