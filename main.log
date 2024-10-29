@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  29 OCT 2024 03:24
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  29 OCT 2024 20:19
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1898,20 +1898,20 @@ File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
 s/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-Package hyperref Info: Option `setpagesize' set `false' on input line 59.
+Package hyperref Info: Option `setpagesize' set `false' on input line 58.
 
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 59.
+(hyperref)                setting the option has no effect on input line 58.
 
 
 Package hyperref Warning: Unknown document division name (tocdepth) on input li
-ne 59.
+ne 58.
 
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 59.
-Package hyperref Info: Option `colorlinks' set `false' on input line 59.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 58.
+Package hyperref Info: Option `colorlinks' set `false' on input line 58.
 
-Package array Warning: Redefining primitive column b on input line 80.
+Package array Warning: Redefining primitive column b on input line 79.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
@@ -2267,18 +2267,18 @@ LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1]
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 23.94002pt on input line 9.
+(Font)              scaled to size 23.94002pt on input line 10.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 23.94002pt on input line 9.
+(Font)              scaled to size 23.94002pt on input line 10.
 (load cache: extra_lmroman12-bold.luc)
 LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <24.88> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 9.
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 10.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 23.94002pt on input line 9.
+(Font)              scaled to size 23.94002pt on input line 10.
 LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <24.88> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 9.
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 10.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 23.94002pt on input line 9.
+(Font)              scaled to size 23.94002pt on input line 10.
  (./main.toc(load cache: extra_lmroman7-regular.luc)(load cache: extra_lmroman5-
 regular.luc)
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
@@ -2348,18 +2348,18 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 
 (./approximation/varidational_principle/basic_rule/main.tex
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 4.
+(Font)              scaled to size 9.6222pt on input line 5.
 (load cache: extra_lmsans10-regular.luc)(load cache: extra_lmsans10-bold.luc)
 LaTeX Font Info:    Font shape `JT3/gt/b/n' in size <10> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 4.
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 4.
+(Font)              scaled to size 9.6222pt on input line 5.
 LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <10> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 4.
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 4.
+(Font)              scaled to size 9.6222pt on input line 5.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 11.
+(Font)              No change on input line 13.
  [3
 
 
@@ -2367,13 +2367,13 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .1.1'
 ](load cache: extra_lmroman7-italic.luc)
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 64.
+(Font)              No change on input line 66.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 64.
+(Font)              No change on input line 66.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 75.
+(Font)              No change on input line 77.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 80.
+(Font)              No change on input line 82.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2393,17 +2393,17 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .1.3'
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 18.
+(Font)              No change on input line 21.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 20.
+(Font)              No change on input line 23.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 20.
+(Font)              No change on input line 23.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 22.
+(Font)              No change on input line 25.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 22.
+(Font)              No change on input line 25.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 24.
+(Font)              No change on input line 27.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .1.4'
@@ -2417,17 +2417,16 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .1.7'
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 33.
+(Font)              No change on input line 39.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 35.
+(Font)              No change on input line 41.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 35.
+(Font)              No change on input line 41.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 37.
+(Font)              No change on input line 43.
 (load cache: extra_lmroman8-italic.luc)
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 37.
-)
+(Font)              No change on input line 43.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2436,7 +2435,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[5] (./approximation/varidational_principle/error/main.tex
+[5]) (./approximation/varidational_principle/error/main.tex
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .1.1'
 
@@ -2453,13 +2452,13 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .1.5'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.1.5'
+.1.6'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.1.5'
+.1.6'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.1.5'
+.1.6'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .1.6'
@@ -2469,10 +2468,13 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .1.8'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.1.9'
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 30.
+(Font)              No change on input line 35.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 30.
+(Font)              No change on input line 35.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2543,14 +2545,6 @@ LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 (Font)              No change on input line 75.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[8]
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .1.16'
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
@@ -2562,8 +2556,6 @@ LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .1.17'
-) (./approximation/steady_perturbation/intro/main.tex)
-(./approximation/steady_perturbation/prep/main.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2572,27 +2564,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[9]) (./approximation/steady_perturbation/1st_order_perturbation/main.tex
+[8]) (./approximation/steady_perturbation/intro/main.tex)
+(./approximation/steady_perturbation/prep/main.tex)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[9] (./approximation/steady_perturbation/1st_order_perturbation/main.tex
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.1'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.1'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.1'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.1'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.2'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.2'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.2'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.2'
@@ -2601,25 +2585,16 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.3'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.3'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.3'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.3'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.4'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.4'
+.2.5'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.4'
+.2.6'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.4'
+.2.7'
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 (Font)              No change on input line 35.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
@@ -2633,15 +2608,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [10
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.5'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.6'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.7'
-
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.8'
 
@@ -2718,6 +2684,12 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.3'
 
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.2.4'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.2.5'
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2726,12 +2698,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [11]
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.4'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.5'
-
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.6'
 
@@ -2786,6 +2752,12 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.2'
 
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.2.3'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.2.4'
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2794,12 +2766,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [12]
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.3'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.2.4'
-
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.5'
 
@@ -2920,14 +2886,6 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.2'
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[13]
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.3'
 
@@ -2940,6 +2898,14 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.6'
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[13]
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.7'
 
@@ -2951,9 +2917,6 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.7'
-
-LaTeX Warning: Reference `2ji' on page 14 undefined on input line 27.
-
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.8'
@@ -3031,11 +2994,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[14]
-
-LaTeX Warning: Reference `Ebr' on page 15 undefined on input line 69.
-
-) (./approximation/steady_perturbation/exercise/main.tex
+[14]) (./approximation/steady_perturbation/exercise/main.tex
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .2.1'
 
@@ -3104,28 +3063,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[16]
+[16
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.2'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.2'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.2'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.2'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.3'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.4'
-
-LaTeX Warning: Reference `TDSE' on page 17 undefined on input line 23.
-
-
+.3.1'
+]
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.5'
 )
@@ -3142,10 +3083,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 38.
 
 (./approximation/nonsteady_perturbation/cnt_equation/main.tex
-
-LaTeX Warning: Reference `Tomonaga' on page 17 undefined on input line 4.
-
-
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.1'
 
@@ -3157,6 +3094,10 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.4'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.5'
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -3167,20 +3108,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [17
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.1'
-]
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.5'
+.3.2'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.6'
+.3.3'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.7'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.8'
-) (./approximation/nonsteady_perturbation/two_state_system/main.tex
+.3.4'
+] (./approximation/nonsteady_perturbation/two_state_system/main.tex
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.1'
 
@@ -3270,15 +3205,7 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.9'
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[18](load cache: extra_lmroman8-bold.luc)
+(load cache: extra_lmroman8-bold.luc)
 LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <8> not available
 (Font)              Font shape `JT3/gt/m/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
@@ -3311,7 +3238,24 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.11'
-) (./approximation/nonsteady_perturbation/approximated_solution/main.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[18
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.6'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.7'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.8'
+]) (./approximation/nonsteady_perturbation/approximated_solution/main.tex
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.1'
 
@@ -3324,9 +3268,6 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.1'
 
-LaTeX Warning: Reference `3.4' on page 19 undefined on input line 12.
-
-
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.2'
 
@@ -3338,9 +3279,6 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.2'
-
-LaTeX Warning: Reference `3.4' on page 19 undefined on input line 17.
-
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.3'
@@ -3366,9 +3304,6 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.4'
 
-LaTeX Warning: Reference `3.40ji' on page 19 undefined on input line 28.
-
-
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.5'
 
@@ -3380,6 +3315,30 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.5'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.6'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.6'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.6'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.6'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.7'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.7'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.7'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.7'
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -3389,36 +3348,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [19]
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.6'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.6'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.6'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.6'
-
-LaTeX Warning: Reference `3.4const' on page 20 undefined on input line 41.
-
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.7'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.7'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.7'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.7'
-
-LaTeX Warning: Reference `3.41ji' on page 20 undefined on input line 49.
-
-
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.8'
 
@@ -3479,14 +3408,6 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.2'
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[20]
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.3'
 
@@ -3505,6 +3426,14 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.5'
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[20]
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.6'
 
@@ -3564,6 +3493,18 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.16'
+) (./approximation/nonsteady_perturbation/harmonic_perturbation/main.tex
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.1'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.1'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.1'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.3.1'
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -3572,28 +3513,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[21]) (./approximation/nonsteady_perturbation/harmonic_perturbation/main.tex
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.1'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.1'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.1'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
-.3.1'
-
+[21]
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.2'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.3'
 
-LaTeX Warning: Reference `3.6' on page 22 undefined on input line 21.
-
-
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.4'
 
@@ -3629,9 +3555,6 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.6'
-
-LaTeX Warning: Reference `3.6' on page 22 undefined on input line 37.
-
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.7'
@@ -3671,14 +3594,6 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.2'
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[22]
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.3'
 
@@ -3705,6 +3620,14 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.4'
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[22]
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
 .3.5'
 
@@ -3791,19 +3714,19 @@ Chapter 3.
 
 ]
 
-Package caption Warning: Unused \captionsetup[figure] on input line 83.
+Package caption Warning: Unused \captionsetup[figure] on input line 82.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[table] on input line 84.
+Package caption Warning: Unused \captionsetup[table] on input line 83.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[lstlisting] on input line 85.
+Package caption Warning: Unused \captionsetup[lstlisting] on input line 84.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[subfigure] on input line 86.
+Package caption Warning: Unused \captionsetup[subfigure] on input line 85.
 See the caption package documentation for explanation.
 
 (./main.aux)
@@ -3813,35 +3736,26 @@ L3 programming layer <2024-02-20>
  ***********
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 2D57E977EF88D635141FC427830A8575;1789
-(rerunfilecheck)             After:  F39E07E196EB7ADFC3074B8E407BC953;3576.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: F39E07E196EB7ADFC3074B8E407BC953;3576.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 52045 strings out of 476447
- 195709,2373549 words of node,token memory allocated
- 6358 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 23 glue, 4 kern, 1 glyph, 2502 attribute, 79 glue_
-spec, 239 attribute_list, 3 write, 14 user_defined nodes
-   avail lists: 1:52,2:41761,3:732,4:876,5:490,6:62,7:4923,8:91,9:2684,10:26,11:
-28
- 72659 multiletter control sequences out of 65536+600000
+ 52060 strings out of 476447
+ 195700,2373549 words of node,token memory allocated
+ 8182 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 23 glue, 4 kern, 80 sub_mlist, 1 glyph, 3228 attri
+bute, 79 glue_spec, 305 attribute_list, 3 write, 14 user_defined nodes
+   avail lists: 1:52,2:44643,3:749,4:896,5:438,6:81,7:4645,8:91,9:2627,10:26,11:
+22
+ 72673 multiletter control sequences out of 65536+600000
  125 fonts using 83743271 bytes
- 115i,18n,118p,1916b,1206s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,19n,118p,1916b,1208s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf><
 /usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman5-regular.otf
 ></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.ot
@@ -3881,10 +3795,10 @@ sy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.p
 fb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (27 pages, 502697 bytes).
+Output written on main.pdf (27 pages, 509621 bytes).
 
-PDF statistics: 601 PDF objects out of 1000 (max. 8388607)
- 498 compressed objects within 5 object streams
- 166 named destinations out of 1000 (max. 131072)
- 128 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 667 PDF objects out of 1000 (max. 8388607)
+ 563 compressed objects within 6 object streams
+ 167 named destinations out of 1000 (max. 131072)
+ 224 words of extra memory for PDF output out of 10000 (max. 100000000)
 
