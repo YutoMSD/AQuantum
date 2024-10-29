@@ -1,0 +1,96 @@
+\documentclass{report}
+\input{../../../head.tex}
+\begin{document}
+  \begin{myexc}{Griffith Example 8.1}{}
+    1次元調和振動子$\hat{H} = -\cfrac{\hbar^2}{2m}\dv[2]{x} + \cfrac{1}{2}m\omega^2 x^2$の基底エネルギーを見積もれ．
+    ただし，試行関数を$\psi(x) = \qty(\cfrac{2b}{\pi})^{1/4}\e^{-bx^2}$とせよ．試行関数は規格化されている．
+    \tcblower
+    \begin{align}
+      E(b) = \bra{\psi}\hat{H}\ket{\psi} &= \qty(\cfrac{2b}{\pi})^{1/2}\int_{-\infty}^{\infty}\e^{-bx^2}\qty(-\cfrac{\hbar^2}{2m}\dv[2]{x} + \cfrac{1}{2}m\omega^2x^2)\e^{-bx^2}\dd{x}\\
+      &=\cfrac{\hbar^2b}{2m}+\cfrac{m\omega^2}{8b}
+    \end{align}
+    次に$E(b)$の最小値を求める．
+    \begin{align}
+      \dv{b}E(b_0) = \cfrac{\hbar^2}{2m} - \cfrac{m\omega^2}{8b_{0}^2} = 0\Rightarrow b_0 = \cfrac{m\omega}{2\hbar}
+    \end{align}
+    \begin{align}
+      E(b_0) = \cfrac{1}{2}\hbar\omega
+    \end{align}
+    偶然にも試行関数は基底エネルギーの固有関数となっていたため，$E(b_0)$は基底エネルギーと一致した．
+  \end{myexc}
+  \begin{myexc}{Griffith Example 8.2}{}
+    デルタ関数型ポテンシャル$\hat{H} - \dv[2]{x}-\alpha \delta(x)$の基底エネルギーを見積もれ．
+    ただし，試行関数を$\psi(x) = \qty(\cfrac{2b}{\pi})^{1/4}\e^{-bx^2}$とせよ．試行関数は規格化されている．
+    \tcblower
+    \begin{align}
+      \ev{V} &= -\alpha \qty(\cfrac{2b}{\pi})^{1/2}\int_{-\infty}^{\infty}\e^{-2bx^2}\delta(x)\dd{x} = -\alpha\qty(\cfrac{2b}{\pi})^{1/2}\\
+      \ev{T} &= \cfrac{\hbar^2 b}{2m}\\
+      E(b) &= \cfrac{\hbar^2 b}{2m} - \alpha\qty(\cfrac{2b}{\pi})^{1/2}
+    \end{align}
+    $E(b)$の最小値を求める．
+    \begin{align}
+      \dv{b}E(b_0) = \cfrac{\hbar^2}{2m} - \cfrac{\alpha}{\sqrt{2\pi b_0}} = 0\Rightarrow b_0=\cfrac{2m^2\alpha^2}{\pi\hbar^4}
+    \end{align}
+    よって，基底エネルギーの近似解として
+    \begin{align}
+      E(b_0) = -\cfrac{m\alpha^2}{\pi\hbar^2}
+    \end{align}
+    を得る\footnote{
+      厳密解を求めることができ，$\psi(x) = \cfrac{\sqrt{m\alpha}}{\hbar}\e^{-m\alpha\abs{x}/\hbar^2},\ E_0 = -\cfrac{m\alpha^2}{2\hbar^2}$である．
+    }．
+  \end{myexc}
+  \begin{myexc}{Griffith Example 8.3}{}
+    $[0, a]$の無限井戸型ポテンシャルの基底エネルギーを見積もれ．ただし，試行関数を
+    \begin{align}
+      \psi(x)=
+      \begin{dcases*}
+        Ax & if $0 \leq x \leq a/2$ \\
+        A(a - x) & if $a/2\leq x \leq a$ \\ 
+        0 & otherwise 
+      \end{dcases*}
+    \end{align}
+    とせよ．
+    \tcblower
+    規格化条件より，$A = \cfrac{2}{a}\sqrt{\cfrac{3}{a}}$を得る．波動関数の導関数は
+    \begin{align}
+      \dv[2]{\psi}{x} =
+        \begin{dcases*}
+          Ax & if $0 \leq x \leq a/2$ \\
+          A(a - x) & if $a/2\leq x \leq a$ \\ 
+          0 & otherwise 
+        \end{dcases*}
+    \end{align}
+    である．よって，2次の微係数として
+    \begin{align}
+      \dv[2]{\psi}{x} = A\delta(x) - 2A\delta\qty(x - \cfrac{a}{2}) + A\delta(x - a)
+    \end{align}
+    を得る．したがって近似解は
+    \begin{align}
+      E &= \int_{0}^{a}\psi(x)\qty(-\cfrac{\hbar^2}{2m}\dv[2]{x})\psi(x)\dd{x}\\
+      &= -\cfrac{\hbar^2}{2m}\int_{0}^{a} A\qty[\delta(x)-\delta\qty(x-\cfrac{a}{2}) + \delta(x - a)]\psi(x)\dd{x}\\
+      &= \cfrac{12\hbar^2}{2ma^2}
+    \end{align}
+    である\footnote{
+      厳密解は$E_0 = \cfrac{\pi^2\hbar^2}{2ma^2}$
+    }．
+  \end{myexc}
+  \begin{myexc}{Griffith Problem8.4 (a)}{}
+    試行関数$\ket{\psi}$が基底状態と直交するとき，つまり$\braket{\psi}{0}$のとき，
+    \begin{align}
+      E(\psi)\geq E_1
+    \end{align}
+    であることを示せ\footnote{
+      例えば偶関数のポテンシャルに対し奇関数の試行関数で計算すれば第1励起状態のエネルギーの近似解が得られる．
+    }．
+    ただし$E_1$は第1励起状態のエネルギーである．$\ket{\psi}$は規格化されている．
+    \tcblower
+    \begin{proof}
+      \begin{align}
+        E(\psi) &= \sum_{k = 0}E_k\abs{\braket{\psi}{k}}^2 \\
+        &= E_0\abs{\braket{\psi}{0}}^2 + \sum_{k = 1}\abs{\braket{\psi}{k}}^2 \\
+        &= 0 + \sum_{k = 1}\abs{\braket{\psi}{k}}^2 \\
+        &\geq E_1\sum_{k = 1}\abs{\braket{\psi}{k}}^2 = E_1
+      \end{align}
+    \end{proof}
+  \end{myexc}
+\end{document}

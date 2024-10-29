@@ -1,0 +1,87 @@
+\documentclass{standalone}
+\input{../../../head.tex}
+\begin{document}
+  \begin{myprop}{変分法の基本原理}{}
+    任意の状態ベクトル$\ket{\psi}$に対して以下の不等式が成り立つ．
+    \begin{align}
+      E(\psi) = \cfrac{\bra{\psi}\hat{H}\ket{\psi}}{\bra{\psi}\ket{\psi}} \ge E_0 \label{ne}
+    \end{align}
+    \tcblower
+    \begin{proof}
+      任意の状態ベクトル$\ket{\psi}$を
+      \begin{align}
+        \ket{\psi} = \sum_{k} c_k\ket{k} \label{sv}
+      \end{align}
+      と展開する．左から$\bra{k'}$を作用させると
+      \begin{align}
+        \bra{k'}\ket{\psi} = \sum_{k}c_k\bra{k'}\ket{k} = \sum_{k}c_k\delta_{k',k} = c_{k'}
+      \end{align}
+      を得る．これは任意の$k$に対して成り立つので\refe{sv}は以下のように変形できる．
+      \begin{align}
+        \ket{\psi}&=\sum_{k}\bra{k}\ket{\psi}\ket{k}\\
+        &=\sum_{k}\ket{k}\bra{k}\ket{\psi}
+      \end{align}
+      これを用いて\refe{ne}の分母を以下のように変形する．
+      \begin{align}
+        \bra{\psi}\hat{H}\ket{\psi}&=\bra{\psi}\hat{H}\sum_{k}\ket{k}\bra{k}\ket{\psi}\\
+        &=\sum_{k}\bra{\psi}\hat{H}\ket{k}\bra{k}\ket{\psi}\\
+        &=\sum_{k}E_k\bra{\psi}\ket{k}\bra{k}\ket{\psi}\\
+        &=\sum_{k}E_k \abs{\bra{k}\ket{\psi}}^2
+      \end{align}
+      また，
+      \begin{align}
+        \braket{\psi}{\psi}=\sum_{k}\abs{\braket{k}{\psi}}^2
+      \end{align}
+      であるので，
+      \begin{align}
+        E(\psi) &= \cfrac{\bra{\psi}\hat{H}\ket{\psi}}{\braket{\psi}{\psi} } \\ 
+        &= \cfrac{\sum_{k}E_k\abs{\braket{k}{\psi}}^2}{\sum_{k}\abs{\braket{k}{\psi}}^2} \\ 
+        &\geq \cfrac{\sum_{k}E_0\abs{\braket{k}{\psi}}^2}{\sum_{k}\abs{\braket{k}{\psi}}^2} = E_0
+      \end{align}
+      が示される．
+    \end{proof}
+  \end{myprop}
+  \refe{ne}よりあらゆる状態ベクトル$\ket{\psi}$のエネルギーは基底エネルギー$E_0$以上である．
+  変分法は，
+  \begin{screen}
+    \begin{enumerate}
+      \item \textbf{試行関数}$\ket{\psi}$をたくさん用意し，
+      \item それぞれのエネルギー$E(\psi)$を計算し，
+      \item その中で最小の$E(\psi)$を$E_0$の近似解とする
+    \end{enumerate}
+  \end{screen}
+  近似法である．
+  \begin{myex}{}{}
+    ポテンシャル$V(x)=\lambda x^4$中に粒子がある系を考える．
+    この系のHamiltonianは
+    \begin{align}
+      \hat{H} = -\cfrac{\hbar^2}{2m}\cfrac{d^2}{dx^2} + \lambda x^4
+    \end{align}
+    である．予想される基底状態が満たすべき条件は
+    \begin{itemize}
+      \item $x = 0$で存在確率が最大
+      \item $\abs{x} \to \infty$で存在確率が0
+      \item 節がない\footnote{節があると微係数が大きい点が存在し，これは運動エネルギーを大きくしてしまう．}
+    \end{itemize}
+    である．この条件と変分法を用いて，エネルギーの近似値を求めよ．
+    \tcblower
+    試行関数として$\psi(x,\alpha) = \e^{-\tfrac{\alpha x^2}{2}}$，$\alpha > 0$を考える．
+    \refe{ne}の右辺を計算すると，
+    \begin{align}
+      E(\alpha) &= \cfrac{\int \psi^{*}\hat{H}\psi \dd{x}}{\int \psi^{*}\psi \dd{x}} \label{E1} \\ 
+      &= \cfrac{\hbar^2 \alpha}{4m} + \cfrac{3\lambda}{4\alpha^2}
+    \end{align}
+    を得る．
+    第1項は運動エネルギーを，第2項はポテンシャルエネルギーを，それぞれ表している\footnote{
+      ポテンシャルエネルギーの項は$\alpha$が大きくなるほど小さくなる．
+      これは，波動関数が狭まり$x=0$での存在確率が大きくなるためである．
+      一方，運動エネルギーの項は$\alpha$が大きくなるほど大きくなる．
+      これは，不確定性関係$\Delta x\Delta p \ge \cfrac{\hbar}{2}$より，運動量のばらつきが大きくなるためである．
+    }．
+    \refe{E1}の最小値が基底エネルギー$E_0$の近似解である．よって，$\dv{\alpha}E(\alpha_0) = 0$となる$\alpha_0$を\refe{E1}に代入することで近似解，
+    \begin{align}
+      E(\alpha_0) = \cfrac{3}{8}\qty(\cfrac{6\hbar^4\lambda}{m^2})^{1/3}
+    \end{align}
+    を得る．
+  \end{myex}
+\end{document}

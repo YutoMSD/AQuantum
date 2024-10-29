@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\input{../../../head.tex}
+\begin{document}
+  時間に依存する摂動を調和摂動という．
+  以下の摂動を考える\footnote{光のイメージ}．
+  \begin{equation}
+    \hat{V}(t)=
+    \begin{cases}
+    0\ (t\le0)\\
+    2V\cos\omega t\ (t>0)
+    \end{cases}
+  \end{equation}
+  $2V\cos\omega t=V(\mathrm{e}^{i\omega t}+\mathrm{e}^{-i\omega t})$であるので，
+  \begin{align}
+    c^1_{f,i}(t)&=\frac{i}{\hbar}\int_{0}^{t}\bra{f}\hat{V}\ket{i}(\mathrm{e}^{i\omega t}+\mathrm{e}^{-i\omega t})\mathrm{e}^{i\omega_{fi}t}dt\\
+    \label{3.6}
+    &=-\frac{V_{fi}}{\hbar}\qty(\frac{\mathrm{e}^{i(\omega_{fi}+\omega)t}-1}{\omega_{fi}+\omega}+\frac{\mathrm{e}^{i(\omega_{fi}-\omega)t}-1}{\omega_{fi}-\omega})
+  \end{align}
+  を得る．ここで$V_{fi}=\bra{f}\hat{V}\ket{i}$とした．\\
+  (i)$\omega_{fi}-\omega\approx0$のとき\\
+  式(\ref{3.6})の第2項は第1項より十分大きい．よって，
+  \begin{equation}
+    c_{f,i}^1(t)\approx-\frac{V_{fi}}{\hbar}\frac{\mathrm{e}^{i(\omega_{fi}-\omega)t}-1}{\omega_{fi}-\omega}=-\frac{V_{fi}}{\hbar}\mathrm{e}^{i\frac{\omega_{fi}-\omega}{2}t}\frac{\sin\frac{\omega_{fi}-\omega}{2}t}{\frac{\omega_{fi}-\omega}{2}}
+  \end{equation}
+  と近似できる．このとき$\ket{i}\to\ket{f}$の遷移確率は
+  \begin{equation}
+    |c_{f,i}^1(t)|^2=\frac{V_{fi}^2}{\hbar^2}\frac{\sin^2\frac{\omega_{fi}-\omega}{2}t}{\qty(\frac{\omega_{fi}-\omega}{2})^2}
+  \end{equation}
+  $\frac{\sin^2\frac{\omega_{fi}-\omega}{2}t}{\qty(\frac{\omega_{fi}-\omega}{2})^2}$は$t\to\infty$で$2\pi t\delta(\omega_{fi}-\omega)=2\pi t\hbar\delta(E_f-E_i-\hbar\omega)$
+  と近似できるので
+  単位時間当たりの遷移確率は
+  \begin{equation}
+    \omega_{f\to i}=\frac{|c_{f,i}^1(t)|^2}{t}=\frac{2\pi}{\hbar}|V_{fi}|^2\delta(E_f-E_i-\hbar\omega)
+  \end{equation}
+  である．これもFermiの黄金律という．$E_f=E_i+\hbar\omega$へと遷移することがわかる．\\
+  (ii)$\omega_{fi}+\omega\approx0$のとき
+  式(\ref{3.6})の第1項が支配的となる．上記の議論を$\omega\to\omega$と置き換えて繰り返すと単位時間当たりの遷移確率として
+  \begin{equation}
+    \omega_{i\to f}=\frac{|c_{f,i}^1(t)|^2}{t}=\frac{2\pi}{\hbar}|V_{fi}|^2\delta(E_f-E_i+\hbar\omega)
+  \end{equation}
+  を得る．$E_f=E_i-\hbar\omega$へと遷移することがわかる．
+\end{document}

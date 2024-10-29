@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\input{../../../head.tex}
+\begin{document}
+  波動関数$\psi(\bm{r})$を次のように変換する．
+  \begin{equation}
+    \psi(\bm{r})\to\psi'(\bm{r})=\mathrm{e}^{i\alpha}\psi(\bm{r})
+  \end{equation}
+  これをSchrödinger方程式に代入する．
+  \begin{align}
+    i\hbar\frac{\partial}{\partial t}\psi&\to i\hbar\frac{\partial}{\partial t}\psi'=\mathrm{e}^{i\alpha}i\hbar\frac{\partial}{\partial t}\psi\\
+    -\frac{\hbar^2}{2m}\nabla^2\psi&\to-\frac{\hbar^2}{2m}\nabla^2\psi'=-\mathrm{e}^{i\alpha}\frac{\hbar^2}{2m}\nabla^2\psi
+  \end{align}
+  よって，
+  \begin{equation}
+    i\hbar\frac{\partial}{\partial t}\psi'=-\frac{\hbar^2}{2m}\nabla^2\psi'
+  \end{equation}
+  が成り立つことがわかる．また期待値も
+  \begin{equation}
+    \bra{\psi}\hat{A}\ket{\psi}=\bra{\psi'}\hat{A}\ket{\psi'}
+  \end{equation}
+  である．つまり，物理は大域的Gauge変換に対して不変である．
+\end{document}

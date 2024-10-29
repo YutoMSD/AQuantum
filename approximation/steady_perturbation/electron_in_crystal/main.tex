@@ -1,0 +1,96 @@
+\documentclass{standalone}
+\input{../../../head.tex}
+\begin{document}
+  結晶中の周期ポテンシャルによりバンドギャップができることを確認する．\\
+  長さ$L$の周期ポテンシャル中の1次元自由電子の運動を考える．\\
+  波動関数は
+  \begin{equation}
+    \phi_k(x)=\braket{x}{k}=\frac{1}{\sqrt{L}}\mathrm{e}^{ikx}
+  \end{equation}
+  エネルギー固有値は
+  \begin{equation}
+    \epsilon_0(k)=\frac{\hbar^2k^2}{2m}\ (k=\frac{2\pi}{L}N,\ N=0,\pm1,\pm2,...)
+  \end{equation}
+  である．\\
+  ここで$V(x+a)=V(x)$を満たす結晶の周期ポテンシャルを摂動として加える．
+  \begin{align}
+    V(x)&=2V\cos\frac{2\pi}{a}x\\
+    &=V(\mathrm{e}^{i\frac{2\pi}{a}x}+\mathrm{e}^{-i\frac{2\pi}{a}x})\\
+    &=V(\mathrm{e}^{igx}+\mathrm{e}^{-igx})\\
+    g&\equiv\frac{2\pi}{a}
+  \end{align}
+  2次摂動まで含めるとエネルギーは次のようになる．
+  \begin{equation}
+    \label{2ji}
+    E_n=E_n^0+\bra{n^0}\hat{V}\ket{n^0}+\sum_{m\ne n}\frac{\qty|\bra{m^0}\hat{V}\ket{n^0}|^2}{E_n^0-E_m^0}
+  \end{equation}
+  ここで，状態及びエネルギーのラベリングを$n$から$k$に変更する．$V_{k'k}=\bra{k'}\hat{V}\ket{k}$として式(\ref{2ji})を書き換える．
+  \begin{equation}
+    E(k)=\epsilon^0(k)+V_{kk}+\sum_{k'\ne k}\frac{|V_{k'k}|^2}{\epsilon^0(k)-\epsilon^0(k')}
+  \end{equation}
+  摂動によるエネルギーは
+  \begin{align}
+    V_{k'k}&=\frac{V}{L}\int_{-L/2}^{L/2}\phi_{k'}^{*}(x)\hat{V}(x)\phi_k(x)dx\\
+    &=V\qty[\frac{\sin\frac{qL}{2}}{\frac{qL}{2}}+\frac{\sin\frac{q'L}{2}}{\frac{q'L}{2}}]\\
+  \end{align}
+  と計算される．($q\equiv -k'+g+k,\ q'\equiv -k'-g+k$)摂動によるエネルギーはsinc関数の形になっているので$L\to\infty$ではデルタ関数に近似できる．よって，
+  \begin{equation}
+    V_{k'k}=V(\delta_{q,0}+\delta_{q',0})=
+    \begin{cases}
+      V\ \mathrm{if}\ k'=k+g\ \mathrm{or}\ k'=k-g\\
+      0\ \mathrm{otherwise}
+    \end{cases}
+  \end{equation}
+  である．したがってエネルギーは
+  \begin{equation}
+    \label{Ebr}
+    E(k)=\epsilon^0(k)+\frac{V^2}{\epsilon(k)-\epsilon(k+g)}+\frac{V^2}{\epsilon(k)-\epsilon(k-g)}
+  \end{equation}
+  となる．この振る舞いをを1st Brillouin Zoneの内外で確認する(対称性から右側のみ)．\\
+  \\
+  1st Brillouin Zone内側($k=k_1<\frac{\pi}{a}$)\\
+  $\epsilon(k)$は放物線なので
+  \begin{equation}
+    \begin{cases}
+      \epsilon(k_1)\ll\epsilon^0(k_1+g)\\
+      \epsilon(k_1)<\epsilon^0(k_1-g)
+    \end{cases}
+  \end{equation}
+  が成りたつ．よって，$E(k)<\epsilon^0(k)$．摂動が加わった後のエネルギーは加わる前のエネルギーより小さくなる．\\
+  1st Brillouin Zone外側($k=k_2>\frac{\pi}{a}$)\\
+  同様に考え，
+  \begin{equation}
+    \begin{cases}
+      \epsilon(k_2)\ll\epsilon^0(k_2+g)\\
+      \epsilon(k_2)>\epsilon^0(k_2-g)
+    \end{cases}
+  \end{equation}
+  である．よって，$E(k)>\epsilon^0(k)$が成り立ち，摂動が加わった後のエネルギーは加わる前のエネルギーより大きくなる．\\
+  以上の議論により，結晶中の周期ポテンシャルによりバンドギャップが形成されることがわかった．しかし，式(\ref{Ebr})に$k=\pm\frac{\pi}{a}$を代入すると発散してしまう．以下では
+  2重縮退があるときの摂動を考えバンドギャップ$\Delta E$を求める．\\
+  式(\ref{syukutai})で$a=\frac{\pi}{a}$，$b=-\frac{\pi}{a}$とする．$V_{kk}=0，V_{ab}=V$なので，2次摂動によるエネルギーは
+  \begin{align}
+    E&=\pm\frac{1}{2}\sqrt{4|V|^2}\\
+    &=\pm V
+  \end{align}
+  である．よって，
+  \begin{equation}
+    \Delta E=2V
+  \end{equation}
+  を得る．また，$E=\pm V$に対応する波動関数はそれぞれ
+  \begin{align}
+    \psi_{+}&=\phi_{k=\pi/a}+\phi_{k=-\pi/a}\sim\cos\frac{\pi}{a}x\\
+    \psi_{-}&=\phi_{k=\pi/a}-\phi_{k=-\pi/a}\sim\sin\frac{\pi}{a}x
+  \end{align}
+  であり，定在波が生じる．\\
+  バンドギャップの起源はBragg反射である．Bragg反射は以下の式を満たす．
+  \begin{equation}
+    2a\sin\theta=\lambda
+  \end{equation}
+  今回の場合は1次元なので$\theta=\pi/2$であり，波数は$k=2\pi/\lambda$である．よって，Bragg条件は
+  \begin{equation}
+    k=\frac{\pi}{a}
+  \end{equation}
+  と書き換えられる．上の条件を満たす波数のみが反射し，定在波をつくる．sinで表される波動関数はポテンシャルが最小となる波数で確率振幅が最大となる．
+  cosで表される波動関数はポテンシャルが最大となる波数で確率振幅が最大となる．よって，sinの方はエネルギーが低くなり，cosの方は高くなる．これによりバンドギャップが生じる．
+\end{document}

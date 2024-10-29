@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\input{../../../head.tex}
+\begin{document}
+  式(\ref{Tomonaga})に左から$\bra{m}$を演算する($\hat{H}^0\ket{m}=E_m\ket{m}$)．\\
+  左辺は
+  \begin{align}
+    &\bra{m}i\hbar\frac{d}{dt}\sum_nc_n(t)\ket{n}\\
+    &=i\hbar\frac{d}{dt}c_m(t)
+  \end{align}
+  右辺は
+  \begin{align}
+    &\bra{m}\hat{V}_I(t)\sum_{n}c_n(t)\ket{n}\\
+    &=\sum_{n}c_n(t)\mathrm{e}^{-i\frac{(E_n-E_m)t}{\hbar}}\bra{m}\hat{V}(t)\ket{n}
+  \end{align}
+  となる．よって，非定常摂動の時間発展は以下の式を満たす．
+  \begin{itembox}[l]{$\hat{H}(t)=\hat{H}^0+\hat{V}(t)$}
+    \begin{align}
+      \ket{\psi(t)}_I&=\sum_{n}c_n(t)\ket{n}\\
+      i\hbar\frac{d}{dt}c_m(t)&=\sum_{n}c_n(t)V_{mn}\mathrm{e}^{i\omega_{mn}t}\\
+      V_{mn}&=\bra{m}\hat{V}(t)\ket{n}\\
+      \omega_{mn}&=\frac{E_m-E_n}{\hbar}=-\omega_{nm}
+    \end{align}
+  \end{itembox}
+  これは$c_n$の連立方程式になっており解くことは困難である．よって近似を加える．
+\end{document}

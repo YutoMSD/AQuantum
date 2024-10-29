@@ -1,0 +1,44 @@
+\documentclass{standalone}
+\input{../../../head.tex}
+\begin{document}
+  \begin{myexc}{Griffith Example 7.3}{}
+    2次元調和振動子$\hat{H^0}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2(\hat{x}^2+\hat{y}^2)$の第1励起状態は縮退している．
+    \begin{align}
+      \psi^0_a&=\psi_0(x)\psi_1(y)=\sqrt{\frac{2}{\pi}}\frac{m\omega}{\hbar}y\exp\qty(\frac{m\omega}{2\hbar}(x^2+y^2))\\
+      \psi^0_a&=\psi_1(x)\psi_0(y)=\sqrt{\frac{2}{\pi}}\frac{m\omega}{\hbar}x\exp\qty(\frac{m\omega}{2\hbar}(x^2+y^2))
+    \end{align}
+    ここに摂動$\hat{H'}=\epsilon m\omega^2xy$を加える．
+    \begin{equation}
+      \begin{pmatrix}
+        \omega_{aa}-E_n^1&\omega_{ab}\\
+        \omega_{ba}&\omega_{bb}-E_n^1
+      \end{pmatrix}
+      \begin{pmatrix}
+        \alpha\\
+        \beta
+      \end{pmatrix}
+      =
+      \begin{pmatrix}
+        0\\0
+      \end{pmatrix}
+    \end{equation}
+    を用いて摂動を加えた後の固有関数及び摂動による補正エネルギーを求めよ．
+    \tcblower
+    \begin{align}
+      W_{aa}&=\int\int\psi_a^0\hat{H'}\psi_a^0dxdy\\
+      &=\epsilon m\omega^2\int|\psi_0(x)|^2xdx\int|\psi_1(x)|^2ydy\\
+      &=0=W_{bb}
+    \end{align}
+    \begin{align}
+      W_{ab}&=\qty[\int\psi_0(x)\epsilon m\omega^2x\psi_1(x)dx]^2\\
+      &=\epsilon\frac{\hbar\omega}{2}\qty[\int\psi_0(x)(\hat{a}_{+}+\hat{a}_{-})\psi_1(x)dx]^2\\
+      &=\epsilon\frac{\hbar\omega}{2}\qty[\int\psi_0(x)\psi_0(x)dx]^2\\
+      &=\epsilon\frac{\hbar\omega}{2}
+    \end{align}
+    よって，摂動による補正エネルギーは$E_1=\pm\epsilon\frac{\hbar\omega}{2}$，固有関数は
+    \begin{equation}
+      \psi_{\pm}^0=\frac{1}{\sqrt{2}}\qty(\psi_b^0\pm\psi_a^0)
+    \end{equation}
+    である．
+  \end{myexc}
+\end{document}

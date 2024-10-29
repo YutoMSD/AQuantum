@@ -1,0 +1,32 @@
+\documentclass{report}
+\input{../../../head.tex}
+\begin{document}
+  真の基底状態$\ket{E_0}$に第1励起状態$\ket{E_1}$を$10\%$含んだ試行関数$\ket{\psi}=\ket{E_0}+\frac{1}{10}\ket{E_1}$を使ってエネルギーを計算する．
+  \begin{align}
+    E(\psi)&=\frac{\bra{\psi}\hat{H}\ket{\psi}}{\braket{\psi}{\psi}}\\
+    &=\frac{\bra{E_0}\hat{H}\ket{E_0}+1/100\bra{E_1}\hat{H}\ket{E_1}}{1+1/100}\\
+    &=\frac{E_0+1/100E_1}{1.01}\\
+    &\approx 0.99E_0+0.01E_1
+  \end{align}
+  試行関数で10\%含まれていた誤差がエネルギーでは1\%に収まっている．
+  \begin{myex}{}{}
+    無限井戸型ポテンシャル$[-a,a]$
+    厳密に解くことができるが，ここでは変分法を用いて近似解を求める．
+    予想される試行関数の条件は
+    \begin{itemize}
+      \item $\psi(x=\pm a)=0$
+      \item 節がない
+    \end{itemize}
+    である．よって今回は
+    \begin{equation}
+      \psi(x)=a^2-x^2
+    \end{equation}
+    を採用する．
+    \begin{align}
+      E(\psi)&=\frac{\int_{-a}^{a}\qty(a^2-x^2)\qty(-\frac{\hbar^2}{2m}\frac{d^2}{dx^2})\qty(a^2-x^2)dx}{\int_{-a}^{a}\qty(a^2-x^2)^2dx}\\
+      &=\frac{10}{\pi^2}E_0\\
+      &\approx 1.01E_0
+    \end{align}
+    真の基底エネルギー$E_0$に近い値が得られた\footnote{このくらいの計算が期末試験に出たことがある．}．
+  \end{myex}
+\end{document}

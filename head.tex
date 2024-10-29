@@ -1,0 +1,196 @@
+% --- 日本語関連 ---
+\usepackage{luatexja} % LuaTeXで日本語を使うためのパッケージ
+\usepackage{luatexja-fontspec} % LuaTeX用の日本語フォント設定
+
+% --- 数学関連 ---
+\usepackage{amsmath, amssymb, amsfonts, mathtools, bm, amsthm} % 基本的な数学パッケージ
+\usepackage{type1cm, upgreek} % 数式フォントとギリシャ文字
+\usepackage{physics, mhchem} % 物理や化学の記号や式の表記を簡単にする
+
+% --- 表関連 ---
+\usepackage{multirow, longtable, tabularx, array, colortbl, dcolumn, diagbox} % 表のレイアウトを柔軟にする
+\usepackage{tablefootnote, truthtable} % 表中に注釈を追加、真理値表
+\usepackage{tabularray} % 高度な表組みレイアウト
+
+% --- グラフィック関連 ---
+\usepackage{tikz, graphicx} % 図の描画と画像の挿入
+\usepackage{background} % ウォーターマークの設定
+\usepackage{caption, subcaption} % 図や表のキャプション設定
+\usepackage{float, here} % 図や表の位置指定
+
+% --- レイアウトとページ設定 ---
+\usepackage{fancyhdr} % ページヘッダー、フッター、余白の設定
+\usepackage[top = 20truemm, bottom = 20truemm, left = 20truemm, right = 20truemm]{geometry}
+\usepackage{fancybox, ascmac} % ボックスのデザイン
+
+% --- 色とスタイル ---
+\usepackage{xcolor, color, colortbl, tcolorbox} % 色とカラーボックス
+\usepackage{listings, jvlisting} % コードの色付けとフォーマット
+
+% --- 参考文献関連 ---
+\usepackage{biblatex, usebib} % 参考文献の管理と挿入
+\usepackage{url, hyperref} % URLとリンクの設定
+
+% --- その他の便利なパッケージ ---
+\usepackage{footmisc} % 脚注のカスタマイズ
+\usepackage{multicol} % 複数段組
+\usepackage{comment} % コメントアウトの拡張
+\usepackage{siunitx} % 単位の表記
+\usepackage{docmute}
+% --- tcolorboxとtikzの設定 ---
+\tcbuselibrary{theorems, breakable} % 定理のボックスと改ページ設定
+\usetikzlibrary{decorations.markings, arrows.meta, calc} % tikzの装飾や矢印の設定
+
+% --- 定理スタイルと数式設定 ---
+\theoremstyle{definition} % 定義スタイル
+\numberwithin{equation}{subsection} % 式番号をサブセクション単位でリセット
+
+% --- hyperrefの設定 ---
+\hypersetup{
+  setpagesize = false,
+  bookmarks = true,
+  bookmarksdepth = tocdepth,
+  bookmarksnumbered = true,
+  colorlinks = false,
+  pdftitle = {}, % PDFタイトル
+  pdfsubject = {}, % PDFサブジェクト
+  pdfauthor = {}, % PDF作者
+  pdfkeywords = {} % PDFキーワード
+}
+
+% --- siunitxの設定 ---
+\sisetup{
+  table-format = 1.5, % 小数点以下の桁数
+  table-number-alignment = center, % 数値の中央揃え
+}
+
+% --- 透かし画像の設定 --- 
+% \backgroundsetup{
+%   scale=1,                       % 画像のスケール
+%   % color=black,                   % 画像の色（透かし用に半透明が推奨）
+%   opacity=0.25,                   % 透かしの透明度（0が完全透明、1が完全不透明）
+%   angle=0,                       % 画像の角度
+%   position = current page.center,  % ページの中央に配置
+%   contents={\includegraphics{./fig/appilogo-circular-full.png}} % 画像のパス
+% }
+
+% --- その他の設定 ---
+\allowdisplaybreaks % 数式の途中改ページ許可
+\newcolumntype{t}{!{\vrule width 0.1pt}} % 新しいカラムタイプ
+\newcolumntype{b}{!{\vrule width 1.5pt}} % 太いカラム
+\UseTblrLibrary{amsmath, booktabs, counter, diagbox, functional, hook, html, nameref, siunitx, varwidth, zref} % tabularrayのライブラリ
+\setlength{\columnseprule}{0.4pt} % カラム区切り線の太さ
+\captionsetup[figure]{font = bf} % 図のキャプションの太字設定
+\captionsetup[table]{font = bf} % 表のキャプションの太字設定
+\captionsetup[lstlisting]{font = bf} % コードのキャプションの太字設定
+\captionsetup[subfigure]{font = bf, labelformat = simple} % サブ図のキャプション設定
+\setcounter{secnumdepth}{4} % セクションの深さ設定
+\newcolumntype{d}{D{.}{.}{5}} % 数値のカラム
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}} % センター揃えのカラム
+\everymath{\displaystyle} % 数式のスタイル
+\renewcommand{\i}{\mathrm{i}} % 複素数単位i
+\renewcommand{\laplacian}{\grad^2} % ラプラシアンの記号
+\renewcommand{\thesubfigure}{(\alph{subfigure})} % サブ図の番号形式
+\newcommand{\m}[3]{\multicolumn{#1}{#2}{#3}} % マルチカラムのショートカット
+\renewcommand{\r}[1]{\mathrm{#1}} % mathrmのショートカット
+\newcommand{\e}{\mathrm{e}} % 自然対数の底e
+\newcommand{\Ef}{E_{\mathrm{F}}} % フェルミエネルギー
+\renewcommand{\c}{\si{\degreeCelsius}} % 摂氏記号
+\renewcommand{\d}{\r{d}} % d記号
+\renewcommand{\t}[1]{\texttt{#1}} % タイプライタフォント
+\newcommand{\kb}{k_{\mathrm{B}}} % ボルツマン定数
+\renewcommand{\phi}{\varphi} % ϕをφに変更
+\renewcommand{\epsilon}{\varepsilon} 
+\newcommand{\reff}[1]{\textbf{図\ref{#1}}} % 図参照のショートカット
+\newcommand{\reft}[1]{\textbf{表\ref{#1}}} % 表参照のショートカット
+\newcommand{\refe}[1]{\textbf{式\eqref{#1}}} % 式参照のショートカット
+\newcommand{\refp}[1]{\textbf{コード\ref{#1}}} % コード参照のショートカット
+\renewcommand{\lstlistingname}{コード} % コードリストの名前
+\renewcommand{\theequation}{\thesection.\arabic{equation}} % 式番号の形式
+\renewcommand{\footrulewidth}{0.4pt} % フッターの線
+\newcommand{\mar}[1]{\textcircled{\scriptsize #1}} % 丸囲み文字
+\newcommand{\combination}[2]{{}_{#1} \mathrm{C}_{#2}} % 組み合わせ
+\newcommand{\thline}{\noalign{\hrule height 0.1pt}} % 細い横線
+\newcommand{\bhline}{\noalign{\hrule height 1.5pt}} % 太い横線
+
+% --- カスタム色定義 ---
+\definecolor{burgundy}{rgb}{0.5, 0.0, 0.13} % バーガンディ色
+\definecolor{charcoal}{rgb}{0.21, 0.27, 0.31} % チャコール色
+\definecolor{forest}{rgb}{0.0, 0.35, 0} % 森の緑色
+
+% --- カスタム定理環境の定義 ---
+\newtcbtheorem[number within = chapter]{myexc}{練習問題}{
+  fonttitle = \gtfamily\sffamily\bfseries\upshape,
+  colframe = forest,
+  colback = forest!2!white,
+  rightrule = 1pt,
+  leftrule = 1pt,
+  bottomrule = 2pt,
+  colbacktitle = forest,
+  theorem style = standard,
+  breakable,
+  arc = 0pt,
+}{exc-ref}
+\newtcbtheorem[number within = chapter]{myprop}{命題}{
+  fonttitle = \gtfamily\sffamily\bfseries\upshape,
+  colframe = blue!50!black,
+  colback = blue!50!black!2!white,
+  rightrule = 1pt,
+  leftrule = 1pt,
+  bottomrule = 2pt,
+  colbacktitle = blue!50!black,
+  theorem style = standard,
+  breakable,
+  arc = 0pt
+}{proposition-ref}
+\newtcbtheorem[number within = chapter]{myrem}{注意}{
+  fonttitle = \gtfamily\sffamily\bfseries\upshape,
+  colframe = yellow!20!black,
+  colback = yellow!50,
+  rightrule = 1pt,
+  leftrule = 1pt,
+  bottomrule = 2pt,
+  colbacktitle = yellow!20!black,
+  theorem style = standard,
+  breakable,
+  arc = 0pt
+}{remark-ref}
+\newtcbtheorem[number within = chapter]{myex}{例題}{
+  fonttitle = \gtfamily\sffamily\bfseries\upshape,
+  colframe = black,
+  colback = white,
+  rightrule = 1pt,
+  leftrule = 1pt,
+  bottomrule = 2pt,
+  colbacktitle = black,
+  theorem style = standard,
+  breakable,
+  arc = 0pt
+}{example-ref}
+\newtcbtheorem[number within = chapter]{exc}{Requirement}{myexc}{exc-ref}
+\newcommand{\rqref}[1]{{\bfseries\sffamily 練習問題 \ref{exc-ref:#1}}}
+\newtcbtheorem[number within = chapter]{definition}{Definition}{mydef}{definition-ref}
+\newcommand{\dfref}[1]{{\bfseries\sffamily 定義 \ref{definition-ref:#1}}}
+\newtcbtheorem[number within = chapter]{prop}{命題}{myprop}{proposition-ref}
+\newcommand{\prref}[1]{{\bfseries\sffamily 命題 \ref{proposition-ref:#1}}}
+\newtcbtheorem[number within = chapter]{rem}{注意}{myrem}{remark-ref}
+\newcommand{\rmref}[1]{{\bfseries\sffamily 注意 \ref{remark-ref:#1}}}
+\newtcbtheorem[number within = chapter]{ex}{例題}{myex}{example-ref}
+\newcommand{\exref}[1]{{\bfseries\sffamily 例題 \ref{example-ref:#1}}}
+% --- 再定義コマンド ---
+% \mathtoolsset{showonlyrefs=true} % 必要な式番号のみ表示
+\pagestyle{fancy} % ヘッダー・フッターのスタイル設定
+\chead{応用量子物性講義ノート} % 中央ヘッダー
+\rhead{}
+\cfoot{\thepage} % 中央フッターにページ番号
+\lhead{}
+\rfoot{Yuto Masuda} % 右フッターに名前
+\setcounter{tocdepth}{4} % 目次の深さ
+\makeatletter
+\@addtoreset{equation}{section} % サブセクションごとに式番号をリセット
+\makeatother
+
+% --- メタ情報 ---
+\title{応用量子物性講義ノート}
+\date{更新日\today}
+\author{Yuto Masuda}

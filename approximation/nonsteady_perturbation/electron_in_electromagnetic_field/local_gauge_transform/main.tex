@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\input{../../../head.tex}
+\begin{document}
+  波動関数$\psi(\bm{r})$を次のように変換する．
+  \begin{equation}
+    \psi(\bm{r})\to\psi'(\bm{r})=\mathrm{e}^{i\alpha(\bm{r})}\psi(\bm{r})
+  \end{equation}
+  この場合，運動量がGauge不変でなくなってしまう．
+  例えば波動関数の微分を計算すると
+  \begin{equation}
+    \nabla\psi'(\bm{r})=i(\nabla\alpha(\bm{r})\mathrm{e}^{i\alpha(\bm{r})})\psi(\bm{r})+\mathrm{e}^{i\alpha(\bm{r})}\nabla\psi(\bm{r})=\mathrm{e}^{i\alpha(\bm(r))}(\nabla+i\nabla\alpha(\bm{r}))\psi(\bm{r}) 
+  \end{equation}
+  余分な項が加わってしまう．よって，
+  \begin{equation}
+    \begin{cases}
+      i\hbar\frac{\partial}{\partial t}\psi'\ne -\frac{\hbar^2}{2m}\nabla^2\psi'\\
+      \bra{\psi}\hat{A}\ket{\psi}\ne\bra{\psi'}\hat{A}\ket{\psi'}
+    \end{cases}
+  \end{equation}
+  である．したがって，局所Gauge変換に対して物理は不変ではない．\\
+  \textbf{局所Gauge不変性を基本原理とする物理を再構築する．}
+\end{document}

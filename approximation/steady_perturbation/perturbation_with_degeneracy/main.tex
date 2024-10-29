@@ -1,0 +1,91 @@
+\documentclass{standalone}
+\input{../../../head.tex}
+\begin{document}
+  1次摂動の式
+  \begin{align}
+    \label{1ji}
+    (E_n^0-\hat{H}^0)\ket{n^1}+E_n^1\ket{n^0}=\hat{V}\ket{n^0}\\
+    \ket{n^1}=\sum_{m\ne n}\ket{m^0}\frac{\bra{m^0}\hat{V}\ket{n^0}}{E_n^0-E_m^0}
+  \end{align}
+  これは$E_n^0=E_m^0$となる$m\ne n$が存在すると発散してしまう．そのため，発散する項は別で扱う必要がある．
+  以下のような2重縮退がある場合を考える．
+  \begin{align}
+    \hat{H}^0\ket{n_a^0}&=E_n^0\ket{n_a^0}\\
+    \hat{H}^0\ket{n_b^0}&=E_n^0\ket{n_b^0}
+  \end{align}
+  ただし，$\braket{n_i^0}{n_j^0}=\delta_{ij}$とする．$\ket{n_a^0}$と$\ket{n_b^0}$は同じ固有値をもつため，これらの線形結合
+  $\ket{n_0}=\alpha\ket{n_a^0}+\beta\ket{n_b^0}$も解となる．\\
+  まず，式(\ref{1ji})の両辺に左から$\bra{n_a^0}$を作用する．
+  \begin{equation}
+    \bra{n_a^0}(E_n^0-\hat{H}^0)\ket{n^1}+\bra{n_a^0}E_n^1\ket{n^0}=\bra{n_a}\hat{V}\ket{n^0}
+  \end{equation}
+  第1項は$E_n^0-E_n^0$より0．ここで，$\bra{n_i^0}\hat{V}\ket{n_j^0}=\omega_{ij}$とおけば
+  \begin{equation}
+    \alpha E_n^1=\alpha\omega_{aa}+\beta\omega_{ab}
+  \end{equation}
+  を得る．式(\ref{1ji})の両辺に左から$\bra{n_b^0}$を作用することも考えることにより，合わせて
+  \begin{equation}
+    \begin{cases}
+      \alpha\omega_{aa}+\beta\omega_{ab}=\alpha E_n^1\\
+      \alpha\omega_{ba}+\beta\omega_{bb}=\beta E_n^1
+    \end{cases}
+  \end{equation}
+  を得る．これは行列を用いて以下のように書き直される．
+  \begin{equation}
+    \label{gyouretu}
+    \begin{pmatrix}
+      \omega_{aa}-E_n^1&\omega_{ab}\\
+      \omega_{ba}&\omega_{bb}-E_n^1
+    \end{pmatrix}
+    \begin{pmatrix}
+      \alpha\\
+      \beta
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      0\\0
+    \end{pmatrix}
+  \end{equation}
+  $(\alpha,\beta)=(0,0)$以外の解を持つには行列式が0となればいいので，
+  \begin{equation}
+    \begin{vmatrix}
+      \omega_{aa}-E_n^1&\omega_{ab}\\
+      \omega_{ba}&\omega_{bb}-E_n^1
+    \end{vmatrix}
+    =0
+  \end{equation}
+  である．よって，1次の摂動エネルギーとして
+  \begin{screen}
+  \begin{equation}
+    \label{syukutai}
+    E_n^1=\frac{1}{2}\qty[(\omega_{aa}+\omega_{bb}\pm\sqrt{(\omega_{aa}-\omega_{bb})^2+4|\omega_{ab}|^2})]
+  \end{equation}
+  \end{screen}
+  を得る．縮退が解けてエネルギーが2つに分かれている．
+  \begin{myex}{}{}$\omega_{aa}=\omega_{bb}=0,\omega_{ab}=\omega_{ba}=\omega$の場合
+  式(\ref{gyouretu})は
+  \begin{equation}
+    \begin{pmatrix}
+      -E_n^1&\omega\\
+      \omega&-E_n^1
+    \end{pmatrix}
+    \begin{pmatrix}
+      \alpha\\
+      \beta
+    \end{pmatrix}
+    =\begin{pmatrix}
+      0\\0
+    \end{pmatrix}
+  \end{equation}
+  となる．よって，
+  \begin{equation}
+    E_n^1=
+    \begin{cases}
+      +\omega\ (\alpha=1,\beta=1)\\
+      -\omega\ (\alpha=1,\beta=-1)
+    \end{cases}
+  \end{equation}
+  である．これは摂動を加える前に縮退していた2つの状態$\ket{n^0}=\ket{n_a^0}\pm\ket{n_b^0}$の縮退が解け，エネルギー$E_n^0+\omega$をもつ状態$\ket{n_a^0}+\ket{n_b^0}$
+  とエネルギー$E_n^0-\omega$をもつ状態$\ket{n_a^0}-\ket{n_b^0}$に分かれたことを意味している．
+  \end{myex}
+\end{document}

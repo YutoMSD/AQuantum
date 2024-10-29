@@ -1,0 +1,34 @@
+\documentclass{standalone}
+\input{../../../head.tex}
+\begin{document}
+  式(\ref{2nd})の両辺に$\bra{n^0}$を作用することで，2次摂動によるエネルギー補正を得る．
+  \begin{align}
+    0+0&+\bra{n^0}E_n^2\ket{n^0}=\bra{n^0}\hat{V}\ket{n^1}\\
+    E_n^2&=\bra{n^0}\hat{V}\ket{n^1}
+  \end{align}
+  \begin{itembox}[l]{2次摂動によるエネルギー補正}
+  \begin{equation}
+    E_n^2=\sum_{m\ne n}\frac{\lvert \bra{m^0}\hat{V}\ket{n^0}\rvert^2}{E_n^0-E_m^0}
+  \end{equation}
+  \end{itembox}
+  また，基底状態においては$E_{n=0}^0 < E_m^0$である．常に$\frac{\lvert \bra{m^0}\hat{V}\ket{n^0}\rvert^2}{E_n^0-E_m^0}$の
+  分母は負であるため，\textbf{基底状態のエネルギーは2次摂動により必ず下がる}．
+  \begin{myex}{Mott insulator\footnote{
+      Nevill Francis Mott (1905-1996)
+    }\footnote{
+      バンドギャップが大きくギャップ内にフェルミ準位があるバンド絶縁体と異なり，運動エネルギーが小さくCoulomb力が大きいため電子が移動できない絶縁体である．
+    }\footnote{
+      $R\mathrm{NiO_3，TaS_2，Sr_2IrO_4}$など
+    }}{}
+    Coulomb力が強い4つのサイトに電子を4つ入れる．
+    $\uparrow \ \uparrow\ \uparrow\ \uparrow$と$\uparrow\ \downarrow\ \uparrow\ \downarrow$のどちらが基底状態としてふさわしいだろうか．
+    サイト間の電子の飛び移りを摂動として扱う．
+    ここで重要なのは，基底状態のエネルギーは2次摂動により必ず下がるということである．
+    $\uparrow \ \uparrow\ \uparrow\ \uparrow$に摂動を加えたとしてもPauliの排他律により電子の飛び移りは起こらない．
+    摂動によってエネルギーは変化しない．しかし，$\uparrow\ \downarrow\ \uparrow\ \downarrow$は電子が反平行であるため電子のサイト間での飛び移りが許される．
+    これは，2次摂動によるエネルギーの低下を引き起こす．
+    よって，$\uparrow\ \downarrow\ \uparrow\ \downarrow$の方が基底状態としてふさわしい\footnote{
+      Mott insulatorは反強磁絶縁体である．
+    }．
+  \end{myex}
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass{standalone}
+\input{../../../head.tex}
+\begin{document}
+  長さ$L$の無限井戸型ポテンシャル$U$に電場による摂動$V$を加える\footnote{
+    Johanes Stark(1874-1957)
+  }\footnote{
+    電場によるエネルギー準位の変化をStark効果という．
+  }．
+  \begin{equation}
+    U(x)=
+    \begin{cases}
+      0,\ \lvert x \rvert \le L/2\\
+      \infty,\ \lvert x \rvert \ge L/2
+    \end{cases}
+  \end{equation}
+  \begin{equation}
+    V(x)=-e\phi(x)=eEx\ (e>0)
+  \end{equation}
+  \begin{equation}
+    \hat{H}=-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}+\hat{U}(x)+\hat{V}(x)
+  \end{equation}
+  $\hat{H}^0$の厳密解は以下のようになっている．
+  \begin{align}
+    E_n^0&=\frac{\hbar^2}{2m}\qty(\frac{\pi}{L})^2n^2,\ (n=1,2,3,\cdots)\\
+    \phi_n(x)&=
+    \begin{cases}
+    \sqrt{\frac{2}{L}}\cos\qty(\frac{n\pi}{L}x),\ (n=1,3,5,\dots)\\
+    \sqrt{\frac{2}{L}}\sin\qty(\frac{n\pi}{L}x),\ (n=2,4,6,\dots)
+    \end{cases}
+  \end{align}
+  1次摂動によるエネルギー補正は奇関数の積分になるため0である\footnote{もし0でないならば，これは電場をかける向きにより$E$が変わることを意味する．対称性よりそれはあり得ない．}．\\
+  2次摂動によるエネルギー補正は
+  \begin{align}
+    E_{n=1}^2&=\sum_{m\ne 1}\frac{\lvert V_{m1}\rvert^2}{E_{n=1}^0-E_m^0}\\
+    V_{m1}&=eE\int\phi_m^{*}x\phi_{n=1}dx\\
+    &=
+    \begin{cases}
+    0\ (m=\mathrm{odd})\\
+    \ne 0\ (m=\mathrm{even})
+    \end{cases}\\
+    E_{n=1}^2&=\frac{\lvert V_{21}\rvert^2}{E_1^0-E_2^0}+\frac{\lvert V_{41}\rvert^2}{E_1^0-E_4^0}+\cdots\\
+    &\approx\frac{\lvert V_{21}\rvert^2}{E_1^0-E_2^0}\\
+    &=-\frac{256}{234\pi^4}\frac{(eEL)^2}{E_1^0}
+  \end{align}
+  となり，確かにエネルギーは低下する．
+  \begin{myex}{}{}Griffith Example7.1
+    [0,a]無限井戸型ポテンシャルにに次の摂動が加わったときの1次摂動によるエネルギーを求めよ．
+    \begin{align}
+      V_1(x)&=
+      \begin{cases}
+      V_0,\ 0\le x\le a\\
+      0,\ \mathrm{otherwise}
+      \end{cases}\\
+      V_2(x)&=
+      \begin{cases}
+      V_0,\ 0\le x \le a/2\\
+      0,\ \mathrm{otherwise}
+      \end{cases}
+    \end{align}
+    【解答】\\
+    $V_1(x)$の場合
+    \begin{equation}
+      E_n^1(x)=\bra{\psi_n^0}V_0\ket{\psi_n^0}=V_0
+    \end{equation}
+    $V_2(x)$の場合
+    \begin{equation}
+      E_n^1=\frac{2V_0}{a}\int_{0}^{a/2}\sin^2\qty(\frac{n\pi}{a}x)dx=V_0/2
+    \end{equation}
+  \end{myex}
+\end{document}

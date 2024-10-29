@@ -1,0 +1,73 @@
+\documentclass{standalone}
+\input{../../../head.tex}
+\begin{document}
+  時間に依存する摂動がある量子系の時間発展は次の式で表されることを確認した．
+  \begin{equation}
+    \begin{cases}
+      \label{3.4}
+    \ket{\psi(t)}_I=\sum_{n}c_n(t)\ket{n}\\
+    i\hbar\frac{d}{dt}c_m(t)=\sum_{n}V_{mn}(t)\mathrm{e}^{i\omega_{mn}t}c_n(t)
+    \end{cases}
+  \end{equation}
+  一般に式(\ref{3.4})を解くことはできない．そこで近似を加える．\\
+  $\hat{V}(t)\to\lambda\hat{V}(t)$として$c_n(t)$をべき級数展開する．
+  \begin{equation}
+    c_n(t)=c_n^0(t)+\lambda c_n^1(t)+\lambda^2c_n^2(t)+\cdots
+  \end{equation}
+  これを式(\ref{3.4})の第2式に代入して整理すると
+  $\lambda^0$の係数比較から
+  \begin{equation}
+    \label{3.40ji}
+    i\hbar\frac{d}{dt}c_m^0(t)=0
+  \end{equation}
+  $\lambda^1$の係数比較から
+  \begin{equation}
+    \label{3.41ji}
+    i\hbar\frac{d}{dt}c_m^1(t)=\sum_{n}V_{mn}(t)\mathrm{e}^{i\omega_{mn}t}c_n^0(t)
+  \end{equation}
+  を得る．式(\ref{3.40ji})より，
+  \begin{equation}
+    \label{3.4const}
+    c_m^0(t)=\rm{const.}
+  \end{equation}
+  である．以下では，$t=t_0$から摂動$\hat{V}(t)$を加え始めたとする．また，$t=t_0$で系の量子状態が$\ket{i}$であったとする．
+  このとき
+  \begin{equation}
+    \begin{cases}
+      c_i^0(t_0)=1\\
+      c_m^0(t_0)=0\ (m\ne i)
+    \end{cases}
+  \end{equation}
+  である．式(\ref{3.4const})から0次の係数は定数なので
+  \begin{equation}
+    \begin{cases}
+      c_i^0(t)=1\\
+      c_m^0(t)=0\ (m\ne i)
+    \end{cases}
+  \end{equation}
+  が得られる．この系の状態は初期状態$\ket{i}$に依ることがわかったのでこれからは$c_m(t)$を$c_{m,i}(t)$と表記する．
+  式(\ref{3.41ji})から
+  \begin{align}
+    i\hbar\frac{d}{dt}c_{m,i}^1(t)&=\sum_{n}V_{mn}(t)\mathrm{e}^{i\omega_{mn}t}c_{n,i}^0(t)\\
+    &=V_{m,i}(t)\mathrm{e}^{o\omega_{mi}t}\\
+    c_{m,i}^1(t)&=-\frac{i}{\hbar}\int_{t_0}^{t}V_{m,i}(t)\mathrm{e}^{i\omega_{mi}t}dt
+  \end{align}
+  である．また，系の量子状態は
+  \begin{align}
+    \ket{\psi(t)}_I&=\sum_{n}c_{n,i}(t)\ket{n}\\
+    &\simeq\sum_{n}[c_{n,i}^0(t)+c_{n,i}^1(t)]\ket{n}\\
+    &=\ket{i}+c_{i,i}^1(t)\ket{i}+\sum_{n\ne i}c_{n,i}^1(t)\ket{n}
+  \end{align}
+  と表される．よって
+  \begin{itembox}[l]{$\ket{\psi(t_0)}_I=\ket{i}$の時間発展}
+    \begin{align}
+      \ket{\psi(t)}_I&=(1+c_{i,i}^1(t))\ket{i}+\sum_{n\ne i}c_{n,i}^1(t)\ket{n}\\
+      c_{n,i}^1(t)&=-\frac{i}{\hbar}\int_{t_0}^{t}V_{n,i}\mathrm{e}^{i\omega_{ni}t}dt
+    \end{align}
+  \end{itembox}
+  が得られる．このとき，始状態$\ket{i}$から終状態$\ket{f}\ (f\ne i)$への遷移確率は
+  \begin{equation}
+    |\braket{f}{\psi(t)}_I|^2=|(1+c_{i,i}^1(t))\braket{f}{i}+\sum_{n\ne i}c_{n,i}^1(t)\braket{f}{n}|^2=|c_{f,i}^1(t)|^2
+  \end{equation}
+  である．
+\end{document}

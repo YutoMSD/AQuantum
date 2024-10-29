@@ -1,0 +1,44 @@
+\documentclass{standalone}
+\input{../../../head.tex}
+\begin{document}
+  非定常摂動の運動はSchrödinger表示で
+  \begin{equation}
+    \label{TDSE}
+    \begin{cases}
+    i\hbar\frac{d}{dt}\ket{\psi(t)}=\qty(\hat{H}^0+\hat{V}(t))\ket{\psi(t)}\\
+    \ket{\psi(t)}=\sum_{n}c_n(t)\mathrm{e}^{-iE_nt/\hbar}\ket{n}
+    \end{cases}
+  \end{equation}
+  と書ける．これを次の\textbf{相互作用表示}(interaction picture)を用いて書き直す．
+  \begin{itembox}[l]{相互作用表示}
+    \begin{equation}
+      \ket{\psi(t)}_I=\mathrm{e}^{i\hat{H}^0t/\hbar}\ket{\psi(t)}
+    \end{equation}  
+  \end{itembox}
+  実際，相互作用表示を用いると，
+  \begin{align}
+    \ket{\psi(t)}_I&=\mathrm{e}^{i\hat{H}^0t/\hbar}\sum_{n}c_n(t)\mathrm{e}^{-iE_nt/\hbar}\ket{n}\\
+    &=\sum_{n}c_n(t)\ket{n}
+  \end{align}
+  であり．式(\ref{TDSE})の2式目と同じものが得られる．\\
+  相互作用表示の時間微分を計算してみる．
+  \begin{align}
+    i\hbar\frac{d}{dt}\ket{\psi(t)}_I&=i\hbar\qty(i\frac{\hat{H^0}}{\hbar})\mathrm{e}^{i\hat{H}^0t/\hbar}\ket{\psi(t)}+i\hbar\mathrm{e}^{i\hat{H}^0t/\hbar}\frac{d}{dt}\ket{\psi(t)}\\
+    &=\mathrm{e}^{i\hat{H}^0t/\hbar}\hat{V}(t)\ket{\psi(t)}\\
+    &=\mathrm{e}^{i\hat{H}^0t/\hbar}\hat{V}(t)\mathrm{e}^{-i\hat{H}^0t/\hbar}\mathrm{e}^{i\hat{H}^0t/\hbar}\ket{\psi(t)}\\
+    &=\mathrm{e}^{i\hat{H}^0t/\hbar}\hat{V}(t)\mathrm{e}^{-i\hat{H}^0t/\hbar}\ket{\psi(t)}_I\\
+    &\equiv\hat{V}_I(t)\ket{\psi(t)}_I
+  \end{align}
+  Schrödinger方程式に似た式が得られた．これを\textbf{朝永・Schwinger方程式}という
+  \footnote{Schrödinger描像は量子状態が時間発展するとみなす．Heisenberg描像は物理量が時間発展するとみなす．相互作用表示はその中間であるといえる．}  
+  \footnote{朝永振一郎(1906-1979)}
+  \footnote{Julian Schwinger(1918-1994)}
+  \footnote{朝永とSchwingerは1964年にRichard Feynmannとともにノーベル賞を受賞．}．
+  \begin{itembox}[l]{朝永・Schwinger方程式}
+    \begin{align}
+      \label{Tomonaga}
+      i\hbar\frac{d}{dt}\ket{\psi(t)}_I&=\hat{V}_I(t)\ket{\psi(t)}_I\\
+      \hat{V}_I(t)&=\mathrm{e}^{i\hat{H}^0t/\hbar}\hat{V}(t)\mathrm{e}^{-i\hat{H}^0t/\hbar}
+    \end{align}
+  \end{itembox}
+\end{document}

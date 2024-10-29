@@ -1,0 +1,67 @@
+\documentclass{standalone}
+\input{../../../head.tex}
+\begin{document}
+  時刻$t=0$から摂動$\hat{V}$を加え始めたとする．
+  \begin{equation}
+    \hat{V}(t)=
+    \begin{cases}
+      0\ (t\le0)\\
+      \hat{V}\ (t>0)
+    \end{cases}
+  \end{equation}
+  このとき
+  \begin{equation}
+    V_{fi}(t)=\bra{f}\hat{V}(t)\ket{i}=
+    \begin{cases}
+      0\ (t\le 0)\\
+      \bra{f}\hat{V}\ket{i}\ (t>0)
+    \end{cases}
+  \end{equation}
+  である．ここで$\bra{f}\hat{V}\ket{i}=V_{fi}$とする．$t=0$で量子状態は$\ket{i}$であったとする．
+  \begin{align}
+    c_{f,i}^1(t)&=-\frac{i}{\hbar}\int_{0}^{t}V_{fi}\mathrm{e}^{i\omega_{fi}t}dt\\
+    &=2i\exp\qty(-i\frac{\omega_{fi}t}{2})\sin\qty(\frac{\omega_{fi}}{2}t)
+  \end{align}
+  よって$\ket{i}$から$\ket{f}$への遷移確率は
+  \begin{equation}
+    |c_{f,i}^1(t)|^2=\frac{|V_{fi}|^2}{\hbar^2}\qty(\frac{\sin\qty(\omega_{fi}t/2)}{\qty(\omega_{fi}/2)})^2
+  \end{equation}
+  であり，$\sin\qty(\omega_{fi}t/2)$が0でないときのみ$\ket{i}$から$\ket{f}$への遷移が起きることがわかる．また，
+  $\qty(\frac{\sin\qty(\omega_{fi}t/2)}{\qty(\omega_{fi}/2)})^2$は$|\omega_{fi}|<2\pi/t$で有効な値をもつ．従って，$t$が小さいときはこの範囲が十分広く，$\omega_{fi}\ne0$の状態への遷移が起こりうる．しかし，
+  $t$が大きいときは$\omega_{fi}\simeq0$の状態への遷移しか起きない．
+  通常は$t\to\infty$と考えてよい．
+  \begin{equation}
+    \lim_{t\to\infty}\qty(\frac{\sin\qty(\omega t/2)}{\omega t/2})^2=2\pi t\delta(\omega)
+  \end{equation}
+  を使うと\footnote{$\delta(ax)=\frac{1}{|a|}\delta(x)$}，
+  \begin{align}
+    \lim_{t\to\infty}|c_{f,i}^1(t)|^2&=\frac{|V_{fi}|^2}{\hbar^2}2\pi t\delta(\omega_{f,i})\\
+    &=\frac{2\pi}{\hbar}|V_{fi}|^2\delta(E_f-E_i)t
+  \end{align}
+  が得られる．
+  よって，単位時間当たりの$\ket{i}$から$\ket{f}$への遷移確率は
+  \begin{align}
+    \omega_{i\to f}&=|c_{f,i}^1(t)|^2/t\\
+    &=\frac{2\pi}{\hbar}\qty|\bra{f}\hat{V}\ket{i}|^2\delta(E_f-E_i)
+  \end{align}
+  である．これを\textbf{Fermiの黄金律}という\footnote{Enrico Fermi(1901-1954)}．
+  \begin{itembox}[l]{Fermiの黄金律}
+    \begin{equation}
+      \omega_{i\to f}=\frac{2\pi}{\hbar}\qty|\bra{f}\hat{V}\ket{i}|^2\delta(E_f-E_i)
+    \end{equation}
+  \end{itembox}
+  \begin{myex}{}{}電子の弾性散乱
+    弾性散乱では散乱前後で粒子のエネルギーが保存される．電子のエネルギーは
+    \begin{equation}
+      E_{\bm{k'}}=\frac{\hbar^2|\bm{k'}|^2}{2m}
+    \end{equation}
+    と表される．よって，終状態は多く存在する．始状態$i$から終状態グループ$\qty{f}$への遷移確率を求める．
+    \begin{align}
+      \omega_{i\to\qty{f}}&=\sum_{f}\omega_{i\to f}\\
+      &=\sum_{f}\frac{2\pi}{\hbar}\qty|\bra{f}\hat{V}\ket{i}|^2\delta(E_f-E_i)\\
+      &=\frac{2\pi}{\hbar}\overline{\qty|\bra{f}\hat{V}\ket{i}|^2}\sum_{f}\delta(E_f-E_i)\\
+      &=\frac{2\pi}{\hbar}\overline{\qty|\bra{f}\hat{V}\ket{i}|^2}\rho(E_f)
+    \end{align}
+    $\overline{\qty|\bra{f}\hat{V}\ket{i}|^2}$は散乱体の性質を，状態密度$\rho(E_f)$は物質の性質を反映している．この関係もFermiの黄金律という．
+  \end{myex}
+\end{document}
