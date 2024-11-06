@@ -2,21 +2,23 @@
 \input{../../../head.tex}
 \begin{document}
   本節では，変分法の威力を確認するために，ヘリウム原子の基底エネルギーを考える．
-  ヘリウム原子において，$\frac{m}{M}\to 0$であり，原子核が動かない(原子核の運動エネルギーが無視できる)とする．ヘリウム原子は電荷$2e$の原子核と電荷$-e$の電子を2つもつので，Hamiltonianは，
+  ヘリウム原子において，$\frac{m}{M}\to 0$であり，原子核が動かない(原子核の運動エネルギーが無視できる)とする．
+  これをBorn-Oppenhiemer近似という．
+  ヘリウム原子は電荷$2e$の原子核と電荷$-e$の電子を2つもつので，Hamiltonianは，
     \begin{align}
-      \hat{H} = -\cfrac{\hbar^2}{2m}\qty(\grad_{1}^{2} + \grad_{2}^{2}) - \cfrac{2e^2}{4\pi \epsilon_0 r_1}-\cfrac{2e^2}{4\pi \epsilon_0 r_2} + \cfrac{e^2}{4\pi \epsilon_0 r_{12}}
+      \hat{H} = -\cfrac{\hbar^2}{2m}\grad_{1}^{2} -\cfrac{\hbar^2}{2m}\grad_{2}^{2} - \cfrac{2e^2}{4\pi \epsilon_0 r_1}-\cfrac{2e^2}{4\pi \epsilon_0 r_2} + \cfrac{e^2}{4\pi \epsilon_0 r_{12}}
     \end{align}
     である．
-    第1項から第4項は水素様原子のHamiltonian $\hat{H}^0$であり厳密に解くことが出来ることを利用して，第5項を無視して考えたときと，試行関数を定めて変分法を用いたときを比較する．
+    第1項から第4項は水素陽原子のHamiltonian $\hat{H}^0$であり厳密に解くことが出来ることを利用して，第5項を無視して考えたときと，試行関数を定めて変分法を用いたときを比較する．
     なお，実験によりヘリウム原子の基底エネルギーは$-78.6\ \r{eV}$と求まっている．
   \begin{myex}{ヘリウム原子の基底エネルギー(荒い近似)}{rough-helium}
-    厳密な計算の結果$\hat{H}^0$の基底波動関数，
+    計算を行うと，ヘリウムの原子番号を$Z$として$\hat{H}^0$の基底波動関数，
     \begin{align}
       \psi = \cfrac{Z^3}{\pi a_0^3}\exp\qty(-Z\frac{r_1 + r_2}{a_0})\label{helium}
     \end{align}
-    $\hat{H}^0$の基底エネルギー，
+    と$\hat{H}^0$の基底エネルギー，
     \begin{align}
-      E = -8\ \r{Ry}\approx -108.8\ \r{eV}
+      E = -8\ \r{Ry}\approx -108.8\ \r{eV}\label{helium-rough-min}
     \end{align}
     が求まる\footnote{
       $a_0 = \cfrac{4\pi\epsilon_0\hbar^2}{me^2} \approx 5.29\times 10^{-11}\ \r{m}$: Bohr半径
@@ -27,16 +29,18 @@
     }．
   \end{myex}
   \begin{myex}{ヘリウム原子の基底エネルギー(変分法)}{}
-    \exref{rough-helium}ではヘリウム原子の基底エネルギーの測定結果は$-78.6\ \r{eV}$と大きく異なっているため，相互作用の項を取り入れた近似が必要である．
-    そこで，\refe{helium}を試行関数$\psi(Z)$とする．
+    \exref{rough-helium}の結果とヘリウム原子の基底エネルギーの測定結果は$-78.6\ \r{eV}$と大きく異なっているため，相互作用の項を取り入れた近似を考える．
+    \refe{helium}を試行関数$\psi(Z)$とする．
     $\psi(Z)$を用いてエネルギーを計算する．
     \begin{align}
       E(Z) &= \cfrac{\int\psi^{*}\hat{H}\psi \dd{\bm{r}_1}\dd{\bm{r}_2}}{\int\psi^{*}\psi \dd{\bm{r}_1}\dd{\bm{r}_2}} \\
-      &= -2\qty(4Z - Z^2 - \cfrac{5}{8}Z)\ \mathrm{Ry}\\ 
-      &\geq E\qty(Z_0),\ Z_0 = \cfrac{27}{16}\\
-      &=-77.5\ \r{eV}
+      &= -2\qty(4Z - Z^2 - \cfrac{5}{8}Z)\ \r{Ry}\label{helium-energy-function} 
     \end{align}
-    真の基底エネルギー$-78.6\ \r{eV}$に近い値が得られた\footnote{
+    となる．\refe{helium-energy-function}が最小となるような$Z$を$Z_0$とすると$Z_0 = 27/16$であったので，
+    \begin{align}
+      E(Z) \geq E\qty(Z_0) = -77.5\ \r{eV}\label{helium-energy-varidation-min}
+    \end{align}
+    となった．\refe{helium-energy-varidation-min}と\refe{helium-rough-min}を比べると，荒い近似の方が真の基底エネルギ$-78.6\ \r{eV}$に近い値が得られた\footnote{
       $Z_0 < 2$は遮蔽効果により有効電荷が$2e$より小さくなったことを意味する．
     }\footnote{
       積分の計算はDavid J. Griffith, \textit{Introduction to Quantum Mechanics}, pp. 333-334にある．
