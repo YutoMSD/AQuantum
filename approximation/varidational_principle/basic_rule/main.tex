@@ -1,9 +1,18 @@
 \documentclass{report}
 \input{../../../head.tex}
 \begin{document}
-  ここでは，変分法の基本原理を紹介する．
+  変分法は，
+  \begin{screen}
+    \begin{enumerate}
+      \item \textbf{試行関数}$\ket{\psi}$をたくさん用意し，
+      \item それぞれのエネルギー$E(\psi)$を計算し，
+      \item その中で最小の$E(\psi)$を$E_0$の近似解とする
+    \end{enumerate}
+  \end{screen}
+  近似法である．
+  ここでは，変分法の基本原理を説明する．
   \begin{myprop}{変分法の基本原理}{principle_of_varidation}
-    任意の状態ベクトル$\ket{\psi}$に対して$\ket{psi}$でのエネルギーを与える関数$E(\psi)$について，\refe{minimum}なる不等式が成り立つ．
+    任意の状態ベクトル$\ket{\psi}$に対して$\ket{\psi}$でのエネルギー関数$E(\psi)$について，\refe{minimum}なる不等式が成り立つ．
     \begin{align}
       E(\psi) = \cfrac{\mel{\psi}{\hat{H}}{\psi}}{\braket{\psi}} \geq E_0 \label{minimum}
     \end{align}
@@ -44,15 +53,6 @@
     \end{proof}
   \end{myprop}
   \prref{principle_of_varidation}より．あらゆる状態ベクトル$\ket{\psi}$のエネルギーは基底エネルギー$E_0$以上である．
-  変分法は，
-  \begin{screen}
-    \begin{enumerate}
-      \item \textbf{試行関数}$\ket{\psi}$をたくさん用意し，
-      \item それぞれのエネルギー$E(\psi)$を計算し，
-      \item その中で最小の$E(\psi)$を$E_0$の近似解とする
-    \end{enumerate}
-  \end{screen}
-  近似法である．
   \begin{myex}{}{}
     ポテンシャル$V(x)=\lambda x^4$中に粒子がある系を考える．
     この系のHamiltonianは
@@ -67,13 +67,39 @@
     \end{itemize}
     である．この条件と変分法を用いて，エネルギーの近似値を求めよ．
     \tcblower
-    試行関数として$\psi(x, \alpha) = \e^{-\tfrac{\alpha x^2}{2}},\ \alpha > 0$を考える．
-    \refe{minimum}の右辺を計算すると，
+    試行関数として$\psi(x, \alpha) = \e^{-\alpha x^2/2}$，$\alpha > 0$として，エネルギー関数を計算する．
+    見通しをよくするために，
     \begin{align}
-      E(\alpha) &= \cfrac{\int \psi^{*}\hat{H}\psi \dd{x}}{\int \psi^{*}\psi \dd{x}} \label{E1} \\ 
-      &= \cfrac{\hbar^2 \alpha}{4m} + \cfrac{3\lambda}{4\alpha^2}
+      I_0 &\coloneqq \int_{-\infty}^{\infty}\e^{-\alpha x^2} \dd{x} \\ 
+      I_1 &\coloneqq \int_{-\infty}^{\infty}x^2\e^{-\alpha x^2} \dd{x} \\ 
+      I_2 &\coloneqq \int_{-\infty}^{\infty}x^4\e^{-\alpha x^2} \dd{x} 
     \end{align}
-    を得る．
+    とすると，
+    \begin{align}
+      E(\alpha) &= \cfrac{\displaystyle\int_{-\infty}^{\infty} \psi^{*}\hat{H}\psi \dd{x}}{\displaystyle\int_{-\infty}^{\infty} \psi^{*}\psi \dd{x}} \\ 
+      &= \frac{\displaystyle -\cfrac{\hbar^2\alpha^2}{2m}\int_{-\infty}^{\infty}x^2\e^{-\alpha x^2} \dd{x} + \lambda\int_{-\infty}^{\infty}x^4\e^{-\alpha x^2}\dd{x}}{\displaystyle\int_{-\infty}^{\infty}\e^{-\alpha x^2}\dd{x}} \\
+      &= \frac{-\cfrac{\hbar^2\alpha^2}{2m}I_1 + \lambda I_2}{I_0}\label{E1}
+    \end{align}
+    である．$I_1$は，
+    \begin{align}
+      I_1 = \int_{-\infty}^{\infty}x^2\e^{-\alpha x^2}\dd{x} &= \int_{-\infty}^{\infty}x\dv{x}\qty(-\frac{\e^{-\alpha x^2}}{2\alpha}) \dd{x} \\ 
+      &= -\frac{1}{2\alpha}\qty(\qty[x\e^{-\alpha x^2}]_{-\infty}^{\infty} - \int_{-\infty}^{\infty}\e^{-\alpha x^2}\dd{x}) \\ 
+      &= \frac{1}{2\alpha} \int_{-\infty}^{\infty}\e^{-\alpha x^2}\dd{x} \\ 
+      &= \frac{1}{2\alpha} I_0\label{E1-I1}
+    \end{align}
+    と計算できる．$I_2$は，
+    \begin{align}
+      I_2 = \int_{-\infty}^{\infty}x^4\e^{-\alpha x^2} \dd{x} &= \int_{-\infty}^{\infty}x^3\dv{x}\qty(-\frac{\e^{-\alpha x^2}}{2\alpha}) \dd{x} \\ 
+      &= -\frac{1}{2\alpha}\qty(\qty[x^3\e^{-\alpha x^2}]_{-\infty}^{\infty} - 3\int_{-\infty}^{\infty}x^2\e^{-\alpha x^2}\dd{x}) \\ 
+      &= \frac{3}{2\alpha}I_1 \\ 
+      &= \frac{3}{4\alpha^2}I_0
+    \end{align}
+    であるから，\refe{E1}は，
+    \begin{align}
+      E(\alpha) &= \frac{-\cfrac{\hbar^2\alpha^2}{2m}\cfrac{1}{2\alpha}I_0 + \lambda\cfrac{3}{4\alpha} I_0}{I_0} \\ 
+      &= -\frac{\hbar^2\alpha}{4m} + \frac{3\lambda}{4\alpha^2}
+    \end{align}
+    となる．
     第1項は運動エネルギーを，第2項はポテンシャルエネルギーを，それぞれ表している\footnote{
       ポテンシャルエネルギーの項は$\alpha$が大きくなるほど小さくなる．
       これは，波動関数が狭まり$x=0$での存在確率が大きくなるためである．
