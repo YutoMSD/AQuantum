@@ -1,0 +1,40 @@
+\documentclass{report}
+\input{../../../head.tex}
+\begin{document}
+  電磁場中のHamiltonianは
+  \begin{equation}
+    H=\frac{1}{2m}\qty(\bm{p} + e\bm{A})^2 - e\phi
+  \end{equation}
+  である．今回は$\phi=0$とする．電磁場が十分弱いとし，
+  \begin{align}
+    \hat{H} &= \frac{1}{2m}\qty(\bm{p}+e\bm{A})^2\\
+    &\simeq \frac{1}{2m}\qty(\bm{p}^2+e\bm{p}\cdot\bm{A} + e\bm{A} \cdot \bm{p})\\
+  \end{align}
+  と近似する．ここで，$\hat{H}^0 \equiv \frac{\bm{p}^2}{2m}$，摂動項$\hat{V}(t) \equiv \frac{e}{2m} \qty(\bm{p}\cdot\bm{A} + \bm{A} \cdot \bm{p})$
+  とする．さらに，$\nabla\cdot\bm{A}=0$となるように$\bm{A}$を決める\footnote{Coulomb Gauge}．すると，
+  \begin{align}
+    \qty(\bm{p} \cdot \bm{A})\psi &= -\i\hbar \nabla \cdot \qty(\bm{A} \psi)\\
+    &= \i\hbar\qty[\qty(\nabla \sdot \bm{A}) \psi + \bm{A} \cdot \qty(\nabla \psi)]\\
+    &= \qty(\bm{A} \cdot \bm{p}) \psi
+  \end{align}
+  となる．よって，電子と電磁場の相互作用を摂動として加えたHamiltonian，
+  \begin{equation}
+    \hat{H} = \hat{H}^0 + \frac{e}{m}\qty(\bm{A} \cdot \bm{p})
+  \end{equation}
+  を得る．
+  \begin{myex}{直線偏光}{}
+    \begin{equation}
+      \bm{A}(\bm{r},t) = 2A_0 \bm{e}_x \cos(\bm{k} \cdot \bm{r} - \omega t)
+    \end{equation}
+    を加える．ただし，$\bm{k} = \frac{\omega}{c}\bm{e}_z$とする．
+    ベクトルポテンシャルと電磁場の関係より，
+    \begin{equation}
+      \begin{cases}
+      \bm{E}(\bm{r},t) = \frac{\partial \bm{A}}{\partial t} = E_0 \bm{e}_x \sin(\bm{k} \cdot \bm{r} - \omega t)\\
+      \bm{B}(\bm{r},t) = \nabla \times \bm{A} = \frac{E_0}{c}\bm{e}_y \sin(\bm{k} \cdot \bm{r} - \omega t)\\
+      E_0 = -2 \omega A_0
+      \end{cases}
+    \end{equation}
+    が成り立っている．
+  \end{myex}
+\end{document}
