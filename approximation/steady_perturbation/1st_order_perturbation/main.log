@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  29 OCT 2024 16:32
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  7 NOV 2024 16:24
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1161,33 +1161,6 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/background/background.sty
-Package: background 2014/03/04 v2.1 background material
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/everypage/everypage.sty
-Package: everypage 2020/10/17 R2.0b Hooks to run on every page
-
-
-Package everypage Warning: Functionality similar to this package has recently
-(everypage)                been implemented in LaTeX. This package is now in
-(everypage)                legacy status.
-(everypage)                Please, don't use it in new documents and packages.
-
-
-Package everypage Warning: You appear to be running a version of LaTeX
-(everypage)                providing the new functionality.
-(everypage)                Doing the best to deliver the original `everypage`
-(everypage)                interface on top of it. Strict equivalence is
-(everypage)                not possible, breakage may occur.
-(everypage)                If truly needed, Use `everypage-1x` to force the
-(everypage)                loading of an older code base.
-
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/afterpage.sty
-Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
-\AP@output=\toks56
-\AP@partial=\box117
-\AP@footins=\box118
-))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
@@ -1220,10 +1193,10 @@ Package caption Info: New subtype `subtable' on input line 238.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count361
-\float@exts=\toks57
-\float@box=\box119
-\@float@everytoks=\toks58
-\@floatcapt=\box120
+\float@exts=\toks56
+\float@box=\box117
+\@float@everytoks=\toks57
+\@floatcapt=\box118
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/here/here.sty)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
@@ -1256,19 +1229,19 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen371
 \Gm@layouthoffset=\dimen372
 \Gm@layoutvoffset=\dimen373
-\Gm@dimlist=\toks59
+\Gm@dimlist=\toks58
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/fancybox/fancybox.sty
 Package: fancybox 2010/05/15 1.4
 
 Style option: `fancybox' v1.4 <2010/05/15> (tvz)
-\@fancybox=\box121
+\@fancybox=\box119
 \shadowsize=\dimen374
-\@Sbox=\box122
-\do@VerbBox=\toks60
-\the@fancyput=\toks61
-\this@fancyput=\toks62
-\EndVerbatimTokens=\toks63
+\@Sbox=\box120
+\do@VerbBox=\toks59
+\the@fancyput=\toks60
+\this@fancyput=\toks61
+\EndVerbatimTokens=\toks62
 \Verbatim@Outfile=\write4
 \Verbatim@Infile=\read3
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/ascmac/ascmac.sty
@@ -1279,19 +1252,19 @@ Package: tascmac 2020/01/15 v2.1 ascmac package (community edition)
 Package tascmac Info: Patch from LuaTeX-ja will be applied on input line 44.
 \@savetbaselineshift=\dimen375
 \@saveybaselineshift=\dimen376
-\scb@x=\box123
-\scscb@x=\box124
+\scb@x=\box121
+\scscb@x=\box122
 \@bw=\dimen377
-\@nbox=\box125
-\@nbody=\box126
+\@nbox=\box123
+\@nbody=\box124
 \@scw=\dimen378
-\ascmac@hoboxa=\box127
-\ascmac@hoboxb=\box128
+\ascmac@hoboxa=\box125
+\ascmac@hoboxb=\box126
 \@itemh=\dimen379
-\@iboxpos=\toks64
-\@iboxstr=\box129
-\@bwsp=\box130
-\@@bwsp=\box131
+\@iboxpos=\toks63
+\@iboxstr=\box127
+\@bwsp=\box128
+\@@bwsp=\box129
 \@bcal=\count365
 \shaderule=\dimen380
 ))
@@ -1300,8 +1273,8 @@ Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks65
-\verbatim@line=\toks66
+\every@verbatim=\toks64
+\verbatim@line=\toks65
 \verbatim@in@stream=\read4
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/environ/environ.sty
@@ -1310,24 +1283,24 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (/usr/local/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box132
-\tcb@upperbox=\box133
-\tcb@lowerbox=\box134
-\tcb@phantombox=\box135
+\tcb@titlebox=\box130
+\tcb@upperbox=\box131
+\tcb@lowerbox=\box132
+\tcb@phantombox=\box133
 \c@tcbbreakpart=\count366
 \c@tcblayer=\count367
 \c@tcolorbox@number=\count368
-\l__tcobox_tmpa_box=\box136
+\l__tcobox_tmpa_box=\box134
 \l__tcobox_tmpa_dim=\dimen381
+\tcb@temp=\box135
+\tcb@temp=\box136
 \tcb@temp=\box137
 \tcb@temp=\box138
-\tcb@temp=\box139
-\tcb@temp=\box140
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count369
-\lst@gtempboxa=\box141
-\lst@token=\toks67
+\lst@gtempboxa=\box139
+\lst@token=\toks66
 \lst@length=\count370
 \lst@currlwidth=\dimen382
 \lst@column=\count371
@@ -1345,7 +1318,7 @@ File: lstpatch.sty 2024/02/21 1.10 (Carsten Heinz)
 File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 \c@lstnumber=\count375
 \lst@skipnumbers=\count376
-\lst@framebox=\box142
+\lst@framebox=\box140
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/02/21 1.10 listings configuration
@@ -1364,7 +1337,7 @@ Package: luatexbase-cctb 2015/10/04 v1.3 luatexbase interface to LuaTeX (legacy
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
-\lst@WFtoken=\toks68
+\lst@WFtoken=\toks67
 \lst@WF=\write5
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/jvlisting/jvlisting.sty
@@ -1731,7 +1704,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip111
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2023/07/05 v6.0f a miscellany of footnote facilities
-\FN@temptoken=\toks69
+\FN@temptoken=\toks68
 \footnotemargin=\dimen392
 \@outputbox@depth=\dimen393
 Package footmisc Info: Declaring symbol style bringhurst on input line 696.
@@ -1746,7 +1719,7 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 765
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \c@tracingmulticols=\count520
-\mult@box=\box143
+\mult@box=\box141
 \multicol@leftmargin=\dimen394
 \c@unbalance=\count521
 \c@collectmore=\count522
@@ -1759,14 +1732,16 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \postmulticols=\dimen398
 \multicolsep=\skip112
 \multicolbaselineskip=\skip113
-\partial@page=\box144
-\last@line=\box145
-\mc@boxedresult=\box146
+\partial@page=\box142
+\last@line=\box143
+\mc@boxedresult=\box144
 \maxbalancingoverflow=\dimen399
-\mult@rightbox=\box147
-\mult@grightbox=\box148
-\mult@firstbox=\box149
-\mult@gfirstbox=\box150
+\mult@rightbox=\box145
+\mult@grightbox=\box146
+\mult@firstbox=\box147
+\mult@gfirstbox=\box148
+\@tempa=\box149
+\@tempa=\box150
 \@tempa=\box151
 \@tempa=\box152
 \@tempa=\box153
@@ -1801,16 +1776,14 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box182
 \@tempa=\box183
 \@tempa=\box184
-\@tempa=\box185
-\@tempa=\box186
 \c@minrows=\count526
 \c@columnbadness=\count527
 \c@finalcolumnbadness=\count528
 \last@try=\dimen400
 \multicolovershoot=\dimen401
 \multicolundershoot=\dimen402
-\mult@nat@firstbox=\box187
-\colbreak@box=\box188
+\mult@nat@firstbox=\box185
+\colbreak@box=\box186
 \mc@col@check@num=\count529
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/comment/comment.sty
@@ -1830,22 +1803,22 @@ Package: siunitx 2024-02-15 v3.3.12 A comprehensive (SI) units package
 \l__siunitx_number_group_size_int=\count538
 \l__siunitx_number_group_minimum_int=\count539
 \l__siunitx_angle_tmp_dim=\dimen403
-\l__siunitx_angle_marker_box=\box189
-\l__siunitx_angle_unit_box=\box190
+\l__siunitx_angle_marker_box=\box187
+\l__siunitx_angle_unit_box=\box188
 \l__siunitx_compound_count_int=\count540
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
  (CN)
 )
-\l__siunitx_table_tmp_box=\box191
+\l__siunitx_table_tmp_box=\box189
 \l__siunitx_table_tmp_dim=\dimen404
 \l__siunitx_table_column_width_dim=\dimen405
-\l__siunitx_table_integer_box=\box192
-\l__siunitx_table_decimal_box=\box193
-\l__siunitx_table_uncert_box=\box194
-\l__siunitx_table_before_box=\box195
-\l__siunitx_table_after_box=\box196
+\l__siunitx_table_integer_box=\box190
+\l__siunitx_table_decimal_box=\box191
+\l__siunitx_table_uncert_box=\box192
+\l__siunitx_table_before_box=\box193
+\l__siunitx_table_after_box=\box194
 \l__siunitx_table_before_dim=\dimen406
 \l__siunitx_table_carry_dim=\dimen407
 \l__siunitx_unit_tmp_int=\count541
@@ -1864,9 +1837,9 @@ Library (tcolorbox): 'tcbbreakable.code.tex' version '6.2.0'
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box197
-\tcb@totalupperbox=\box198
-\tcb@totallowerbox=\box199
+\tcb@testbox=\box195
+\tcb@totalupperbox=\box196
+\tcb@totallowerbox=\box197
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.markings.code.tex
@@ -1883,7 +1856,7 @@ s.code.tex
 \pgfdecorationsegmentamplitude=\dimen413
 \pgfdecorationsegmentlength=\dimen414
 )
-\tikz@lib@dec@box=\box256
+\tikz@lib@dec@box=\box198
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
 brarydecorations.markings.code.tex))
@@ -1899,20 +1872,20 @@ File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
 s/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-Package hyperref Info: Option `setpagesize' set `false' on input line 59.
+Package hyperref Info: Option `setpagesize' set `false' on input line 58.
 
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 59.
+(hyperref)                setting the option has no effect on input line 58.
 
 
 Package hyperref Warning: Unknown document division name (tocdepth) on input li
-ne 59.
+ne 58.
 
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 59.
-Package hyperref Info: Option `colorlinks' set `false' on input line 59.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 58.
+Package hyperref Info: Option `colorlinks' set `false' on input line 58.
 
-Package array Warning: Redefining primitive column b on input line 80.
+Package array Warning: Redefining primitive column b on input line 79.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
@@ -1985,7 +1958,7 @@ Intuitive Functional Programming Interface for LaTeX2
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box257
+\@vwid@box=\box199
 \sift@deathcycles=\count576
 \@vwid@loff=\dimen450
 \@vwid@roff=\dimen451
@@ -2126,15 +2099,15 @@ Package chemgreek Info: Activating mapping `default' on line 3.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count588
 \scratchdimen=\dimen452
-\scratchbox=\box258
+\scratchbox=\box256
 \nofMPsegments=\count589
 \nofMParguments=\count590
-\everyMPshowfont=\toks70
+\everyMPshowfont=\toks69
 \MPscratchCnt=\count591
 \MPscratchDim=\dimen453
 \MPnumerator=\count592
 \makeMPintoPDFobject=\count593
-\everyMPtoPDFconversion=\toks71
+\everyMPtoPDFconversion=\toks70
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -2238,10 +2211,6 @@ nslations-basic-dictionary')
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 3.
 \docmute@nestinglevel=\count595
-
-
-LaTeX Warning: Reference `1st' on page 1 undefined on input line 4.
-
 (load cache: extra_lmroman7-regular.luc)(load cache: extra_lmroman5-regular.luc)
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
 (Font)              scaled to size 6.73553pt on input line 4.
@@ -2251,131 +2220,53 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 6.73553pt on input line 4.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 4.8111pt on input line 4.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 15.
-(load cache: extra_lmsans10-regular.luc)(load cache: extra_lmsans10-bold.luc)
-LaTeX Font Info:    Font shape `JT3/gt/b/n' in size <10> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 15.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 15.
-LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <10> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 15.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 15.
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 35.
-(load cache: extra_lmroman7-italic.luc)
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 35.
-(load cache: extra_lmroman8-regular.luc)
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 35.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 35.
-(load cache: extra_lmroman6-regular.luc)
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 35.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 35.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 35.
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 35.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 35.
-
-LaTeX Warning: Reference `1st' on page 1 undefined on input line 37.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+LaTeX Warning: Reference `1st-perturbation' on page 1 undefined on input line 5
+.
 
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+! Undefined control sequence.
+<argument> ...}{n^{(0)}} \\ \Leftrightarrow E_n^{(0)}\Braket 
+                                                  {n^{(1)}} - \ev **{\hat {H...
+l.11   \end{align}
+                
+? 
+! Interruption.
+<to be read again> 
+{
+l.11   \end{align}
+                
+? 
+! Undefined control sequence.
+<argument> ...}{n^{(0)}} \\ \Leftrightarrow E_n^{(0)}\Braket 
+                                                  {n^{(1)}} - \ev **{\hat {H...
+l.11   \end{align}
+                
+? dx
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? x
 
-[1
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[2]
-
-Package caption Warning: Unused \captionsetup[figure] on input line 83.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: Unused \captionsetup[table] on input line 84.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: Unused \captionsetup[lstlisting] on input line 85.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: Unused \captionsetup[subfigure] on input line 86.
-See the caption package documentation for explanation.
-
-(./main.aux)
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-02-20>
- ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package logreq Info: Writing requests to 'main.run.xml'.
-
-\openout1 = main.run.xml
-)
 
 Here is how much of LuaTeX's memory you used:
- 51449 strings out of 476447
- 125244,2373549 words of node,token memory allocated
- 1209 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 214 attribute, 77 glue_sp
-ec, 31 attribute_list, 3 write, 14 user_defined nodes
-   avail lists: 1:12,2:24010,3:693,4:1146,5:410,6:63,7:3969,8:34,9:2951,10:10,11
-:3
- 72366 multiletter control sequences out of 65536+600000
- 88 fonts using 46919983 bytes
- 115i,13n,118p,1925b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
-f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic.o
-tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.ot
-f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.ot
-f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiG
-othic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haran
-oaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opent
-ype/public/lm/lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
-.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b>
-Output written on main.pdf (2 pages, 133469 bytes).
+ 51133 strings out of 476447
+ 125244,2373549 words of node,token memory allocated 9461 words of node memory still in use:
+   94 hlist, 16 vlist, 35 rule, 1 local_par, 5 dir, 10 math, 61 glue, 17 kern, 8
+ penalty, 4 unset, 2 style, 6 noad, 7 math_char, 28 sub_mlist, 124 glyph, 3 alig
+n_record, 2614 attribute, 82 glue_spec, 261 attribute_list, 9 temp, 1 align_stac
+k, 1 write, 38 user_defined, 2 pdf_dest, 1 pdf_colorstack nodes
+   avail lists: 1:11,2:1214,3:32,4:26,5:14,7:192,8:44,9:155
+ 72094 multiletter control sequences out of 65536+600000
+ 58 fonts using 29759535 bytes
+ 115i,14n,118p,1925b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-PDF statistics: 136 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
- 20 named destinations out of 1000 (max. 131072)
- 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+warning  (pdf backend): no pages of output.
+
+PDF statistics: 6 PDF objects out of 1000 (max. 8388607)
+ 1 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
 
