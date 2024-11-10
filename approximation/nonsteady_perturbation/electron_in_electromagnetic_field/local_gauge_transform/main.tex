@@ -1,5 +1,5 @@
 \documentclass{report}
-\input{../../../head.tex}
+\input{../../../../head.tex}
 \begin{document}
   波動関数$\psi(\bm{r})$を次のように変換する．
   \begin{equation}
@@ -19,4 +19,52 @@
   \end{equation}
   である．したがって，局所Gauge変換に対して物理は不変ではない．\\
   \textbf{局所Gauge不変性を基本原理とする物理を再構築する．}
+
+  まずは，微分を次の共変微分として再定義する．
+  \begin{equation}
+    \bm{D}=\nabla+\i\frac{e}{\hbar}\bm{A}
+  \end{equation}
+  ただし，$\psi$と$\bm{A}$はGauge変換により
+  \begin{align}
+    \psi&\to\psi'=\e^{\i\alpha{\bm{r}}}\psi\\
+    \bm{A}&\to\bm{A}'=\bm{A}-\frac{\hbar}{e}\nabla\alpha(\bm{r})
+  \end{align}
+  このように微分を定義すると，
+  \begin{equation}
+    \bm{D}'\psi'(\bm{r})=\e^{\i\alpha(\bm{r})}\bm{D}\psi(\bm{r})
+  \end{equation}
+  つまり，局所Gauge変換は波動関数の微分を
+  \begin{equation}
+    \bm{D}\psi(\bm{r})\to\e^{\i\alpha(\bm{r})}\bm{D}\psi(\bm{r})
+  \end{equation}
+  と変換することがわかる．これは大域的Gauge変換による$\nabla\psi(\bm{r})\to\e^{\i\alpha}\nabla\psi(\bm{r})$と同じ形をしている．
+
+  次に，$\alpha(\bm{r})$に時間依存性を持たせ，$alpha(\bm{r},t)$とする．つまり波動関数を
+  \begin{equation}
+    \psi\to\psi'=\e^{\i\alpha(\bm{r},t)}\psi
+  \end{equation}
+  と変換する．このとき，時間についての偏微分を
+  \begin{equation}
+    D_t=\frac{\partial}{\partial t} - \i\frac{e}{\hbar}\phi
+  \end{equation}
+  と定義する．ただし，
+  \begin{equation}
+    \phi \to \phi' + \frac{\hbar}{e}\frac{\partial}{\partial t}\alpha(\bm{r},t)
+  \end{equation}
+  である．以上で定義した共変微分と時間微分を用いるとSchrödinger方程式は
+  \begin{align}
+    \i\hbar D'_t\psi' &= -\frac{\hbar^2}{2m}\bm{D}'^2\psi'\\
+    \i\hbar\frac{\partial}{\partial t}\psi&= -\frac{\hbar^2}{2m}\qty(\nabla + \i\frac{e}{\hbar}\bm{A})^2\psi - e\phi\psi\\
+    &= \qty[-\frac{\hbar^2}{2m}\qty(\frac{\i}{\hbar}\bm{p} + \i\frac{e}{\hbar}\bm{A})^2 - e\phi]\psi
+  \end{align}
+  と変換される．
+  よって，
+  \begin{itembox}[l]{局所Gauge変換に対して不変なSchrödinger方程式}
+    \begin{equation}
+      \i\hbar\frac{\partial}{\partial t}\psi=\qty[\frac{1}{2m}\qty(\bm{p} + e\bm{A})^2 - e\phi]\psi
+    \end{equation}
+  \end{itembox}
+  を得る．
+
+  以上の流れをまとめると，局所Gauge不変性を要請した．それによりGauge場$\bm{A}$が導入された．よって，電磁場の起源は局所Gauge不変性であるといえる．
 \end{document}
