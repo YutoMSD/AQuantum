@@ -1,52 +1,43 @@
 \documentclass{report}
 \input{../../../head.tex}
 \begin{document}
-  \refe{1st}の両辺に$\bra{n^1}$を作用すると
+  まずエネルギー補正$E_n^{(1)}$について考える．
+  \refe{1st-perturbation}の両辺に$\bra{n^{(1)}}$を作用すると，
   \begin{align}
-    \bra{n^0}E_n^1\ket{n^0} = \bra{n^0}\hat{V}\ket{n^0}
+    \ev**{(E_n^{(0)} - \hat{H}^{(0)})}{n^{(1)}} + \mel**{n^{(1)}}{E_n^{(1)}}{n^{(0)}} &= \mel{n^{(1)}}{\hat{V}}{n^{(0)}} \\ 
+    \Leftrightarrow E_n^{(0)}\braket{n^{(1)}} - \ev**{\hat{H}^{(0)}}{n^{(1)}} + E_n^{(1)}\braket{n^{(1)}}{n^{(0)}} &= \mel{n^{(1)}}{\hat{V}}{n^{(0)}} \\ 
+    \Leftrightarrow 0 + E_n^{(1)}\braket{n^{(0)}} &= \ev**{\hat{V}}{n^{(0)}} \\ 
+    \Leftrightarrow E_n^{(1)} &= \ev**{\hat{V}}{n^{(0)}}
   \end{align}
   を得る．よって，1次摂動によるエネルギー補正は
   \begin{itembox}[l]{1次摂動によるエネルギー補正}
     \begin{align}
-      E_n^1 = \bra{n^0}\hat{V}\ket{n^0}
+      E_n^{(1)} = \ev**{\hat{V}}{n^{(0)}}
     \end{align}
   \end{itembox}
   である．
-  \begin{myex}{ヘリウム原子の基底エネルギー}{}
-    \begin{align}
-      \hat{H} = \hat{H}^0 + \frac{e^2}{4\pi\epsilon_0r_{12}}\equiv\hat{H}^0 + \hat{V}
-    \end{align}
-    $\hat{H}^0$の基底エネルギーは
-    \begin{align}
-      \psi^0 = \frac{Z^3}{\pi a_0^3}\e^{-Z(r_1+r_2)/a_0}
-    \end{align}
-    である．よって，$\hat{V}$による1次のエネルギー補正は以下のように計算できる．
-    \begin{align}
-      E^1 &= \bra{\psi^0}\hat{V}\ket{\psi^0}\\
-      &= \int{\psi^0}^{*}\frac{e^2}{4\pi\epsilon_0r_{12}}\psi^0\dd{\bm{r}_1}\dd{\bm{r}_2} \\
-      &= \frac{5}{4}Z\ \mathrm{Ry}
-    \end{align}
-    よって，基底エネルギー
-    \begin{align}
-      E_0&=E^0+E^1\\
-      &= -8\ \mathrm{Ry}+\frac{5}{4}\times{2}\ \mathrm{Ry}\\
-      &= -74.8\ \mathrm{eV}
-    \end{align}
-    を得る\footnote{測定値は$-78.6\ \mathrm{eV}$}．
-  \end{myex}
-  次に固有ベクトルの補正を求める．\refe{1st}の両辺に$\bra{m^0}\ (m\ne n)$を作用する．
+  \par
+  次に固有ベクトル$\ket{n^{(1)}}$の補正を求める．
+  \refe{1st-perturbation}の両辺に$\bra{m^{(0)}}$，ただし$m\neq n$を作用すると，
   \begin{align}
-    (E_n^0-\hat{H}^0)\bra{m^0}\ket{n^1}+0=\bra{m^0}\hat{V}\ket{n^0}\\
-    \braket{m^0}{n^1}=\frac{\bra{m^0}\hat{V}\ket{n^0}}{E_n^0-E_m^0}\\
+    \mel**{m^{(0)}}{(E_n^{(0)} - \hat{H}^{(0)})}{n^{(1)}} + \mel**{m^{(0)}}{E_n^{(1)}}{n^{(0)}} &= \mel**{m^{(0)}}{\hat{V}}{n^{(0)}} \\ 
+    % E_n^{(0)}\braket{m^{(0)}}{n^{(1)}} - E_m^{(0)}\braket{m^{(0)}}{n^{(1)}} + 0 &= \mel**{m^{(0)}}{\hat{V}}{n^{(0)}}\\
+    % \braket{m^{(0)}}{n^{(1)}} = \mel**{\bra{m^{(0)}}{\hat{V}}{n^{(0)}}}{E_n^{(0)} - E_m^{(0)}} \label{1st-perturbation-prep}\\
   \end{align}
-  ただし，エネルギー縮退は無く，$E_n^0-E_m^0$とする．以上より，
+  ただし，エネルギー縮退は無く，$E_n^{(0)}-E_m^{(0)} \neq 0$とする．
+  ところで，Hermite演算子である$\hat{H}^{(0)}$の固有ベクトルに関する完全性より，
   \begin{align}
-    \ket{n^1} = \sum_{m}\ket{m^0}\braket{m^0}{n^1}
+    I = \sum_{m}\ketbra{m^{(0)}}{m^{(0)}}\label{completeness}
   \end{align}
-    \begin{screen}
-      \begin{align}
-        \ket{n^1} = \sum_{m\ne n}\frac{\bra{m^0}\hat{V}\ket{n^0}}{E_n^0 - E_m^0}\ket{m^0}
-      \end{align}
-    \end{screen}
+  であるから，\refe{completeness}の両辺に右から$\ket{n^{(1)}}$をかけて，
+  \begin{align}
+    \ket{n^{(1)}} = \sum_{m}\ket{m^{(0)}}\braket{m^{(0)}}{n^{(1)}}\label{n1-completeness-expantion}
+  \end{align}
+  を得る．\refe{n1-completeness-expantion}を\refe{1st-perturbation-prep}に代入すると，
+  % \begin{screen}[l]{1次摂動による固有ベクトル補正}
+    % \begin{align}
+    %   \ket{n^{(1)}} = \sum_{m\neq n}\frac{\mel**{m^{(0)}}{\hat{V}}{n^{(0)}}}{E_n^{(0)} - E_m^{(0)}}\ket{m^{(0)}}
+    % \end{align}
+  % \end{screen}
   を得る．
 \end{document}

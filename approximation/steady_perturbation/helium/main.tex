@@ -1,0 +1,26 @@
+\documentclass{report}
+\input{../../../head.tex}
+\begin{document}
+  \begin{myex}{ヘリウム原子の基底エネルギー}{}
+    \begin{align}
+      \hat{H} = \hat{H}^0 + \frac{e^2}{4\pi\epsilon_0r_{12}}\equiv\hat{H}^0 + \hat{V}
+    \end{align}
+    $\hat{H}^0$の基底エネルギーは
+    \begin{align}
+      \psi^0 = \frac{Z^3}{\pi a_0^3}\e^{-Z(r_1+r_2)/a_0}
+    \end{align}
+    である．よって，$\hat{V}$による1次のエネルギー補正は以下のように計算できる．
+    \begin{align}
+      E^1 &= \bra{\psi^0}\hat{V}\ket{\psi^0}\\
+      &= \int{\psi^0}^{*}\frac{e^2}{4\pi\epsilon_0r_{12}}\psi^0\dd{\bm{r}_1}\dd{\bm{r}_2} \\
+      &= \frac{5}{4}Z\ \mathrm{Ry}
+    \end{align}
+    よって，基底エネルギー
+    \begin{align}
+      E_0&=E^0+E^1\\
+      &= -8\ \mathrm{Ry}+\frac{5}{4}\times{2}\ \mathrm{Ry}\\
+      &= -74.8\ \mathrm{eV}
+    \end{align}
+    を得る\footnote{測定値は$-78.6\ \mathrm{eV}$}．
+  \end{myex}
+\end{document}
