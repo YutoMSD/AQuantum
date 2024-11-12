@@ -2,32 +2,31 @@
 \input{../../../head.tex}
 \begin{document}
   非定常摂動の運動はSchrödinger表示で
-  \begin{equation}
-    \label{TDSE}
-    \begin{cases}
-    i\hbar\frac{d}{dt}\ket{\psi(t)}=\qty(\hat{H}^0+\hat{V}(t))\ket{\psi(t)}\\
-    \ket{\psi(t)}=\sum_{n}c_n(t)\mathrm{e}^{-iE_nt/\hbar}\ket{n}
-    \end{cases}
-  \end{equation}
+  \begin{align}
+    \begin{dcases}
+      \i\hbar\dv{t}\ket{\psi(t)} = \qty(\hat{H}^{(0)} + \hat{V}(t))\ket{\psi(t)}\label{TDSE}\\
+      \ket{\psi(t)} = \sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{n}
+    \end{dcases}
+  \end{align}
   と書ける．これを次の\textbf{相互作用表示}(interaction picture)を用いて書き直す．
   \begin{itembox}[l]{相互作用表示}
-    \begin{equation}
-      \ket{\psi(t)}_I=\mathrm{e}^{i\hat{H}^0t/\hbar}\ket{\psi(t)}
-    \end{equation}  
+    \begin{align}
+      \ket{\psi(t)}_{\r{I}} = \exp\qty(-\i\frac{E_n}{\hbar}t)\ket{\psi(t)}
+    \end{align}  
   \end{itembox}
   実際，相互作用表示を用いると，
   \begin{align}
-    \ket{\psi(t)}_I&=\mathrm{e}^{i\hat{H}^0t/\hbar}\sum_{n}c_n(t)\mathrm{e}^{-iE_nt/\hbar}\ket{n}\\
-    &=\sum_{n}c_n(t)\ket{n}
+    \ket{\psi(t)}_{\r{I}} &= \exp\qty(-\i\frac{E_n}{\hbar}t)\sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{n}\\
+    &= \sum_{n}c_n(t)\ket{n}
   \end{align}
-  であり．式(\ref{TDSE})の2式目と同じものが得られる．\\
+  であり．\refe{TDSE}の2式目と同じものが得られる．
   相互作用表示の時間微分を計算してみる．
   \begin{align}
-    i\hbar\frac{d}{dt}\ket{\psi(t)}_I&=i\hbar\qty(i\frac{\hat{H^0}}{\hbar})\mathrm{e}^{i\hat{H}^0t/\hbar}\ket{\psi(t)}+i\hbar\mathrm{e}^{i\hat{H}^0t/\hbar}\frac{d}{dt}\ket{\psi(t)}\\
-    &=\mathrm{e}^{i\hat{H}^0t/\hbar}\hat{V}(t)\ket{\psi(t)}\\
-    &=\mathrm{e}^{i\hat{H}^0t/\hbar}\hat{V}(t)\mathrm{e}^{-i\hat{H}^0t/\hbar}\mathrm{e}^{i\hat{H}^0t/\hbar}\ket{\psi(t)}\\
-    &=\mathrm{e}^{i\hat{H}^0t/\hbar}\hat{V}(t)\mathrm{e}^{-i\hat{H}^0t/\hbar}\ket{\psi(t)}_I\\
-    &\equiv\hat{V}_I(t)\ket{\psi(t)}_I
+    i\hbar\dv{t}\ket{\psi(t)}_{\r{I}} &= \i\hbar\qty(i\frac{\hat{H^{(0)}}}{\hbar})\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{\psi(t)} + i\hbar\exp\qty(-\i\frac{E_n}{\hbar}t)\dv{t}\ket{\psi(t)}\\
+    & = \exp\qty(-\i\frac{E_n}{\hbar}t)\hat{V}(t)\ket{\psi(t)}\\
+    & = \exp\qty(-\i\frac{E_n}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{\psi(t)}\\
+    & = \exp\qty(-\i\frac{E_n}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)}_{\r{I}}\\
+    &\equiv\hat{V}_{\r{I}}(t)\ket{\psi(t)}_{\r{I}}
   \end{align}
   Schrödinger方程式に似た式が得られた．これを\textbf{朝永・Schwinger方程式}という
   \footnote{Schrödinger描像は量子状態が時間発展するとみなす．Heisenberg描像は物理量が時間発展するとみなす．相互作用表示はその中間であるといえる．}  
@@ -36,9 +35,30 @@
   \footnote{朝永とSchwingerは1964年にRichard Feynmannとともにノーベル賞を受賞．}．
   \begin{itembox}[l]{朝永・Schwinger方程式}
     \begin{align}
-      \label{Tomonaga}
-      i\hbar\frac{d}{dt}\ket{\psi(t)}_I&=\hat{V}_I(t)\ket{\psi(t)}_I\\
-      \hat{V}_I(t)&=\mathrm{e}^{i\hat{H}^0t/\hbar}\hat{V}(t)\mathrm{e}^{-i\hat{H}^0t/\hbar}
+      \i\hbar\dv{t}\ket{\psi(t)}_{\r{I}} &= \hat{V}_{\r{I}}(t)\ket{\psi(t)}_{\r{I}}\label{Tomonaga}\\
+      \hat{V}_{\r{I}}(t)& = \exp\qty(-\i\frac{E_n}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)
     \end{align}
   \end{itembox}
+  \refe{Tomonaga}に左から$\bra{m}$を演算する($\hat{H}^{(0)}\ket{m} = E_m\ket{m}$)．\\
+  左辺は，
+  \begin{align}
+    &\bra{m}\i\hbar\dv{t}\sum_{n}c_n(t)\ket{n}\\
+    & = \i\hbar\dv{t}c_m(t)
+  \end{align}
+  となる．
+  右辺は．
+  \begin{align}
+    &\bra{m}\hat{V}_{\r{I}}(t)\sum_{n}c_n(t)\ket{n}\\
+    & = \sum_{n}c_n(t)\e^{-\i\frac{(E_n - E_m)t}{\hbar}}\mel{m}{\hat{V}(t)}{n}
+  \end{align}
+  となる．よって，非定常摂動の時間発展は以下の式を満たす．
+  \begin{itembox}[l]{$\hat{H}(t) = \hat{H}^{(0)} + \hat{V}(t)$}
+    \begin{align}
+      \ket{\psi(t)}_{\r{I}} &= \sum_{n}c_n(t)\ket{n}\\
+      i\hbar\dv{t}c_m(t) &= \sum_{n}c_n(t)V_{mn}\e^{\i\omega_{mn}t}\\
+      V_{mn} &= \bra{m}\hat{V}(t)\ket{n}\\
+      \omega_{mn} &= \frac{E_m - E_n}{\hbar} = -\omega_{nm}
+    \end{align}
+  \end{itembox}
+  これは$c_n$の連立方程式になっており解くことは困難である．よって近似を加える．
 \end{document}

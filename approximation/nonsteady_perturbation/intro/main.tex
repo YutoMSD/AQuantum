@@ -1,39 +1,63 @@
 \documentclass{report}
 \input{../../../head.tex}
 \begin{document}
-  摂動項が時間に依存する場合の摂動(time-dependent perturbation)\footnote{電磁波による摂動など．}を扱う．\\
-  時間に依存するSchrödinger方程式
+  摂動項が時間に依存する場合の摂動(time-dependent perturbation)\footnote{電磁波による摂動など．}を扱う．
+  本節では，量子系の時間発展が状態ベクトルの時間変化で描像するSchr\"odinger描像で記述する．
+  時間に依存するSchrödinger方程式，
   \begin{align}
-    \i\hbar\dv{t}\ket{\psi(t)}  =  \hat{H}\ket{\psi(t)}
+    \i\hbar\dv{t}\ket{\psi(t)} = \hat{H}\ket{\psi(t)}\label{time-dependent-schroinger-eq}
   \end{align}
+  を考える．なお，$\ket{\psi(t)}$は$\hat{H}^{(0)}$の固有ベクトルを用いて，
+  \begin{align}
+    \ket{\psi(t)} = \sum_{n}c_n(t)\ket{n}\label{psi-t-expantion}
+  \end{align}
+  と展開できたとする．$\hat{H}^{(0)}$の固有ベクトルが完全系を成すので，状態ベクトルが時間変化した空間は$\qty{\ket{n}\mid n = 0, 1, \cdots}$が張る空間の部分空間となることに注意する．
+  $\hat{H}$の性質ごとに$\ket{\psi(t)}$の具体的な形を議論する．
   \begin{enumerate}
-    \item $\hat{H} = \hat{H}^0$の場合\footnote{$\hat{H}^0$は厳密に解けるHamiltonian．}\par
-      量子状態の時間発展は時間発展演算子$\e^{-\i\frac{\hat{H}t}{\hbar}}$を用いて次のように表すことができる\footnote{$\Delta t \ll 1$として，
-        $
-        \ket{\psi(\Delta t)} = \e^{-\i\frac{\hat{H}\Delta t}{\hbar}}\ket{\psi(0)} \approx\qty(\hat{I} - \i\frac{\hat{H}\Delta t}{\hbar})\ket{\psi(0)} 
-        = \ket{\psi(0)} + \Delta t \left.\dv{t}\ket{\psi(t)}\right|_0
-        $
-        より確かに時間発展する，と私は解釈する．}
-      \footnote{演算子が交換するときは数字と同じ扱いをしても良いと考える．
-        一般に，演算子は次のBCH公式を満たす．
-        $\e^{\hat{A}}\e^{\hat{B}} = \exp{\hat{A} + \hat{B} + \frac{1}{2}\qty[\hat{A},\hat{B}] + \cdots}\neq\e^{\hat{A} + \hat{B}}$
-      }．
-      $\psi(0)$を固有ベクトルで展開すると，
+    \item $\hat{H} = \hat{H}^{(0)}$の場合\footnote{$\hat{H}^{(0)}$は厳密に解けるHamiltonian．}\par
+      量子状態$\ket{\psi(t)}$の時間発展は時間発展演算子
+      \footnote{
+        $\Delta t \ll 1$として，
+        \begin{align*}
+          \ket{\psi(\Delta t)} = \exp\qty[-\i\frac{\hat{H}\Delta t}{\hbar}]\ket{\psi(0)} \approx\qty(\hat{I} - \i\frac{\hat{H}\Delta t}{\hbar})\ket{\psi(0)} 
+          = \ket{\psi(0)} + \Delta t \left.\qty(\dv{t}\ket{\psi(t)})\right|_0
+        \end{align*}
+        より微分の形で書けることから，確かに時間発展すると私は解釈する．}
+      \footnote{
+        演算子が交換するときは数字と同じ扱いをしても良いと考える．
+        一般に演算子は，
+        \begin{align*}
+          \e^{\hat{A}}\e^{\hat{B}} = \exp{\hat{A} + \hat{B} + \frac{1}{2}\qty[\hat{A},\hat{B}] + \cdots}\neq\e^{\hat{A} + \hat{B}}
+        \end{align*}
+        なるBCH公式を満たす．
+      }
+      $\exp\qty(-\i\frac{\hat{H}t}{\hbar})$を用いて，
       \begin{align}
-        \ket{\psi(0)} = \sum_{n}c_n(0)\ket{n}
+        \ket{\psi(t)} &= \exp\qty[-\i\frac{\hat{H}^{(0)}t}{\hbar}]\ket{\psi(0)} \\
+        &= \sum_{n}c_n(0)\exp\qty[-\i\frac{\hat{H}^{(0)}t}{\hbar}]\ket{n} \\
+        &= \sum_{n}c_n(0)\exp\qty[-\i\frac{E_n}{\hbar}t]\ket{n}
       \end{align}
-      と書けたとする．$\ket{\psi(t)}$は，
+      のように表すことができる．
+      \par
+      時間発展演算子を用いることなく計算することもできる．
+      \refe{psi-t-expantion}を\refe{time-dependent-schroinger-eq}に代入すると，$\hat{H}$が時間に依存しないことに注意すれば，
       \begin{align}
-        \ket{\psi(t)}& = \e^{-\i\hat{H}^0t/\hbar}\ket{\psi(0)}\\
-        & = \sum_{n}c_n(0)\e^{-\i\hat{H}^0t/\hbar}\ket{n}\\
-        & = \sum_{n}c_n(0)\e^{-\i E_nt/\hbar}\ket{n}
+        \i\hbar\dv{t}\qty(\sum_{n}c_n(t)\ket{n}) &= \hat{H}\qty(\sum_{n}c_n(t)\ket{n}) \label{naive-solution-to-decide-ct}\\ 
+        \Leftrightarrow \sum_{n}\qty(\i\hbar\dv{c_n(t)}{t}\ket{n}) &= \sum_{n}\qty(c_n(t)E_n\ket{n}) \\ 
+        \Leftrightarrow \forall n\ \i\hbar\dv{c_n(t)}{t}\ket{n} &= c_n(t)E_n\ket{n} \\ 
+        \Leftrightarrow \forall n\ c_n(t) &= \exp\qty(-\i\frac{E_n}{\hbar}t)
       \end{align}
-      と書ける．
-    \item $\hat{H} = \hat{H}^0+\hat{V}(t)$の場合\par
-      $\hat{V}$の効果を$c_n(t)$に押し付け．
+      を用いれば，
       \begin{align}
-        \ket{\psi(t)} = \sum_{n}c_n(t)\e^{-iE_nt/\hbar}\ket{n}
+        \ket{\psi(t)} = \sum_{n}\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{n}
       \end{align}
-      とする．$c_n(t)$が求まれば量子系の時間発展がわかる．
+      を得る．
+    \item $\hat{H} = \hat{H}^{(0)} + \hat{V}(t)$の場合\par
+      このときは$\ket{\psi(t)}$を簡単な形で書き下すことが出来ないから，便宜的に，
+      \begin{align}
+        \psi(t) = \sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{n}
+      \end{align}
+      と展開しておく．なお，$c_n(t)$が定数のときの$\ket{\psi(t)}$との整合性をとるために$\exp\qty(-\i\frac{E_n}{\hbar}t)$をかけてある．
+      原理的には$c_n(t)$が求まれば量子系の時間発展の様子がわかる．% 暇になったら時間順序積のことを書く．
   \end{enumerate}
 \end{document}
