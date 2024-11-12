@@ -1,23 +1,37 @@
 \documentclass{report}
 \input{../../../head.tex}
 \begin{document}
-  摂動項が時間に依存する場合の摂動(time-dependent perturbation)\footnote{電磁波による摂動など}を扱う．\\
+  摂動項が時間に依存する場合の摂動(time-dependent perturbation)\footnote{電磁波による摂動など．}を扱う．\\
   時間に依存するSchrödinger方程式
-  \begin{equation}
-  i\hbar\frac{d}{dt}\ket{\psi(t)}=\hat{H}\ket{\psi(t)}
-  \end{equation}
-  (i)$\hat{H}=\hat{H}^0$の場合\footnote{$\hat{H}^0$は厳密に解けるHamiltonian．}\\
-  量子状態の時間発展は時間発展演算子$\mathrm{e}^{-i\frac{\hat{H}t}{\hbar}}$を用いて次のように表すことができる\footnote{$\ket{\psi(t)}=\mathrm{e}^{-i\frac{\hat{H}t}{\hbar}}\ket{\psi(0)}\approx\qty(\hat{I}-i\frac{\hat{H}t}{\hbar})\ket{\psi(0)}=\qty(\hat{I}+t\frac{d}{dt})\ket{\psi(0)}$より確かに時間発展する，と私は解釈する．}
-  \footnote{演算子が交換するときは数字と同じ扱いをしても良いと考える．一般に，演算子は次のBCH公式を満たす．$\mathrm{e}^{\hat{A}}\mathrm{B}^{\hat{B}}=\exp{\hat{A}+\hat{B}+\frac{1}{2}[\hat{A},\hat{B}]+\cdots}\ne\mathrm{e}^{\hat{A}+\hat{B}}$}．
   \begin{align}
-    \ket{\psi(t)}&=\mathrm{e}^{-i\hat{H}^0t/\hbar}\ket{\psi(0)}\\
-    &=\sum_{n}c_n(0)\mathrm{e}^{-i\hat{H}^0t/\hbar}\ket{n}\\
-    &=\sum_{n}c_n(0)\mathrm{e}^{-iE_nt/\hbar}\ket{n}
+    \i\hbar\dv{t}\ket{\psi(t)}  =  \hat{H}\ket{\psi(t)}
   \end{align}
-  (ii)$\hat{H}=\hat{H}^0+\hat{V}(t)$の場合\\
-  $\hat{V}$の効果を$c_n(t)$に押し付け．
-  \begin{equation}
-    \ket{\psi(t)}=\sum_{n}c_n(t)\mathrm{e}^{-iE_nt/\hbar}\ket{n}
-  \end{equation}
-  とする．$c_n(t)$が求まれば量子系の時間発展がわかる．
+  \begin{enumerate}
+    \item $\hat{H} = \hat{H}^0$の場合\footnote{$\hat{H}^0$は厳密に解けるHamiltonian．}\par
+      量子状態の時間発展は時間発展演算子$\e^{-\i\frac{\hat{H}t}{\hbar}}$を用いて次のように表すことができる\footnote{
+        $\Delta t \ll 1$として，$\ket{\psi(\Delta t)} = \e^{-\i\frac{\hat{H}\Delta t}{\hbar}}\ket{\psi(0)} \approx\qty(\hat{I} - \i\frac{\hat{H}\Delta t}{\hbar})\ket{\psi(0)} = \ket{\psi(0)} + \Delta t\left.\dv{t}\ket{\psi(t)}\right_0$
+        より確かに時間発展する，と私は解釈する．
+      }
+      \footnote{演算子が交換するときは数字と同じ扱いをしても良いと考える．
+        一般に，演算子は次のBCH公式を満たす．
+        $\e^{\hat{A}}\e^{\hat{B}} = \exp{\hat{A} + \hat{B} + \frac{1}{2}\qty[\hat{A},\hat{B}] + \cdots}\neq\e^{\hat{A} + \hat{B}}$
+      }．
+      $\psi(0)$を固有ベクトルで展開すると，
+      \begin{align}
+        \ket{\psi(0)} = \sum_{n}c_n(0)\ket{n}
+      \end{align}
+      と書けたとする．$\ket{\psi(t)}$は，
+      \begin{align}
+        \ket{\psi(t)}& = \e^{-\i\hat{H}^0t/\hbar}\ket{\psi(0)}\\
+        & = \sum_{n}c_n(0)\e^{-\i\hat{H}^0t/\hbar}\ket{n}\\
+        & = \sum_{n}c_n(0)\e^{-\i E_nt/\hbar}\ket{n}
+      \end{align}
+      と書ける．
+    \item $\hat{H} = \hat{H}^0+\hat{V}(t)$の場合\par
+      $\hat{V}$の効果を$c_n(t)$に押し付け．
+      \begin{align}
+        \ket{\psi(t)} = \sum_{n}c_n(t)\e^{-iE_nt/\hbar}\ket{n}
+      \end{align}
+      とする．$c_n(t)$が求まれば量子系の時間発展がわかる．
+  \end{enumerate}
 \end{document}
