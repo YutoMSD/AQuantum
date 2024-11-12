@@ -8,10 +8,12 @@
   \end{align}
   \begin{enumerate}
     \item $\hat{H} = \hat{H}^0$の場合\footnote{$\hat{H}^0$は厳密に解けるHamiltonian．}\par
-      量子状態の時間発展は時間発展演算子$\e^{-\i\frac{\hat{H}t}{\hbar}}$を用いて次のように表すことができる\footnote{
-        $\Delta t \ll 1$として，$\ket{\psi(\Delta t)} = \e^{-\i\frac{\hat{H}\Delta t}{\hbar}}\ket{\psi(0)} \approx\qty(\hat{I} - \i\frac{\hat{H}\Delta t}{\hbar})\ket{\psi(0)} = \ket{\psi(0)} + \Delta t\left.\dv{t}\ket{\psi(t)}\right_0$
-        より確かに時間発展する，と私は解釈する．
-      }
+      量子状態の時間発展は時間発展演算子$\e^{-\i\frac{\hat{H}t}{\hbar}}$を用いて次のように表すことができる\footnote{$\Delta t \ll 1$として，
+        $
+        \ket{\psi(\Delta t)} = \e^{-\i\frac{\hat{H}\Delta t}{\hbar}}\ket{\psi(0)} \approx\qty(\hat{I} - \i\frac{\hat{H}\Delta t}{\hbar})\ket{\psi(0)} 
+        = \ket{\psi(0)} + \Delta t \left.\dv{t}\ket{\psi(t)}\right|_0
+        $
+        より確かに時間発展する，と私は解釈する．}
       \footnote{演算子が交換するときは数字と同じ扱いをしても良いと考える．
         一般に，演算子は次のBCH公式を満たす．
         $\e^{\hat{A}}\e^{\hat{B}} = \exp{\hat{A} + \hat{B} + \frac{1}{2}\qty[\hat{A},\hat{B}] + \cdots}\neq\e^{\hat{A} + \hat{B}}$
