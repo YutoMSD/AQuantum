@@ -3,25 +3,30 @@
 \begin{document}
   再びヘリウム原子のエネルギーを考えてみよう．今度は，変分法ではなく，1次の摂動を用いる．
   \begin{myex}{ヘリウム原子の基底エネルギー(1次摂動)}{}
-    水素陽原子のHamiltonianを$\hat{H}_0$とし，電子-電子相互作用を水素陽原子に対する摂動$\hat{V}$と解釈してヘリウム原子の基底エネルギーを計算する．
+    水素陽原子のHamiltonianを$\hat{H}_0$とし，電子-電子相互作用を水素陽原子に対する摂動$\hat{V}$と解釈してヘリウム原子の基底エネルギーを計算せよ．
+    ただし，
     \begin{align}
-      \hat{H} = \hat{H}^0 + \frac{e^2}{4\pi\epsilon_0r_{12}}\equiv\hat{H}^0 + \hat{V}
+      \hat{H} &\coloneqq \hat{H}^{(0)} + \hat{V} \\ 
+      \hat{H}^{(0)} &\coloneqq -\cfrac{\hbar^2}{2m}\grad_{1}^{2} -\cfrac{\hbar^2}{2m}\grad_{2}^{2} - \cfrac{2e^2}{4\pi \epsilon_0 r_1}-\cfrac{2e^2}{4\pi \epsilon_0 r_2} \\ 
+      \hat{V} &\coloneqq \frac{e^2}{4\pi\epsilon_0r_{12}} \\ 
     \end{align}
-    $\hat{H}^0$の基底エネルギーは，
+    である．
+    \tcblower
+    $\hat{H}^{(0)}$の基底状態の固有関数は，
     \begin{align}
-      \psi^0 = \frac{Z^3}{\pi a_0^3}\e^{-Z(r_1+r_2)/a_0}
+      \psi^{(0)} = \frac{Z^3}{\pi a_0^3}\exp\qty[-\frac{Z(r_1+r_2)}{a_0}]
     \end{align}
     である．よって，$\hat{V}$による1次のエネルギー補正は以下のように計算できる．
     \begin{align}
-      E^1 &= \bra{\psi^0}\hat{V}\ket{\psi^0}\\
-      &= \int{\psi^0}^{*}\frac{e^2}{4\pi\epsilon_0r_{12}}\psi^0\dd{\bm{r}_1}\dd{\bm{r}_2} \\
-      &= \frac{5}{4}Z\ \mathrm{Ry}
+      E^{(1)} &= \mel**{\psi^{(0)}}{\hat{V}}{\psi^{(0)}} \\
+      &= \int{\psi^{(0)}}^{*}\frac{e^2}{4\pi\epsilon_0r_{12}}\psi^{(0)}\dd{\bm{r}_1}\dd{\bm{r}_2} \\
+      &= \frac{5}{4}Z\ \r{Ry}
     \end{align}
     よって，基底エネルギー
     \begin{align}
-      E_0&=E^0+E^1\\
-      &= -8\ \mathrm{Ry}+\frac{5}{4}\times{2}\ \mathrm{Ry}\\
-      &= -74.8\ \mathrm{eV}
+      E_0 &= E^{(0)} + E^{(1)}\\
+      &= -8\ \r{Ry} + \frac{5}{4}\times{2}\ \r{Ry}\\
+      &= -74.8\ \r{eV}
     \end{align}
     を得る\footnote{測定値は$-78.6\ \mathrm{eV}$}．
   \end{myex}

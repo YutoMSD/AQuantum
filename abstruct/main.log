@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  12 NOV 2024 18:19
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  12 NOV 2024 18:22
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -58,8 +58,7 @@ var/luatex-cache/generic/names/luaotfload-names.luc.gz)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen139
-)
-(../../../head.tex
+) (../head.tex
 (/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/luatexja.sty
 Package: luatexja 2024-02-19 Japanese Typesetting with Lua(La)TeX
 
@@ -2003,9 +2002,10 @@ Package: lltjp-array 2019-07-18 Patch to array for LuaTeX-ja
 \@quotereset=\count587
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 3.
- (./main.aux)
-\openout1 = main.aux
 
+No file main.aux.
+
+\openout1 = main.aux
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
@@ -2017,7 +2017,7 @@ LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
 LaTeX Font Info:    Trying loading font information for TS1+cmr on input line 3
 .
- (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 3.
@@ -2186,11 +2186,9 @@ No file main.bbl.
 Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
 Package hyperref Info: Link coloring OFF on input line 3.
-(./main.out) (./main.out)
 \@outlinefile=\write8
 
 \openout8 = main.out
-
 
 Package siunitx Warning: Detected the "physics" package:
 (siunitx)                omitting definition of \qty.
@@ -2211,79 +2209,52 @@ nslations-basic-dictionary')
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 3.
 \docmute@nestinglevel=\count595
-(load cache: extra_lmroman7-regular.luc)(load cache: extra_lmroman5-regular.luc)
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 16.62714pt on input line 5.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 5.
+(Font)              scaled to size 16.62714pt on input line 5.
+(load cache: extra_lmroman12-regular.luc)
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 5.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 5.
+(Font)              scaled to size 11.54663pt on input line 5.
+(load cache: extra_lmroman8-regular.luc)(load cache: extra_lmroman6-regular.luc)
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 5.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 5.77332pt on input line 5.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 5.
+(Font)              scaled to size 11.54663pt on input line 5.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 5.
+(Font)              scaled to size 7.69775pt on input line 5.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 5.77332pt on input line 5.
+ [1
+
+](load cache: extra_lmroman10-italic.luc)
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
+[1]
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 23.94002pt on input line 9.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 23.94002pt on input line 9.
+(load cache: extra_lmroman12-bold.luc)
+LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <24.88> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 14.
-(load cache: extra_lmsans10-regular.luc)(load cache: extra_lmsans10-bold.luc)
-LaTeX Font Info:    Font shape `JT3/gt/b/n' in size <10> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 14.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 14.
-LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <10> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 14.
+(Font)              scaled to size 23.94002pt on input line 9.
+LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <24.88> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 14.
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 23.
-(load cache: extra_lmroman7-italic.luc)
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 23.
-(load cache: extra_lmroman8-regular.luc)
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 25.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 25.
-(load cache: extra_lmroman6-regular.luc)
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 25.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 25.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 25.
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 25.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 25.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 25.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 27.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 27.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 29.
+(Font)              scaled to size 23.94002pt on input line 9.
 
+No file main.toc.
+\tf@toc=\write9
 
-LaTeX Warning: Reference `helium-energy-function' on page 1 undefined on input 
-line 39.
-
-
-LaTeX Warning: Reference `helium-energy-varidation-min' on page 1 undefined on 
-input line 43.
-
-
-LaTeX Warning: Reference `helium-rough-min' on page 1 undefined on input line 4
-3.
-
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 43.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 45.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 45.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 47.
-(load cache: extra_lmroman8-italic.luc)
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 47.
+\openout9 = main.toc
 
 Package caption Warning: Unused \captionsetup[figure] on input line 82.
 See the caption package documentation for explanation.
@@ -2301,13 +2272,7 @@ Package caption Warning: Unused \captionsetup[subfigure] on input line 85.
 See the caption package documentation for explanation.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
+warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
 
 ] (./main.aux)
@@ -2320,52 +2285,44 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 51252 strings out of 476447
- 156559,2373549 words of node,token memory allocated
- 1236 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 227 attribute, 77 glue_sp
-ec, 33 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:45,2:36135,3:909,4:934,5:411,6:76,7:6071,8:61,9:3297,10:11,11:
-48
- 72189 multiletter control sequences out of 65536+600000
- 89 fonts using 47051671 bytes
- 115i,13n,118p,1925b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.otf
-></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf
-></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.o
-tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic.
-otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.o
-tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAji
-Gothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/l
-mroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/h
-aranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
-.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b>
-Output written on main.pdf (1 page, 168568 bytes).
+ 51168 strings out of 476447
+ 125244,2373549 words of node,token memory allocated
+ 1198 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 214 attribute, 78 glue_sp
+ec, 31 attribute_list, 2 write, 13 user_defined nodes
+   avail lists: 1:11,2:3482,3:32,4:104,5:62,6:9,7:452,8:1,9:144,10:10,11:20
+ 72130 multiletter control sequences out of 65536+600000
+ 68 fonts using 49334879 bytes
+ 115i,7n,118p,1919b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.ot
+f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-regular
+.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold
+.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-regu
+lar.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/Hara
+noAjiMincho-Regular.otf>
+Output written on main.pdf (3 pages, 26215 bytes).
 
-PDF statistics: 146 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
- 15 named destinations out of 1000 (max. 131072)
+PDF statistics: 65 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
