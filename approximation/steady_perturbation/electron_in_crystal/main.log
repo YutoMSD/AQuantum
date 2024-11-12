@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  12 NOV 2024 19:16
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  12 NOV 2024 20:58
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2233,10 +2233,15 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 4.8111pt on input line 5.
 
 
-LaTeX Warning: Reference `Ebr' on page 1 undefined on input line 93.
+LaTeX Warning: Reference `1st-order-energy-with-degeneracy' on page 1 undefined
+ on input line 99.
 
 
-LaTeX Warning: Reference `syukutai' on page 1 undefined on input line 95.
+LaTeX Warning: Reference `degeneracy-n0-def' on page 1 undefined on input line 
+109.
+
+
+LaTeX Warning: Reference `secular-eq' on page 1 undefined on input line 109.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2299,16 +2304,16 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51250 strings out of 476447
- 244638,2373549 words of node,token memory allocated
- 1509 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 5 sub_mlist, 1 glyph, 346 attribut
-e, 77 glue_spec, 43 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:44,2:67076,3:897,4:1170,5:684,6:82,7:7358,8:63,9:4206,10:14,11
-:8
- 72167 multiletter control sequences out of 65536+600000
+ 51261 strings out of 476447
+ 305782,2373549 words of node,token memory allocated
+ 1557 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 5 sub_mlist, 1 glyph, 368 attribut
+e, 77 glue_spec, 45 attribute_list, 2 write, 14 user_defined nodes
+   avail lists: 1:50,2:79182,3:966,4:1267,5:725,6:93,7:8269,8:64,9:4732,10:10,11
+:11
+ 72174 multiletter control sequences out of 65536+600000
  60 fonts using 30023231 bytes
- 115i,17n,118p,1925b,1203s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,23n,118p,1925b,1203s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf>
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.ot
 f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-regular
@@ -2327,10 +2332,10 @@ s/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
 msy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb>
-Output written on main.pdf (3 pages, 161502 bytes).
+Output written on main.pdf (3 pages, 167888 bytes).
 
-PDF statistics: 149 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 131072)
+PDF statistics: 159 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

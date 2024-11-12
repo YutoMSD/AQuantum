@@ -18,14 +18,14 @@
     と書けるとする．
     ただし$g$は，
     \begin{align}
-      g\coloneqq \frac{2\pi}{a}
+      g\coloneqq \frac{2\pi}{a}\label{wave-number-g-def}
     \end{align}
     である．
     \par
     以下の問いに答えよ．
     \begin{enumerate}
       \item 結晶中の周期ポテンシャルによりバンドギャップができることを2次までの摂動論を用いて説明せよ．
-      \item 縮退のある場合の摂動論を用いてバンドギャップの大きさを見積もれ．
+      \item 縮退のある場合の摂動論を用いてバンドギャップエネルギーを見積もれ．また，Brillouinゾーン端近傍で近似した波動関数を表せ．
       \item バンドギャップとBraggの回折条件との関係について議論せよ．
     \end{enumerate}
     \tcblower
@@ -45,27 +45,27 @@
         摂動によるエネルギーは．
         \begin{align}
           V_{k'k} &= \frac{V}{L}\int_{-L/2}^{L/2}\phi_{k'}^{*}(x)\hat{V}(x)\phi_k(x)\dd{x} \\
-          &= V\qty[\frac{\sin\qty(\frac{qL}{2})}{\frac{qL}{2}} + \frac{\sin\qty(\frac{q'L}{2})}{\frac{q'L}{2}}] 
+          &= V\qty[\frac{\sin\qty(\frac{q_+L}{2})}{\frac{q_+L}{2}} + \frac{\sin\qty(\frac{q_-L}{2})}{\frac{q_-L}{2}}] 
         \end{align}
-        と計算される．ただし$q$と$q'$を，
+        と計算される．ただし$q_+$と$q_-$を，
         \begin{align}
-          q &\coloneqq -k' + g + k \\ 
-          q' &\coloneqq -k' - g + k
+          q_+ &\coloneqq -k' + g + k \\ 
+          q_- &\coloneqq -k' - g + k
         \end{align}
-        と定義した．摂動によるエネルギーは$\r{sinc}$関数の形になっているので，$L\to\infty$では規格化されたデルタ関数$\tilde{\delta}_(x_1, x_2)$と解釈できる．
+        と定義した．摂動によるエネルギーは$\r{sinc}$関数の形になっているので，$L\to\infty$では規格化されたデルタ関数$\tilde{\delta}(x_1, x_2)$と解釈できる．
         よって，
         \begin{align}
-          V_{k'k} = V\qty(\tilde{\delta}(q, 0) + \tilde{\delta}(q', 0)) = 
+          V_{k'k} = V\qty(\tilde{\delta}(q_+, 0) + \tilde{\delta}(q_-, 0)) = 
           \begin{dcases}
-            V &  k' = k + g\ \r{or}\ k' = k - g\\
+            V & q_+ = 0\ \r{or}\ q_- = 0\\
             0 & \r{otherwise}
           \end{dcases}
         \end{align}
-        である．したがってエネルギーは
+        である．なお，$q_+ = q_- = 0$となるのは$g = 0$であるが，$g$の定義である\refe{wave-number-g-def}よりありえない．エネルギーは，
         \begin{align}
           E(k) = \epsilon^{(0)}(k) + \frac{V^2}{\epsilon(k) - \epsilon(k + g)} + \frac{V^2}{\epsilon(k) - \epsilon(k - g)}\label{2nd-order-perturbation-eigenvalue-in-electron}
         \end{align}
-        となる．\refe{2nd-order-perturbation-eigenvalue-in-electron}の振る舞いを第1Brillouinゾーンの内側と外側で確認する．
+        となる．\refe{2nd-order-perturbation-eigenvalue-in-electron}の振る舞いを第1 Brillouinゾーンの内側と外側で確認する．
         ポテンシャルの対称性から右側のみを計算すればよい．
         \begin{enumerate}
           \item 第1 Brillouinゾーン内側$\qty(k = k_1 < \frac{\pi}{a})$の振る舞い\par
@@ -77,7 +77,7 @@
             \end{dcases}
           \end{align}
           が成りたつ．よって，$E(k) < \epsilon^{(0)}(k)$が成り立ち，摂動が加わった後のエネルギーは加わる前のエネルギーより小さくなる．
-          \item 第1 Brillouinゾーン外側$\qty(k = k_2 > \frac{\pi  }{a})$の振る舞い\par
+          \item 第1 Brillouinゾーン外側$\qty(k = k_2 > \frac{\pi}{a})$の振る舞い\par
             第1 Brillouinゾーン内側のときと同様に考えると，
             \begin{align}
               \begin{dcases}
@@ -88,34 +88,53 @@
             を得る．よって，$E(k) > \epsilon^{(0)}(k)$が成り立ち，摂動が加わった後のエネルギーは加わる前のエネルギーより大きくなる．
           \end{enumerate}
           以上の議論により，結晶中の周期ポテンシャルによりバンドギャップが形成されることがわかった．
-      \item バンドギャップの大きさの見積もり\par
+      \item バンドギャップエネルギーの見積もりと波動関数\par
         \refe{2nd-order-perturbation-eigenvalue-in-electron}に$k = \pm\frac{\pi}{a}$を代入すると発散してしまう．
-        以下では2重縮退があるときの摂動を考えバンドギャップ$\Delta E$を求める．
-        $k_+ \coloneqq \frac{\pi}{a}$，$k_- = - \frac{\pi}{a}$とする．$V_{kk} = 0，V_{ab} = V$なので，2次摂動によるエネルギーは
+        以下では2重縮退があるときの摂動を考えバンドギャップエネルギー$\Delta E$を求める．$k_+$と$k_-$を，
         \begin{align}
-          E& = \pm\frac{1}{2}\sqrt{4|V|^2}\\
-          & = \pm V
+          k_+ &\coloneqq \frac{\pi}{a} \\ 
+          k_- &\coloneqq -\frac{\pi}{a}
         \end{align}
-        である．よって，
+        と定義する．$V_{k_+k_+} = V_{k_-k_-} = 0$，$V_{k_+k_-} = V_{k_-k_+} = V$なので，
+        \refe{1st-order-energy-with-degeneracy}より，1次摂動によるエネルギーは，
+        \begin{align}
+          E_n^{(1)} &= \frac{1}{2}\qty[(V_{k_+k_+} + V_{k_-k_-}\pm\sqrt{(V_{k_+k_+} - V_{k_-k_-})^2 + 4\abs{V_{k_+k_-}}^2})] \\ 
+          &= \pm V
+        \end{align}
+        である．2つのエネルギー補正の差がバンドギャップエネルギー$\Delta E$と解釈できるので，
         \begin{align}
           \Delta E = 2V
         \end{align}
-        を得る．また，$E = \pm V$に対応する波動関数はそれぞれ
+        を得る．\par
+        \refe{degeneracy-n0-def}の$\alpha$と$\beta$は\refe{secular-eq}の解であるから，$\sqrt{\alpha^2 + \beta^2} = 1$なる規格化条件を課すと，
         \begin{align}
-          \psi_{ + }& = \phi_{k = \pi/a} + \phi_{k = -\pi/a}\sim\cos\frac{\pi}{a}x\\
-          \psi_{-}& = \phi_{k = \pi/a}-\phi_{k = -\pi/a}\sim\sin\frac{\pi}{a}x
+          \mqty(\alpha \\ \beta) = 
+          \begin{dcases}
+            \frac{1}{\sqrt{2}}\mqty(1 \\ 1) & E_n^{(1)} = V \\ 
+            \frac{1}{\sqrt{2}}\mqty(1 \\ -1) & E_n^{(1)} = -V
+          \end{dcases}
         \end{align}
-        であり，定在波が生じる．\\
-    バンドギャップの起源はBragg反射である．Bragg反射は以下の式を満たす．
-    \begin{align}
-      2a\sin\theta = \lambda
-    \end{align}
-    今回の場合は1次元なので$\theta = \pi/2$であり，波数は$k = 2\pi/\lambda$である．よって，Bragg条件は
-    \begin{align}
-      k = \frac{\pi}{a}
-    \end{align}
-    と書き換えられる．上の条件を満たす波数のみが反射し，定在波をつくる．sinで表される波動関数はポテンシャルが最小となる波数で確率振幅が最大となる．
-    cosで表される波動関数はポテンシャルが最大となる波数で確率振幅が最大となる．よって，sinの方はエネルギーが低くなり，cosの方は高くなる．これによりバンドギャップが生じる．
+        となる．よって，
+        $\Delta E = \pm V$に対応する波動関数はBrillouinゾーン端で，
+        \begin{align}
+          \psi_{+}& = \frac{1}{\sqrt{2}}\qty(\phi_{\pi/a} + \phi_{-\pi/a})\propto\cos\qty(\frac{\pi}{a}x)\label{degeneracy-wave-function-positive}\\
+          \psi_{-}& = \frac{1}{\sqrt{2}}\qty(\phi_{\pi/a} - \phi_{-\pi/a})\propto\sin\qty(\frac{\pi}{a}x)\label{degeneracy-wave-function-negative}
+        \end{align}
+        であり，定在波が生じる．
+    \item バンドギャップとBragg反射\par
+      バンドギャップの起源はBragg反射である．Bragg反射は，
+      \begin{align}
+        2a\sin\theta = \lambda
+      \end{align}
+      を満たす．
+      今回の場合は1次元なので$\theta = \pi/2$であり，波数は$k = 2\pi/\lambda$である．よって，Bragg条件は
+      \begin{align}
+        k = \frac{\pi}{a}\label{1d-bragg-k-condition}
+      \end{align}
+      と書き換えられる．つまり，\refe{1d-bragg-k-condition}を満たす波数のみが反射し定在波をつくる．$V(x) = 2V\cos\qty(\frac{2\pi}{a}x)$であったから，
+      \refe{degeneracy-wave-function-positive}で表される波動関数はポテンシャルが最小となる波数で確率振幅が最大となる．
+      \refe{degeneracy-wave-function-negative}で表される波動関数はポテンシャルが最大となる波数で確率振幅が最大となる．
+      よって，エネルギーは$\psi_+$が$\psi_-$より低くなる．これによりバンドギャップが生じる．
   \end{enumerate}
   \end{myex}
 \end{document}

@@ -16,8 +16,11 @@
   \end{align}
   が成立するときである．
   ただし，Hermite演算子の固有ベクトルは規格直交化できるので，$\braket{n_i^{(0)}}{n_j^{(0)}} = \delta_{ij}$とする．
-  $\ket{n_a^{(0)}}$と$\ket{n_b^{(0)}}$は同じ固有値をもつため，これらの線形結合
-  $\ket{n^{(0)}} = \alpha\ket{n_a^{(0)}} + \beta\ket{n_b^{(0)}}$も，固有値$E_n^{(0)}$に属する固有ベクトルである．\\
+  $\ket{n_a^{(0)}}$と$\ket{n_b^{(0)}}$は同じ固有値をもつため，これらの線形結合，
+  \begin{align}
+    \ket{n^{(0)}} = \alpha\ket{n_a^{(0)}} + \beta\ket{n_b^{(0)}}\label{degeneracy-n0-def}
+  \end{align}
+  も，固有値$E_n^{(0)}$に属する固有ベクトルである．\\
   まず，\refe{1st-order-perturbation-re-before}の両辺に左から$\bra{n_a^{(0)}}$を作用すると，
   \begin{align}
     \mel**{n_a^{(0)}}{\qty(E_n^{(0)} - \hat{H}^{(0)})}{n^{(1)}} + \mel**{n_a^{(0)}}{E_n^{(1)}}{n^{(0)}} &= \mel**{n_a^{(0)}}{\hat{V}}{n^{(0)}} \\ 
@@ -39,7 +42,7 @@
   を得る．これは行列を用いて，
   \begin{align}
     \mqty(
-      V_{aa} - E_n^{(1)} &  V_{ab} \\
+      V_{aa} - E_n^{(1)} & V_{ab} \\
       V_{ba} & V_{bb} - E_n^{(1)})
     \mqty(\alpha\\ \beta)
     =
@@ -57,16 +60,16 @@
   である．よって1次の摂動エネルギーとして，
   \begin{itembox}[l]{縮退がある場合の摂動論による1次エネルギー補正}
     \begin{align}
-      E_n^{(1)} = \frac{1}{2}\qty[( V_{aa}+ V_{bb}\pm\sqrt{( V_{aa}- V_{bb})^2 + 4| V_{ab}|^2})]\label{1st-order-energy-with-degeneracy}
+      E_n^{(1)} = \frac{1}{2}\qty[(V_{aa} + V_{bb}\pm\sqrt{(V_{aa} - V_{bb})^2 + 4\abs{V_{ab}}^2})]\label{1st-order-energy-with-degeneracy}
     \end{align}
   \end{itembox}
   を得る．\refe{1st-order-energy-with-degeneracy}をみると，定常状態では1種類であったエネルギーが，
   縮退が解けて2つに分かれている．
   \begin{myex}{}{}
-    $ V_{aa} =  V_{bb} = 0$，$ V_{ab} =  V_{ba} =  V$の場合
+    $ V_{aa} = V_{bb} = 0$，$ V_{ab} = V_{ba} = V$の場合
     \refe{secular-eq}は，
     \begin{align}
-      \mqty
+      \mqty(
         -E_n^{(1)} &  V\\
         V & -E_n^{(1)})
       \mqty(\alpha\\\beta)

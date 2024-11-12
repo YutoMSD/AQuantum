@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  12 NOV 2024 19:47
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  12 NOV 2024 20:59
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2252,7 +2252,17 @@ LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <24.88> not available
 (Font)              Font shape `JY3/gt/m/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 23.94002pt on input line 9.
- (./main.toc)
+ (./main.toc(load cache: extra_lmroman7-regular.luc)(load cache: extra_lmroman5-
+regular.luc)
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 6.73553pt on input line 2.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 4.8111pt on input line 2.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 6.73553pt on input line 2.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 4.8111pt on input line 2.
+)
 \tf@toc=\write9
 
 \openout9 = main.toc
@@ -2292,16 +2302,7 @@ LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <14.4> not available
 (Font)              Font shape `JY3/gt/m/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 13.85594pt on input line 8.
-(./approximation/varidational_principle/intro/main.tex(load cache: extra_lmroman
-7-regular.luc)(load cache: extra_lmroman5-regular.luc)
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 4.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 4.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 4.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 4.
+(./approximation/varidational_principle/intro/main.tex
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
 (Font)              scaled to size 6.73553pt on input line 8.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
@@ -2496,21 +2497,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [13])
 (./approximation/steady_perturbation/perturbation_with_degeneracy/main.tex
 
-LaTeX Warning: Reference `1st-order-perturbation-re-before' on page 14 undefine
-d on input line 21.
-
-
-LaTeX Warning: Reference `degeneracy-ket-alpha' on page 14 undefined on input l
-ine 28.
-
-
-LaTeX Warning: Reference `1st-order-perturbation-re-before' on page 14 undefine
-d on input line 32.
-
-
-LaTeX Warning: Reference `secular-eq' on page 14 undefined on input line 49.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2518,31 +2504,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[14]
-
-LaTeX Warning: Reference `1st-order-energy-with-degeneracy' on page 15 undefine
-d on input line 63.
-
-
-LaTeX Warning: Reference `secular-eq' on page 15 undefined on input line 67.
-
-) (./approximation/steady_perturbation/electron_in_crystal/main.tex
-
-LaTeX Warning: Reference `2nd-order-perturbation-eigenvalue-re' on page 15 unde
-fined on input line 38.
-
-
-LaTeX Warning: Reference `2nd-order-perturbation-eigenvalue-re' on page 15 unde
-fined on input line 38.
-
-
-LaTeX Warning: Reference `2nd-order-perturbation-eigenvalue-in-electron' on pag
-e 15 undefined on input line 68.
-
-
-LaTeX Warning: Reference `2nd-order-perturbation-eigenvalue-in-electron' on pag
-e 15 undefined on input line 92.
-
+[14]) (./approximation/steady_perturbation/electron_in_crystal/main.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2560,7 +2522,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[16]) (./approximation/steady_perturbation/exercise/main.tex
+[16]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2569,7 +2531,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[17]
+[17]) (./approximation/steady_perturbation/exercise/main.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2580,9 +2542,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [18]) (./approximation/nonsteady_perturbation/intro/main.tex)
 (./approximation/nonsteady_perturbation/interaction_representation/main.tex
-
-LaTeX Warning: Reference `TDSE' on page 19 undefined on input line 23.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2606,9 +2565,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 (./approximation/nonsteady_perturbation/cnt_equation/main.tex
 
-LaTeX Warning: Reference `Tomonaga' on page 20 undefined on input line 4.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-)
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[20]) (./approximation/nonsteady_perturbation/two_state_system/main.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2617,8 +2581,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[20] (./approximation/nonsteady_perturbation/two_state_system/main.tex(load cach
-e: extra_lmroman8-bold.luc)
+[21](load cache: extra_lmroman8-bold.luc)
 LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <8> not available
 (Font)              Font shape `JT3/gt/m/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
@@ -2627,28 +2590,7 @@ LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <8> not available
 (Font)              Font shape `JY3/gt/m/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 7.69775pt on input line 59.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[21]) (./approximation/nonsteady_perturbation/approximated_solution/main.tex
-
-LaTeX Warning: Reference `3.4' on page 22 undefined on input line 12.
-
-
-LaTeX Warning: Reference `3.4' on page 22 undefined on input line 17.
-
-
-LaTeX Warning: Reference `3.40ji' on page 22 undefined on input line 28.
-
-
-LaTeX Warning: Reference `3.4const' on page 22 undefined on input line 41.
-
+) (./approximation/nonsteady_perturbation/approximated_solution/main.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2657,11 +2599,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[22]
-
-LaTeX Warning: Reference `3.41ji' on page 23 undefined on input line 49.
-
-) (./approximation/nonsteady_perturbation/constant_perturbation/main.tex
+[22]) (./approximation/nonsteady_perturbation/constant_perturbation/main.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2670,7 +2608,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[23]) (./approximation/nonsteady_perturbation/harmonic_perturbation/main.tex
+[23]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2679,18 +2617,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[24]
-
-LaTeX Warning: Reference `3.6' on page 25 undefined on input line 21.
-
-
-LaTeX Warning: Reference `3.6' on page 25 undefined on input line 37.
-
-)
+[24]) (./approximation/nonsteady_perturbation/harmonic_perturbation/main.tex)
 (./approximation/nonsteady_perturbation/electron_in_electromagnetic_field/intro
-/main.tex)
-(./approximation/nonsteady_perturbation/electron_in_electromagnetic_field/globa
-l_gauge_transform/main.tex
+/main.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2700,6 +2629,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [25])
+(./approximation/nonsteady_perturbation/electron_in_electromagnetic_field/globa
+l_gauge_transform/main.tex)
 (./approximation/nonsteady_perturbation/electron_in_electromagnetic_field/local
 _gauge_transform/main.tex(load cache: extra_lmromandemi10-regular.luc)
 
@@ -2767,33 +2698,24 @@ L3 programming layer <2024-02-20>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: A8502C7B41E7A26F04F02A48B88AE680;1773
-(rerunfilecheck)             After:  88C0485985D00196FD6E6196EFA74842;4553.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 88C0485985D00196FD6E6196EFA74842;4553.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 52127 strings out of 476447
- 305799,2373549 words of node,token memory allocated
- 11441 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 21 glue, 4 kern, 212 sub_mlist, 1 glyph, 4548 attr
-ibute, 79 glue_spec, 425 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:23,2:88065,3:872,4:1185,5:589,6:70,7:7368,8:91,9:4032,10:17,11
-:24
- 72483 multiletter control sequences out of 65536+600000
+ 52157 strings out of 476447
+ 382255,2373549 words of node,token memory allocated
+ 11465 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 21 glue, 4 kern, 212 sub_mlist, 1 glyph, 4559 attr
+ibute, 79 glue_spec, 426 attribute_list, 2 write, 14 user_defined nodes
+   avail lists: 1:22,2:100966,3:943,4:1255,5:639,6:106,7:8206,8:91,9:4486,10:17,
+11:24
+ 72509 multiletter control sequences out of 65536+600000
  125 fonts using 83743271 bytes
- 115i,19n,118p,1916b,1212s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,23n,118p,1916b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf><
 /usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman5-regular.otf
 ></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.ot
@@ -2835,10 +2757,10 @@ fb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
 sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 
-Output written on main.pdf (32 pages, 546620 bytes).
+Output written on main.pdf (32 pages, 556848 bytes).
 
-PDF statistics: 866 PDF objects out of 1000 (max. 8388607)
- 754 compressed objects within 8 object streams
- 415 named destinations out of 1000 (max. 131072)
- 112 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 994 PDF objects out of 1000 (max. 8388607)
+ 881 compressed objects within 9 object streams
+ 419 named destinations out of 1000 (max. 131072)
+ 264 words of extra memory for PDF output out of 10000 (max. 100000000)
 
