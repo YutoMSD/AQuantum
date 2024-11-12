@@ -1,15 +1,20 @@
 \documentclass{report}
 \input{../../../head.tex}
 \begin{document}
-  次の式は厳密に解くことができるとする．
+  摂動が無い状態のSch\"odinger方程式，
   \begin{equation}
     \hat{H}^{(0)}\ket{n^{(0)}}=E_0^{(0)}\ket{n^{(0)}}
   \end{equation}
-  ここに摂動$\hat{V}$を加える\footnote{摂動の例: 光，電場}．
+  が厳密に解くことができるとする．
+  ここに摂動$\hat{V}$を加わったこと\footnote{摂動の例: 光，電場}を考えると，摂動Hamiltonianを$\hat{V}$として，
   \begin{equation}
-    \qty(\hat{H}^{(0)}+\hat{V})\ket{n}=E_n\ket{n}
+    \qty(\hat{H}^{(0)} + \hat{V})\ket{n} = E_n\ket{n}\label{perturbation-origin}
   \end{equation}
-  $\hat{H}=\hat{H}^{(0)}+\lambda\hat{V}$とする．$\lambda\to0$ならば，
+  とかける．摂動の大きさを表すパラメータを$\lambda$として\refe{perturbation-origin}を
+  \begin{align}
+    \hat{H} = \hat{H}^{(0)} + \lambda\hat{V}\label{perturbation-using-lambda}
+  \end{align}
+  とする．$\lambda\to 0$ならば明らかに，
   \begin{equation}
     \begin{cases}
       \ket{n}\to\ket{n^{(0)}}\\
@@ -17,27 +22,25 @@
     \end{cases}
   \end{equation}
   である．
-  ここで，$\hat{H}=\hat{H}^{(0)}+\lambda\hat{V}$の解を次のようにおく．\footnote{$\hat{H}，n，E$の肩の()を今後は省略する．}
+  ここで，\refe{perturbation-using-lambda}の解が，%\footnote{$\hat{H}，n，E$の肩の()を今後は省略する．}
   \begin{equation}
     \begin{cases}
-      \ket{n}=\ket{n^0}+\lambda\ket{n^1}+\lambda^2\ket{n^2}+\cdots\\
-      E_n=E_n^0+\lambda+E_n^1+\lambda^2+E_n^2+\cdots
+      \ket{n} &= \ket{n^{(0)}} + \lambda\ket{n^{(1)}} + \lambda^2\ket{n^{(2)}} + \cdots \label{n-en-expantion} \\
+      E_n &= E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \cdots 
     \end{cases}
   \end{equation}
-  $\ket{n^1}，\ket{n^2}，E_n^1，E_n^2$を求める．
-  ここで，規格化条件として
+  と書けたとする．
+  $\ket{n^{(1)}}$，$\ket{n^{(2)}}$，$E_n^{(1)}$，$E_n^{(2)}$を考える．
+  規格化条件として
   \begin{equation}
-    \braket{n^0}{n}=1
+    \braket{n^{(0)}}{n} = 1
   \end{equation}
   を定める．
-  以上の$\hat{H}，\ket{n}，E_n$を用いて，Schrödinger方程式を立て，整理すると，
-  $\lambda^0$，$\lambda^1$，$\lambda^2$の係数としてそれぞれ
+  \refe{n-en-expantion}を\refe{perturbation-using-lambda}に代入して，$\lambda$の次数ごとにまとめると，
   \begin{align}
-    &(E_n^0-\hat{H}^0)\ket{n^0}=0\\
-    \label{1st}
-    &(E_n^0-\hat{H}^0)\ket{n^1}+E_n^1\ket{n^0}=\hat{V}\ket{n^0}\\
-    \label{2nd}
-    &(E_n^0-\hat{H}^0)\ket{n^2}+E_n^1\ket{n^1}+E_n^2\ket{n^0}=\hat{V}\ket{n^1}\\
+    &(E_n^{(0)} - \hat{H}^{(0)})\ket{n^{(0)}} = 0 \label{0-order} \\ 
+    &(E_n^{(0)} - \hat{H}^{(0)})\ket{n^{(1)}} + E_n^{(1)}\ket{n^{(0)}} = \hat{V}\ket{n^{(0)}} \label{1st-perturbation} \\
+    &(E_n^{(0)} - \hat{H}^{(0)})\ket{n^{(2)}} + E_n^{(1)}\ket{n^{(1)}} + E_n^{(2)}\ket{n^{(0)}} = \hat{V}\ket{n^{(1)}} \label{2nd-perturbation}\\
   \end{align}
   を得る．
 \end{document}
