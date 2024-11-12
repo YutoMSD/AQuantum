@@ -1,25 +1,18 @@
 \documentclass{report}
 \input{../../head.tex}
 \begin{document}
-  今後の議論のために\textbf{立体角}を導入する．
-  立体角とは1点を中心としたときの広がり具合を表す指標である．
-  2次元の場合，微小円弧と半径の比は角度にのみ依り，$r$に依らない．
-  つまり，
-  \begin{equation}
-    \frac{dl_1}{r_1}=\frac{dl_2}{r_2}=\frac{d\theta}{1}
-  \end{equation}
-  が成り立つ．この関係から平面角$d\theta=\frac{dl}{r}$を定義する．これを3次元に拡張する．単位球上の面積を考えると，
-  \begin{equation}
-    \frac{dS_1}{r_1^2}=\frac{dS_2}{r_2^2}=\frac{dS}{1}
-  \end{equation}
-  である．ここから立体角を$d\Omega=\frac{dS}r^2$と定義する．また，これを球座標表示に変換すると，
-  \begin{equation}
-    d\Omega = \frac{dS}{r^2} = \frac{r^2\sin\theta d\theta d\phi}{r^2} = \sin \theta d\theta d\phi
-  \end{equation}
-  である．
-  $N$を単位時間単位面積当たりに入射する粒子数とする．単位時間内に位置$(r,\theta,\phi)$にある面積$dS$の検出器に到達する粒子数は
-  \begin{equation}
-    dN\propto N \frac{dS}{r^2} = N d\Omega
-  \end{equation}
-  を満たす．
+単位時間単位面積当たり$N$個の粒子を$z$軸方向に入射する．単位時間内に散乱体からの位置$(r,\theta,\phi)$にある面積$\dd{S}$の検出器に到達する粒子数は
+\begin{align}
+  \dd{N} \propto N \frac{\dd{S}}{r^2} = N\dd{\Omega}
+\end{align}
+を満たす．比例係数を$\sigma (\theta, \phi)$とする．
+\begin{align}
+  \dd{N} = \sigma(\theta, \phi) N \dd{\Omega}
+\end{align}
+この$\sigma(\theta ,\phi)$を\textbf{微分断面積}という．
+散乱が$z$軸まわりに軸対称なとき，$\phi$依存性を取り除き$\sigma(\theta, \phi) = \sigma (\theta)$とできる．
+このとき，全断面積を式(\ref{Zendanmenseki})のように定義する．
+\begin{align}
+  \sigma^{\r{tot}} = \int \sigma(\theta) \dd{\Omega} = 2\pi \int_{0}^{\pi} \sigma(\theta) \sin \theta \dd{\theta}
+\end{align}
 \end{document}
