@@ -86,4 +86,59 @@
     \sigma(\theta) = \abs{f(\theta)}^2
   \end{align}
   という関係が成り立つ．これは，散乱振幅から微分断面積が求められることを意味する．
+  \begin{itembox}[l]{散乱振幅と微分断面積の関係}
+    \begin{equation}
+      \sigma(\theta) = \abs{f(\theta)}^2
+    \end{equation}
+  \end{itembox}
+
+  次に$f(\theta)$を求めるための式を作る．
+  散乱のSchrödinger方程式は
+  \begin{align}
+    \qty(-\frac{\hbar^2}{2m}\nabla^2 + V(r))\psi(\bm{r}) = E\psi(\bm{r})
+  \end{align}
+  である．ここで，
+  \begin{align}
+    \begin{dcases}
+      \kappa = \frac{\sqrt{2mE}}{\hbar}\\
+      U(\bm{r}) = \frac{2m}{\hbar^2} V(\bm{r})
+    \end{dcases}
+  \end{align}
+  とおくと，
+  \begin{align}
+    \label{Helmholtz equation}
+    \qty(\nabla^2 + \kappa^2)\psi(\bm{r}) = U(\bm{r}) \psi(\bm{r})
+  \end{align}
+  と表せる．式(\ref{Helmholts equation})の解は，
+  \begin{align}
+    \qty(\nabla^2 + \kappa^2)\phi(\bm{r}) = 0
+  \end{align}
+  の一般解$\phi(\bm{r})$と
+  \begin{align}
+    \label{Tokkai}
+    \qty(\nabla^2 + \kappa^2)\chi(\bm{r}) = U(\bm{r}) \chi(\bm{r})
+  \end{align}
+  と特解$\chi(\bm{r})$の和である．
+  
+  では，式(\ref{Tokkai})の特解を求めよう．レシピはこうである．
+  \begin{enumerate}
+    \item $\qty(\nabla^2 + \kappa^2)G_0(\bm{r}) = \delta(\bm{r})$を満たすGreen関数$G_0$を求める．
+    \item $\chi(\bm{r}) = \int \dd{\bm{r'}} G_0(\bm{r} - \bm{r'}) U(\bm{r'}) \phi(\bm{r'})$から特解を求める．
+  \end{enumerate}
+  2から特解が求められるのは，
+  \begin{align}
+    \qty(\nabla^2 + \kappa^2)\chi(\bm{r}) &= (\nabla^2 + \kappa^2)\int \dd{\bm{r'}} G_0(\bm{r} - \bm{r'}) U(\bm{r'}) \phi(\bm{r'})\\
+    &= \int \dd{\bm{r'}} \delta(\bm{r} - \bm{r'}) U(\bm{r'}) \phi(\bm{r'})\\
+    &= U(\bm{r}) \phi(\bm{r})
+  \end{align}
+  が成り立つためである．
+
+  Green関数を求める．
+  \begin{align}
+    \qty(\nabla^2 + \kappa^2)G_0(\bm{r}) = \delta(\bm{r})
+  \end{align}
+  の両辺をFourier変換する．
+  \begin{align}
+    \qty(\nabla^2 + \kappa^2)\int \dd{\bm{k'}} G_0(\bm{k'}) \e^{\i\bm{k'}\cdot \bm{r}} = \frac{1}{(2\pi)^3}\int \dd{\bm{k'}} \e^{\i\bm{k'}\cdot\bm{r}}
+  \end{align}
 \end{document}
