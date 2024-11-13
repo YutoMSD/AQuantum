@@ -165,7 +165,35 @@
 
   以上の計算からSchrödinger方程式(\ref{SE_Scattering})の形式解は
   \begin{align}
+    \label{keishiki}
     \psi(\bm{r}) = \e^{\i kz} - \frac{1}{4\pi} \int \frac{\e^{\i k \abs{\bm{r} - \bm{r'}}}}{\abs{\bm{r} - \bm{r'}}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'}) \dd{r'}
   \end{align}
   である．これは平面波と球面波の和となっている．
+
+  次に式(\ref{keishiki})から散乱振幅$f(\theta)$を求める．仮定として，$V(r')$は$r'<a$でのみ$V\neq 0$とする．式(\ref{keishiki})において
+  $r  \gg r'$では
+  \begin{align}
+    \abs{\bm{r} - \bm{r'}} &= \sqrt{r^2 - 2\bm{r} \cdot \bm{r'} + r'^2}\\
+    &= r \sqrt{1 - \frac{2\bm{r'} \cdot \bm{n}}{r + \qty(\frac{r'}{r})^2}}\\
+    &\simeq r - \bm{n}\cdot\bm{r'}
+  \end{align}
+  が成り立つ．よって，
+  \begin{align}
+    \e^{\i k \abs{\bm{r} - \bm{r'}}} &\simeq \e^{\i k \qty(r - \bm{n} \cdot \bm{r'})}\\
+    &= \e^{\i k r} - \e^{-\i \bm{k'} \cdot \bm{r'}}
+  \end{align}
+  を得る．ここで，$\bm{k'} = k \bm{n}$を$z$軸と角度$\theta$をなす散乱方向の波数ベクトルとする．また，
+  \begin{align}
+    \frac{1}{\abs{\bm{r} - \bm{r'}}} &\simeq \frac{1}{r\qty(1 - \frac{\bm{n}\cdot\bm{r'}}{r})}\\
+    &= \simeq \frac{1}{r}
+  \end{align}
+  である．以上より，
+  \begin{align}
+    \psi(\bm{r}) = \e^{\i kz} - \qty(\frac{1}{4\pi} \int \dd{\bm{r'}} \e^{- \i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(r'))\frac{\e^{\i kr}}{r}
+  \end{align}
+  である．したがって，散乱振幅は
+  \begin{align}
+    f(\theta) = -\frac{1}{4\pi} \int \dd{\bm{r'}} \e^{- \i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(r')
+  \end{align}
+  となる．
 \end{document}

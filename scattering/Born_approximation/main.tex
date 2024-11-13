@@ -1,0 +1,36 @@
+\documentclass{report}
+\input{../../head.tex}
+\begin{document}
+ 散乱の波動関数は
+ \begin{align}
+  \label{WFofSC}
+  \psi(\bm{r}) = \e^{\i kz} + \int G_0 (\bm{r} - \bm{r'}) \frac{2m}{\hbar^2} V(r') \psi(\bm{r'}) \dd{\bm{r}}
+ \end{align}
+ と表されるのであった．この波動関数を厳密に求めることは困難であるため近似をする．まず，式(\ref{WFofSC})を簡略化して
+ \begin{align}
+  \label{simpleWFofSC}
+  \psi(\bm{r}) = \psi_0 + \int g V \psi(\bm{r'}) \dd{\bm{r'}}
+ \end{align}
+ と表現する．式(\ref{simpleWFofSC})を繰り返し代入していくと
+ \begin{align}
+  \psi(\bm{r}) &= \psi_0 + \int g V \psi(\bm{r'}) \dd{\bm{r'}}\\
+  &= \psi_0 + \int gV \qty(\psi_0 + \int g V \psi(\bm{r''}) \dd{\bm{r''}}) \dd{\bm{r'}}\\
+  &= \psi_0 + \int g V \psi_0(\bm{r'}) \dd{\bm{r'}} + \iint gVgV \psi(\bm{r''}) \dd{\bm{r'}} \dd{\bm{r''}}\\
+  &= \psi_0 + \int g V \psi_0(\bm{r'}) \dd{\bm{r'}} + \iint gVgV \psi_0(\bm{r''}) \dd{\bm{r'}} \dd{\bm{r''}} + \iiint gVgVgV \psi_0(\bm{r'''}) \dd{\bm{r'}} \dd{\bm{r''}} \dd{\bm{r'''}} + \cdots
+ \end{align}
+ を得る．これを第1項までで近似する．これは散乱の波動関数を平面波で近似することに相当する．
+ つまり，
+ \begin{align}
+  \psi \simeq \psi_0
+ \end{align}
+ とする．これを\textbf{第1Born近似}という\footnote{Max Born(1882-1970)}．
+
+ Born近似を用いて散乱振幅を求める．$\psi(\bm{r'}) = \e^{\i kz} = \e^{\i \bm{k}\cdot\bm{r'}}$だから，
+ \begin{align}
+  f^{(1)}(\theta) &= -\frac{1}{4\pi} \int \e^{\i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar} V(r') \psi(\bm{r'}) \dd{\bm{r'}}\\
+  &= \simeq -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i (\bm{k'} - \bm{k})\cdot \bm{r'}} V(r') \dd{\bm{r'}}\\
+  & \equiv -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i \bm{q}\cdot \bm{r'}} V(r') \dd{\bm{r'}}
+ \end{align}
+ となる．ここで散乱による運動量変化を$\bm{q}\equiv \bm{k'} - \bm{k}$と置いた．
+ つまり，散乱振幅はポテンシャル$V(r')$のFourier変換から得られることがわかる．
+\end{document}
