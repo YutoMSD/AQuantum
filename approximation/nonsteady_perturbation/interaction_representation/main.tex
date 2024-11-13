@@ -1,10 +1,10 @@
 \documentclass{report}
 \input{../../../head.tex}
 \begin{document}
-  Schr\"odinger表示の非定常摂動基本方程式は，\refe{time-dependent-schroinger-eq}と\refe{nonsteady-perturbation-cnt-eq}であり，
+  Schr\"odinger表示の非定常摂動基本方程式は，\refe{time-dependent-schrodinger-eq-re}と\refe{nonsteady-perturbation-cnt-eq}であり，
   \begin{align}
     \begin{dcases}
-      \i\hbar\dv{t}\ket{\psi(t)} = \qty(\hat{H}^{(0)} + \hat{V}(t))\ket{\psi(t)} \label{TDSE} \\
+      \i\hbar\dv{t}\ket{\psi(t)} = \qty(\hat{H}^{(0)} + \hat{V}(t))\ket{\psi(t)} \label{time-dependent-schrodinger-eq-re} \\
       \ket{\psi(t)} = \sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{n}
     \end{dcases}
   \end{align}
@@ -15,22 +15,22 @@
       \ket{\psi(t)}_{\r{I}} \coloneqq \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)}\label{interaction-picture}
     \end{align}
   \end{itembox}
-  \refe{interaction-picture}を用いて，\refe{TDSE}等価な基本方程式，相互作用表示の非定常摂動基本方程式を導く．
-  まず\refe{TDSE}の第2式を用いて，
+  \refe{interaction-picture}を用いて，\refe{time-dependent-schrodinger-eq-re}と等価な基本方程式である，相互作用表示の非定常摂動基本方程式を導く．
+  まず，\refe{time-dependent-schrodinger-eq-re}の第2式を用いて，
   \begin{align}
     \ket{\psi(t)}_{\r{I}} &= \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{n}\\
     &= \sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{n} \\ 
     &= \sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\exp\qty(\i\frac{E_n}{\hbar}t)\ket{n} \\ 
-    &= \sum_{n}c_n(t)\ket{n}\label{TDSE-2nd-eq-interaction-picture}
+    &= \sum_{n}c_n(t)\ket{n} \label{psi-t-cnt}
   \end{align}
   と計算できる．
   \par
   次に，相互作用表示の時間微分を計算してみる．
   相互作用表示での摂動項$\hat{V}_{\r{I}}$を，
   \begin{align}
-    \hat{V}_{\r{I}} \coloneqq \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)
+    \hat{V}_{\r{I}} \coloneqq \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t) \label{time-dependent-schrodinger-eq-re-2nd-eq-interaction-picture}
   \end{align}
-  とする．計算の途中で，\refe{TDSE}の第1式を用いると，
+  とする．計算の途中で，\refe{time-dependent-schrodinger-eq-re}の第1式を用いると，
   \begin{align}
     \i\hbar\dv{t}\ket{\psi(t)}_{\r{I}} &= \dv{t}\qty[\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)]\ket{\psi(t)} + \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\dv{t}\ket{\psi(t)} \\
     &= \i\frac{\hat{H}^{(0)}}{\hbar}\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)} + \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\frac{1}{\i\hbar}\qty(\hat{H}^{(0)} + \hat{V}(t))\ket{\psi(t)} \\ 
@@ -38,9 +38,9 @@
     &= \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\ket{\psi(t)} \\
     &= \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)} \\
     &= \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)}_{\r{I}} \\
-    &= \hat{V}_{\r{I}}(t)\ket{\psi(t)}_{\r{I}}\label{TDSE-1st-eq-interaction-picture}
+    &= \hat{V}_{\r{I}}(t)\ket{\psi(t)}_{\r{I}}\label{time-dependent-schrodinger-eq-re-1st-eq-interaction-picture}
   \end{align}
-  を得る．\refe{TDSE-1st-eq-interaction-picture}と\refe{TDSE-2nd-eq-interaction-picture}はSch\"odinger表示の非定常摂動基本方程式と等価な方程式であるから，
+  を得る．\refe{time-dependent-schrodinger-eq-re-1st-eq-interaction-picture}と\refe{time-dependent-schrodinger-eq-re-2nd-eq-interaction-picture}はSch\"odinger表示の非定常摂動基本方程式と等価な方程式であるから，
   これを\textbf{朝永・Schwinger方程式}と呼ぶ．
   \footnote{Schrödinger描像は量子状態が時間発展するとみなす．Heisenberg描像は物理量が時間発展するとみなす．相互作用表示はその中間であるといえる．}  
   \footnote{朝永振一郎(1906-1979)}
@@ -48,31 +48,58 @@
   \footnote{朝永とSchwingerは1964年にRichard Feynmannとともにノーベル賞を受賞．}．
   \begin{itembox}[l]{朝永・Schwinger方程式}
     \begin{align}
-      \i\hbar\dv{t}\ket{\psi(t)}_{\r{I}}&=\hat{V}_{\r{I}}(t)\ket{\psi(t)}_{\r{I}}\label{Tomonaga-Schwinger}\\
-      \hat{V}_{\r{I}}(t)&=\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)
+      \begin{dcases}
+        \i\hbar\dv{t}\ket{\psi(t)}_{\r{I}} = \hat{V}_{\r{I}}(t)\ket{\psi(t)}_{\r{I}} \label{tomonaga-schwinger}\\
+        \hat{V}_{\r{I}}(t) = \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)
+      \end{dcases}
     \end{align}
   \end{itembox}
   \par
-  \refe{Tomonaga}に左から$\bra{m}$を演算する($\hat{H}^{(0)}\ket{m} = E_m\ket{m}$)．\\
-  左辺は，
+  さて，定常状態のSchr\"odinger方程式が，
   \begin{align}
-    &\bra{m}\i\hbar\dv{t}\sum_{n}c_n(t)\ket{n}\\
-    & = \i\hbar\dv{t}c_m(t)
+    \forall m\ \hat{H}^{(0)}\ket{m} = E_m\ket{m}
+  \end{align}
+  を満たすとする．
+  \refe{tomonaga-schwinger}の第1式に左から$\bra{m}$を演算する．
+  途中，\refe{psi-t-cnt}を用いて$\ket{\psi(t)}_{\r{I}}$を展開し，\refe{tomonaga-schwinger}の第2式を用いて$\hat{V}_{\r{I}}(t)$を$\hat{V}(t)$に戻す．
+  また，$\hat{V}_{\r{I}}(t)$は$c_n(t)$に作用しないものとすると，
+  \begin{align}
+    \mel**{m}{\i\hbar\dv{t}}{\psi(t)}_{\r{I}} &= \mel**{m}{\hat{V}_{\r{I}}(t)}{\psi(t)}_{\r{I}} \\ 
+    \Leftrightarrow \bra{m}\i\hbar\sum_{n}c_n(t)\ket{n} &= \sum_{n}c_n(t)\mel**{m}{\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)}{n} \\ 
+    \Leftrightarrow \i\hbar\sum_{n}\dv{t}c_n(t)\braket{m}{n} &= \sum_{n}c_n(t)\exp\qty(-\i\frac{E_n - E_m}{\hbar}t)\mel**{m}{\hat{V}(t)}{n} \\ 
+    \Leftrightarrow \i\hbar \dv{t}c_m(t) &= \sum_{n}c_n(t)\exp\qty(\i\frac{E_m - E_n}{\hbar}t)\mel**{m}{\hat{V}(t)}{n}
   \end{align}
   となる．
-  右辺は．
+  $\omega_{mn}$と$V_{mn}$を，
   \begin{align}
-    &\bra{m}\hat{V}_{\r{I}}(t)\sum_{n}c_n(t)\ket{n}\\
-    & = \sum_{n}c_n(t)\e^{-\i\frac{(E_n - E_m)t}{\hbar}}\mel{m}{\hat{V}(t)}{n}
+    \omega_{mn} &\coloneqq \frac{E_m - E_n}{\hbar} \\ 
+    V_{mn}(t) &\coloneqq \mel**{m}{\hat{V}(t)}{n}
   \end{align}
-  となる．よって，非定常摂動の時間発展は以下の式を満たす．
-  \begin{itembox}[l]{$\hat{H}(t) = \hat{H}^{(0)} + \hat{V}(t)$}
+  と定義する．
+  非定常摂動の時間発展は以下の式を満たす．
+  \begin{itembox}[l]{非定常摂動の時間発展}
     \begin{align}
-      \ket{\psi(t)}_{\r{I}} &= \sum_{n}c_n(t)\ket{n}\\
-      i\hbar\dv{t}c_m(t) &= \sum_{n}c_n(t)V_{mn}\e^{\i\omega_{mn}t}\\
-      V_{mn} &= \bra{m}\hat{V}(t)\ket{n}\\
-      \omega_{mn} &= \frac{E_m - E_n}{\hbar} = -\omega_{nm}
+      \i\hbar\dv{t}c_m(t) &= \sum_{n}c_n(t)V_{mn}(t)\e^{\i\omega_{mn}t}\label{cnt-eq}
     \end{align}
   \end{itembox}
-  これは$c_n$の連立方程式になっており解くことは困難である．よって近似を加える．
+  これは$c_n(t)$の連立方程式になっていて，一般に解くことは困難である．
+  例えば$\hat{V}(t)$が有限次元であり，行列表示ができたとすると\refe{cnt-eq}は，
+  \begin{align}
+    \i\hbar\dv{t}\mqty(c_1 \\ c_2 \\ \vdots \\ c_n) 
+    = \mqty(
+      V_{11}(t) & V_{12}(t)\e^{\i\omega_{12}t} & \cdots & V_{1n(t)}\e^{\i\omega_{1n}t} \\ 
+      (V_{12}(t)\e^{\i\omega_{12}t})^* & V_{22}(t) & \cdots & V_{2n}(t)\e^{\i\omega_{2n}t} \\ 
+      \vdots & \vdots & \ddots & \vdots \\ 
+      (V_{1n}(t)\e^{\i\omega_{1n}t})^* & (V_{2n}(t)\e^{\i\omega_{2n}t})^* & \cdots & V_{nn}(t)
+      ) 
+      \mqty(c_1 \\ c_2 \\ \vdots \\ c_n)\label{cnt-matrix}
+  \end{align}
+  となる．途中で，
+  \begin{align}
+    (V_{mn}(t)\e^{\i\omega_{mn}t})^* &= V_{mn}(t)^* \qty(\e^{\i\omega_{mn}t})^* \\ 
+    &= \mel**{m}{\hat{V}(t)}{n}^*\exp\qty(-\i\frac{E_m - E_n}{\hbar}t) \\ 
+    &= \mel**{n}{\hat{V}(t)}{m}\exp\qty(\i\frac{E_n - E_m}{\hbar}t) \\ 
+    &= (V_{nm}(t)\e^{\i\omega_{nm}t})
+  \end{align}
+  を用いた．\refe{cnt-matrix}の行列の部分も時間に依存することを考えると$n$が大きなときに厳密に解くことは困難である．
 \end{document}
