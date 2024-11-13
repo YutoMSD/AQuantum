@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  13 NOV 2024 20:12
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  13 NOV 2024 20:14
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2549,28 +2549,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[19]
-
-LaTeX Warning: Reference `time-dependent-schrodinger-eq' on page 20 undefined o
-n input line 44.
-
-
-LaTeX Warning: Reference `time-dependent-schrodinger-eq' on page 20 undefined o
-n input line 67.
-
-
-LaTeX Warning: Reference `nonsteady-perturbation-cnt-eq' on page 20 undefined o
-n input line 67.
-
-) (./approximation/nonsteady_perturbation/interaction_representation/main.tex
-
-LaTeX Warning: Reference `time-dependent-schrodinger-eq-re' on page 20 undefine
-d on input line 4.
-
-
-LaTeX Warning: Reference `nonsteady-perturbation-cnt-eq' on page 20 undefined o
-n input line 4.
-
+[19])
+(./approximation/nonsteady_perturbation/interaction_representation/main.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2581,34 +2561,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [20]
 
-LaTeX Warning: Reference `interaction-picture' on page 21 undefined on input li
-ne 12.
-
-
-LaTeX Warning: Reference `interaction-picture' on page 21 undefined on input li
-ne 18.
-
-
-LaTeX Warning: Reference `time-dependent-schrodinger-eq-re' on page 21 undefine
-d on input line 18.
-
-
-LaTeX Warning: Reference `time-dependent-schrodinger-eq-re' on page 21 undefine
-d on input line 19.
-
-
-LaTeX Warning: Reference `time-dependent-schrodinger-eq-re' on page 21 undefine
-d on input line 33.
-
-
-LaTeX Warning: Reference `time-dependent-schrodinger-eq-re-1st-eq-interaction-p
-icture' on page 21 undefined on input line 43.
-
-
-LaTeX Warning: Reference `time-dependent-schrodinger-eq-re-2nd-eq-interaction-p
-icture' on page 21 undefined on input line 43.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2618,20 +2570,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [21]
 
-LaTeX Warning: Reference `tomonaga-schwinger' on page 22 undefined on input lin
-e 63.
-
-
-LaTeX Warning: Reference `psi-t-cnt' on page 22 undefined on input line 64.
-
-
-LaTeX Warning: Reference `tomonaga-schwinger' on page 22 undefined on input lin
-e 64.
-
-
-LaTeX Warning: Reference `cnt-eq' on page 22 undefined on input line 86.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2639,12 +2577,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[22]
-
-LaTeX Warning: Reference `cnt-matrix' on page 23 undefined on input line 104.
-
-) (./approximation/nonsteady_perturbation/two_state_system/main.tex(load cache: 
-extra_lmroman8-bold.luc)
+[22]) (./approximation/nonsteady_perturbation/two_state_system/main.tex(load cac
+he: extra_lmroman8-bold.luc)
 LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <8> not available
 (Font)              Font shape `JT3/gt/m/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
@@ -2802,9 +2736,6 @@ L3 programming layer <2024-02-20>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C4CDE20AD70FF5FEB5F63D8D888CF76A;4443.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2813,14 +2744,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 52248 strings out of 476447
+ 52245 strings out of 476447
  382255,2373549 words of node,token memory allocated
  11489 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 21 glue, 4 kern, 212 sub_mlist, 1 glyph, 4570 attr
 ibute, 79 glue_spec, 427 attribute_list, 2 write, 14 user_defined nodes
    avail lists: 1:23,2:100954,3:943,4:1255,5:641,6:102,7:8206,8:96,9:4486,10:17,
 11:24
- 72526 multiletter control sequences out of 65536+600000
+ 72523 multiletter control sequences out of 65536+600000
  125 fonts using 83743271 bytes
  115i,23n,118p,1916b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf><
@@ -2861,10 +2792,10 @@ msy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 fb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb>
-Output written on main.pdf (37 pages, 574812 bytes).
+Output written on main.pdf (37 pages, 575125 bytes).
 
-PDF statistics: 1072 PDF objects out of 1200 (max. 8388607)
- 958 compressed objects within 10 object streams
+PDF statistics: 1090 PDF objects out of 1200 (max. 8388607)
+ 976 compressed objects within 10 object streams
  493 named destinations out of 1000 (max. 131072)
  256 words of extra memory for PDF output out of 10000 (max. 100000000)
 

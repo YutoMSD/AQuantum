@@ -2,92 +2,92 @@
 \input{../../../head.tex}
 \begin{document}
   厳密に解くことのできる2準位系
-  \begin{equation}
-    \ket{1}=\begin{pmatrix}
+  \begin{align}
+    \ket{1} = \mqty(
       1\\
       0
-    \end{pmatrix},\ 
-    \ket{2}=\begin{pmatrix}
+    ),\ 
+    \ket{2} = \mqty(
       0\\
       1
-    \end{pmatrix},\ 
-    \hat{H}^0=\begin{pmatrix}
-      E_1 & 0\\
-      0 & E_2
-    \end{pmatrix}
-  \end{equation}
+    ),\ 
+    \hat{H}^0 = \mqty(
+      E_1  &  0\\
+      0  &  E_2
+    )
+  \end{align}
   に摂動を加える($E_1$，$E_2$はそれぞれ$\ket{1}$，$\ket{2}$のエネルギー固有値)．摂動は次のようにする\footnote{$\gamma$は摂動の強さを表す．}．
-  \begin{equation}
-    \hat{V}(t)=\begin{pmatrix}
-      0& \gamma\mathrm{e}^{i\omega t}\\
-      \gamma \mathrm{e}^{-i\omega t}&0
-    \end{pmatrix}
-  \end{equation}
+  \begin{align}
+    \hat{V}(t) = \mqty(
+      0 &  \gamma\e^{\i\omega t}\\
+      \gamma \e^{ - \i\omega t} & 0
+    )
+  \end{align}
   よって，Hamiltonianは，
-  \begin{equation}
-    \hat{H}=\hat{H}^0+\hat{V}(t)=\begin{pmatrix}
-      E_1&\gamma\mathrm{e}^{i\omega t}\\
-      \gamma\mathrm{e}^{-i\omega t}&E_2
-    \end{pmatrix}
-  \end{equation}
+  \begin{align}
+    \hat{H} = \hat{H}^0 + \hat{V}(t) = \mqty(
+      E_1 & \gamma\e^{\i\omega t}\\
+      \gamma\e^{ - \i\omega t} & E_2
+    )
+  \end{align}
   である．$t$に依存する非対角項が存在するため$\ket{1}$と$\ket{2}$が$t$に依存して混ざってしまう．\\
   この系の量子状態は相互作用表示を使って，
-  \begin{equation}
-    \ket{\psi(t)}_I=c_1(t)\ket{1}+c_2(t)\ket{2}
-  \end{equation}
-  と表される．$V_{11}=V_{22}=0,\ V_{12}=V_{21}=\gamma\mathrm{e}^{-i\omega t}$であるから，
-  \begin{equation}
-    \begin{cases}
-      i\hbar\frac{d}{dt}c_1=c_2\gamma\mathrm{e}^{i(\omega-\omega_{21})t}\\
-      i\hbar\frac{d}{dt}c_2=c_1\gamma\mathrm{e}^{-i(\omega-\omega_{21})t}
-    \end{cases}
-  \end{equation}
-  が成り立つ．次に，$\Delta\omega\equiv\omega-\omega_{21}$とし，上の連立微分方程式を解く．\\
-  2式目を1式目に代入して$c_1$を消去すると
-  \begin{equation}
-    \ddot{c_2}+i\Delta\omega\dot{c_2}+\qty(\frac{\gamma}{\hbar})^2c_2=0
-  \end{equation}
-  $c_2(t)=\mathrm{e}^{i\lambda t}$を代入すると
   \begin{align}
-    \lambda^2+\Delta\omega\lambda-\qty(\frac{\gamma}{\hbar})=0\\
-    \lambda=-\frac{\Delta\omega}{2}\pm\sqrt{\qty(\Delta\omega/2)^2+\qty(\gamma/\hbar)^2}
+    \ket{\psi(t)}_I = c_1(t)\ket{1} + c_2(t)\ket{2}
+  \end{align}
+  と表される．$V_{11} = V_{22} = 0,\ V_{12} = V_{21} = \gamma\e^{ - \i\omega t}$であるから，
+  \begin{align}
+    \begin{cases}
+      \i\hbar\frac{d}{dt}c_1 = c_2\gamma\e^{\i(\omega - \omega_{21})t}\\
+      \i\hbar\frac{d}{dt}c_2 = c_1\gamma\e^{ - \i(\omega - \omega_{21})t}
+    \end{cases}
+  \end{align}
+  が成り立つ．次に，$\Delta\omega\equiv\omega - \omega_{21}$とし，上の連立微分方程式を解く．\\
+  2式目を1式目に代入して$c_1$を消去すると
+  \begin{align}
+    \ddot{c_2} + \i\Delta\omega\dot{c_2} + \qty(\frac{\gamma}{\hbar})^2c_2 = 0
+  \end{align}
+  $c_2(t) = \e^{\i\lambda t}$を代入すると
+  \begin{align}
+    \lambda^2 + \Delta\omega\lambda - \qty(\frac{\gamma}{\hbar}) = 0\\
+    \lambda =  - \frac{\Delta\omega}{2}\pm\sqrt{\qty(\Delta\omega/2)^2 + \qty(\gamma/\hbar)^2}
   \end{align}
   を得る．ここで
-  \begin{equation}
-    \Omega=\sqrt{\qty(\Delta\omega/2)^2+\qty(\gamma/\hbar)^2}
-  \end{equation}
-  を\textbf{Rabi周波数}(Rabi frequency)という\footnote{I.I.Rabi(1898-1988)}\footnote{量子状態の振動を\textbf{Rabi振動}(Rabi oscillation)という．}．
+  \begin{align}
+    \Omega = \sqrt{\qty(\Delta\omega/2)^2 + \qty(\gamma/\hbar)^2}
+  \end{align}
+  を\textbf{Rabi周波数}(Rabi frequency)という\footnote{I.I.Rabi(1898 - 1988)}\footnote{量子状態の振動を\textbf{Rabi振動}(Rabi oscillation)という．}．
   \begin{itembox}[l]{Rabi周波数}
-    \begin{equation}
-    \Omega=\sqrt{\qty(\Delta\omega/2)^2+\qty(\gamma/\hbar)^2}   
-    \end{equation}
+    \begin{align}
+    \Omega = \sqrt{\qty(\Delta\omega/2)^2 + \qty(\gamma/\hbar)^2}   
+    \end{align}
   \end{itembox}
   よって，$c_2$の一般解は
-  \begin{equation}
-    c_2(t)=\mathrm{e}^{-i\Delta\omega t/2}\qty(a\mathrm{e}^{i\Omega t}+b\mathrm{e}^{-i\Omega t})
-  \end{equation}
-  となる．初期条件を$c_1(0)=1,\ c_2(0)=0$とすると，
-  \begin{equation}
-    c_2(t)=-i\frac{\gamma}{\hbar\Omega}\mathrm{e}^{-i\Delta\omega t/2}\sin\Omega t
-  \end{equation}
+  \begin{align}
+    c_2(t) = \e^{ - \i\Delta\omega t/2}\qty(a\e^{\i\Omega t} + b\e^{ - \i\Omega t})
+  \end{align}
+  となる．初期条件を$c_1(0) = 1,\ c_2(0) = 0$とすると，
+  \begin{align}
+    c_2(t) =  - \i\frac{\gamma}{\hbar\Omega}\e^{ - \i\Delta\omega t/2}\sin\Omega t
+  \end{align}
   である．この系の量子状態は
-  \begin{equation}
-    \ket{\psi(t)}_I=c_1(t)\ket{1}+c_2(t)\ket{2}
-  \end{equation}
+  \begin{align}
+    \ket{\psi(t)}_I = c_1(t)\ket{1} + c_2(t)\ket{2}
+  \end{align}
   だから，時刻$t$で$\ket{2}$に状態を見出す確率は
-  \begin{equation}
-    |c_2(t)|^2=\frac{(\gamma/\hbar)^2}{\Omega^2}\sin^2\Omega t
-  \end{equation}
+  \begin{align}
+    |c_2(t)|^2 = \frac{(\gamma/\hbar)^2}{\Omega^2}\sin^2\Omega t
+  \end{align}
   である．確率が周期的に変化することがわかる．\\
   振幅の大きさは
-  \begin{equation}
-    \frac{(\gamma/\hbar)^2}{(\gamma/\hbar)^2+(\Delta\omega/2)^2}
-  \end{equation}
-  と表されるので，$\Delta\omega=\omega-\omega_{12}=0$のときに最大となる．つまり，摂動の周波数$\omega$と
+  \begin{align}
+    \frac{(\gamma/\hbar)^2}{(\gamma/\hbar)^2 + (\Delta\omega/2)^2}
+  \end{align}
+  と表されるので，$\Delta\omega = \omega - \omega_{12} = 0$のときに最大となる．つまり，摂動の周波数$\omega$と
   2準位のエネルギー差に由来する$\omega_{12}$が一致したときに遷移が起こりやすい．
   \begin{itembox}[l]{共鳴条件}
-    \begin{equation}
-      \omega=\omega_{12}=\frac{E_2-E_1}{\hbar}
-    \end{equation}  
+    \begin{align}
+      \omega = \omega_{12} = \frac{E_2 - E_1}{\hbar}
+    \end{align}  
   \end{itembox}
 \end{document}
