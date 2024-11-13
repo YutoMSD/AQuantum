@@ -1,44 +1,58 @@
 \documentclass{report}
 \input{../../../head.tex}
 \begin{document}
-  非定常摂動の運動はSchrödinger表示で
+  Schr\"odinger表示の非定常摂動基本方程式は，\refe{time-dependent-schroinger-eq}と\refe{nonsteady-perturbation-cnt-eq}であり，
   \begin{align}
     \begin{dcases}
-      \i\hbar\dv{t}\ket{\psi(t)} = \qty(\hat{H}^{(0)} + \hat{V}(t))\ket{\psi(t)}\label{TDSE}\\
+      \i\hbar\dv{t}\ket{\psi(t)} = \qty(\hat{H}^{(0)} + \hat{V}(t))\ket{\psi(t)} \label{TDSE} \\
       \ket{\psi(t)} = \sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{n}
     \end{dcases}
   \end{align}
-  と書ける．これを次の\textbf{相互作用表示}(interaction picture)を用いて書き直す．
+  と書けるのであった．
+  \textbf{相互作用表示}(interaction picture)を\refe{interaction-picture}のような$\ket{\psi(t)} \to \ket{\psi(t)}_{\r{I}}$の変換を行って得られる状態ベクトルと定義する．
   \begin{itembox}[l]{相互作用表示}
     \begin{align}
-      \ket{\psi(t)}_{\r{I}} = \exp\qty(-\i\frac{E_n}{\hbar}t)\ket{\psi(t)}
-    \end{align}  
+      \ket{\psi(t)}_{\r{I}} \coloneqq \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)}\label{interaction-picture}
+    \end{align}
   \end{itembox}
-  実際，相互作用表示を用いると，
+  \refe{interaction-picture}を用いて，\refe{TDSE}等価な基本方程式，相互作用表示の非定常摂動基本方程式を導く．
+  まず\refe{TDSE}の第2式を用いて，
   \begin{align}
-    \ket{\psi(t)}_{\r{I}} &= \exp\qty(-\i\frac{E_n}{\hbar}t)\sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{n}\\
-    &= \sum_{n}c_n(t)\ket{n}
+    \ket{\psi(t)}_{\r{I}} &= \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{n}\\
+    &= \sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{n} \\ 
+    &= \sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\exp\qty(\i\frac{E_n}{\hbar}t)\ket{n} \\ 
+    &= \sum_{n}c_n(t)\ket{n}\label{TDSE-2nd-eq-interaction-picture}
   \end{align}
-  であり．\refe{TDSE}の2式目と同じものが得られる．
-  相互作用表示の時間微分を計算してみる．
+  と計算できる．
+  \par
+  次に，相互作用表示の時間微分を計算してみる．
+  相互作用表示での摂動項$\hat{V}_{\r{I}}$を，
   \begin{align}
-    i\hbar\dv{t}\ket{\psi(t)}_{\r{I}} &= \i\hbar\qty(i\frac{\hat{H^{(0)}}}{\hbar})\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{\psi(t)} + i\hbar\exp\qty(-\i\frac{E_n}{\hbar}t)\dv{t}\ket{\psi(t)}\\
-    & = \exp\qty(-\i\frac{E_n}{\hbar}t)\hat{V}(t)\ket{\psi(t)}\\
-    & = \exp\qty(-\i\frac{E_n}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{\psi(t)}\\
-    & = \exp\qty(-\i\frac{E_n}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)}_{\r{I}}\\
-    &\equiv\hat{V}_{\r{I}}(t)\ket{\psi(t)}_{\r{I}}
+    \hat{V}_{\r{I}} \coloneqq \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)
   \end{align}
-  Schrödinger方程式に似た式が得られた．これを\textbf{朝永・Schwinger方程式}という
+  とする．計算の途中で，\refe{TDSE}の第1式を用いると，
+  \begin{align}
+    \i\hbar\dv{t}\ket{\psi(t)}_{\r{I}} &= \dv{t}\qty[\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)]\ket{\psi(t)} + \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\dv{t}\ket{\psi(t)} \\
+    &= \i\frac{\hat{H}^{(0)}}{\hbar}\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)} + \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\frac{1}{\i\hbar}\qty(\hat{H}^{(0)} + \hat{V}(t))\ket{\psi(t)} \\ 
+    &= \frac{\i}{\hbar}\qty[\hat{H}^{(0)}, \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)]\ket{\psi(t)} + \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\ket{\psi(t)} \\ 
+    &= \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\ket{\psi(t)} \\
+    &= \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)} \\
+    &= \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)}_{\r{I}} \\
+    &= \hat{V}_{\r{I}}(t)\ket{\psi(t)}_{\r{I}}\label{TDSE-1st-eq-interaction-picture}
+  \end{align}
+  を得る．\refe{TDSE-1st-eq-interaction-picture}と\refe{TDSE-2nd-eq-interaction-picture}はSch\"odinger表示の非定常摂動基本方程式と等価な方程式であるから，
+  これを\textbf{朝永・Schwinger方程式}と呼ぶ．
   \footnote{Schrödinger描像は量子状態が時間発展するとみなす．Heisenberg描像は物理量が時間発展するとみなす．相互作用表示はその中間であるといえる．}  
   \footnote{朝永振一郎(1906-1979)}
   \footnote{Julian Schwinger(1918-1994)}
   \footnote{朝永とSchwingerは1964年にRichard Feynmannとともにノーベル賞を受賞．}．
   \begin{itembox}[l]{朝永・Schwinger方程式}
     \begin{align}
-      \i\hbar\dv{t}\ket{\psi(t)}_{\r{I}} &= \hat{V}_{\r{I}}(t)\ket{\psi(t)}_{\r{I}}\label{Tomonaga}\\
-      \hat{V}_{\r{I}}(t)& = \exp\qty(-\i\frac{E_n}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)
+      \i\hbar\dv{t}\ket{\psi(t)}_{\r{I}}&=\hat{V}_{\r{I}}(t)\ket{\psi(t)}_{\r{I}}\label{Tomonaga-Schwinger}\\
+      \hat{V}_{\r{I}}(t)&=\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)
     \end{align}
   \end{itembox}
+  \par
   \refe{Tomonaga}に左から$\bra{m}$を演算する($\hat{H}^{(0)}\ket{m} = E_m\ket{m}$)．\\
   左辺は，
   \begin{align}
