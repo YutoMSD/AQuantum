@@ -11,7 +11,8 @@
   \begin{align}
     \ket{\psi(t)} = \sum_{n}c_n(t)\ket{n}\label{psi-t-expantion}
   \end{align}
-  と展開できたとする．$\hat{H}^{(0)}$の固有ベクトルが完全系を成すので，状態ベクトルが時間変化した空間は$\qty{\ket{n}\mid n = 0, 1, \cdots}$が張る空間の部分空間となることに注意する．
+  と展開できたとする．$\hat{H}^{(0)}$の固有ベクトルが完全系を成すので，
+  状態ベクトルが時間変化した空間は$\qty{\ket{n}\mid n = 0, 1, \cdots}$が張る空間の部分空間となることに注意する．
   $\hat{H}$の性質ごとに$\ket{\psi(t)}$の具体的な形を議論する．
   \begin{enumerate}
     \item $\hat{H} = \hat{H}^{(0)}$の場合\footnote{$\hat{H}^{(0)}$は厳密に解けるHamiltonian．}\par
@@ -20,7 +21,7 @@
         $\Delta t \ll 1$として，
         \begin{align*}
           \ket{\psi(\Delta t)} = \exp\qty[-\i\frac{\hat{H}\Delta t}{\hbar}]\ket{\psi(0)} \approx\qty(\hat{I} - \i\frac{\hat{H}\Delta t}{\hbar})\ket{\psi(0)} 
-          = \ket{\psi(0)} + \Delta t \left.\qty(\dv{t}\ket{\psi(t)})\right|_0
+          = \ket{\psi(0)} + \Delta t \left.\qty(\dv{t}\ket{\psi(t)})\right|_{t = 0}
         \end{align*}
         より微分の形で書けることから，確かに時間発展すると私は解釈する．}
       \footnote{
@@ -60,4 +61,7 @@
       と展開しておく．なお，$c_n(t)$が定数のときの$\ket{\psi(t)}$との整合性をとるために$\exp\qty(-\i\frac{E_n}{\hbar}t)$をかけてある．
       原理的には$c_n(t)$が求まれば量子系の時間発展の様子がわかる．% 暇になったら時間順序積のことを書く．
   \end{enumerate}
+  \par
+  さて，いずれの場合でも，量子系の性質を調べるには$c_n(t)$の具体的な形がわかればよいことを発見した．
+  本節では，まずSchr\"odinger描像から相互作用表示に書き換え，$c_n(t)$を厳密に知ることが困難であることを知り，$c_n(t)$の近似解を導く．
 \end{document}
