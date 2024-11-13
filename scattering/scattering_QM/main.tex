@@ -113,7 +113,7 @@
   \begin{align}
     \qty(\nabla^2 + \kappa^2)\phi(\bm{r}) = 0
   \end{align}
-  の一般解$\phi(\bm{r})$と
+  の一般解$\phi(\bm{r}) = \e^{\i k z}$と
   \begin{align}
     \label{Tokkai}
     \qty(\nabla^2 + \kappa^2)\chi(\bm{r}) = U(\bm{r}) \chi(\bm{r})
@@ -133,12 +133,39 @@
   \end{align}
   が成り立つためである．
 
-  Green関数を求める．
+  Green関数を求めよう．
   \begin{align}
     \qty(\nabla^2 + \kappa^2)G_0(\bm{r}) = \delta(\bm{r})
   \end{align}
   の両辺をFourier変換する．
   \begin{align}
-    \qty(\nabla^2 + \kappa^2)\int \dd{\bm{k'}} G_0(\bm{k'}) \e^{\i\bm{k'}\cdot \bm{r}} = \frac{1}{(2\pi)^3}\int \dd{\bm{k'}} \e^{\i\bm{k'}\cdot\bm{r}}
+    \qty(\nabla^2 + \kappa^2)\int \dd{\bm{k'}} G_0(\bm{k'}) \e^{\i\bm{k'}\cdot \bm{r}} &= \frac{1}{(2\pi)^3}\int \dd{\bm{k'}} \e^{\i\bm{k'}\cdot\bm{r}}\\
+    \int \dd{\bm{k}} \qty(-\bm{k'}^2 + \kappa^2)G_0(\bm{k'}) \e^{\i \bm{k'}\cdot \bm{r}} &= \frac{1}{(2\pi)^3} \int \dd{\bm{k'}} \e^{\i \bm{k'}\cdot \bm{r}}
   \end{align}
+  両辺を比較すると
+  \begin{align}
+    (\kappa^2 - k'^2)G_0(\bm{k'}) &= \frac{1}{(2\pi)^2}\\
+    G_0(\bm{k'}) &= \frac{1}{(2\pi)^2 (\kappa^2 - k'^2)}
+  \end{align}
+  を得る．よってGreen関数は
+  \begin{align}
+    G_0(\bm{r}) = \frac{1}{(2\pi)^2}\int \dd{\bm{k'}} \frac{\e^{\i\bm{k'}\cdot\bm{r}}}{\kappa^2 - k'^2}
+  \end{align}
+  と表される．極座標に変換しこの積分を実行する．
+  \begin{align}
+    G_0(\bm{r}) &= \frac{1}{(2\pi)^2} \int \frac{\exp(\i k' r \cos \theta)}{\kappa^2 - k'^2}k'^2\sin\theta\dd{\theta}\dd{\phi}\dd{k'}\\
+    &= \int \frac{1}{(2\pi)^3}2\pi \int_{0}^{\infty} k'^2 \dd{k'} \int_{0}^{\pi}\sin\theta\dd{\theta}\frac{\exp(\i k' r\cos\theta)}{\kappa^2 - k'^2}\\
+    &= \frac{1}{(2\pi)^2} \int_{0}^{\infty} \frac{k'^2\dd{k'}}{\kappa^2 - k'^2}\frac{\e^{\i k'r} - \e^{-\i k'r}}{\i k'r}\\
+    &= \frac{1}{2\pi^2\i r} \int_{0}^{\infty}\dd{k'} \frac{\e^{\i k'r} - \e^{-\i k'r}}{(\kappa - k')(\kappa + k')}\\
+    &= -\frac{1}{8\pi^2\i r} \int_{-\infty}^{\infty} k' \dd{k'} \frac{\e^{\i k'r} - \e^{-\i k'r}}{(k' - \kappa)(k' + \kappa)}\\
+    &= -\frac{1}{8\pi^2\i r} \kappa \qty{2\pi \i \frac{\e^{\i \kappa r} - \e^{-\i \kappa r}}{2 \kappa} + 2\pi \i \frac{\e^{- \i \kappa r} - \e^{\i \kappa r}}{-2 \kappa}}\\
+    &= -\frac{1}{4\pi r}(\e^{\i \kappa r} - \e^{-\i \kappa r})
+  \end{align}
+  したがって，Green関数は外向きの球面波と内向きの球面波の重ね合わせになっている．物理的に意味のあるのは外向きの球面波であるため，こちらを採用する．
+
+  以上の計算からSchrödinger方程式(\ref{SE_Scattering})の形式解は
+  \begin{align}
+    \psi(\bm{r}) = \e^{\i kz} - \frac{1}{4\pi} \int \frac{\e^{\i k \abs{\bm{r} - \bm{r'}}}}{\abs{\bm{r} - \bm{r'}}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'}) \dd{r'}
+  \end{align}
+  である．これは平面波と球面波の和となっている．
 \end{document}
