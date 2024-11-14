@@ -1,93 +1,119 @@
 \documentclass{report}
 \input{../../../head.tex}
 \begin{document}
-  厳密に解くことのできる2準位系
-  \begin{align}
-    \ket{1} = \mqty(
-      1\\
-      0
-    ),\ 
-    \ket{2} = \mqty(
-      0\\
-      1
-    ),\ 
-    \hat{H}^0 = \mqty(
-      E_1  &  0\\
-      0  &  E_2
-    )
-  \end{align}
-  に摂動を加える($E_1$，$E_2$はそれぞれ$\ket{1}$，$\ket{2}$のエネルギー固有値)．摂動は次のようにする\footnote{$\gamma$は摂動の強さを表す．}．
-  \begin{align}
-    \hat{V}(t) = \mqty(
-      0 &  \gamma\e^{\i\omega t}\\
-      \gamma \e^{ - \i\omega t} & 0
-    )
-  \end{align}
-  よって，Hamiltonianは，
-  \begin{align}
-    \hat{H} = \hat{H}^0 + \hat{V}(t) = \mqty(
-      E_1 & \gamma\e^{\i\omega t}\\
-      \gamma\e^{ - \i\omega t} & E_2
-    )
-  \end{align}
-  である．$t$に依存する非対角項が存在するため$\ket{1}$と$\ket{2}$が$t$に依存して混ざってしまう．\\
-  この系の量子状態は相互作用表示を使って，
-  \begin{align}
-    \ket{\psi(t)}_I = c_1(t)\ket{1} + c_2(t)\ket{2}
-  \end{align}
-  と表される．$V_{11} = V_{22} = 0,\ V_{12} = V_{21} = \gamma\e^{ - \i\omega t}$であるから，
-  \begin{align}
-    \begin{cases}
-      \i\hbar\frac{d}{dt}c_1 = c_2\gamma\e^{\i(\omega - \omega_{21})t}\\
-      \i\hbar\frac{d}{dt}c_2 = c_1\gamma\e^{ - \i(\omega - \omega_{21})t}
-    \end{cases}
-  \end{align}
-  が成り立つ．次に，$\Delta\omega\equiv\omega - \omega_{21}$とし，上の連立微分方程式を解く．\\
-  2式目を1式目に代入して$c_1$を消去すると
-  \begin{align}
-    \ddot{c_2} + \i\Delta\omega\dot{c_2} + \qty(\frac{\gamma}{\hbar})^2c_2 = 0
-  \end{align}
-  $c_2(t) = \e^{\i\lambda t}$を代入すると
-  \begin{align}
-    \lambda^2 + \Delta\omega\lambda - \qty(\frac{\gamma}{\hbar}) = 0\\
-    \lambda =  - \frac{\Delta\omega}{2}\pm\sqrt{\qty(\Delta\omega/2)^2 + \qty(\gamma/\hbar)^2}
-  \end{align}
-  を得る．ここで
-  \begin{align}
-    \Omega = \sqrt{\qty(\Delta\omega/2)^2 + \qty(\gamma/\hbar)^2}
-  \end{align}
-  を\textbf{Rabi周波数}(Rabi frequency)という\footnote{I.I.Rabi(1898 - 1988)}\footnote{量子状態の振動を\textbf{Rabi振動}(Rabi oscillation)という．}．
+  前節の最後に，一般に時間発展する量子系を正確に追跡する，すなわち，$c_n(t)$の厳密解を求めることが困難であると述べた．
+  にもかかわらず，ある特殊な条件下では近似を行うことなく，厳密解を得ることができる．
+  以下の\exref{rabi-cycle}では，そのような物理現象として\textbf{Rabi振動}(Rabi cycle)\footnote{I.I.Rabi(1898 - 1988)}
+  \footnote{量子状態の振動をRabi振動という．}を議論する．
+  \begin{myex}{Rabi振動}{rabi-cycle}
+    厳密に解くことのできる2準位系，
+    \begin{align}
+      \ket{1} &\coloneqq \mqty(1\\ 0) \\
+      \ket{2} &\coloneqq \mqty(0\\ 1) \\
+      \hat{H}^{(0)} &\coloneqq \mqty(E_1 & 0\\ 0 & E_2)
+    \end{align}
+    を考える．明らかに，$E_1$と$E_2$は$\hat{H}^{(0)}$のエネルギー固有値で，それぞれに属する固有ベクトルは$\ket{1}$と$\ket{2}$である．
+    この2準位系に，時刻$t = 0$から$\hat{V}(t)$なる摂動を加える．
+    ただし，$\hat{V}(t)$は，
+    \begin{align}
+      \hat{V}(t) = \mqty(
+        0 & \gamma\e^{\i\omega t} \\
+        \gamma\e^{-\i\omega t} & 0
+      )
+    \end{align}
+    によって与えられる\footnote{$\gamma$は摂動の強さを表す．}．
+    系全体のHamiltonianを$\hat{H} \coloneqq \hat{H}^{(0)} + \hat{V}(t)$とする．
+    系の状態ベクトルを相互作用表示を用いて，
+    \begin{align}
+      \ket{\psi(t)}_{\r{I}} \coloneqq c_1(t)\ket{1} + c_2(t)\ket{2}
+    \end{align}
+    と書いたとき，以下の問いに答えよ．
+    \begin{enumerate}
+      \item $c_1(t)$と$c_2(t)$の時間発展を調べよ．ただし，初期条件は$c_1(0) = 1$，$c_2(0) = 0$とする．
+      \item 1. の条件のもとで，$c_2(t)$の確率振幅が最大となる$\omega$を求めよ．
+    \end{enumerate}
+    \tcblower
+    \begin{enumerate}
+      \item $c_1(t)$と$c_2(t)$の時間発展\par
+        今回の設定での$\omega_{mn}$や$V_{mn}$を計算すると，
+        \begin{align}
+          \omega_{11} &= \omega_{22} = 0 \\ 
+          \omega_{21} &= -\omega_{12} = \frac{E_2 - E_1}{\hbar} \\ 
+          V_{11} &= V_{22} = 0 \\ 
+          V_{21} &= V_{12}^* = \gamma\e^{-\i\omega t}
+        \end{align}
+        である．非定常摂動の時間発展の式より，
+        \begin{align}
+          \begin{dcases}
+            \i\hbar\dv{t}c_1(t) = c_1(t)V_{11}\e^{\i\omega_{11}t} + c_2(t)V_{12}\e^{\i\omega_{12}t} = c_2(t)\gamma\e^{\i\qty(\omega + \omega_{12}) t} \label{rabi-cnt-eq}\\ 
+            \i\hbar\dv{t}c_2(t) = c_1(t)V_{21}\e^{\i\omega_{21}t} + c_2(t)V_{22}\e^{\i\omega_{22}t} = c_1(t)\gamma\e^{-\i\qty(\omega - \omega_{21}) t} 
+          \end{dcases}
+        \end{align}
+        が成り立つ．
+        次に，$\Delta\omega \coloneqq \omega - \omega_{21}$として\refe{rabi-cnt-eq}を解く．
+        2式目を1式目に代入して$c_1(t)$を消去すると，
+        \begin{align}
+          \dv[2]{t}c_2(t) + \i\Delta\omega\dv{t}c_2(t) + \qty(\frac{\gamma}{\hbar})^2c_2 = 0\label{rabi-cnt-eq-c2}
+        \end{align}
+        2階の斉次微分方程式の解は$c_2(t) = \e^{\i\lambda t}$と書けるので，これを\refe{rabi-cnt-eq-c2}に代入すると，
+        \begin{align}
+          \lambda^2 + \Delta\omega\lambda - \qty(\frac{\gamma}{\hbar}) &= 0 \\
+          \Rightarrow \lambda &= -\frac{\Delta\omega}{2}\pm\sqrt{\qty(\frac{\Delta\omega}{2})^2 + \qty(\frac{\gamma}{\hbar})^2}
+        \end{align} 
+        を得る．$\Omega$を，
+        \begin{align}
+          \Omega \coloneqq \sqrt{\qty(\frac{\Delta\omega}{2})^2 + \qty(\frac{\gamma}{\hbar})^2}\label{rabi-freq}
+        \end{align}
+        と定義して，これをRabi周波数と呼ぶ．
+        $c_2$の一般解は，
+        \begin{align}
+          c_2(t) = \exp\qty(-\i\frac{\Delta\omega}{2}t)\qty(A\e^{\i\Omega t} + B\e^{-\i\Omega t})\label{c2t-general-solution}
+        \end{align}
+        と書ける．\refe{c2t-general-solution}を\refe{rabi-cnt-eq}の第2式に代入すると，
+        \begin{align}
+          c_1(t) = \frac{\hbar}{\gamma}\exp\qty(-\i\frac{\Delta\omega}{2}t)\qty[\frac{\Delta\omega}{2}\qty(A\e^{\i\Omega t} + B\e^{-\i\Omega t}) - \Omega\qty(A\e^{\i\Omega t} - B\e^{-\i\Omega t})]
+        \end{align}
+        となる．
+        初期条件を考えると，
+        \begin{align}
+          \begin{dcases}
+            A + B = 0 \\ 
+            A - B = -\frac{\gamma}{\hbar\Omega}
+          \end{dcases}
+        \end{align}
+        であるから，
+        \begin{align}
+          B = -A = \frac{\gamma}{2\hbar\Omega}
+        \end{align}
+        となる．よって，
+        \begin{align}
+          c_1(t) &= \exp\qty(-\i\frac{\Delta\omega}{2}t)\qty(\cos\Omega t - \i\frac{\Delta \omega}{2\Omega}\sin\Omega t) \\ 
+          c_2(t) &=  - \i\frac{\gamma}{\hbar\Omega}\exp\qty(-\i\frac{\Delta\omega}{2}t)\sin\Omega t
+        \end{align}
+        である．時刻$t$で$\ket{1}$，$\ket{2}$に状態を見出す確率，$\abs{c_1(t)}^2$，$\abs{c_2(t)}^2$はそれぞれ，
+        \begin{align}
+          \abs{c_1(t)}^2 &= \cos^2\Omega t + \qty(\frac{\Delta \omega}{2})^2\frac{1}{\Omega^2}\sin^2\Omega t \\ 
+          \abs{c_2(t)}^2 &= \frac{\gamma^2}{\hbar^2\Omega^2}\sin^2\Omega t
+        \end{align}
+        である．簡単な計算により，$\abs{c_1(t)}^2 + \abs{c_2(t)}^2 = 1$となることが容易に確かめられる．
+      \item $c_2(t)$の振幅が最大となる$\omega$の値\par
+        振幅の大きさは$\Omega$の定義\refe{rabi-freq}より，
+        \begin{align}
+          \frac{(\gamma/\hbar)^2}{(\gamma/\hbar)^2 + (\Delta\omega/2)^2}
+        \end{align}
+        と表されるので，$\Delta\omega = \omega - \omega_{21} = 0$のときに最大となる．つまり，摂動の周波数$\omega$と
+        2準位のエネルギー差に由来する$\omega_{21}$が一致したときに遷移が起こりやすい．
+    \end{enumerate}
+  \end{myex}
+  \exref{rabi-cycle}では，Rabi振動に関する2つの重要な物理量を得たので，下にまとめる．
   \begin{itembox}[l]{Rabi周波数}
     \begin{align}
     \Omega = \sqrt{\qty(\Delta\omega/2)^2 + \qty(\gamma/\hbar)^2}   
     \end{align}
   \end{itembox}
-  よって，$c_2$の一般解は
-  \begin{align}
-    c_2(t) = \e^{ - \i\Delta\omega t/2}\qty(a\e^{\i\Omega t} + b\e^{ - \i\Omega t})
-  \end{align}
-  となる．初期条件を$c_1(0) = 1,\ c_2(0) = 0$とすると，
-  \begin{align}
-    c_2(t) =  - \i\frac{\gamma}{\hbar\Omega}\e^{ - \i\Delta\omega t/2}\sin\Omega t
-  \end{align}
-  である．この系の量子状態は
-  \begin{align}
-    \ket{\psi(t)}_I = c_1(t)\ket{1} + c_2(t)\ket{2}
-  \end{align}
-  だから，時刻$t$で$\ket{2}$に状態を見出す確率は
-  \begin{align}
-    |c_2(t)|^2 = \frac{(\gamma/\hbar)^2}{\Omega^2}\sin^2\Omega t
-  \end{align}
-  である．確率が周期的に変化することがわかる．\\
-  振幅の大きさは
-  \begin{align}
-    \frac{(\gamma/\hbar)^2}{(\gamma/\hbar)^2 + (\Delta\omega/2)^2}
-  \end{align}
-  と表されるので，$\Delta\omega = \omega - \omega_{12} = 0$のときに最大となる．つまり，摂動の周波数$\omega$と
-  2準位のエネルギー差に由来する$\omega_{12}$が一致したときに遷移が起こりやすい．
   \begin{itembox}[l]{共鳴条件}
     \begin{align}
-      \omega = \omega_{12} = \frac{E_2 - E_1}{\hbar}
-    \end{align}  
+      \omega = \omega_{21} = \frac{E_2 - E_1}{\hbar}
+    \end{align}
   \end{itembox}
 \end{document}
