@@ -32,5 +32,28 @@
   & \equiv -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i \bm{q}\cdot \bm{r'}} V(r') \dd{\bm{r'}}
  \end{align}
  となる．ここで散乱による運動量変化を$\bm{q}\equiv \bm{k'} - \bm{k}$と置いた．
- つまり，散乱振幅はポテンシャル$V(r')$のFourier変換から得られることがわかる．
+ つまり，散乱振幅はポテンシャル$V(r')$のFourier変換から得られることがわかる\footnote{$f^{(n)}$は第$n$Born近似による散乱振幅を意味する．}．
+ \begin{myex}{湯川ポテンシャル}{}
+湯川ポテンシャル
+\begin{align}
+  V(r) = V_0 \frac{\e^{-\mu r}}{\mu r}
+\end{align}
+による散乱を考える\footnote{湯川秀樹(1907-1981)}．これは，$V(r)$の到達距離が$\frac{1}{\mu}$ほどであり，核子同士に働く力を表す．物質中では，伝導電子に遮蔽された不純物のCoulombポテンシャルを表す．
+このポテンシャルの下で散乱振幅を求める．
+\begin{align}
+  f^{(1)}(\theta) &= -\frac{1}{4\pi} \frac{2m}{\hbar^2} \iiint \e^{-\i qr'\cos\theta'}V(r') r'^2 \sin\theta'\dd{r'}\dd{\theta'}\dd{\phi'}\\
+  &= -\frac{1}{4\pi}\frac{2m}{\hbar^2} 2\pi \int_{0}^{\infty} \qty(\frac{\e^{\i qr'} - \e^{-\i qr'}}{\i qr'})V(r') r'^2 \dd{r'}\\
+  &= -\frac{mV_0}{\i \hbar^2 q \mu} \int_{0}^{\infty} \qty[\e^{(-\mu + \i q)r'} - \e^{(-\mu - \i q)r'}] \dd{r'}\\
+  &= - \frac{2m V_0}{\hbar^2 \mu} \frac{1}{\mu^2 + q^2}
+\end{align}
+よって散乱断面積は
+\begin{align}
+  \sigma^{(1)}(\theta) &= \abs{f^{(1)}(\theta)}^2\\
+  &= \qty(\frac{2m V_0}{\hbar^2 \mu})^2 \frac{1}{(\mu^2 + q^2)^2}\\
+  &= \qty(\frac{2m V_0}{\hbar^2 \mu})^2 \frac{1}{(\mu^2 + 4K^2 \sin^2\theta/2)^2}
+\end{align}
+である．ここで，$\bm{k'}$と$\bm{k}$のなす角が$\theta$であるため$q = 2K\sin\theta/2$であることを用いた．
+ \end{myex}
+
+ 次に，Born近似の適用範囲について考える．
 \end{document}
