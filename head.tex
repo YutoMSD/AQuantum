@@ -181,7 +181,9 @@
 % \mathtoolsset{showonlyrefs=true} % 必要な式番号のみ表示
 \pagestyle{fancy} % ヘッダー・フッターのスタイル設定
 \chead{応用量子物性講義ノート} % 中央ヘッダー
-\rhead{}
+% \rhead{}
+\fancyhead[R]{\rightmark}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 \cfoot{\thepage} % 中央フッターにページ番号
 \lhead{}
 \rfoot{Yuto Masuda and Haruki Aoki} % 右フッターに名前
