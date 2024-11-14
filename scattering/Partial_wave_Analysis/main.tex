@@ -1,0 +1,18 @@
+\documentclass{report}
+\input{../../head.tex}
+\begin{document}
+  Helmholtz方程式
+  \begin{align}
+    [\nabla^2 + \kappa^2]\psi(\bm{r}) = 0
+  \end{align}
+  を球座標系で表すと
+  \begin{align}
+    \qty[\frac{1}{r}\frac{\partial^2}{\partial r^2}r + \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\qty(\sin\theta\frac{\partial}{\partial \theta})
+    + \frac{1}{r^2 \sin^2\theta}\frac{\partial^2}{\partial \phi^2} + \kappa^2]\psi(r,\theta,\phi) = 0
+  \end{align}
+  である．この方程式の解は動径波動関数$R(r)$と球面調和関数$Y_{l,m}(\theta, \phi)$を用いて
+  \begin{align}
+    \psi(r,\theta,\phi) = \sum_{l=0}^{\infty}\sum_{m=-l}^{l}C_{lm}R(r)Y_{l,m}(\theta,\phi)
+  \end{align}
+  と表される．いま，角度$\phi$によらないとして，
+\end{document}
