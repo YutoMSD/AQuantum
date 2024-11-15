@@ -1,6 +1,52 @@
 \documentclass{report}
 \input{../../head.tex}
 \begin{document}
+  近似法の一つである部分波展開を扱う．
+
+
+  古典力学において，角運動量は
+  \begin{align}
+    \bm{L} = \bm{r} \times \bm{p} = m\bm{r} \times \bm{v}
+  \end{align}
+  である．球対称ポテンシャルの下では，
+  \begin{align}
+    \dv{\bm{L}}{t} &= m\dv{\bm{r}}{t} \times \bm{v} + m\bm{r} \times \dv{\bm{v}}{t}\\
+    &= \bm{r} \times \bm{F}\\
+    &= \bm{r} \times (-\nabla V(r))\\
+    &= \bm{r} \times \abs{\nabla V}\frac{\bm{r}}{r}\\
+    &= 0
+  \end{align}
+  より，角運動量は保存される．
+  衝突パラメータ$b$，運動量$p$の粒子の角運動量は
+  \begin{align}
+    \abs{\bm{L}} &= \abs{\bm{r} \times \bm{p}}\\
+    &= pb
+  \end{align}
+  である．散乱体を半径$a$の球とすると，衝突の条件は
+  \begin{align}
+    &b < a\\
+    &L/p < a\\
+    \label{ConditionofSC}
+    &L < pa
+  \end{align}
+  である．つまり，角運動量が小さい粒子のみ散乱することがわかる．
+
+  式(\ref{ConditionofSC})を半古典的な散乱条件へと焼き直す．
+  \begin{align}
+    L = \hbar \sqrt{l(l+1)} < pa = \hbar ka
+  \end{align}
+  ここで，$l$は方位量子数で$l=0,1,2,\dots$の値を取る．つまり，散乱の影響を受けるのは$l$が小さいときのみであることがわかる．
+  よって，波動関数を
+  \begin{align}
+    \psi = \phi^{l=0} + \phi^{l=1}+\cdots
+  \end{align}
+  のように異なる$l$の固有関数で展開し，$l$が小さい状態についてだけ散乱の影響を考える．これを\textbf{部分波展開}という．
+
+  散乱の波動関数
+  \begin{align}
+    \psi(\bm{r}) = \e^{\i kz} + f(\theta)\frac{\e^{\i kr}}{r}
+  \end{align}
+  を部分波展開する\footnote{ここから式(\ref{PartialWave})までは飛ばしても良い．}．
   Helmholtz方程式
   \begin{align}
     [\nabla^2 + \kappa^2]\psi(\bm{r}) = 0
@@ -31,6 +77,7 @@
   \end{align}
   整理すると
   \begin{align}
+    \label{Helmholtz separated}
     \frac{P_l(\cos\theta)}{r}\qty[2\frac{\partial R_l(r)}{\partial r} + r \frac{\partial^2 R_l(r)}{\partial r^2}]
     + \frac{R_l(r)}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\qty(\sin\theta\frac{\partial}{\partial\theta}P_l(\cos\theta)) + \kappa^2 R_l(r)P_l(\cos\theta) = 0
   \end{align}
@@ -42,12 +89,12 @@
   \begin{align}
     \frac{1}{\sin\theta}\frac{\r{d}}{\dd{\theta}}\qty[\sin\theta\frac{\r{d}P_l(\cos\theta)}{\dd{\theta}}] + l(l+1)P_l(\cos\theta) = 0
   \end{align}
-  となる．よって，
+  となる．よって，式(\ref{Helmholtz separated})は
   \begin{align}
     \frac{P_l(\cos\theta)}{r}\qty[2\frac{\partial R_l(r)}{\partial r} + r \frac{\partial^2 R_l(r)}{\partial r^2}]
     - l(l+1)\frac{R_l(r)}{r^2}P_l(\cos\theta)  + \kappa^2 R_l(r)P_l(\cos\theta) = 0
   \end{align}
-  を得る．したがって，$R_l(r)$が満たすべき式は
+  と変形される．したがって，$R_l(r)$が満たすべき式は
   \begin{align}
     \qty[\frac{\r{d}^2}{\dd{r}^2} + \frac{2}{r} \dv{}{r} + \kappa^2 - \frac{l(l+1)}{r^2}]R_l(r) = 0
   \end{align}
@@ -61,7 +108,7 @@
     j_l(x) &\to \frac{x^l}{(2l+1)!}\qty(1 - \frac{x^2}{2(2l+3)}\cdots)\\
     n_l(x) &\to -\frac{(2l -1)!!}{x^{l+1}}
   \end{align}
-  平面波$\e^{\i  z} = \e^{\i kr\cos\theta}$は$r=0$で有限の値をもつため，
+  平面波$\e^{\i  z} = \e^{\i kr\cos\theta}$は明らかにHelmholtz方程式を満たす．さらに，$r=0$で有限の値をもつため，
   \begin{align}
     B_l =0
   \end{align} 
@@ -83,12 +130,66 @@
   \end{align}
   である．よって，左辺と右辺を比較することで
   \begin{align}
-    \frac{(\i \kappa r \cos\theta)^l}{l!} &= (2l+1)A_l \frac{(2l)!}{2^l (l!)^2}\frac{(\kappa r \cos\theta)^l}{(2l+1)!!}\\
-    A_l &= \i^l
+    \frac{(\i \kappa r \cos\theta)^l}{l!} = (2l+1)A_l \frac{(2l)!}{2^l (l!)^2}\frac{(\kappa r \cos\theta)^l}{(2l+1)!!}\\
+    A_l = \i^l
   \end{align}
   を得る．したがって，\textbf{Rayleighの公式}
   \begin{align}
     \e^{\i kz} = \e^{\i kr\cos\theta} = \sum_{l=0}^{\infty} (2l+1)\i^l j_l(kr)P_l(\cos\theta)
   \end{align}
-  が成り立つ．
+  が成り立つ．以上で，平面波のLegendre多項式による表現が得られた．同様に，散乱振幅を未定係数$a_l$を用いて
+  \begin{align}
+    f(\theta) = \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta)
+  \end{align}
+  と展開する．これにより球面波は
+  \begin{align}
+    \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
+  \end{align}
+  と展開される．したがって，部分波展開した散乱の波動関数は
+  \begin{align}
+    \psi(\bm{r}) = \e^{\i kr\cos\theta} = \sum_{l=0}^{\infty} (2l+1)\i^l j_l(kr)P_l(\cos\theta) + \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
+  \end{align}
+  である．
+  \begin{itembox}[l]{部分波展開した散乱の波動関数}
+  \begin{equation}
+    \label{PartialWave}
+    \psi(\bm{r}) = \sum_{l=0}^{\infty} (2l+1)\i^l j_l(kr)P_l(\cos\theta) + \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
+  \end{equation}
+  \end{itembox}
+  このとき，散乱断面積は
+  \begin{align}
+    \sigma(\theta) &= \abs{f(\theta)}^2\\
+    &= \sum_{l} \sum_{l'} (2l+1)(2l'+1) a_l^{*}a_{l'} P_l(\cos\theta) P_{l'}(\cos\theta)
+  \end{align}
+  である．全断面積は
+  \begin{align}
+    \sigma^{\r{tot}} &= 2\pi \int \sigma(\theta) \sin\theta \dd{\theta}\\
+    &= 2\pi \sum_{l=0}^{\infty} (2l+1)^2\abs{a_l}^2\qty(\frac{2}{2l+1})\\
+    &= 4\pi \sum_{l=0}^{\infty} (2l+1) \abs{a_l}^2
+  \end{align}
+  である．ここで，Legendre多項式の直交性
+  \begin{align}
+    \int_{0}^{\pi} P_l(\cos\theta)P_{l'}(\cos\theta) \sin\theta \dd{\theta} = \frac{2}{2l+1}\delta_{l,l'}
+  \end{align}
+  を用いた．
+
+  以上の議論から，部分波展開を用いた散乱問題は未定係数$a_l$を求めることに帰着する．
+
+  量子力学における散乱では，散乱の前後で位相が変化する．これを\textbf{位相シフト}とよぶ．例えば，ポテンシャル
+  \begin{align}
+    V(x) = 
+    \begin{dcases}
+      0\ &(x < 0)\\
+      V_0\ &(x \geq 0)
+    \end{dcases}
+  \end{align}
+  に左から入射する粒子を考える．入射粒子のエネルギーは$E<V_0$とする．Schrödinger方程式を解くことにより波動関数は
+  \begin{align}
+    \psi(x) = 
+    \begin{dcases}
+      \e^{\i kx} + \frac{k -\i\alpha}{k + \i\alpha} \e^{-\i kx}\ &(x < 0)\\
+      \frac{2k}{k + \i\alpha}\e^{-\alpha x}\ &(x \geq 0)
+    \end{dcases}
+  \end{align}
+  となる．ただし，$k \equiv \sqrt{\frac{2mE}{\hbar^2}}，\alpha \equiv \sqrt{\frac{2m(V-E)}{\hbar^2}}$とおいた．
 \end{document}
