@@ -99,7 +99,8 @@
 \renewcommand{\t}[1]{\texttt{#1}} % タイプライタフォント
 \newcommand{\kb}{k_{\mathrm{B}}} % ボルツマン定数
 % \renewcommand{\phi}{\varphi} % ϕをφに変更
-\renewcommand{\epsilon}{\varepsilon} 
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\fullref}[1]{\textbf{\ref{#1} \nameref{#1}}}
 \newcommand{\reff}[1]{\textbf{図\ref{#1}}} % 図参照のショートカット
 \newcommand{\reft}[1]{\textbf{表\ref{#1}}} % 表参照のショートカット
 \newcommand{\refe}[1]{\textbf{式\eqref{#1}}} % 式参照のショートカット
@@ -180,7 +181,9 @@
 % \mathtoolsset{showonlyrefs=true} % 必要な式番号のみ表示
 \pagestyle{fancy} % ヘッダー・フッターのスタイル設定
 \chead{応用量子物性講義ノート} % 中央ヘッダー
-\rhead{}
+% \rhead{}
+\fancyhead[R]{\rightmark}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 \cfoot{\thepage} % 中央フッターにページ番号
 \lhead{}
 \rfoot{Yuto Masuda and Haruki Aoki} % 右フッターに名前

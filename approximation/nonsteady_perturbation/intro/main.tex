@@ -5,13 +5,15 @@
   本節では，量子系の時間発展が状態ベクトルの時間変化で描像するSchr\"odinger描像で記述する．
   時間に依存するSchrödinger方程式，
   \begin{align}
-    \i\hbar\dv{t}\ket{\psi(t)} = \hat{H}\ket{\psi(t)}\label{time-dependent-schroinger-eq}
+    \i\hbar\dv{t}\ket{\psi(t)} = \hat{H}\ket{\psi(t)}\label{time-dependent-schrodinger-eq}
   \end{align}
   を考える．なお，$\ket{\psi(t)}$は$\hat{H}^{(0)}$の固有ベクトルを用いて，
   \begin{align}
     \ket{\psi(t)} = \sum_{n}c_n(t)\ket{n}\label{psi-t-expantion}
   \end{align}
-  と展開できたとする．$\hat{H}^{(0)}$の固有ベクトルが完全系を成すので，状態ベクトルが時間変化した空間は$\qty{\ket{n}\mid n = 0, 1, \cdots}$が張る空間の部分空間となることに注意する．
+  と展開できたとする．$\hat{H}^{(0)}$の固有ベクトルが完全系を成すので，
+  状態ベクトルが時間変化した空間は$\qty{\ket{n}\mid n = 0, 1, \cdots}$が張る空間の部分空間となることに注意する．
+  以下の議論では特に断らない限り，$\hat{H}^{(0)}$の固有ベクトルはSchmidtの直交化法などを用いて，正規直交化してあるものとする．
   $\hat{H}$の性質ごとに$\ket{\psi(t)}$の具体的な形を議論する．
   \begin{enumerate}
     \item $\hat{H} = \hat{H}^{(0)}$の場合\footnote{$\hat{H}^{(0)}$は厳密に解けるHamiltonian．}\par
@@ -19,8 +21,8 @@
       \footnote{
         $\Delta t \ll 1$として，
         \begin{align*}
-          \ket{\psi(\Delta t)} = \exp\qty[-\i\frac{\hat{H}\Delta t}{\hbar}]\ket{\psi(0)} \approx\qty(\hat{I} - \i\frac{\hat{H}\Delta t}{\hbar})\ket{\psi(0)} 
-          = \ket{\psi(0)} + \Delta t \left.\qty(\dv{t}\ket{\psi(t)})\right|_0
+          \ket{\psi(\Delta t)} = \exp\qty[-\i\frac{\hat{H}}{\hbar}\Delta t]\ket{\psi(0)} \approx\qty(\hat{I} - \i\frac{\hat{H}}{\hbar}\Delta t)\ket{\psi(0)}
+          = \ket{\psi(0)} + \Delta t \left.\qty(\dv{t}\ket{\psi(t)})\right|_{t = 0}
         \end{align*}
         より微分の形で書けることから，確かに時間発展すると私は解釈する．}
       \footnote{
@@ -33,18 +35,18 @@
       }
       $\exp\qty(-\i\frac{\hat{H}t}{\hbar})$を用いて，
       \begin{align}
-        \ket{\psi(t)} &= \exp\qty[-\i\frac{\hat{H}^{(0)}t}{\hbar}]\ket{\psi(0)} \\
-        &= \sum_{n}c_n(0)\exp\qty[-\i\frac{\hat{H}^{(0)}t}{\hbar}]\ket{n} \\
-        &= \sum_{n}c_n(0)\exp\qty[-\i\frac{E_n}{\hbar}t]\ket{n}
+        \ket{\psi(t)} &= \exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(0)} \\
+        &= \sum_{n}c_n(0)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{n} \\
+        &= \sum_{n}c_n(0)\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{n}
       \end{align}
       のように表すことができる．
       \par
       時間発展演算子を用いることなく計算することもできる．
-      \refe{psi-t-expantion}を\refe{time-dependent-schroinger-eq}に代入すると，$\hat{H}$が時間に依存しないことに注意すれば，
+      \refe{psi-t-expantion}を\refe{time-dependent-schrodinger-eq}に代入すると，$\hat{H}$が時間に依存しないことに注意すれば，
       \begin{align}
         \i\hbar\dv{t}\qty(\sum_{n}c_n(t)\ket{n}) &= \hat{H}\qty(\sum_{n}c_n(t)\ket{n}) \label{naive-solution-to-decide-ct}\\ 
-        \Leftrightarrow \sum_{n}\qty(\i\hbar\dv{c_n(t)}{t}\ket{n}) &= \sum_{n}\qty(c_n(t)E_n\ket{n}) \\ 
-        \Leftrightarrow \forall n\ \i\hbar\dv{c_n(t)}{t}\ket{n} &= c_n(t)E_n\ket{n} \\ 
+        \Leftrightarrow \sum_{n}\qty(\i\hbar\dv{t}c_n(t)\ket{n}) &= \sum_{n}\qty(c_n(t)E_n\ket{n}) \\ 
+        \Leftrightarrow \forall n\ \i\hbar\dv{t}c_n(t)\ket{n} &= c_n(t)E_n\ket{n} \\ 
         \Leftrightarrow \forall n\ c_n(t) &= \exp\qty(-\i\frac{E_n}{\hbar}t)
       \end{align}
       を用いれば，
@@ -55,9 +57,13 @@
     \item $\hat{H} = \hat{H}^{(0)} + \hat{V}(t)$の場合\par
       このときは$\ket{\psi(t)}$を簡単な形で書き下すことが出来ないから，便宜的に，
       \begin{align}
-        \psi(t) = \sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{n}
+        \psi(t) = \sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{n}\label{nonsteady-perturbation-cnt-eq}
       \end{align}
       と展開しておく．なお，$c_n(t)$が定数のときの$\ket{\psi(t)}$との整合性をとるために$\exp\qty(-\i\frac{E_n}{\hbar}t)$をかけてある．
       原理的には$c_n(t)$が求まれば量子系の時間発展の様子がわかる．% 暇になったら時間順序積のことを書く．
   \end{enumerate}
+  \par
+  さて，いずれの場合でも，量子系の性質を調べるには$c_n(t)$の具体的な形がわかればよいことを発見した．
+  本節では，まずSchr\"odinger表示から相互作用表示に書き換え，$c_n(t)$を厳密に知ることが困難であることを知り，$c_n(t)$の近似解を導く．
+  \refe{time-dependent-schrodinger-eq}と\refe{nonsteady-perturbation-cnt-eq}をまとめて，Schr\"odinger表示の非定常摂動基本方程式と呼ぶ．
 \end{document}
