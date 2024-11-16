@@ -5,7 +5,7 @@
   \begin{align}
     \begin{dcases}
       \ket{\psi(t)}_{\r{I}} = \sum_{n}c_n(t)\ket{n} \label{non-steady-quantum-system-re} \\
-      \forall \i\hbar\dv{t}c_m(t) = \sum_{n}V_{mn}(t)\e^{i\omega_{mn}t}c_n(t)
+      \forall \i\ \hbar\dv{t}c_m(t) = \sum_{n}V_{mn}(t)\e^{i\omega_{mn}t}c_n(t)
     \end{dcases}
   \end{align}
   で表されるのであった．
@@ -63,8 +63,10 @@
   まとめると，$\ket{\psi(t_0)}_{\r{I}} = \ket{i}$の時間発展は以下のように書ける．
   \begin{itembox}[l]{$\ket{\psi(t_0)}_{\r{I}} = \ket{i}$の時間発展}
     \begin{align}
-      \ket{\psi(t)}_{\r{I}}& = \qty(1 + c_{i, i}^{(1)}(t))\ket{i} + \sum_{n\neq i}c_{n, i}^{(1)}(t)\ket{n}\\
-      c_{n, i}^{(1)}(t) &= -\frac{\i}{\hbar}\int_{t_0}^{t}V_{n, i}\e^{i\omega_{ni}t}\dd{t}
+      \begin{dcases}
+        \ket{\psi(t)}_{\r{I}}& = \qty(1 + c_{i, i}^{(1)}(t))\ket{i} + \sum_{n\neq i}c_{n, i}^{(1)}(t)\ket{n}\label{interaction-picture-time-development-of-qc} \\
+        c_{n, i}^{(1)}(t) &= -\frac{\i}{\hbar}\int_{t_0}^{t}V_{n, i}\e^{i\omega_{ni}t}\dd{t}
+      \end{dcases}
     \end{align}
   \end{itembox}
   また，始状態$\ket{i}$から終状態$\ket{f}\ (f\neq i)$への遷移確率は，

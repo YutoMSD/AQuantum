@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 11:39
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 11:33
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -58,7 +58,8 @@ var/luatex-cache/generic/names/luaotfload-names.luc.gz)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen139
-) (./head.tex
+)
+(../../../head.tex
 (/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/luatexja.sty
 Package: luatexja 2024-02-19 Japanese Typesetting with Lua(La)TeX
 
@@ -2210,548 +2211,36 @@ nslations-basic-dictionary')
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 3.
 \docmute@nestinglevel=\count595
- (./abstruct/main.tex
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 16.62714pt on input line 5.
+(load cache: extra_lmroman7-regular.luc)(load cache: extra_lmroman5-regular.luc)
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 16.62714pt on input line 5.
-(load cache: extra_lmroman12-regular.luc)
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 5.
+(Font)              scaled to size 6.73553pt on input line 5.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 5.
-(load cache: extra_lmroman8-regular.luc)(load cache: extra_lmroman6-regular.luc)
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 5.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 5.
+(Font)              scaled to size 4.8111pt on input line 5.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 5.
+(Font)              scaled to size 6.73553pt on input line 5.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 5.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 5.
- [1
-
-](load cache: extra_lmroman10-italic.luc)
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 7.
-
-warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
-[1]
+(Font)              scaled to size 4.8111pt on input line 5.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 23.94002pt on input line 9.
+(Font)              scaled to size 6.73553pt on input line 14.
+(load cache: extra_lmroman8-regular.luc)
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 14.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 23.94002pt on input line 9.
-(load cache: extra_lmroman12-bold.luc)
-LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <24.88> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 9.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 23.94002pt on input line 9.
-LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <24.88> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 9.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 23.94002pt on input line 9.
- (./main.toc(load cache: extra_lmroman7-regular.luc)(load cache: extra_lmroman5-
-regular.luc)
+(Font)              scaled to size 7.69775pt on input line 14.
+(load cache: extra_lmroman6-regular.luc)
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 2.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 2.
+(Font)              scaled to size 5.77332pt on input line 14.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 2.
+(Font)              scaled to size 7.69775pt on input line 14.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 2.
-)
-\tf@toc=\write9
-
-\openout9 = main.toc
-)
-warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
-[1
-
-] (./main.toc)
-\tf@toc=\write10
-
-\openout10 = main.toc
- [2
-
-]
-Chapter 1.
+(Font)              scaled to size 5.77332pt on input line 14.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 19.95642pt on input line 7.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 19.95642pt on input line 7.
-LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <20.74> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 7.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 19.95642pt on input line 7.
-LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <20.74> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 7.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 19.95642pt on input line 7.
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 8.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 8.
-LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 8.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 8.
-LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 8.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 8.
-(./approximation/varidational_principle/intro/main.tex
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 8.
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 12.
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 12.
-)
-LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <12> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 10.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 10.
-LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <12> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 10.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 10.
+(Font)              scaled to size 5.77332pt on input line 14.
 
-(./approximation/varidational_principle/basic_rule/main.tex
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 14.
-(load cache: extra_lmsans10-regular.luc)(load cache: extra_lmsans10-bold.luc)
-LaTeX Font Info:    Font shape `JT3/gt/b/n' in size <10> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 14.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 14.
-LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <10> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 14.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 14.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 22.
- [3
 
-](load cache: extra_lmroman7-italic.luc)
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 66.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 66.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 103.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 108.
+LaTeX Warning: Reference `interaction-picture-time-development-of-qc' on page 1
+ undefined on input line 15.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[4]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[5]) (./approximation/varidational_principle/helium/main.tex
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 23.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 25.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 25.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 27.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 27.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 29.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 43.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 45.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 45.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 47.
-(load cache: extra_lmroman8-italic.luc)
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 47.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[6]) (./approximation/varidational_principle/error/main.tex
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 35.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 35.
-)
-(./approximation/varidational_principle/exercise/main.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[7]
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 38.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 40.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[8]
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 73.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 75.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 82.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 84.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 88.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[9]) (./approximation/steady_perturbation/intro/main.tex)
-(./approximation/steady_perturbation/prep/main.tex)
-(./approximation/steady_perturbation/1st_order_perturbation/main.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[10]) (./approximation/steady_perturbation/helium/main.tex
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 31.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 31.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[11]) (./approximation/steady_perturbation/2nd_order_perturbation/main.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[12]) (./approximation/steady_perturbation/stark_effect/main.tex
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 18.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 32.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 32.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[13])
-(./approximation/steady_perturbation/perturbation_with_degeneracy/main.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[14]) (./approximation/steady_perturbation/electron_in_crystal/main.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[15]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[16]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[17]) (./approximation/steady_perturbation/exercise/main.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[18]) (./approximation/nonsteady_perturbation/intro/main.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[19])
-(./approximation/nonsteady_perturbation/interaction_representation/main.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[20]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[21]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[22]) (./approximation/nonsteady_perturbation/rabi_cycle/main.tex
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 24.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 24.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[23]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[24]) (./approximation/nonsteady_perturbation/approximated_solution/main.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[25]) (./approximation/nonsteady_perturbation/constant_perturbation/main.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[26]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[27]) (./approximation/nonsteady_perturbation/harmonic_perturbation/main.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[28]) (./approximation/electron_in_electromagnetic_field/intro/main.tex)
-(./approximation/electron_in_electromagnetic_field/global_gauge_transform/main.
-tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[29])
-(./approximation/electron_in_electromagnetic_field/local_gauge_transform/main.t
-ex(load cache: extra_lmromandemi10-regular.luc)
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[30])
-(./approximation/electron_in_electromagnetic_field/optical_transition/main.tex
-
-LaTeX Warning: Command \~ invalid in math mode on input line 52.
-
-Missing character: There is no ̃ (U+0303) in font cmmi10!
-
-LaTeX Warning: Command \~ invalid in math mode on input line 52.
-
-Missing character: There is no ̃ (U+0303) in font cmmi10!
-
-LaTeX Warning: Command \~ invalid in math mode on input line 54.
-
-Missing character: There is no ̃ (U+0303) in font cmmi10!
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[31]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[32])
-Chapter 2.
-(./scattering/solid_angle/main.tex)
-(./scattering/scattering_cross_section/main.tex
-
-LaTeX Warning: Reference `Zendanmenseki' on page 33 undefined on input line 14.
-
-
-) (./scattering/scattering_CM/main.tex [33
-
-
-])
-(./scattering/scattering_QM/main.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[34]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[35]
-
-LaTeX Warning: Reference `Helmholts equation' on page 36 undefined on input lin
-e 112.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[36]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[37])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[38]
-Chapter 3.
 
 Package caption Warning: Unused \captionsetup[figure] on input line 82.
 See the caption package documentation for explanation.
@@ -2768,7 +2257,15 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[subfigure] on input line 85.
 See the caption package documentation for explanation.
 
-[39
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[1
 
 ] (./main.aux)
  ***********
@@ -2780,64 +2277,44 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0F1B7F612C0BFA73D11107315C89F2BB;4848.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 52328 strings out of 476447
- 382255,2373549 words of node,token memory allocated
- 11363 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 21 glue, 4 kern, 234 sub_mlist, 1 glyph, 4482 attr
-ibute, 79 glue_spec, 419 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:24,2:101410,3:927,4:1255,5:644,6:106,7:8246,8:103,9:4500,10:34
-,11:24
- 72539 multiletter control sequences out of 65536+600000
- 124 fonts using 83611263 bytes
- 115i,23n,118p,1916b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.otf
-></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic.ot
-f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.
-otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
-r.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bold
-.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-regul
-ar.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/Haran
-oAjiGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/
-lm/lmroman12-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/
-lm/lmroman10-italic.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/publi
-c/lm/lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/pu
-blic/lm/lmroman10-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/pu
-blic/lm/lmroman12-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype
-/public/haranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2024/texmf-dist
-/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb></usr/local/texlive/2024/texmf-d
-ist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/local/texlive/2024/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2024/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
-ublic/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
-pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb>
-Output written on main.pdf (41 pages, 613394 bytes).
+ 51194 strings out of 476447
+ 156559,2373549 words of node,token memory allocated
+ 1342 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 3 glue, 4 kern, 3 sub_mlist, 1 glyph, 269 attribut
+e, 77 glue_spec, 36 attribute_list, 2 write, 14 user_defined nodes
+   avail lists: 1:18,2:26740,3:430,4:667,5:657,6:58,7:5431,8:110,9:3145,10:10,11
+:3
+ 72134 multiletter control sequences out of 65536+600000
+ 84 fonts using 46392847 bytes
+ 115i,16n,118p,1925b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.ot
+f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.ot
+f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiG
+othic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lm
+roman7-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/
+lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/
+haranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy7.pfb>
+Output written on main.pdf (1 page, 130465 bytes).
 
-PDF statistics: 1182 PDF objects out of 1200 (max. 8388607)
- 1066 compressed objects within 11 object streams
- 554 named destinations out of 1000 (max. 131072)
- 264 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 113 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 131072)
+ 16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
