@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 12:22
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 13:58
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2222,6 +2222,17 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 4.8111pt on input line 4.
 (load cache: extra_lmromandemi10-regular.luc)
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[1
+
+]
+
 Package caption Warning: Unused \captionsetup[figure] on input line 82.
 See the caption package documentation for explanation.
 
@@ -2245,9 +2256,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[1
-
-] (./main.aux)
+[2] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -2262,34 +2271,34 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of LuaTeX's memory you used:
  51173 strings out of 476447
  156564,2373549 words of node,token memory allocated
- 1662 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 423 attribute, 77 glue_sp
-ec, 50 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:26,2:28257,3:458,4:638,5:603,6:73,7:5554,8:74,9:2853,10:10,11:
+ 1338 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 4 sub_mlist, 1 glyph, 269 attribut
+e, 77 glue_spec, 36 attribute_list, 2 write, 14 user_defined nodes
+   avail lists: 1:24,2:29727,3:440,4:965,5:654,6:61,7:5153,8:42,9:3061,10:10,11:
 3
- 72108 multiletter control sequences out of 65536+600000
+ 72106 multiletter control sequences out of 65536+600000
  64 fonts using 30333127 bytes
- 115i,14n,118p,1925b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.ot
-f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.ot
-f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiG
-othic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lm
+ 115i,17n,118p,1925b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGot
+hic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmro
+man7-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lm
 roman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/ha
 ranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
-amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy7.pfb>
-Output written on main.pdf (1 page, 126488 bytes).
+pe1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/a
+msfonts/cmextra/cmmib7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy7.pfb>
+Output written on main.pdf (2 pages, 133432 bytes).
 
-PDF statistics: 106 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 131072)
+PDF statistics: 108 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

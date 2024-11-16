@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 12:22
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 13:39
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2185,9 +2185,11 @@ No file main.bbl.
 Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
 Package hyperref Info: Link coloring OFF on input line 3.
+(./main.out) (./main.out)
 \@outlinefile=\write8
 
 \openout8 = main.out
+
 
 Package siunitx Warning: Detected the "physics" package:
 (siunitx)                omitting definition of \qty.
@@ -2210,45 +2212,29 @@ or `english'. on input line 3.
 \docmute@nestinglevel=\count595
 (load cache: extra_lmroman7-regular.luc)(load cache: extra_lmroman5-regular.luc)
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 5.
+(Font)              scaled to size 6.73553pt on input line 8.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 5.
+(Font)              scaled to size 4.8111pt on input line 8.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 5.
+(Font)              scaled to size 6.73553pt on input line 8.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 5.
+(Font)              scaled to size 4.8111pt on input line 8.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 26.
+(Font)              scaled to size 6.73553pt on input line 49.
 (load cache: extra_lmroman8-regular.luc)
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 26.
+(Font)              scaled to size 7.69775pt on input line 49.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 26.
+(Font)              scaled to size 7.69775pt on input line 49.
 (load cache: extra_lmroman6-regular.luc)
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 26.
+(Font)              scaled to size 5.77332pt on input line 49.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 26.
+(Font)              scaled to size 7.69775pt on input line 49.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 26.
+(Font)              scaled to size 5.77332pt on input line 49.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 26.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 54.
-(load cache: extra_lmsans10-regular.luc)(load cache: extra_lmsans10-bold.luc)
-LaTeX Font Info:    Font shape `JT3/gt/b/n' in size <10> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 54.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 54.
-LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <10> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 54.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 54.
-(load cache: extra_lmroman7-italic.luc)
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 59.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 59.
+(Font)              scaled to size 5.77332pt on input line 49.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2269,12 +2255,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[2](load cache: extra_lmromandemi10-regular.luc)
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 143.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 143.
-
+[2]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2284,6 +2265,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [3]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[4]
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 9.6222pt on input line 257.
+(load cache: extra_lmsans10-regular.luc)(load cache: extra_lmsans10-bold.luc)
+LaTeX Font Info:    Font shape `JT3/gt/b/n' in size <10> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 257.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 9.6222pt on input line 257.
+LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <10> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 257.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 9.6222pt on input line 257.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[5]
 
 Package caption Warning: Unused \captionsetup[figure] on input line 82.
 See the caption package documentation for explanation.
@@ -2308,65 +2319,53 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[4] (./main.aux)
+[6] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 51309 strings out of 476447
- 195703,2373549 words of node,token memory allocated
- 1395 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 5 glue, 4 kern, 1 glyph, 291 attribute, 77 glue_sp
-ec, 38 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:37,2:44734,3:574,4:1250,5:1053,6:69,7:7440,8:75,9:4303,10:10,1
-1:12
- 72211 multiletter control sequences out of 65536+600000
- 94 fonts using 47493511 bytes
- 115i,16n,118p,1922b,1189s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic.otf
-></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf>
-</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
-f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.
-otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.
-otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAj
-iGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/
-lmroman7-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/l
-m/lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/publi
-c/haranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/font
-s/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/local/texlive/2024/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publi
-c/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy7.pfb>
-Output written on main.pdf (4 pages, 211511 bytes).
+ 51336 strings out of 476447
+ 156564,2373549 words of node,token memory allocated
+ 1508 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 4 glue, 4 kern, 1 glyph, 346 attribute, 77 glue_sp
+ec, 43 attribute_list, 2 write, 14 user_defined nodes
+   avail lists: 1:23,2:36989,3:476,4:1084,5:651,6:66,7:5504,8:94,9:3142,10:11,11
+:16
+ 72203 multiletter control sequences out of 65536+600000
+ 86 fonts using 46656543 bytes
+ 115i,16n,118p,1922b,1191s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf><
+/usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><
+/usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf
+></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.o
+tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-regular
+.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoA
+jiGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm
+/lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public
+/haranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy7.pfb>
+Output written on main.pdf (6 pages, 210662 bytes).
 
-PDF statistics: 222 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
- 60 named destinations out of 1000 (max. 131072)
+PDF statistics: 231 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
+ 85 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

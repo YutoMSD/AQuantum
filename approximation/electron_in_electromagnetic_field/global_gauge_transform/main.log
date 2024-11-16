@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 12:22
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 13:47
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2213,13 +2213,13 @@ or `english'. on input line 3.
 \docmute@nestinglevel=\count595
 (load cache: extra_lmroman7-regular.luc)(load cache: extra_lmroman5-regular.luc)
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 4.
+(Font)              scaled to size 6.73553pt on input line 5.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 4.
+(Font)              scaled to size 4.8111pt on input line 5.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 4.
+(Font)              scaled to size 6.73553pt on input line 5.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 4.
+(Font)              scaled to size 4.8111pt on input line 5.
 
 
 Package caption Warning: Unused \captionsetup[figure] on input line 82.
@@ -2260,29 +2260,33 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51151 strings out of 476447
+ 51150 strings out of 476447
  125244,2373549 words of node,token memory allocated
- 1326 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 269 attribute, 77 glue_sp
-ec, 36 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:12,2:7887,3:146,4:266,5:258,6:33,7:1561,8:31,9:978,10:10,11:3
- 72096 multiletter control sequences out of 65536+600000
+ 1290 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 4 sub_mlist, 1 glyph, 247 attribut
+e, 77 glue_spec, 34 attribute_list, 2 write, 14 user_defined nodes
+   avail lists: 1:10,2:12510,3:188,4:437,5:303,6:33,7:2275,8:27,9:1443,10:10,11:
+3
+ 72094 multiletter control sequences out of 65536+600000
  58 fonts using 29759535 bytes
- 115i,11n,118p,1925b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.o
-tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAji
-Mincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
->
-Output written on main.pdf (1 page, 77412 bytes).
+ 115i,14n,118p,1925b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.ot
+f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-regular
+.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoA
+jiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 
-PDF statistics: 63 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 131072)
+Output written on main.pdf (1 page, 97304 bytes).
+
+PDF statistics: 79 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

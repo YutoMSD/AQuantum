@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 12:21
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 13:39
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2185,9 +2185,11 @@ No file main.bbl.
 Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
 Package hyperref Info: Link coloring OFF on input line 3.
+(./main.out) (./main.out)
 \@outlinefile=\write8
 
 \openout8 = main.out
+
 
 Package siunitx Warning: Detected the "physics" package:
 (siunitx)                omitting definition of \qty.
@@ -2249,29 +2251,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 51136 strings out of 476447
+ 51147 strings out of 476447
  125244,2373549 words of node,token memory allocated
  1283 words of node memory still in use:
    10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 256 attribute, 77 glue_sp
 ec, 34 attribute_list, 2 write, 13 user_defined nodes
    avail lists: 1:10,2:10163,3:146,4:170,5:192,6:30,7:1882,8:42,9:1077,10:10,11:
 3
- 72093 multiletter control sequences out of 65536+600000
+ 72094 multiletter control sequences out of 65536+600000
  58 fonts using 29759535 bytes
  115i,11n,118p,1922b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.o

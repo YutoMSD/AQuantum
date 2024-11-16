@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 12:23
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 13:39
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2212,13 +2212,13 @@ or `english'. on input line 3.
 \docmute@nestinglevel=\count595
 (load cache: extra_lmroman7-regular.luc)(load cache: extra_lmroman5-regular.luc)
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 7.
+(Font)              scaled to size 6.73553pt on input line 4.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 7.
+(Font)              scaled to size 4.8111pt on input line 4.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 7.
+(Font)              scaled to size 6.73553pt on input line 4.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 7.
+(Font)              scaled to size 4.8111pt on input line 4.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2231,9 +2231,55 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
 ]
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 6.73553pt on input line 75.
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 4.8111pt on input line 75.
 
-Package caption Warning: Unused \captionsetup[figure] on input line 82.
-See the caption package documentation for explanation.
+
+LaTeX Warning: Reference `Helmholts equation' on page 2 undefined on input line
+ 112.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[2]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[3]
+
+LaTeX Warning: Reference `Integral' on page 4 undefined on input line 173.
+
+<fig/IntegralGreen.pdf, id=88, 292.2117pt x 245.9589pt>
+File: fig/IntegralGreen.pdf Graphic file (type pdf)
+<use fig/IntegralGreen.pdf>
+Package luatex.def Info: fig/IntegralGreen.pdf  used on input line 191.
+(luatex.def)             Requested size: 250.24199pt x 210.6348pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[4<./fig/IntegralGreen.pdf>]
+
+LaTeX Warning: Reference `keishiki' on page 5 undefined on input line 203.
+
+
+LaTeX Warning: Reference `keishiki' on page 5 undefined on input line 203.
 
 
 Package caption Warning: Unused \captionsetup[table] on input line 83.
@@ -2255,11 +2301,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[2] (./main.aux)
+[5] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2268,30 +2321,38 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51167 strings out of 476447
- 195709,2373549 words of node,token memory allocated
- 1278 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 247 attribute, 77 glue_sp
-ec, 34 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:24,2:38418,3:481,4:1103,5:576,6:69,7:6648,8:35,9:3330,10:10,11
-:15
- 72104 multiletter control sequences out of 65536+600000
+ 51254 strings out of 476447
+ 156564,2373549 words of node,token memory allocated
+ 1326 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 269 attribute, 77 glue_sp
+ec, 36 attribute_list, 2 write, 14 user_defined nodes
+   avail lists: 1:25,2:26027,3:392,4:1025,5:826,6:55,7:4954,8:64,9:3169,10:18,11
+:4
+ 72129 multiletter control sequences out of 65536+600000
  58 fonts using 29759535 bytes
  115i,16n,118p,1922b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGot
 hic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmro
-man10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/hara
-noaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy7.pfb>
-Output written on main.pdf (2 pages, 89729 bytes).
+man10-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmro
+man7-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lm
+roman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/ha
+ranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/ty
+pe1/public/amsfonts/cmextra/cmbsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts
+/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/local/texlive/2024/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
+1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2024/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb>
+Output written on main.pdf (5 pages, 285520 bytes).
 
-PDF statistics: 77 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 131072)
+PDF statistics: 195 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
+ 74 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

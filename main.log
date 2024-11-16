@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 12:30
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 13:41
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2678,7 +2678,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[31]
+[31])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2687,7 +2687,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[32])
+[32]
 Chapter 2.
 (./scattering/solid_angle/main.tex)
 (./scattering/scattering_cross_section/main.tex
@@ -2695,11 +2695,10 @@ Chapter 2.
 LaTeX Warning: Reference `Zendanmenseki' on page 33 undefined on input line 14.
 
 
-) (./scattering/scattering_CM/main.tex [33
-
+) (./scattering/scattering_in_classical_mechanics/main.tex [33
 
 ])
-(./scattering/scattering_QM/main.tex
+(./scattering/scattering_in_qunatum_mechanics/main.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2740,7 +2739,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [37]
-<fig/IntegralGreen.pdf, id=1001, 292.2117pt x 245.9589pt>
+<fig/IntegralGreen.pdf, id=1002, 292.2117pt x 245.9589pt>
 File: fig/IntegralGreen.pdf Graphic file (type pdf)
 <use fig/IntegralGreen.pdf>
 Package luatex.def Info: fig/IntegralGreen.pdf  used on input line 191.
@@ -2754,7 +2753,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[38<./fig/IntegralGreen.pdf>]) (./scattering/Born_approximation/main.tex
+[38<./fig/IntegralGreen.pdf>]) (./scattering/born_approximation/main.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2791,7 +2790,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[41]) (./scattering/Partial_wave_Analysis/main.tex
+[41]) (./scattering/partial_wave_analysis/main.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2856,7 +2855,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [48]
 Chapter 3.
-(./RelativisticQM/Special_Relativity/main.tex [49
+(./relativistic_quantum_mechanics/special_relativity/main.tex [49
 
 ])
 
@@ -2898,12 +2897,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of LuaTeX's memory you used:
  52558 strings out of 476447
  382254,2373549 words of node,token memory allocated
- 12046 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 26 glue, 4 kern, 234 sub_mlist, 1 glyph, 4779 attr
-ibute, 79 glue_spec, 446 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:24,2:101086,3:927,4:1255,5:644,6:114,7:8241,8:96,9:4500,10:34,
+ 11842 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 26 glue, 4 kern, 238 sub_mlist, 1 glyph, 4680 attr
+ibute, 79 glue_spec, 437 attribute_list, 2 write, 14 user_defined nodes
+   avail lists: 1:24,2:101194,3:923,4:1255,5:644,6:114,7:8241,8:96,9:4500,10:34,
 11:24
- 72583 multiletter control sequences out of 65536+600000
+ 72582 multiletter control sequences out of 65536+600000
  124 fonts using 83611263 bytes
  115i,23n,118p,1916b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.otf
@@ -2944,10 +2943,10 @@ sy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6
 b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
 /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on main.pdf (52 pages, 807800 bytes).
+Output written on main.pdf (52 pages, 807845 bytes).
 
-PDF statistics: 1433 PDF objects out of 1440 (max. 8388607)
- 1301 compressed objects within 14 object streams
- 719 named destinations out of 1000 (max. 131072)
+PDF statistics: 1434 PDF objects out of 1440 (max. 8388607)
+ 1302 compressed objects within 14 object streams
+ 720 named destinations out of 1000 (max. 131072)
  288 words of extra memory for PDF output out of 10000 (max. 100000000)
 
