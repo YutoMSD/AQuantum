@@ -156,12 +156,42 @@
     G_0(\bm{r}) &= \frac{1}{(2\pi)^2} \int \frac{\exp(\i k' r \cos \theta)}{\kappa^2 - k'^2}k'^2\sin\theta\dd{\theta}\dd{\phi}\dd{k'}\\
     &= \int \frac{1}{(2\pi)^3}2\pi \int_{0}^{\infty} k'^2 \dd{k'} \int_{0}^{\pi}\sin\theta\dd{\theta}\frac{\exp(\i k' r\cos\theta)}{\kappa^2 - k'^2}\\
     &= \frac{1}{(2\pi)^2} \int_{0}^{\infty} \frac{k'^2\dd{k'}}{\kappa^2 - k'^2}\frac{\e^{\i k'r} - \e^{-\i k'r}}{\i k'r}\\
-    &= \frac{1}{2\pi^2\i r} \int_{0}^{\infty}\dd{k'} \frac{\e^{\i k'r} - \e^{-\i k'r}}{(\kappa - k')(\kappa + k')}\\
-    &= -\frac{1}{8\pi^2\i r} \int_{-\infty}^{\infty} k' \dd{k'} \frac{\e^{\i k'r} - \e^{-\i k'r}}{(k' - \kappa)(k' + \kappa)}\\
-    &= -\frac{1}{8\pi^2\i r} \kappa \qty{2\pi \i \frac{\e^{\i \kappa r} - \e^{-\i \kappa r}}{2 \kappa} + 2\pi \i \frac{\e^{- \i \kappa r} - \e^{\i \kappa r}}{-2 \kappa}}\\
-    &= -\frac{1}{4\pi r}(\e^{\i \kappa r} - \e^{-\i \kappa r})
+    &= \frac{1}{4\pi^2\i r} \int_{0}^{\infty} k' \dd{k'} \frac{\e^{\i k'r} - \e^{-\i k'r}}{(\kappa - k')(\kappa + k')}\\
+    &= \frac{1}{8\pi^2\i r} \int_{0}^{\infty}k' \dd{k'} \frac{\e^{\i k'r} - \e^{-\i k'r}}{(\kappa - k')(\kappa + k')}\\
+    &= \frac{1}{8\pi^2\i r} \int_{0}^{\infty} k' \dd{k'} \qty(\frac{\e^{\i k'r}}{(\kappa - k')(\kappa + k')} - \frac{\e^{-\i k'r}}{(\kappa - k')(\kappa + k')})\\
+    &= \frac{1}{8\pi^2 \i r}\qty(I_1 - I_2)
   \end{align}
-  したがって，Green関数は外向きの球面波と内向きの球面波の重ね合わせになっている．物理的に意味のあるのは外向きの球面波であるため，こちらを採用する．
+  \begin{align}
+    I_1 \equiv \int_{0}^{\infty} \dd{k'} \frac{k' \e^{\i k'r}}{(\kappa - k')(\kappa + k')},\ I_2 \equiv \int_{0}^{\infty} \dd{k'} \frac{k' \e^{-\i k'r}}{(\kappa - k')(\kappa + k')}
+  \end{align}
+  最後の積分を実行するにはCauchyの積分公式を用いる．
+  \begin{itembox}[l]{Cauchyの積分公式}
+    \begin{equation}
+      \oint \frac{f(z)}{(z-z_0)}\dd{z} = 2\pi \i f(z_0)
+    \end{equation}
+  \end{itembox}
+  今回の場合は極は$\kappa$と$-\kappa$である．しかし，極の避け方にはいくつかのパターンがあり，それに応じてGreen関数の計算結果は変化する．今回は図\ref{Integral}のように$-\kappa$を上に避け，$\kappa$を下に避ける．
+  まず$I_1$を計算する．$I_1$は$k'$が虚部が正の値を取るときに小さな値をとる．よって，積分路は上方に閉じる形とする．この時，積分範囲内に極は$\kappa$のみになるため，
+  \begin{align}
+    I_1 = -\i\pi\e^{\i kr}
+  \end{align}
+  となる．$I_2$の積分路は下方に閉じる形とする．この時積分範囲内に含まれる極は$-\kappa$のみである．
+  よって，
+  \begin{align}
+    I_2 = \i\pi\e^{\i kr}
+  \end{align}
+  したがって，Green関数は
+  \begin{align}
+    G_0(r) = -\frac{\e^{\i kr}}{4\pi r}
+  \end{align}
+  となる．これは外に広がる球面波を表す．
+
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{scattering/scattering_QM/IntegralGreen.pdf}
+    \caption{積分経路}
+    \label{Integral}
+  \end{figure}
 
   以上の計算からSchrödinger方程式(\ref{SE_Scattering})の形式解は
   \begin{align}
