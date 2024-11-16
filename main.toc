@@ -7,7 +7,7 @@
 \contentsline {section}{\numberline {1.2}摂動I(定常摂動)}{10}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}準備}{10}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}1次摂動}{11}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}(1次摂動の例題)ヘリウム原子}{11}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.3}(1次摂動の例題)ヘリウム原子}{12}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4}2次摂動}{12}{subsection.1.2.4}%
 \contentsline {subsection}{\numberline {1.2.5}(2次摂動の例題)量子閉じ込めStark効果}{13}{subsection.1.2.5}%
 \contentsline {subsection}{\numberline {1.2.6}縮退がある場合の摂動論}{14}{subsection.1.2.6}%
@@ -30,6 +30,6 @@
 \contentsline {section}{\numberline {2.4}量子力学における散乱}{35}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Born近似}{40}{section.2.5}%
 \contentsline {section}{\numberline {2.6}部分波展開}{43}{section.2.6}%
-\contentsline {chapter}{\numberline {3}相対論的量子論}{50}{chapter.3}%
-\contentsline {section}{\numberline {3.1}特殊相対論}{50}{section.3.1}%
-\contentsline {section}{\numberline {3.2}量子力学の修正}{55}{section.3.2}%
+\contentsline {chapter}{\numberline {3}相対論的量子論}{51}{chapter.3}%
+\contentsline {section}{\numberline {3.1}特殊相対論}{51}{section.3.1}%
+\contentsline {section}{\numberline {3.2}量子力学の修正}{56}{section.3.2}%
