@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.11.6)  15 NOV 2024 21:17
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.11.6)  16 NOV 2024 12:36
  restricted system commands enabled.
 **main
 (./main.tex
@@ -2193,19 +2193,6 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 4.8111pt on input line 7.
 
-! Undefined control sequence.
-<argument> ... {v/c}{\sqrt {1- (v/c)^2}}\\ \cosh \phi = \fra 
-                                                  {1}{\sqrt {1- (v/c)^2}} \e...
-l.91   \end{align}
-                
-? 
-! Undefined control sequence.
-<argument> ... {v/c}{\sqrt {1- (v/c)^2}}\\ \cosh \phi = \fra 
-                                                  {1}{\sqrt {1- (v/c)^2}} \e...
-l.91   \end{align}
-                
-? 
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2218,6 +2205,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
 ]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[2]
 
 Package caption Warning: Unused \captionsetup[figure] on input line 82.
 See the caption package documentation for explanation.
@@ -2244,7 +2241,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[2] (./main.aux)
+[3] (./main.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
@@ -2257,29 +2254,33 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51141 strings out of 475664
- 195709,2373549 words of node,token memory allocated
- 1230 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 225 attribute, 77 glue_sp
-ec, 32 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:20,2:38313,3:484,4:1116,5:566,6:69,7:6569,8:31,9:3313,10:10,11
-:3
- 72852 multiletter control sequences out of 65536+600000
+ 51162 strings out of 475664
+ 195712,2373549 words of node,token memory allocated
+ 1614 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 401 attribute, 77 glue_sp
+ec, 48 attribute_list, 2 write, 14 user_defined nodes
+   avail lists: 1:29,2:38615,3:482,4:1103,5:584,6:69,7:6731,8:52,9:3332,10:13,11
+:21
+ 72854 multiletter control sequences out of 65536+600000
  58 fonts using 29759535 bytes
- 115i,17n,118p,1918b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medi
-um.otf><c:/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.ot
-f><c:/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Re
-gular.otf><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texliv
-e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy7.pfb>
-Output written on main.pdf (2 pages, 88911 bytes).
+ 115i,16n,118p,1918b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texl
+ive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf><c:/texlive/20
+24/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/tex
+live/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/
+2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/
+texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/20
+24/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive
+/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on main.pdf (3 pages, 143555 bytes).
 
-PDF statistics: 77 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 131072)
+PDF statistics: 129 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
+ 34 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

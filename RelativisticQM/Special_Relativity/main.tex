@@ -7,7 +7,7 @@
   \end{itembox}
 
   \begin{itembox}[l]{光速度不変の原理}
-    あらゆる慣性形で進級中の光の速さは同一である．
+    あらゆる慣性形で真空中の光の速さは同一である．
   \end{itembox}
 
   この原理の下で成り立つ座標変換の法則(Lorentz変換)を導く．
@@ -16,7 +16,7 @@
   \begin{align}
     \frac{\sqrt{x^2 + y^2 + z^2}}{t} = \frac{\sqrt{x'^2 + y'^2 + z'^2}}{t'} = c
   \end{align}
-  が成り立つ．上式から\textbf{世界長さ}
+  が成り立つ．上式から\textbf{世界長さ}(spacetime interval)
   \begin{align}
     s^2 = x^2 + y^2 + z^2 - (ct)^2
   \end{align}
@@ -90,8 +90,9 @@
     \end{dcases}
   \end{align}
   であることがわかる．したがって，
-  \begin{itembox}[l]{Lorent変換}
+  \begin{itembox}[l]{Lorentz変換}
     \begin{equation}
+      \label{LorentzTransformation}
       \begin{pmatrix}
         ct' \\ x'
       \end{pmatrix}
@@ -106,5 +107,157 @@
       \end{pmatrix}
     \end{equation}
   \end{itembox}
+  を得る．Lorentz変換
+  \begin{align}
+    x' = \frac{x-vt}{\sqrt{1-(v/c)^2}}
+  \end{align}
+  において$v \ll c$とすると
+  \begin{align}
+    x' = x - vt
+  \end{align}
+  となる．これはGalilei変換と一致している．
+
+  次に，相対論的効果を取り込んだ速度の合成則について示す．状況は，$X$系は静止し，$X'$系が速さ$v$で$x$軸方向に移動しているとする．さらに$X'$系では粒子が速さ$u'$で$x'$軸方向に運動している．
+  $X$系から見た粒子の速度$V$を求める．式(\ref{LorentzTransformation})において$v\to -v$とすると
+  \begin{align}
+    \begin{pmatrix}
+      c\dd{t} \\ \dd{x}
+    \end{pmatrix}
+    =
+    \frac{1}{\sqrt{1 - (v/c)^2}}
+    \begin{pmatrix}
+      1 & v/c\\
+      v/c & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+      c\dd{t'}\\\dd{x'}
+    \end{pmatrix}
+  \end{align}
+  となる．$V=\dv{x}{t}$なので
+  \begin{align}
+    V = \dv{x}{t} &= \frac{v \dd{t'} + \dd{x'}}{\dd{t'} + (v/c^2)\dd{x'}}\\
+    &= \frac{v + \dv{x'}{t'}}{1 + (v/c^2)\dv{x'}{t'}}\\
+    &= \frac{v + u'}{1 + \frac{vu'}{c^2}}
+  \end{align}
   を得る．
+  \begin{itembox}[l]{速度の合成}
+    \begin{equation}
+      V = \frac{v + u'}{1 + \frac{vu'}{c^2}}
+    \end{equation}
+  \end{itembox}
+  例として$u' = v = c$とすると
+  \begin{align}
+    V = \frac{2c}{1+c^2/c^2} = c
+  \end{align}
+  である．速度が合成されても光速を超えることは決してないことがわかる．
+
+  \textbf{Lorentz収縮}について説明する．速さ$v$で運動している$X'$系から，$t'=0$において，静止している$X$系の2点を見る．1点は原点$O:(x,t)=(0,0)$
+  もう1点は$P:(x,t)=(L,t)$とする．まず，原点$O$は$X'$系から見ると
+  \begin{equation}
+    \begin{pmatrix}
+      ct' \\ x'
+    \end{pmatrix}
+    =
+    \frac{1}{\sqrt{1 - (v/c)^2}}
+    \begin{pmatrix}
+      1 & -v/c\\
+      -v/c & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+      0\\0
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      0\\0
+    \end{pmatrix}
+  \end{equation}
+  である．点$P$を$X'$系から見ると，
+  \begin{equation}
+    \begin{pmatrix}
+      ct' \\ x'
+    \end{pmatrix}
+    =
+    \frac{1}{\sqrt{1 - (v/c)^2}}
+    \begin{pmatrix}
+      1 & -v/c\\
+      -v/c & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+      ct\\L
+    \end{pmatrix}
+    =
+    \frac{1}{\sqrt{1 - (v/c)^2}}
+    \begin{pmatrix}
+      ct - \frac{v}{c}L\\-vt + L
+    \end{pmatrix}
+  \end{equation}
+  である．$t'=0$で観測しているため，$t'=0$を代入し
+  \begin{align}
+    0 = ct - \frac{v}{c}L\\
+    t = \frac{v}{c^2}L
+  \end{align}
+  を得る．よって，
+  \begin{align}
+    x' = \frac{1}{\sqrt{1 - (v/c)^2}} \qty(-\qty(\frac{v}{c})^2 L + L) = \sqrt{1-\qty(\frac{v}{c})^2}L
+  \end{align}
+  である．これは動いている慣性系から静止系での距離($L$)を測る($L'$)と縮んで見えることを意味している．
+  \begin{itembox}[l]{Lorentz収縮}
+    \begin{equation}
+      L' = \sqrt{1-\qty(\frac{v}{c})^2}L
+    \end{equation}
+  \end{itembox}
+  また，その対象に対して静止している観測者が測った距離を\textbf{固有長さ}(proper length)という．今回は$L$が固有長さである．
+
+  次に\textbf{時間の遅れ}について説明する．同様の$X$系と$X'$系を考える．時計が$X'$系の原点$x'=0$に置かれており，観測者は$X'$系においてこの時計を見ている．
+  $X'$系に置かれた時計の時刻が$t'$のときの時空点$P_1$，$t'+\Delta T_0$の時空点を$P_2$とする．$P_1$は，
+  \begin{equation}
+    \begin{pmatrix}
+      ct_1 \\ x_1
+    \end{pmatrix}
+    =
+    \frac{1}{\sqrt{1 - (v/c)^2}}
+    \begin{pmatrix}
+      1 & v/c\\
+      v/c & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+      ct'\\0
+    \end{pmatrix}
+    =
+    \frac{1}{\sqrt{1 - (v/c)^2}}
+    \begin{pmatrix}
+      ct'\\vt'
+    \end{pmatrix}
+  \end{equation}
+  $P_2$は，
+  \begin{equation}
+    \begin{pmatrix}
+      ct_1 \\ x_1
+    \end{pmatrix}
+    =
+    \frac{1}{\sqrt{1 - (v/c)^2}}
+    \begin{pmatrix}
+      1 & v/c\\
+      v/c & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+      c(t' + \Delta T_0)\\0
+    \end{pmatrix}
+    =
+    \frac{1}{\sqrt{1 - (v/c)^2}}
+    \begin{pmatrix}
+      c(t' + \Delta T_0)\\v(t' + \Delta T_0)
+    \end{pmatrix}
+  \end{equation}
+  である．よって，$X$系での時間経過$\Delta T = t_2 - t_1$は，
+  \begin{align}
+    \Delta T = t_2 - t_1 = \frac{1}{\sqrt{1 - (v/c)^2}} \Delta T_0
+  \end{align}
+  である．これは$X'$系は$X$系に比べて時間の流れが遅いことを示している．
+  \begin{itembox}[l]{時間の遅れ}
+    \begin{equation}
+      \Delta T = \frac{1}{\sqrt{1 - (v/c)^2}} \Delta \tau
+    \end{equation}
+  \end{itembox}
+  観測者に対して2つの事象が同一の空間座標で起きたとき，その時間間隔$\Delta \tau$を\textbf{固有時間}(proper time)という．
 \end{document}
