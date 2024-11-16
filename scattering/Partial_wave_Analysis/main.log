@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.11.6)  15 NOV 2024 18:06
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.11.6)  16 NOV 2024 19:16
  restricted system commands enabled.
 **main
 (./main.tex
@@ -2263,14 +2263,6 @@ LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <10> not available
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 9.6222pt on input line 257.
 
-! Undefined control sequence.
-<recently read> \ka 
-    
-l.266     とする．低エネルギー散乱($\ka
-                                                  \ll 1$)とする．このと..
-.
-? 
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2281,6 +2273,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [5]
+
+LaTeX Warning: Reference `LimitOfBessel' on page 6 undefined on input line 342.
+
+
+
+LaTeX Warning: Reference `phaseshift' on page 6 undefined on input line 342.
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[6]
 
 Package caption Warning: Unused \captionsetup[figure] on input line 82.
 See the caption package documentation for explanation.
@@ -2307,11 +2317,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[6] (./main.aux)
+[7] (./main.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2320,16 +2337,16 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51313 strings out of 475664
- 156562,2373549 words of node,token memory allocated
- 1508 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 4 glue, 4 kern, 1 glyph, 346 attribute, 77 glue_sp
-ec, 43 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:26,2:36845,3:479,4:1084,5:651,6:66,7:5504,8:94,9:3139,10:11,11
+ 51344 strings out of 475664
+ 195704,2373549 words of node,token memory allocated
+ 1580 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 4 glue, 4 kern, 1 glyph, 379 attribute, 77 glue_sp
+ec, 46 attribute_list, 2 write, 14 user_defined nodes
+   avail lists: 1:26,2:41589,3:573,4:1084,5:653,6:66,7:5504,8:94,9:3139,10:11,11
 :16
- 72954 multiletter control sequences out of 65536+600000
+ 72962 multiletter control sequences out of 65536+600000
  86 fonts using 46656543 bytes
- 115i,16n,118p,1918b,1211s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,16n,118p,1918b,1217s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf><c:/texli
 ve/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2024/
 texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf><c:/texlive/2024/texmf-
@@ -2348,10 +2365,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy7.pfb>
-Output written on main.pdf (6 pages, 210662 bytes).
+Output written on main.pdf (7 pages, 222404 bytes).
 
-PDF statistics: 231 PDF objects out of 1000 (max. 8388607)
- 186 compressed objects within 2 object streams
- 85 named destinations out of 1000 (max. 131072)
+PDF statistics: 259 PDF objects out of 1000 (max. 8388607)
+ 212 compressed objects within 3 object streams
+ 108 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
