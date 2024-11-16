@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  12 NOV 2024 20:58
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 13:40
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2304,14 +2304,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51261 strings out of 476447
+ 51262 strings out of 476447
  305782,2373549 words of node,token memory allocated
  1557 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 5 sub_mlist, 1 glyph, 368 attribut
 e, 77 glue_spec, 45 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:50,2:79182,3:966,4:1267,5:725,6:93,7:8269,8:64,9:4732,10:10,11
+   avail lists: 1:50,2:79194,3:966,4:1267,5:725,6:93,7:8269,8:64,9:4735,10:10,11
 :11
- 72174 multiletter control sequences out of 65536+600000
+ 72175 multiletter control sequences out of 65536+600000
  60 fonts using 30023231 bytes
  115i,23n,118p,1925b,1203s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf>

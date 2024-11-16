@@ -1,80 +1,84 @@
 \documentclass{report}
 \input{../../../head.tex}
 \begin{document}
-  電磁場中のHamiltonianは
-  \begin{equation}
-    H=\frac{1}{2m}\qty(\bm{p} + e\bm{A})^2 - e\phi
-  \end{equation}
-  である．今回は$\phi=0$とする．電磁場が十分弱いとし，
+  \refe{hamiltonian-in-electro-magnetic-field-cm}より，電磁場中のハミルトニアンは，
   \begin{align}
-    \hat{H} &= \frac{1}{2m}\qty(\bm{p}+e\bm{A})^2\\
-    &\simeq \frac{1}{2m}\qty(\bm{p}^2+e\bm{p}\cdot\bm{A} + e\bm{A} \cdot \bm{p})\\
+    H = \frac{1}{2m}\qty(\bm{p} + e\bm{A})^2 - e\phi\label{hamiltonian-in-electro-magnetic-field-cm-re}
   \end{align}
-  と近似する．ここで，$\hat{H}^0 \equiv \frac{\bm{p}^2}{2m}$，摂動項$\hat{V}(t) \equiv \frac{e}{2m} \qty(\bm{p}\cdot\bm{A} + \bm{A} \cdot \bm{p})$
-  とする．さらに，$\nabla\cdot\bm{A}=0$となるように$\bm{A}$を決める\footnote{Coulomb Gauge}．すると，
+  と書けるのであった．
+  今回は$\phi = 0$とする．
+  電磁場が十分弱いという条件のもと，\refe{hamiltonian-in-electro-magnetic-field-cm-re}を量子化すると，
   \begin{align}
-    \qty(\bm{p} \cdot \bm{A})\psi &= -\i\hbar \nabla \cdot \qty(\bm{A} \psi)\\
-    &= \i\hbar\qty[\qty(\nabla \cdot \bm{A}) \psi + \bm{A} \cdot \qty(\nabla \psi)]\\
+    \hat{H} &= \frac{1}{2m}\qty(\hat{\bm{p}} + e\hat{\bm{A}})^2 \\
+    &\simeq \frac{1}{2m}\qty(\hat{\bm{p}}^2 + e\hat{\bm{p}}\cdot\hat{\bm{A}} + e\hat{\bm{A}} \cdot \hat{\bm{p}})\\
+  \end{align}
+  と近似する．ここで，$\hat{H}^{(0)} \coloneqq \frac{\bm{p}^2}{2m}$，摂動項$\hat{V}(t) \coloneqq \frac{e}{2m} \qty(\bm{p}\cdot\bm{A} + \bm{A} \cdot \bm{p})$
+  とする．さらに，$\div\bm{A} = 0$となるように$\bm{A}$を決める\footnote{Coulomb Gauge}．すると，
+  \begin{align}
+    \qty(\bm{p} \cdot \bm{A})\psi &= -\i\hbar \div\qty(\bm{A} \psi)\\
+    &= \i\hbar\qty[\qty(\div\bm{A}) \psi + \bm{A} \cdot \qty(\grad \psi)]\\
     &= \qty(\bm{A} \cdot \bm{p}) \psi
   \end{align}
-  となる．よって，電子と電磁場の相互作用を摂動として加えたHamiltonian，
-  \begin{equation}
-    \hat{H} = \hat{H}^0 + \frac{e}{m}\qty(\bm{A} \cdot \bm{p})
-  \end{equation}
+  となる．よって，電子と電磁場の相互作用を摂動として加えたハミルトニアン，
+  \begin{align}
+    \hat{H} = \hat{H}^{(0)} + \frac{e}{m}\qty(\bm{A} \cdot \bm{p})
+  \end{align}
   を得る．
   \begin{myex}{直線偏光}{}
-    \begin{equation}
+    ベクトルポテンシャル$\hat{A}$が，
+    \begin{align}
       \bm{A}(\bm{r},t) = 2A_0 \bm{e}_x \cos(\bm{k} \cdot \bm{r} - \omega t)
-    \end{equation}
-    を加える．ただし，$\bm{k} = \frac{\omega}{c}\bm{e}_z$とする．
+    \end{align}
+    であるときを考える．
+    ただし，$\bm{k} = \frac{\omega}{c}\bm{e}_z$とする．
     ベクトルポテンシャルと電磁場の関係より，
-    \begin{equation}
+    \begin{align}
       \begin{cases}
-      \bm{E}(\bm{r},t) = \frac{\partial \bm{A}}{\partial t} = E_0 \bm{e}_x \sin(\bm{k} \cdot \bm{r} - \omega t)\\
-      \bm{B}(\bm{r},t) = \nabla \times \bm{A} = \frac{E_0}{c}\bm{e}_y \sin(\bm{k} \cdot \bm{r} - \omega t)\\
+      \bm{E}(\bm{r}, t) = \pdv{\hat{\bm{A}}}{t} = E_0 \bm{e}_x \sin(\bm{k} \cdot \bm{r} - \omega t)\\
+      \bm{B}(\bm{r}, t) = \curl\bm{A} = \frac{E_0}{c}\bm{e}_y \sin(\bm{k} \cdot \bm{r} - \omega t)\\
       E_0 = -2 \omega A_0
       \end{cases}
-    \end{equation}
+    \end{align}
     が成り立っている．摂動項は，
     \begin{align}
-      \hat{V}(t) &= \frac{e}{m}(\bm{A}\cdot\bm{p}) \\
-      &= \frac{2eA_0}{m}\cos(\bm{k} \cdot \bm{r} - \omega t)\bm{e}_x\cdot\bm{p}\\
-      &= \frac{eA_0}{m}\qty[\e^{\i(\bm{k}\cdot\bm{r}-\omega t)} + \e^{-\i(\bm{k}\cdot\bm{r}-\omega t)}]p_x\\
-      &= \frac{eA_0}{m}\qty(\e^{\i\bm{k}\cdot\bm{r}}p_x\e^{-\i\omega t} + \e^{-\i \bm{k} \cdot \bm{r}}p_x \e^{\i \omega t})
+      \hat{V}(t) &= \frac{e}{m}(\hat{\bm{A}}\cdot\hat{\bm{p}}) \\
+      &= \frac{2eA_0}{m}\cos(\bm{k} \cdot \bm{r} - \omega t)\bm{e}_x\cdot\hat{\bm{p}} \\
+      &= \frac{eA_0}{m}\qty[\e^{\i(\bm{k}\cdot\bm{r} - \omega t)} + \e^{-\i(\bm{k}\cdot\bm{r} - \omega t)}]\hat{p}_x\\
+      &= \frac{eA_0}{m}\qty(\e^{\i\bm{k}\cdot\bm{r}}\hat{p}_x\e^{-\i\omega t} + \e^{-\i \bm{k}\cdot\bm{r}}\hat{p}_x \e^{\i \omega t})
     \end{align}
-    と表せる．光の吸収を考えるときは,，第1項$\frac{eA_0}{m}\e^{\i\bm{k}\cdot\bm{r}}p_x$が支配的なのでこの項を$\hat{V}$とする．
+    と表せる．光の吸収を考えるときは，第1項$\frac{eA_0}{m}\e^{\i\bm{k}\cdot\bm{r}}\hat{p}_x$が支配的なのでこの項を$\hat{V}$とする．
     単位時間当たりの遷移確率を計算する．
     \begin{align}
-      \omega_{i\to f} &= \frac{2\pi}{\hbar} \qty|\bra{f}\hat{V}\ket{i}|^2\delta(E_f - E_i - \hbar \omega)\\
-      &= \frac{2 \pi}{\hbar}\qty(\frac{e A_0}{m})^2 \qty|\bra{f} \e^{\i\bm{k} \cdot p_x \ket{i}}|^2 \delta(E_f - E_i - \hbar \omega)
+      \omega_{i\to f} &= \frac{2\pi}{\hbar} \abs{\mel**{f}{\hat{V}}{i}}^2\delta(E_f - E_i - \hbar \omega) \\
+      &= \frac{2 \pi}{\hbar}\qty(\frac{e A_0}{m})^2 \abs{\mel**{f}{\e^{\i\bm{k}\cdot \bm{r}}\hat{p}_x}{i}}^2 \delta(E_f - E_i - \hbar \omega)
     \end{align}
-    と表せるので$\qty|\bra{f} \e^{\i\bm{k} \cdot p_x \ket{i}}|^2$を\textbf{電気双極子近似}を用いて計算する．
-    原子の準位間隔は$E_f - E_i \~ 1$ eVである．これと相互作用する電磁場のエネルギーは$\hbar \omega \~ 1$ eVである．これを波長に換算すると，
-    \begin{equation}
-      \lambda = \frac{2\pi}{\hbar} = \frac{2\pi c}{\omega} \~ 1000\ \rm{nm}
-    \end{equation}
-    である．これは原子のスケール1 Åよりもはるかに大きいため，電子・原子を扱う上では電磁場は空間的に一様だとみなせる．よって，
-    \begin{equation}
+    と表せるので$\abs{\mel**{f}{\e^{\i\bm{k}\cdot\bm{r}}\hat{p}_x}{i}}^2$を\textbf{電気双極子近似}を用いて計算する．
+    原子の準位間隔は$E_f - E_i \sim 1\ \r{eV}$である．これと相互作用する電磁場のエネルギーは$\hbar \omega\sim 1\ \r{eV}$ である．これを波長に換算すると，
+    \begin{align}
+      \lambda = \frac{2\pi}{\hbar} = \frac{2\pi c}{\omega} \sim 1000\ \r{nm}
+    \end{align}
+    である．これは原子のスケール$1\ \si{\angstrom}$よりもはるかに大きいため，電子・原子を扱う上では電磁場は空間的に一様だとみなせる．よって，
+    \begin{align}
       \e^{\i\bm{k}\cdot\bm{r}}\simeq 1 + \i \bm{k} \cdot \bm{r} + \cdots \simeq 1
-    \end{equation}
+    \end{align}
     と近似できる．これを電気双極子近似という．この近似を用いると，
-    \begin{equation}
-      \bra{f} \e^{\i \bm{k} \cdot \bm{r}} \ket{i} \simeq \bra{f} p_x \ket{i}
-    \end{equation}
+    \begin{align}
+      \mel**{f}{\e^{\i \bm{k} \cdot \bm{r}}}{{i}} \simeq \mel**{f}{p_x}{i}
+    \end{align}
     を得る．さらに
-    \begin{equation}
-      [x,\hat{H}^0] = \frac{\i \hbar}{m} p_x
-    \end{equation}
+    \begin{align}
+      \qty[\hat{x}, \hat{H}^{(0)}] = \frac{\i \hbar}{m}\hat{p}_x
+    \end{align}
     であるため
     \begin{align}
-      \bra{f} p_x \ket{i} &= \frac{m}{\i\hbar} \bra{f} [x,\hat{H}^0] \ket{i}\\
-      &= \frac{m}{\i\hbar} \qty(\bra{f}xE_i\ket{i} - \bra{f} E_f x \ket{i})\\
-      &= \frac{m}{\i\hbar} (E_i - E_f)\bra{f}x\ket{i}
+      \mel**{f}{\hat{p}_x}{i} &= \frac{m}{\i\hbar} \mel**{f}{\qty[\hat{x}, \hat{H}^{(0)}]}{i} \\ 
+      &= \frac{m}{\i\hbar} \qty(\mel**{f}{\hat{x}E_i}{i} - \mel**{f}{E_f\hat{x}}{i}) \\ 
+      &= \frac{m}{\i\hbar} (E_i - E_f)\mel**{f}{x}{i}
     \end{align}
     を得る．よって，電磁場による単位時間当たりの遷移確率
-    \begin{equation}
-     \omega_{i \to f} = \frac{2 \pi}{\hbar^3} (eA_0)^2 (E_i - E_f)^2 |\bra{f} x \ket{i}|^2 \delta(E_f - E_i - \hbar\omega) 
-    \end{equation}
-    を得る．これは$\bra{f} x \ket{i} \ne 0$のときのみ$\omega_{i\to f} \ne 0$という選択則を表している．
+    \begin{align}
+      \omega_{i \to f} = \frac{2\pi}{\hbar^3} (eA_0)^2 (E_i - E_f)^2 \abs{\mel**{f}{\hat{x}}{i}}^2 \delta(E_f - E_i - \hbar\omega) 
+    \end{align}
+    を得る．これは$\mel**{f}{x}{i} \neq 0$のときのみ$\omega_{i\to f} \neq 0$という選択則を表している．
   \end{myex}
 \end{document}

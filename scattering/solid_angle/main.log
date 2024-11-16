@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  12 NOV 2024 01:52
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 13:39
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2002,10 +2002,9 @@ Package: lltjp-array 2019-07-18 Patch to array for LuaTeX-ja
 \@quotereset=\count587
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 3.
-
-No file main.aux.
-
+ (./main.aux)
 \openout1 = main.aux
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
@@ -2017,7 +2016,7 @@ LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
 LaTeX Font Info:    Trying loading font information for TS1+cmr on input line 3
 .
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 3.
@@ -2186,9 +2185,11 @@ No file main.bbl.
 Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
 Package hyperref Info: Link coloring OFF on input line 3.
+(./main.out) (./main.out)
 \@outlinefile=\write8
 
 \openout8 = main.out
+
 
 Package siunitx Warning: Detected the "physics" package:
 (siunitx)                omitting definition of \qty.
@@ -2250,37 +2251,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 51130 strings out of 476447
+ 51147 strings out of 476447
  125244,2373549 words of node,token memory allocated
- 1331 words of node memory still in use:
-   10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 278 attribute, 77 glue_sp
-ec, 36 attribute_list, 2 write, 13 user_defined nodes
-   avail lists: 1:10,2:12610,3:173,4:185,5:231,6:33,7:2338,8:42,9:1299,10:10,11:
+ 1283 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 256 attribute, 77 glue_sp
+ec, 34 attribute_list, 2 write, 13 user_defined nodes
+   avail lists: 1:10,2:10163,3:146,4:170,5:192,6:30,7:1882,8:42,9:1077,10:10,11:
 3
- 72091 multiletter control sequences out of 65536+600000
+ 72094 multiletter control sequences out of 65536+600000
  58 fonts using 29759535 bytes
  115i,11n,118p,1922b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.o
@@ -2289,12 +2275,11 @@ Gothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/hara
 noaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (1 page, 65910 bytes).
+lic/amsfonts/cm/cmr7.pfb>
+Output written on main.pdf (1 page, 54244 bytes).
 
-PDF statistics: 57 PDF objects out of 1000 (max. 8388607)
- 40 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 131072)
+PDF statistics: 52 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

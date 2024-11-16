@@ -1,20 +1,23 @@
 \documentclass{report}
 \input{../../../head.tex}
 \begin{document}
-  電磁場中の電子の運動方程式は
-  \begin{equation}
-    m\frac{d\bm{v}}{dt}=-e\qty(\bm{E}+\bm{v}\times\bm{B})
-  \end{equation}
-  である．電磁場中の電子のHamiltonianは
-  \begin{itembox}[l]{電磁場中の電子のHamiltonian}
-    \begin{equation}
-      H=\frac{1}{2m}\qty(\bm{p}+e\bm{A})^2-e\phi
-    \end{equation}
+  以下ではまず，古典の電磁気学を考えよう．
+  電磁場中の電子の運動方程式は，
+  \begin{align}
+    m\dv{\bm{v}}{t} = -e\qty(\bm{E} + \bm{v}\times\bm{B})
+  \end{align}
+  と書けるのであった．
+  電磁場中の電子のハミルトニアンは，
+  \begin{itembox}[l]{電磁場中の電子のハミルトニアン}
+    \begin{align}
+      H = \frac{1}{2m}\qty(\bm{p} + e\bm{A})^2 - e\phi\label{hamiltonian-in-electro-magnetic-field-cm}
+    \end{align}
   \end{itembox}
-  である．ここで$\bm{A}$はベクトルポテンシャルで
-  \begin{equation}
-    \bm{E}=-\frac{\partial \bm{A}}{\partial t}-\nabla\phi,\ \bm{B}=\nabla\times\bm{A}
-  \end{equation}
-  を満たす．\\
+  である．ただし$\bm{A}$はベクトルポテンシャルで，
+  \begin{align}
+    \bm{E} &= -\pdv{\bm{A}}{t} - \grad\phi \\ 
+    \bm{B} &= \curl\bm{A}
+  \end{align}
+  を満たす．
   本節では$U(1)$\footnote{Unitary}Gauge対称性を扱い説明し電磁場の起源を探る．
 \end{document}
