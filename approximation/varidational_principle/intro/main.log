@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 13:40
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 18:50
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2281,30 +2281,29 @@ Here is how much of LuaTeX's memory you used:
  1213 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 3 glue, 4 kern, 1 glyph, 214 attribute, 77 glue_sp
 ec, 31 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:9,2:12935,3:152,4:243,5:108,6:29,7:2143,8:13,9:1089,10:14,11:2
-7
+   avail lists: 1:10,2:13103,3:152,4:243,5:108,6:29,7:2144,8:13,9:1130,10:15,11:
+15
  72128 multiletter control sequences out of 65536+600000
  84 fonts using 46392847 bytes
  115i,11n,118p,1925b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
-f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.
-otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAj
-iGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/
-lmroman7-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/l
-m/lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/publi
-c/haranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb>
-Output written on main.pdf (1 page, 93876 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.ot
+f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiG
+othic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lm
+roman7-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/
+lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/
+haranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb>
+Output written on main.pdf (1 page, 92424 bytes).
 
-PDF statistics: 95 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+PDF statistics: 88 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  4 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

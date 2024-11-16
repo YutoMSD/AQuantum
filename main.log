@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 18:47
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 18:51
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2249,7 +2249,17 @@ LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <24.88> not available
 (Font)              Font shape `JY3/gt/m/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 23.94002pt on input line 9.
- (./main.toc)
+ (./main.toc(load cache: extra_lmroman7-regular.luc)(load cache: extra_lmroman5-
+regular.luc)
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 6.73553pt on input line 2.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 4.8111pt on input line 2.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 6.73553pt on input line 2.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 4.8111pt on input line 2.
+)
 \tf@toc=\write9
 
 \openout9 = main.toc
@@ -2289,16 +2299,7 @@ LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <14.4> not available
 (Font)              Font shape `JY3/gt/m/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 13.85594pt on input line 8.
-(./approximation/varidational_principle/intro/main.tex(load cache: extra_lmroman
-7-regular.luc)(load cache: extra_lmroman5-regular.luc)
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 4.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 4.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 4.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 4.
+(./approximation/varidational_principle/intro/main.tex
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
 (Font)              scaled to size 6.73553pt on input line 8.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
@@ -2745,7 +2746,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [38]
-<fig/IntegralGreen.pdf, id=982, 292.2117pt x 245.9589pt>
+<fig/IntegralGreen.pdf, id=1022, 292.2117pt x 245.9589pt>
 File: fig/IntegralGreen.pdf Graphic file (type pdf)
 <use fig/IntegralGreen.pdf>
 Package luatex.def Info: fig/IntegralGreen.pdf  used on input line 191.
@@ -2929,31 +2930,22 @@ L3 programming layer <2024-02-20>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 2542BE0E08DD9E020D34C5DFEA5FF521;5198
-(rerunfilecheck)             After:  0B14C3D433C6438A8EDB79E6A2980D2F;5332.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 0B14C3D433C6438A8EDB79E6A2980D2F;5332.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 52651 strings out of 476447
- 382264,2373549 words of node,token memory allocated
+ 52652 strings out of 476447
+ 382265,2373549 words of node,token memory allocated
  12070 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 26 glue, 4 kern, 258 sub_mlist, 1 glyph, 4757 attr
 ibute, 79 glue_spec, 444 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:21,2:101110,3:903,4:1255,5:644,6:89,7:8241,8:96,9:4500,10:34,1
-1:21
- 72594 multiletter control sequences out of 65536+600000
+   avail lists: 1:21,2:101110,3:903,4:1255,5:644,6:118,7:8241,8:96,9:4500,10:34,
+11:21
+ 72595 multiletter control sequences out of 65536+600000
  124 fonts using 83611263 bytes
  115i,23n,118p,1916b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.otf
@@ -2993,10 +2985,10 @@ sy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
 .pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
 .pfb>
-Output written on main.pdf (57 pages, 834818 bytes).
+Output written on main.pdf (57 pages, 838968 bytes).
 
-PDF statistics: 1497 PDF objects out of 1728 (max. 8388607)
- 1361 compressed objects within 14 object streams
+PDF statistics: 1536 PDF objects out of 1728 (max. 8388607)
+ 1400 compressed objects within 14 object streams
  795 named destinations out of 1000 (max. 131072)
- 288 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 296 words of extra memory for PDF output out of 10000 (max. 100000000)
 

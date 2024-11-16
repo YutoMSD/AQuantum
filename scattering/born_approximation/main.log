@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 13:39
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 18:49
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2002,10 +2002,9 @@ Package: lltjp-array 2019-07-18 Patch to array for LuaTeX-ja
 \@quotereset=\count587
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 3.
-
-No file main.aux.
-
+ (./main.aux)
 \openout1 = main.aux
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
@@ -2017,7 +2016,7 @@ LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
 LaTeX Font Info:    Trying loading font information for TS1+cmr on input line 3
 .
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 3.
@@ -2186,9 +2185,11 @@ No file main.bbl.
 Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
 Package hyperref Info: Link coloring OFF on input line 3.
+(./main.out) (./main.out)
 \@outlinefile=\write8
 
 \openout8 = main.out
+
 
 Package siunitx Warning: Detected the "physics" package:
 (siunitx)                omitting definition of \qty.
@@ -2218,13 +2219,6 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 6.73553pt on input line 5.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 4.8111pt on input line 5.
-
-
-LaTeX Warning: Reference `WFofSC' on page 1 undefined on input line 9.
-
-
-LaTeX Warning: Reference `simpleWFofSC' on page 1 undefined on input line 14.
-
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
 (Font)              scaled to size 6.73553pt on input line 26.
 (load cache: extra_lmroman8-regular.luc)
@@ -2258,6 +2252,7 @@ LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 (Font)              No change on input line 59.
 
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2269,9 +2264,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 
-LaTeX Warning: Reference `SCamp1st' on page 2 undefined on input line 80.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2279,19 +2271,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[2]
-
-LaTeX Warning: Reference `BornWF' on page 3 undefined on input line 116.
-
-(load cache: extra_lmromandemi10-regular.luc)
-
-LaTeX Warning: Reference `BornCondition' on page 3 undefined on input line 137.
-
-
+[2](load cache: extra_lmromandemi10-regular.luc)
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 (Font)              No change on input line 143.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 (Font)              No change on input line 143.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2330,49 +2315,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 51303 strings out of 476447
+ 51320 strings out of 476447
  195703,2373549 words of node,token memory allocated
  1395 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 5 glue, 4 kern, 1 glyph, 291 attribute, 77 glue_sp
 ec, 38 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:39,2:44620,3:568,4:1256,5:1053,6:67,7:7422,8:73,9:4303,10:10,1
+   avail lists: 1:37,2:44734,3:574,4:1250,5:1053,6:69,7:7440,8:75,9:4303,10:10,1
 1:12
- 72210 multiletter control sequences out of 65536+600000
+ 72212 multiletter control sequences out of 65536+600000
  94 fonts using 47493511 bytes
  115i,16n,118p,1922b,1189s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic.otf
 ></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf>
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
 f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.
+otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.
 otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAj
 iGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/
-lmroman10-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/
 lmroman7-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/l
 m/lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/publi
 c/haranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/font
@@ -2391,10 +2358,10 @@ sfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy7.pfb>
-Output written on main.pdf (4 pages, 211549 bytes).
+Output written on main.pdf (4 pages, 211511 bytes).
 
-PDF statistics: 217 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
+PDF statistics: 222 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
  60 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

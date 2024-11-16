@@ -12,10 +12,11 @@
   近似法である．
   ここでは，変分法の基本原理を説明する．
   \begin{myprop}{変分法の基本原理}{principle_of_varidation}
-    任意の状態ベクトル$\ket{\psi}$に対して$\ket{\psi}$でのエネルギー関数$E(\psi)$について，\refe{minimum}なる不等式が成り立つ．
+    任意の状態ベクトル$\ket{\psi}$に対して$\ket{\psi}$でのエネルギー関数$E(\psi)$について，
     \begin{align}
       E(\psi) = \cfrac{\mel{\psi}{\hat{H}}{\psi}}{\braket{\psi}} \geq E_0 \label{minimum}
     \end{align}
+    なる不等式が成り立つ．
     ただし$E_0$は$\hat{H}$の固有エネルギーの中で最低のものである．
     \tcblower
     \begin{proof}
@@ -77,8 +78,8 @@
     とすると，
     \begin{align}
       E(\alpha) &= \cfrac{\displaystyle\int_{-\infty}^{\infty} \psi^{*}\hat{H}\psi \dd{x}}{\displaystyle\int_{-\infty}^{\infty} \psi^{*}\psi \dd{x}} \\ 
-      &= \frac{\displaystyle -\cfrac{\hbar^2\alpha^2}{2m}\int_{-\infty}^{\infty}x^2\e^{-\alpha x^2} \dd{x} + \lambda\int_{-\infty}^{\infty}x^4\e^{-\alpha x^2}\dd{x}}{\displaystyle\int_{-\infty}^{\infty}\e^{-\alpha x^2}\dd{x}} \\
-      &= \frac{-\cfrac{\hbar^2\alpha^2}{2m}I_1 + \lambda I_2}{I_0}\label{E1}
+      &= \frac{\displaystyle \cfrac{\hbar^2}{2m}\alpha\int_{-\infty}^{\infty}\e^{-\alpha x^2}\dd{x} -\cfrac{\hbar^2\alpha^2}{2m}\int_{-\infty}^{\infty}x^2\e^{-\alpha x^2} \dd{x} + \lambda\int_{-\infty}^{\infty}x^4\e^{-\alpha x^2}\dd{x}}{\displaystyle\int_{-\infty}^{\infty}\e^{-\alpha x^2}\dd{x}} \\
+      &= \frac{\cfrac{\hbar^2}{2m}\alpha I_0 - \cfrac{\hbar^2\alpha^2}{2m}I_1 + \lambda I_2}{I_0}\label{E1}
     \end{align}
     である．$I_1$は，
     \begin{align}
@@ -96,8 +97,8 @@
     \end{align}
     であるから，\refe{E1}は，
     \begin{align}
-      E(\alpha) &= \frac{-\cfrac{\hbar^2\alpha^2}{2m}\cfrac{1}{2\alpha}I_0 + \lambda\cfrac{3}{4\alpha} I_0}{I_0} \\ 
-      &= -\frac{\hbar^2\alpha}{4m} + \frac{3\lambda}{4\alpha^2}
+      E(\alpha) &= \frac{\frac{\hbar^2}{2m}\alpha I_0 - \cfrac{\hbar^2\alpha^2}{2m}\cfrac{1}{2\alpha}I_0 + \lambda\cfrac{3}{4\alpha} I_0}{I_0} \\ 
+      &= \frac{\hbar^2\alpha}{4m} + \frac{3\lambda}{4\alpha^2}
     \end{align}
     となる．
     第1項は運動エネルギーを，第2項はポテンシャルエネルギーを，それぞれ表している\footnote{

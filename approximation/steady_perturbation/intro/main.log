@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 13:40
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 18:50
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2256,14 +2256,14 @@ Here is how much of LuaTeX's memory you used:
  1139 words of node memory still in use:
    10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 190 attribute, 77 glue_sp
 ec, 28 attribute_list, 2 write, 13 user_defined nodes
-   avail lists: 1:7,2:3426,3:41,4:131,5:57,6:21,7:541,9:243,10:10,11:21
+   avail lists: 1:10,2:3510,3:41,4:131,5:57,6:21,7:541,9:264,10:10,11:15
  72065 multiletter control sequences out of 65536+600000
  22 fonts using 12508119 bytes
  115i,11n,118p,1925b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.o
 tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAji
 Mincho-Regular.otf>
-Output written on main.pdf (1 page, 14329 bytes).
+Output written on main.pdf (1 page, 15086 bytes).
 
 PDF statistics: 30 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream

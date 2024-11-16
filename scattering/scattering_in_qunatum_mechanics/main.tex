@@ -87,9 +87,9 @@
   \end{align}
   という関係が成り立つ．これは，散乱振幅から微分断面積が求められることを意味する．
   \begin{itembox}[l]{散乱振幅と微分断面積の関係}
-    \begin{equation}
+    \begin{align}
       \sigma(\theta) = \abs{f(\theta)}^2
-    \end{equation}
+    \end{align}
   \end{itembox}
 
   次に$f(\theta)$を求めるための式を作る．
@@ -106,10 +106,10 @@
   \end{align}
   とおくと，
   \begin{align}
-    \label{Helmholtz equation}
+    \label{Helmholtz align}
     \qty(\nabla^2 + \kappa^2)\psi(\bm{r}) = U(\bm{r}) \psi(\bm{r})
   \end{align}
-  と表せる．式(\ref{Helmholts equation})の解は，
+  と表せる．式(\ref{Helmholts align})の解は，
   \begin{align}
     \qty(\nabla^2 + \kappa^2)\phi(\bm{r}) = 0
   \end{align}
@@ -166,9 +166,9 @@
   \end{align}
   最後の積分を実行するにはCauchyの積分公式を用いる．
   \begin{itembox}[l]{Cauchyの積分公式}
-    \begin{equation}
+    \begin{align}
       \oint \frac{f(z)}{(z-z_0)}\dd{z} = 2\pi \i f(z_0)
-    \end{equation}
+    \end{align}
   \end{itembox}
   今回の場合は極は$\kappa$と$-\kappa$である．しかし，極の避け方にはいくつかのパターンがあり，それに応じてGreen関数の計算結果は変化する．今回は図\ref{Integral}のように$-\kappa$を上に避け，$\kappa$を下に避ける．
   まず$I_1$を計算する．$I_1$は$k'$が虚部が正の値を取るときに小さな値をとる．よって，積分路は上方に閉じる形とする．この時，積分範囲内に極は$\kappa$のみになるため，

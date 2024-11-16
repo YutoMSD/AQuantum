@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 18:49
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 18:51
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -58,9 +58,8 @@ var/luatex-cache/generic/names/luaotfload-names.luc.gz)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen139
-)
-(../../../head.tex
-(/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/luatexja.sty
+) (../../head.tex (/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/luate
+xja.sty
 Package: luatexja 2024-02-19 Japanese Typesetting with Lua(La)TeX
 
 (/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexja/luatexja-core.sty
@@ -2003,9 +2002,10 @@ Package: lltjp-array 2019-07-18 Patch to array for LuaTeX-ja
 \@quotereset=\count587
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 3.
- (./main.aux)
-\openout1 = main.aux
 
+No file main.aux.
+
+\openout1 = main.aux
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
@@ -2017,7 +2017,7 @@ LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
 LaTeX Font Info:    Trying loading font information for TS1+cmr on input line 3
 .
- (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 3.
@@ -2186,11 +2186,9 @@ No file main.bbl.
 Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
 Package hyperref Info: Link coloring OFF on input line 3.
-(./main.out) (./main.out)
 \@outlinefile=\write8
 
 \openout8 = main.out
-
 
 Package siunitx Warning: Detected the "physics" package:
 (siunitx)                omitting definition of \qty.
@@ -2211,43 +2209,7 @@ nslations-basic-dictionary')
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 3.
 \docmute@nestinglevel=\count595
-(load cache: extra_lmroman7-regular.luc)(load cache: extra_lmroman5-regular.luc)
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 4.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 4.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 4.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 4.
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 4.
-(load cache: extra_lmroman8-regular.luc)
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 4.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 4.
-(load cache: extra_lmroman6-regular.luc)
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 4.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 4.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 4.
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 4.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[1
-
-]
 
 Package caption Warning: Unused \captionsetup[figure] on input line 82.
 See the caption package documentation for explanation.
@@ -2272,51 +2234,52 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[2] (./main.aux)
+[1
+
+] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 51203 strings out of 476447
- 195705,2373549 words of node,token memory allocated
- 1354 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 6 glue, 4 kern, 1 glyph, 269 attribute, 77 glue_sp
-ec, 36 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:25,2:34268,3:480,4:914,5:585,6:72,7:6366,8:102,9:3914,10:10,11
-:15
- 72135 multiletter control sequences out of 65536+600000
- 84 fonts using 46392847 bytes
- 115i,16n,118p,1925b,920s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
-f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.
-otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAj
-iGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/
-lmroman7-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/l
-m/lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/publi
-c/haranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/font
-s/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y8.pfb>
-Output written on main.pdf (2 pages, 155865 bytes).
+ 51098 strings out of 476447
+ 125244,2373549 words of node,token memory allocated
+ 1139 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 190 attribute, 77 glue_sp
+ec, 28 attribute_list, 2 write, 13 user_defined nodes
+   avail lists: 1:10,2:2754,3:41,4:131,5:51,6:21,7:388,9:225,10:10,11:3
+ 72063 multiletter control sequences out of 65536+600000
+ 22 fonts using 12508119 bytes
+ 115i,11n,118p,1922b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.o
+tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAji
+Mincho-Regular.otf>
+Output written on main.pdf (1 page, 12242 bytes).
 
-PDF statistics: 133 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
- 20 named destinations out of 1000 (max. 131072)
+PDF statistics: 30 PDF objects out of 1000 (max. 8388607)
+ 20 compressed objects within 1 object stream
+ 2 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

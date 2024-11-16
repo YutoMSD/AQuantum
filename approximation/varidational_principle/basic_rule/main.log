@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 13:40
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 19:25
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2233,7 +2233,7 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 9.6222pt on input line 14.
 (load cache: extra_lmroman10-italic.luc)
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 22.
+(Font)              No change on input line 23.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2247,30 +2247,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 66.
+(Font)              scaled to size 6.73553pt on input line 67.
 (load cache: extra_lmroman7-italic.luc)
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 66.
+(Font)              No change on input line 67.
 (load cache: extra_lmroman8-regular.luc)
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 66.
+(Font)              scaled to size 7.69775pt on input line 67.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 66.
+(Font)              scaled to size 7.69775pt on input line 67.
 (load cache: extra_lmroman6-regular.luc)
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 66.
+(Font)              scaled to size 5.77332pt on input line 67.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 66.
+(Font)              scaled to size 7.69775pt on input line 67.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 66.
+(Font)              scaled to size 5.77332pt on input line 67.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 66.
+(Font)              scaled to size 5.77332pt on input line 67.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 66.
+(Font)              No change on input line 67.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 103.
+(Font)              No change on input line 104.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 108.
+(Font)              No change on input line 109.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2323,35 +2323,36 @@ Here is how much of LuaTeX's memory you used:
  2526 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 48 sub_mlist, 1 glyph, 753 attribu
 te, 77 glue_spec, 80 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:25,2:40116,3:661,4:1046,5:589,6:74,7:4383,8:51,9:2895,10:17,11
-:6
+   avail lists: 1:21,2:40380,3:659,4:1043,5:584,6:72,7:4353,8:71,9:2886,10:17,11
+:3
  72219 multiletter control sequences out of 65536+600000
  89 fonts using 47051671 bytes
  115i,19n,118p,1925b,1197s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
-f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic.o
-tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-italic
-.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.
-otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAj
-iGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/
-lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/
-haranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
-.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b>
-Output written on main.pdf (3 pages, 165032 bytes).
+f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.
+otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic
+.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-ital
+ic.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bol
+d.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/Harano
+AjiGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/l
+m/lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/publi
+c/haranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/font
+s/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb>
+Output written on main.pdf (3 pages, 167516 bytes).
 
-PDF statistics: 176 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
+PDF statistics: 182 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
  42 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

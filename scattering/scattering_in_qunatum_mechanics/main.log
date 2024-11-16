@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 13:39
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 18:48
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2258,14 +2258,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [3]
-
-LaTeX Warning: Reference `Integral' on page 4 undefined on input line 173.
-
-<fig/IntegralGreen.pdf, id=88, 292.2117pt x 245.9589pt>
+<fig/IntegralGreen.pdf, id=89, 292.2117pt x 245.9589pt>
 File: fig/IntegralGreen.pdf Graphic file (type pdf)
 <use fig/IntegralGreen.pdf>
 Package luatex.def Info: fig/IntegralGreen.pdf  used on input line 191.
 (luatex.def)             Requested size: 250.24199pt x 210.6348pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2275,12 +2273,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [4<./fig/IntegralGreen.pdf>]
-
-LaTeX Warning: Reference `keishiki' on page 5 undefined on input line 203.
-
-
-LaTeX Warning: Reference `keishiki' on page 5 undefined on input line 203.
-
 
 Package caption Warning: Unused \captionsetup[table] on input line 83.
 See the caption package documentation for explanation.
@@ -2309,9 +2301,6 @@ L3 programming layer <2024-02-20>
 
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -2349,10 +2338,10 @@ ype1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
 blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy7.pfb>
-Output written on main.pdf (5 pages, 285520 bytes).
+Output written on main.pdf (5 pages, 285408 bytes).
 
-PDF statistics: 195 PDF objects out of 1000 (max. 8388607)
- 158 compressed objects within 2 object streams
+PDF statistics: 199 PDF objects out of 1000 (max. 8388607)
+ 162 compressed objects within 2 object streams
  74 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

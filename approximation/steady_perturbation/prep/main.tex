@@ -2,39 +2,39 @@
 \input{../../../head.tex}
 \begin{document}
   摂動が無い状態のSch\"odinger方程式，
-  \begin{equation}
+  \begin{align}
     \hat{H}^{(0)}\ket{n^{(0)}}=E_0^{(0)}\ket{n^{(0)}}
-  \end{equation}
+  \end{align}
   が厳密に解くことができるとする．
   ここに摂動$\hat{V}$を加わったこと\footnote{摂動の例: 光，電場}を考えると，摂動ハミルトニアンを$\hat{V}$として，
-  \begin{equation}
+  \begin{align}
     \qty(\hat{H}^{(0)} + \hat{V})\ket{n} = E_n\ket{n}\label{perturbation-origin}
-  \end{equation}
+  \end{align}
   とかける．摂動の大きさを表すパラメータを$\lambda$として\refe{perturbation-origin}を
   \begin{align}
     \hat{H} = \hat{H}^{(0)} + \lambda\hat{V}\label{perturbation-using-lambda}
   \end{align}
   とする．$\lambda\to 0$ならば明らかに，
-  \begin{equation}
+  \begin{align}
     \begin{cases}
       \ket{n}\to\ket{n^{(0)}}\\
       E_n\to E_n^{(0)}
     \end{cases}
-  \end{equation}
+  \end{align}
   である．
   ここで，\refe{perturbation-using-lambda}の解が，%\footnote{$\hat{H}，n，E$の肩の()を今後は省略する．}
-  \begin{equation}
+  \begin{align}
     \begin{cases}
       \ket{n} &= \ket{n^{(0)}} + \lambda\ket{n^{(1)}} + \lambda^2\ket{n^{(2)}} + \cdots \label{n-en-expantion} \\
       E_n &= E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \cdots 
     \end{cases}
-  \end{equation}
+  \end{align}
   と書けたとする．
   $\ket{n^{(1)}}$，$\ket{n^{(2)}}$，$E_n^{(1)}$，$E_n^{(2)}$を考える．
   規格化条件として
-  \begin{equation}
+  \begin{align}
     \braket{n^{(0)}}{n} = 1
-  \end{equation}
+  \end{align}
   を定める．
   \refe{n-en-expantion}を\refe{perturbation-using-lambda}に代入して，$\lambda$の次数ごとにまとめると，
   \begin{align}
