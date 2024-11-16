@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 16:35
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 18:40
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2249,17 +2249,7 @@ LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <24.88> not available
 (Font)              Font shape `JY3/gt/m/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 23.94002pt on input line 9.
- (./main.toc(load cache: extra_lmroman7-regular.luc)(load cache: extra_lmroman5-
-regular.luc)
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 2.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 2.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 2.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 2.
-)
+ (./main.toc)
 \tf@toc=\write9
 
 \openout9 = main.toc
@@ -2299,7 +2289,16 @@ LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <14.4> not available
 (Font)              Font shape `JY3/gt/m/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 13.85594pt on input line 8.
-(./approximation/varidational_principle/intro/main.tex
+(./approximation/varidational_principle/intro/main.tex(load cache: extra_lmroman
+7-regular.luc)(load cache: extra_lmroman5-regular.luc)
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 6.73553pt on input line 4.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 4.8111pt on input line 4.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 6.73553pt on input line 4.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 4.8111pt on input line 4.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
 (Font)              scaled to size 6.73553pt on input line 8.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
@@ -2668,17 +2667,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [31]
 
-LaTeX Warning: Command \~ invalid in math mode on input line 52.
+Package siunitx Warning: Unit macro \angstrom has been deprecated in this
+(siunitx)                release.
+(siunitx)                
+(siunitx)                The BIPM have removed this unit from the SI Brochure.
+(siunitx)                You should define it yourself using \DeclareSIUnit in
+(siunitx)                your source. The current definition is
+(siunitx)                
+(siunitx)                \DeclareSIUnit\angstrom{Å}
 
-Missing character: There is no ̃ (U+0303) in font cmmi10!
-
-LaTeX Warning: Command \~ invalid in math mode on input line 52.
-
-Missing character: There is no ̃ (U+0303) in font cmmi10!
-
-LaTeX Warning: Command \~ invalid in math mode on input line 54.
-
-Missing character: There is no ̃ (U+0303) in font cmmi10!
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2718,6 +2715,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [35]
 
+LaTeX Warning: Reference `SE_Scattering' on page 36 undefined on input line 21.
+
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2731,6 +2732,9 @@ LaTeX Warning: Reference `Helmholts equation' on page 37 undefined on input lin
 e 112.
 
 
+LaTeX Warning: Reference `Tokkai' on page 37 undefined on input line 123.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2740,6 +2744,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [37]
 
+LaTeX Warning: Reference `Integral' on page 38 undefined on input line 173.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2748,11 +2755,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [38]
-<fig/IntegralGreen.pdf, id=1015, 292.2117pt x 245.9589pt>
+<fig/IntegralGreen.pdf, id=946, 292.2117pt x 245.9589pt>
 File: fig/IntegralGreen.pdf Graphic file (type pdf)
 <use fig/IntegralGreen.pdf>
 Package luatex.def Info: fig/IntegralGreen.pdf  used on input line 191.
 (luatex.def)             Requested size: 250.24199pt x 210.6348pt.
+
+
+LaTeX Warning: Reference `SE_Scattering' on page 39 undefined on input line 196
+.
+
+
+LaTeX Warning: Reference `keishiki' on page 39 undefined on input line 203.
+
+
+LaTeX Warning: Reference `keishiki' on page 39 undefined on input line 203.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2763,6 +2780,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [39<./fig/IntegralGreen.pdf>]) (./scattering/born_approximation/main.tex
+
+LaTeX Warning: Reference `WFofSC' on page 40 undefined on input line 9.
+
+
+LaTeX Warning: Reference `simpleWFofSC' on page 40 undefined on input line 14.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2785,12 +2808,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[41](load cache: extra_lmromandemi10-regular.luc)
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 143.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 143.
+[41]
 
+LaTeX Warning: Reference `SCamp1st' on page 42 undefined on input line 80.
+
+
+LaTeX Warning: Reference `BornWF' on page 42 undefined on input line 116.
+
+(load cache: extra_lmromandemi10-regular.luc)
+
+LaTeX Warning: Reference `BornCondition' on page 42 undefined on input line 137
+.
+
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 143.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 143.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2810,6 +2843,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [43]
 
+LaTeX Warning: Reference `ConditionofSC' on page 44 undefined on input line 34.
+
+
+(load cache: extra_lmroman8-bold.luc)
+LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <8> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 49.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 49.
+LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <8> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 49.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 49.
+
+LaTeX Warning: Reference `PartialWave' on page 44 undefined on input line 49.
+
+
+LaTeX Warning: Reference `HEinSphere' on page 44 undefined on input line 73.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2818,6 +2870,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [44]
+
+LaTeX Warning: Reference `Helmholtz separated' on page 45 undefined on input li
+ne 92.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2837,6 +2893,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [46]
 
+LaTeX Warning: Reference `1Dscattering' on page 47 undefined on input line 195.
+
+
+
+LaTeX Warning: Reference `PartialWave' on page 47 undefined on input line 210.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2845,6 +2908,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [47]
+
+LaTeX Warning: Reference `SCPartialWave' on page 48 undefined on input line 267
+.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2896,65 +2963,75 @@ L3 programming layer <2024-02-20>
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2542BE0E08DD9E020D34C5DFEA5FF521;5198.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 73A80482D83CBFAAA865E623F8310049;4110
+(rerunfilecheck)             After:  2542BE0E08DD9E020D34C5DFEA5FF521;5198.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 52570 strings out of 476447
- 382259,2373549 words of node,token memory allocated
- 11812 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 26 glue, 4 kern, 252 sub_mlist, 1 glyph, 4647 attr
-ibute, 79 glue_spec, 434 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:22,2:101230,3:909,4:1255,5:644,6:117,7:8241,8:96,9:4500,10:34,
-11:21
- 72589 multiletter control sequences out of 65536+600000
- 124 fonts using 83611263 bytes
+ 52567 strings out of 476447
+ 382264,2373549 words of node,token memory allocated
+ 11590 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 26 glue, 4 kern, 258 sub_mlist, 1 glyph, 4537 attr
+ibute, 79 glue_spec, 424 attribute_list, 2 write, 14 user_defined nodes
+   avail lists: 1:21,2:101350,3:903,4:1255,5:644,6:89,7:8241,8:96,9:4500,10:34,1
+1:21
+ 72586 multiletter control sequences out of 65536+600000
+ 125 fonts using 83743271 bytes
  115i,23n,118p,1916b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.otf
-></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.o
-tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic.
-otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
-r.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-ita
-lic.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bo
-ld.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-reg
-ular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/Har
-anoAjiGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/publi
-c/lm/lmroman12-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/publi
-c/lm/lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/pu
-blic/lm/lmroman10-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/pu
-blic/lm/lmroman12-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype
-/public/haranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2024/texmf-dist
-/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb></usr/local/texlive/2024/texmf-d
-ist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/local/texlive/2024/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
-public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2024/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
-.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
-.pfb>
-Output written on main.pdf (53 pages, 805888 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf><
+/usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.otf>
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
+f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic.o
+tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman6-regular
+.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-ital
+ic.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bol
+d.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-regu
+lar.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/Hara
+noAjiGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public
+/lm/lmroman12-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public
+/lm/lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/pub
+lic/lm/lmroman10-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/pub
+lic/lm/lmroman12-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/
+public/haranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2024/texmf-dist/
+fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb></usr/local/texlive/2024/texmf-di
+st/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/local/texlive/2024/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
+ublic/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
+pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb>
+Output written on main.pdf (53 pages, 802567 bytes).
 
-PDF statistics: 1444 PDF objects out of 1728 (max. 8388607)
- 1312 compressed objects within 14 object streams
+PDF statistics: 1366 PDF objects out of 1440 (max. 8388607)
+ 1232 compressed objects within 13 object streams
  725 named destinations out of 1000 (max. 131072)
- 288 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 216 words of extra memory for PDF output out of 10000 (max. 100000000)
 
