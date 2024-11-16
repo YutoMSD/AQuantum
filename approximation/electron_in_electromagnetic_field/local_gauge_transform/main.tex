@@ -1,69 +1,69 @@
 \documentclass{report}
 \input{../../../head.tex}
 \begin{document}
-  波動関数$\psi(\bm{r})$を次のように変換する．
+  次に局所ゲージ変換を議論する．
+  波動関数$\psi(\bm{r}, t)$を，
   \begin{align}
-    \psi(\bm{r}) \to \psi'(\bm{r}) \coloneqq \e^{\i\alpha(\bm{r})}\psi(\bm{r})
+    \psi(\bm{r}, t) \to \psi'(\bm{r}, t) \coloneqq \e^{\i\alpha(\bm{r}), t}\psi(\bm{r}, t)
   \end{align}
-  この場合，運動量がゲージ不変でなくなってしまう．
-  例えば波動関数の微分を計算すると
+  のように変換することを局所ゲージ変換という．
+  局所ゲージ変換では，$\alpha$が$\bm{r}$に依存することに注意する．
+  簡単な考察により，局所ゲージ変換にSchr\"odinger方程式は影響を受けることが分かる．
+  \par
+  例えば波動関数の勾配を計算すると，
   \begin{align}
-    \grad\psi'(\bm{r}) &= \i\qty(\grad\alpha(\bm{r})\e^{i\alpha(\bm{r})})\psi(\bm{r}) + \e^{\i\alpha(\bm{r})}\grad\psi(\bm{r}) \\ 
-    &= \e^{i\alpha(\bm{r  })}(\grad + \i\grad\alpha(\bm{r}))\psi(\bm{r}) 
+    \grad\psi'(\bm{r}, t) &= \psi(\bm{r})\grad\e^{\i\alpha(\bm{r}, t)} + \e^{\i\alpha(\bm{r}, t)}\grad\qty(\psi(\bm{r}, t)) \\ 
+    &= \i\qty(\grad\alpha(\bm{r}, t))  \e^{i\alpha(\bm{r}, t)}\psi(\bm{r}) + \e^{\i\alpha(\bm{r}, t)}\grad\psi(\bm{r}, t) \\ 
+    &= \e^{\i\alpha(\bm{r}, t)}(\grad + \i\grad\alpha(\bm{r}, t))\psi(\bm{r}, t) 
   \end{align}
-  余分な項が加わってしまう．よって，
+  となり，$\grad\psi$と$\grad\psi'$が一致しない．
+  時間発展するSchr\"odinger方程式と物理量$\hat{A}$の期待値についても同様に計算を行えば，
   \begin{align}
     \begin{dcases}
-      \i\hbar\pdv{t}\psi' \neq -\frac{\hbar^2}{2m}\laplacian\psi'\\
+      \i\hbar\pdv{t}\psi' \neq - \frac{\hbar^2}{2m}\laplacian\psi' \\
       \mel**{\psi}{\hat{A}}{\psi} \neq \mel**{\psi'}{\hat{A}}{\psi'}
     \end{dcases}
   \end{align}
-  である．したがって，局所ゲージ変換に対して物理は不変ではない．そこで，\textbf{局所ゲージ不変性を基本原理とする物理を再構築する．}
+  である．したがって，局所ゲージ変換に対して物理は不変ではない．そこで，\textbf{局所ゲージ不変性を基本原理とする物理を再構築する．}% モチベ？？相対論？
   \par
-  まずは，微分を次の共変微分として再定義する．
+  今まで用いていた物理の模型の欠点は，積の微分をおこなったときに余分な項が出てきてしまうことであった．
+  そこで，局所ゲージ不変性を満たすように物理の模型を変更するために，微分の定義を変更することを考える．
+  以下では，今まで考えていた模型において空間に対する微分であった勾配を，共変微分$\hat{\bm{D}}$で，時間微分を$\hat{D}_t$で書き換えることよって，局所ゲージ不変な物理模型を作る．
+  $\hat{\bm{D}}$と$\hat{D}_t$を，
   \begin{align}
-    \bm{D} \coloneqq \grad + \i\frac{e}{\hbar}\bm{A}
+    \hat{\bm{D}} &\coloneqq \grad + \i\frac{e}{\hbar}\hat{\bm{A}} \label{hatd-def}\\ 
+    \hat{D}_t &\coloneqq \pdv{t} - \i\frac{e}{\hbar}\phi \label{hatdt-def}
   \end{align}
-  ただし，$\psi$と$\bm{A}$はゲージ変換により
+  と定義する．
+  また，$\hat{\bm{A}}$と$\phi$の局所ゲージ変換則を，
   \begin{align}
-    \psi &\to \psi' = \e^{\i(\alpha{\bm{r}})}\psi\\
-    \bm{A} &\to \bm{A}' = \bm{A} - \frac{\hbar}{e}\grad\alpha(\bm{r})
+    \hat{\bm{A}} &\to \hat{\bm{A}} - \frac{\hbar}{e}\grad\alpha(\bm{r}, t) \eqqcolon \hat{\bm{A}}' \\ 
+    \phi &\to \phi + \frac{\hbar}{e}\pdv{t}\alpha(\bm{r}, t) \eqqcolon \phi'  
   \end{align}
+  と定義する．$\hat{\bm{D}}$と$\hat{D}_t$を局所ゲージ変換すると，
+  \begin{align}
+    \hat{\bm{D}} &\to \hat{\bm{D}}' = \grad + \i\frac{e}{\hbar}\hat{\bm{A}'} = \grad + \i\frac{e}{\hbar}\bm{\hat{A}} - \i\grad\alpha(\bm{r}, t) \\ 
+    \hat{D}_t &\to \hat{D}_t' = \pdv{t} - \i\frac{e}{\hbar}\phi' = \pdv{t} - \i\frac{e}{\hbar}\phi - \i\pdv{t}\alpha(\bm{r}, t)
+  \end{align}
+  となる．
   このように微分を定義すると，
   \begin{align}
-    \bm{D}'\psi'(\bm{r}) = \e^{\i\alpha(\bm{r})}\bm{D}\psi(\bm{r})
+    \hat{\bm{D}}'\psi'(\bm{r}, t) &= \e^{\i\alpha(\bm{r}, t)}\hat{\bm{D}}\psi(\bm{r}, t) \label{d-prime}\\ 
+    \hat{\bm{D}}'^2\psi'(\bm{r}, t) &= \e^{\i\alpha(\bm{r}, t)}\hat{\bm{D}}^2\psi(\bm{r}, t) \label{d-prime-power}\\ 
+    \hat{D}_t'\psi'(\bm{r}, t) &= \e^{\i\alpha(\bm{r}, t)}\hat{D}_t\psi(\bm{r}, t) \label{dt-prime}
   \end{align}
-  つまり，局所ゲージ変換は波動関数の微分を
-  \begin{align}
-    \bm{D}\psi(\bm{r}) \to \e^{\i\alpha(\bm{r})}\bm{D}\psi(\bm{r})
-  \end{align}
-  と変換することがわかる．
-  これは大域的ゲージ変換による$\grad\psi(\bm{r}) \to \e^{\i\alpha}\grad\psi(\bm{r})$と同じ形をしている．
+  となることが確かめられる．
   \par
-  次に，$\alpha(\bm{r})$に時間依存性を持たせ，$\alpha(\bm{r},t)$とする．つまり波動関数を
-  \begin{align}
-    \psi \to \psi' = \e^{\i\alpha(\bm{r},t)}\psi
-  \end{align}
-  と変換する．
-  このとき，時間についての偏微分を
-  \begin{align}
-    D_t = \pdv{t} - \i\frac{e}{\hbar}\phi
-  \end{align}
-  と定義する．ただし，
-  \begin{align}
-    \phi \to \phi' + \frac{\hbar}{e}\pdv{t}\alpha(\bm{r}, t)
-  \end{align}
-  である．以上で定義した共変微分と時間微分を用いるとSchrödinger方程式は
+  \refe{d-prime-power}や\refe{dt-prime}を使いながら，元のSchr\"odinger方程式において，勾配を，$\hat{\bm{D}}$で，時間微分を$\hat{D}_t$で書き換えると，
   \begin{align}
     \i\hbar D'_t\psi' &= -\frac{\hbar^2}{2m}\bm{D}'^2\psi' \\
-    \i\hbar\pdv{t}\psi &= -\frac{\hbar^2}{2m}\qty(\grad + \i\frac{e}{\hbar}\bm{A})^2\psi - e\phi\psi\\
-    &= \qty[-\frac{\hbar^2}{2m}\qty(\frac{\i}{\hbar}\bm{p} + \i\frac{e}{\hbar}\bm{A})^2 - e\phi]\psi
+    \Leftrightarrow \e^{\i\alpha(\bm{r}, t)}\i\hbar D_t\psi &= -\e^{\i\alpha(\bm{r}, t)}\frac{\hbar^2}{2m}\bm{D}^2\psi\label{local-gauge-psi}
   \end{align}
-  と変換される．
-  よって，
+  となり，局所ゲージ変換に対して不変なSchrödinger方程式となった．
+  また，\refe{local-gauge-psi}において\refe{hatd-def}と\refe{hatdt-def}を\refe{local-gauge-psi}に代入すると，
   \begin{itembox}[l]{局所ゲージ変換に対して不変なSchrödinger方程式}
     \begin{align}
-      \i\hbar\pdv{t}\psi=\qty[\frac{1}{2m}\qty(\bm{p} + e\bm{A})^2 - e\phi]\psi
+      \i\hbar\pdv{t}\psi = \qty[\frac{1}{2m}\qty(\hat{\bm{p}} + e\hat{\bm{A}})^2 - e\phi]\psi
     \end{align}
   \end{itembox}
   を得る．

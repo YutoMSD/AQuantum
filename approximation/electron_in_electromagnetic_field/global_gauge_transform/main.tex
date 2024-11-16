@@ -2,25 +2,23 @@
 \input{../../../head.tex}
 \begin{document}
   まず，大域的Gauge変換を議論する．
-  波動関数$\psi(\bm{r})$を，
+  波動関数$\psi(\bm{r}，t)$を，
   \begin{align}
-    \psi(\bm{r}) \to \psi'(\bm{r}) \coloneqq \e^{\i\alpha}\psi(\bm{r})
+    \psi(\bm{r}，t) \to \e^{\i\alpha}\psi(\bm{r}，t) \eqqcolon \psi'(\bm{r}，t) 
   \end{align}
   のように変換することを大域的ゲージ変換という．
-  これをSchrödinger方程式に代入すると，
+  $\psi(\bm{r}，t) = \e^{-\i\alpha}\psi'(\bm{r}, t)$をSchrödinger方程式に代入すると，
   \begin{align}
-    \i\hbar\pdv{t}\psi &\to \i\hbar\pdv{t}\psi' = \e^{\i\alpha}\i\hbar\pdv{t}\psi \\ 
-    -\frac{\hbar^2}{2m}\laplacian\psi &\to -\frac{\hbar^2}{2m}\laplacian\psi' = -\e^{i\alpha}\frac{\hbar^2}{2m}\laplacian\psi
+    \i\hbar\pdv{t}\psi(\bm{r}，t) &= -\frac{\hbar^2}{2m}\laplacian\psi(\bm{r}，t) \\ 
+    \Leftrightarrow \i\hbar\pdv{t}\e^{-\i\alpha}\psi'(\bm{r}，t) &= -\frac{\hbar^2}{2m}\laplacian\e^{-\i\alpha}\psi'(\bm{r}，t) \\ 
+    \Leftrightarrow \e^{-\i\alpha}\i\hbar\pdv{t}\psi'(\bm{r}，t) &= -\e^{-\i\alpha}\frac{\hbar^2}{2m}\laplacian\psi'(\bm{r}，t) \\ 
+    \Leftrightarrow \i\hbar\pdv{t}\psi'(\bm{r}，t) &= -\frac{\hbar^2}{2m}\laplacian\psi'(\bm{r}，t)
   \end{align}
   となる．
-  よって，
+  つまり，大域的ゲージ変換によって，Schr\"odinger方程式は影響を受けない．
+  当然，期待値も，
   \begin{align}
-    \i\hbar\pdv{t}\psi' = -\frac{\hbar^2}{2m}\laplacian\psi'
-  \end{align}
-  が成り立つので，大域的ゲージ変換を行う前と後でSchr\"odinger方程式の形が変わらないことが分かる．
-  当然期待値も，
-  \begin{align}
-    \mel**{\psi'}{\hat{A}}{\psi'} &= \mel{\psi}{\e^{-\i\alpha}\hat{A}\e^{\i\alpha}}{\psi} \\ 
+    \mel**{\psi'}{\hat{A}}{\psi'} &= \mel**{\psi}{\e^{-\i\alpha}\hat{A}\e^{\i\alpha}}{\psi} \\ 
     &= \mel**{\psi}{\hat{A}}{\psi}
   \end{align}
   となるから，物理は大域的ゲージ変換に対して不変であると言える．
