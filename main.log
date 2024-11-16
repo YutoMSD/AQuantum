@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.11.6)  16 NOV 2024 00:33
+=======
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 11:39
+>>>>>>> nonsteady_perturbation
  restricted system commands enabled.
 **main
 (./main.tex
@@ -2626,7 +2630,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [26]
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> nonsteady_perturbation
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2644,11 +2651,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[28])
-(./approximation/nonsteady_perturbation/electron_in_electromagnetic_field/intro
-/main.tex)
-(./approximation/nonsteady_perturbation/electron_in_electromagnetic_field/globa
-l_gauge_transform/main.tex
+[28]) (./approximation/electron_in_electromagnetic_field/intro/main.tex)
+(./approximation/electron_in_electromagnetic_field/global_gauge_transform/main.
+tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2659,8 +2664,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [29])
-(./approximation/nonsteady_perturbation/electron_in_electromagnetic_field/local
-_gauge_transform/main.tex(load cache: extra_lmromandemi10-regular.luc)
+(./approximation/electron_in_electromagnetic_field/local_gauge_transform/main.t
+ex(load cache: extra_lmromandemi10-regular.luc)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2671,6 +2676,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [30])
+(./approximation/electron_in_electromagnetic_field/optical_transition/main.tex
+
+LaTeX Warning: Command \~ invalid in math mode on input line 52.
+
+Missing character: There is no ̃ (U+0303) in font cmmi10!
+
+LaTeX Warning: Command \~ invalid in math mode on input line 52.
+
+Missing character: There is no ̃ (U+0303) in font cmmi10!
+
+LaTeX Warning: Command \~ invalid in math mode on input line 54.
+
+Missing character: There is no ̃ (U+0303) in font cmmi10!
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2681,18 +2699,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [31]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[32])
 Chapter 2.
 (./scattering/solid_angle/main.tex)
 (./scattering/scattering_cross_section/main.tex
 
-LaTeX Warning: Reference `Zendanmenseki' on page 32 undefined on input line 14.
+LaTeX Warning: Reference `Zendanmenseki' on page 33 undefined on input line 14.
 
 
+<<<<<<< HEAD
 ) (./scattering/scattering_CM/main.tex
 
 [32
 
 ]) (./scattering/scattering_QM/main.tex
+=======
+) (./scattering/scattering_CM/main.tex [33
+
+>>>>>>> nonsteady_perturbation
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2702,6 +2734,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
+<<<<<<< HEAD
 [33]
 
 
@@ -2720,6 +2753,10 @@ e 112.
 
 
 
+=======
+[34]
+
+>>>>>>> nonsteady_perturbation
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2729,10 +2766,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [35]
 
+<<<<<<< HEAD
 LaTeX Warning: Reference `Integral' on page 36 undefined on input line 173.
 
 
 
+=======
+LaTeX Warning: Reference `Helmholts equation' on page 36 undefined on input lin
+e 112.
+
+>>>>>>> nonsteady_perturbation
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2743,6 +2786,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [36]
 
+<<<<<<< HEAD
 LaTeX Warning: File `IntegralGreen.pdf' not found on input line 191.
 
 
@@ -2761,6 +2805,8 @@ ar.lua.gz)(save cache: C:/Users/yutms/.texlive2024/texmf-var/luatexja/extra_lmmo
 no10-regular.luc)
 
 
+=======
+>>>>>>> nonsteady_perturbation
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2768,6 +2814,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
+<<<<<<< HEAD
 [37]) (./scattering/Born_approximation/main.tex
 
 LaTeX Warning: Reference `WFofSC' on page 38 undefined on input line 9.
@@ -2777,6 +2824,9 @@ LaTeX Warning: Reference `simpleWFofSC' on page 38 undefined on input line 14.
 
 
 
+=======
+[37])
+>>>>>>> nonsteady_perturbation
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2786,6 +2836,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [38]
+<<<<<<< HEAD
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 (Font)              No change on input line 59.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
@@ -2935,6 +2986,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [47]
+=======
+>>>>>>> nonsteady_perturbation
 Chapter 3.
 (./RelativisticQM/Special_Relativity/main.tex
 
@@ -2953,6 +3006,10 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[subfigure] on input line 85.
 See the caption package documentation for explanation.
 
+<<<<<<< HEAD
+=======
+[39
+>>>>>>> nonsteady_perturbation
 
 
 
@@ -2972,6 +3029,7 @@ L3 programming layer <2024-11-02>
 
 LaTeX Warning: There were undefined references.
 
+<<<<<<< HEAD
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -2988,12 +3046,17 @@ Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
 (biblatex)                and rerun LaTeX afterwards.
 
+=======
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 0F1B7F612C0BFA73D11107315C89F2BB;4848.
+>>>>>>> nonsteady_perturbation
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
+<<<<<<< HEAD
  52516 strings out of 475664
  382257,2373549 words of node,token memory allocated
  11514 words of node memory still in use:
@@ -3046,4 +3109,59 @@ PDF statistics: 1377 PDF objects out of 1440 (max. 8388607)
  1242 compressed objects within 13 object streams
  690 named destinations out of 1000 (max. 131072)
  256 words of extra memory for PDF output out of 10000 (max. 100000000)
+=======
+ 52328 strings out of 476447
+ 382255,2373549 words of node,token memory allocated
+ 11363 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 21 glue, 4 kern, 234 sub_mlist, 1 glyph, 4482 attr
+ibute, 79 glue_spec, 419 attribute_list, 2 write, 14 user_defined nodes
+   avail lists: 1:24,2:101410,3:927,4:1255,5:644,6:106,7:8246,8:103,9:4500,10:34
+,11:24
+ 72539 multiletter control sequences out of 65536+600000
+ 124 fonts using 83611263 bytes
+ 115i,23n,118p,1916b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.otf
+></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic.ot
+f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.
+otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
+r.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bold
+.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-regul
+ar.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/Haran
+oAjiGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/
+lm/lmroman12-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/
+lm/lmroman10-italic.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/publi
+c/lm/lmroman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/pu
+blic/lm/lmroman10-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/pu
+blic/lm/lmroman12-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype
+/public/haranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2024/texmf-dist
+/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb></usr/local/texlive/2024/texmf-d
+ist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/local/texlive/2024/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2024/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
+ublic/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
+pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb>
+Output written on main.pdf (41 pages, 613394 bytes).
+
+PDF statistics: 1182 PDF objects out of 1200 (max. 8388607)
+ 1066 compressed objects within 11 object streams
+ 554 named destinations out of 1000 (max. 131072)
+ 264 words of extra memory for PDF output out of 10000 (max. 100000000)
+>>>>>>> nonsteady_perturbation
 

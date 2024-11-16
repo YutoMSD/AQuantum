@@ -1,6 +1,7 @@
 \documentclass{report}
 \input{../../../head.tex}
 \begin{document}
+<<<<<<< HEAD
   時間に依存する摂動を調和摂動という．
   以下の摂動を考える\footnote{光のイメージ}．
   \begin{align}
@@ -40,5 +41,46 @@
         \omega_{i\to f} = \frac{\abs{c_{f,i}^{(1)}(t)}^2}{t} = \frac{2\pi}{\hbar}\abs{V_{fi}}^2\delta(E_f - E_i + \hbar\omega)
       \end{align}
       を得る．$E_f = E_i - \hbar\omega$へと遷移することがわかる．
+=======
+  次に，時間に依存する摂動である調和摂動を議論する．
+  定常状態の系に，$\hat{V}(t)$なる摂動が加わったこと考える．
+  $\hat{V}(t)$を，
+  \begin{align}
+    \hat{V}(t) \coloneqq
+    \begin{dcases}
+      0 & t \leq 0 \\
+      2V\cos\omega t & t \geq 0 
+    \end{dcases}
+  \end{align}
+  と定義する\footnote{このような$\hat{V}(t)$は量子系に対して光を照射することを意味している．このような摂動はしばしば，レーザにおいて，反転分布を構成するために用いられる．}．
+  $2V\cos\omega t = V(\e^{\i\omega t} + \e^{-\i\omega t})$であるので，\refe{interaction-picture-time-development-of-qc}より，
+  \begin{align}
+    c^{(1)}_{f, i}(t) &= \frac{\i}{\hbar}\int_{0}^{t}\mel**{f}{\hat{V}}{i}(\e^{\i\omega t} + \e^{-\i\omega t})\e^{\i\omega_{fi}t}\dd{t} \label{harmonic-perturbation-cn1t-progress} \\ 
+    &= -\frac{V_{fi}}{\hbar}\qty(\frac{\e^{\i(\omega_{fi} + \omega)t} - 1}{\omega_{fi} + \omega} + \frac{\e^{\i(\omega_{fi}-\omega)t} - 1}{\omega_{fi} - \omega})
+  \end{align}
+  を得る．ただし，$V_{fi} \coloneqq \mel**{f}{\hat{V}}{i}$とした．
+  \begin{enumerate}
+    \item $\omega_{fi} - \omega \approx 0$のとき\par
+      \refe{harmonic-perturbation-cn1t-progress}の第2項は第1項より十分大きいから，第1項を無視して，
+      \begin{align}
+        c_{f, i}^{(1)}(t) \approx - \frac{V_{fi}}{\hbar}\frac{\e^{\i(\omega_{fi} - \omega)t} - 1}{\omega_{fi} - \omega} = -\frac{V_{fi}}{\hbar}\exp\qty(\i\frac{\omega_{fi} - \omega}{2}t)\cfrac{\sin\qty(\cfrac{\omega_{fi} - \omega}{2}t)}{\cfrac{\omega_{fi} - \omega}{2}}
+      \end{align}
+      と近似できる．このとき$\ket{i}\to\ket{f}$の遷移確率は，
+      \begin{align}
+        \abs{c_{f, i}^{(1)}(t)}^2 = \frac{V_{fi}^2}{\hbar^2}\frac{\sin^2\frac{\omega_{fi} - \omega}{2}t}{\qty(\frac{\omega_{fi} - \omega}{2})^2}
+      \end{align}
+      $\frac{\sin^2\frac{\omega_{fi}-\omega}{2}t}{\qty(\frac{\omega_{fi} - \omega}{2})^2}$は$t\to\infty$で$2\pi t\tilde{\delta}(\omega_{fi} - \omega) = 2\pi t\hbar\tilde{\delta}(E_f - E_i - \hbar\omega)$
+      と近似できるので単位時間当たりの遷移確率は，
+      \begin{align}
+        \omega_{f\to i} = \frac{\abs{c_{f, i}^{(1)}(t)}^2}{t} = \frac{2\pi}{\hbar}\abs{V_{fi}}^2\tilde{\delta}(E_f - E_i - \hbar\omega)\label{harmonic-perturbation-fermi-rule}
+      \end{align}
+      である．つまり，$E_i$から$E_f = E_i + \hbar\omega$なるエネルギー準位へ遷移することがわかる．また，\refe{harmonic-perturbation-fermi-rule}もFermiの黄金律という．
+    \item $\omega_{fi} + \omega \approx 0$のとき\par
+      \refe{harmonic-perturbation-cn1t-progress}の第1項が支配的となる．上記の議論を$\omega \to -\omega$と置き換えて繰り返すと単位時間当たりの遷移確率として
+      \begin{align}
+        \omega_{i\to f} = \frac{\abs{c_{f, i}^{(1)}(t)}^2}{t} = \frac{2\pi}{\hbar}\abs{V_{fi}}^2\delta(E_f - E_i + \hbar\omega)
+      \end{align}
+      を得る．つまり，$E_i$から$E_f = E_i - \hbar\omega$なるエネルギー準位へ遷移することがわかる．
+>>>>>>> nonsteady_perturbation
   \end{enumerate}
 \end{document}

@@ -41,7 +41,11 @@
   >
 ]>
 <requests version="1.0">
+<<<<<<< HEAD
   <internal package="biblatex" priority="9" active="1">
+=======
+  <internal package="biblatex" priority="9" active="0">
+>>>>>>> nonsteady_perturbation
     <generic>latex</generic>
     <provides type="dynamic">
       <file>main.bcf</file>
@@ -61,7 +65,11 @@
       <file>english.lbx</file>
     </requires>
   </internal>
+<<<<<<< HEAD
   <external package="biblatex" priority="5" active="1">
+=======
+  <external package="biblatex" priority="5" active="0">
+>>>>>>> nonsteady_perturbation
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>

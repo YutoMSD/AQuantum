@@ -41,7 +41,11 @@
   >
 ]>
 <requests version="1.0">
+<<<<<<< HEAD:approximation/nonsteady_perturbation/optical_transition/main.run.xml
   <internal package="biblatex" priority="9" active="0">
+=======
+  <internal package="biblatex" priority="9" active="1">
+>>>>>>> nonsteady_perturbation:approximation/electron_in_electromagnetic_field/optical_transition/main.run.xml
     <generic>latex</generic>
     <provides type="dynamic">
       <file>main.bcf</file>
@@ -61,7 +65,11 @@
       <file>english.lbx</file>
     </requires>
   </internal>
+<<<<<<< HEAD:approximation/nonsteady_perturbation/optical_transition/main.run.xml
   <external package="biblatex" priority="5" active="0">
+=======
+  <external package="biblatex" priority="5" active="1">
+>>>>>>> nonsteady_perturbation:approximation/electron_in_electromagnetic_field/optical_transition/main.run.xml
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
