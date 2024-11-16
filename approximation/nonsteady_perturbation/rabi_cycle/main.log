@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  14 NOV 2024 12:54
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 12:22
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2221,10 +2221,6 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 4.8111pt on input line 4.
 (load cache: extra_lmsans10-bold.luc)
-
-LaTeX Warning: Reference `example-ref:rabi-cycle' on page 1 undefined on input 
-line 6.
-
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
 (Font)              scaled to size 6.73553pt on input line 6.
 (load cache: extra_lmroman8-regular.luc)
@@ -2258,6 +2254,7 @@ LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 (Font)              No change on input line 24.
 
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
 (fancyhdr)                \setlength{\headheight}{12.06757pt}.
@@ -2277,10 +2274,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [2]
-
-LaTeX Warning: Reference `example-ref:rabi-cycle' on page 3 undefined on input 
-line 109.
-
 
 Package caption Warning: Unused \captionsetup[figure] on input line 82.
 See the caption package documentation for explanation.
@@ -2312,13 +2305,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2327,23 +2313,23 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51293 strings out of 476447
+ 51294 strings out of 476447
  244631,2373549 words of node,token memory allocated
  1418 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 4 glue, 4 kern, 2 sub_mlist, 1 glyph, 302 attribut
 e, 77 glue_spec, 39 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:42,2:57366,3:877,4:1341,5:562,6:85,7:7752,8:73,9:4313,10:10,11
-:6
- 72208 multiletter control sequences out of 65536+600000
+   avail lists: 1:37,2:58826,3:889,4:1339,5:564,6:87,7:7850,8:74,9:4360,10:10,11
+:7
+ 72209 multiletter control sequences out of 65536+600000
  88 fonts using 46919983 bytes
  115i,20n,118p,1925b,1199s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
 f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.
 otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic
-.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.
-otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-regula
-r.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-reg
-ular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-
+.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-regul
+ar.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-re
+gular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10
+-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-
 bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/Har
 anoAjiGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/publi
 c/haranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/font
@@ -2356,10 +2342,10 @@ c/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy7.pfb>
-Output written on main.pdf (3 pages, 153083 bytes).
+Output written on main.pdf (3 pages, 153630 bytes).
 
-PDF statistics: 168 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
+PDF statistics: 172 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
  37 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

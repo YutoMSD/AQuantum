@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  12 NOV 2024 19:30
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 12:23
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2225,16 +2225,16 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 4.8111pt on input line 5.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 65.
+(Font)              scaled to size 9.6222pt on input line 68.
 (load cache: extra_lmsans10-regular.luc)(load cache: extra_lmsans10-bold.luc)
 LaTeX Font Info:    Font shape `JT3/gt/b/n' in size <10> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 65.
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 68.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 65.
+(Font)              scaled to size 9.6222pt on input line 68.
 LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <10> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 65.
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 68.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 65.
+(Font)              scaled to size 9.6222pt on input line 68.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2287,14 +2287,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51230 strings out of 476447
- 195712,2373549 words of node,token memory allocated
+ 51233 strings out of 476447
+ 195710,2373549 words of node,token memory allocated
  1521 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 9 sub_mlist, 1 glyph, 346 attribut
 e, 77 glue_spec, 43 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:30,2:42707,3:501,4:1052,5:592,6:58,7:7406,8:62,9:4537,10:12,11
+   avail lists: 1:37,2:43033,3:522,4:1100,5:604,6:61,7:7460,8:59,9:4612,10:10,11
 :9
- 72164 multiletter control sequences out of 65536+600000
+ 72166 multiletter control sequences out of 65536+600000
  60 fonts using 30023231 bytes
  115i,19n,118p,1925b,1071s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf><
@@ -2310,10 +2310,10 @@ lic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public
 sfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy7.pfb>
-Output written on main.pdf (2 pages, 112333 bytes).
+Output written on main.pdf (2 pages, 112136 bytes).
 
-PDF statistics: 106 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 131072)
+PDF statistics: 107 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

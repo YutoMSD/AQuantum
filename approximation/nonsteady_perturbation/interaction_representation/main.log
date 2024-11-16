@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  13 NOV 2024 20:12
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 12:22
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2262,9 +2262,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2]
 
-LaTeX Warning: Reference `cnt-matrix' on page 3 undefined on input line 104.
-
-
 Package caption Warning: Unused \captionsetup[figure] on input line 82.
 See the caption package documentation for explanation.
 
@@ -2297,9 +2294,6 @@ L3 programming layer <2024-02-20>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2308,14 +2302,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51227 strings out of 476447
+ 51228 strings out of 476447
  195714,2373549 words of node,token memory allocated
  1402 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 6 glue, 4 kern, 1 glyph, 291 attribute, 77 glue_sp
 ec, 38 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:20,2:38388,3:397,4:1056,5:908,6:62,7:5842,8:90,9:4090,10:10,11
+   avail lists: 1:20,2:38616,3:397,4:1056,5:908,6:62,7:5842,8:90,9:4093,10:10,11
 :12
- 72143 multiletter control sequences out of 65536+600000
+ 72144 multiletter control sequences out of 65536+600000
  84 fonts using 46392847 bytes
  115i,21n,118p,1925b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
@@ -2335,10 +2329,10 @@ c/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy7.pfb>
-Output written on main.pdf (3 pages, 146884 bytes).
+Output written on main.pdf (3 pages, 147212 bytes).
 
-PDF statistics: 162 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
+PDF statistics: 164 PDF objects out of 1000 (max. 8388607)
+ 127 compressed objects within 2 object streams
  36 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

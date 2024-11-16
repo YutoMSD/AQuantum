@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 11:50
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 12:30
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2740,11 +2740,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
 [37]
-<scattering/scattering_QM/IntegralGreen.pdf, id=1001, 292.2117pt x 245.9589pt>
-File: scattering/scattering_QM/IntegralGreen.pdf Graphic file (type pdf)
-<use scattering/scattering_QM/IntegralGreen.pdf>
-Package luatex.def Info: scattering/scattering_QM/IntegralGreen.pdf  used on in
-put line 191.
+<fig/IntegralGreen.pdf, id=1001, 292.2117pt x 245.9589pt>
+File: fig/IntegralGreen.pdf Graphic file (type pdf)
+<use fig/IntegralGreen.pdf>
+Package luatex.def Info: fig/IntegralGreen.pdf  used on input line 191.
 (luatex.def)             Requested size: 250.24199pt x 210.6348pt.
 
 
@@ -2755,8 +2754,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[38<./scattering/scattering_QM/IntegralGreen.pdf>])
-(./scattering/Born_approximation/main.tex
+[38<./fig/IntegralGreen.pdf>]) (./scattering/Born_approximation/main.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.06757pt, for example:
@@ -2898,14 +2896,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 52557 strings out of 476447
+ 52558 strings out of 476447
  382254,2373549 words of node,token memory allocated
  12046 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 26 glue, 4 kern, 234 sub_mlist, 1 glyph, 4779 attr
 ibute, 79 glue_spec, 446 attribute_list, 2 write, 14 user_defined nodes
    avail lists: 1:24,2:101086,3:927,4:1255,5:644,6:114,7:8241,8:96,9:4500,10:34,
 11:24
- 72582 multiletter control sequences out of 65536+600000
+ 72583 multiletter control sequences out of 65536+600000
  124 fonts using 83611263 bytes
  115i,23n,118p,1916b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.otf
@@ -2946,7 +2944,7 @@ sy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6
 b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
 /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on main.pdf (52 pages, 807798 bytes).
+Output written on main.pdf (52 pages, 807800 bytes).
 
 PDF statistics: 1433 PDF objects out of 1440 (max. 8388607)
  1301 compressed objects within 14 object streams

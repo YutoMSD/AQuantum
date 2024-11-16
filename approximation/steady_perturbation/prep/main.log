@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  7 NOV 2024 15:54
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  16 NOV 2024 12:23
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2276,14 +2276,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51196 strings out of 476447
+ 51198 strings out of 476447
  125244,2373549 words of node,token memory allocated
  1453 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 3 glue, 4 kern, 1 glyph, 324 attribute, 77 glue_sp
 ec, 41 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:11,2:17433,3:329,4:575,5:267,6:50,7:3522,8:57,9:2107,10:10,11:
+   avail lists: 1:11,2:17649,3:332,4:575,5:270,6:50,7:3570,8:57,9:2110,10:10,11:
 3
- 72135 multiletter control sequences out of 65536+600000
+ 72137 multiletter control sequences out of 65536+600000
  84 fonts using 46392847 bytes
  115i,11n,118p,1925b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.ot
@@ -2299,7 +2299,7 @@ pe1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (1 page, 83027 bytes).
+Output written on main.pdf (1 page, 83291 bytes).
 
 PDF statistics: 99 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream
