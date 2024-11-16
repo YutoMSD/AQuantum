@@ -260,4 +260,189 @@
     \end{equation}
   \end{itembox}
   観測者に対して2つの事象が同一の空間座標で起きたとき，その時間間隔$\Delta \tau$を\textbf{固有時間}(proper time)という．
+
+  電磁場の双対性について説明する．マクスウェル方程式は3次元では次の4つの式である．
+  \begin{align}
+    \begin{dcases}
+      \nabla \cdot \bm{D} = \rho \\
+      \nabla \cdot \bm{B} = 0\\
+      \nabla \times \bm{E} = - \frac{\partial \bm{B}}{\partial t}\\
+      \nabla \times \bm{H} = \frac{\partial \bm{D}}{\partial t} + \bm{j}
+    \end{dcases}
+  \end{align}
+  これをLorentz変換に対して共変な形式に書き直す．まず，$\bm{B}$と$bm{E}$はベクトルポテンシャル$\bm{A}$とスカラーポテンシャル$\phi$を
+  用いて
+  \begin{align}
+    \begin{dcases}
+      \bm{E} = -\nabla \phi - \frac{\partial \bm{A}}{\partial t}\\
+      \bm{B} = \nabla \times \bm{A}
+    \end{dcases}
+  \end{align}
+  と表される．ここで，座標を
+  \begin{align}
+    (x^0, x^1, x^2, x^3) = (ct, x, y, z)
+  \end{align}
+  と表し，
+  4元ベクトルポテンシャルを
+  \begin{align}
+    A^{\mu} &= (\phi, c\bm{A})\\
+    A_{\mu} &= (\phi, -c\bm{A})
+  \end{align}
+  と定義する．この4元ベクトルポテンシャルを使うと電場と磁場は
+  \begin{align}
+    B_x &= c \frac{\partial A_z}{\partial y} - c \frac{\partial A_y}{\partial z}\\
+    &= -\frac{\partial A_3}{\partial x^2} + \frac{\partial A_2}{\partial x^3}\\
+    &= \partial_3 A_2 - \partial_2 A_3\\
+    E_x &= -\frac{\partial \phi}{\partial x} - \frac{\partial A_x}{\partial t}\\
+    &= -\frac{\partial A_0}{\partial x^1} + \frac{\partial A_1}{\partial x^0}\\
+    &= \partial_0 A_1 - \partial_1 A_0
+  \end{align}
+  のように書ける．ここで，電磁場テンソル
+  \begin{align}
+    F_{\mu\nu} = \partial_{\mu}A_\nu - \partial_\nu A_\mu
+  \end{align}
+  を定義する．これを行列の形で表すと
+  \begin{align}
+    F_{\mu\nu}=
+    \begin{pmatrix}
+      F_{00} & F_{01} & F_{02} & F_{03}\\
+      F_{10} & F_{11} & F_{12} & F_{13}\\
+      F_{20} & F_{21} & F_{22} & F_{23}\\
+      F_{30} & F_{31} & F_{32} & F_{33}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      0 & E_x & E_y & E_z \\
+      -E_x & 0 & -cB_z & cB_y\\
+      -E_y & cB_z & 0 & -cB_x\\
+      -E_z& -cB_y & cB_x & 0
+    \end{pmatrix}
+  \end{align}
+  である．明らかに$F_{\mu\nu} = F_{\nu\mu}$である．また，この定義から
+  \begin{align}
+    \partial_\mu F_{\nu\lambda} + \partial_\nu F_{\lambda\mu} + \partial_\lambda F_{\mu\nu} = 0
+  \end{align}
+  が成り立つ．実際に計算してみると
+  \begin{align}
+    &\partial_\mu F_{\nu\lambda} + \partial_\nu F_{\lambda\mu} + \partial_\lambda F_{\mu\nu} \\
+    &= (\partial_\mu\partial_\nu A_\lambda - \partial_\mu\partial_\lambda A_\nu) + (\partial_\nu\partial_\lambda A_\mu - \partial_\nu\partial_\mu A_\lambda)
+    + (\partial_\lambda\partial_\mu A_\nu - \partial_\lambda\partial_\nu A_\mu)\\
+    &= 0
+  \end{align}
+  である．これはFaradayの電磁誘導の法則と磁束密度に関するGaussの法則を表している．
+  例えば$\mu = 0,\nu = 1, \lambda =2$とすると
+  \begin{align}
+    &\partial_0 F_{12} + \partial_1 F_{20} + \partial_2 F_{01}\\
+    &= -\frac{\partial (cB_z)}{\partial (ct)} + \frac{\partial}{\partial x}(-E_y) + \frac{\partial}{\partial y}(-E_x)\\
+    &= -(\nabla\times \bm{E})_z - \frac{\partial B_z}{\partial t} = 0
+  \end{align}
+  $\mu=1,\nu=2,\lambda=3$とすると
+  \begin{align}
+    &\partial_1 F_{23} + \partial_2 F_{31} + \partial_3 F_{12}\\
+    &= c(\partial_xB_x + \partial_yB_y + \partial_zB_Z)\\
+    &= c\nabla\cdot\bm{B} = 0
+  \end{align}
+  が得られる．さらに，磁場/電束密度テンソル$H_{\mu\nu}$を
+  \begin{align}
+    H_{\mu\nu}=
+    \begin{pmatrix}
+      H_{00} & H_{01} & H_{02} & H_{03}\\
+      H_{10} & H_{11} & H_{12} & H_{13}\\
+      H_{20} & H_{21} & H_{22} & H_{23}\\
+      H_{30} & H_{31} & H_{32} & H_{33}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      0 & cD_x & cD_y & cD_z \\
+      -cD_x & 0 & -H_z & H_y\\
+      -cD_y & H_z & 0 & -H_x\\
+      -cD_z& -H_y & H_x & 0
+    \end{pmatrix}
+  \end{align}
+  4次元の電流密度を$j^{\mu}$を
+  \begin{align}
+    j^{\mu} = (c\rho, \bm{j})
+  \end{align}
+  と定義する．明らかに$H_{\mu\nu} = -H_{\nu\mu}$である．
+  すると，電束密度に関するGaussの法則とAmpèreの法則は次の式で表される．
+  \begin{align}
+    \partial^{\nu}H_{\nu\mu}=j_\mu
+  \end{align}
+  例えば$\mu=0$とすると
+  \begin{align}
+    \partial^1H_{10}+\partial^2H_{20} + \partial^3H_{30} &= j_0\\
+    \partial_xD_x + \partial_yD_y + \partial_zD_z = \rho\\
+    \nabla\cdot\bm{D} = \rho
+  \end{align}
+  が導かれる．さらに，電荷保存則
+  \begin{align}
+    \frac{\partial \rho}{\partial t} + \nabla\cdot\bm{j} = 0
+  \end{align}
+  から
+  \begin{align}
+    \frac{\partial (c\rho)}{\partial (ct)} + \nabla\cdot\bm{j} = 0
+  \end{align}
+  よって
+  \begin{align}
+    \partial_\mu j^\mu = 0
+  \end{align}
+  が得られる．以上をまとめるとMaxwell方程式は
+  \begin{align}
+    \begin{dcases}
+      \partial_\mu F_{\nu\lambda} + \partial_\nu F_{\lambda\mu} + \partial_\lambda F_{\mu\nu} = 0\\
+      \partial^{\nu}H_{\nu\mu}=j_\mu\\
+      \partial_\mu j^\mu = 0
+    \end{dcases}
+  \end{align}
+  と書くことができる．これらの式はテンソルとテンソル，ベクトルとベクトルというように，Lorentz変換に対して
+  同じ変換則をもつものどうしが結ばれている．よってこれらはLorentz変換に対して共変である．
+  \begin{itembox}[l]{Lorentz変換に対して共変なMaxwell方程式}
+    \begin{align}
+      &\partial_\mu F_{\nu\lambda} + \partial_\nu F_{\lambda\mu} + \partial_\lambda F_{\mu\nu} = 0\\
+      &\partial^{\nu}H_{\nu\mu}=j_\mu\\
+      &\partial_\mu j^\mu = 0
+    \end{align}
+  \end{itembox}
+
+  運動する電荷と電流を例に電磁場の双対性を確認してみよう．導線には$z$軸上向きに電流$I$が流れている．電荷$+q$が$z$軸上向きに速さ$v_0$で運動している．
+  導線の中では面電荷密度$\lambda_{\pm} = \pm\lambda/2$の正(負)電荷が速さ$v$で上(下)向きに動いているとする．
+  まずは静止系で考える．導線の中では
+  \begin{align}
+    \lambda_{+} + \lambda_{-} = 0
+  \end{align}
+  が成り立つため，電気的に中性である．よってｍ導線の周りには電場は無い．電流は$I=\lambda v$と表される．
+  導線の周りには
+  \begin{align}
+    \bm{B} = \frac{\mu_0I}{2\pi r} \bm{e}_{\phi} = \frac{\mu_0 \lambda v}{2\pi r} \bm{e}_{\phi}
+  \end{align}
+  の磁束密度が発生している．よって電荷は
+  \begin{align}
+    \bm{F} = q\bm{v}\times\bm{B} = -qv_0\frac{\mu_0 \lambda v}{2\pi r}\bm{e}_r
+  \end{align}
+  の力を感じる．
+
+  これを電荷とともに動く系で考える．非相対論的に感がると$\bm{v}=0$であるため電荷は力を感じない．しかし，特殊相対性原理よりこれはありえない．
+  相対論的効果を考慮してこの状況を眺める必要がある．
+  観測者からは導線中の正電荷は$v-v_0$で，負電荷は$v+v_0$で運動して見える．それぞれでLorentz収縮を計算する．
+  \begin{align}
+    \lambda_{+} &= \frac{1}{\sqrt{1-\qty(\frac{v-v_0}{c})^2}}\frac{\lambda}{2}\\
+    \lambda_{-} &= \frac{1}{\sqrt{1-\qty(\frac{v+v_0}{c})^2}}\qty(-\frac{\lambda}{2})
+  \end{align}
+  明らかに
+  \begin{align}
+    \lambda_{+} + \lambda_{-} \neq 0
+  \end{align}
+  であることがわかる．よって，導線の周りには電場が発生している．$v,v_0 \ll c$とすると
+  \begin{align}
+    \lambda_{+} + \lambda_{-} &= \frac{1}{\sqrt{1-\qty(\frac{v-v_0}{c})^2}}\frac{\lambda}{2} - \frac{1}{\sqrt{1-\qty(\frac{v+v_0}{c})^2}}\frac{\lambda}{2}\\
+    &\simeq \qty(1 + \frac{1}{2}\qty(\frac{v-v_0}{c})^2)\frac{\lambda}{2} - \qty(1 + \frac{1}{2}\qty(\frac{v+v_0}{c})^2)\frac{\lambda}{2}\\
+    &= - \frac{\lambda v_0 v}{c^2}
+    &\equiv \Delta \lambda
+  \end{align}
+  と計算でき，導線は負に帯電していることがわかる．よって，電荷の受ける力は
+  \begin{align}
+    \bm{F} &= q\frac{\Delta \lambda}{2\pi r \epsilon_0}\bm{e}_r\\
+    &=-qv_0\frac{\mu_0 \lambda v}{2\pi r}\bm{e}_r
+  \end{align}
+  これは先ほどの計算結果と一致している．以上の考察から，電場と磁場は観測する系によって入り混じることがわかる．
 \end{document}
