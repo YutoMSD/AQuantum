@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.11.6)  16 NOV 2024 23:17
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.11.6)  17 NOV 2024 20:01
  restricted system commands enabled.
 **main
 (./main.tex
@@ -2709,17 +2709,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [33]
 Chapter 2.
-(./scattering/solid_angle/main.tex)
-(./scattering/scattering_cross_section/main.tex
+(./scattering/solid_angle/main.tex
 
-LaTeX Warning: Reference `Zendanmenseki' on page 34 undefined on input line 14.
+LaTeX Warning: Reference `solid_angle' on page 34 undefined on input line 11.
 
 
-) (./scattering/scattering_in_classical_mechanics/main.tex
+warning  (file fig/solid_angle.pdf) (pdf inclusion): PDF inclusion: found PDF ve
+rsion '1.7', but at most version '1.5' allowed
+<fig/solid_angle.pdf, id=924, 248.8497pt x 118.5228pt>
+File: fig/solid_angle.pdf Graphic file (type pdf)
+<use fig/solid_angle.pdf>
+Package luatex.def Info: fig/solid_angle.pdf  used on input line 23.
+(luatex.def)             Requested size: 300.29344pt x 143.02599pt.
+) (./scattering/scattering_cross_section/main.tex
+
+LaTeX Warning: Reference `scattering_detection' on page 34 undefined on input l
+ine 4.
+
+
 
 [34
 
-]) (./scattering/scattering_in_qunatum_mechanics/main.tex
+<./fig/solid_angle.pdf>]
+
+LaTeX Warning: Reference `Zendanmenseki' on page 35 undefined on input line 14.
+
+
+
+warning  (file fig/scattering_diagram.pdf) (pdf inclusion): PDF inclusion: found
+ PDF version '1.7', but at most version '1.5' allowed
+<fig/scattering_diagram.pdf, id=948, 428.5611pt x 204.765pt>
+File: fig/scattering_diagram.pdf Graphic file (type pdf)
+<use fig/scattering_diagram.pdf>
+Package luatex.def Info: fig/scattering_diagram.pdf  used on input line 21.
+(luatex.def)             Requested size: 300.29344pt x 143.48761pt.
+) (./scattering/scattering_in_classical_mechanics/main.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2729,7 +2753,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[35]
+[35<./fig/scattering_diagram.pdf>])
+(./scattering/scattering_in_qunatum_mechanics/main.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2741,7 +2766,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [36]
 
-LaTeX Warning: Reference `Helmholts align' on page 37 undefined on input line 1
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[37]
+
+LaTeX Warning: Reference `Helmholts align' on page 38 undefined on input line 1
 12.
 
 
@@ -2754,18 +2789,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[37]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
 [38]
-<fig/IntegralGreen.pdf, id=1020, 292.2117pt x 245.9589pt>
+<fig/IntegralGreen.pdf, id=1039, 292.2117pt x 245.9589pt>
 File: fig/IntegralGreen.pdf Graphic file (type pdf)
 <use fig/IntegralGreen.pdf>
 Package luatex.def Info: fig/IntegralGreen.pdf  used on input line 191.
@@ -2780,7 +2805,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[39<./fig/IntegralGreen.pdf>]) (./scattering/born_approximation/main.tex
+[39])
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2790,7 +2815,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[40]
+[40<./fig/IntegralGreen.pdf>] (./scattering/born_approximation/main.tex
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[41]
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 (Font)              No change on input line 59.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
@@ -2805,7 +2840,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[41](load cache: extra_lmromandemi10-regular.luc)
+[42](load cache: extra_lmromandemi10-regular.luc)
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 143.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 143.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2815,22 +2855,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[42]
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 143.
-LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
-(Font)              No change on input line 143.
-) (./scattering/Partial_wave_Analysis/main.tex
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[43]
+[43]) (./scattering/partial_wave_analysis/main.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2882,13 +2907,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [48]
 
-LaTeX Warning: Reference `LimitOfBessel' on page 49 undefined on input line 342
-.
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-LaTeX Warning: Reference `phaseshift' on page 49 undefined on input line 342.
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-
+[49]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2898,7 +2925,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[49])
+[50])
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2908,23 +2935,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[50]
+[51]
 Chapter 3.
 (./relativistic_quantum_mechanics/special_relativity/main.tex
 
-[51
+[52
 
 ]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.06757pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.06757pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
-
-[52]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2954,7 +2971,134 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[55]) (./RelativisticQM/fixedQM/main.tex)
+[55]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[56]) (./RelativisticQM/fixedQM/main.tex
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[57]
+
+LaTeX Warning: Reference `TDSE' on page 58 undefined on input line 14.
+
+
+LaTeX Warning: Reference `TDSE' on page 58 undefined on input line 14.
+
+
+LaTeX Warning: Reference `4momentum' on page 58 undefined on input line 60.
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[58]
+
+LaTeX Warning: Reference `Klein-Gordon-equation' on page 59 undefined on input 
+line 87.
+
+
+LaTeX Warning: Reference `Klein-Gordon-equation' on page 59 undefined on input 
+line 105.
+
+
+LaTeX Warning: Reference `Dirac-pre' on page 59 undefined on input line 105.
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[59]
+
+LaTeX Warning: Reference `conditoins-of-coefficients-of-dirac' on page 60 undef
+ined on input line 136.
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[60]
+
+LaTeX Warning: Reference `Dirac-pre' on page 61 undefined on input line 173.
+
+
+LaTeX Warning: Reference `conditons-of-coefficients-of-dirac' on page 61 undefi
+ned on input line 228.
+
+
+LaTeX Warning: Reference `Dirac-pre' on page 61 undefined on input line 236.
+
+
+LaTeX Warning: Reference `conditons-of-coefficients-of-dirac' on page 61 undefi
+ned on input line 242.
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[61]
+
+LaTeX Warning: Reference `dirac-eq-matrix' on page 62 undefined on input line 2
+81.
+
+
+LaTeX Warning: Reference `up-spin' on page 62 undefined on input line 365.
+
+
+LaTeX Warning: Reference `down-spin' on page 62 undefined on input line 365.
+
+
+LaTeX Warning: Reference `plane-wave-in-dirac' on page 62 undefined on input li
+ne 406.
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.06757pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.06757pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
+
+[62])
 
 Package caption Warning: Unused \captionsetup[table] on input line 83.
 See the caption package documentation for explanation.
@@ -2977,7 +3121,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.06757pt}.
 
-[56] (./main.aux)
+[63] (./main.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
@@ -3008,14 +3152,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 52656 strings out of 475664
+ 52776 strings out of 475664
  382257,2373549 words of node,token memory allocated
- 11134 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 26 glue, 4 kern, 258 sub_mlist, 1 glyph, 4328 attr
-ibute, 79 glue_spec, 405 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:25,2:104155,3:909,4:1261,5:648,6:123,7:8322,8:96,9:4540,10:34,
+ 11725 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 35 glue, 4 kern, 258 sub_mlist, 1 glyph, 4570 attr
+ibute, 79 glue_spec, 427 attribute_list, 2 write, 14 user_defined nodes
+   avail lists: 1:25,2:103891,3:909,4:1261,5:648,6:123,7:8313,8:96,9:4540,10:34,
 11:20
- 73350 multiletter control sequences out of 65536+600000
+ 73378 multiletter control sequences out of 65536+600000
  124 fonts using 83611263 bytes
  115i,23n,118p,1912b,1233s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-italic.otf><c:/tex
@@ -3050,11 +3194,12 @@ nts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type
-1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (58 pages, 848946 bytes).
+1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/pub
+lic/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (65 pages, 1052050 bytes).
 
-PDF statistics: 1562 PDF objects out of 1728 (max. 8388607)
- 1424 compressed objects within 15 object streams
- 818 named destinations out of 1000 (max. 131072)
+PDF statistics: 1725 PDF objects out of 1728 (max. 8388607)
+ 1568 compressed objects within 16 object streams
+ 904 named destinations out of 1000 (max. 131072)
  296 words of extra memory for PDF output out of 10000 (max. 100000000)
 
