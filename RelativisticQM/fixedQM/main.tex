@@ -280,6 +280,7 @@ Dirac方程式の平面波解
 \end{align}
 を考える．これを\refe{dirac-eq-matrix}に代入する．
 \begin{align}
+  \label{plane-wave-in-dirac}
   \hbar\omega
   \begin{pmatrix}
     a_1\\ a_2\\ a_3\\ a_4
@@ -302,4 +303,188 @@ Dirac方程式の平面波解
     -mc^2 a_1 - \hbar c k a_2
   \end{pmatrix}
 \end{align}
+$a_1$と$a_3$に関する部分を取り出すと
+\begin{align}
+  \label{up-spin}
+  \hbar \omega
+  \begin{pmatrix}
+    a_1\\a_3
+  \end{pmatrix}
+    =
+    \begin{pmatrix}
+      mc^2 & cp\\
+      cp & -mc^2
+    \end{pmatrix}
+    \begin{pmatrix}
+      a_1\\a_3
+    \end{pmatrix}
+\end{align}
+$a_2$と$a_4$に関する部分を取り出すと
+\begin{align}
+  \label{down-spin}
+  \hbar \omega
+  \begin{pmatrix}
+    a_2\\a_4
+  \end{pmatrix}
+    =
+    \begin{pmatrix}
+      mc^2 & -cp\\
+      -cp & -mc^2
+    \end{pmatrix}
+    \begin{pmatrix}
+      a_2\\a_4
+    \end{pmatrix}
+\end{align}
+である．これらの式で
+\begin{align}
+  \begin{pmatrix}
+    a_1\\a_3
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    a_2\\a_4
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    0\\0
+  \end{pmatrix}
+\end{align}
+以外の解が存在するには
+\begin{align}
+  \det
+  \begin{pmatrix}
+    \hbar \omega - mc^2 & \pm cp\\
+    \pm cp & \hbar\omega + mc^2
+  \end{pmatrix}
+  =0
+\end{align}
+が必要である．よって
+\begin{align}
+  \hbar \omega = \pm \sqrt{(mc^2)^2 + (cp)^2}
+\end{align}
+が得られる．したがって，\refe{up-spin}と\refe{down-spin}の固有関数は
+\begin{align}
+  \tan 2\theta = \frac{p}{mc}
+\end{align}
+として\\
+$\hbar\omega = \sqrt{(mc^2)^2 + (cp)^2}$のとき
+\begin{align}
+  \begin{pmatrix}
+    a_1\\a_3
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    \cos\theta\\\sin\theta
+  \end{pmatrix}
+  ,\ 
+  \begin{pmatrix}
+    a_2\\a_4
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    \cos\theta\\-\sin\theta
+  \end{pmatrix}
+\end{align}
+$\hbar\omega = -\sqrt{(mc^2)^2 + (cp)^2}$のとき
+\begin{align}
+  \begin{pmatrix}
+    a_1\\a_3
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    -\sin\theta\\\cos\theta
+  \end{pmatrix}
+  ,\ 
+  \begin{pmatrix}
+    a_2\\a_4
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    \sin\theta\\\cos\theta
+  \end{pmatrix}
+\end{align}
+である．また，\refe{plane-wave-in-dirac}の固有値問題の解は
+\begin{align}
+  \begin{dcases}
+    \begin{pmatrix}
+      a_1\\a_3
+    \end{pmatrix}
+    \neq
+    \begin{pmatrix}
+      0\\0
+    \end{pmatrix}\\
+    \begin{pmatrix}
+      a_2\\a_4
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      0\\0
+    \end{pmatrix}
+  \end{dcases}
+\end{align}
+と
+\begin{align}
+  \begin{dcases}
+    \begin{pmatrix}
+      a_1\\a_3
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      0\\0
+    \end{pmatrix}\\
+    \begin{pmatrix}
+      a_2\\a_4
+    \end{pmatrix}
+    \neq
+    \begin{pmatrix}
+      0\\0
+    \end{pmatrix}
+  \end{dcases}
+\end{align}
+の線形結合で表される．ここではこれら2つの独立解の意味を考えてみる．$p \ll mc$とする．\\
+まず$E=\hbar\omega=\sqrt{m^2c^4 + c^2p^2}$のとき，独立解は
+\begin{align}
+  \psi_{\uparrow}^{+} = \e^{\i(kz-\omega t)}
+  \begin{pmatrix}
+    \cos\theta\\0\\\sin\theta\\0
+  \end{pmatrix}
+  \simeq
+  \e^{\i(kz-\omega t)}
+  \begin{pmatrix}
+    1\\0\\0\\0
+  \end{pmatrix}
+\end{align}
+と
+\begin{align}
+  \psi_{\downarrow}^{+} = \e^{\i(kz-\omega t)}
+  \begin{pmatrix}
+    0\\\cos\theta\\0\\-\sin\theta
+  \end{pmatrix}
+  \simeq
+  \e^{\i(kz-\omega t)}
+  \begin{pmatrix}
+    0\\1\\0\\0
+  \end{pmatrix}
+\end{align}
+である．これらは上2成分のみで表されており，粒子解である．\\
+次に$E=\hbar\omega=-\sqrt{m^2c^4 + c^2p^2}$のとき，独立解は
+\begin{align}
+  \psi_{\uparrow}^{-} = \e^{\i(kz-\omega t)}
+  \simeq
+  \e^{\i(kz-\omega t)}
+  \begin{pmatrix}
+    0\\0\\1\\0
+  \end{pmatrix}
+\end{align}
+と
+\begin{align}
+  \psi_{\downarrow}^{-} = \e^{\i(kz-\omega t)}
+  \simeq
+  \e^{\i(kz-\omega t)}
+  \begin{pmatrix}
+    0\\0\\0\\1
+  \end{pmatrix}
+\end{align}
+である．これらは下2成分のみで表されており，反粒子解である．
+
 \end{document}
