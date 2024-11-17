@@ -1,5 +1,299 @@
 \documentclass{report}
 \input{../../head.tex}
 \begin{document}
-SEにLorentz共変性を持たせよう．
+本節ではShrödinger方程式を修正し，Lorentz共変性を有する\textbf{Dirac方程式}導く．
+
+Shrödinger方程式は，ハミルトニアン$H=\frac{\bm{p}^2}{2m} + V=E$と運動量$\bm{p}$に対して
+\begin{align}
+  E \Rightarrow \i\hbar\frac{\partial}{\partial t} + V,\ \bm{p} \Rightarrow -\i\hbar \nabla 
+\end{align}
+という置き換えをすることにより得られた．
+\begin{align}
+  \i\hbar \frac{\partial}{\partial t}\psi = \qty(-\frac{\hbar^2}{2m}\nabla^2 + V)\psi   \label{TDSE}
+\end{align}
+しかし，\refe{TDSE}はLorentz共変性をもたない，つまり，相対論と矛盾している．なぜなら，相対論によると時間と空間は同等であるが，\refe{TDSE}は
+時間の1階微分，空間の2階微分をなっている．
+
+相対論的な電子の運動を記述する試みの一つに\textbf{Klein-Gordon方程式}がある\footnote{
+  O.Klein(1894-1977)，W.Gordon(??)
+}．
+まずはこれを導いてみる．静止している$X$系と一定の速さ$v$で動く$X'$系を考える．$t=\dd{t}$における$X'$系の原点$O'$の座標は
+\begin{align}
+  \begin{dcases}
+    \text{$X'$系}\ &(c\dd{\tau}, 0, 0, 0)\\
+    \text{$X$系}\ &(c\dd{t}, \dd{x}, \dd{y}, \dd{z})
+  \end{dcases}
+\end{align}
+である．世界長さ不変性より
+\begin{align}
+  \dd{x}^2 + \dd{y}^2 + \dd{z}^2 - (c\dd{t})^2 = -(c\dd{\tau})^2
+\end{align}
+が成り立つ．上式に$m^2$を乗じ，$(\dd{\tau}^2)$で割る．
+\begin{align}
+  \qty(m \dv{x}{t})^2 + \qty(m \dv{z}{t})^2 + \qty(m \dv{y}{t})^2 - \qty(mc \dv{t}{\tau})^2 = -(mc)^2 
+\end{align}
+左辺の第1項から第3項は運動量$p_x,p_y,p_z$と同じ形をしているので
+\begin{align}
+  \bm{p}^2 \equiv \qty(m \dv{x}{t})^2 + \qty(m \dv{z}{t})^2 + \qty(m \dv{y}{t})^2
+\end{align}
+と置く．左辺第4項はとりあえず$p_0$と置いておく．つまり，
+\begin{align}
+  \bm{p}^2 - p_0^2 = -(mc)^2 \label{4momentum}
+\end{align}
+である．
+$p_0$について計算を進めると，
+\begin{align}
+  \bm{p}^2 - p_0^2 &= -(mc)^2\\
+  p_0^2 &= \bm{p}^2 + (mc)^2\\
+  p_0 &= \sqrt{\bm{p}^2 + (mc)^2}\\
+   &= mc\sqrt{1 + \frac{\bm{p}^2}{m^2c^2}}\\
+   &\simeq mc + \frac{1}{2}mc\frac{\bm{p}^2}{m^2c^2}\ (\abs{\bm{p}} \ll mc^2)\\
+   &= mc + \frac{\bm{p}^2}{2mc}
+\end{align}
+を得る．最後の式の右辺第2項はエネルギーを$c$で割ったものになっていることに気づく．よって，$p_0$に$c$を乗じたものはエネルギーを表すと解釈する．
+したがって，
+\begin{align}
+  E \equiv p_0c = mc^2 + \frac{\bm{p}^2}{2m}
+\end{align}
+が得られる．これが相対論的な粒子のエネルギーであり，$mc^2$は\textbf{静止質量エネルギー}と呼ばれている\footnote{有名な$E=mc^2$である．}．
+
+\refe{4momentum}に$p_0 = E/c$を代入する．
+\begin{align}
+  \bm{p}^2 - \qty(\frac{E}{c})^2 = -(mc)^2
+\end{align}
+これに対し素直に
+\begin{align}
+  E \Rightarrow \i\hbar\frac{\partial}{\partial t} + V,\ \bm{p} \Rightarrow -\i\hbar \nabla 
+\end{align}
+という量子化を実行し，波動関数に作用させる．
+\begin{align}
+  \qty(-\hbar^2\nabla^2 + \frac{\hbar^2}{c^2}\frac{\partial^2}{\partial t^2})\psi = -m^2c^2\psi
+\end{align}
+これを変形するとKlein-Gordon方程式
+\begin{align}
+  \qty(\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \nabla^2 + \qty(\frac{mc}{\hbar})^2)\psi = 0 \label{Klein-Gordon-equation}
+\end{align}
+が得られる．また，これはダランベルシアン(d'Alembertian)$\Box = \frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \nabla^2 = \partial^\mu\partial_\mu = \partial^2$を用いて，
+\begin{align}
+  \qty(\Box + \qty(\frac{mc}{\hbar})^2)\psi = 0
+\end{align}
+と書くことができる．
+\begin{itembox}[l]{Klein-Gordon方程式}
+  \begin{equation}
+    \qty(\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \nabla^2 + \qty(\frac{mc}{\hbar})^2)\psi = 0
+  \end{equation}
+\end{itembox}
+Klein-Gordon方程式は時間と空間を同等に扱っており，Lorentz共変性を満たしている．しかし，これには波動関数の確率解釈が
+成り立たないという問題がある．これは以下のように説明される．\refe{Klein-Gordon-equation}は2階の微分方程式である．よって，
+$\psi$と$\frac{\partial \psi}{\partial t}$は独立に指定される．そのため，粒子の存在確率が保存するためには
+\begin{align}
+  \frac{\r{d}}{\dd{t}}\qty[\int \abs{\psi(\bm{r}, t)} \dd{\bm{r}}^2] = 0
+\end{align}
+が必要であるが，$\psi$と$\frac{\partial \psi}{\partial t}$が独立に決められるため
+\begin{align}
+  &\frac{\r{d}}{\dd{t}}\qty[\int \abs{\psi(\bm{r}, t)} \dd{\bm{r}}^2]\\
+  &= \int \qty[\frac{\partial \psi^{*}}{\partial t} + \psi^{*}\frac{\partial \psi}{\partial t}] \dd{\bm{r}} \neq 0
+\end{align}
+となってしまう．よって，波動関数の確率解釈が成り立たないため，量子状態を記述する方程式として不適である\footnote{Klein-Gordon方程式はスピン0の粒子の場の方程式である．}．
+
+以上の議論から，相対論的粒子の運動を記述する方程式は
+時間と空間の1階微分であることが必要だと推察される．Diracはこの問題を次のように解決した．
+まずは
+\begin{align}
+  \qty(\frac{1}{c}\frac{\partial}{\partial t} + \hat{\bm{\alpha}} \cdot \nabla + \i\hat{\beta} \frac{mc}{\hbar})\psi = 0 \label{Dirac-pre}
+\end{align}
+を出発点とする．\refe{Klein-Gordon-equation}と\refe{Dirac-pre}を見比べて演算子が
+\begin{align}
+  \qty(\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \nabla^2 + \qty(\frac{mc}{\hbar})^2) = \qty(\frac{1}{c}\frac{\partial}{\partial t} - \hat{\bm{\alpha}} \cdot \nabla - \i\hat{\beta} \frac{mc}{\hbar})\qty(\frac{1}{c}\frac{\partial}{\partial t} + \hat{\bm{\alpha}} \cdot \nabla + \i\hat{\beta} \frac{mc}{\hbar})
+\end{align}
+のように因数分解できればよいとわかる\footnote{$\alpha$(の各成分)と$\beta$が交換関係を満たす数字であるか否かは明確ではないのでハットをつけた．}．
+見やすくするために少し表記を変える．
+\begin{align}
+  \frac{1}{c}\frac{\partial}{\partial t} + \hat{\bm{\alpha}} \cdot \nabla + \i\hat{\beta} \frac{mc}{\hbar} = \frac{1}{c}\partial_t + \sum_{i=x,y,z} \hat{\alpha}_i \partial_i + \i\hat{\beta} \frac{mc}{\hbar}
+\end{align}
+こうすると，
+\begin{align}
+  &\qty(\frac{1}{c}\frac{\partial}{\partial t} - \hat{\bm{\alpha}} \cdot \nabla - \i\hat{\beta} \frac{mc}{\hbar})\qty(\frac{1}{c}\frac{\partial}{\partial t} + \hat{\bm{\alpha}} \cdot \nabla + \i\hat{\beta} \frac{mc}{\hbar}) \\
+  &=\qty(\frac{1}{c}\partial_t - \sum_{i=x,y,z} \hat{\alpha}_i \partial_i - \i\hat{\beta} \frac{mc}{\hbar}) \qty(\frac{1}{c}\partial_t + \sum_{j=x,y,z} \hat{\alpha}_j \partial_j + \i\hat{\beta} \frac{mc}{\hbar})\\
+  &= \frac{1}{c^2}\partial_t^2 + \frac{1}{c} \partial_t \qty(-\sum_{i=x,y,z} \hat{\alpha}_i \partial_i + \sum_{j = x,y,z} \hat{\alpha}_j \partial_j) + \frac{1}{c}\i\hat{\beta}\frac{mc}{\hbar} - \frac{1}{c}\i\hat{\beta}\frac{mc}{\hbar} 
+  - \sum_{i=x,y,z} \sum_{j=x,y,z} \hat{\alpha}_i \hat{\alpha}_j \partial_i \partial_j\\ 
+  &-\i\frac{mc}{\hbar}\qty(\sum_{i=x,y,z} \hat{\alpha}_i \hat{\beta} \partial_i + \sum_{j=x,y,z} \hat{\beta} \hat{\alpha}_j \partial_j)
+  + \hat{\beta}^2\qty(\frac{mc}{\hbar})^2\\
+  &= \frac{1}{c^2}\partial_t^2 - \sum_{i=x,y,z} \hat{\alpha_i}^2 \partial_i^2 - \sum_{i=x,y,z} \sum_{j=x,y,z,\ i \neq j} \hat{\alpha}_i \hat{\alpha}_j \partial_i \partial_j
+  -\i\frac{mc}{\hbar}\qty(\sum_{i=x,y,z} \qty( \hat{\alpha}_i \hat{\beta} + \hat{\beta} \hat{\alpha}_i )\partial_i) + \hat{\beta}^2\qty(\frac{mc}{\hbar})^2
+\end{align}
+を得る．よって，この因数分解が成り立つには$\bm{\hat{\alpha}}$と$\hat{\beta}$が
+\begin{align}
+  \label{conditons-of-coefficients-of-dirac}
+  \begin{dcases}
+    \sum_{i=x,y,z} \hat{\alpha}_i^2 = \hat{\beta}^2 = 1\\
+    \hat{\alpha}_j \hat{\alpha}_k + \hat{\alpha}_k \hat{\alpha}_j = 0\ (j \neq k)\\
+    \hat{\alpha}_j \hat{\beta} + \hat{\beta} \hat{\alpha}_j = 0
+  \end{dcases}
+\end{align}
+を満たさなければならない．この条件を満たすには$\bm{\hat{\alpha}}$と$\hat{\beta}$が行列である必要がある\footnote{行列であることが明確なのでハットを外す．}．
+
+次に，$\alpha_i$と$\beta$を求めていく\footnote{Dirac-Pauli表示まで読み飛ばしてよい．}．ハミルトニアンはエルミート演算子なので，$\alpha_i$，$\beta$もエルミート行列である．さらに，\refe{conditoins-of-coefficients-of-dirac}より，
+\begin{align}
+  \alpha_i^2 = I,\ \beta^2 = I
+\end{align}
+である．まずは$\beta$に関して考える．エルミート行列は適当なユニタリ行列によって対角化される．適当なユニタリ行列を$V$として
+\begin{align}
+  \beta' = V^\dagger \beta V = \r{diag}(b_1, b_2, \dots, b_n)
+\end{align}
+とできる．diagは()内を対角成分とする対角行列を表す．$n$は行列の次元である．
+さらに
+\begin{align}
+  \beta'^2 = (V^\dagger \beta V)^2 = V^\dagger \beta^2 V = \r{diag}(b_1^2,b_2^2,\dots,b_n^2)
+\end{align}
+である．$\beta^2 = I$より，
+\begin{align}
+  \beta'^2 = V^\dagger I V = I
+\end{align}
+だから，
+\begin{align}
+  b_1^2 = b_2^2 = \cdots = b_n^2 = 1
+\end{align}
+を得る．よって，$\beta$の固有値は$\pm1$であることがわかる．また，
+\begin{align}
+  \hat{\alpha}_j \hat{\beta} + \hat{\beta} \hat{\alpha}_j = 0
+\end{align}
+より，
+\begin{align}
+  \beta = - \alpha_i\beta\alpha_i^{-1} = -\alpha_i\beta\alpha_i
+\end{align}
+が成り立つ．これを用いて$\beta$のトレースを計算する．
+\begin{align}
+  \tr(\beta) &= \tr(\beta I)\\
+  &= \tr(\beta \alpha_i^2)\\
+  &= \tr(\alpha_i\beta\alpha_i) \\
+  &= -\tr(\beta)
+\end{align}
+よって，$\beta$の対角成分の和は0である．したがって，$\beta$は偶数次元の行列であることがわかる．以上の議論は$\alpha^i$でも同様である．
+ここで\refe{Dirac-pre}を眺めてみると，$m\neq0$の場合，独立な4つの行列が必要なことが確認できる．偶数次元で最小行列は2行2列である．しかし，2行2列で独立なエルミート行列は3つ(Pauli行列など)しかない．
+よって，質量をもつ粒子の運動を記述するのに必要なエルミート行列の次元は4以上であることがわかる\footnote{質量0の粒子を記述するWeyl行列は2行2列の行列を用いる．}．
+
+その中の一つが\textbf{Dirac-Pauli表示}で，
+以下のように表される\footnote{実際に計算して確かめよ．}．
+\begin{align}
+  \alpha_x &= 
+  \begin{pmatrix}
+    0 & 0 & 0 & 1\\
+    0 & 0 & 1 & 0\\
+    0 & 1 & 0 & 0\\
+    1 & 0 & 0 & 0\\
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    0 & \sigma_x\\
+    \sigma_x & 0
+  \end{pmatrix}\\
+  \alpha_y &= 
+  \begin{pmatrix}
+    0 & 0 & 0 & -\i\\
+    0 & 0 & \i & 0\\
+    0 & -\i & 0 & 0\\
+    \i & 0 & 0 & 0\\
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    0 & \sigma_y\\
+    \sigma_y & 0
+  \end{pmatrix}\\
+  \alpha_z &= 
+  \begin{pmatrix}
+    0 & 0 & 1 & 0\\
+    0 & 0 & 0 & -1\\
+    1 & 0 & 0 & 0\\
+    0 & -1 & 0 & 0\\
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    0 & \sigma_z\\
+    \sigma_z & 0
+  \end{pmatrix}\\
+  \beta &= 
+  \begin{pmatrix}
+    1 & 0 & 0 & 1\\
+    0 & 1 & 0 & 0\\
+    0 & 0 & -1 & 0\\
+    0 & 0 & 0 & -1\\
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    I & 0\\
+    0 & -I
+  \end{pmatrix}
+\end{align}
+4行4列のエルミート行列で\refe{conditons-of-coefficients-of-dirac}を満たすものは，これらか，それのユニタリ同値なものしかない．
+
+\refe{Dirac-pre}を変形することで\textbf{Dirac方程式}が得られる．
+\begin{itembox}[l]{Dirac方程式}
+\begin{align}
+  \qty(\i\hbar \frac{\partial}{\partial t} + \i \hbar c \bm{\alpha}\cdot \nabla - \beta mc^2)\psi = 0
+\end{align}
+\end{itembox}
+$\bm{\alpha},\beta$は\refe{conditons-of-coefficients-of-dirac}を満たす．また，Dirac-Pauli表示を用いると
+\begin{align}
+  \i\hbar \frac{\partial}{\partial t}\psi = 
+  \begin{pmatrix}
+    mc^2 I & -\i\hbar c \bm{\sigma\cdot\nabla}\\
+    -\i\hbar c \bm{\sigma\cdot\nabla} & -mc^2 I
+  \end{pmatrix}
+  \psi
+\end{align}
+と書ける．成分表示で
+\begin{align}
+  \label{dirac-eq-matrix}
+  \i\hbar\frac{\partial}{\partial t}\psi =
+  \begin{pmatrix}
+    mc^2 & 0 & -\i\hbar c\partial_z & -\i\hbar c(\partial_x -\i \partial_y)\\
+    0 & mc^2 & -\i\hbar c(\partial_x +\i \partial_y) & \i\hbar c\partial_z \\
+    -\i\hbar c\partial_z & -\i\hbar c(\partial_x -\i \partial_y) & -mc^2 & 0\\
+    -\i\hbar c(\partial_x +\i \partial_y) & \i\hbar c\partial_z & 0 & -mc^2
+  \end{pmatrix}
+  \psi
+\end{align}
+である．
+
+Dirac方程式を見ると，波動関数も4成分必要であることがわかる．つまり，
+\begin{align}
+  \psi = 
+  \begin{pmatrix}
+    \psi_1\\\psi_2\\\psi_3\\\psi_4
+  \end{pmatrix}
+\end{align}
+である．このような量を\textbf{Dirac spinor}という．
+
+Dirac方程式の平面波解
+\begin{align}
+  \psi = \e^{\i(kz - \omega t)}
+  \begin{pmatrix}
+    a_1\\a_2\\a_3\\a_4
+  \end{pmatrix}
+\end{align}
+を考える．これを\refe{dirac-eq-matrix}に代入する．
+\begin{align}
+  \hbar\omega
+  \begin{pmatrix}
+    a_1\\ a_2\\ a_3\\ a_4
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    mc^2 & 0 & \hbar ck & 0\\
+    0 & mc^2 & 0 & -\hbar ck \\
+    \hbar ck & 0 & -mc^2 & 0\\
+    0 & -\hbar ck & 0 & -mc^2
+  \end{pmatrix}
+  \begin{pmatrix}
+    a_1\\a_2\\a_3\\a_4
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    mc^2 a_1 + \hbar c k a_3\\
+    mc^2 a_2 - \hbar c k a_4\\
+    -mc^2 a_3 + \hbar c k a_1\\
+    -mc^2 a_1 - \hbar c k a_2
+  \end{pmatrix}
+\end{align}
 \end{document}
