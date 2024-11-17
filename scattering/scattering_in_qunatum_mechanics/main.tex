@@ -18,7 +18,12 @@
   \begin{align}
     \psi(\bm{r}) = \e^{\i kz} + f(\theta) \frac{\e^{\i kr}}{r}
   \end{align}
-  を満たす式(\ref{SE_Scattering})の定常解を求めることである．$f(\theta)$を散乱振幅という．
+  を満たす式(\ref{SE_Scattering})の定常解を求めることである．$f(\theta)$を散乱振幅という．上式は重要なので強調しておく．
+  \begin{itembox}[l]{散乱問題の境界条件}
+    \begin{equation}
+      \psi(\bm{r}) = \e^{\i kz} + f(\theta) \frac{\e^{\i kr}}{r}
+    \end{equation}
+  \end{itembox}
 
   この問題を解くための準備として確率密度($\rho = \psi^{*} \psi$)の時間変化を考える．
   \begin{align}
@@ -37,7 +42,9 @@
   \begin{align}
     \frac{\partial}{\partial t} \rho = -\nabla \cdot \bm{j}
   \end{align}
-  を得る．
+  を得る\footnote{
+   両辺に電荷をかければ電荷保存の法則となる． 
+  }．
 
   次に微分断面積と散乱振幅の関係を考える．
   入射波は$\psi_{\r{in}} = \e^{\i kz}$である．入射波の確率流密度は
@@ -188,7 +195,7 @@
 
   \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\columnwidth]{fig/IntegralGreen.pdf}
+    \includegraphics[width=0.7\columnwidth]{fig/IntegralGreen.pdf}
     \caption{積分経路}
     \label{Integral}
   \end{figure}

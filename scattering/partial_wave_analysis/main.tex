@@ -47,6 +47,7 @@
     \psi(\bm{r}) = \e^{\i kz} + f(\theta)\frac{\e^{\i kr}}{r}
   \end{align}
   を部分波展開する\footnote{ここから式(\ref{PartialWave})までは飛ばしても良い．}．
+  以下では波動関数をLegendre多項式で基底展開する手順を説明する．
   Helmholtz方程式
   \begin{align}
     [\nabla^2 + \kappa^2]\psi(\bm{r}) = 0
@@ -61,7 +62,7 @@
   \begin{align}
     \psi(r,\theta,\phi) = \sum_{l=0}^{\infty}\sum_{m=-l}^{l}C_{lm}R(r)Y_{l,m}(\theta,\phi)
   \end{align}
-  と表される．ここで，球面調和関数とLgendre陪関数，Legendre多項式は以下の関係にある．
+  と表される．ここで，球面調和関数とLegendre陪関数，Legendre多項式は以下の関係にある．
   \begin{align}
     Y_{l,m}(\theta,\phi) &= (-1)^m \qty[\frac{(2l+1)}{4\pi}\frac{(l-m)!}{(l+m)!}]^{1/2}P_l^m(\cos\theta)\exp(\i m\phi)\\
     P_l^m(x) &= (1-x^2)^{m/2} \frac{\r{d}^m P_l(x)}{\dd{x}^m}
@@ -145,9 +146,9 @@
   \begin{align}
     \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
   \end{align}
-  と展開される．したがって，部分波展開した散乱の波動関数は
+  と展開される．Legendre多項式は完全性と直交性をもつためこの展開は妥当である．したがって，部分波展開した散乱の波動関数は
   \begin{align}
-    \psi(\bm{r}) = \e^{\i kr\cos\theta} = \sum_{l=0}^{\infty} (2l+1)\i^l j_l(kr)P_l(\cos\theta) + \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
+    \psi(\bm{r}) = \sum_{l=0}^{\infty} (2l+1)\i^l j_l(kr)P_l(\cos\theta) + \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
   \end{align}
   である．
   \begin{itembox}[l]{部分波展開した散乱の波動関数}
@@ -175,7 +176,8 @@
 
   以上の議論から，部分波展開を用いた散乱問題は未定係数$a_l$を求めることに帰着する．
 
-  量子力学における散乱では，散乱の前後で位相が変化する．これを\textbf{位相シフト}とよぶ．例えば，ポテンシャル
+  量子力学における散乱では，散乱の前後で位相が変化する．これを\textbf{位相シフト}(Phase shift)とよぶ．以下の1次元の例で位相シフトを確認する．
+  ポテンシャル
   \begin{align}
     V(x) = 
     \begin{dcases}
