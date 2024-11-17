@@ -1,26 +1,27 @@
 \documentclass{report}
 \input{../../head.tex}
 \begin{document}
-単位時間単位面積当たり$N$個の粒子を$z$軸方向に入射する．図\ref{scattering_detection}に散乱の様子を示す．単位時間内に散乱体からの位置$(r,\theta,\phi)$にある面積$\dd{S}$の検出器に到達する粒子数は
-\begin{align}
-  \dd{N} \propto N \frac{\dd{S}}{r^2} = N\dd{\Omega}
-\end{align}
-を満たす．比例係数を$\sigma (\theta, \phi)$とする．
-\begin{align}
-  \dd{N} = \sigma(\theta, \phi) N \dd{\Omega}
-\end{align}
-この$\sigma(\theta ,\phi)$を\textbf{微分断面積}という．
-散乱が$z$軸まわりに軸対称なとき，$\phi$依存性を取り除き$\sigma(\theta, \phi) = \sigma (\theta)$とできる．
-このとき，全断面積を式(\ref{Zendanmenseki})のように定義する．
-\begin{align}
-  \sigma^{\r{tot}} = \int \sigma(\theta) \dd{\Omega} = 2\pi \int_{0}^{\pi} \sigma(\theta) \sin \theta \dd{\theta}
-\end{align}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.6\columnwidth]{fig/scattering_diagram.pdf}
-  \caption{散乱体と検出器}
-  \label{scattering_detection}
-\end{figure}
-
+  単位時間単位面積当たり$N$個の粒子を$z$軸方向に入射する．
+  \refe{scattering_detection}に散乱の様子を示す．
+  単位時間内に散乱体からの位置$(r,\theta,\phi)$にある面積$\dd{S}$の検出器に到達する粒子数は，
+  \begin{align}
+    \dd{N} \propto N \frac{\dd{S}}{r^2} = N\dd{\Omega}
+  \end{align}
+  を満たす．比例係数を$\sigma (\theta, \phi)$とすると，
+  \begin{align}
+    \dd{N} = \sigma(\theta, \phi) N \dd{\Omega}
+  \end{align}
+  と書ける．
+  $\sigma(\theta, \phi)$を\textbf{微分断面積}という．
+  散乱が$z$軸まわりに軸対称なとき，$\phi$依存性を取り除き$\sigma(\theta, \phi) = \sigma (\theta)$とできる．
+  また，全断面積を，
+  \begin{align}
+    \sigma^{\r{tot}} \coloneqq \int \sigma(\theta) \dd{\Omega} = 2\pi \int_{0}^{\pi} \sigma(\theta) \sin \theta \dd{\theta}\label{total-area}
+  \end{align}
+  のように定義する．
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.6\columnwidth]{fig/scattering_diagram.pdf}
+    \caption{散乱体と検出器}\label{scattering_detection}
+  \end{figure}
 \end{document}
