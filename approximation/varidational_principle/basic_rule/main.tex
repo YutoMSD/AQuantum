@@ -11,49 +11,48 @@
   \end{screen}
   近似法である．
   ここでは，変分法の基本原理を説明する．
-  \begin{myprop}{変分法の基本原理}{principle_of_varidation}
+  \begin{itembox}[l]{変分法の基本原理}
     任意の状態ベクトル$\ket{\psi}$に対して$\ket{\psi}$でのエネルギー関数$E(\psi)$について，
     \begin{align}
       E(\psi) = \cfrac{\mel{\psi}{\hat{H}}{\psi}}{\braket{\psi}} \geq E_0 \label{minimum}
     \end{align}
     なる不等式が成り立つ．
     ただし$E_0$は$\hat{H}$の固有エネルギーの中で最低のものである．
-    \tcblower
-    \begin{proof}
-      任意の状態ベクトル$\ket{\psi}$をHilbert空間の基底$\ket{k}$を用いて，
-      \begin{align}
-        \ket{\psi} = \sum_{k} c_k\ket{k} \label{basis_expansion}
-      \end{align}
-      と展開する．左から$\bra{k'}$を作用させると
-      \begin{align}
-        \braket{k'}{\psi} = \sum_{k}c_k\bra{k'}\ket{k} = \sum_{k}c_k\delta_{k',k} = c_{k'} \label{basis_expansion2}
-      \end{align}
-      を得る．\refe{basis_expansion2}は任意の$k$に対して成り立つので\refe{basis_expansion}は以下のように変形できる．
-      \begin{align}
-        \ket{\psi} &= \sum_{k}\braket{k}{\psi}\ket{k}\\
-        &= \sum_{k}\ket{k}\bra{k}\ket{\psi} \label{basis_expansion3}
-      \end{align}
-      \refe{basis_expansion3}を用いて\refe{minimum}の分子を以下のように変形する．
-      \begin{align}
-        \mel{\psi}{\hat{H}}{{\psi}} &= \bra{\psi}\hat{H}\sum_{k}\ket{k}\braket{k}{\psi}\\
-        &= \sum_{k}\bra{\psi}\hat{H}\ket{k}\braket{k}{\psi} \\
-        &= \sum_{k}E_k\bra{\psi}\ket{k}\braket{k}{\psi} \\
-        &= \sum_{k}E_k\abs{\braket{k}{\psi}}^2
-      \end{align}
-      また，
-      \begin{align}
-        \braket{\psi}{\psi}=\sum_{k}\abs{\braket{k}{\psi}}^2
-      \end{align}
-      であるから，
-      \begin{align}
-        E(\psi) &= \cfrac{\mel{\psi}{\hat{H}}{\psi}}{\braket{\psi}{\psi} } \\ 
-        &= \cfrac{\sum_{k}E_k\abs{\braket{k}{\psi}}^2}{\sum_{k}\abs{\braket{k}{\psi}}^2} \\ 
-        &\geq \cfrac{\sum_{k}E_0\abs{\braket{k}{\psi}}^2}{\sum_{k}\abs{\braket{k}{\psi}}^2} = E_0
-      \end{align}
-      を得る．
-    \end{proof}
-  \end{myprop}
-  \prref{principle_of_varidation}より．あらゆる状態ベクトル$\ket{\psi}$のエネルギーは基底エネルギー$E_0$以上である．
+  \end{itembox}
+  \begin{proof}
+    任意の状態ベクトル$\ket{\psi}$をHilbert空間の基底$\ket{k}$を用いて，
+    \begin{align}
+      \ket{\psi} = \sum_{k} c_k\ket{k} \label{basis_expansion}
+    \end{align}
+    と展開する．左から$\bra{k'}$を作用させると
+    \begin{align}
+      \braket{k'}{\psi} = \sum_{k}c_k\bra{k'}\ket{k} = \sum_{k}c_k\delta_{k',k} = c_{k'} \label{basis_expansion2}
+    \end{align}
+    を得る．\refe{basis_expansion2}は任意の$k$に対して成り立つので\refe{basis_expansion}は以下のように変形できる．
+    \begin{align}
+      \ket{\psi} &= \sum_{k}\braket{k}{\psi}\ket{k}\\
+      &= \sum_{k}\ket{k}\bra{k}\ket{\psi} \label{basis_expansion3}
+    \end{align}
+    \refe{basis_expansion3}を用いて\refe{minimum}の分子を以下のように変形する．
+    \begin{align}
+      \mel{\psi}{\hat{H}}{{\psi}} &= \bra{\psi}\hat{H}\sum_{k}\ket{k}\braket{k}{\psi}\\
+      &= \sum_{k}\bra{\psi}\hat{H}\ket{k}\braket{k}{\psi} \\
+      &= \sum_{k}E_k\bra{\psi}\ket{k}\braket{k}{\psi} \\
+      &= \sum_{k}E_k\abs{\braket{k}{\psi}}^2
+    \end{align}
+    また，
+    \begin{align}
+      \braket{\psi}{\psi}=\sum_{k}\abs{\braket{k}{\psi}}^2
+    \end{align}
+    であるから，
+    \begin{align}
+      E(\psi) &= \cfrac{\mel{\psi}{\hat{H}}{\psi}}{\braket{\psi}{\psi} } \\ 
+      &= \cfrac{\sum_{k}E_k\abs{\braket{k}{\psi}}^2}{\sum_{k}\abs{\braket{k}{\psi}}^2} \\ 
+      &\geq \cfrac{\sum_{k}E_0\abs{\braket{k}{\psi}}^2}{\sum_{k}\abs{\braket{k}{\psi}}^2} = E_0
+    \end{align}
+    を得る．
+  \end{proof}
+  つまり，あらゆる状態ベクトル$\ket{\psi}$のエネルギーは基底エネルギー$E_0$以上である．
   \begin{myex}{}{}
     ポテンシャル$V(x)=\lambda x^4$中に粒子がある系を考える．
     この系のハミルトニアンは

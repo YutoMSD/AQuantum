@@ -63,7 +63,7 @@
     \end{align}
     と近似できる．これを電気双極子近似という．この近似を用いると，
     \begin{align}
-      \mel**{f}{\e^{\i \bm{k} \cdot \bm{r}}}{{i}} \simeq \mel**{f}{p_x}{i}
+      \mel**{f}{\e^{\i \bm{k} \cdot \bm{r}}\hat{p}_x}{{i}} \simeq \mel**{f}{\hat{p}_x}{i}
     \end{align}
     を得る．さらに
     \begin{align}
@@ -73,12 +73,12 @@
     \begin{align}
       \mel**{f}{\hat{p}_x}{i} &= \frac{m}{\i\hbar} \mel**{f}{\qty[\hat{x}, \hat{H}^{(0)}]}{i} \\ 
       &= \frac{m}{\i\hbar} \qty(\mel**{f}{\hat{x}E_i}{i} - \mel**{f}{E_f\hat{x}}{i}) \\ 
-      &= \frac{m}{\i\hbar} (E_i - E_f)\mel**{f}{x}{i}
+      &= \frac{m}{\i\hbar} (E_i - E_f)\mel**{f}{\hat{x}}{i}
     \end{align}
     を得る．よって，電磁場による単位時間当たりの遷移確率
     \begin{align}
       \omega_{i \to f} = \frac{2\pi}{\hbar^3} (eA_0)^2 (E_i - E_f)^2 \abs{\mel**{f}{\hat{x}}{i}}^2 \delta(E_f - E_i - \hbar\omega) 
     \end{align}
-    を得る．これは$\mel**{f}{x}{i} \neq 0$のときのみ$\omega_{i\to f} \neq 0$という選択則を表している．
+    を得る．これは$\mel**{f}{\hat{x}}{i} \neq 0$のときのみ$\omega_{i\to f} \neq 0$という選択則を表している．
   \end{myex}
 \end{document}
