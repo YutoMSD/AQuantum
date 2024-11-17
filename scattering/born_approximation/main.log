@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.11.6)  17 NOV 2024 20:27
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.11.6)  17 NOV 2024 22:09
  restricted system commands enabled.
 **main
 (./main.tex
@@ -2224,6 +2224,11 @@ LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 (Font)              No change on input line 59.
 LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
 (Font)              No change on input line 59.
+<fig/yukawa_potential.jpg, id=14, 1124.2pt x 843.15pt>
+File: fig/yukawa_potential.jpg Graphic file (type jpg)
+<use fig/yukawa_potential.jpg>
+Package luatex.def Info: fig/yukawa_potential.jpg  used on input line 78.
+(luatex.def)             Requested size: 282.02164pt x 211.50745pt.
 
 
 
@@ -2237,12 +2242,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
 ]
-<fig/yukawa_potential.jpg, id=58, 1124.2pt x 843.15pt>
-File: fig/yukawa_potential.jpg Graphic file (type jpg)
-<use fig/yukawa_potential.jpg>
-Package luatex.def Info: fig/yukawa_potential.jpg  used on input line 79.
-(luatex.def)             Requested size: 300.29344pt x 225.22197pt.
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2315,14 +2314,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51309 strings out of 475664
- 244637,2373549 words of node,token memory allocated
+ 51310 strings out of 475664
+ 244644,2373549 words of node,token memory allocated
  1323 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 5 glue, 4 kern, 1 glyph, 258 attribute, 77 glue_sp
 ec, 35 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:40,2:44953,3:577,4:1289,5:1059,6:69,7:7476,8:73,9:4342,10:10,1
+   avail lists: 1:43,2:47540,3:600,4:1306,5:1063,6:73,7:7615,8:74,9:4402,10:19,1
 1:10
- 72971 multiletter control sequences out of 65536+600000
+ 72972 multiletter control sequences out of 65536+600000
  94 fonts using 47493511 bytes
  115i,16n,118p,1918b,1073s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-italic.otf><c:/tex
@@ -2347,10 +2346,10 @@ c/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texliv
 e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on main.pdf (4 pages, 265811 bytes).
+Output written on main.pdf (4 pages, 268283 bytes).
 
-PDF statistics: 225 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
+PDF statistics: 226 PDF objects out of 1000 (max. 8388607)
+ 175 compressed objects within 2 object streams
  61 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

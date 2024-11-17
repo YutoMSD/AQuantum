@@ -57,6 +57,7 @@
   V(r) = V_0 \frac{\e^{-\mu r}}{\mu r}
 \end{align}
 による散乱を考える\footnote{湯川秀樹(1907-1981)}．これは，$V(r)$の到達距離が$\frac{1}{\mu}$ほどであり，核子同士に働く力を表す．物質中では，伝導電子に遮蔽された不純物のCoulombポテンシャルを表す．
+$\mu = 1,2$及びCoulombポテンシャルのグラフを\reff{yukawa-potential-graph}に示す．
 このポテンシャルの下で散乱振幅を求める．
 \begin{align}
   f^{(1)}(\theta) &= -\frac{1}{4\pi} \frac{2m}{\hbar^2} \iiint \e^{-\i qr'\cos\theta'}V(r') r'^2 \sin\theta'\dd{r'}\dd{\theta'}\dd{\phi'}\\
@@ -71,15 +72,14 @@
   &= \qty(\frac{2m V_0}{\hbar^2 \mu})^2 \frac{1}{(\mu^2 + 4K^2 \sin^2\theta/2)^2}
 \end{align}
 である．ここで，$\bm{k'}$と$\bm{k}$のなす角が$\theta$であるため$q = 2k\sin\theta/2$であることを用いた．
- \end{myex}
 
- 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\columnwidth]{fig/yukawa_potential.jpg}
-  \caption{湯川ポテンシャル}
-  \label{yukawa-potential-fig}
+  \includegraphics[width = 0.6\columnwidth]{fig/yukawa_potential.jpg}
+  \caption{湯川ポテンシャルとCoulombポテンシャルの比較}\label{yukawa-potential-graph}
 \end{figure}
+
+ \end{myex}
 
 \begin{myex}{Rutherford散乱(Griffith Example 10.6)}{}
   湯川ポテンシャルで$V_0 = \frac{q_1q_2}{4\pi \epsilon_0}$，$\mu = 0$とするとCoulombポテンシャル
