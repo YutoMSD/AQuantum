@@ -1,7 +1,7 @@
 \documentclass{report}
 \input{../../head.tex}
 \begin{document}
-単位時間単位面積当たり$N$個の粒子を$z$軸方向に入射する．単位時間内に散乱体からの位置$(r,\theta,\phi)$にある面積$\dd{S}$の検出器に到達する粒子数は
+単位時間単位面積当たり$N$個の粒子を$z$軸方向に入射する．図\ref{scattering_detection}に散乱の様子を示す．単位時間内に散乱体からの位置$(r,\theta,\phi)$にある面積$\dd{S}$の検出器に到達する粒子数は
 \begin{align}
   \dd{N} \propto N \frac{\dd{S}}{r^2} = N\dd{\Omega}
 \end{align}
@@ -15,4 +15,12 @@
 \begin{align}
   \sigma^{\r{tot}} = \int \sigma(\theta) \dd{\Omega} = 2\pi \int_{0}^{\pi} \sigma(\theta) \sin \theta \dd{\theta}
 \end{align}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\columnwidth]{fig/scattering_diagram.pdf}
+  \caption{散乱体と検出器}
+  \label{scattering_detection}
+\end{figure}
+
 \end{document}
