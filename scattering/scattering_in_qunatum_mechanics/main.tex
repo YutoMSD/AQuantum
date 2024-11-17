@@ -157,12 +157,12 @@
     &= \int \frac{1}{(2\pi)^3}2\pi \int_{0}^{\infty} k'^2 \dd{k'} \int_{0}^{\pi}\sin\theta\dd{\theta}\frac{\exp(\i k' r\cos\theta)}{\kappa^2 - k'^2}\\
     &= \frac{1}{(2\pi)^2} \int_{0}^{\infty} \frac{k'^2\dd{k'}}{\kappa^2 - k'^2}\frac{\e^{\i k'r} - \e^{-\i k'r}}{\i k'r}\\
     &= \frac{1}{4\pi^2\i r} \int_{0}^{\infty} k' \dd{k'} \frac{\e^{\i k'r} - \e^{-\i k'r}}{(\kappa - k')(\kappa + k')}\\
-    &= \frac{1}{8\pi^2\i r} \int_{0}^{\infty}k' \dd{k'} \frac{\e^{\i k'r} - \e^{-\i k'r}}{(\kappa - k')(\kappa + k')}\\
-    &= \frac{1}{8\pi^2\i r} \int_{0}^{\infty} k' \dd{k'} \qty(\frac{\e^{\i k'r}}{(\kappa - k')(\kappa + k')} - \frac{\e^{-\i k'r}}{(\kappa - k')(\kappa + k')})\\
+    &= \frac{1}{8\pi^2\i r} \int_{-\infty}^{\infty}k' \dd{k'} \frac{\e^{\i k'r} - \e^{-\i k'r}}{(\kappa - k')(\kappa + k')}\\
+    &= \frac{1}{8\pi^2\i r} \int_{-\infty}^{\infty} k' \dd{k'} \qty(\frac{\e^{\i k'r}}{(\kappa - k')(\kappa + k')} - \frac{\e^{-\i k'r}}{(\kappa - k')(\kappa + k')})\\
     &= \frac{1}{8\pi^2 \i r}\qty(I_1 - I_2)
   \end{align}
   \begin{align}
-    I_1 \equiv \int_{0}^{\infty} \dd{k'} \frac{k' \e^{\i k'r}}{(\kappa - k')(\kappa + k')},\ I_2 \equiv \int_{0}^{\infty} \dd{k'} \frac{k' \e^{-\i k'r}}{(\kappa - k')(\kappa + k')}
+    I_1 \equiv \int_{-\infty}^{\infty} \dd{k'} \frac{k' \e^{\i k'r}}{(\kappa - k')(\kappa + k')},\ I_2 \equiv \int_{-\infty}^{\infty} \dd{k'} \frac{k' \e^{-\i k'r}}{(\kappa - k')(\kappa + k')}
   \end{align}
   最後の積分を実行するにはCauchyの積分公式を用いる．
   \begin{itembox}[l]{Cauchyの積分公式}
