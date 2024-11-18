@@ -2,3 +2,5 @@
 *.log
 *.out
 *.run.xml
+*.aux
+*.toc
