@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  18 NOV 2024 13:56
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  19 NOV 2024 12:11
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2310,7 +2310,7 @@ tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.o
 tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-regula
 r.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/Harano
 AjiMincho-Regular.otf>
-Output written on main.pdf (3 pages, 47990 bytes).
+Output written on main.pdf (3 pages, 47982 bytes).
 
 PDF statistics: 58 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream
