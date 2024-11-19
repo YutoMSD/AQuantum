@@ -1,0 +1,160 @@
+\documentclass{report}
+\input{../../head.tex}
+\begin{document}
+最後に，電磁場中の電子を考え，Dirac方程式の非相対論的極限($\abs{\bm{p}} \ll c$)がSchrödinger方程式であることを示す．
+Dirac方程式は
+\begin{align}
+  \i\hbar\frac{\partial}{\partial t}\psi = (c \bm{\alpha}\cdot \bm{p} + \beta mc^2)\psi
+\end{align}
+である．ここに電磁場を次のように導入する．
+\begin{align}
+  \begin{dcases}
+    \bm{p} \to \bm{p} + e\bm{A} (e>0)\\
+    \phi = 0
+  \end{dcases}
+\end{align}
+これを用いると
+\begin{align}
+  \i\hbar\frac{\partial}{\partial t}\psi = (c \bm{\alpha}\cdot (\bm{p} + e\bm{A}) + \beta mc^2)\psi \label{dirac-eq-in-emfield}
+\end{align}
+である．ここで，解の形を
+\begin{align}
+  \psi = \begin{pmatrix}
+    \psi_1\\\psi_2\\\psi_3\\\psi_4
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    \psi_a\\
+    \psi_b
+  \end{pmatrix}
+\end{align}
+とする．これを\refe{dirac-eq-in-emfield}に代入する．
+\begin{align}
+  \i\hbar\frac{\partial}{\partial t}
+  \begin{pmatrix}
+    \psi_a\\
+    \psi_b
+  \end{pmatrix}
+  &=
+  \begin{pmatrix}
+    0 & c\bm{\sigma} \cdot (\bm{p} + e \bm{A})\\
+    c\bm{\sigma} \cdot (\bm{p} + e \bm{A}) & 0
+  \end{pmatrix}
+  \begin{pmatrix}
+    \psi_a\\
+    \psi_b
+  \end{pmatrix}
+  +
+  \begin{pmatrix}
+    mc^2 & 0\\
+    0 & -mc^2
+  \end{pmatrix}
+  \begin{pmatrix}
+    \psi_a\\
+    \psi_b
+  \end{pmatrix}\\
+  &=
+  c\bm{\sigma}\cdot(\bm{p} + e\bm{A})
+  \begin{pmatrix}
+    \psi_b\\
+    \psi_a
+  \end{pmatrix}
+  +mc^2
+  \begin{pmatrix}
+    \psi_a\\
+    -\psi_b
+  \end{pmatrix}
+\end{align}
+また，粒子のエネルギーを静止質量エネルギー($mc^2$)と非相対論的エネルギーの項($\epsilon_{\r{NR}}$)に分け，
+\begin{align}
+  \epsilon \sim mc^2 + \epsilon_{\r{NR}}
+\end{align}
+波動関数の時間発展を次のように記述する．
+\begin{align}
+  \begin{pmatrix}
+    \psi_a\\
+    \psi_b
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    \psi_a^0\\
+    \psi_b^0
+  \end{pmatrix}
+  \e^{-\i \frac{mc^2}{\hbar}t}
+\end{align}
+この表式を用いると\refe{dirac-eq-in-emfield}の左辺は
+\begin{align}
+  \i\hbar \frac{\partial}{\partial t}
+  \begin{pmatrix}
+    \psi_a\\
+    \psi_b
+  \end{pmatrix}
+  =
+  \i\hbar\qty[
+    \frac{\partial}{\partial t}
+    \begin{pmatrix}
+      \psi_a^0\\
+      \psi_b^0
+    \end{pmatrix}
+  ]
+  \e^{-\i\frac{mc^2}{\hbar}t}
+  + mc^2
+  \begin{pmatrix}
+    \psi_a^0\\
+    \psi_b^0
+  \end{pmatrix}
+  \e^{-\i\frac{mc^2}{\hbar}t}
+\end{align}
+となる．これより，
+\begin{align}
+  \i\hbar\qty[
+    \frac{\partial}{\partial t}
+    \begin{pmatrix}
+      \psi_a^0\\
+      \psi_b^0
+    \end{pmatrix}
+  ]
+  \e^{-\i\frac{mc^2}{\hbar}t}
+  + mc^2
+  \begin{pmatrix}
+    \psi_a^0\\
+    \psi_b^0
+  \end{pmatrix}
+  \e^{-\i\frac{mc^2}{\hbar}t}
+  &=
+  c\bm{\sigma}\cdot(\bm{p} + e\bm{A})
+  \begin{pmatrix}
+    \psi_b\\
+    \psi_a
+  \end{pmatrix}
+  +mc^2
+  \begin{pmatrix}
+    \psi_a\\
+    -\psi_b
+  \end{pmatrix}\\
+  \i\hbar\frac{\partial}{\partial t}
+  \begin{pmatrix}
+    \psi_a^0\\
+    \psi_b^0
+  \end{pmatrix}
+  &=
+  c\bm{\sigma}\cdot(\bm{p} + e\bm{A})
+  \begin{pmatrix}
+    \psi_b^0\\
+    \psi_a^0
+  \end{pmatrix}
+  -2mc^2
+  \begin{pmatrix}
+    0\\
+    \psi_b^0
+  \end{pmatrix}
+\end{align}
+が得られる．上式の2行目に着目する．両辺を$mc^2$で割ると
+\begin{align}
+  \frac{1}{mc^2}\qty(\i\hbar\frac{\partial}{\partial t}\psi_b^0) = \frac{\bm{\sigma}\cdot(\bm{p} + e\bm{A})}{mc}\psi^0_a - 2 \psi^0_b
+\end{align}
+である．ここで左辺は
+\begin{align}
+  \frac{1}{mc^2}\qty(\i\hbar\frac{\partial}{\partial t}\e^{-\i\frac{\epsilon_{\r{NR}}}{\hbar}t}) \propto \frac{\epsilon_{\r{NR}}}
+\end{align}
+\end{document}

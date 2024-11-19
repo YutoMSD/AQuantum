@@ -1,0 +1,98 @@
+\documentclass{report}
+\input{../../head.tex}
+\begin{document}
+  全角運動量が保存するために，
+  \begin{align}
+    [\hat{H}, \hat{\bm{L}} + \hat{\bm{S}}] = 0
+  \end{align}
+  を満たす$\bm{S}$がDirac方程式に含まれていると考える．
+  スピン演算子を次のように導入する．
+  \begin{align}
+    \hat{S}_x &= \frac{\hbar}{2}
+    \begin{pmatrix}
+      \sigma_x & 0\\
+      0& \sigma_x
+    \end{pmatrix}\\
+    \hat{S}_y &= \frac{\hbar}{2}
+    \begin{pmatrix}
+      \sigma_y & 0\\
+      0& \sigma_y
+    \end{pmatrix}\\
+    \hat{S}_z &= \frac{\hbar}{2}
+    \begin{pmatrix}
+      \sigma_z & 0\\
+      0& \sigma_z
+    \end{pmatrix}
+  \end{align}
+  $\sigma_i\ (i=x,y,z)$はPauli行列である．このようにスピン演算子を導入すると，これらは交換関係
+  \begin{align}
+    [\alpha_i, \hat{S}_j] &= \i \hbar \epsilon_{ijk} \alpha_k\\
+    [\beta, \hat{S}_i] &= 0
+  \end{align}
+  を満たすため
+  \begin{align}
+    [\hat{H}, \hat{S}_x] &= \i\hbar c(\alpha_y \hat{p}_z - \alpha_z \hat{p}_y)\\
+    [\hat{H}, \hat{S}_y] &= \i\hbar c(\alpha_z \hat{p}_x - \alpha_x \hat{p}_z)\\
+    [\hat{H}, \hat{S}_x] &= \i\hbar c(\alpha_x \hat{p}_y - \alpha_y \hat{p}_x)
+  \end{align}
+  であり，
+  \begin{align}
+    [\hat{H}, \hat{L}_x + \hat{S}_x] = [\hat{H}, \hat{L}_y + \hat{S}_y] = [\hat{H}, \hat{L}_z + \hat{S}_z] = 0
+  \end{align}
+  が成り立つ．よって，
+  Dirac方程式において
+  \begin{align}
+    [\hat{H}, \hat{\bm{L}} + \hat{\bm{S}}] = 0
+  \end{align}
+  であり，\textbf{全角運動量}$\bm{J} = \bm{L} + \bm{S}$が保存が保存される．ここで，$\bm{S} = \frac{\hbar}{2}\bm{\sigma}$は\textbf{スピン角運動量}である．
+
+  以上の議論では，スピンの存在が自然に導入された．この議論に用いた要請は
+  \begin{itembox}[l]{スピンの存在のために用いた要請}
+  \begin{enumerate}
+    \item Lorentz共変性
+    \item 状態の時間発展が時間の1階微分で表されること
+  \end{enumerate}
+  \end{itembox}
+  である．1はSchrödinger方程式と相対論の矛盾を解決するために用いた．2は波動関数の確率解釈を可能にするために用いた．以上の要請からDirac方程式が
+  導かれ，その式にはスピンの存在が内包されていた．
+
+  Dirac方程式の平面波解
+  \begin{align}
+    \psi_{\uparrow}^{+}
+    =
+    \e^{\i(kz-\omega t)}
+    \begin{pmatrix}
+      1\\0\\0\\0
+    \end{pmatrix}\ 
+    \psi_{\downarrow}^{+}
+    =
+    \e^{\i(kz-\omega t)}
+    \begin{pmatrix}
+      0\\1\\0\\0
+    \end{pmatrix}\ 
+    \psi_{\uparrow}^{-}
+    =
+    \e^{\i(kz-\omega t)}
+    \begin{pmatrix}
+      0\\0\\1\\0
+    \end{pmatrix}\ 
+    \psi_{\downarrow}^{-}
+    =
+    \e^{\i(kz-\omega t)}
+    \begin{pmatrix}
+      0\\0\\0\\1
+    \end{pmatrix}
+  \end{align}
+  に$\hat{S}_z$を作用させるてみると，
+  \begin{align}
+    \begin{dcases}
+      \hat{S}_z \psi^{+}_{\uparrow} &= \frac{\hbar}{2}\psi^{+}_{\uparrow}\\
+      \hat{S}_z \psi^{+}_{\downarrow} &= -\frac{\hbar}{2}\psi^{+}_{\downarrow}
+    \end{dcases}\\
+    \begin{dcases}
+      \hat{S}_z \psi^{-}_{\uparrow} &= \frac{\hbar}{2}\psi^{-}_{\uparrow}\\
+      \hat{S}_z \psi^{-}_{\downarrow} &= -\frac{\hbar}{2}\psi^{-}_{\downarrow}
+    \end{dcases}
+  \end{align}
+  が成り立つ．つまり，平面波解は$\hat{S}_z$の固有状態であることがわかる．
+\end{document}

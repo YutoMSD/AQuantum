@@ -1,0 +1,64 @@
+\documentclass{report}
+\input{../../head.tex}
+\begin{document}
+角運動量$\bm{L}$はSchrödinger方程式においては保存されるが，Dirac方程式では保存されない．本節ではこれを確認し，次節でスピンが自然に導入される．
+
+角運動量演算子は
+\begin{align}
+  \hat{\bm{L}} &= \hat{\bm{r}} \times \hat{\bm{p}}\\
+  &= \begin{pmatrix}
+    \hat{y}\hat{p}_z - \hat{z}\hat{p}_y\\
+    \hat{z}\hat{p}_x - \hat{x}\hat{p}_z\\
+    \hat{x}\hat{p}_y - \hat{y}\hat{p}_x
+  \end{pmatrix}
+\end{align}
+である．これは自由粒子のSchrödinger方程式
+\begin{align}
+  \i \hbar \frac{\partial}{\partial t}\psi &= \hat{H} \psi\\
+  \hat{H} &= \frac{1}{2m}\qty(\hat{p}_x^2 + \hat{p}_y^2 + \hat{p}_z^2)
+\end{align}
+においては，$\hat{\bm{L}}$とハミルトニアンが交換するため保存する．実際に計算してみる．
+\begin{align}
+  [\hat{H},\hat{L}_x] &= \frac{1}{2m}[\hat{p}_x^2 + \hat{p}_y^2 + \hat{p}_z^2, \hat{L}_x]\\
+  &= \frac{1}{2m}\qty([\hat{p}_x^2, \hat{L}_x] + [\hat{p}_y^2, \hat{L}_y] + [\hat{p}_z^2, \hat{L}_x])\\
+  &=\frac{1}{2m}\qty(\hat{p}_x[\hat{p}_x,\hat{L}_x] + [\hat{p}_x,\hat{L}_x]\hat{p}_x + \hat{p}_y[\hat{p}_y,\hat{L}_x] + [\hat{p}_y,\hat{L}_x]\hat{p}_y
+  + \hat{p}_z[\hat{p}_z,\hat{L}_x] + [\hat{p}_z,\hat{L}_x]\hat{p}_z)\\
+  &= \frac{1}{2m}\qty(0 + 0 -\i\hbar\hat{p}_y\hat{p}_z - \i\hbar\hat{p}_z\hat{p}_y + \i\hbar\hat{p}_z\hat{p}_y + \i\hbar\hat{p}_y\hat{p}_z)\\
+  &= 0
+\end{align}
+$\hat{L}_y$と$\hat{L}_z$も同様であり，よって，
+\begin{align}
+  [\hat{H},\hat{\bm{L}}] = 0
+\end{align}
+であることがわかる\footnote{
+  上記の計算には
+  \begin{align}
+    [\hat{L}_i,\hat{p}_j] &= [\epsilon_{ijk}\hat{x}_j\hat{p}_k, \hat{p}_j]\\
+    &=\epsilon_{ijk}\qty(\hat{x}_j[\hat{p}_k,\hat{p}_j] + [\hat{x}_j, \hat{p}_j]\hat{p}_k)\\
+    &= \i\hbar\epsilon_{ijk}\hat{p}_k
+  \end{align}
+を用いた．
+}．つまり，角運動量は保存量である．
+
+これをDirac方程式で計算する．
+\begin{align}
+  \hat{H} = c \bm{\alpha} \cdot \hat{\bm{p}} + \beta mc^2
+\end{align}
+を使うと，
+\begin{align}
+  [\hat{H}, \hat{L}_x] &= [c \bm{\alpha} \cdot \hat{\bm{p}} + \beta mc^2, \hat{L}_x]\\
+  &= c\qty([\alpha_x \hat{p}_x, \hat{L}_x] + [\alpha_y \hat{p}_y, \hat{L}_x] + [\alpha_z \hat{p}_z, \hat{L}_x]) + [\beta mc^2, \hat{L}_x]\\
+  &= c\qty(\alpha_x[\hat{p}_x, \hat{L}_x] + \alpha_y[\hat{p}_y, \hat{L}_x] + \alpha_z[\hat{p}_z, \hat{L}_x])\\
+  &= -\i\hbar c (\alpha_y \hat{p}_z - \alpha_z \hat{p}_y)
+\end{align}
+が得られる．同様に，
+\begin{align}
+  [\hat{H}, \hat{L}_y] &= -\i\hbar c (\alpha_z \hat{p}_x - \alpha_x \hat{p}_z)\\
+  [\hat{H}, \hat{L}_z] &= -\i\hbar c (\alpha_x \hat{p}_y - \alpha_y \hat{p}_x)
+\end{align}
+が得られる．よって，
+\begin{align}
+  [\hat{H}, \hat{\bm{L}}] \neq 0
+\end{align}
+であり，角運動量が保存量ではないことがわかる．しかし，対称性から，全角運動量が保存されないのは不自然である．このことは\textbf{$\bm{L}$以外の角運動量が存在することを示唆している．}
+\end{document}
