@@ -6,23 +6,22 @@
   2次元の場合，微小円弧と半径の比は角度にのみ依り，$r$に依らない．
   つまり，
   \begin{align}
-    \frac{dl_1}{r_1}=\frac{dl_2}{r_2}=\frac{d\theta}{1}
+    \frac{\dd{l_1}}{r_1} = \frac{\dd{l_2}}{r_2} = \frac{\dd{\theta}}{1}
   \end{align}
-  が成り立つ．この関係から平面角$d\theta=\frac{dl}{r}$を定義する．これを3次元に拡張する．図\ref{solid_angle}に模式図を示す．単位球上の面積を考えると，
+  が成り立つ．この関係から平面角$d\theta=\frac{dl}{r}$を定義する．
+  これを3次元に拡張する．\reff{solid_angle}として，今考えている状況の模式図を示す．
+  単位球上の面積を考えると，
   \begin{align}
-    \frac{dS_1}{r_1^2}=\frac{dS_2}{r_2^2}=\frac{dS}{1}
+    \frac{\dd{S_1}}{r_1^2} = \frac{\dd{S_2}}{r_2^2} = \frac{\dd{S}}{1}
   \end{align}
-  である．ここから立体角を$d\Omega=\frac{dS}r^2$と定義する．また，これを球座標表示に変換すると，
+  である．ここから立体角を$\dd{\Omega} = \frac{\dd{S}}{r^2}$と定義する．また，これを球座標表示に変換すると，
   \begin{align}
-    d\Omega = \frac{dS}{r^2} = \frac{r^2\sin\theta d\theta d\phi}{r^2} = \sin \theta d\theta d\phi
+    \dd{\Omega} = \frac{\dd{S}}{r^2} = \frac{r^2\sin\theta\dd{\theta}\dd{\phi}}{r^2} = \sin\theta\dd{\theta}\dd{\phi}
   \end{align}
   である．
-
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\columnwidth]{fig/solid_angle.pdf}
-    \caption{立体角}
-    \label{solid_angle}
+    \includegraphics[width = 0.6\columnwidth]{fig/solid_angle.pdf}
+    \caption{立体角}\label{solid_angle}
   \end{figure}
-
 \end{document}

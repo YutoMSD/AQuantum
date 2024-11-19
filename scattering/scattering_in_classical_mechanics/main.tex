@@ -1,53 +1,54 @@
 \documentclass{report}
 \input{../../head.tex}
 \begin{document}
-$z$に沿って粒子を単位時間単位面積当たり$N$個入射する．$z$軸から距離$b$ (衝突パラメータ)，角度$\dd{\phi}$，面積$\dd{S'}$のスリットを
-単位時間当たりに通過する粒子数は
-\begin{align}
-  N\dd{S'} = N \dd{\phi} (b \dd{\phi})
-\end{align}
-を満たす．また，単位時間に検出器に到達する粒子数は微分断面積の定義から，
-\begin{align}
-  \dd{N} = \sigma (\theta) N \dd{\Omega}
-\end{align}
-である．古典力学ではこれらは必ず一致するため，
-\begin{align}
-  \sigma (\theta) N \dd{\Omega} = N \dd{\phi} (b \dd{\phi})
-\end{align}
-を得る．よって，微分断面積は
-\begin{align}
-  \sigma(\theta) = \frac{1}{\sin \theta} b \abs{\frac{\dd{b}}{\dd{\theta}}}
-\end{align}
-と表される．
-\begin{myex}{剛体球}{}
-  散乱体を半径$a$の剛体球
+  $z$軸に沿って粒子を単位時間単位面積当たり$N$個入射する．$z$軸から距離$b$ (衝突パラメータ)，角度$\dd{\phi}$，面積$\dd{S'}$のスリットを
+  単位時間当たりに通過する粒子数は
   \begin{align}
-    V(r) = 
-    \begin{dcases}
-      \infty\ &(r < a)\\
-      0\ &(r>a)
-    \end{dcases}
+    N\dd{S'} = N \dd{\phi} (b \dd{\phi})
   \end{align}
-  とする．衝突パラメータを$b$，粒子が散乱体の角度$\phi$の位置で散乱し，その散乱角を$\theta$とする．これらは
+  を満たす．また，単位時間に検出器に到達する粒子数は微分断面積の定義から，
   \begin{align}
-    \begin{dcases}
-      2\phi + \theta = \pi\\
-      b = a\sin \phi
-    \end{dcases}
+    \dd{N} = \sigma (\theta) N \dd{\Omega}
   \end{align}
-  を満たすため，
+  である．古典力学ではこれらは必ず一致するため，
   \begin{align}
-    b = a\cos \frac{\theta}{2}
+    \sigma (\theta) N \dd{\Omega} = N \dd{\phi} (b \dd{\phi})
   \end{align}
-  を得る．よって，微分断面積は
+  を得る．よって，微分断面積は，
   \begin{align}
-  \sigma(\theta) &= \frac{1}{\sin \theta} b \abs{\frac{\dd{b}}{\dd{\theta}}}\\
-  &= \frac{a^2}{4}
+    \sigma(\theta) = \frac{1}{\sin \theta} b \abs{\frac{\dd{b}}{\dd{\theta}}}
   \end{align}
-  となる．$\theta$に依存しない等方散乱であることがわかる．また，全断面積は
-  \begin{align}
-    \sigma^{\r{tot}} = \int \sigma(\theta) \dd{\Omega} = \pi a^2
-  \end{align}
-  である．剛体球の断面積と一致する．
-\end{myex}
+  と表される．
+  \begin{myex}{剛体球}{}
+    散乱体を半径$a$の剛体球
+    \begin{align}
+      V(r) = 
+      \begin{dcases}
+        \infty & r < a \\
+        0 & r > a
+      \end{dcases}
+    \end{align}
+    とする．衝突パラメータを$b$，粒子が散乱体の角度$\phi$の位置で散乱し，その散乱角を$\theta$とする．
+    これらのパラメータは，
+    \begin{align}
+      \begin{dcases}
+        2\phi + \theta = \pi\\
+        b = a\sin \phi
+      \end{dcases}
+    \end{align}
+    を満たすため，
+    \begin{align}
+      b = a\cos \frac{\theta}{2}
+    \end{align}
+    を得る．よって，微分断面積は
+    \begin{align}
+    \sigma(\theta) &= \frac{1}{\sin \theta} b \abs{\frac{\dd{b}}{\dd{\theta}}}\\
+    &= \frac{a^2}{4}
+    \end{align}
+    となる．$\theta$に依存しない等方散乱であることがわかる．また，全断面積は
+    \begin{align}
+      \sigma^{\r{tot}} = \int \sigma(\theta) \dd{\Omega} = \pi a^2
+    \end{align}
+    である．剛体球の断面積と一致する．
+  \end{myex}
 \end{document}
