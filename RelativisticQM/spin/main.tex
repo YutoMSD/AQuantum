@@ -95,4 +95,51 @@
     \end{dcases}
   \end{align}
   が成り立つ．つまり，平面波解は$\hat{S}_z$の固有状態であることがわかる．
+
+  全角運動量以外の保存量として\textbf{ヘリシティ}がある．
+  \begin{align}
+    \bm{\Sigma} = 
+    \begin{pmatrix}
+      \bm{\sigma} & 0\\
+      0 & \bm{\sigma}
+    \end{pmatrix}
+  \end{align}
+  として，ヘリシティは
+  \begin{align}
+    h = \frac{\bm{\Sigma} \cdot \bm{p}}{\abs{\bm{p}}}
+  \end{align}
+  と定義される．
+  これが保存量であることは以下のように確かめられる．
+  \begin{align}
+    (\bm{\alpha} \cdot \hat{\bm{p}}) \hat{h} &= \frac{1}{p}
+    \begin{pmatrix}
+      0 & \bm{\sigma} \cdot \hat{\bm{p}}\\
+      \bm{\sigma} \cdot \hat{\bm{p}} & 0
+    \end{pmatrix}
+    \begin{pmatrix}
+      \bm{\sigma} \cdot \hat{\bm{p}} & 0\\
+      0 & \bm{\sigma} \cdot \hat{\bm{p}}
+    \end{pmatrix}\\
+    &= \frac{1}{p}
+    \begin{pmatrix}
+      0 & (\bm{\sigma} \cdot \hat{\bm{p}})(\bm{\sigma} \cdot \hat{\bm{p}})\\
+      (\bm{\sigma} \cdot \hat{\bm{p}})(\bm{\sigma} \cdot \hat{\bm{p}}) & 0
+    \end{pmatrix}\\
+    &=\frac{1}{p}
+    \begin{pmatrix}
+      0 & \hat{\bm{p}}^2\\
+      \hat{\bm{p}}^2 & 0
+    \end{pmatrix}\\
+    &= \hat{h}(\bm{\alpha}\cdot \hat{\bm{p}})
+  \end{align}
+  よって
+  \begin{align}
+    [\bm{\alpha} \cdot \hat{\bm{p}}, \hat{h}] = 0\\
+    [\beta, \hat{h}] = 0
+  \end{align}
+  したがって，
+  \begin{align}
+    [\hat{H}, \hat{h}] = 0
+  \end{align}
+  ヘリシティは保存量である．
 \end{document}

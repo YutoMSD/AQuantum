@@ -155,6 +155,53 @@ Dirac方程式は
 \end{align}
 である．ここで左辺は
 \begin{align}
-  \frac{1}{mc^2}\qty(\i\hbar\frac{\partial}{\partial t}\e^{-\i\frac{\epsilon_{\r{NR}}}{\hbar}t}) \propto \frac{\epsilon_{\r{NR}}}
+  \frac{1}{mc^2}\qty(\i\hbar\frac{\partial}{\partial t}\e^{-\i\frac{\epsilon_{\r{NR}}}{\hbar} t}) \propto \frac{\epsilon_{\r{NR}}}{mc^2}
 \end{align}
+である．
+また，
+\begin{align}
+  \epsilon_{\r{NR}} = \frac{\bm{p}^2}{2m}
+\end{align}
+だから非相対論的極限($\abs{\bm{p}} \ll c$)で左辺は0となる．よって
+\begin{align}
+  \psi_b^0 = \frac{\bm{\sigma}\cdot(\bm{p} + e\bm{A})}{2mc}\psi^0_a\\
+\end{align}
+を得る．これは粒子解と反粒子解を結ぶ式である．これを用いると1行目は
+\begin{align}
+  \i\hbar\frac{\partial}{\partial t}\psi^0_a &= c\bm{\sigma} \cdot (\bm{p} + e\bm{A})\psi_b^0\\
+  &= \frac{[\bm{\sigma}\cdot(\bm{p} + e\bm{A})][\bm{\sigma}\cdot(\bm{p} + e\bm{A})]}{2m}\psi^0_a
+\end{align}
+と書き直される．次に$[\bm{\sigma}\cdot(\bm{p} + e\bm{A})][\bm{\sigma}\cdot(\bm{p} + e\bm{A})]$を計算する．
+まず，Pauli行列には次の性質がある．
+\begin{align}
+  (\bm{\sigma}\cdot\hat{\bm{a}})(\bm{\sigma}\cdot\hat{\bm{b}}) &= (\sum_{i} \sigma_i \hat{a}_i) (\sum_{j} \sigma_j \hat{a}_j)\\
+  &= \sum_{i} \sum_{j} \sigma_{i} \sigma_{j} \hat{a}_i \hat{b}_j\\
+  &= \sum_{i} \sum_{j} \frac{1}{2}(\qty{\sigma_i, \sigma_j} + [\sigma_i, \sigma_j]) \hat{a}_i \hat{b}_j\\
+  &= \sum_{i} \sum_{j} \frac{1}{2}(2 \delta_{i,j} + 2\i \epsilon_{ijk} \sigma_k) \hat{a}_i \hat{b}_j\\
+  &= \sum_{i} \hat{a}_i^2 + \i \sum_{i} \sum_{j} \epsilon_{ijk} \hat{a}_i \hat{b}_j\\
+  &= \hat{\bm{a}}^2 + \i(\hat{\bm{a}} \times \hat{\bm{b}})
+\end{align}
+これを用いると
+\begin{align}
+  [\bm{\sigma}\cdot(\bm{p} + e\bm{A})][\bm{\sigma}\cdot(\bm{p} + e\bm{A})] &= (\hat{\bm{p}} + e\bm{A})^2 + \i[(\hat{\bm{p}} + e\bm{A}) \times (\hat{\bm{p}} + e\bm{A})]\\
+  &= (\hat{\bm{p}} + e\bm{A})^2 + \i e[(\bm{A} \times \hat{\bm{p}}) + (\hat{\bm{p}} \times e\bm{A})]\\
+\end{align}
+と変形される．ここで，
+\begin{align}
+  [(\bm{A} \times \hat{\bm{p}}) + (\hat{\bm{p}} \times e\bm{A})]\psi &= (\bm{A} \times \hat{\bm{p}})\psi + (\hat{\bm{p}} \times \bm{A})\psi\\
+  &= \bm{A} \times (\hat{\bm{p}}\psi) + (\hat{\bm{p}}\psi) \times \bm{A} + (\hat{\bm{p}} \times \bm{A})\psi\\
+  &= (\hat{\bm{p}} \times \bm{A}) \psi\\
+  &= -\i\hbar(\nabla \times \bm{A}) \psi
+\end{align}
+が成り立つ．以上より，
+\begin{align}
+  [\bm{\sigma}\cdot(\bm{p} + e\bm{A})][\bm{\sigma}\cdot(\bm{p} + e\bm{A})] &= (\hat{\bm{p}} + e\bm{A})^2 + e\hbar \bm{\sigma}\cdot(\nabla \times \bm{A})\\
+  &= (\hat{\bm{p}} + e\bm{A})^2 + e\hbar \bm{\sigma} \cdot \bm{B}
+\end{align}
+したがって，
+\begin{align}
+  \i\hbar \frac{\partial}{\partial t} \psi_a^0 = \qty[\frac{1}{2m} (\hat{\bm{p}} + e\bm{A})^2 + \frac{e\hbar}{2m}\bm{\sigma}\cdot\bm{B}] \psi_a^0
+\end{align}
+が得られる．右辺第2項$\frac{e\hbar}{2m}\bm{\sigma}\cdot\bm{B}$はZeeman相互作用によるエネルギーを表す．これは磁場中の自由粒子のSchrödinger方程式と一致している．つまり，
+電磁場中の自由粒子のDirac方程式の非相対論的極限は，電磁場中の自由粒子のSchrödinger方程式と一致する．
 \end{document}
