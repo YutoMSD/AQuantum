@@ -8,13 +8,21 @@
   \begin{align}
     \frac{\dd{l_1}}{r_1} = \frac{\dd{l_2}}{r_2} = \frac{\dd{\theta}}{1}
   \end{align}
-  が成り立つ．この関係から平面角$d\theta=\frac{dl}{r}$を定義する．
+  が成り立つ．この関係から平面角を，
+  \begin{align}
+    \dd{\theta} \coloneqq \frac{\dd{l}}{r}
+  \end{align}
+  と定義する．
   これを3次元に拡張する．\reff{solid_angle}として，今考えている状況の模式図を示す．
   単位球上の面積を考えると，
   \begin{align}
     \frac{\dd{S_1}}{r_1^2} = \frac{\dd{S_2}}{r_2^2} = \frac{\dd{S}}{1}
   \end{align}
-  である．ここから立体角を$\dd{\Omega} = \frac{\dd{S}}{r^2}$と定義する．また，これを球座標表示に変換すると，
+  である．ゆえに立体角を，
+  \begin{align}
+    \dd{\Omega} = \frac{\dd{S}}{r^2} \label{solid-angle-def}
+  \end{align}
+  と定義する．また，これを球座標表示に変換すると，
   \begin{align}
     \dd{\Omega} = \frac{\dd{S}}{r^2} = \frac{r^2\sin\theta\dd{\theta}\dd{\phi}}{r^2} = \sin\theta\dd{\theta}\dd{\phi}
   \end{align}
