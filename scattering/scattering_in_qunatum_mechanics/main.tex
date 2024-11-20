@@ -239,14 +239,14 @@
     Green関数を用いると\refe{se-scattering}の形式解は，
     \begin{align}
       \psi(\bm{r}) &= \phi(\bm{r}) + \chi(\bm{r}) \\ 
-      &= \e^{\i kz} + \int\dd{\bm{r'}} G_0(\bm{r} - \bm{r'}) U(\bm{r'}) \phi(\bm{r'}) \\ 
+      &= \e^{\i kz} + \int\dd{\bm{r'}} G_0(\bm{r} - \bm{r'}) U(\bm{r'}) \psi(\bm{r'}) \\ 
       &= \e^{\i kz} - \int \frac{\e^{\i\kappa \abs{\bm{r} - \bm{r'}}}}{4\pi \abs{\bm{r} - \bm{r'}}} \cdot \frac{2m}{\hbar^2} V(\bm{r'}) \cdot \psi(\bm{r'}\dd{\bm{r'}}) \\ 
       &= \e^{\i kz} - \frac{1}{4\pi} \int \frac{\e^{\i \kappa \abs{\bm{r} - \bm{r'}}}}{\abs{\bm{r} - \bm{r'}}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'}) \dd{\bm{r'}}\label{formal-soultion}
     \end{align}
     である．
     \begin{figure}[H]
       \centering
-      \includegraphics[width = 0.7\columnwidth]{fig/integral-green-tex.pdf}
+      \includegraphics[width = 0.5\columnwidth]{fig/integral-green-tex.pdf}
       \caption{積分経路}\label{Integral}
     \end{figure}
     \par
@@ -274,9 +274,14 @@
     \begin{align}
       \psi(\bm{r}) = \e^{\i kz} - \qty(\frac{1}{4\pi} \int \e^{-\i\bm{\kappa'}\cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}})\frac{\e^{\i\kappa r}}{r}
     \end{align}
-    である．したがって，散乱振幅は
+    である．したがって散乱振幅は，
     \begin{align}
-      f(\theta) = -\frac{1}{4\pi} \int \dd{\bm{r'}} \e^{- \i \bm{\kappa'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})
+      f(\theta) = -\frac{1}{4\pi} \int \e^{- \i \bm{\kappa'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}}
     \end{align}
     となる．
+    \begin{itembox}[l]{一般のポテンシャルでの散乱振幅}
+      \begin{align}
+        f(\theta) = -\frac{1}{4\pi} \int \e^{- \i \bm{\kappa'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}}\label{scattering-amp-general}
+      \end{align}
+    \end{itembox}
 \end{document}

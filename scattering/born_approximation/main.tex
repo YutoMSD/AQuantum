@@ -1,181 +1,112 @@
 \documentclass{report}
 \input{../../head.tex}
 \begin{document}
-  散乱の波動関数は，
+  一般に，散乱の波動関数は，
   \begin{align}
-    \psi(\bm{r}) = \e^{\i kz} + \int G_0 (\bm{r} - \bm{r}') \frac{2m}{\hbar^2} V(r') \psi(\bm{r}') \dd{\bm{r}'}\label{wave-funtion-of-scattering}
+    \psi(\bm{r}) = \e^{\i kz} + \int G_0 (\bm{r} - \bm{r'}) \frac{2m}{\hbar^2} V(r') \psi(\bm{r'}) \dd{\bm{r'}}\label{wave-funtion-of-scattering}
   \end{align}
-  と表されるのであった．この波動関数を厳密に求めることは困難であるため近似をする．まず，\refe{wave-funtion-of-scattering}を簡略化して，
+  と表されるのであった．
+  この波動関数を厳密に求めることは困難であるため近似を考える．
+  まず，\refe{wave-funtion-of-scattering}を簡略化して，
   \begin{align}
     \psi(\bm{r}) = \psi_0 + \int g V \psi(\bm{r}') \dd{\bm{r}'}\label{simple-wave-funtion-of-scattering}
   \end{align}
   と表現する．
   ただし，
   \begin{align}
-    g \coloneqq G_0\frac{2m}{\hbar}
+    g(\bm{r}) \coloneqq G_0(\bm{r})\frac{2m}{\hbar^2}
   \end{align}
   である．
   \refe{simple-wave-funtion-of-scattering}を再帰的に代入すると，
   \begin{align}
-    \psi(\bm{r}) &= \psi_0 + \int g V \psi(\bm{r}') \dd{\bm{r}'}\\
-    &= \psi_0 + \int gV \qty(\psi_0 + \int g V \psi(\bm{r}'') \dd{\bm{r}''}) \dd{\bm{r}'}\\
-    &= \psi_0 + \int g V \psi_0(\bm{r}') \dd{\bm{r}'} + \iint gVgV \psi(\bm{r}'') \dd{\bm{r}'} \dd{\bm{r}''}\\
-    &= \psi_0 + \int g V \psi_0(\bm{r}') \dd{\bm{r}'} + \iint gVgV \psi_0(\bm{r}'') \dd{\bm{r}'} \dd{\bm{r}''} + \iiint gVgVgV \psi_0(\bm{r}''') \dd{\bm{r}'} \dd{\bm{r}''} \dd{\bm{r}'''} + \cdots
+    \psi(\bm{r}) &= \psi_0 + \int g V \psi(\bm{r'}) \dd{\bm{r'}} \\
+    &= \psi_0 + \int gV \qty(\psi_0 + \int g V \psi(\bm{r''}) \dd{\bm{r''}}) \dd{\bm{r'}} \\
+    &= \psi_0 + \int g V \psi_0(\bm{r'}) \dd{\bm{r'}} + \iint gVgV \psi(\bm{r''}) \dd{\bm{r'}} \dd{\bm{r''}} \\
+    &= \psi_0 + \int g V \psi_0(\bm{r'}) \dd{\bm{r'}} + \iint gVgV \psi_0(\bm{r''}) \dd{\bm{r'}} \dd{\bm{r''}} + \iiint gVgVgV \psi_0(\bm{r'''}) \dd{\bm{r'}} \dd{\bm{r''}} \dd{\bm{r'''}} + \cdots\label{dozens-of-gv}
   \end{align}
-  を得る．これを第1項までで近似する．これは散乱の波動関数を平面波で近似することに相当する．
+  を得る．
+  \refe{dozens-of-gv}を第1項までで近似して，残りの項を捨てる．
+  これは散乱の波動関数を平面波で近似することに相当する．
   つまり，
   \begin{align}
     \psi \simeq \psi_0
   \end{align}
   とする．これを\textbf{第1 Born近似}という\footnote{Max Born(1882-1970)}\footnote{砂川，散乱の量子論，
-  「第1Born近似がとくによく利用される理由は，何といってもその簡単さにある．したがって，ある散乱問題を手がけたとき，だれもが最初に試してみるのが，この近似である．
+  「第1 Born近似がとくによく利用される理由は，何といってもその簡単さにある．したがって，ある散乱問題を手がけたとき，だれもが最初に試してみるのが，この近似である．
   そして思わしい結果がえられないとき，他の近似法を考えるのである．」}．
   \par
-  Born近似を用いて散乱振幅を求める．$\psi(\bm{r}') = \e^{\i kz} = \e^{\i \bm{k}\cdot\bm{r}'}$だから，
+  Born近似を用いて散乱振幅を求める．$\bm{k} \coloneqq k\bm{e}_z$，$\bm{r} \coloneqq z\bm{e}_z$とすると，
+  $\psi(\bm{r}') = \e^{\i kz} = \e^{\i \bm{k}\cdot\bm{r}'}$となるから，
   \begin{align}
-    f^{(1)}(\theta) &= -\frac{1}{4\pi} \int \e^{\i \bm{k}' \cdot \bm{r}'} \frac{2m}{\hbar} V(r') \psi(\bm{r}') \dd{\bm{r}'}\\
-    &= -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i (\bm{k}' - \bm{k})\cdot \bm{r}'} V(r') \dd{\bm{r}'}\\
+    f^{(1)}(\theta) &= -\frac{1}{4\pi} \int \e^{\i \bm{\kappa'}\cdot\bm{r'}} \frac{2m}{\hbar} V(r') \psi(\bm{r'}) \dd{\bm{r'}} \\
+    &= -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i (\bm{\kappa'} - \bm{k})\cdot\bm{r}'} V(r') \dd{\bm{r}'} \\
     &= -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i \bm{q}\cdot \bm{r}'} V(r') \dd{\bm{r}'}\label{potential-fourier-transform}
   \end{align}
-  となる．ただし，散乱による運動量変化を$\bm{q}\coloneqq \bm{k}' - \bm{k}$と定義した．
-  \refe{potential-fourier-transform}を見ると，散乱振幅はポテンシャル$V(r')$のFourier変換から得られることがわかる\footnote{
-    $f^{(n)}$は第$n$Born近似による散乱振幅を意味する．}．
+  となる．ただし，散乱による運動量変化に対応する物理量を$\bm{q} \coloneqq \bm{\kappa'} - \bm{k}$と定義した．
+  \refe{potential-fourier-transform}を見ると，散乱振幅はポテンシャル$V(r)$のFourier変換から得られることがわかる\footnote{
+    $f^{(n)}$は第$n$ Born近似による散乱振幅を意味する．
+  }．
   また，球対称ポテンシャルのとき\refe{potential-fourier-transform}は簡略化できて，
   \begin{align}
     f^{(1)}(\theta) &= -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i \bm{q}\cdot \bm{r}'} V(r') \dd{\bm{r}'}\\
-    &= -\frac{1}{4\pi}\frac{2m}{\hbar^2} 2\pi \iint \e^{-\i qr' \cos\theta'} V(r') r'^2 \sin\theta' \dd{\theta'} \dd{r'}\\
-    &= -\frac{m}{\hbar^2} \int r'^2 \dd{r'} V(r') \qty[\frac{\e^{-\i qr' \cos\theta}}{\i qr'}]^{\cos\theta = -1}_{\cos\theta =1}\\
-    &= -\frac{m}{\hbar^2} \int r'^2 \dd{r'} \frac{2\i \sin qr'}{\i qr'}V(r')\\
-    &= -\frac{2m}{\hbar^2 q} \int rV(r)\sin qr \dd{r}
+    &= -\frac{1}{4\pi}\frac{2m}{\hbar^2} \int_{\phi' = 0}^{2\pi}\dd{\phi'} \int_{\theta' = 0}^{\pi}\dd{\theta'}\int_{r' = 0}^{\infty}r'^2 \sin\theta' \dd{r'} \e^{-\i qr' \cos\theta'} V(r') \\
+    &= -\frac{1}{4\pi}\frac{2m}{\hbar^2} 2\pi \int_{r' = 0}^{\infty}V(r')r'^2\int_{\theta' = 0}^{\pi} \e^{-\i qr' \cos\theta'} \sin\theta' \dd{r'}\dd{\theta'} \\ 
+    &= -\frac{m}{\hbar^2} \int_{0}^{\infty} r'^2V(r') \frac{\e^{\i qr'} - \e^{-\i qr'}}{\i qr'} \dd{r'} \\ 
+    &= -\frac{m}{\hbar^2} \int_{0}^{\infty} rV(r) \frac{\e^{\i qr} - \e^{-\i qr}}{\i q} \dd{r} \\ 
+    &= -\frac{2m}{\hbar^2 q} \int_{0}^{\infty} rV(r)\sin\qty(qr) \dd{r}
   \end{align}
   となる．
- \begin{itembox}[l]{球対称ポテンシャルの散乱振幅}
-  \begin{align}
-    \label{SCamp1st}
-    f^{(1)}(\theta) =  -\frac{2m}{\hbar^2 q} \int_{0}^{\infty} rV(r)\sin qr \dd{r}
-  \end{align}
- \end{itembox} 
-
- \begin{myex}{湯川ポテンシャル}{}
-湯川ポテンシャル
-\begin{align}
-  V(r) = V_0 \frac{\e^{-\mu r}}{\mu r}
-\end{align}
-による散乱を考える\footnote{湯川秀樹(1907-1981)}．これは，$V(r)$の到達距離が$\frac{1}{\mu}$ほどであり，核子同士に働く力を表す．物質中では，伝導電子に遮蔽された不純物のCoulombポテンシャルを表す．
-$\mu = 1,2$及びCoulombポテンシャルのグラフを\reff{yukawa-potential-graph}に示す．
-このポテンシャルの下で散乱振幅を求める．
-\begin{align}
-  f^{(1)}(\theta) &= -\frac{1}{4\pi} \frac{2m}{\hbar^2} \iiint \e^{-\i qr'\cos\theta'}V(r') r'^2 \sin\theta'\dd{r'}\dd{\theta'}\dd{\phi'}\\
-  &= -\frac{1}{4\pi}\frac{2m}{\hbar^2} 2\pi \int_{0}^{\infty} \qty(\frac{\e^{\i qr'} - \e^{-\i qr'}}{\i qr'})V(r') r'^2 \dd{r'}\\
-  &= -\frac{mV_0}{\i \hbar^2 q \mu} \int_{0}^{\infty} \qty[\e^{(-\mu + \i q)r'} - \e^{(-\mu - \i q)r'}] \dd{r'}\\
-  &= - \frac{2m V_0}{\hbar^2 \mu} \frac{1}{\mu^2 + q^2}
-\end{align}
-よって散乱断面積は
-\begin{align}
-  \sigma^{(1)}(\theta) &= \abs{f^{(1)}(\theta)}^2\\
-  &= \qty(\frac{2m V_0}{\hbar^2 \mu})^2 \frac{1}{(\mu^2 + q^2)^2}\\
-  &= \qty(\frac{2m V_0}{\hbar^2 \mu})^2 \frac{1}{(\mu^2 + 4K^2 \sin^2\theta/2)^2}
-\end{align}
-である．ここで，$\bm{k'}$と$\bm{k}$のなす角が$\theta$であるため$q = 2k\sin\theta/2$であることを用いた．
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width = 0.8\columnwidth]{fig/yukawa_potential.jpg}
-  \caption{湯川ポテンシャルとCoulombポテンシャルの比較}\label{yukawa-potential-graph}
-\end{figure}
-
- \end{myex}
-
-\begin{myex}{Rutherford散乱(Griffith Example 10.6)}{}
-  湯川ポテンシャルで$V_0 = \frac{q_1q_2}{4\pi \epsilon_0}$，$\mu = 0$とするとCoulombポテンシャル
-  \begin{align}
-    V(r) = \frac{q_1q_2}{4\pi\epsilon_0}
-  \end{align}
-  と一致する．式(\ref{SCamp1st})に代入して散乱振幅を求める．
-  \begin{align}
-    f(\theta) &= - \frac{2m}{\hbar^2q} \int_{0}^{\infty} r \frac{q_1q_2}{4\pi\epsilon_0 r} \sin qr \dd{r}\\
-    &= -\frac{2m}{\hbar^2q}\frac{q_1q_2}{4\pi\epsilon_0}\int_{0}^{\infty} \sin qr \dd{r} \\
-    &=  -\frac{2m}{\hbar^2q}\frac{q_1q_2}{4\pi\epsilon_0}\qty(-\frac{1}{q}\qty[\cos qr]_0^{\infty})\\
-    &\simeq - \frac{mq_1q_1}{2\pi\epsilon_0\hbar^2q^2}\\
-    &= - \frac{mq_1q_1}{8\pi\epsilon_0\hbar^2 \sin^2 \theta/2}
-  \end{align}
-\end{myex}
-
-
- 次に，Born近似の適用範囲について考える．
- 散乱振幅は
- \begin{align}
-  f(\theta) = -\frac{1}{4\pi} \int \e^{-\i \bm{k}\cdot \bm{r}} \frac{2m}{\hbar^2}V(r)\psi(\bm{r})\dd{\bm{r}}
- \end{align}
- であり，散乱の波動関数は
- \begin{align}
-  \label{BornWF}
-  \psi(\bm{r}) = \psi_0(\bm{r}) + \int g(\bm{r} - \bm{r'}) V(r') \psi_0(\bm{r'}) \dd{\bm{r'}} + \cdots
- \end{align}
- である．この波動関数を
- \begin{align}
-  \psi(\bm{r}) \simeq \psi_0(\bm{r})
- \end{align}
- と近似するのが第1Born近似であった．この近似がうまくいく，つまり，
- \begin{align}
-  \int \e^{-\i \bm{k}\cdot \bm{r}} \frac{2m}{\hbar^2}V(r)\psi(\bm{r})\dd{\bm{r}}
- \end{align}
- を正しく評価するには，
- $V(r) \neq 0$となる$r\simeq 0$で，
- \begin{align}
-  \psi(\bm{r}) \simeq \psi_0(\bm{r})
- \end{align}
- と近似できる必要がある．
-
- $r \simeq 0$で式(\ref{BornWF})の第1項がそれ以外の項より十分大きければいいため，
- \begin{align}
-  \abs{\psi_0(\bm{0})} \gg \abs{\int g(\bm{0} - \bm{r}') V(r') \psi_0(\bm{r}') \dd{\bm{r}'}}
- \end{align}
- これを整理すると，
- \begin{align}
-  \abs{\e^{\i kz}} \gg \abs{\int -\frac{2m}{\hbar^2}\frac{\e^{\i kr'}}{4\pi r'}V(r') \e^{\i \bm{k}\cdot\bm{r}'}\dd{\bm{r}'}}\\
-  1 \gg \frac{m}{2\pi \hbar^2}\abs{\int \frac{\e^{\i kr'}}{r'}V(r')\e^{\i\bm{k}\cdot\bm{r}'}\dd{\bm{r}'}}
-  \label{BornCondition}
- \end{align}
- を得る．これが第1Born近似が有効であるための条件じゃ．
-
- \begin{myex}{Born近似の適用条件}{}
-  ポテンシャル
-  \begin{align}
-    V(r) = \begin{dcases}
-      -V_0\ &(r \leq a)\\
-      0\ &(r \geq a)
-    \end{dcases}
-  \end{align}
-  による散乱を考える．
-  Born近似の適用条件(\ref{BornCondition})より，
-  \begin{align}
-    1 &\gg \frac{m}{2\pi \hbar^2}\abs{\int \frac{\e^{\i kr'}}{r'}V_0\e^{\i\bm{k}\cdot\bm{r}'}\dd{\bm{r}'}}\\
-    &= \frac{mV_0}{2\pi \hbar^2}\abs{\int \e^{\i kr'}\e^{\i kr'\cos \theta'}r'\sin\theta' \dd{r'}\dd{\theta'}\dd{\phi'}}\\
-    &= \frac{mV_0}{2\hbar^2 k^2}\abs{\e^{2\i ka} - 1 - 2\i ka}
-  \end{align}
-  を得る\footnote{「試験に出そうな計算．」}．これを低エネルギー散乱と高エネルギー散乱に場合分けして見積もる．
-
-  (i)低エネルギー散乱($ka \ll 1$)
-  \begin{align}
-    \abs{\e^{2\i ka} - 1 - 2\i ka} &\simeq \abs{\qty(1 + 2\i ka + \frac{1}{2}\qty(2 \i ka)^2) - 1 - 2\i ka}\\
-    &= 2k^2 a^2
-  \end{align}
-  より，適用条件は
-  \begin{align}
-    1 \gg \frac{mV_0}{2 \hbar^2 k^2}2k^2 a^2 = \frac{mV_0 a^2}{\hbar^2}
-  \end{align}
-  である．つまり，ポテンシャルの大きさ$V_0$または半径$a$が小さい時に近似が有効であることがわかる．
-
-  (ii)高エネルギー散乱($ka \gg 1$)
-  \begin{align}
-    \abs{\e^{2\i ka} - 1 - 2\i ka} \simeq 2ka
-  \end{align}
-  より，適用条件は
-  \begin{align}
-    1 \gg \frac{mV_0 a}{\hbar^2 k}
-  \end{align}
-  である．$k\to\infty$に対して近似が成立することがわかる．つまり，Born近似は高エネルギー粒子に対して常によい近似であることがわかる．
- \end{myex}
-
+  \begin{itembox}[l]{球対称ポテンシャルの散乱振幅}
+    \begin{align}
+      f^{(1)}(\theta) &= -\frac{m}{\hbar^2} \int_{0}^{\infty} rV(r) \frac{\e^{\i qr} - \e^{-\i qr}}{\i q} \dd{r}\label{SCamp1st-exp} \\ 
+      &= -\frac{2m}{\hbar^2 q} \int_{0}^{\infty} rV(r)\sin\qty(qr) \dd{r}\label{SCamp1st-sin}
+    \end{align}
+  \end{itembox}
+  \begin{myex}{湯川ポテンシャル}{}
+    球対称ポテンシャル$V(r)$が，湯川ポテンシャルの場合を考える．
+    湯川ポテンシャルは，
+    \begin{align}
+      V(r) = V_0 \frac{\e^{-\mu r}}{\mu r}
+    \end{align}
+    と書ける．
+    による散乱を考える\footnote{湯川秀樹(1907-1981)}．これは，$V(r)$の到達距離が$\mu^{-1}$ほどであり，核子同士に働く力を表す．
+    物質中では，伝導電子に遮蔽された不純物のCoulombポテンシャルを表す．
+    $\mu = 1,2$及びCoulombポテンシャルのグラフを\reff{yukawa-potential-graph}に示す．
+    このポテンシャルの下で散乱振幅$f^{(1)}(\theta)$と散乱断面積$\sigma^{(1)}(\theta)$を求めよ．
+    \tcblower
+    散乱振幅は\refe{SCamp1st-exp}より，
+    \begin{align}
+      f^{(1)}(\theta) &= -\frac{m}{\hbar^2} \int_{0}^{\infty} rV(r) \frac{\e^{\i qr} - \e^{-\i qr}}{\i q} \dd{r} \\ 
+      &= -\frac{m}{\i \hbar^2 q \mu} \int_{0}^{\infty} rV_0\frac{e^{-\mu r}}{\mu r} \frac{\e^{\i qr} - \e^{-\i qr}}{\i q}\dd{r} \\
+      &= -\frac{mV_0}{\i \hbar^2 q \mu} \int_{0}^{\infty} \qty[\exp\qty{(-\mu + \i q)r} - \exp\qty{(-\mu - \i q)r}] \dd{r} \\
+      &= - \frac{2m V_0}{\hbar^2 \mu} \frac{1}{\mu^2 + q^2}
+    \end{align}
+    \par
+    散乱振幅は，
+    \begin{align}
+      \sigma^{(1)}(\theta) &= \abs{f^{(1)}(\theta)}^2\\
+      &= \qty(\frac{2m V_0}{\hbar^2 \mu})^2 \frac{1}{(\mu^2 + q^2)^2}\\
+      &= \qty(\frac{2m V_0}{\hbar^2 \mu})^2 \frac{1}{\qty[\mu^2 + 4k^2 \sin^2\qty(\theta/2)]^2}
+    \end{align}
+    である．なお，$\bm{\kappa'}$と$\bm{k}$のなす角が$\theta$であるので余弦定理より，$q = 2k\sin\theta/2$であることを用いた．
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width = 0.8\columnwidth]{fig/yukawa_potential.jpg}
+      \caption{湯川ポテンシャルとCoulombポテンシャルの比較}\label{yukawa-potential-graph}
+    \end{figure}
+  \end{myex}
+  \begin{myex}{Rutherford散乱(Griffith Example 10.6)}{}
+    湯川ポテンシャルで$V_0 = \frac{q_1q_2}{4\pi \epsilon_0}$，$\mu = 0$とするとCoulombポテンシャル
+    \begin{align}
+      V(r) = \frac{q_1q_2}{4\pi\epsilon_0}
+    \end{align}
+    と一致する．式(\ref{SCamp1st-sin})に代入して散乱振幅を求める．
+    \begin{align}
+      f(\theta) &= - \frac{2m}{\hbar^2q} \int_{0}^{\infty} r \frac{q_1q_2}{4\pi\epsilon_0 r} \sin\qty(qr) \dd{r}\\
+      &= -\frac{2m}{\hbar^2q}\frac{q_1q_2}{4\pi\epsilon_0}\int_{0}^{\infty} \sin\qty(qr) \dd{r} \\
+      &=  -\frac{2m}{\hbar^2q}\frac{q_1q_2}{4\pi\epsilon_0}\qty(-\frac{1}{q}\qty[\cos\qty(qr)]_0^{\infty})\\
+      &\simeq - \frac{mq_1q_1}{2\pi\epsilon_0\hbar^2q^2}\\
+      &= - \frac{mq_1q_1}{8\pi\epsilon_0\hbar^2 \sin^2 \theta/2}
+    \end{align}
+  \end{myex}
 \end{document}

@@ -1,0 +1,81 @@
+\documentclass{report}
+\input{../../head.tex}
+\begin{document}
+  Born近似の適用範囲について考える．
+  \refe{scattering-amp-general}より，一般に散乱振幅は，
+  \begin{align}
+    f(\theta) = -\frac{1}{4\pi} \int \e^{-\i\bm{\kappa'}\cdot\bm{r}} \frac{2m}{\hbar^2}V(r)\psi(\bm{r})\dd{\bm{r}}
+  \end{align}
+  と書けるのであった．また\refe{dozens-of-gv}より，散乱の波動関数は，
+  \begin{align}
+    \psi(\bm{r}) = \psi_0(\bm{r}) + \int g(\bm{r} - \bm{r'}) V(r') \psi_0(\bm{r'}) \dd{\bm{r'}} + \cdots \label{BornWF}
+  \end{align}
+  であった．第1 Born近似とは，波動関数$\psi(\bm{r})$を，
+  \begin{align}
+    \psi(\bm{r}) \simeq \psi_0(\bm{r})
+  \end{align}
+  と近似するのものであった．第1 Born近似が十分良い評価である，つまり，
+  \begin{align}
+    \int \e^{-\i \bm{\kappa'}\cdot \bm{r}} \frac{2m}{\hbar^2}V(r)\psi(\bm{r})\dd{\bm{r}}
+  \end{align}
+  を正しく評価できるには，
+  $V(r) \neq 0$となる$r\simeq 0$で，
+  \begin{align}
+    \psi(\bm{r}) \simeq \psi_0(\bm{r})
+  \end{align}
+  と近似できる必要がある．
+  $r \simeq 0$で\refe{BornWF}の第1項がそれ以外の項より十分大きければ良いから，
+  \begin{align}
+    \abs{\psi_0(0)} \gg \abs{\int g(0 - \bm{r}) V(r) \psi_0(\bm{r}) \dd{\bm{r}}}
+  \end{align}
+  となればよい．
+  整理すると，
+  \begin{align}
+    \abs{\e^{\i kz}} \gg \abs{\int -\frac{2m}{\hbar^2}\frac{\e^{\i kr}}{4\pi r}V(r) \e^{\i \bm{\kappa'}\cdot\bm{r}}\dd{\bm{r}}} \\
+    1 \gg \frac{m}{2\pi \hbar^2}\abs{\int \frac{\e^{\i kr}}{r}V(r)\e^{\i\bm{\kappa'}\cdot\bm{r}}\dd{\bm{r}}}\label{BornCondition}
+  \end{align}
+  を得る．これが第1 Born近似が有効であるための条件である．
+  \begin{myex}{第1 Born近似の適用条件}{}
+    球対称ポテンシャル$V(r)$，
+    \begin{align}
+      V(r) = \begin{dcases}
+        -V_0 &(r \leq a)\\
+        0 &(r \geq a)
+      \end{dcases}
+    \end{align}
+    による散乱を考える．
+    Born近似の適用条件である\refe{BornCondition}を用いて，満たすべき条件とその物理的意味を述べよ．
+    \tcblower
+    \refe{BornCondition}よりBorn近似が成立する条件は，% kappaとkのごちゃをなおす．
+    \begin{align}
+      1 &\gg \frac{m}{2\pi \hbar^2}\abs{\int \frac{\e^{\i kr'}}{r'}V(r')\e^{\i\bm{\kappa'}\cdot\bm{r'}}\dd{\bm{r'}}} \\
+      &= \frac{m}{2\pi \hbar^2}\abs{\int \frac{\e^{\i kr'}}{r'}V(r')\e^{\i\bm{\kappa'}\cdot\bm{r'}}\dd{\bm{r'}}} \\
+      &= \frac{mV_0}{2\pi \hbar^2}\abs{\int_{\phi' = 0}^{2\pi}\dd{\phi'}\int_{\theta' = 0}^{\pi}\dd{\theta'}\int_{r' = 0}^{a}\dd{r'} \frac{\e^{\i kr'}}{r'}\e^{\i \kappa r'\cos\theta'}r'^2\sin\theta'} \\ 
+      &= \frac{mV_0}{\hbar^2}\abs{\int_{r' = 0}^{a}r'\e^{\i kr'}\dd{r'}\int_{\theta' = 0}^{\pi}\e^{\i \kappa r'\cos\theta'}\sin\theta'\dd{\theta'}} \\
+      &= \frac{mV_0}{\hbar^2}\abs{\int_{r' = 0}^{a}r'\e^{\i kr'}\frac{\e^{\i\kappa r'} - \e^{-\i\kappa r'}}{\i\kappa r'}\dd{r'}} \\
+      &= \frac{mV_0}{2\hbar^2 k^2}\abs{\e^{2\i ka} - 1 - 2\i ka}
+    \end{align}
+    を得る\footnote{「試験に出そうな計算．」}．これを低エネルギー散乱と高エネルギー散乱に場合分けして見積もる．
+    \begin{enumerate}
+      \item 低エネルギー散乱($ka \ll 1$)\par
+        \begin{align}
+          \abs{\e^{2\i ka} - 1 - 2\i ka} &\simeq \abs{\qty(1 + 2\i ka + \frac{1}{2}\qty(2 \i ka)^2) - 1 - 2\i ka}\\
+          &= 2k^2 a^2
+        \end{align}
+        より，適用条件は
+        \begin{align}
+          1 \gg \frac{mV_0}{2 \hbar^2 k^2}2k^2 a^2 = \frac{mV_0 a^2}{\hbar^2}
+        \end{align}
+        である．つまり，ポテンシャルの大きさ$V_0$または半径$a$が小さい時に近似が有効であることがわかる．
+      \item 高エネルギー散乱($ka \gg 1$)\par
+        \begin{align}
+          \abs{\e^{2\i ka} - 1 - 2\i ka} \simeq 2ka
+        \end{align}
+        より，適用条件は
+        \begin{align}
+          1 \gg \frac{mV_0 a}{\hbar^2 k}
+        \end{align}
+        である．$k\to\infty$に対して近似が成立することがわかる．つまり，Born近似は高エネルギー粒子に対して常によい近似であることがわかる．
+    \end{enumerate}
+  \end{myex}
+\end{document}
