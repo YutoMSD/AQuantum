@@ -157,44 +157,45 @@
     \end{align}
     が成り立つからだ．
     \par
-    まず，1. のステップで定義したGreen関数の関係式，
+    まず，1. で定義したGreen関数の関係式，
     \begin{align}
       \qty(\laplacian + \kappa^2)G_0(\bm{r}) = \delta(\bm{r})
     \end{align}
     の両辺をFourier変換すると，
     \begin{align}
-      \int\dd{\bm{r}} \qty(\laplacian + \kappa^2) G_0(\bm{r}) \e^{-\i\bm{k} \cdot \bm{r}} &= \frac{1}{(2\pi)^3}\int\dd{\bm{r}} \delta(\bm{r})\e^{-\i\bm{k}\cdot\bm{r}} \\
-      \Leftrightarrow \qty[(-\i\bm{k})^2 + \kappa^2] \int\dd{\bm{r}} G_0(\bm{r}) \e^{-\i \bm{k}\cdot \bm{r}} &= \frac{1}{(2\pi)^3}
+      \int\dd{\bm{r}} \qty(\laplacian + \kappa^2) G_0(\bm{r}) \e^{-\i\bm{k} \cdot \bm{r}} &= \int\dd{\bm{r}} \delta(\bm{r})\e^{-\i\bm{k}\cdot\bm{r}} \\
+      \Leftrightarrow \qty[(-\i\bm{k})^2 + \kappa^2] \int\dd{\bm{r}} G_0(\bm{r}) \e^{-\i \bm{k}\cdot \bm{r}} &= 1
     \end{align}
     となる．Green関数$G_0(\bm{r})$のFourier変換を$\tilde{G}_0(\bm{k})$と書くと，
     \begin{align}
-      \tilde{G}_0(\bm{k}) = \frac{1}{(2\pi)^3}\frac{1}{\kappa^2 - k^2}
+      \tilde{G}_0(\bm{k}) = \frac{1}{\kappa^2 - k^2}
     \end{align}
     を得る．よってGreen関数は$\tilde{G}_0(\bm{k})$を逆Fourier変換して，
     \begin{align}
-      G_0(\bm{r}) &= \int\dd{\bm{k}} \frac{1}{(2\pi)^3}\frac{\e^{\i\bm{k} \cdot \bm{r}}}{\kappa^2 - k^2}\label{g-tilde-to-gr}
+      G_0(\bm{r}) &= \frac{1}{(2\pi)^3}\int\dd{\bm{k}} \frac{\e^{\i\bm{k} \cdot \bm{r}}}{\kappa^2 - k^2}\label{g-tilde-to-gr}
     \end{align}
-    と表される．極座標に変換し\refe{g-tilde-to-gr}の積分を実行すると，
+    と表される．極座標に変換して\refe{g-tilde-to-gr}の積分を実行すると，
     \begin{align}
-      G_0(\bm{r}) &= \int\dd{\bm{k}} \frac{1}{(2\pi)^3}\frac{\e^{\i\bm{k} \cdot \bm{r}}}{\kappa^2 - k^2}\\ 
+      G_0(\bm{r}) &=  \frac{1}{(2\pi)^3}\int\dd{\bm{k}}\frac{\e^{\i\bm{k} \cdot \bm{r}}}{\kappa^2 - k^2}\\ 
       &= \frac{1}{(2\pi)^3} \int\dd{\bm{k}} \frac{\exp\qty(\i kr\cos\theta)}{\kappa^2 - k^2} \\ 
-      &= \frac{1}{(2\pi)^3} \int_{\phi = 0}^{2\pi}\dd{\phi}\int_{k = 0}^{\infty}\dd{r}\int_{\theta = 0}^{\pi}\dd{\theta} \frac{\exp(\i kr \cos \theta)}{\kappa^2 - k^2} k^2\sin\theta \\
+      &= \frac{1}{(2\pi)^3} \int_{\phi = 0}^{2\pi}\dd{\phi}\int_{k = 0}^{\infty}\dd{k}\int_{\theta = 0}^{\pi}\dd{\theta} \frac{\exp(\i kr \cos \theta)}{\kappa^2 - k^2} k^2\sin\theta \\
       &= \frac{1}{(2\pi)^3} 2\pi \int_{k = 0}^{\infty} k^2 \dd{k} \int_{\theta = 0}^{\pi}\dd{\theta} \sin\theta\frac{\exp(\i k r\cos\theta)}{\kappa^2 - k^2} \\
       &= \frac{1}{(2\pi)^2} \int_{0}^{\infty}k^2\frac{\e^{\i kr} - \e^{-\i kr}}{\i kr\qty(\kappa^2 - k^2)}\dd{k} \\
       &= \frac{1}{4\pi^2\i r} \int_{0}^{\infty}k \frac{\e^{\i kr} - \e^{-\i kr}}{(\kappa - k)(\kappa + k)}\dd{k} \\
       &= \frac{1}{8\pi^2\i r} \int_{-\infty}^{\infty}k \frac{\e^{\i kr} - \e^{-\i kr}}{(\kappa - k)(\kappa + k)}\dd{k} \\
-      &= \frac{1}{8\pi^2\i r} \int_{-\infty}^{\infty}k \qty[\frac{\e^{\i kr}}{(\kappa - k)(\kappa + k)} - \frac{\e^{-\i kr}}{(\kappa - k)(\kappa + k)}]\dd{k} \\
-      &= \frac{1}{4\pi^2 \i r}I
+      &= \frac{1}{8\pi^2\i r} \int_{-\infty}^{\infty}k \qty[\frac{\e^{\i kr}}{(\kappa - k)(\kappa + k)} - \frac{\e^{-\i kr}}{(\kappa - k)(\kappa + k)}]\dd{k} \\ 
+      &= \frac{\i}{8\pi^2 r} \int_{-\infty}^{\infty}k \qty[\frac{\e^{\i kr}}{(k - \kappa)(k + \kappa)} - \frac{\e^{-\i kr}}{(k - \kappa)(k + \kappa)}]\dd{k} \\ 
+      &= \frac{\i}{4\pi^2 r}I
     \end{align}
     となる．ただし，$I$は，
     \begin{align}
-      I \coloneqq \int_{-\infty}^{\infty} \frac{k \e^{\i kr}}{(\kappa - k)(\kappa + k)} \dd{k}
+      I \coloneqq \int_{-\infty}^{\infty} \frac{k \e^{\i kr}}{(k - \kappa)(k + \kappa)} \dd{k}
     \end{align}
     である．
     式変形の途中で，
     \begin{align}
-      -\int_{-\infty}^{\infty}k \frac{\e^{-\i kr}}{(\kappa - k)(\kappa + k)}\dd{k} &= -\int_{\infty}^{-\infty}\qty(-k) \frac{\e^{-\i \qty(-k)r}}{\qty(\kappa - \qty(-k))\qty(\kappa + \qty(-k))}\qty(-\dd{k}) \\ 
-      &= \int_{-\infty}^{\infty}k \frac{\e^{\i kr}}{(\kappa - k)(\kappa + k)}\dd{k} = I
+      -\int_{-\infty}^{\infty}k \frac{\e^{-\i kr}}{(k - \kappa)(k + \kappa)}\dd{k} &= -\int_{\infty}^{-\infty}\qty(-k) \frac{\e^{-\i \qty(-k)r}}{\qty(\qty(-k) - \kappa)\qty(\qty(-k) + \kappa)}\qty(-\dd{k}) \\ 
+      &= \int_{-\infty}^{\infty}k \frac{\e^{\i kr}}{(k - \kappa)(k + \kappa)}\dd{k} = I
     \end{align}
     なる関係を用いた．
     $I$を計算するには留数定理を用いる．
@@ -208,22 +209,22 @@
     今回の場合は特異点は$\kappa$と$-\kappa$である．
     しかし，極の避け方にはいくつかのパターンがあり，それに応じてGreen関数の計算結果は複数存在する．
     これは何ら不自然なことではない．
-    今計算しているのは，$\qty(\laplacian + \kappa)$なる演算子の固有関数$G_0$を求めているので，複数存在してもよい．
+    今計算しているのは，$\qty(\laplacian + \kappa^2)$なる演算子の固有関数$G_0$を求めているので，複数存在してもよい．
     まず，\reff{Integral}のように$-\kappa$を上に避け，$\kappa$を下に避けると，
     積分経路$C$で囲まれている領域に存在する特異点は，$k = \kappa$のみであるので，
     \begin{align}
-      I &= \int_{-\infty}^{\infty} \frac{k \e^{\i kr}}{(\kappa - k)(\kappa + k)} \dd{k} \\ 
+      I &= \int_{-\infty}^{\infty} \frac{k \e^{\i kr}}{(k - \kappa)(k + \kappa)} \dd{k} \\ 
       &= 2\pi\i\frac{\e^{\i\kappa r}}{2} \\ 
       &= \pi\i\e^{\i\kappa r}
     \end{align}
     となるから，
     \begin{align}
-      G_0(\bm{r}) &= \frac{1}{4\pi^2 \i r}I \\ 
-      &= \frac{\e^{\i\kappa r}}{4\pi r}
+      G_0(\bm{r}) &= \frac{\i}{4\pi^2 r}I \\ 
+      &= -\frac{\e^{\i\kappa r}}{4\pi r}
     \end{align}
     となる\footnote{
       積分経路$C$に$-\kappa$と$\kappa$がそれぞれ含まれるか否かを分類して求めたGreen関数は，
-      \begin{align}
+      \begin{align*}
         G_0(\bm{r}) = 
         \begin{dcases}
           \text{不適} & $-\kappa$: 含まない，$\kappa$: 含まない \\ 
@@ -231,7 +232,7 @@
           \frac{\e^{-\i\kappa r}}{4\pi r} & $-\kappa$: 含む，$\kappa$: 含まない \\ 
           \i\frac{\sin\qty(\kappa r)}{4\pi r} & $-\kappa$: 含む，$\kappa$: 含む
         \end{dcases}
-      \end{align}
+      \end{align*}
       $-\kappa$と$\kappa$をともに含まない経路で計算したとき，$I = 0$となるが，固有関数は0であってはいけないから，不適である．
     }．
     計算しているのは，外向き球面波解であるため，\reff{Integral}で示した経路で積分した結果が最も合理的であるから，このGreen関数を採用して以下の計算を行う．
@@ -239,8 +240,8 @@
     \begin{align}
       \psi(\bm{r}) &= \phi(\bm{r}) + \chi(\bm{r}) \\ 
       &= \e^{\i kz} + \int\dd{\bm{r'}} G_0(\bm{r} - \bm{r'}) U(\bm{r'}) \phi(\bm{r'}) \\ 
-      &= \e^{\i kz} + \int\dd{\bm{r'}} \frac{\e^{\i\kappa \abs{\bm{r} - \bm{r'}}}}{4\pi \abs{\bm{r} - \bm{r'}}} \cdot \frac{2m}{\hbar^2} V(\bm{r}') \cdot \psi(\bm{r'}) \\ 
-      &= \e^{\i kz} - \frac{1}{4\pi} \int \frac{\e^{\i \kappa \abs{\bm{r} - \bm{r'}}}}{\abs{\bm{r} - \bm{r'}}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'}) \dd{r'}\label{formal-soultion}
+      &= \e^{\i kz} - \int \frac{\e^{\i\kappa \abs{\bm{r} - \bm{r'}}}}{4\pi \abs{\bm{r} - \bm{r'}}} \cdot \frac{2m}{\hbar^2} V(\bm{r'}) \cdot \psi(\bm{r'}\dd{\bm{r'}}) \\ 
+      &= \e^{\i kz} - \frac{1}{4\pi} \int \frac{\e^{\i \kappa \abs{\bm{r} - \bm{r'}}}}{\abs{\bm{r} - \bm{r'}}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'}) \dd{\bm{r'}}\label{formal-soultion}
     \end{align}
     である．
     \begin{figure}[H]
@@ -249,31 +250,33 @@
       \caption{積分経路}\label{Integral}
     \end{figure}
     \par
-    次に\refe{formal-soultion}から散乱振幅$f(\theta)$を求める．仮定として，$V(r')$は$r'<a$でのみ$V\neq 0$とする．
+    次に\refe{formal-soultion}から散乱振幅$f(\theta)$を求める．$V(r')$は$r' < a$でのみ$V\neq 0$であると仮定する．
     \reff{formal-soultion}において
-    $r \gg r'$では
+    $r \gg r'$では，
     \begin{align}
-      \abs{\bm{r} - \bm{r'}} &= \sqrt{r^2 - 2\bm{r} \cdot \bm{r'} + r'^2}\\
-      &= r \sqrt{1 - \frac{2\bm{r'} \cdot \bm{n}}{r + \qty(\cfrac{r'}{r})^2}}\\
-      &\simeq r - \bm{n}\cdot\bm{r'}
+      \abs{\bm{r} - \bm{r'}} &= \sqrt{r^2 - 2\bm{r} \cdot \bm{r'} + r'^2} \\
+      &= r \qty[1 - \frac{2\bm{r}\cdot\bm{r'}}{r^2} + \qty(\frac{r'}{r})^2]^{1/2} \\
+      &\simeq r - \bm{n}\cdot\bm{r'}\label{abs-r-r-prime-approx}
     \end{align}
     が成り立つ．よって，
     \begin{align}
-      \e^{\i k \abs{\bm{r} - \bm{r'}}} &\simeq \e^{\i k \qty(r - \bm{n} \cdot \bm{r'})}\\
-      &= \e^{\i k r} - \e^{-\i \bm{k'} \cdot \bm{r'}}
+      \e^{\i \kappa \abs{\bm{r} - \bm{r'}}} &\simeq \e^{\i \kappa \qty(r - \bm{n} \cdot \bm{r'})}\\
+      &= \e^{\i \kappa r} - \e^{-\i \bm{\kappa} \cdot \bm{r'}}\label{exp-abs-r-r-prime-approx}
     \end{align}
-    を得る．ここで，$\bm{k'} = k \bm{n}$を$z$軸と角度$\theta$をなす散乱方向の波数ベクトルとする．また，
+    と近似できる．ただし，$\bm{\kappa} \coloneqq \kappa \bm{n}$を$z$軸と角度$\theta$をなす散乱方向の波数ベクトルとする．
+    また，
     \begin{align}
-      \frac{1}{\abs{\bm{r} - \bm{r'}}} &\simeq \frac{1}{r\qty(1 - \frac{\bm{n}\cdot\bm{r'}}{r})}\\
-      &= \simeq \frac{1}{r}
+      \frac{1}{\abs{\bm{r} - \bm{r'}}} &= \frac{1}{r}\qty[1 - \frac{2\bm{r}\cdot\bm{r'}}{r^2} + \qty(\frac{r'}{r})^2]^{-1/2} \\ 
+      &\simeq \frac{1}{r}\label{abs-r-r-prime-inv-approx}
     \end{align}
-    である．以上より，
+    と近似する．% なぜ？？？
+    \refe{exp-abs-r-r-prime-approx}や\refe{abs-r-r-prime-inv-approx}で行った近似結果を\refe{formal-soultion}に代入すると，
     \begin{align}
-      \psi(\bm{r}) = \e^{\i kz} - \qty(\frac{1}{4\pi} \int \dd{\bm{r'}} \e^{- \i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(r'))\frac{\e^{\i kr}}{r}
+      \psi(\bm{r}) = \e^{\i kz} - \qty(\frac{1}{4\pi} \int \e^{-\i\bm{\kappa'}\cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}})\frac{\e^{\i\kappa r}}{r}
     \end{align}
     である．したがって，散乱振幅は
     \begin{align}
-      f(\theta) = -\frac{1}{4\pi} \int \dd{\bm{r'}} \e^{- \i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(r')
+      f(\theta) = -\frac{1}{4\pi} \int \dd{\bm{r'}} \e^{- \i \bm{\kappa'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})
     \end{align}
     となる．
 \end{document}
