@@ -177,20 +177,24 @@ Dirac方程式は
   (\bm{\sigma}\cdot\hat{\bm{a}})(\bm{\sigma}\cdot\hat{\bm{b}}) &= (\sum_{i} \sigma_i \hat{a}_i) (\sum_{j} \sigma_j \hat{a}_j)\\
   &= \sum_{i} \sum_{j} \sigma_{i} \sigma_{j} \hat{a}_i \hat{b}_j\\
   &= \sum_{i} \sum_{j} \frac{1}{2}(\qty{\sigma_i, \sigma_j} + [\sigma_i, \sigma_j]) \hat{a}_i \hat{b}_j\\
-  &= \sum_{i} \sum_{j} \frac{1}{2}(2 \delta_{i,j} + 2\i \epsilon_{ijk} \sigma_k) \hat{a}_i \hat{b}_j\\
-  &= \sum_{i} \hat{a}_i^2 + \i \sum_{i} \sum_{j} \epsilon_{ijk} \hat{a}_i \hat{b}_j\\
-  &= \hat{\bm{a}}^2 + \i(\hat{\bm{a}} \times \hat{\bm{b}})
+  &= \sum_{i} \sum_{j} \frac{1}{2}(2 \delta_{i,j} + 2\i \sum_{k} \epsilon_{ijk} \sigma_k) \hat{a}_i \hat{b}_j\\
+  &= \sum_{i} \hat{a}_i \hat{b}_i + \i \sigma_k \sum_{i} \sum_{j} \sum_{k} \epsilon_{ijk} \hat{a}_i \hat{b}_j\\
+  &= \hat{\bm{a}}^2 + \i \sum_{k} \sigma_k (\hat{\bm{a}} \times \hat{\bm{b}})_k\\
+  &= \hat{\bm{a}}^2 + \i \bm{\sigma} \cdot (\hat{\bm{a}} \times \hat{\bm{b}})
 \end{align}
 これを用いると
 \begin{align}
-  [\bm{\sigma}\cdot(\bm{p} + e\bm{A})][\bm{\sigma}\cdot(\bm{p} + e\bm{A})] &= (\hat{\bm{p}} + e\bm{A})^2 + \i[(\hat{\bm{p}} + e\bm{A}) \times (\hat{\bm{p}} + e\bm{A})]\\
-  &= (\hat{\bm{p}} + e\bm{A})^2 + \i e[(\bm{A} \times \hat{\bm{p}}) + (\hat{\bm{p}} \times e\bm{A})]\\
+  [\bm{\sigma}\cdot(\bm{p} + e\bm{A})][\bm{\sigma}\cdot(\bm{p} + e\bm{A})] &= (\hat{\bm{p}} + e\bm{A})^2 + \i \bm{\sigma} \cdot [(\hat{\bm{p}} + e\bm{A}) \times (\hat{\bm{p}} + e\bm{A})]\\
+  &= (\hat{\bm{p}} + e\bm{A})^2 + \i e \bm{\sigma} \cdot [(\bm{A} \times \hat{\bm{p}}) + (\hat{\bm{p}} \times e\bm{A})]\\
 \end{align}
 と変形される．ここで，
 \begin{align}
   [(\bm{A} \times \hat{\bm{p}}) + (\hat{\bm{p}} \times e\bm{A})]\psi &= (\bm{A} \times \hat{\bm{p}})\psi + (\hat{\bm{p}} \times \bm{A})\psi\\
-  &= \bm{A} \times (\hat{\bm{p}}\psi) + (\hat{\bm{p}}\psi) \times \bm{A} + (\hat{\bm{p}} \times \bm{A})\psi\\
-  &= (\hat{\bm{p}} \times \bm{A}) \psi\\
+  &= -\i \hbar \qty[(\bm{A} \times \nabla) \psi + (\nabla \times \bm{A}) \psi]\\
+  &= -\i\hbar \qty[\bm{A} \times (\nabla \psi) + (\nabla\psi)\times \bm{A} + (\nabla \times \bm{A}) \psi]\\
+  %&= \bm{A} \times (\hat{\bm{p}}\psi) + (\hat{\bm{p}}\psi) \times \bm{A} + (\hat{\bm{p}} \times \bm{A})\psi\\
+  %&= (\hat{\bm{p}} \times \bm{A}) \psi\\
+  &= -\i\hbar \qty[-(\nabla\psi)\times \bm{A} + (\nabla\psi)\times \bm{A} + (\nabla \times \bm{A}) \psi]\\
   &= -\i\hbar(\nabla \times \bm{A}) \psi
 \end{align}
 が成り立つ．以上より，
