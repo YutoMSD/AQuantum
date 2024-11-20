@@ -1,236 +1,282 @@
 \documentclass{report}
 \input{../../head.tex}
 \begin{document}
-  散乱体が球対称ポテンシャル$V(r)$を持つとする．Schrödinger方程式は以下のようになる．
-  \begin{align}
-    \label{SE_Scattering}
-    \qty(-\frac{\hbar^2}{2m}\nabla^2 + V(r))\psi(\bm{r}) = E \psi(\bm{r})
-  \end{align}
-  ここで，$V(r)$は$r \to \infty$で十分早く$V \to 0$となるとする．$z$軸に沿う入射波は平面波なので
-  \begin{align}
-    \psi_{\r{in}} = \e^{\i k z}\ (z \to \infty)
-  \end{align}
-  と表せる．また，散乱波は外向きの球面波となるので
-  \begin{align}
-    \psi_{\r{sc}} \simeq \frac{\e^{\i kr}}{r}\ (r \to \infty)
-  \end{align}
-  である．散乱問題とは，$\r \to \infty$で
-  \begin{align}
-    \psi(\bm{r}) = \e^{\i kz} + f(\theta) \frac{\e^{\i kr}}{r}
-  \end{align}
-  を満たす式(\ref{SE_Scattering})の定常解を求めることである．$f(\theta)$を散乱振幅という．上式は重要なので強調しておく．
-  \begin{itembox}[l]{散乱問題の境界条件}
-    \begin{equation}
-      \psi(\bm{r}) = \e^{\i kz} + f(\theta) \frac{\e^{\i kr}}{r}
-    \end{equation}
-  \end{itembox}
-
-  この問題を解くための準備として確率密度($\rho = \psi^{*} \psi$)の時間変化を考える．
-  \begin{align}
-    \frac{\partial}{\partial t}\rho &= \frac{\partial}{\partial t}(\psi^{*}\psi)\\
-    &= \frac{\partial \psi^{*}}{\partial t}\psi + \psi^{*}\frac{\partial \psi}{\partial t}\\
-    &= -\frac{1}{\i\hbar}\qty(-\frac{\hbar^2}{2m}\nabla^2 + V)\psi^{*}\psi + \psi^{*}\frac{1}{\i\hbar}\qty(-\frac{\hbar^2}{2m}\nabla^2 + V)\psi\\
-    &= \frac{\hbar}{2m\i}\qty[(\nabla^2 \psi^{*})\psi - \psi^{*}(\nabla^2\psi)]\\
-    &= -\frac{\hbar}{2m\i}\nabla \cdot (\psi^{*}\nabla \psi - \psi \nabla \psi^{*})
-  \end{align}
-  ここで，確率流密度を
-  \begin{align}
-    \bm{j} &= \frac{\hbar}{2m\i} (\psi^{*}\nabla \psi - \psi \nabla \psi^{*})\\
-    &= \frac{\hbar}{m}\Im (\psi^{*}\nabla\psi)
-  \end{align}
-  と定義すれば，確率密度に対する連続の式
-  \begin{align}
-    \frac{\partial}{\partial t} \rho = -\nabla \cdot \bm{j}
-  \end{align}
-  を得る\footnote{
-   両辺に電荷をかければ電荷保存の法則となる． 
-  }．
-
-  次に微分断面積と散乱振幅の関係を考える．
-  入射波は$\psi_{\r{in}} = \e^{\i kz}$である．入射波の確率流密度は
-  \begin{align}
-    j_z &= \frac{\hbar}{m} \Im (\e^{-\i kz} \i k e^{\i kz}) \\
-    &= \frac{\hbar k}{m}
-  \end{align}
-  である．散乱波は$\psi_{\r{sc}} = \frac{f(\theta)}{r}\e^{\i kr}$である．散乱波の確率流密度は
-  \begin{align}
-    j_r(\theta) &= \frac{\hbar}{m}\Im (\psi^{*}_{\r{sc}}\nabla\psi_{\r{sc}})\\
-    &\simeq \frac{\hbar}{m}\Im (\psi^{*}_{\r{sc}}\frac{\partial}{\partial r}\psi_{\r{sc}})\\
-    &= \frac{\hbar}{m} \Im \qty[\frac{f(\theta)}{r} \e^{-\i kr}\qty(\frac{\i k}{r} - \frac{1}{r^2})f(\theta)\e^{\i kr}]\\
-    &\simeq \frac{\hbar}{m} \Im \qty[\frac{f(\theta)}{r} \e^{-\i kr}\frac{\i k}{r}f(\theta)\e^{\i kr}]\\
-    &= \frac{\hbar}{m}\frac{k}{r^2} \abs{f(\theta)}^2\\
-    &= \frac{\abs{f(\theta)}^2}{r^2}j_z
-  \end{align}
-  である．ここで，1行目から2行目では
-  \begin{align}
-    \nabla \psi_{\r{sc}} &= \qty(\frac{\partial}{\partial r}\bm{e}_r + \frac{1}{r}\frac{\partial}{\partial \theta}\bm{e}_{\theta} + \frac{1}{r \sin \theta}\frac{\partial}{\partial \phi} \bm{e}_{\phi})\psi_{\r{sc}}\\
-    &\simeq \frac{\partial}{\partial r}\psi_{\r{sc}} \bm{e}_r\ (r \to \infty)
-  \end{align}
-  という近似を用いた．
-  
-  微分断面積と粒子数の関係
-  \begin{align}
-    \dd{N} = \sigma (\theta) N \dd{\Omega}
-  \end{align}
-  の両辺を$N$で割る．
-  \begin{align}
-    \frac{\dd{N}}{N} = \sigma (\theta) \dd{\Omega}
-  \end{align}
-  上式の左辺を言葉に直すと，
-  \begin{align}
-    \frac{\text{単位時間に位置$(r,\theta)$にある$\dd{S}$に入射する粒子数}}{\text{単位時間単位面積当たりの入射粒子数}}
-  \end{align}
-  である．これは
-  \begin{align}
-    \frac{\text{単位時間に位置$(r,\theta)$にある$\dd{S}$に粒子が入射する確率}}{\text{単位時間単位面積当たりに粒子が入射する確率}} = \frac{j_z \dd{S}}{j_z}
-  \end{align}
-  と等しいので
-  \begin{align}
-    \sigma(\theta)\dd{\Omega} = \frac{\abs{f(\theta)}^2\dd{S}}{r^2}
-  \end{align}
-  が得られる．よって，$\dd{\Omega} = \frac{\dd{S}}{r^2}$だから，
-  \begin{align}
-    \sigma(\theta) = \abs{f(\theta)}^2
-  \end{align}
-  という関係が成り立つ．これは，散乱振幅から微分断面積が求められることを意味する．
-  \begin{itembox}[l]{散乱振幅と微分断面積の関係}
+  本節では量子力学的に散乱を議論する．量子力学では波動関数を用いて散乱体の様子を調べる．
+  まず，散乱帯のポテンシャルを紹介して，散乱振幅$f(\theta)$を求めればいいことを知る．
+  次に，散乱振幅と微分断面積の関係を調べる．
+  最後に，具体的に散乱振幅の表式を導く．
+  \subsection{散乱振幅}
+    散乱体が球対称ポテンシャル$V(r)$を持つとする．Schrödinger方程式は
+    \begin{align}
+      \qty(-\frac{\hbar^2}{2m}\laplacian + V(r))\psi(\bm{r}) = E \psi(\bm{r})\label{se-scattering}
+    \end{align}
+    である．
+    ここで，$V(r)$は$r \to \infty$で$r^{-1}$より早く$V \to 0$となるとする．
+    なお，$r \to \infty$で$r^{-1}$より早く$0$に収束することを，十分早く収束するということにする．
+    $z$軸に沿う入射波は平面波なので，
+    \begin{align}
+      \psi_{\r{in}} = \e^{\i k z}\ (z \to \infty)
+    \end{align}
+    と表せる．
+    また，散乱波は外向きの球面波となるので，
+    \begin{align}
+      \psi_{\r{sc}} \simeq \frac{\e^{\i kr}}{r}\ (r \to \infty)
+    \end{align}
+    である．散乱問題とは，$r \to \infty$で
+    \begin{align}
+      \psi(\bm{r}) &= \psi_{\r{in}} + \psi_{\r{sc}} \\ 
+      &= \e^{\i kz} + f(\theta) \frac{\e^{\i kr}}{r}
+    \end{align}
+    を満たす\refe{se-scattering}の定常解を求めることである．$f(\theta)$を散乱振幅という．上式は重要なので強調しておく．
+    \begin{itembox}[l]{散乱問題の境界条件}
+      \begin{equation}
+        \psi(\bm{r}) = \e^{\i kz} + f(\theta) \frac{\e^{\i kr}}{r}
+      \end{equation}
+    \end{itembox}
+  \subsection{散乱振幅と微分断面積の関係}
+    この問題を解くための準備として確率密度$\rho \coloneqq \psi^{*} \psi$の時間変化を考える．
+    時間変化するSchr\"odinger方程式より，
+    \begin{align}
+      \i\hbar\pdv{\psi}{t} &= \hat{H}\psi \\ 
+      \Leftrightarrow \pdv{\psi}{t} &= \frac{1}{\i\hbar}\hat{H}\psi \\ 
+      \Leftrightarrow \pdv{\psi^*}{t} &= -\frac{1}{\i\hbar}\hat{H}\psi^*
+    \end{align}
+    であることを用いると，
+    \begin{align}
+      \pdv{t}\rho &= \pdv{t}(\psi^{*}\psi) \\
+      &= \pdv{\psi^*}{t}\psi + \psi^{*}\pdv{\psi}{t} \\
+      &= -\frac{1}{\i\hbar}\qty[\qty(-\frac{\hbar^2}{2m}\laplacian + V)\psi^{*}]\psi + \psi^{*}\frac{1}{\i\hbar}\qty[\qty(-\frac{\hbar^2}{2m}\laplacian + V)\psi] \\
+      &= \frac{\hbar}{2\i m}\qty[\qty(\laplacian \psi^{*})\psi - \psi^{*}\qty(\laplacian\psi)] \\
+      &= -\frac{\hbar}{2\i m}\div \qty(\psi^{*}\grad\psi - \psi \grad\psi^{*})\label{prob-density}
+    \end{align}
+    確率流密度を，
+    \begin{align}
+      \bm{j} &\coloneqq \frac{\hbar}{2\i m} \qty(\psi^{*}\grad\psi - \psi \grad\psi^{*})\label{prob-flow} \\
+      &= \frac{\hbar}{m}\Im \qty(\psi^{*}\grad\psi)
+    \end{align}
+    と定義する．
+    \refe{prob-flow}を\refe{prob-density}に代入すると，確率密度に対する連続の式である，
+    \begin{align}
+      \pdv{t} \rho = -\div\bm{j}
+    \end{align}
+    を得る\footnote{両辺に電荷をかければ電荷保存の法則となる． }．
+    \par
+    次に微分断面積と散乱振幅の関係を考える．
+    $z$軸に平行に入射しているので入射波は，
+    \begin{align}
+      \psi_{\r{in}} = \e^{\i kz}
+    \end{align}
+    と書けるのであった．
+    入射波は$z$軸方向にしか存在しないので，その確率流密度の$z$成分$j_z$は\refe{psi-in-grad}より，
+    \begin{align}
+      j_z &= \frac{\hbar}{m}\Im \qty(\psi^{*}\pdv{z}\psi) \\ 
+      &= \frac{\hbar}{m} \Im \qty(\e^{-\i kz} \i k e^{\i kz}) \\
+      &= \frac{\hbar k}{m}
+    \end{align}% メモ: 図にr軸を追加する．
+    である．
+    \par
+    散乱波は，
+    \begin{align}
+      \psi_{\r{sc}} = \frac{f(\theta)}{r}\e^{\i kr}
+    \end{align}
+    と書けるのであった．
+    散乱波は$r$軸方向にしか存在しないので，その確率流密度の$r$成分$j_r(\theta)$は，
+    \begin{align}
+      j_r(\theta) &= \frac{\hbar}{m}\Im \qty(\psi^{*}_{\r{sc}}\pdv{r}\psi_{\r{sc}}) \\
+      &= \frac{\hbar}{m} \Im \qty[\frac{f(\theta)^*}{r} \e^{-\i kr}\qty(\frac{\i k}{r} - \frac{1}{r^2})f(\theta)\e^{\i kr}] \\
+      &= \frac{\hbar}{m} \Im \qty[-\frac{\abs{f(\theta)}^2}{r^3} + \i k\frac{\abs{f(\theta)}^2}{r^2}] \\
+      &= \frac{\hbar}{m} k\frac{\abs{f(\theta)}^2}{r^2} \\
+      &= \frac{\abs{f(\theta)}^2}{r^2}j_z
+    \end{align}
+    である．
+    \par
+    さて，微分断面積と散乱振幅の関係について考えよう．
+    微分断面積と粒子数の関係の両辺を$n$で割ると，
+    \begin{align}
+      \dd{N} &= \sigma (\theta) n \dd{\Omega} \\ 
+      \Leftrightarrow \frac{\dd{N}}{n} &= \sigma (\theta) \dd{\Omega}
+    \end{align}
+    となる．$\frac{\dd{N}}{n}$は，
+    \begin{align}
+      \frac{\dd{N}}{n} &= \frac{\qty(\text{単位時間に位置$(r,\theta)$にある$検出器\dd{S}$に入射する粒子数})}{\qty(\text{単位時間単位面積当たりの入射粒子数})} \\ 
+      &= \frac{\qty(\text{単位時間に位置$(r,\theta)$にある検出器$\dd{S}$に粒子が入射する確率})}{\qty(\text{単位時間単位面積当たりに粒子が入射する確率})} \\ 
+      &= \frac{j_r \dd{S}}{j_z}
+    \end{align}
+    と書けるので，
+    \begin{align}
+      \sigma(\theta)\dd{\Omega} = \abs{f(\theta)}^2\frac{\dd{S}}{r^2}
+    \end{align}
+    が得られる．
+    \refe{solid-angle-def}より，$\dd{\Omega} = \frac{\dd{S}}{r^2}$であるから，
     \begin{align}
       \sigma(\theta) = \abs{f(\theta)}^2
     \end{align}
-  \end{itembox}
-
-  次に$f(\theta)$を求めるための式を作る．
-  散乱のSchrödinger方程式は
-  \begin{align}
-    \qty(-\frac{\hbar^2}{2m}\nabla^2 + V(r))\psi(\bm{r}) = E\psi(\bm{r})
-  \end{align}
-  である．ここで，
-  \begin{align}
-    \begin{dcases}
-      \kappa = \frac{\sqrt{2mE}}{\hbar}\\
-      U(\bm{r}) = \frac{2m}{\hbar^2} V(\bm{r})
-    \end{dcases}
-  \end{align}
-  とおくと，
-  \begin{align}
-    \label{Helmholtz align}
-    \qty(\nabla^2 + \kappa^2)\psi(\bm{r}) = U(\bm{r}) \psi(\bm{r})
-  \end{align}
-  と表せる．式(\ref{Helmholts align})の解は，
-  \begin{align}
-    \qty(\nabla^2 + \kappa^2)\phi(\bm{r}) = 0
-  \end{align}
-  の一般解$\phi(\bm{r}) = \e^{\i k z}$と
-  \begin{align}
-    \label{Tokkai}
-    \qty(\nabla^2 + \kappa^2)\chi(\bm{r}) = U(\bm{r}) \chi(\bm{r})
-  \end{align}
-  と特解$\chi(\bm{r})$の和である．
-  
-  では，式(\ref{Tokkai})の特解を求めよう．レシピはこうである．
-  \begin{enumerate}
-    \item $\qty(\nabla^2 + \kappa^2)G_0(\bm{r}) = \delta(\bm{r})$を満たすGreen関数$G_0$を求める．
-    \item $\chi(\bm{r}) = \int \dd{\bm{r'}} G_0(\bm{r} - \bm{r'}) U(\bm{r'}) \phi(\bm{r'})$から特解を求める．
-  \end{enumerate}
-  2から特解が求められるのは，
-  \begin{align}
-    \qty(\nabla^2 + \kappa^2)\chi(\bm{r}) &= (\nabla^2 + \kappa^2)\int \dd{\bm{r'}} G_0(\bm{r} - \bm{r'}) U(\bm{r'}) \phi(\bm{r'})\\
-    &= \int \dd{\bm{r'}} \delta(\bm{r} - \bm{r'}) U(\bm{r'}) \phi(\bm{r'})\\
-    &= U(\bm{r}) \phi(\bm{r})
-  \end{align}
-  が成り立つためである．
-
-  Green関数を求めよう．
-  \begin{align}
-    \qty(\nabla^2 + \kappa^2)G_0(\bm{r}) = \delta(\bm{r})
-  \end{align}
-  の両辺をFourier変換する．
-  \begin{align}
-    \qty(\nabla^2 + \kappa^2)\int \dd{\bm{k'}} G_0(\bm{k'}) \e^{\i\bm{k'}\cdot \bm{r}} &= \frac{1}{(2\pi)^3}\int \dd{\bm{k'}} \e^{\i\bm{k'}\cdot\bm{r}}\\
-    \int \dd{\bm{k}} \qty(-\bm{k'}^2 + \kappa^2)G_0(\bm{k'}) \e^{\i \bm{k'}\cdot \bm{r}} &= \frac{1}{(2\pi)^3} \int \dd{\bm{k'}} \e^{\i \bm{k'}\cdot \bm{r}}
-  \end{align}
-  両辺を比較すると
-  \begin{align}
-    (\kappa^2 - k'^2)G_0(\bm{k'}) &= \frac{1}{(2\pi)^2}\\
-    G_0(\bm{k'}) &= \frac{1}{(2\pi)^2 (\kappa^2 - k'^2)}
-  \end{align}
-  を得る．よってGreen関数は
-  \begin{align}
-    G_0(\bm{r}) = \frac{1}{(2\pi)^2}\int \dd{\bm{k'}} \frac{\e^{\i\bm{k'}\cdot\bm{r}}}{\kappa^2 - k'^2}
-  \end{align}
-  と表される．極座標に変換しこの積分を実行する．
-  \begin{align}
-    G_0(\bm{r}) &= \frac{1}{(2\pi)^2} \int \frac{\exp(\i k' r \cos \theta)}{\kappa^2 - k'^2}k'^2\sin\theta\dd{\theta}\dd{\phi}\dd{k'}\\
-    &= \int \frac{1}{(2\pi)^3}2\pi \int_{0}^{\infty} k'^2 \dd{k'} \int_{0}^{\pi}\sin\theta\dd{\theta}\frac{\exp(\i k' r\cos\theta)}{\kappa^2 - k'^2}\\
-    &= \frac{1}{(2\pi)^2} \int_{0}^{\infty} \frac{k'^2\dd{k'}}{\kappa^2 - k'^2}\frac{\e^{\i k'r} - \e^{-\i k'r}}{\i k'r}\\
-    &= \frac{1}{4\pi^2\i r} \int_{0}^{\infty} k' \dd{k'} \frac{\e^{\i k'r} - \e^{-\i k'r}}{(\kappa - k')(\kappa + k')}\\
-    &= \frac{1}{8\pi^2\i r} \int_{-\infty}^{\infty}k' \dd{k'} \frac{\e^{\i k'r} - \e^{-\i k'r}}{(\kappa - k')(\kappa + k')}\\
-    &= \frac{1}{8\pi^2\i r} \int_{-\infty}^{\infty} k' \dd{k'} \qty(\frac{\e^{\i k'r}}{(\kappa - k')(\kappa + k')} - \frac{\e^{-\i k'r}}{(\kappa - k')(\kappa + k')})\\
-    &= \frac{1}{8\pi^2 \i r}\qty(I_1 - I_2)
-  \end{align}
-  \begin{align}
-    I_1 \equiv \int_{-\infty}^{\infty} \dd{k'} \frac{k' \e^{\i k'r}}{(\kappa - k')(\kappa + k')},\ I_2 \equiv \int_{-\infty}^{\infty} \dd{k'} \frac{k' \e^{-\i k'r}}{(\kappa - k')(\kappa + k')}
-  \end{align}
-  最後の積分を実行するにはCauchyの積分公式を用いる．
-  \begin{itembox}[l]{Cauchyの積分公式}
+    という関係が成り立つ．これは，散乱振幅から微分断面積が求められることを意味する．
+    \begin{itembox}[l]{散乱振幅と微分断面積の関係}
+      \begin{align}
+        \sigma(\theta) = \abs{f(\theta)}^2
+      \end{align}
+    \end{itembox}
+  \subsection{散乱振幅の表式}
+    最後に散乱振幅$f(\theta)$の表式を求める．
+    散乱のSchrödinger方程式は，
     \begin{align}
-      \oint \frac{f(z)}{(z-z_0)}\dd{z} = 2\pi \i f(z_0)
+      \qty(-\frac{\hbar^2}{2m}\laplacian + V(r))\psi(\bm{r}) = E\psi(\bm{r})
     \end{align}
-  \end{itembox}
-  今回の場合は極は$\kappa$と$-\kappa$である．しかし，極の避け方にはいくつかのパターンがあり，それに応じてGreen関数の計算結果は変化する．今回は図\ref{Integral}のように$-\kappa$を上に避け，$\kappa$を下に避ける．
-  まず$I_1$を計算する．$I_1$は$k'$が虚部が正の値を取るときに小さな値をとる．よって，積分路は上方に閉じる形とする．この時，積分範囲内に極は$\kappa$のみになるため，
-  \begin{align}
-    I_1 = -\i\pi\e^{\i kr}
-  \end{align}
-  となる．$I_2$の積分路は下方に閉じる形とする．この時積分範囲内に含まれる極は$-\kappa$のみである．
-  よって，
-  \begin{align}
-    I_2 = \i\pi\e^{\i kr}
-  \end{align}
-  したがって，Green関数は
-  \begin{align}
-    G_0(r) = -\frac{\e^{\i kr}}{4\pi r}
-  \end{align}
-  となる．これは外に広がる球面波を表す．
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\columnwidth]{fig/IntegralGreen.pdf}
-    \caption{積分経路}
-    \label{Integral}
-  \end{figure}
-
-  以上の計算からSchrödinger方程式(\ref{SE_Scattering})の形式解は
-  \begin{align}
-    \label{keishiki}
-    \psi(\bm{r}) = \e^{\i kz} - \frac{1}{4\pi} \int \frac{\e^{\i k \abs{\bm{r} - \bm{r'}}}}{\abs{\bm{r} - \bm{r'}}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'}) \dd{r'}
-  \end{align}
-  である．これは平面波と球面波の和となっている．
-
-  次に式(\ref{keishiki})から散乱振幅$f(\theta)$を求める．仮定として，$V(r')$は$r'<a$でのみ$V\neq 0$とする．式(\ref{keishiki})において
-  $r  \gg r'$では
-  \begin{align}
-    \abs{\bm{r} - \bm{r'}} &= \sqrt{r^2 - 2\bm{r} \cdot \bm{r'} + r'^2}\\
-    &= r \sqrt{1 - \frac{2\bm{r'} \cdot \bm{n}}{r + \qty(\frac{r'}{r})^2}}\\
-    &\simeq r - \bm{n}\cdot\bm{r'}
-  \end{align}
-  が成り立つ．よって，
-  \begin{align}
-    \e^{\i k \abs{\bm{r} - \bm{r'}}} &\simeq \e^{\i k \qty(r - \bm{n} \cdot \bm{r'})}\\
-    &= \e^{\i k r} - \e^{-\i \bm{k'} \cdot \bm{r'}}
-  \end{align}
-  を得る．ここで，$\bm{k'} = k \bm{n}$を$z$軸と角度$\theta$をなす散乱方向の波数ベクトルとする．また，
-  \begin{align}
-    \frac{1}{\abs{\bm{r} - \bm{r'}}} &\simeq \frac{1}{r\qty(1 - \frac{\bm{n}\cdot\bm{r'}}{r})}\\
-    &= \simeq \frac{1}{r}
-  \end{align}
-  である．以上より，
-  \begin{align}
-    \psi(\bm{r}) = \e^{\i kz} - \qty(\frac{1}{4\pi} \int \dd{\bm{r'}} \e^{- \i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(r'))\frac{\e^{\i kr}}{r}
-  \end{align}
-  である．したがって，散乱振幅は
-  \begin{align}
-    f(\theta) = -\frac{1}{4\pi} \int \dd{\bm{r'}} \e^{- \i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(r')
-  \end{align}
-  となる．
+    であった．
+    $\kappa$，$U(\bm{r})$を，
+    \begin{align}
+        \kappa &\coloneqq \frac{\sqrt{2mE}}{\hbar} \\
+        U(\bm{r}) &\coloneqq \frac{2m}{\hbar^2} V(\bm{r})
+    \end{align}
+    と定義すると，
+    \begin{align}
+      \qty(\laplacian + \kappa^2)\psi(\bm{r}) = U(\bm{r}) \psi(\bm{r}) \label{helmholtz-eq}
+    \end{align}
+    と表せる．\refe{helmholtz-eq}の解は，Helmholtz方程式型の斉次式，
+    \begin{align}
+      \qty(\laplacian + \kappa^2)\phi(\bm{r}) = 0
+    \end{align}
+    の$z$方向に入射した場合の一般解$\phi(\bm{r}) = \e^{\i kz}$と，
+    非斉次の方程式，
+    \begin{align}
+      \qty(\laplacian + \kappa^2)\chi(\bm{r}) = U(\bm{r}) \chi(\bm{r})\label{particular-solution}
+    \end{align}
+    の解となる$\chi(\bm{r})$の和である．
+    \par
+    では，\refe{particular-solution}の特解を求めよう．レシピはこうである．
+    \begin{enumerate}
+      \item $\qty(\laplacian + \kappa^2)G_0(\bm{r}) = \delta(\bm{r})$を満たすGreen関数$G_0$を求める．
+      \item $\chi(\bm{r}) = \int\dd{\bm{r'}} G_0(\bm{r} - \bm{r'}) U(\bm{r'}) \psi(\bm{r'})$から特解を求める．
+    \end{enumerate}
+    2. から特解が求められるのは，
+    \begin{align}
+      \qty(\laplacian + \kappa^2)\chi(\bm{r}) &= \int \dd{\bm{r'}}\qty(\laplacian + \kappa^2)G_0(\bm{r} - \bm{r'}) U(\bm{r'}) \psi(\bm{r'}) \\
+      &= \int\dd{\bm{r'}} \delta(\bm{r} - \bm{r'}) U(\bm{r'}) \psi(\bm{r'}) \\
+      &= U(\bm{r}) \psi(\bm{r})
+    \end{align}
+    が成り立つからだ．
+    \par
+    まず，1. で定義したGreen関数の関係式，
+    \begin{align}
+      \qty(\laplacian + \kappa^2)G_0(\bm{r}) = \delta(\bm{r})
+    \end{align}
+    の両辺をFourier変換すると，
+    \begin{align}
+      \int\dd{\bm{r}} \qty(\laplacian + \kappa^2) G_0(\bm{r}) \e^{-\i\bm{k} \cdot \bm{r}} &= \int\dd{\bm{r}} \delta(\bm{r})\e^{-\i\bm{k}\cdot\bm{r}} \\
+      \Leftrightarrow \qty[(-\i\bm{k})^2 + \kappa^2] \int\dd{\bm{r}} G_0(\bm{r}) \e^{-\i \bm{k}\cdot \bm{r}} &= 1
+    \end{align}
+    となる．Green関数$G_0(\bm{r})$のFourier変換を$\tilde{G}_0(\bm{k})$と書くと，
+    \begin{align}
+      \tilde{G}_0(\bm{k}) = \frac{1}{\kappa^2 - k^2}
+    \end{align}
+    を得る．よってGreen関数は$\tilde{G}_0(\bm{k})$を逆Fourier変換して，
+    \begin{align}
+      G_0(\bm{r}) &= \frac{1}{(2\pi)^3}\int\dd{\bm{k}} \frac{\e^{\i\bm{k} \cdot \bm{r}}}{\kappa^2 - k^2}\label{g-tilde-to-gr}
+    \end{align}
+    と表される．極座標に変換して\refe{g-tilde-to-gr}の積分を実行すると，
+    \begin{align}
+      G_0(\bm{r}) &=  \frac{1}{(2\pi)^3}\int\dd{\bm{k}}\frac{\e^{\i\bm{k} \cdot \bm{r}}}{\kappa^2 - k^2}\\ 
+      &= \frac{1}{(2\pi)^3} \int\dd{\bm{k}} \frac{\exp\qty(\i kr\cos\theta)}{\kappa^2 - k^2} \\ 
+      &= \frac{1}{(2\pi)^3} \int_{\phi = 0}^{2\pi}\dd{\phi}\int_{k = 0}^{\infty}\dd{k}\int_{\theta = 0}^{\pi}\dd{\theta} \frac{\exp(\i kr \cos \theta)}{\kappa^2 - k^2} k^2\sin\theta \\
+      &= \frac{1}{(2\pi)^3} 2\pi \int_{k = 0}^{\infty} k^2 \dd{k} \int_{\theta = 0}^{\pi}\dd{\theta} \sin\theta\frac{\exp(\i k r\cos\theta)}{\kappa^2 - k^2} \\
+      &= \frac{1}{(2\pi)^2} \int_{0}^{\infty}k^2\frac{\e^{\i kr} - \e^{-\i kr}}{\i kr\qty(\kappa^2 - k^2)}\dd{k} \\
+      &= \frac{1}{4\pi^2\i r} \int_{0}^{\infty}k \frac{\e^{\i kr} - \e^{-\i kr}}{(\kappa - k)(\kappa + k)}\dd{k} \\
+      &= \frac{1}{8\pi^2\i r} \int_{-\infty}^{\infty}k \frac{\e^{\i kr} - \e^{-\i kr}}{(\kappa - k)(\kappa + k)}\dd{k} \\
+      &= \frac{1}{8\pi^2\i r} \int_{-\infty}^{\infty}k \qty[\frac{\e^{\i kr}}{(\kappa - k)(\kappa + k)} - \frac{\e^{-\i kr}}{(\kappa - k)(\kappa + k)}]\dd{k} \\ 
+      &= \frac{\i}{8\pi^2 r} \int_{-\infty}^{\infty}k \qty[\frac{\e^{\i kr}}{(k - \kappa)(k + \kappa)} - \frac{\e^{-\i kr}}{(k - \kappa)(k + \kappa)}]\dd{k} \\ 
+      &= \frac{\i}{4\pi^2 r}I
+    \end{align}
+    となる．ただし，$I$は，
+    \begin{align}
+      I \coloneqq \int_{-\infty}^{\infty} \frac{k \e^{\i kr}}{(k - \kappa)(k + \kappa)} \dd{k}
+    \end{align}
+    である．
+    式変形の途中で，
+    \begin{align}
+      -\int_{-\infty}^{\infty}k \frac{\e^{-\i kr}}{(k - \kappa)(k + \kappa)}\dd{k} &= -\int_{\infty}^{-\infty}\qty(-k) \frac{\e^{-\i \qty(-k)r}}{\qty(\qty(-k) - \kappa)\qty(\qty(-k) + \kappa)}\qty(-\dd{k}) \\ 
+      &= \int_{-\infty}^{\infty}k \frac{\e^{\i kr}}{(k - \kappa)(k + \kappa)}\dd{k} = I
+    \end{align}
+    なる関係を用いた．
+    $I$を計算するには留数定理を用いる．
+    \begin{itembox}[l]{留数定理}
+      複素関数$f(z)$が閉経路$C$内に$m$個の特異点$b_1, \cdots b_m$を持つとすると，
+      \begin{align}
+        \oint_C f(z) \dd{z} = 2\pi\i\sum_{k = 1}^{m}\r{Res}\qty(b_k; f)
+      \end{align}
+      が成立する．
+    \end{itembox}
+    今回の場合は特異点は$\kappa$と$-\kappa$である．
+    しかし，極の避け方にはいくつかのパターンがあり，それに応じてGreen関数の計算結果は複数存在する．
+    これは何ら不自然なことではない．
+    今計算しているのは，$\qty(\laplacian + \kappa^2)$なる演算子の固有関数$G_0$を求めているので，複数存在してもよい．
+    まず，\reff{Integral}のように$-\kappa$を上に避け，$\kappa$を下に避けると，
+    積分経路$C$で囲まれている領域に存在する特異点は，$k = \kappa$のみであるので，
+    \begin{align}
+      I &= \int_{-\infty}^{\infty} \frac{k \e^{\i kr}}{(k - \kappa)(k + \kappa)} \dd{k} \\ 
+      &= 2\pi\i\frac{\e^{\i\kappa r}}{2} \\ 
+      &= \pi\i\e^{\i\kappa r}
+    \end{align}
+    となるから，
+    \begin{align}
+      G_0(\bm{r}) &= \frac{\i}{4\pi^2 r}I \\ 
+      &= -\frac{\e^{\i\kappa r}}{4\pi r}
+    \end{align}
+    となる\footnote{
+      積分経路$C$に$-\kappa$と$\kappa$がそれぞれ含まれるか否かを分類して求めたGreen関数は，
+      \begin{align*}
+        G_0(\bm{r}) = 
+        \begin{dcases}
+          \text{不適} & $-\kappa$: 含まない，$\kappa$: 含まない \\ 
+          \frac{\e^{\i\kappa r}}{4\pi r} & $-\kappa$: 含まない，$\kappa$: 含む \\ 
+          \frac{\e^{-\i\kappa r}}{4\pi r} & $-\kappa$: 含む，$\kappa$: 含まない \\ 
+          \i\frac{\sin\qty(\kappa r)}{4\pi r} & $-\kappa$: 含む，$\kappa$: 含む
+        \end{dcases}
+      \end{align*}
+      $-\kappa$と$\kappa$をともに含まない経路で計算したとき，$I = 0$となるが，固有関数は0であってはいけないから，不適である．
+    }．
+    計算しているのは，外向き球面波解であるため，\reff{Integral}で示した経路で積分した結果が最も合理的であるから，このGreen関数を採用して以下の計算を行う．
+    Green関数を用いると\refe{se-scattering}の形式解は，
+    \begin{align}
+      \psi(\bm{r}) &= \phi(\bm{r}) + \chi(\bm{r}) \\ 
+      &= \e^{\i kz} + \int\dd{\bm{r'}} G_0(\bm{r} - \bm{r'}) U(\bm{r'}) \phi(\bm{r'}) \\ 
+      &= \e^{\i kz} - \int \frac{\e^{\i\kappa \abs{\bm{r} - \bm{r'}}}}{4\pi \abs{\bm{r} - \bm{r'}}} \cdot \frac{2m}{\hbar^2} V(\bm{r'}) \cdot \psi(\bm{r'}\dd{\bm{r'}}) \\ 
+      &= \e^{\i kz} - \frac{1}{4\pi} \int \frac{\e^{\i \kappa \abs{\bm{r} - \bm{r'}}}}{\abs{\bm{r} - \bm{r'}}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'}) \dd{\bm{r'}}\label{formal-soultion}
+    \end{align}
+    である．
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width = 0.7\columnwidth]{fig/integral-green-tex.pdf}
+      \caption{積分経路}\label{Integral}
+    \end{figure}
+    \par
+    次に\refe{formal-soultion}から散乱振幅$f(\theta)$を求める．$V(r')$は$r' < a$でのみ$V\neq 0$であると仮定する．
+    \refe{formal-soultion}において
+    $r \gg r'$では，
+    \begin{align}
+      \abs{\bm{r} - \bm{r'}} &= \sqrt{r^2 - 2\bm{r} \cdot \bm{r'} + r'^2} \\
+      &= r \qty[1 - \frac{2\bm{r}\cdot\bm{r'}}{r^2} + \qty(\frac{r'}{r})^2]^{1/2} \\
+      &\simeq r - \bm{n}\cdot\bm{r'}\label{abs-r-r-prime-approx}
+    \end{align}
+    が成り立つ．よって，
+    \begin{align}
+      \e^{\i \kappa \abs{\bm{r} - \bm{r'}}} &\simeq \e^{\i \kappa \qty(r - \bm{n} \cdot \bm{r'})}\\
+      &= \e^{\i \kappa r} - \e^{-\i \bm{\kappa} \cdot \bm{r'}}\label{exp-abs-r-r-prime-approx}
+    \end{align}
+    と近似できる．ただし，$\bm{\kappa'} \coloneqq \kappa \bm{n}$を$z$軸と角度$\theta$をなす散乱方向の波数ベクトルと定義した．
+    また，
+    \begin{align}
+      \frac{1}{\abs{\bm{r} - \bm{r'}}} &= \frac{1}{r}\qty[1 - \frac{2\bm{r}\cdot\bm{r'}}{r^2} + \qty(\frac{r'}{r})^2]^{-1/2} \\ 
+      &\simeq \frac{1}{r}\label{abs-r-r-prime-inv-approx}
+    \end{align}
+    と近似する．% なぜ？？？
+    \refe{exp-abs-r-r-prime-approx}や\refe{abs-r-r-prime-inv-approx}で行った近似結果を\refe{formal-soultion}に代入すると，
+    \begin{align}
+      \psi(\bm{r}) = \e^{\i kz} - \qty(\frac{1}{4\pi} \int \e^{-\i\bm{\kappa'}\cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}})\frac{\e^{\i\kappa r}}{r}
+    \end{align}
+    である．したがって，散乱振幅は
+    \begin{align}
+      f(\theta) = -\frac{1}{4\pi} \int \dd{\bm{r'}} \e^{- \i \bm{\kappa'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})
+    \end{align}
+    となる．
 \end{document}
