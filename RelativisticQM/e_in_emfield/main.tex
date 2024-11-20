@@ -180,9 +180,27 @@ Dirac方程式は
   &= \sum_{i} \sum_{j} \frac{1}{2}(2 \delta_{i,j} + 2\i \sum_{k} \epsilon_{ijk} \sigma_k) \hat{a}_i \hat{b}_j\\
   &= \sum_{i} \hat{a}_i \hat{b}_i + \i \sigma_k \sum_{i} \sum_{j} \sum_{k} \epsilon_{ijk} \hat{a}_i \hat{b}_j\\
   &= \hat{\bm{a}}^2 + \i \sum_{k} \sigma_k (\hat{\bm{a}} \times \hat{\bm{b}})_k\\
-  &= \hat{\bm{a}}^2 + \i \bm{\sigma} \cdot (\hat{\bm{a}} \times \hat{\bm{b}})
+  &= \hat{\bm{a}}^2 + \i \bm{\sigma} \cdot (\hat{\bm{a}} \times \hat{\bm{b}}) \label{pauli-inner-product}
 \end{align}
-これを用いると
+ここで$\epsilon_{ijk}$はLevi-Civitaの完全反対称テンソルで
+\begin{align}
+  \epsilon_{ijk} = 
+  \begin{dcases}
+    1\ &(i,j,k) = (x,y,z),(y,z,x),(z,x,y)\\
+    -1\ &(i,j,k) = (z,y,x),(y,x,z),(x,z,y)\\
+    0\ &\text{otherwise}
+  \end{dcases}
+\end{align}
+である．これを使えば外積は
+\begin{align}
+  (\bm{a} \times \bm{b})_k = \sum_{i} \sum_{j} \epsilon_{ijk} a_i b_j
+\end{align}
+と表される．また，$\qty{\hat{A},\hat{B}}$は反交換関係で
+\begin{align}
+  \qty{\hat{A},\hat{B}} = \hat{A}\hat{B} + \hat{B}\hat{A}
+\end{align}
+という演算子である．
+\refe{paili-inner-product}を用いると
 \begin{align}
   [\bm{\sigma}\cdot(\bm{p} + e\bm{A})][\bm{\sigma}\cdot(\bm{p} + e\bm{A})] &= (\hat{\bm{p}} + e\bm{A})^2 + \i \bm{\sigma} \cdot [(\hat{\bm{p}} + e\bm{A}) \times (\hat{\bm{p}} + e\bm{A})]\\
   &= (\hat{\bm{p}} + e\bm{A})^2 + \i e \bm{\sigma} \cdot [(\bm{A} \times \hat{\bm{p}}) + (\hat{\bm{p}} \times e\bm{A})]\\

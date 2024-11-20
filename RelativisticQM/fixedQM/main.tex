@@ -1,7 +1,7 @@
 \documentclass{report}
 \input{../../head.tex}
 \begin{document}
-本節ではShrödinger方程式を修正し，Lorentz共変性を有する\textbf{Dirac方程式}導く．
+本節ではShrödinger方程式を修正し，Lorentz共変性を有する\textbf{Dirac方程式}を導く．
 
 Shrödinger方程式は，ハミルトニアン$H=\frac{\bm{p}^2}{2m} + V=E$と運動量$\bm{p}$に対して
 \begin{align}
@@ -137,7 +137,7 @@ $\psi$と$\frac{\partial \psi}{\partial t}$は独立に指定される．その�
 \begin{align}
   \alpha_i^2 = I,\ \beta^2 = I
 \end{align}
-である．まずは$\beta$に関して考える．エルミート行列は適当なユニタリ行列によって対角化される．適当なユニタリ行列を$V$として
+である．まずは$\beta$に関して考える．エルミート行列は適当なユニタリ行列によって対角化される．つまり，適当なユニタリ行列を$V$として
 \begin{align}
   \beta' = V^\dagger \beta V = \r{diag}(b_1, b_2, \dots, b_n)
 \end{align}
@@ -167,9 +167,10 @@ $\psi$と$\frac{\partial \psi}{\partial t}$は独立に指定される．その�
   \tr(\beta) &= \tr(\beta I)\\
   &= \tr(\beta \alpha_i^2)\\
   &= \tr(\alpha_i\beta\alpha_i) \\
-  &= -\tr(\beta)
+  &= -\tr(\beta)\\
+  \Rightarrow 2\tr(\beta) &= 0
 \end{align}
-よって，$\beta$の対角成分の和は0である．したがって，$\beta$は偶数次元の行列であることがわかる．以上の議論は$\alpha^i$でも同様である．
+よって，$\beta$の対角成分の和は0である．対角成分は$\pm1$であることがわかっているので，$\beta$は偶数次元の行列であることがわかる．以上の議論は$\alpha^i$でも同様である．
 ここで\refe{Dirac-pre}を眺めてみると，$m\neq0$の場合，独立な4つの行列が必要なことが確認できる．偶数次元で最小行列は2行2列である．しかし，2行2列で独立なエルミート行列は3つ(Pauli行列など)しかない．
 よって，質量をもつ粒子の運動を記述するのに必要なエルミート行列の次元は4以上であることがわかる\footnote{質量0の粒子を記述するWeyl行列は2行2列の行列を用いる．}．
 

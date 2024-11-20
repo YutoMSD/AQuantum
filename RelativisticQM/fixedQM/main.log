@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.11.6)  20 NOV 2024 22:27
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.11.6)  21 NOV 2024 01:15
  restricted system commands enabled.
 **main
 (./main.tex
@@ -1858,7 +1858,7 @@ ne 58.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 58.
 Package hyperref Info: Option `colorlinks' set `false' on input line 58.
 
-Package array Warning: Redefining primitive column b on input line 79.
+Package array Warning: Redefining primitive column b on input line 81.
 
 (c:/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
@@ -2269,19 +2269,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5]
 
-Package caption Warning: Unused \captionsetup[figure] on input line 82.
+Package caption Warning: Unused \captionsetup[figure] on input line 84.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[table] on input line 83.
+Package caption Warning: Unused \captionsetup[table] on input line 85.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[lstlisting] on input line 84.
+Package caption Warning: Unused \captionsetup[lstlisting] on input line 86.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[subfigure] on input line 85.
+Package caption Warning: Unused \captionsetup[subfigure] on input line 87.
 See the caption package documentation for explanation.
 
 
@@ -2316,12 +2316,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51256 strings out of 475664
- 195703,2373549 words of node,token memory allocated
+ 51257 strings out of 475664
+ 195705,2373549 words of node,token memory allocated
  1701 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 11 glue, 4 kern, 1 glyph, 412 attribute, 77 glue_s
 pec, 49 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:22,2:46181,3:510,4:1033,5:641,6:68,7:6355,8:90,9:3590,10:32,11
+   avail lists: 1:21,2:47110,3:510,4:1033,5:647,6:68,7:6361,8:90,9:3593,10:32,11
 :10
  72898 multiletter control sequences out of 65536+600000
  84 fonts using 46392847 bytes
@@ -2346,10 +2346,10 @@ blic/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
 .pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/te
 xlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (6 pages, 256896 bytes).
+Output written on main.pdf (6 pages, 257183 bytes).
 
-PDF statistics: 256 PDF objects out of 1000 (max. 8388607)
- 209 compressed objects within 3 object streams
- 84 named destinations out of 1000 (max. 131072)
+PDF statistics: 257 PDF objects out of 1000 (max. 8388607)
+ 210 compressed objects within 3 object streams
+ 85 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
