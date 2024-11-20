@@ -3,5 +3,4 @@
 *.out
 *.run.xml
 *.aux
-*main.aux
 *.toc

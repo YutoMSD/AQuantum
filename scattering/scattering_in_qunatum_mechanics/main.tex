@@ -215,22 +215,21 @@
     となる．これは外に広がる球面波を表す．
     \begin{figure}[H]
       \centering
-      \includegraphics[width=0.7\columnwidth]{fig/IntegralGreen.pdf}
-      \caption{積分経路}
-      \label{Integral}
+      \includegraphics[width = 0.7\columnwidth]{fig/IntegralGreen.pdf}
+      \caption{積分経路}\label{Integral}
     \end{figure}
     以上の計算からSchrödinger方程式\refe{se-scattering}の形式解は
     \begin{align}
-      \label{keishiki}
-      \psi(\bm{r}) = \e^{\i kz} - \frac{1}{4\pi} \int \frac{\e^{\i k \abs{\bm{r} - \bm{r'}}}}{\abs{\bm{r} - \bm{r'}}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'}) \dd{r'}
+      \psi(\bm{r}) = \e^{\i kz} - \frac{1}{4\pi} \int \frac{\e^{\i k \abs{\bm{r} - \bm{r'}}}}{\abs{\bm{r} - \bm{r'}}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'}) \dd{r'}\label{formal-soultion}
     \end{align}
     である．これは平面波と球面波の和となっている．
-
-    次に式(\ref{keishiki})から散乱振幅$f(\theta)$を求める．仮定として，$V(r')$は$r'<a$でのみ$V\neq 0$とする．式(\ref{keishiki})において
-    $r  \gg r'$では
+    \par
+    次に\refe{formal-soultion}から散乱振幅$f(\theta)$を求める．仮定として，$V(r')$は$r'<a$でのみ$V\neq 0$とする．
+    \reff{formal-soultion}において
+    $r \gg r'$では
     \begin{align}
       \abs{\bm{r} - \bm{r'}} &= \sqrt{r^2 - 2\bm{r} \cdot \bm{r'} + r'^2}\\
-      &= r \sqrt{1 - \frac{2\bm{r'} \cdot \bm{n}}{r + \qty(\frac{r'}{r})^2}}\\
+      &= r \sqrt{1 - \frac{2\bm{r'} \cdot \bm{n}}{r + \qty(\cfrac{r'}{r})^2}}\\
       &\simeq r - \bm{n}\cdot\bm{r'}
     \end{align}
     が成り立つ．よって，
