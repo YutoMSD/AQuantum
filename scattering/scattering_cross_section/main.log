@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  19 NOV 2024 12:11
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.27)  20 NOV 2024 10:59
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2220,17 +2220,13 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 4.8111pt on input line 4.
 
-
-LaTeX Warning: Reference `Zendanmenseki' on page 1 undefined on input line 14.
-
-
 warning  (file fig/scattering_diagram.pdf) (pdf inclusion): PDF inclusion: found
  PDF version '1.7', but at most version '1.5' allowed
-<fig/scattering_diagram.pdf, id=8, 428.5611pt x 204.765pt>
+<fig/scattering_diagram.pdf, id=8, 493.845pt x 181.6386pt>
 File: fig/scattering_diagram.pdf Graphic file (type pdf)
 <use fig/scattering_diagram.pdf>
-Package luatex.def Info: fig/scattering_diagram.pdf  used on input line 21.
-(luatex.def)             Requested size: 400.38872pt x 191.3168pt.
+Package luatex.def Info: fig/scattering_diagram.pdf  used on input line 26.
+(luatex.def)             Requested size: 300.29344pt x 110.44737pt.
 
 Package caption Warning: Unused \captionsetup[table] on input line 83.
 See the caption package documentation for explanation.
@@ -2262,6 +2258,9 @@ L3 programming layer <2024-02-20>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -2275,21 +2274,21 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 51167 strings out of 476447
+ 51168 strings out of 476447
  125244,2373549 words of node,token memory allocated
  1182 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 203 attribute, 77 glue_sp
 ec, 30 attribute_list, 2 write, 14 user_defined nodes
-   avail lists: 1:11,2:11804,3:193,4:338,5:201,6:37,7:2072,8:30,9:1012,10:10,11:
-6
- 72110 multiletter control sequences out of 65536+600000
+   avail lists: 1:8,2:14504,3:214,4:341,5:228,6:40,7:2558,8:47,9:1261,10:11,11:3
+
+ 72111 multiletter control sequences out of 65536+600000
  58 fonts using 29759535 bytes
  115i,11n,118p,1922b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.ot
-f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.ot
-f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiG
-othic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lm
-roman10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/ha
+f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-regular
+.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold
+.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/haranoaji/HaranoA
+jiGothic-Medium.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/ha
 ranoaji/HaranoAjiMincho-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
@@ -2297,10 +2296,10 @@ public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb>
-Output written on main.pdf (1 page, 172599 bytes).
+Output written on main.pdf (1 page, 162037 bytes).
 
-PDF statistics: 97 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+PDF statistics: 94 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  6 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

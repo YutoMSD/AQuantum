@@ -2,12 +2,13 @@
 \input{../../head.tex}
 \begin{document}
   単位時間単位面積当たり$N$個の粒子を$z$軸方向に入射する．
-  \refe{scattering_detection}に散乱の様子を示す．
-  単位時間内に散乱体からの位置$(r,\theta,\phi)$にある面積$\dd{S}$の検出器に到達する粒子数は，
+  \reff{scattering_detection}に散乱の様子を示す．粒子は等方的に散乱される仮定のもと，
+  単位時間内に散乱体からの位置$(r,\theta,\phi)$にある面積$\dd{S}$の検出器に到達する粒子数は，入射した単位時間単位面積当たり粒子数$N$と検出器の面積$\dd{S}$に比例し，
+  距離の2乗に反比例するから，
   \begin{align}
     \dd{N} \propto N \frac{\dd{S}}{r^2} = N\dd{\Omega}
   \end{align}
-  を満たす．比例係数を$\sigma (\theta, \phi)$とすると，
+  と書ける．比例係数を$\sigma (\theta, \phi)$とすると，
   \begin{align}
     \dd{N} = \sigma(\theta, \phi) N \dd{\Omega}
   \end{align}
@@ -16,7 +17,8 @@
   散乱が$z$軸まわりに軸対称なとき，$\phi$依存性を取り除き$\sigma(\theta, \phi) = \sigma (\theta)$とできる．
   また，全断面積を，
   \begin{align}
-    \sigma^{\r{tot}} \coloneqq \int \sigma(\theta) \dd{\Omega} = 2\pi \int_{0}^{\pi} \sigma(\theta) \sin \theta \dd{\theta}\label{total-area}
+    \sigma^{\r{tot}} &\coloneqq \int \sigma(\theta) \dd{\Omega} = \int_{0}^{\pi}\dd{\theta}\int_{0}^{2\pi}\dd{\phi}\sigma(\theta) \sin\theta \\ 
+    &= 2\pi \int_{0}^{\pi} \sigma(\theta) \sin \theta \dd{\theta}\label{total-area}
   \end{align}
   のように定義する．
   \begin{figure}[H]

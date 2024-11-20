@@ -31,6 +31,6 @@
 \contentsline {section}{\numberline {2.4}量子力学における散乱}{37}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Born近似}{42}{section.2.5}%
 \contentsline {section}{\numberline {2.6}部分波展開}{46}{section.2.6}%
-\contentsline {chapter}{\numberline {3}相対論的量子論}{54}{chapter.3}%
-\contentsline {section}{\numberline {3.1}特殊相対論}{54}{section.3.1}%
-\contentsline {section}{\numberline {3.2}量子力学の修正}{60}{section.3.2}%
+\contentsline {chapter}{\numberline {3}相対論的量子論}{53}{chapter.3}%
+\contentsline {section}{\numberline {3.1}特殊相対論}{53}{section.3.1}%
+\contentsline {section}{\numberline {3.2}量子力学の修正}{59}{section.3.2}%
