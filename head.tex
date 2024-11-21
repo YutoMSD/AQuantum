@@ -13,7 +13,7 @@
 
 % --- グラフィック関連 ---
 \usepackage{tikz, graphicx} % 図の描画と画像の挿入
-%\usepackage{background} % ウォーターマークの設定
+\usepackage{background} % ウォーターマークの設定
 \usepackage{caption, subcaption} % 図や表のキャプション設定
 \usepackage{float, here} % 図や表の位置指定
 
@@ -36,6 +36,7 @@
 \usepackage{comment} % コメントアウトの拡張
 \usepackage{siunitx} % 単位の表記
 \usepackage{docmute}
+% \usepackage{appendix}
 % --- tcolorboxとtikzの設定 ---
 \tcbuselibrary{theorems, breakable} % 定理のボックスと改ページ設定
 \usetikzlibrary{decorations.markings, arrows.meta, calc} % tikzの装飾や矢印の設定
@@ -63,17 +64,17 @@
   table-number-alignment = center, % 数値の中央揃え
 }
 
-%--- 透かし画像の設定 --- 
-% \backgroundsetup{
-%   scale=0.5,                       % 画像のスケール
-%   % color=black,                   % 画像の色（透かし用に半透明が推奨）
-%   opacity=0.2,                   % 透かしの透明度（0が完全透明、1が完全不透明）
-%   angle=0,                       % 画像の角度
-%   position = current page.south east,  % ページの右下
-%   hshift=-6cm, % 右方向へのシフト（負の値で内側に移動）
-%   vshift=5cm,  % 上方向へのシフト（正の値で内側に移動）
-%   contents={\includegraphics{./fig/appilogo-circular-full.png}} % 画像のパス
-% }
+% --- 透かし画像の設定 --- 
+\backgroundsetup{
+  scale=0.5,                       % 画像のスケール
+  % color=black,                   % 画像の色（透かし用に半透明が推奨）
+  opacity=0.2,                   % 透かしの透明度（0が完全透明、1が完全不透明）
+  angle=0,                       % 画像の角度
+  position = current page.south east,  % ページの右下
+  hshift=-6cm, % 右方向へのシフト（負の値で内側に移動）
+  vshift=5cm,  % 上方向へのシフト（正の値で内側に移動）
+  contents={\includegraphics{./fig/appilogo-circular-full.png}} % 画像のパス
+}
 
 % --- その他の設定 ---
 \allowdisplaybreaks % 数式の途中改ページ許可
