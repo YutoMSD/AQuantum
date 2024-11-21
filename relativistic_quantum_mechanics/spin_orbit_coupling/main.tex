@@ -1,0 +1,122 @@
+\documentclass{report}
+\input{../../head.tex}
+\begin{document}
+  \textbf{スピン軌道相互作用}(spin-orbit coupling)は\textbf{スピントロニクス}(spintronics)において非常に重要な役割を担っている\footnote{この節は授業と関係がない．}．
+  スピン軌道相互作用によるハミルトニアンは
+  \begin{align}
+    \hat{H}_{\r{SO}} = \lambda_{\r{SO}} \hat{\bm{L}} \cdot \hat{\bm{S}}
+  \end{align}
+  で表される．
+
+  これは定性的には次のように導出される．原子核の周りを動く電子を考える．静止系から見ると電子は電場$\bm{E} = -\frac{\partial V(r)}{\partial t}\frac{\bm{r}}{r}$を感じている．
+  これを電子と共に動く慣性系で見る．この系では電子は静止しており，その周りを原子核が回っている．荷電粒子の運動は磁場を発生させるため，電子は磁場$\bm{B}$を感じる．この磁場はLorentz変換により
+  \begin{align}
+    \bm{B} = -\frac{\bm{v}}{c} \times \bm{E}
+  \end{align}
+  で電場と結ばれている．また，スピンと磁場は以下のように相互作用する．
+  \begin{align}
+    -\bm{\mu}\cdot\bm{B} \propto -\bm{S}\cdot\bm{B}
+  \end{align}
+  以上よりスピン軌道相互作用が得られる．
+  \begin{align}
+    H_{\r{SO}} = -\bm{\mu}\cdot\bm{B} &\propto -\bm{S}\cdot\bm{B}\\
+    &= \bm{S} \cdot (\frac{\bm{v}}{c} \times \bm{E})\\
+    &= \bm{S} \cdot(\frac{\bm{v}}{c} \times -\frac{\partial V(r)}{\partial t}\frac{\bm{r}}{r})\\
+    &= \lambda_{\r{SO}} \bm{S}\cdot(\bm{r} \times \bm{p})\\
+    &= \lambda_{\r{SO}} \bm{S} \cdot \bm{L}
+  \end{align}
+  つまり，電子の感じる仮想的な磁場がスピン軌道相互作用の起源である．
+
+  Dirac方程式を用いてスピン軌道相互作用を導出する．Dirac方程式は以下である．
+  \begin{align}
+    \i\hbar\frac{\partial}{\partial t}\psi = (c\bm{\alpha} \cdot \bm{p} + \beta mc^2 + e\phi) \psi
+  \end{align}
+  前節と同様に
+  \begin{align}
+    \psi=
+    \begin{pmatrix}
+      \psi_a\\
+      \psi_b
+    \end{pmatrix}
+  \end{align}
+  とする．さらにエネルギー演算子を
+  \begin{align}
+    \hat{E} \equiv \i\hbar\frac{\partial}{\partial t} \equiv \hat{E}' + mc^2
+  \end{align}
+  と置く．最右辺ではエネルギーを静止エネルギーと非相対論的エネルギーに分けた．電磁場を$\bm{A} =0$として加え，前節と同様に計算を進める．
+  \begin{align}
+    (\hat{E}' + mc^2) 
+    \begin{pmatrix}
+      \psi_a\\
+      \psi_b
+    \end{pmatrix}
+    = c\bm{\sigma}\cdot \hat{\bm{p}}
+    \begin{pmatrix}
+      \psi_b\\
+      \psi_a
+    \end{pmatrix}
+    mc^2
+    \begin{pmatrix}
+      \psi_a\\
+      -\psi_b
+    \end{pmatrix}
+    + e\phi
+    \begin{pmatrix}
+      \psi_a\\
+      \psi_b
+    \end{pmatrix}
+  \end{align}
+  上式より連立方程式
+  \begin{align}
+    \begin{dcases}
+      (\hat{E}' - e\phi) \psi_a - c\bm{\sigma}\cdot\hat{\bm{p}} \psi_b=0\\
+      (\hat{E}' + 2mc^2 - e\phi) \psi_b - c \bm{\sigma}\cdot\bm{p}\psi_a = 0
+    \end{dcases}
+  \end{align}
+  を得る．2式目を1式目に代入する．
+  \begin{align}
+    (\hat{E}' - e\phi) \psi_a &= (c\bm{\sigma}\cdot\hat{\bm{p}})(\hat{E}' + 2mc^2 - e\phi)^{-1}c\bm{\sigma}\cdot\hat{\bm{p}}\psi_a\\
+    &\simeq \frac{1}{2m}(\bm{\sigma\cdot\hat{\bm{p}}})\qty(1 - \frac{\hat{E}' - e\phi}{2mc^2})(\bm{\sigma}\cdot\hat{\bm{p}})\psi_a\\
+  \end{align}
+  ここで，
+  \begin{align}
+    \hat{\bm{p}}(e\phi) = (e\phi)\hat{\bm{p}} - \i e \hbar \nabla\phi
+  \end{align}
+  であるため，さらに変形を進めて，
+  \begin{align}
+    (\hat{E}' - e\phi) \psi_a &= \frac{1}{2m}\bm{\sigma}\cdot\qty(\hat{\bm{p}} - \frac{\hat{E}' - (e\phi)\hat{\bm{p}} + \i e\hbar \nabla\phi}{2mc^2})(\bm{\sigma}\cdot\hat{\bm{p}}) \psi_a\\
+    &= \qty[\frac{1}{2m}(\bm{\sigma}\cdot\hat{\bm{p}})(\bm{\sigma}\cdot\hat{\bm{p}}) - \frac{\hat{E}' - e\phi}{4m^2c^2}(\bm{\sigma}\cdot\hat{\bm{p}})(\bm{\sigma}\cdot\hat{\bm{p}}) - \i \frac{e\hbar}{4m^2c^2}(\bm{\sigma}\cdot\nabla\phi)(\bm{\sigma}\cdot\hat{\bm{p}})]\psi_a\\
+    &= \qty[\qty(1 - \frac{\hat{E}' - e\phi}{2mc^2})\frac{\hat{\bm{p}}^2}{2m} - \i \frac{e\hbar}{4m^2c^2}(\nabla\phi)\cdot\hat{\bm{p}} + \frac{e\hbar}{4m^2c^2}\bm{\sigma}\cdot(\nabla\phi\times\hat{\bm{p}})]\psi_a
+  \end{align}
+  が得られる．4項目
+  \begin{align}
+    \frac{e\hbar}{4m^2c^2}\bm{\sigma}\cdot(\nabla\phi\times\hat{\bm{p}})
+  \end{align}
+  がスピン軌道相互作用を表している．特に，球対称ポテンシャルのとき，
+  \begin{align}
+    \frac{e\hbar}{4m^2c^2}\bm{\sigma}\cdot(\nabla\phi\times\hat{\bm{p}}) &= \frac{e\hbar}{4m^2c^2}\frac{2}{\hbar}\bm{\bm{S}}\cdot(\frac{1}{r}\dv{\phi}{r}\bm{r}\times\hat{\bm{p}})\\
+    &= \frac{e}{2m^2c^2r}\dv{\phi}{r}\hat{\bm{S}}\cdot\hat{\bm{L}}
+  \end{align}
+  となり，スピン角運動量と軌道角運動量がカップリングしていることがわかる．
+
+  次に，スピン軌道相互作用の大きさを考える．全角運動量を$\bm{J}$として
+  \begin{align}
+    \bm{J}^2 = (\bm{L} + \bm{S})^2 = \bm{L}^2 + \bm{S}^2 + 2\bm{L}\cdot \bm{S}\\
+    \bm{L}\cdot\bm{S} = \bm{J^2} - \bm{L}^2 - \bm{S}^2
+  \end{align}
+  だから$\hat{\bm{L}}\cdot\hat{\bm{S}}$の期待値は
+  \begin{align}
+    \langle\hat{\bm{L}}\cdot\hat{\bm{S}} \rangle = \frac{1}{2}\qty[j(j+1) - l(l+1) - \frac{1}{2}\qty(\frac{1}{2}+1)]\hbar^2
+  \end{align}
+  である．$j = l \pm 1/2$だから，
+  $\langle\hat{\bm{L}}\cdot\hat{\bm{S}} \rangle = \frac{1}{2}l\hbar^2,-\frac{1}{2}(l+1)\hbar^2$である．これを$\nu\hbar^2$とおく．
+  $\phi(r) = -Ze/r$($Z$は原子番号)とすると，
+  \begin{align}
+    \langle \frac{e}{2m^2c^2r}\dv{\phi}{r}\hat{\bm{S}}\cdot\hat{\bm{L}} \rangle &= \nu\hbar^2 \langle \frac{e}{2m^2c^2r}\dv{\phi}{r} \rangle\\
+    &= \mu\hbar^2 \int_{0}^{\infty} r^2 \dd{r} \abs{R_{nl}}^2 \qty(\frac{e}{2m^2c^2r}\dv{\phi}{r})\\
+    &= \frac{\mu\hbar^2 Z e^2}{2m^2c^2}\int_{0}^{\infty} \frac{1}{r}R_{nl}^2 \dd{r}\\
+    &= \frac{\mu\hbar^2 Z^4 e^2}{2m^2 c^2 a_0^3n^3l(l+1/2)(l+1)}
+  \end{align}
+  がスピン軌道相互作用の期待値である．ここで，$a_0=\hbar^2/(\mu e^2),\mu = Mm_e(M+m_e)$である．重要なのはスピン軌道相互作用の大きさは
+  原子番号$Z$の4乗に比例することである．つまり，周期表の下のにある重い元素ほどスピン軌道相互作用が強いことがわかる．
+\end{document}

@@ -124,8 +124,8 @@ Dirac方程式は
   &=
   c\bm{\sigma}\cdot(\bm{p} + e\bm{A})
   \begin{pmatrix}
-    \psi_b\\
-    \psi_a
+    \psi_b^0\\
+    \psi_a^0
   \end{pmatrix}
   +mc^2
   \begin{pmatrix}
@@ -166,7 +166,8 @@ Dirac方程式は
 \begin{align}
   \psi_b^0 = \frac{\bm{\sigma}\cdot(\bm{p} + e\bm{A})}{2mc}\psi^0_a\\
 \end{align}
-を得る．これは粒子解と反粒子解を結ぶ式である．これを用いると1行目は
+を得る．これは粒子解と反粒子解を結ぶ式である．この式から，反粒子の成分$\psi^0_b$は粒子の成分$\psi^0_a$より$v/c$のオーダーで小さく，非相対論的極限では重要ではないことがわかる．
+これを用いると1行目は
 \begin{align}
   \i\hbar\frac{\partial}{\partial t}\psi^0_a &= c\bm{\sigma} \cdot (\bm{p} + e\bm{A})\psi_b^0\\
   &= \frac{[\bm{\sigma}\cdot(\bm{p} + e\bm{A})][\bm{\sigma}\cdot(\bm{p} + e\bm{A})]}{2m}\psi^0_a
@@ -179,8 +180,8 @@ Dirac方程式は
   &= \sum_{i} \sum_{j} \frac{1}{2}(\qty{\sigma_i, \sigma_j} + [\sigma_i, \sigma_j]) \hat{a}_i \hat{b}_j\\
   &= \sum_{i} \sum_{j} \frac{1}{2}(2 \delta_{i,j} + 2\i \sum_{k} \epsilon_{ijk} \sigma_k) \hat{a}_i \hat{b}_j\\
   &= \sum_{i} \hat{a}_i \hat{b}_i + \i \sigma_k \sum_{i} \sum_{j} \sum_{k} \epsilon_{ijk} \hat{a}_i \hat{b}_j\\
-  &= \hat{\bm{a}}^2 + \i \sum_{k} \sigma_k (\hat{\bm{a}} \times \hat{\bm{b}})_k\\
-  &= \hat{\bm{a}}^2 + \i \bm{\sigma} \cdot (\hat{\bm{a}} \times \hat{\bm{b}}) \label{pauli-inner-product}
+  &= \hat{\bm{a}}\cdot\hat{\bm{b}} + \i \sum_{k} \sigma_k (\hat{\bm{a}} \times \hat{\bm{b}})_k\\
+  &= \hat{\bm{a}}\cdot\hat{\bm{b}} + \i \bm{\sigma} \cdot (\hat{\bm{a}} \times \hat{\bm{b}}) \label{pauli-inner-product}
 \end{align}
 ここで$\epsilon_{ijk}$はLevi-Civitaの完全反対称テンソルで
 \begin{align}
