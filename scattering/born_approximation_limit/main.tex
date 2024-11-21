@@ -4,7 +4,7 @@
   Born近似の適用範囲について考える．
   \refe{scattering-amp-general}より，一般に散乱振幅は，
   \begin{align}
-    f(\theta) = -\frac{1}{4\pi} \int \e^{-\i\bm{\kappa'}\cdot\bm{r}} \frac{2m}{\hbar^2}V(r)\psi(\bm{r})\dd{\bm{r}}
+    f(\theta) = -\frac{1}{4\pi} \int \e^{-\i\bm{k'}\cdot\bm{r}} \frac{2m}{\hbar^2}V(r)\psi(\bm{r})\dd{\bm{r}}
   \end{align}
   と書けるのであった．また\refe{dozens-of-gv}より，散乱の波動関数は，
   \begin{align}
@@ -16,10 +16,10 @@
   \end{align}
   と近似するのものであった．第1 Born近似が十分良い評価である，つまり，
   \begin{align}
-    \int \e^{-\i \bm{\kappa'}\cdot \bm{r}} \frac{2m}{\hbar^2}V(r)\psi(\bm{r})\dd{\bm{r}}
+    \int \e^{-\i \bm{k'}\cdot \bm{r}} \frac{2m}{\hbar^2}V(r)\psi(\bm{r})\dd{\bm{r}}
   \end{align}
   を正しく評価できるには，
-  $V(r) \neq 0$となる$r\simeq 0$で，
+  $V(r) \neq 0$なる$r\simeq 0$で，
   \begin{align}
     \psi(\bm{r}) \simeq \psi_0(\bm{r})
   \end{align}
@@ -31,8 +31,8 @@
   となればよい．
   整理すると，
   \begin{align}
-    \abs{\e^{\i kz}} \gg \abs{\int -\frac{2m}{\hbar^2}\frac{\e^{\i kr}}{4\pi r}V(r) \e^{\i \bm{\kappa'}\cdot\bm{r}}\dd{\bm{r}}} \\
-    1 \gg \frac{m}{2\pi \hbar^2}\abs{\int \frac{\e^{\i kr}}{r}V(r)\e^{\i\bm{\kappa'}\cdot\bm{r}}\dd{\bm{r}}}\label{BornCondition}
+    \abs{\e^{\i kz}} \gg \abs{\int -\frac{2m}{\hbar^2}\frac{\e^{\i kr}}{4\pi r}V(r) \e^{\i \bm{k '}\cdot\bm{r}}\dd{\bm{r}}} \\
+    1 \gg \frac{m}{2\pi \hbar^2}\abs{\int \frac{\e^{\i kr}}{r}V(r)\e^{\i\bm{k '}\cdot\bm{r}}\dd{\bm{r}}}\label{BornCondition}
   \end{align}
   を得る．これが第1 Born近似が有効であるための条件である．
   \begin{myex}{第1 Born近似の適用条件}{}
@@ -48,34 +48,49 @@
     \tcblower
     \refe{BornCondition}よりBorn近似が成立する条件は，% kappaとkのごちゃをなおす．
     \begin{align}
-      1 &\gg \frac{m}{2\pi \hbar^2}\abs{\int \frac{\e^{\i kr'}}{r'}V(r')\e^{\i\bm{\kappa'}\cdot\bm{r'}}\dd{\bm{r'}}} \\
-      &= \frac{m}{2\pi \hbar^2}\abs{\int \frac{\e^{\i kr'}}{r'}V(r')\e^{\i\bm{\kappa'}\cdot\bm{r'}}\dd{\bm{r'}}} \\
-      &= \frac{mV_0}{2\pi \hbar^2}\abs{\int_{\phi' = 0}^{2\pi}\dd{\phi'}\int_{\theta' = 0}^{\pi}\dd{\theta'}\int_{r' = 0}^{a}\dd{r'} \frac{\e^{\i kr'}}{r'}\e^{\i \kappa r'\cos\theta'}r'^2\sin\theta'} \\ 
-      &= \frac{mV_0}{\hbar^2}\abs{\int_{r' = 0}^{a}r'\e^{\i kr'}\dd{r'}\int_{\theta' = 0}^{\pi}\e^{\i \kappa r'\cos\theta'}\sin\theta'\dd{\theta'}} \\
-      &= \frac{mV_0}{\hbar^2}\abs{\int_{r' = 0}^{a}r'\e^{\i kr'}\frac{\e^{\i\kappa r'} - \e^{-\i\kappa r'}}{\i\kappa r'}\dd{r'}} \\
-      &= \frac{mV_0}{2\hbar^2 k^2}\abs{\e^{2\i ka} - 1 - 2\i ka}
+      1 &\gg \frac{m}{2\pi \hbar^2}\abs{\int \frac{\e^{\i kr'}}{r'}V(r')\e^{\i\bm{k '}\cdot\bm{r'}}\dd{\bm{r'}}} \\
+      &= \frac{m}{2\pi \hbar^2}\abs{\int \frac{\e^{\i kr'}}{r'}V(r')\e^{\i\bm{k'}\cdot\bm{r'}}\dd{\bm{r'}}} \\
+      &= \frac{m}{2\pi \hbar^2}\abs{\int_{\phi' = 0}^{2\pi}\dd{\phi'}\int_{\theta' = 0}^{\pi}\dd{\theta'}\int_{r' = 0}^{\infty}\dd{r'}V(r')\e^{\i\bm{k'}\cdot\bm{r'}}r'^2\sin\theta'} \\ 
+      &= \frac{mV_0}{2\pi \hbar^2}\abs{\int_{\phi' = 0}^{2\pi}\dd{\phi'}\int_{\theta' = 0}^{\pi}\dd{\theta'}\int_{r' = 0}^{a}\dd{r'} \frac{\e^{\i kr'}}{r'}\e^{\i kr'\cos\theta'}r'^2\sin\theta'} \\ 
+      &= \frac{mV_0}{\hbar^2}\abs{\int_{r' = 0}^{a}r'\e^{\i kr'}\dd{r'}\int_{\theta' = 0}^{\pi}\e^{\i kr'\cos\theta'}\sin\theta'\dd{\theta'}} \\
+      &= \frac{mV_0}{\hbar^2}\abs{\int_{r' = 0}^{a}r'\e^{\i kr'}\frac{\e^{\i kr'} - \e^{-\i kr'}}{\i kr'}\dd{r'}} \\
+      &= \frac{mV_0}{\hbar^2k}\abs{\int_{r' = 0}^{a}\qty(\e^{2\i kr'} - 1)\dd{r'}} \\
+      &= \frac{mV_0}{2\hbar^2 k^2}\abs{\e^{2\i ka} - 1 - 2\i ka}\label{born-limit-ball}
     \end{align}
-    を得る\footnote{「試験に出そうな計算．」}．これを低エネルギー散乱と高エネルギー散乱に場合分けして見積もる．
+    を得る\footnote{授業中の教員の発言: 「試験に出そうな計算．」}．これを低エネルギー散乱と高エネルギー散乱に場合分けして見積もる．
+    \refe{born-limit-ball}の絶対値の中では，$ka$がまとめて1つの変数のようになっていることに注意する．
+    また，\refe{kappa-def}で定めた$\kappa$の定義と，$\kappa \to k$と書き換えたことより，
+    \begin{align}
+      ka = \frac{\sqrt{2mE}}{\hbar}a
+    \end{align}
+    であるから，$ka$はエネルギーの$1/2$乗に比例することに注意する．
     \begin{enumerate}
       \item 低エネルギー散乱($ka \ll 1$)\par
+        \refe{born-limit-ball}の絶対値の部分を近似すると，
         \begin{align}
-          \abs{\e^{2\i ka} - 1 - 2\i ka} &\simeq \abs{\qty(1 + 2\i ka + \frac{1}{2}\qty(2 \i ka)^2) - 1 - 2\i ka}\\
+          \abs{\e^{2\i ka} - 1 - 2\i ka} &= \abs{\qty(1 + 2\i ka + \frac{1}{2}\qty(2 \i ka)^2 + \cdots) - 1 - 2\i ka}\\
+          &\simeq \abs{\qty(1 + 2\i ka + \frac{1}{2}\qty(2 \i ka)^2) - 1 - 2\i ka} \\
           &= 2k^2 a^2
         \end{align}
-        より，適用条件は
+        となるから，Born近似の適用条件は
         \begin{align}
-          1 \gg \frac{mV_0}{2 \hbar^2 k^2}2k^2 a^2 = \frac{mV_0 a^2}{\hbar^2}
+          1 \gg \frac{mV_0}{2 \hbar^2 k^2}2k^2 a^2 = \frac{mV_0 a^2}{\hbar^2}\label{born-low-energy}
         \end{align}
-        である．つまり，ポテンシャルの大きさ$V_0$または半径$a$が小さい時に近似が有効であることがわかる．
+        である．
+        \refe{born-low-energy}において，$m$と$\hbar$は定数であるから，
+        ポテンシャルの大きさ$V_0$または半径$a$が小さい時に近似が有効であることがわかる．
       \item 高エネルギー散乱($ka \gg 1$)\par
+        \refe{born-limit-ball}の絶対値の部分を近似すると，$ka \gg 1$の領域では，$\abs{\e^{2\i ka}} \simeq \abs{-1} \gg \abs{2\i ka}$であるから，
         \begin{align}
           \abs{\e^{2\i ka} - 1 - 2\i ka} \simeq 2ka
         \end{align}
-        より，適用条件は
+        となる．
+        よってBorn近似の適用条件は，
         \begin{align}
-          1 \gg \frac{mV_0 a}{\hbar^2 k}
+          1 \gg \frac{mV_0 a}{\hbar^2 k} = \frac{mV_0a}{\hbar\sqrt{2mE}}\label{born-high-energy}
         \end{align}
-        である．$k\to\infty$に対して近似が成立することがわかる．つまり，Born近似は高エネルギー粒子に対して常によい近似であることがわかる．
+        である．\refe{born-high-energy}を見ると，$k\to\infty$に対して近似が成立することがわかる．
+        つまり，Born近似は高エネルギー粒子に対して常によい近似であることがわかる．
     \end{enumerate}
   \end{myex}
 \end{document}

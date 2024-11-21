@@ -36,13 +36,13 @@
   そして思わしい結果がえられないとき，他の近似法を考えるのである．」}．
   \par
   Born近似を用いて散乱振幅を求める．$\bm{k} \coloneqq k\bm{e}_z$，$\bm{r} \coloneqq z\bm{e}_z$とすると，
-  $\psi(\bm{r}') = \e^{\i kz} = \e^{\i \bm{k}\cdot\bm{r}'}$となるから，
+  $\psi(\bm{r}') = \e^{\i \bm{k}\cdot\bm{r}'}$となるから，
   \begin{align}
-    f^{(1)}(\theta) &= -\frac{1}{4\pi} \int \e^{\i \bm{\kappa'}\cdot\bm{r'}} \frac{2m}{\hbar} V(r') \psi(\bm{r'}) \dd{\bm{r'}} \\
-    &= -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i (\bm{\kappa'} - \bm{k})\cdot\bm{r}'} V(r') \dd{\bm{r}'} \\
-    &= -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i \bm{q}\cdot \bm{r}'} V(r') \dd{\bm{r}'}\label{potential-fourier-transform}
+    f^{(1)}(\theta) &= -\frac{1}{4\pi} \int \e^{\i \bm{k'}\cdot\bm{r'}} \frac{2m}{\hbar} V(r') \psi(\bm{r'}) \dd{\bm{r'}} \\
+    &= -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i (\bm{k'} - \bm{k})\cdot\bm{r}'} V(r') \dd{\bm{r}'} \\
+    &= -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i \bm{q} \cdot \bm{r}'} V(r') \dd{\bm{r}'}\label{potential-fourier-transform}
   \end{align}
-  となる．ただし，散乱による運動量変化に対応する物理量を$\bm{q} \coloneqq \bm{\kappa'} - \bm{k}$と定義した．
+  となる．ただし，散乱による運動量変化に対応する物理量を$\bm{q} \coloneqq \bm{k'} - \bm{k}$と定義した．
   \refe{potential-fourier-transform}を見ると，散乱振幅はポテンシャル$V(r)$のFourier変換から得られることがわかる\footnote{
     $f^{(n)}$は第$n$ Born近似による散乱振幅を意味する．
   }．
@@ -88,10 +88,10 @@
       &= \qty(\frac{2m V_0}{\hbar^2 \mu})^2 \frac{1}{(\mu^2 + q^2)^2}\\
       &= \qty(\frac{2m V_0}{\hbar^2 \mu})^2 \frac{1}{\qty[\mu^2 + 4k^2 \sin^2\qty(\theta/2)]^2}
     \end{align}
-    である．なお，$\bm{\kappa'}$と$\bm{k}$のなす角が$\theta$であるので余弦定理より，$q = 2k\sin\theta/2$であることを用いた．
+    である．なお，$\bm{k'}$と$\bm{k}$のなす角が$\theta$であるので余弦定理より，$q = 2k\sin\theta/2$であることを用いた．
     \begin{figure}[H]
       \centering
-      \includegraphics[width = 0.8\columnwidth]{fig/yukawa_potential.jpg}
+      \includegraphics[width = 0.5\columnwidth]{fig/yukawa_potential.jpg}
       \caption{湯川ポテンシャルとCoulombポテンシャルの比較}\label{yukawa-potential-graph}
     \end{figure}
   \end{myex}
@@ -100,7 +100,7 @@
     \begin{align}
       V(r) = \frac{q_1q_2}{4\pi\epsilon_0}
     \end{align}
-    と一致する．式(\ref{SCamp1st-sin})に代入して散乱振幅を求める．
+    と一致する．\refe{SCamp1st-sin}に代入して散乱振幅を求める．
     \begin{align}
       f(\theta) &= - \frac{2m}{\hbar^2q} \int_{0}^{\infty} r \frac{q_1q_2}{4\pi\epsilon_0 r} \sin\qty(qr) \dd{r}\\
       &= -\frac{2m}{\hbar^2q}\frac{q_1q_2}{4\pi\epsilon_0}\int_{0}^{\infty} \sin\qty(qr) \dd{r} \\

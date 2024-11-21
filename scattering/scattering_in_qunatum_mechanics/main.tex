@@ -13,7 +13,7 @@
     である．
     ここで，$V(r)$は$r \to \infty$で$r^{-1}$より早く$V \to 0$となるとする．
     なお，$r \to \infty$で$r^{-1}$より早く$0$に収束することを，十分早く収束するということにする．
-    $z$軸に沿う入射波は平面波なので，
+    $z$軸方向への進行波である入射波は平面波なので，
     \begin{align}
       \psi_{\r{in}} = \e^{\i k z}\ (z \to \infty)
     \end{align}
@@ -29,9 +29,9 @@
     \end{align}
     を満たす\refe{se-scattering}の定常解を求めることである．$f(\theta)$を散乱振幅という．上式は重要なので強調しておく．
     \begin{itembox}[l]{散乱問題の境界条件}
-      \begin{equation}
-        \psi(\bm{r}) = \e^{\i kz} + f(\theta) \frac{\e^{\i kr}}{r}
-      \end{equation}
+      \begin{align}
+        \psi(\bm{r}) = \e^{\i kz} + f(\theta) \frac{\e^{\i kr}}{r}\label{psi-r-in-sc-k}
+      \end{align}
     \end{itembox}
   \subsection{散乱振幅と微分断面積の関係}
     この問題を解くための準備として確率密度$\rho \coloneqq \psi^{*} \psi$の時間変化を考える．
@@ -62,12 +62,12 @@
     を得る\footnote{両辺に電荷をかければ電荷保存の法則となる． }．
     \par
     次に微分断面積と散乱振幅の関係を考える．
-    $z$軸に平行に入射しているので入射波は，
+    $z$軸方向へ進行波である入射波は，
     \begin{align}
       \psi_{\r{in}} = \e^{\i kz}
     \end{align}
     と書けるのであった．
-    入射波は$z$軸方向にしか存在しないので，その確率流密度の$z$成分$j_z$は\refe{psi-in-grad}より，
+    入射波は$z$軸方向にのみ進行するので，その確率流密度の$z$成分$j_z$は\refe{psi-in-grad}より，
     \begin{align}
       j_z &= \frac{\hbar}{m}\Im \qty(\psi^{*}\pdv{z}\psi) \\ 
       &= \frac{\hbar}{m} \Im \qty(\e^{-\i kz} \i k e^{\i kz}) \\
@@ -80,7 +80,7 @@
       \psi_{\r{sc}} = \frac{f(\theta)}{r}\e^{\i kr}
     \end{align}
     と書けるのであった．
-    散乱波は$r$軸方向にしか存在しないので，その確率流密度の$r$成分$j_r(\theta)$は，
+    散乱波は$r$軸方向にのみ進行するので，その確率流密度の$r$成分$j_r(\theta)$は，
     \begin{align}
       j_r(\theta) &= \frac{\hbar}{m}\Im \qty(\psi^{*}_{\r{sc}}\pdv{r}\psi_{\r{sc}}) \\
       &= \frac{\hbar}{m} \Im \qty[\frac{f(\theta)^*}{r} \e^{-\i kr}\qty(\frac{\i k}{r} - \frac{1}{r^2})f(\theta)\e^{\i kr}] \\
@@ -126,7 +126,7 @@
     であった．
     $\kappa$，$U(\bm{r})$を，
     \begin{align}
-        \kappa &\coloneqq \frac{\sqrt{2mE}}{\hbar} \\
+        \kappa &\coloneqq \frac{\sqrt{2mE}}{\hbar} \label{kappa-def}\\
         U(\bm{r}) &\coloneqq \frac{2m}{\hbar^2} V(\bm{r})
     \end{align}
     と定義すると，
@@ -137,7 +137,7 @@
     \begin{align}
       \qty(\laplacian + \kappa^2)\phi(\bm{r}) = 0
     \end{align}
-    の$z$方向に入射した場合の一般解$\phi(\bm{r}) = \e^{\i kz}$と，
+    の$z$方向に入射した場合の一般解$\phi(\bm{r}) = \e^{\i \kappa z}$と，
     非斉次の方程式，
     \begin{align}
       \qty(\laplacian + \kappa^2)\chi(\bm{r}) = U(\bm{r}) \chi(\bm{r})\label{particular-solution}
@@ -202,7 +202,7 @@
     \begin{itembox}[l]{留数定理}
       複素関数$f(z)$が閉経路$C$内に$m$個の特異点$b_1, \cdots b_m$を持つとすると，
       \begin{align}
-        \oint_C f(z) \dd{z} = 2\pi\i\sum_{k = 1}^{m}\r{Res}\qty(b_k; f)
+        \oint_C f(z) \dd{z} = 2\pi\i\sum_{l = 1}^{m}\r{Res}\qty(b_l; f)
       \end{align}
       が成立する．
     \end{itembox}
@@ -239,9 +239,9 @@
     Green関数を用いると\refe{se-scattering}の形式解は，
     \begin{align}
       \psi(\bm{r}) &= \phi(\bm{r}) + \chi(\bm{r}) \\ 
-      &= \e^{\i kz} + \int\dd{\bm{r'}} G_0(\bm{r} - \bm{r'}) U(\bm{r'}) \psi(\bm{r'}) \\ 
-      &= \e^{\i kz} - \int \frac{\e^{\i\kappa \abs{\bm{r} - \bm{r'}}}}{4\pi \abs{\bm{r} - \bm{r'}}} \cdot \frac{2m}{\hbar^2} V(\bm{r'}) \cdot \psi(\bm{r'}\dd{\bm{r'}}) \\ 
-      &= \e^{\i kz} - \frac{1}{4\pi} \int \frac{\e^{\i \kappa \abs{\bm{r} - \bm{r'}}}}{\abs{\bm{r} - \bm{r'}}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'}) \dd{\bm{r'}}\label{formal-soultion}
+      &= \e^{\i\kappa z} + \int\dd{\bm{r'}} G_0(\bm{r} - \bm{r'}) U(\bm{r'}) \psi(\bm{r'}) \\ 
+      &= \e^{\i\kappa z} - \int \frac{\e^{\i\kappa \abs{\bm{r} - \bm{r'}}}}{4\pi \abs{\bm{r} - \bm{r'}}} \cdot \frac{2m}{\hbar^2} V(\bm{r'}) \cdot \psi(\bm{r'}\dd{\bm{r'}}) \\ 
+      &= \e^{\i\kappa z} - \frac{1}{4\pi} \int \frac{\e^{\i \kappa \abs{\bm{r} - \bm{r'}}}}{\abs{\bm{r} - \bm{r'}}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'}) \dd{\bm{r'}}\label{formal-soultion}
     \end{align}
     である．
     \begin{figure}[H]
@@ -272,16 +272,28 @@
     と近似する．% なぜ？？？
     \refe{exp-abs-r-r-prime-approx}や\refe{abs-r-r-prime-inv-approx}で行った近似結果を\refe{formal-soultion}に代入すると，
     \begin{align}
-      \psi(\bm{r}) = \e^{\i kz} - \qty(\frac{1}{4\pi} \int \e^{-\i\bm{\kappa'}\cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}})\frac{\e^{\i\kappa r}}{r}
+      \psi(\bm{r}) = \e^{\i\kappa z} - \qty(\frac{1}{4\pi} \int \e^{-\i\bm{\kappa'}\cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}})\frac{\e^{\i\kappa r}}{r}\label{psi-r-in-sc-kappa}
     \end{align}
-    である．したがって散乱振幅は，
+    を得る．
+    \par
+    さて，考えている散乱問題の波動関数は\refe{psi-r-in-sc-k}より，
     \begin{align}
-      f(\theta) = -\frac{1}{4\pi} \int \e^{- \i \bm{\kappa'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}}
+      \psi(\bm{r}) = \e^{\i kz} + f(\theta) \frac{\e^{\i kr}}{r}\label{psi-r-in-sc-k-re}
+    \end{align}
+    と書けるのであった．
+    \refe{psi-r-in-sc-k-re}と\refe{psi-r-in-sc-kappa}を比較すると，\refe{psi-r-in-sc-kappa}において$\kappa \to k$，$\bm{\kappa'} \to \bm{k'}$とすれば，
+    \begin{align}
+      \psi(\bm{r}) = \e^{\i kz} - \qty(\frac{1}{4\pi} \int \e^{-\i\bm{k'}\cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}})\frac{\e^{\i kr}}{r}
+    \end{align}
+    となる．
+    したがって散乱振幅は，
+    \begin{align}
+      f(\theta) = -\frac{1}{4\pi} \int \e^{- \i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}}
     \end{align}
     となる．
     \begin{itembox}[l]{一般のポテンシャルでの散乱振幅}
       \begin{align}
-        f(\theta) = -\frac{1}{4\pi} \int \e^{- \i \bm{\kappa'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}}\label{scattering-amp-general}
+        f(\theta) = -\frac{1}{4\pi} \int \e^{- \i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}}\label{scattering-amp-general}
       \end{align}
     \end{itembox}
 \end{document}
