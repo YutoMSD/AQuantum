@@ -3,7 +3,7 @@
 \begin{document}
   一般に，散乱の波動関数は，
   \begin{align}
-    \psi(\bm{r}) = \e^{\i kz} + \int G_0 (\bm{r} - \bm{r'}) \frac{2m}{\hbar^2} V(r') \psi(\bm{r'}) \dd{\bm{r'}}\label{wave-funtion-of-scattering}
+    \psi(\bm{r}) = \e^{\i kz} + \int G_0 (\bm{r} - \bm{r'}) \frac{2m}{\hbar^2} V(\bm{r'}) \psi(\bm{r'}) \dd{\bm{r'}}\label{wave-funtion-of-scattering}
   \end{align}
   と表されるのであった．
   この波動関数を厳密に求めることは困難であるため近似を考える．
@@ -38,15 +38,15 @@
   Born近似を用いて散乱振幅を求める．$\bm{k} \coloneqq k\bm{e}_z$，$\bm{r} \coloneqq z\bm{e}_z$とすると，
   $\psi(\bm{r}') = \e^{\i \bm{k}\cdot\bm{r}'}$となるから，
   \begin{align}
-    f^{(1)}(\theta) &= -\frac{1}{4\pi} \int \e^{\i \bm{k'}\cdot\bm{r'}} \frac{2m}{\hbar} V(r') \psi(\bm{r'}) \dd{\bm{r'}} \\
-    &= -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i (\bm{k'} - \bm{k})\cdot\bm{r}'} V(r') \dd{\bm{r}'} \\
-    &= -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i \bm{q} \cdot \bm{r}'} V(r') \dd{\bm{r}'}\label{potential-fourier-transform}
+    f^{(1)}(\theta) &= -\frac{1}{4\pi} \int \e^{\i \bm{k'}\cdot\bm{r'}} \frac{2m}{\hbar} V(\bm{r'}) \psi(\bm{r'}) \dd{\bm{r'}} \\
+    &= -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i (\bm{k'} - \bm{k})\cdot\bm{r}'} V(\bm{r'}) \dd{\bm{r}'} \\
+    &= -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i \bm{q} \cdot \bm{r}'} V(\bm{r'}) \dd{\bm{r}'}\label{potential-fourier-transform}
   \end{align}
   となる．ただし，散乱による運動量変化に対応する物理量を$\bm{q} \coloneqq \bm{k'} - \bm{k}$と定義した．
   \refe{potential-fourier-transform}を見ると，散乱振幅はポテンシャル$V(r)$のFourier変換から得られることがわかる\footnote{
     $f^{(n)}$は第$n$ Born近似による散乱振幅を意味する．
   }．
-  また，球対称ポテンシャルのとき\refe{potential-fourier-transform}は簡略化できて，
+  また，球対称ポテンシャルのとき\refe{potential-fourier-transform}は簡略化できて，$V(\bm{r'}) \to V(r')$としてよいから，
   \begin{align}
     f^{(1)}(\theta) &= -\frac{1}{4\pi}\frac{2m}{\hbar^2}\int\e^{-\i \bm{q}\cdot \bm{r}'} V(r') \dd{\bm{r}'}\\
     &= -\frac{1}{4\pi}\frac{2m}{\hbar^2} \int_{\phi' = 0}^{2\pi}\dd{\phi'} \int_{\theta' = 0}^{\pi}\dd{\theta'}\int_{r' = 0}^{\infty}r'^2 \sin\theta' \dd{r'} \e^{-\i qr' \cos\theta'} V(r') \\

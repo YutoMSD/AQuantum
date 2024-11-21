@@ -5,7 +5,7 @@
   まず，散乱帯のポテンシャルを紹介して，散乱振幅$f(\theta)$を求めればいいことを知る．
   次に，散乱振幅と微分断面積の関係を調べる．
   最後に，具体的に散乱振幅の表式を導く．
-  \subsection{散乱振幅}
+  \subsection{散乱問題の境界条件}
     散乱体が球対称ポテンシャル$V(r)$を持つとする．Schrödinger方程式は
     \begin{align}
       \qty(-\frac{\hbar^2}{2m}\laplacian + V(r))\psi(\bm{r}) = E \psi(\bm{r})\label{se-scattering}
@@ -133,7 +133,8 @@
     \begin{align}
       \qty(\laplacian + \kappa^2)\psi(\bm{r}) = U(\bm{r}) \psi(\bm{r}) \label{helmholtz-eq}
     \end{align}
-    と表せる．\refe{helmholtz-eq}の解は，Helmholtz方程式型の斉次式，
+    と書ける．
+    \refe{helmholtz-eq}の解は，Helmholtz方程式型の斉次式，
     \begin{align}
       \qty(\laplacian + \kappa^2)\phi(\bm{r}) = 0
     \end{align}
@@ -241,7 +242,7 @@
       \psi(\bm{r}) &= \phi(\bm{r}) + \chi(\bm{r}) \\ 
       &= \e^{\i\kappa z} + \int\dd{\bm{r'}} G_0(\bm{r} - \bm{r'}) U(\bm{r'}) \psi(\bm{r'}) \\ 
       &= \e^{\i\kappa z} - \int \frac{\e^{\i\kappa \abs{\bm{r} - \bm{r'}}}}{4\pi \abs{\bm{r} - \bm{r'}}} \cdot \frac{2m}{\hbar^2} V(\bm{r'}) \cdot \psi(\bm{r'}\dd{\bm{r'}}) \\ 
-      &= \e^{\i\kappa z} - \frac{1}{4\pi} \int \frac{\e^{\i \kappa \abs{\bm{r} - \bm{r'}}}}{\abs{\bm{r} - \bm{r'}}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'}) \dd{\bm{r'}}\label{formal-soultion}
+      &= \e^{\i\kappa z} - \frac{1}{4\pi} \int \frac{\e^{\i \kappa \abs{\bm{r} - \bm{r'}}}}{\abs{\bm{r} - \bm{r'}}} \frac{2m}{\hbar^2}V(\bm{r'})\psi(\bm{r'}) \dd{\bm{r'}}\label{formal-soultion}
     \end{align}
     である．
     \begin{figure}[H]
@@ -250,7 +251,7 @@
       \caption{積分経路}\label{Integral}
     \end{figure}
     \par
-    次に\refe{formal-soultion}から散乱振幅$f(\theta)$を求める．$V(r')$は$r' < a$でのみ$V\neq 0$であると仮定する．
+    次に\refe{formal-soultion}から散乱振幅$f(\theta)$を求める．$V(\bm{r'})$は$r' < a$でのみ$V\neq 0$であると仮定する．
     \refe{formal-soultion}において
     $r \gg r'$では，
     \begin{align}
@@ -272,7 +273,7 @@
     と近似する．% なぜ？？？
     \refe{exp-abs-r-r-prime-approx}や\refe{abs-r-r-prime-inv-approx}で行った近似結果を\refe{formal-soultion}に代入すると，
     \begin{align}
-      \psi(\bm{r}) = \e^{\i\kappa z} - \qty(\frac{1}{4\pi} \int \e^{-\i\bm{\kappa'}\cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}})\frac{\e^{\i\kappa r}}{r}\label{psi-r-in-sc-kappa}
+      \psi(\bm{r}) = \e^{\i\kappa z} - \qty(\frac{1}{4\pi} \int \e^{-\i\bm{\kappa'}\cdot \bm{r'}} \frac{2m}{\hbar^2}V(\bm{r'})\psi(\bm{r'})\dd{\bm{r'}})\frac{\e^{\i\kappa r}}{r}\label{psi-r-in-sc-kappa}
     \end{align}
     を得る．
     \par
@@ -283,17 +284,17 @@
     と書けるのであった．
     \refe{psi-r-in-sc-k-re}と\refe{psi-r-in-sc-kappa}を比較すると，\refe{psi-r-in-sc-kappa}において$\kappa \to k$，$\bm{\kappa'} \to \bm{k'}$とすれば，
     \begin{align}
-      \psi(\bm{r}) = \e^{\i kz} - \qty(\frac{1}{4\pi} \int \e^{-\i\bm{k'}\cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}})\frac{\e^{\i kr}}{r}
+      \psi(\bm{r}) = \e^{\i kz} - \qty(\frac{1}{4\pi} \int \e^{-\i\bm{k'}\cdot \bm{r'}} \frac{2m}{\hbar^2}V(\bm{r'})\psi(\bm{r'})\dd{\bm{r'}})\frac{\e^{\i kr}}{r}
     \end{align}
     となる．
     したがって散乱振幅は，
     \begin{align}
-      f(\theta) = -\frac{1}{4\pi} \int \e^{- \i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}}
+      f(\theta) = -\frac{1}{4\pi} \int \e^{- \i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(\bm{r'})\psi(\bm{r'})\dd{\bm{r'}}
     \end{align}
     となる．
     \begin{itembox}[l]{一般のポテンシャルでの散乱振幅}
       \begin{align}
-        f(\theta) = -\frac{1}{4\pi} \int \e^{- \i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(r')\psi(\bm{r'})\dd{\bm{r'}}\label{scattering-amp-general}
+        f(\theta) = -\frac{1}{4\pi} \int \e^{- \i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(\bm{r'})\psi(\bm{r'})\dd{\bm{r'}}\label{scattering-amp-general}
       \end{align}
     \end{itembox}
 \end{document}

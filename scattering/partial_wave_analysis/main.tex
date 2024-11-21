@@ -2,356 +2,351 @@
 \input{../../head.tex}
 \begin{document}
   近似法の一つである部分波展開を扱う．
-
-
-  古典力学において，角運動量は
+  まず，半古典論を用いて散乱が起こる条件から，方位量子数$l$ごとに波動関数を展開して，$l$が小さい波動関数のみ考えればよいことが分かる．
+  次に，波動関数の基底展開について議論を行う．関数空間には様々な直交基底が存在するが，今回はLegendre多項式を基底に取る．
+  最後に，展開に用いた未定係数を用いて，散乱断面積や全断面積をその未定係数を用いて表す．
+  \subsection{散乱の条件}
+    古典力学において角運動量$\bm{L}$は，
+    \begin{align}
+      \bm{L} = \bm{r} \times \bm{p} = m\bm{r} \times \bm{v}
+    \end{align}
+    と書けるのであった．
+    球対称ポテンシャルの下では，
+    \begin{align}
+      \dv{\bm{L}}{t} &= m\dv{\bm{r}}{t} \times \bm{v} + m\bm{r} \times \dv{\bm{v}}{t} \\
+      &= \bm{r} \times \bm{F} \\
+      &= \bm{r} \times (-\grad V(r)) \\
+      &= \bm{r} \times \abs{\grad V}\frac{\bm{r}}{r} \\
+      &= 0
+    \end{align}
+    より，角運動量は保存される．
+    衝突パラメータを$b$，運動量を$\bm{p}$とした粒子の角運動量は，
+    \begin{align}
+      \abs{\bm{L}} &= \abs{\bm{r} \times \bm{p}} \\
+      &= pb
+    \end{align}
+    である．散乱体を半径$a$の球とすると，衝突の条件は
+    \begin{align}
+      b &< a \\
+      L/p &< a \\
+      L &< pa \label{ConditionofSC}
+    \end{align}
+    である．つまり，角運動量が小さい粒子のみ散乱することがわかる．
+    \par
+    \refe{ConditionofSC}を半古典的な散乱条件へ書き直すことを考える．
+    量子力学では，角運動量の大きさ$L$は，$l = 0, 1, 2, \cdots$の値を取る方位量子数$l$を用いて$L = \hbar \sqrt{l(l + 1)}$と書けるので，
+    衝突の条件は，
+    \begin{align}
+      L = \hbar \sqrt{l(l + 1)} < pa = \hbar ka\label{scattering-condition-of-l}
+    \end{align}
+    と書ける．\refe{scattering-condition-of-l}を見れば，散乱の影響を受けるのは$l$が小さいときのみであることがわかる．
+    よって波動関数を，
+    \begin{align}
+      \psi = \phi^{(l = 0)} + \phi^{(l = 1)} + \cdots
+    \end{align}
+    のように異なる$l$に属する固有関数で展開し，$l$が小さい状態についてだけ散乱の影響を考える．これを\textbf{部分波展開}という．
+  \subsection{波動関数の基底展開}
+    さて，\refe{psi-r-in-sc-k}で示した散乱の波動関数，
+    \begin{align}
+      \psi(\bm{r}) = \e^{\i kz} + f(\theta)\frac{\e^{\i kr}}{r}
+    \end{align}
+    を部分波展開する\footnote{ここから\refe{PartialWave}までは飛ばしても良い．}ことを考える．
+    最初に，以下で扱う演算子のクラスであるStrum-Liouvillle演算子についての性質を調べる．
+    まず，Legendre多項式とLegendre陪多項式の性質を調べて，直交性を知る．
+    次に，Legendre多項式を用いて波動関数を展開して，展開係数$B_{ml}$が満たすべき微分方程式を導く．
+    続いて，Bessel微分方程式の解であるBessel関数の表式を求めて，球Bessel関数と球Neumann関数，球Hankel関数を定義する．
+    最後に，展開係数$B_{ml}$が球Bessel関数と球Neumann関数の線型結合で書けることを確かめて，線型結合の係数が波動関数を特徴づけるものだと知る．
+    \subsubsection{Strum-Liouvillle演算子のHermite性}
+      $a < b$として，$x\in \qty[a, b]$で定義された関数空間$V$を考える．$\rho(x)$を非負の実数関数として，$f, g\in V$に対して，
+      \begin{align}
+        \inner{f}{g} \coloneqq \int_{a}^{b} f^*(x)g(x)\rho(x)\dd{x}
+      \end{align}
+      なる内積を入れる．
+      関数空間$V$上の演算子として$\mathcal{L}$を，
+      \begin{align}
+        \mathcal{L} \coloneqq \frac{1}{\rho(x)}\qty[\dv{x}\qty{p(x)\dv{x}} + q(x)]\label{strum-liouville-operator-def}
+      \end{align}
+      とする．
+      \refe{strum-liouville-operator-def}なる形をした演算子をStrum-Liouvillle演算子という．
+      境界条件を，$\forall f \in V$について，
+      \begin{align}
+        \begin{dcases}
+          f(a) = f(b) \\ 
+          p(a)f'(a) = p(b)f'(b)
+        \end{dcases}
+      \end{align}
+      とすると，
+      \begin{align}
+        \inner{f}{\mathcal{L}g} = \inner{\mathcal{L}f}{g}\label{hermite-def}
+      \end{align}
+      が成立する．
+      \refe{hermite-def}なる関係が成り立つ演算子$\mathcal{L}$をHermite演算子という．
+      \begin{proof}
+        内積の定義より，
+        \begin{align}
+          \inner{f}{\mathcal{L}g} &= \int_{a}^{b} f^*(x)\frac{1}{\rho(x)}\qty[\dv{x}\qty{p(x)\dv{x}g(x)} + q(x)g(x)]\rho(x)\dd{x} \\ 
+          &= \int_{a}^{b} f^*(x)\qty[\dv{x}\qty{p(x)\dv{x}g(x)} + q(x)g(x)]\dd{x} \\ 
+          &= \qty[f^*(x)g'(x)]_{a}^{b} - \int_{a}^{b}f'^*(x)p(x)g'(x)\dd{x} + \int_{a}^{b}f^*(x)q(x)g(x)\dd{x} \\ 
+          &= \qty[f^*(x)p(x)g'(x)]_{a}^{b} - \qty[f'^*(x)p(x)g(x)]_{a}^{b} + \int_{a}^{b}g(x)\frac{1}{\rho(x)}\qty[\dv{x}\qty(p(x)\dv{x}f^*(x)) + q(x)f^*(x)]\rho(x)\dd{x} \\ 
+          &= \qty[f^*(x)p(x)g'(x)]_{a}^{b} - \qty[f'^*(x)p(x)g(x)]_{a}^{b} + \inner{g}{\mathcal{L}f}^* \\ 
+          &= \qty[f^*(x)p(x)g'(x)]_{a}^{b} - \qty[g(x)p(x)f'^*(x)]_{a}^{b} + \inner{\mathcal{L}f}{g} 
+        \end{align}
+        となる．第1項と第2項について，第1項に$f(a) = f(b)$を，第2項に$p(x)$が実数値関数であり$p(a)f'(a) = p(b)f'(b)$であることを用いると
+        \begin{align}
+          \qty[f^*(x)p(x)g'(x)]_{a}^{b} - \qty[f'^*(x)p(x)g(x)]_{a}^{b} = \qty{p(b)g'(b) - p(a)f(a)}f^*(a) - \qty{g(b) - g(a)}p(a)f'(a)
+        \end{align}
+        を得る．今度は，第1項に$p(x)$が実数値関数であり$p(a)g'(a) = p(b)g'(b)$であることを，第2項に$g(a) = g(b)$を用いれば，
+        \begin{align}
+          \inner{f}{\mathcal{L}g} = \inner{\mathcal{L}f}{g}
+        \end{align}
+        を得る．
+      \end{proof}
+    \subsubsection{Legendre多項式}
+      \refe{strum-liouville-operator-def}において，$a = -b = 1$とする．また，
+      \begin{align}
+        \rho(x) &\coloneqq 1 \\ 
+        p(x) &\coloneqq 1 - x^2 \\ 
+        q(x) &\coloneqq -\frac{m^2}{1 - x^2},\ m\in \qty{0, 1, \cdots}
+      \end{align}
+      とすると，
+      \begin{align}
+        \mathcal{L}_m = \dv{x}\qty{(1 - x^2)\dv{x}} - \frac{m^2}{1 - x^2}
+      \end{align}
+      となる．
+      関数の内積は，
+      \begin{align}
+        \inner{f}{g} = \int_{-1}^{1} f^*(x)g(x) \dd{x} \label{inner-prod-legendre}
+      \end{align}
+      と定義しておく．
+      また，境界条件は，
+      \begin{align}
+        p(\pm 1)f^*(\pm 1)g'(\pm 1) = 0
+      \end{align}
+      とする．これより，演算子$\mathcal{L}$がHermite演算子であると確かめられる．
+      たとえば，$g'(x) = p(x)$となるように$g(x)$を定めれば，$f(1) = f(-1) = 0$となる．
+      また，$f(x) = 1$となるように$f(x)$を定めれば，$p(1)g'(1) = p(-1)g'(1) = 0$となるので，前節で示した境界条件を満足する．
+      さて，Legendre多項式$P_n(x)$は$n$を非負整数として，
+      \begin{align}
+        \mathcal{L}_0P_n(x) &= -n(n + 1) P_n(x) \\ 
+        \Leftrightarrow \dv{x}\qty{(1 - x^2)\dv{x}P_n(x)} &= -n(n + 1)P_n(x)\label{legendre-polynominal} 
+      \end{align}
+      なる$P_n(x)$のうち，$x = 0$周りで級数展開したもので，
+      \begin{align}
+        P_n(x) = \sum_{j = 0}^{\infty}u_jx^j\label{legendre-polynominal-u-expantion}
+      \end{align}
+      と書いたとき，
+      \begin{align}
+        u_n &= \frac{(2n)!}{2^n(n!)^2}\label{legendre-polynominal-u-expantion-n} \\ 
+        u_{n + 1} &= 0\label{legendre-polynominal-u-expantion-np1}
+      \end{align}
+      なるものである．\refe{legendre-polynominal-u-expantion}を\refe{legendre-polynominal}に代入すると，
+      \begin{align}
+        \dv{x}\qty{(1 - x^2)\dv{x}\sum_{j = 0}^{\infty}u_jx^j} &= -n(n + 1)\sum_{j = 0}^{\infty}u_jx^j \\ 
+        \Leftrightarrow \sum_{j = 0}^{\infty}ju_j\dv{x}\qty(x^{j - 1} - x^{j + 1}) &= -n(n + 1)\sum_{j = 0}^{\infty}u_jx^j \\ 
+        \Leftrightarrow \sum_{j = 0}^{\infty}j(j - 1)u_jx^{j - 2} - \sum_{j = 0}^{\infty}j(j + 1)u_jx^j &= -n(n + 1)\sum_{j = 0}^{\infty}u_jx^j \\ 
+        \Leftrightarrow \sum_{j = 0}^{\infty}j(j - 1)u_jx^{j - 2} &= \sum_{j = 0}^{\infty}u_j\qty[j(j + 1) - n(n + 1)]x^j \\ 
+        \Leftrightarrow \sum_{j = 2}^{\infty}j(j - 1)u_jx^{j - 2} &= \sum_{j = 0}^{\infty}u_j\qty[j(j + 1) - n(n + 1)]x^j \\ 
+        \Leftrightarrow \sum_{j = 0}^{\infty}(j + 1)(j + 2)u_{j + 2}x^{j} &= \sum_{j = 0}^{\infty}u_j\qty[j(j + 1) - n(n + 1)]x^j 
+      \end{align}
+      となるから，
+      \begin{align}
+        (j + 1)(j + 2)u_{j + 2} = \qty[j(j + 1) - n(n + 1)]u_j\label{legendre-polynominal-u-expantion-recurr}
+      \end{align}
+      なる漸化式が成立する．
+      \refe{legendre-polynominal-u-expantion-recurr}において$j = n$を代入すると，$u_{n + 2} = 0$となる．
+      また，$j = n + 1$を代入すると\refe{legendre-polynominal-u-expantion-np1}より$u_{n + 1} = 0$である．
+      よって，
+      \begin{align}
+        0 = u_{n + 1} = u_{n + 2} = u_{n + 3} = u_{n + 4} = \cdots 
+      \end{align}
+      となる．また，\refe{legendre-polynominal-u-expantion-recurr}に$j = n - 2$を代入すると，
+      \begin{align}
+        u_{n - 2} = -\frac{n(n - 1)}{2(2n - 1)}u_n\label{legendre-polynominal-u-expantion-recurr-2}
+      \end{align}
+      となる．よって，\refe{legendre-polynominal-u-expantion-n}と\refe{legendre-polynominal-u-expantion-recurr-2}を用いて
+      \refe{legendre-polynominal-u-expantion}を表すと，
+      \begin{align}
+        P_n(x) &= \frac{(2n)!}{2^n(n!)^2}\qty[x^n - \frac{n(n - 1)}{2(2n - 1)}x^{n - 2} + \frac{n(n - 1)(n - 2)(n - 3)}{2\cdot 4\cdot (2n - 1)(2n - 3)}x^{n - 4} + \cdots] \\ 
+        &= \sum_{s = 0}^{\lfloor n/2 \rfloor}(-1)^s \frac{(2n - 2s)!}{2^ns!(n - s)!(n - 2s)!}x^{n - 2s}
+      \end{align}
+      となる．
+      なお，Legendre多項式は，
+      \begin{align}
+        \dv[n]{x}\qty(x^2 - 1)^n &= \sum_{s = 0}^{n}\dv[n]{x}(-1)^s\mqty(n \\ k)x^{2n - 2k} \\ 
+        &= \sum_{s = 0}^{\lfloor n/2 \rfloor}(-1)^s\frac{n!}{s!(n - s)!}\frac{(2n - 2s)!}{(n - 2k)!}
+      \end{align}
+      なる関係を用いると，
+      \begin{align}
+        P_n(x) &= \frac{1}{2^nn!}\dv[n]{x}\qty(x^2 - 1)^n\label{legendre-pn-easy}
+      \end{align}
+      となる．
+    \subsubsection{Legendre陪多項式}
+      Legendre陪多項式$P_n^m(x)$は$m \leq n$として，\refe{legendre-pn-easy}を用いれば，
+      \begin{align}
+        P_n^m(x) &\coloneqq \qty(1 - x^2)^{m/2}\dv[m]{x}P_n(x) \\ 
+        &= \qty(1 - x^2)^{m/2}\dv[m]{x}\frac{1}{2^nn!}\dv[n]{x}\qty(x^2 - 1)^n \\ 
+        &= \frac{1}{2^nn!}\qty(1 - x^2)^{m/2}\dv[n + m]{x}\qty(x^2 - 1)^n \label{assos-legendre-polynominal}
+      \end{align}
+      となる．
+      Legendre陪多項式の直交性は$\mathcal{L}_m$がHermite演算子であり，その固有関数である$P_n^m(x)$が直交することより従う．
+      自分自身との内積，つまり，$\inner{P_n^m(x)}{P_n^m(x)}$の値を計算する．
+      \refe{assos-legendre-polynominal}を用いて，\refe{inner-prod-legendre}で示した内積の定義に従って計算すると，
+      \begin{align}
+        \inner{P_{n}^m(x)}{P_{n}^m(x)} &= \int_{-1}^{1}\frac{1}{2^{2n}\qty(n!)^2}\qty(1 - x^2)^m \qty{\dv[n + m]{x}\qty(x^2 - 1)^m}\qty{\dv[n + m]{x}\qty(x^2 - 1)^m} \dd{x} \\ 
+        &= \frac{1}{2^{2n}\qty(n!)^2}\int_{-1}^{1}\qty(1 - x^2)^m \qty{\dv[n + m]{x}\qty(x^2 - 1)^m}\dv{x}\qty{\dv[n + m - 1]{x}\qty(x^2 - 1)^m} \dd{x} \\ 
+        &= \frac{1}{2^{2n}\qty(n!)^2}\qty[\qty(1 - x^2)^m\qty{\dv[n + m]{x}\qty(x^2 - 1)^m}\qty{\dv[n + m - 1]{x}\qty(x^2 - 1)^m}]_{-1}^{1} \\ 
+        &\ \ -\frac{1}{2^{2n}\qty(n!)^2} \int_{-1}^{1}\qty{\dv{x}\qty(1 - x^2)^m\qty{\dv[n + m]{x}(x^2 - 1)^n}}\qty{\dv[n + m + 1]{x}\qty(x^2 - 1)^m}\dd{x} \\ 
+        &= -\frac{1}{2^{2n}\qty(n!)^2}\int_{-1}^{1}\qty{\dv{x}\qty(1 - x^2)^m\qty{\dv[n + m]{x}(x^2 - 1)^n}}\qty{\dv[n + m + 1]{x}\qty(x^2 - 1)^m} \dd{x} \\
+        &= \cdots \\ 
+        &= \frac{\qty(-1)^{n + m}}{2^{2n}\qty(n!)^2}\int_{-1}^{1}\qty(x^2 - 1)^n\qty{\dv[n + m]{x}\qty(1 - x^2)^m\qty{\dv[n + m]{x}\qty(x^2 - 1)^n}} \dd{x} \\ 
+        &= \frac{\qty(-1)^{n + m}}{2^{2n}\qty(n!)^2}\int_{-1}^{1}\qty(x^2 - 1)^n\qty[\sum_{k = 0}^{n + m}\mqty(n + m \\ k)\qty{\dv[n + m - k]{x}\qty(1 - x^2)^m}\qty{\dv[n + m + k]{x}\qty(x^2 - 1)^n}] \dd{x}\label{use-leibniz-formula}
+      \end{align}
+      となる．最終行でLeibnizの公式を用いた．
+      \refe{use-leibniz-formula}の和の中の$n + m - k$階微分と$n + m - k$階微分を考える．
+      $\qty(1 - x^2)^m$と$(x^2 - 1)^n$の最高次数は，それぞれ$2m$と$2n$であるから，$2m \geq n + m - k$かつ$2n \geq n + m + k$なる$k$でのみ和の中は0でなくなる．
+      つまり，$n - m\leq k$かつ$n - m \geq k$なる$k$は$k = n - m$のみである．
+      よって，\refe{use-leibniz-formula}は，
+      \begin{align}
+        \inner{P_{n}^m(x)}{P_{n}^m(x)} &= \frac{\qty(-1)^{n + m}}{2^{2n}\qty(n!)^2}\int_{-1}^{1}\qty(x^2 - 1)^n\qty[\sum_{k = 0}^{n + m}\mqty(n + m \\ k)\qty{\dv[n + m - k]{x}\qty(1 - x^2)^m}\qty{\dv[n + m + k]{x}\qty(x^2 - 1)^n}] \dd{x} \\ 
+        &= \frac{\qty(-1)^{n + m}}{2^{2n}\qty(n!)^2}\int_{-1}^{1}\qty(x^2 - 1)^n\qty[\mqty(n + m \\ n - m)\qty{\dv[2m]{x}\qty(1 - x^2)^m}\qty{\dv[2n]{x}\qty(x^2 - 1)^n}] \dd{x} \\ 
+        &= \frac{\qty(-1)^{n + m}}{2^{2n}\qty(n!)^2}(-1)^m\qty(2m)!\qty(2n)!\frac{(n + m)!}{(n - m)!(2m)!}\int_{-1}^{1}\qty(x^2 - 1)^n\dd{x} \\ 
+        &= \frac{\qty(-1)^{n + m}}{2^{2n}\qty(n!)^2}(-1)^m\qty(2m)!\qty(2n)!\frac{(n + m)!}{(n - m)!(2m)!}(-1)^n2\frac{(2n)!!}{(2n + 1)!!} \\ 
+        &= \frac{2}{2n + 1}\frac{(n + m)!}{(n - m)!}
+      \end{align}
+      となる．
+      Legendre多項式の直交性とまとめて書くと，
+      \begin{align}
+        \inner{P_{n'}^m(x)}{P_{n}^m(x)} = \delta_{n}^{n'}\frac{2}{2n + 1}\frac{(n + m)!}{(n - m)!}\label{pnm-norm}
+      \end{align}
+      となる．
+    \subsubsection{Besselの微分方程式}
+    \subsubsection{Legendre陪多項式の基底展開}
+    \subsubsection{球Bessel関数と球Neumann関数}
+    % 以下では波動関数をLegendre多項式で基底展開する手順を説明する．
+    % Helmholtz方程式，
+    % \begin{align}
+    %   [\laplacian + \kappa^2]u(\bm{r}) = 0
+    % \end{align}
+    % を球座標系で表すと，
+    % \begin{align}
+    %   \qty[\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r}) + \frac{1}{r^2 \sin \theta} \pdv{\theta}\qty(\sin\theta\pdv{\theta}) + \frac{1}{r^2 \sin^2\theta}\pdv[2]{\phi} + \kappa^2]u(r, \theta, \phi) = 0 \label{helmholtz-eq-in-sphere}
+    % \end{align}
+    % である．
+  % この方程式の解は動径波動関数$R(r)$と球面調和関数$Y_{l, m}(\theta, \phi)$を用いて，
+  % \begin{align} 
+  %   u(r, \theta, \phi) = \sum_{l = 0}^{\infty}\sum_{m = -l}^{l}C_{lm}R(r)Y_{l, m}(\theta, \phi)
+  % \end{align}
+  % と表される．ここで，球面調和関数とLegendre陪関数，Legendre多項式は以下の関係にある．
+  % \begin{align}
+  %   Y_{l,m}(\theta,\phi) &= (-1)^m \qty[\frac{(2l+1)}{4\pi}\frac{(l-m)!}{(l+m)!}]^{1/2}P_l^m(\cos\theta)\exp(\i m\phi) \\
+  %   P_l^m(x) &= (1-x^2)^{m/2} \frac{\r{d}^m P_l(x)}{\dd{x}^m}
+  % \end{align}
+  % いま，角度$\phi$によらないとすると，$m=0$とすることで
+  % \begin{align}
+  %   \psi(r,\theta) = \sum_{l=0}^{\infty} (2l+1)R_l(r)P_l(\cos\theta)
+  % \end{align}
+  % を得る．$(2l+1)$は縮退の数を表す．これを式(\ref{helmholtz-eq-in-sphere})に代入する．
+  % \begin{align}
+  %   \qty[\frac{1}{r}\frac{\partial^2}{\partial r^2}r + \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\qty(\sin\theta\frac{\partial}{\partial \theta})
+  %   + \kappa^2] \sum_{l=0}^{\infty} (2l+1)R_l(r)P_l(\cos\theta)= 0
+  % \end{align}
+  % 整理すると
+  % \begin{align}
+  %   \label{Helmholtz separated}
+  %   \frac{P_l(\cos\theta)}{r}\qty[2\frac{\partial R_l(r)}{\partial r} + r \frac{\partial^2 R_l(r)}{\partial r^2}]
+  %   + \frac{R_l(r)}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\qty(\sin\theta\frac{\partial}{\partial\theta}P_l(\cos\theta)) + \kappa^2 R_l(r)P_l(\cos\theta) = 0
+  % \end{align}
+  % である．ここで，Legendre多項式は
+  % \begin{align}
+  %   \frac{\r{d}}{\dd{x}}\qty[(1-x^2)\frac{\r{d}P_l(x)}{\dd{x}}] + l(l+1)P_l(x) = 0
+  % \end{align}
+  % を満たす．これを変数変換すると
+  % \begin{align}
+  %   \frac{1}{\sin\theta}\frac{\r{d}}{\dd{\theta}}\qty[\sin\theta\frac{\r{d}P_l(\cos\theta)}{\dd{\theta}}] + l(l+1)P_l(\cos\theta) = 0
+  % \end{align}
+  % となる．よって，式(\ref{Helmholtz separated})は
+  % \begin{align}
+  %   \frac{P_l(\cos\theta)}{r}\qty[2\frac{\partial R_l(r)}{\partial r} + r \frac{\partial^2 R_l(r)}{\partial r^2}]
+  %   - l(l+1)\frac{R_l(r)}{r^2}P_l(\cos\theta)  + \kappa^2 R_l(r)P_l(\cos\theta) = 0
+  % \end{align}
+  % と変形される．したがって，$R_l(r)$が満たすべき式は
+  % \begin{align}
+  %   \qty[\frac{\r{d}^2}{\dd{r}^2} + \frac{2}{r} \dv{}{r} + \kappa^2 - \frac{l(l+1)}{r^2}]R_l(r) = 0
+  % \end{align}
+  % である．この微分方程式の解$R_l(r)$は球面Bessel関数$j_l(\kappa r)$と球面Neumann関数$n_l(\kappa r)$の和で与えられる．よって，波動関数は
+  % \begin{align}
+  %   \psi(r,\theta) = \sum_{l=0}^{\infty} (2l+1)\qty[A_l j_l(\kappa r) + B_l n_l(\kappa r)] P_l(\cos\theta)
+  % \end{align} 
+  % となる．また，球面Bessel関数と球面Neumann関数は以下の性質を持つ．
+  % \begin{align}
+  %   x \to 0 \\
+  %   j_l(x) &\to \frac{x^l}{(2l+1)!}\qty(1 - \frac{x^2}{2(2l+3)}\cdots) \\
+  %   n_l(x) &\to -\frac{(2l -1)!!}{x^{l+1}}
+  % \end{align}
+  % 平面波$\e^{\i  z} = \e^{\i kr\cos\theta}$は明らかにHelmholtz方程式を満たす．さらに，$r=0$で有限の値をもつため，
+  % \begin{align}
+  %   B_l =0
+  % \end{align} 
+  % であることがわかる．以上の計算から，
+  % \begin{align}
+  %   \e^{\i \kappa r\cos\theta} = \sum_{l=0}^{\infty} (2l+1)A_l j_l(\kappa r) P_l(\cos\theta)
+  % \end{align}
+  % を得る．左辺を展開すると，
+  % \begin{align}
+  %   \sum_{l=0}^{\infty}\frac{(\i \kappa r \cos\theta)^l}{l!}
+  % \end{align}
+  % 右辺を展開すると，
+  % \begin{align}
+  %   \sum_{l=0}^{\infty} (2l+1)A_l\frac{(\kappa l)^l}{(2l+1)!!}P_l(\cos\theta)
+  % \end{align}
+  % である．また，$P_l(\cos\theta)$の$(\cos\theta)^l$の項の係数は
+  % \begin{align}
+  %   \frac{1}{2^l l!}\frac{(2l)!}{l!}
+  % \end{align}
+  % である．よって，左辺と右辺を比較することで
+  % \begin{align}
+  %   \frac{(\i \kappa r \cos\theta)^l}{l!} = (2l+1)A_l \frac{(2l)!}{2^l (l!)^2}\frac{(\kappa r \cos\theta)^l}{(2l+1)!!} \\
+  %   A_l = \i^l
+  % \end{align}
+  % を得る．したがって，\textbf{Rayleighの公式}
+  % \begin{align}
+  %   \e^{\i kz} = \e^{\i kr\cos\theta} = \sum_{l=0}^{\infty} (2l+1)\i^l j_l(kr)P_l(\cos\theta)
+  % \end{align}
+  % が成り立つ．以上で，平面波のLegendre多項式による表現が得られた．同様に，散乱振幅を未定係数$a_l$を用いて
+  % \begin{align}
+  %   f(\theta) = \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta)
+  % \end{align}
+  % と展開する．これにより球面波は
+  % \begin{align}
+  %   \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
+  % \end{align}
+  % と展開される．Legendre多項式は完全性と直交性をもつためこの展開は妥当である．
+  したがって，部分波展開した散乱の波動関数は
   \begin{align}
-    \bm{L} = \bm{r} \times \bm{p} = m\bm{r} \times \bm{v}
-  \end{align}
-  である．球対称ポテンシャルの下では，
-  \begin{align}
-    \dv{\bm{L}}{t} &= m\dv{\bm{r}}{t} \times \bm{v} + m\bm{r} \times \dv{\bm{v}}{t}\\
-    &= \bm{r} \times \bm{F}\\
-    &= \bm{r} \times (-\nabla V(r))\\
-    &= \bm{r} \times \abs{\nabla V}\frac{\bm{r}}{r}\\
-    &= 0
-  \end{align}
-  より，角運動量は保存される．
-  衝突パラメータ$b$，運動量$p$の粒子の角運動量は
-  \begin{align}
-    \abs{\bm{L}} &= \abs{\bm{r} \times \bm{p}}\\
-    &= pb
-  \end{align}
-  である．散乱体を半径$a$の球とすると，衝突の条件は
-  \begin{align}
-    &b < a\\
-    &L/p < a\\
-    \label{ConditionofSC}
-    &L < pa
-  \end{align}
-  である．つまり，角運動量が小さい粒子のみ散乱することがわかる．
-
-  式(\ref{ConditionofSC})を半古典的な散乱条件へと焼き直す．
-  \begin{align}
-    L = \hbar \sqrt{l(l+1)} < pa = \hbar ka
-  \end{align}
-  ここで，$l$は方位量子数で$l=0,1,2,\dots$の値を取る．つまり，散乱の影響を受けるのは$l$が小さいときのみであることがわかる．
-  よって，波動関数を
-  \begin{align}
-    \psi = \phi^{l=0} + \phi^{l=1}+\cdots
-  \end{align}
-  のように異なる$l$の固有関数で展開し，$l$が小さい状態についてだけ散乱の影響を考える．これを\textbf{部分波展開}という．
-
-  散乱の波動関数
-  \begin{align}
-    \psi(\bm{r}) = \e^{\i kz} + f(\theta)\frac{\e^{\i kr}}{r}
-  \end{align}
-  を部分波展開する\footnote{ここから式(\ref{PartialWave})までは飛ばしても良い．}．
-  以下では波動関数をLegendre多項式で基底展開する手順を説明する．
-  Helmholtz方程式
-  \begin{align}
-    [\nabla^2 + \kappa^2]\psi(\bm{r}) = 0
-  \end{align}
-  を球座標系で表すと
-  \begin{align}
-    \label{HEinSphere}
-    \qty[\frac{1}{r}\frac{\partial^2}{\partial r^2}r + \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\qty(\sin\theta\frac{\partial}{\partial \theta})
-    + \frac{1}{r^2 \sin^2\theta}\frac{\partial^2}{\partial \phi^2} + \kappa^2]\psi(r,\theta,\phi) = 0
-  \end{align}
-  である．この方程式の解は動径波動関数$R(r)$と球面調和関数$Y_{l,m}(\theta, \phi)$を用いて
-  \begin{align}
-    \psi(r,\theta,\phi) = \sum_{l=0}^{\infty}\sum_{m=-l}^{l}C_{lm}R(r)Y_{l,m}(\theta,\phi)
-  \end{align}
-  と表される．ここで，球面調和関数とLegendre陪関数，Legendre多項式は以下の関係にある．
-  \begin{align}
-    Y_{l,m}(\theta,\phi) &= (-1)^m \qty[\frac{(2l+1)}{4\pi}\frac{(l-m)!}{(l+m)!}]^{1/2}P_l^m(\cos\theta)\exp(\i m\phi)\\
-    P_l^m(x) &= (1-x^2)^{m/2} \frac{\r{d}^m P_l(x)}{\dd{x}^m}
-  \end{align}
-  いま，角度$\phi$によらないとすると，$m=0$とすることで
-  \begin{align}
-    \psi(r,\theta) = \sum_{l=0}^{\infty} (2l+1)R_l(r)P_l(\cos\theta)
-  \end{align}
-  を得る．$(2l+1)$は縮退の数を表す．これを式(\ref{HEinSphere})に代入する．
-  \begin{align}
-    \qty[\frac{1}{r}\frac{\partial^2}{\partial r^2}r + \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\qty(\sin\theta\frac{\partial}{\partial \theta})
-    + \kappa^2] \sum_{l=0}^{\infty} (2l+1)R_l(r)P_l(\cos\theta)= 0
-  \end{align}
-  整理すると
-  \begin{align}
-    \label{Helmholtz separated}
-    \frac{P_l(\cos\theta)}{r}\qty[2\frac{\partial R_l(r)}{\partial r} + r \frac{\partial^2 R_l(r)}{\partial r^2}]
-    + \frac{R_l(r)}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\qty(\sin\theta\frac{\partial}{\partial\theta}P_l(\cos\theta)) + \kappa^2 R_l(r)P_l(\cos\theta) = 0
-  \end{align}
-  である．ここで，Legendre多項式は
-  \begin{align}
-    \frac{\r{d}}{\dd{x}}\qty[(1-x^2)\frac{\r{d}P_l(x)}{\dd{x}}] + l(l+1)P_l(x) = 0
-  \end{align}
-  を満たす．これを変数変換すると
-  \begin{align}
-    \frac{1}{\sin\theta}\frac{\r{d}}{\dd{\theta}}\qty[\sin\theta\frac{\r{d}P_l(\cos\theta)}{\dd{\theta}}] + l(l+1)P_l(\cos\theta) = 0
-  \end{align}
-  となる．よって，式(\ref{Helmholtz separated})は
-  \begin{align}
-    \frac{P_l(\cos\theta)}{r}\qty[2\frac{\partial R_l(r)}{\partial r} + r \frac{\partial^2 R_l(r)}{\partial r^2}]
-    - l(l+1)\frac{R_l(r)}{r^2}P_l(\cos\theta)  + \kappa^2 R_l(r)P_l(\cos\theta) = 0
-  \end{align}
-  と変形される．したがって，$R_l(r)$が満たすべき式は
-  \begin{align}
-    \qty[\frac{\r{d}^2}{\dd{r}^2} + \frac{2}{r} \dv{}{r} + \kappa^2 - \frac{l(l+1)}{r^2}]R_l(r) = 0
-  \end{align}
-  である．この微分方程式の解$R_l(r)$は球面Bessel関数$j_l(\kappa r)$と球面Neumann関数$n_l(\kappa r)$の和で与えられる．よって，波動関数は
-  \begin{align}
-    \psi(r,\theta) = \sum_{l=0}^{\infty} (2l+1)\qty[A_l j_l(\kappa r) + B_l n_l(\kappa r)] P_l(\cos\theta)
-  \end{align} 
-  となる．また，球面Bessel関数と球面Neumann関数は以下の性質を持つ．
-  \begin{align}
-    x \to 0\\
-    j_l(x) &\to \frac{x^l}{(2l+1)!}\qty(1 - \frac{x^2}{2(2l+3)}\cdots)\\
-    n_l(x) &\to -\frac{(2l -1)!!}{x^{l+1}}
-  \end{align}
-  平面波$\e^{\i  z} = \e^{\i kr\cos\theta}$は明らかにHelmholtz方程式を満たす．さらに，$r=0$で有限の値をもつため，
-  \begin{align}
-    B_l =0
-  \end{align} 
-  であることがわかる．以上の計算から，
-  \begin{align}
-    \e^{\i \kappa r\cos\theta} = \sum_{l=0}^{\infty} (2l+1)A_l j_l(\kappa r) P_l(\cos\theta)
-  \end{align}
-  を得る．左辺を展開すると，
-  \begin{align}
-    \sum_{l=0}^{\infty}\frac{(\i \kappa r \cos\theta)^l}{l!}
-  \end{align}
-  右辺を展開すると，
-  \begin{align}
-    \sum_{l=0}^{\infty} (2l+1)A_l\frac{(\kappa l)^l}{(2l+1)!!}P_l(\cos\theta)
-  \end{align}
-  である．また，$P_l(\cos\theta)$の$(\cos\theta)^l$の項の係数は
-  \begin{align}
-    \frac{1}{2^l l!}\frac{(2l)!}{l!}
-  \end{align}
-  である．よって，左辺と右辺を比較することで
-  \begin{align}
-    \frac{(\i \kappa r \cos\theta)^l}{l!} = (2l+1)A_l \frac{(2l)!}{2^l (l!)^2}\frac{(\kappa r \cos\theta)^l}{(2l+1)!!}\\
-    A_l = \i^l
-  \end{align}
-  を得る．したがって，\textbf{Rayleighの公式}
-  \begin{align}
-    \e^{\i kz} = \e^{\i kr\cos\theta} = \sum_{l=0}^{\infty} (2l+1)\i^l j_l(kr)P_l(\cos\theta)
-  \end{align}
-  が成り立つ．以上で，平面波のLegendre多項式による表現が得られた．同様に，散乱振幅を未定係数$a_l$を用いて
-  \begin{align}
-    f(\theta) = \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta)
-  \end{align}
-  と展開する．これにより球面波は
-  \begin{align}
-    \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
-  \end{align}
-  と展開される．Legendre多項式は完全性と直交性をもつためこの展開は妥当である．したがって，部分波展開した散乱の波動関数は
-  \begin{align}
-    \psi(\bm{r}) = \sum_{l=0}^{\infty} (2l+1)\i^l j_l(kr)P_l(\cos\theta) + \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
+    \psi(\bm{r}) = \sum_{l = 0}^{\infty} (2l + 1)\i^l j_l(kr)P_l(\cos\theta) + \sum_{l = 0}^{\infty} (2l + 1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
   \end{align}
   である．
   \begin{itembox}[l]{部分波展開した散乱の波動関数}
   \begin{align}
-    \label{PartialWave}
-    \psi(\bm{r}) = \sum_{l=0}^{\infty} (2l+1)\i^l j_l(kr)P_l(\cos\theta) + \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
+    \psi(\bm{r}) = \sum_{l = 0}^{\infty} (2l + 1)\i^l j_l(kr)P_l(\cos\theta) + \sum_{l = 0}^{\infty} (2l + 1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}\label{PartialWave}
   \end{align}
   \end{itembox}
-  このとき，散乱断面積は
-  \begin{align}
-    \sigma(\theta) &= \abs{f(\theta)}^2\\
-    &= \sum_{l} \sum_{l'} (2l+1)(2l'+1) a_l^{*}a_{l'} P_l(\cos\theta) P_{l'}(\cos\theta)
-  \end{align}
-  である．全断面積は
-  \begin{align}
-    \sigma^{\r{tot}} &= 2\pi \int \sigma(\theta) \sin\theta \dd{\theta}\\
-    &= 2\pi \sum_{l=0}^{\infty} (2l+1)^2\abs{a_l}^2\qty(\frac{2}{2l+1})\\
-    &= 4\pi \sum_{l=0}^{\infty} (2l+1) \abs{a_l}^2
-  \end{align}
-  である．ここで，Legendre多項式の直交性
-  \begin{align}
-    \int_{0}^{\pi} P_l(\cos\theta)P_{l'}(\cos\theta) \sin\theta \dd{\theta} = \frac{2}{2l+1}\delta_{l,l'}
-  \end{align}
-  を用いた．
-
-  以上の議論から，部分波展開を用いた散乱問題は未定係数$a_l$を求めることに帰着する．
-
-  量子力学における散乱では，散乱の前後で位相が変化する．これを\textbf{位相シフト}(Phase shift)とよぶ．以下の1次元の例で位相シフトを確認する．
-  ポテンシャル
-  \begin{align}
-    V(x) = 
-    \begin{dcases}
-      0\ &(x < 0)\\
-      V_0\ &(x \geq 0)
-    \end{dcases}
-  \end{align}
-  に左から入射する粒子を考える．入射粒子のエネルギーは$E<V_0$とする．Schrödinger方程式を解くことにより波動関数は
-  \begin{align}
-    \psi(x) = 
-    \begin{dcases}
-      \label{1Dscattering}
-      \e^{\i kx} + \frac{k -\i\alpha}{k + \i\alpha} \e^{-\i kx}\ &(x < 0)\\
-      \frac{2k}{k + \i\alpha}\e^{-\alpha x}\ &(x \geq 0)
-    \end{dcases}
-  \end{align}
-  となる．ただし，$k \equiv \sqrt{\frac{2mE}{\hbar^2}}，\alpha \equiv \sqrt{\frac{2m(V-E)}{\hbar^2}}$とおいた．式(\ref{1Dscattering})において
-  $\e^{\i kx}$は入射波を，$\frac{k -\i\alpha}{k + \i\alpha} \e^{-\i kx}$は反射波を表している．反射波は
-  \begin{align}
-    k + \i\alpha = \sqrt{k^2 + \alpha^2} \e^{\i\delta_k}
-  \end{align}
-  とすると
-  \begin{align}
-    \e^{-2 \i \delta_k}\e^{-\i kx}
-  \end{align}
-  と表される．よって，波動関数は
-  \begin{align}
-    \psi(x) = \e^{\i kx} + \e^{-2 \i \delta_k}\e^{-\i kx}
-  \end{align}
-  となる．この$\delta_k$は位相シフトと呼ばれ，量子力学的散乱を特徴づけるパラメータである．
-
-  これを3次元に拡張する．式(\ref{PartialWave})において$r\to\infty$とすると，$j_l(kr)\to \frac{\e^{\i(kr - \frac{l\pi}{2})} - \e^{-\i(kr - \frac{l\pi}{2})}}{2\i kr}$であるため，
-  \begin{align}
-    \psi(\bm{r}) = \sum_{l=0}^{\infty} \frac{2l+1}{2\i kr}\qty[\i^l \qty(\e^{\i(kr - \frac{l\pi}{2})} - \e^{-\i(kr - \frac{l\pi}{2})}) + (2\i k) a_l \e^{\i kr}]P_l(\cos\theta)
-  \end{align}
-  を得る．さらに
-  \begin{align}
-    \i^l \qty(\e^{\i(kr - \frac{l\pi}{2})} - \e^{-\i(kr - \frac{l\pi}{2})}) &= \i^l \e^{-\i\frac{l\pi}{2}}\qty(\e^{\i kr} - \e^{-\i kr} e^{\i l\pi})\\
-    &= 1\cdot\qty(\e^{\i kr} - (-1)^l) \e^{-\i kr}
-  \end{align}
-  と直せるため，波動関数として
-  \begin{align}
-    \label{SCPartialWave}
-    \psi(\bm{r}) = \sum_{l=0}^{\infty} \qty[(1 + 2\i ka_l)\e^{\i kr} - (-1)^l \e^{-\i kr}]P_l(\cos\theta)
-  \end{align}
-  を得る．第1項は外向き球面波，第2項は内向き球面波を表す．この散乱は全反射であるため入射波と反射波の振幅は等しい．つまり，
-  \begin{align}
-    \abs{1 + 2\i ka_l} = 1
-  \end{align}
-  が成り立つ．よって，散乱による位相のずれを$\delta_l$とおくと
-  \begin{align}
-    1 + 2\i ka_l = \e^{2\i \delta_l}
-  \end{align}
-  である．この式から$a_l$を求めると
-  \begin{align}
-    a_l &= \frac{1}{2\i k}(\e^{\i \delta_l} - 1)\\
-    &= \frac{1}{k}\e^{\i \delta_l} \sin \delta_l
-  \end{align}
-  を得る．さらに全断面積と散乱振幅を求めることができる．
-  \begin{align}
-    \sigma^{\r{tot}} &= 4\pi \sum_{l=0}^{\infty} (2l+1)\abs{a_l}^2\\
-    &= \frac{4\pi}{k^2} \sum_{l=0}^{\infty} (2l+1)\sin^2\delta_l\\
-    f(\theta) &= \sum_{l=0}^{\infty} (2l+1)a_lP_l(\cos\theta)\\
-    &= \frac{1}{k} \sum_{l=0}^{\infty}(2l+1)\e^{\i\delta_l}\sin\delta_lP_l(\cos\theta)
-  \end{align}
-  ここで，$\theta = 0$のとき，
-  \begin{align}
-    f(0) = \frac{1}{k} \sum_{l=0}^{\infty} (2l+1) (\cos\delta_l + \i \sin\delta_l)\sin\delta_l P_l(1)
-  \end{align}
-  が成り立つ．したがって以下の\textbf{光学定理}が成り立つ．
-  \begin{itembox}[l]{光学定理}
+  \subsection{散乱断面積と全断面積}
+    部分波展開した波動関数より計算した散乱断面積は，
     \begin{align}
-      \sigma^{\r{tot}} = \frac{4\pi}{k} \Im f(0)
-    \end{align}
-  \end{itembox}
-  これは全断面積が前方散乱の散乱振幅からわかることを示している\footnote{
-   砂川，散乱の量子論，「光学定理は，前方散乱によって，入射波の強度が減少した分だけ，四方に散乱されるという，まことに当然なことを述べているのである．」 
-  }．
-  \begin{myex}{半径$a$の剛体球による散乱}{}
-    散乱体のポテンシャルを
-    \begin{align}
-      V(r) =
-      \begin{dcases}
-         \infty\ &(r \leq a)\\
-        0\ &(r \geq a)
-      \end{dcases}
-    \end{align}
-    とする．低エネルギー散乱($ka \ll 1$)とする．このとき，散乱の影響を受けるのはほぼ$l=0$のみである．
-    式(\ref{SCPartialWave})において$l=0$とすることで
-    \begin{align}
-      \psi(\bm{r}) = \frac{1}{2\i kr}\qty[(1 + 2\i k a_0)\e^{\i kr} - \e^{-\i kr}] P_0(\cos\theta)
-    \end{align}
-    を得る．位相シフトを考慮し$\e^{2\i \delta_0} = 1 + 2\i ka_0$とおく．境界条件より
-    \begin{align}
-      \psi(r=a) = 0
-    \end{align}
-    であるから
-    \begin{align}
-      \e^{2\i \delta_0}\e^{\i ka} - \e^{-\i ka} = 0
-    \end{align}
-    が成り立つ．よって位相シフトは
-    \begin{align}
-      \delta_0 = -ka
+      \sigma(\theta) &= \abs{f(\theta)}^2 \\
+      &= \sum_{l} \sum_{l'} (2l+1)(2l'+1) a_l^{*}a_{l'} P_l(\cos\theta) P_{l'}(\cos\theta)
     \end{align}
     である．全断面積は
     \begin{align}
-      \sigma^{\r{tot}} &= \frac{4\pi}{k^2}\sin^2\delta_0\\
-      &\simeq \frac{4\pi}{k^2}\delta_0\\
-      &= 4\pi a^2
+      \sigma^{\r{tot}} &= 2\pi \int \sigma(\theta) \sin\theta \dd{\theta} \\
+      &= 2\pi \sum_{l=0}^{\infty} (2l+1)^2\abs{a_l}^2\qty(\frac{2}{2l+1}) \\
+      &= 4\pi \sum_{l=0}^{\infty} (2l+1) \abs{a_l}^2
     \end{align}
-    である．これは古典力学における剛体級の散乱$\sigma^{\r{tot}}=\pi a^2$の4倍の値である．波長$\lambda=\frac{2\pi}{k}$が散乱体の半径$a$より十分に大きいため，
-    回折によって剛体球を取り囲み，球の表面積を疑似的に増加させたためと説明できる．
-  \end{myex}
-
-  \begin{myex}{位相シフトの問題}{}
-    散乱体から十分遠方での境界条件を満たし，ポテンシャル外における部分波展開した
-    波動関数として
+    である．ここで，Legendre多項式の直交性
     \begin{align}
-      \psi(\bm{r}) = \sum_{l=0}^{\infty} \i^l \frac{2l+1}{2}\qty[\e^{2\i\delta_l} h_l^{(1)} (kr) + h_l^{(2)} (kr)] P_l(\cos\theta)
+      \int_{0}^{\pi} P_l(\cos\theta)P_{l'}(\cos\theta) \sin\theta \dd{\theta} = \frac{2}{2l+1}\delta_{l,l'}
     \end{align}
-    を用い，半径$a$の剛体球
-    \begin{align}
-      V(r) = 
-      \begin{dcases}
-        \infty\ &(r\leq a)\\
-        0\ &(r>a)
-      \end{dcases}
-    \end{align}
-    による散乱を考える．特に，$ka$が小さい低エネルギー散乱において，$l$の増大に伴ってその寄与が散乱に対してどの程度小さくなるか
-    調べる．ここで，
-    \begin{align}
-      h_l^{(1)}(kr) = j_l(kr) + \i n_l(kr),\ h_l^{(2)}(kr) = j_l(kr) - \i n_l(kr)
-    \end{align}
-    は球Hankel関数であり，$j_l(kr)$は球Bessel関数，$n_l(kr)$は球Neumann関数である．
-    \begin{enumerate}
-      \item 波動関数の境界条件をかんがえることで，散乱による位相シフト$\tan\delta_l$を$j_l(ka)$と$n_l(ka)$を用いて表せ．
-      \item 低エネルギー散乱($ka \ll 1$)を考える．このとき
-            \begin{align}
-              \label{LimitOfBessel}
-              j_l(ka) \to \frac{(ka)^l}{(2l+1)!!},\ n_l(ka) \to -\frac{(2l-1)!!}{(ka)^{l+1}}
-            \end{align}
-            \begin{align}
-              (2l+1)!! = (2l+1)(2l-1)\cdots5\cdot3\cdot1\\
-              (2l-1)!! = (2l-1)(2l-3)\cdots3\cdot1\cdot1
-            \end{align}
-            であることを用い，$l=0,1,2$についての位相シフト$\tan\delta_l$を求めよ．得られる$\tan\delta_0$，$\tan\delta_1$，$\tan\delta_2$は
-            $l$の増加と共に位相シフトが急激に小さくなり，$ka$が小さい時，$l=0$だけ考えれば十分であることを示すものである．
-    \end{enumerate}
-    \tcblower
-    \begin{enumerate}
-      \item 波動関数は剛体球の中に侵入できないため$r=a$で$\psi=0$である．よって，
-            \begin{align}
-              \e^{2\i \delta_l} h_l^{(1)} (ka) + h_l^{(2)}(ka) = 0\\
-              \e^{2\i \delta_l}\qty(j_l(ka) + \i n_l(ka)) + \qty(j_l(ka) - \i n_l(ka)) = 0\\
-              \qty(\e^{2\i \delta_l} + 1)j_l(ka) + \i\qty(\e^{2\i \delta_l} - 1)n_l(ka) = 0\\
-              2\cos\delta_l j_l(ka) -2 \sin\delta_l n_l(ka) = 0
-            \end{align}
-            となり，位相シフト
-            \begin{align}
-              \label{phaseshift}
-              \tan\delta_l = \frac{j_l(ka)}{n_l(ka)}
-            \end{align}
-            が得られる．
-      \item 式(\ref{LimitOfBessel})を式(\ref{phaseshift})に代入する．
-            \begin{align}
-              \tan\delta_l &\to \frac{(ka)^l}{(2l+1)!!} \qty(- \frac{(ka)^{l+1}}{(2l -1)!!})\\
-              &= -\frac{(ka)^{2l+1}}{(2l+1)!!(2l-1)!!}\\
-            \end{align}
-            $l=0,1,2$を代入する．ここで，$(n-2)!!=\frac{n!}{n}$であることに注意する．
-            \begin{align}
-              \tan\delta_0 = -ka\\
-              \tan\delta_1 = -\frac{1}{3}(ka)^3\\
-              \tan\delta_2 = -\frac{1}{45}(ka)^5
-            \end{align}
-    \end{enumerate}
-  \end{myex}
+    を用いた．
+    以上の議論から，部分波展開を用いた散乱問題は未定係数$a_l$を求めることに帰着する．
 \end{document}
