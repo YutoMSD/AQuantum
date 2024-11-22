@@ -1,5 +1,53 @@
 \documentclass{report}
 \input{../../../head.tex}
 \begin{document}
+  一様な磁場中の荷電粒子の運動を考える．磁場は$z$軸と平行で大きさは$B$とする．これを満たすベクトルポテンシャルとして
+  \begin{align}
+    \begin{dcases}
+      A_x = 0\\
+      A_y = Bx\\
+      A_z = 0
+    \end{dcases}
+  \end{align}
+  を採用する．$z$に対しては対称なので，以降は$xy$平面内での運動を考える．ハミルトニアンは
+  \begin{align}
+    \hat{H} &= \frac{1}{2m}\qty[\hat{p}_x^2 + \qty(\hat{p}_y + eB\hat{x})^2]\\
+    &= \frac{\hat{p}_x^2}{2m} + \frac{(eB)^2}{2m}\qty(\hat{x} + \frac{\hat{p}_y}{eB})^2
+  \end{align}
+  である．このハミルトニアンは$\hat{y}$を含まないので
+  \begin{align}
+    [\hat{H}, \hat{p}_y] = 0
+  \end{align}
+  であることがわかる．$y$方向に関しては自由粒子の運動となる．また，$p_y$の固有値が定まるので，これを$\hbar k_y$とする．ハミルトニアンは
+  \begin{align}
+    \hat{H} = \frac{\hat{p}_x^2}{2m} + \frac{(eB)^2}{2m}\qty(\hat{x} + \frac{\hbar k_y}{eB})^2
+  \end{align}
+  と書き換えられ，これは調和振動子型のハミルトニアン
+  \begin{align}
+    \hat{H} = \frac{\hat{p}_x^2}{2m} + \frac{m\omega^2\hat{x}^2}{2}
+  \end{align}
+  と同じ形をしている．よって，エネルギー固有値は
+  \begin{align}
+    E &= \hbar\omega_{\r{c}} \qty(n + \frac{1}{2})\ (n = 0,1,2,\dots)\\
+    \omega_{\r{c}} &= \frac{|e|B}{m}
+  \end{align}
+  である．平面内の自由粒子のエネルギーが垂直磁場を加えることで離散化された．これを\textbf{Landau準位}(Landau level)という\footnote{この現象は量子Hall効果へとつながる．}．また，$\omega_{\r{c}}$を\textbf{サイクロトロン周波数}という．
 
+  次に，$x$方向に長さ$L_x$，$y$方向に長さ$L_y$の周期的境界条件を課す．すると，
+  \begin{align}
+    k_y = \frac{2\pi}{L_y}l\ (l = 0,\pm 1, \pm2,\dots)
+  \end{align}
+  となる．また$x$方向の調和振動子は$\frac{\hbar k_y}{eB}$だけずれている．これが0と$L_x$の間にあるためには
+  \begin{align}
+    0 \leq \frac{\hbar k_y}{eB} = \frac{\hbar}{eB} \frac{2\pi}{L_y}l \leq L_x
+  \end{align}
+  でなければならない．これは
+  \begin{align}
+    0 \leq l \leq \frac{eB}{2\pi\hbar}L_xL_y
+  \end{align}
+  と直される．よって，$l$は$\frac{|e|B}{2\pi\hbar}L_xL_y$通りの値を取ることがわかる．したがって，単位面積当たりの縮退度は
+  \begin{align}
+    \frac{|e|B}{2\pi\hbar}
+  \end{align}
+  である．
 \end{document}
