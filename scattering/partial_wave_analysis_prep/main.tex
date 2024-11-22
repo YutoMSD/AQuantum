@@ -311,13 +311,13 @@
   \subsection{Helmholtz方程式}
     Helmholtz方程式，
     \begin{align}
-      \qty(\laplacian + \kappa^2)u(\bm{r}) = 0\label{helmholtz-eq-wave}
+      \qty(\laplacian + \kappa^2)u(r, \theta, \phi) = 0\label{helmholtz-eq-wave}
     \end{align}
     を考える．
     $u(\bm{r})$を正規直交基底である$\e^{\i m\phi}$で展開すると，
     \begin{align}
-      A_m(r, \theta) &\coloneqq \int_{0}^{2\pi}u(\bm{r})\e^{-\i m\phi}\dd{\phi} \\ 
-      u(\bm{r}) &= \sum_{m}A_m(r, \theta)\e^{\i m\phi}\label{u-expand-with-a} \\ 
+      A_m(r, \theta) &\coloneqq \int_{0}^{2\pi}u(r, \theta, \phi)\e^{-\i m\phi}\dd{\phi} \\ 
+      u(r, \theta, \phi) &= \sum_{m}A_m(r, \theta)\e^{\i m\phi}\label{u-expand-with-a} \\ 
     \end{align}
     となる．
     また，極座標ラプラシアンは，
@@ -353,11 +353,11 @@
     \begin{align}
       \frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r}A_m(r, \theta)) + \frac{1}{r^2}\mathcal{L}_{\abs{m}}A_m(r, \theta) + \kappa^2 A_m(r, \theta) = 0 \label{a-condition-use-lm}
     \end{align}
-    を得る．
+    となる．
     \par
     続いて，$A_m(r, \theta)$を直交基底であるLegendre陪多項式を用いて，
     \begin{align}
-      A_m(r, \theta) = \sum_{n = \abs{m}}^{\infty}B_{nm}(r)P_{n}^{\abs{m}}(\cos\theta)
+      A_m(r, \theta) = \sum_{n = \abs{m}}^{\infty}B_{nm}(r)P_{n}^{\abs{m}}(\cos\theta) \label{am-expand-with-pnm}
     \end{align}
     と展開する．
     \refe{a-condition-use-lm}の両辺に$P_{n}^{\abs{m}}(\cos\theta)$との内積をとる．
@@ -380,9 +380,13 @@
     \end{align}
     を得る．
     \par
-    \refe{bnm-condition}において，$r = \frac{\rho}{\kappa}$と変数変換して，
+    \refe{bnm-condition}において，
     \begin{align}
-      C_{nm}(\rho) \coloneq \sqrt{\rho}B_{nm}(r)
+      \rho \coloneqq \kappa r\label{rho-def}
+    \end{align}
+    と変数変換して，
+    \begin{align}
+      C_{nm}(\rho) \coloneq \sqrt{\rho}B_{nm}(r)\label{cnm-def}
     \end{align}
     と定義して代入すれば，
     \begin{align}
@@ -400,25 +404,37 @@
       \nu &= n + \frac{1}{2}
     \end{align}
     としたものであると分かる．
-    つまり，$C_{nm}(\rho)$は球Bessel関数$j_n(\rho)$と球Neumann関数$y_n(\rho)$の線型結合で書かれることが分かるので，
-    係数をそれぞれ$a_{nm}$，$b_{nm}$として，
+    つまり，$C_{nm}(\rho)$はBessel関数$J_{n + \frac{1}{2}}(\rho)$とNeumann関数$J_{-n - \frac{1}{2}}(\rho)$の線型結合で書かれるので，
+    係数をそれぞれ$a'_{nm}$，$b'_{nm}$として，
     \begin{align}
-      C_{nm}(\rho) = a_{nm}j_n(\rho) + b_{nm}y_n(\rho) 
+      C_{nm}(\rho) = a'_{nm}J_{n + \frac{1}{2}}(\rho) + b'_{nm}J_{-n - \frac{1}{2}}(\rho)\label{expand-cnm-ans-tmp}
     \end{align}
     と書く．
+    今後の変形のために，球Bessel関数$j_n(\rho)$と球Neumann関数$y_n(\rho)$を用いて\refe{expand-cnm-ans-tmp}を書き直せば，
+    \begin{align}
+      C_{nm}(\rho) &= a'_{nm}J_{n + \frac{1}{2}}(\rho) + b'_{nm}J_{-n - \frac{1}{2}}(\rho) \\ 
+      &= \sqrt{\frac{2\rho}{\pi}}a'_{nm}\pi^{-1}j_n(\rho) + \sqrt{\frac{2\rho}{\pi}}b'_{mn}y_n(\rho) \\ 
+      &= \sqrt{\rho}\qty[a_{nm}j_n(\rho) + b_{mn}y_n(\rho)] \label{expand-cnm-ans}
+    \end{align}
+    である．ただし，
+    \begin{align}
+      a_{nm} &\coloneq a'_{nm}\sqrt{\frac{2}{\pi}} \\ 
+      b_{nm} &\coloneq b'_{nm}\sqrt{\frac{2}{\pi}}
+    \end{align}
+    と定めた．
     \par
     さて，今Helmholtz方程式の解の基底展開を行っているのであった．
     今までに定義した展開を全てまとめると，
     \begin{align}
-      u(\bm{r}) &= \sum_{m = -\infty}^{\infty} A_m(r, \theta) \e^{\i m\phi} \\ 
-      A_m(r, \theta) &= \sum_{n = \abs{m}}^{\infty}B_{nm}(r)P_{n}^{\abs{m}}(\cos\theta) \\ 
-      \rho &= \kappa r \\ 
-      B_{nm}(r) &= \frac{1}{\sqrt{\rho}}C_{nm}(\rho) \\ 
-      C_{nm}(\rho) &= a_{nm}j_n(\rho) + b_{nm}y_n(\rho) 
+      \text{\refe{u-expand-with-a}より}&\ u(\bm{r}) = \sum_{m = -\infty}^{\infty} A_m(r, \theta) \e^{\i m\phi} \\ 
+      \text{\refe{am-expand-with-pnm}より}&\ A_m(r, \theta) = \sum_{n = \abs{m}}^{\infty}B_{nm}(r)P_{n}^{\abs{m}}(\cos\theta) \\ 
+      \text{\refe{rho-def}より}&\ \rho = \kappa r \\ 
+      \text{\refe{cnm-def}より}&\ B_{nm}(r) = \frac{1}{\sqrt{\rho}}C_{nm}(\rho) \\ 
+      \text{\refe{expand-cnm-ans}より}&\ C_{nm}(\rho) = \sqrt{\rho}\qty[a_{nm}j_n(\rho) + b_{mn}y_n(\rho)]
     \end{align}
     となる．下から上に全て代入して整理すると，
     \begin{align}
-      u(\bm{r}) = \frac{1}{\sqrt{\kappa r}} \sum_{m = -\infty}^{\infty}\sum_{n = \abs{m}}^{\infty}\qty[a_{nm}j_n(\kappa r) + b_{nm}y_n(\kappa r)] P_{n}^{\abs{m}}(\cos\theta)\e^{\i m\phi}
+      u(\bm{r}) = \sum_{m = -\infty}^{\infty}\sum_{n = \abs{m}}^{\infty}\qty[a_{nm}j_n(\kappa r) + b_{nm}y_n(\kappa r)] P_{n}^{\abs{m}}(\cos\theta)\e^{\i m\phi}
     \end{align}
     となる．
 \end{document}
