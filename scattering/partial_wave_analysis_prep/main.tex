@@ -1,0 +1,424 @@
+\documentclass{report}
+\input{../../head.tex}
+\begin{document}
+  本節では，次節にて行う部分波展開について，数学的な準備を行う．
+  最初に，以下で扱う演算子のクラスであるStrum-Liouvillle演算子についての性質を調べる．
+  まず，Legendre多項式とLegendre陪多項式の性質を調べて，直交性を知る．
+  次に，Bessel微分方程式の解であるBessel関数の表式を求めて，球Bessel関数と球Neumann関数，球Hankel関数を定義する．
+  続いて，Legendre多項式を用いて波動関数を展開して，展開係数$B_{ml}$が満たすべき微分方程式を導く．
+  最後に，展開係数$B_{ml}$が球Bessel関数と球Neumann関数の線型結合で書けることを確かめて，線型結合の係数が波動関数を特徴づけるものだと知る．
+  \subsection{Strum-Liouvillle演算子のHermite性}
+    $a < b$として，$x\in \qty[a, b]$で定義された関数空間$V$を考える．$\rho(x)$を非負の実数関数として，$f, g\in V$に対して，
+    \begin{align}
+      \inner{f}{g} \coloneqq \int_{a}^{b} f^*(x)g(x)\rho(x)\dd{x}
+    \end{align}
+    なる内積を入れる．
+    関数空間$V$上の演算子として$\mathcal{L}$を，
+    \begin{align}
+      \mathcal{L} \coloneqq \frac{1}{\rho(x)}\qty[\dv{x}\qty{p(x)\dv{x}} + q(x)]\label{strum-liouville-operator-def}
+    \end{align}
+    とする．
+    \refe{strum-liouville-operator-def}なる形をした演算子をStrum-Liouvillle演算子という．
+    境界条件を，$\forall f \in V$について，
+    \begin{align}
+      \begin{dcases}
+        f(a) = f(b) \\ 
+        p(a)f'(a) = p(b)f'(b)
+      \end{dcases}
+    \end{align}
+    とすると，
+    \begin{align}
+      \inner{f}{\mathcal{L}g} = \inner{\mathcal{L}f}{g}\label{hermite-def}
+    \end{align}
+    が成立する．
+    \refe{hermite-def}なる関係が成り立つ演算子$\mathcal{L}$をHermite演算子という．
+    \begin{proof}
+      内積の定義より，
+      \begin{align}
+        \inner{f}{\mathcal{L}g} &= \int_{a}^{b} f^*(x)\frac{1}{\rho(x)}\qty[\dv{x}\qty{p(x)\dv{x}g(x)} + q(x)g(x)]\rho(x)\dd{x} \\ 
+        &= \int_{a}^{b} f^*(x)\qty[\dv{x}\qty{p(x)\dv{x}g(x)} + q(x)g(x)]\dd{x} \\ 
+        &= \qty[f^*(x)g'(x)]_{a}^{b} - \int_{a}^{b}f'^*(x)p(x)g'(x)\dd{x} + \int_{a}^{b}f^*(x)q(x)g(x)\dd{x} \\ 
+        &= \qty[f^*(x)p(x)g'(x)]_{a}^{b} - \qty[f'^*(x)p(x)g(x)]_{a}^{b} + \int_{a}^{b}g(x)\frac{1}{\rho(x)}\qty[\dv{x}\qty(p(x)\dv{x}f^*(x)) + q(x)f^*(x)]\rho(x)\dd{x} \\ 
+        &= \qty[f^*(x)p(x)g'(x)]_{a}^{b} - \qty[f'^*(x)p(x)g(x)]_{a}^{b} + \inner{g}{\mathcal{L}f}^* \\ 
+        &= \qty[f^*(x)p(x)g'(x)]_{a}^{b} - \qty[g(x)p(x)f'^*(x)]_{a}^{b} + \inner{\mathcal{L}f}{g} 
+      \end{align}
+      となる．第1項と第2項について，第1項に$f(a) = f(b)$を，第2項に$p(x)$が実数値関数であり$p(a)f'(a) = p(b)f'(b)$であることを用いると
+      \begin{align}
+        \qty[f^*(x)p(x)g'(x)]_{a}^{b} - \qty[f'^*(x)p(x)g(x)]_{a}^{b} = \qty{p(b)g'(b) - p(a)f(a)}f^*(a) - \qty{g(b) - g(a)}p(a)f'(a)
+      \end{align}
+      を得る．今度は，第1項に$p(x)$が実数値関数であり$p(a)g'(a) = p(b)g'(b)$であることを，第2項に$g(a) = g(b)$を用いれば，
+      \begin{align}
+        \inner{f}{\mathcal{L}g} = \inner{\mathcal{L}f}{g}
+      \end{align}
+      を得る．
+    \end{proof}
+  \subsection{Legendre多項式}
+    \refe{strum-liouville-operator-def}において，$a = -b = 1$とする．また，
+    \begin{align}
+      \rho(x) &\coloneqq 1 \\ 
+      p(x) &\coloneqq 1 - x^2 \\ 
+      q(x) &\coloneqq -\frac{m^2}{1 - x^2},\ m\in \qty{0, 1, \cdots}
+    \end{align}
+    とすると，
+    \begin{align}
+      \mathcal{L}_m = \dv{x}\qty{(1 - x^2)\dv{x}} - \frac{m^2}{1 - x^2}
+    \end{align}
+    となる．
+    関数の内積は，
+    \begin{align}
+      \inner{f}{g} = \int_{-1}^{1} f^*(x)g(x) \dd{x} \label{inner-prod-legendre}
+    \end{align}
+    と定義しておく．
+    また，境界条件は，
+    \begin{align}
+      p(\pm 1)f^*(\pm 1)g'(\pm 1) = 0
+    \end{align}
+    とする．これより，演算子$\mathcal{L}$がHermite演算子であると確かめられる．
+    たとえば，$g'(x) = p(x)$となるように$g(x)$を定めれば，$f(1) = f(-1) = 0$となる．
+    また，$f(x) = 1$となるように$f(x)$を定めれば，$p(1)g'(1) = p(-1)g'(1) = 0$となるので，前節で示した境界条件を満足する．
+    さて，Legendre多項式$P_n(x)$は$n$を非負整数として，
+    \begin{align}
+      \mathcal{L}_0P_n(x) &= -n(n + 1) P_n(x) \\ 
+      \Leftrightarrow \dv{x}\qty{(1 - x^2)\dv{x}P_n(x)} &= -n(n + 1)P_n(x)\label{legendre-polynominal} 
+    \end{align}
+    なる$P_n(x)$のうち，$x = 0$周りで級数展開したもので，
+    \begin{align}
+      P_n(x) = \sum_{j = 0}^{\infty}u_jx^j\label{legendre-polynominal-u-expantion}
+    \end{align}
+    と書いたとき，
+    \begin{align}
+      u_n &= \frac{(2n)!}{2^n(n!)^2}\label{legendre-polynominal-u-expantion-n} \\ 
+      u_{n + 1} &= 0\label{legendre-polynominal-u-expantion-np1}
+    \end{align}
+    なるものである．\refe{legendre-polynominal-u-expantion}を\refe{legendre-polynominal}に代入すると，
+    \begin{align}
+      \dv{x}\qty{(1 - x^2)\dv{x}\sum_{j = 0}^{\infty}u_jx^j} &= -n(n + 1)\sum_{j = 0}^{\infty}u_jx^j \\ 
+      \Leftrightarrow \sum_{j = 0}^{\infty}ju_j\dv{x}\qty(x^{j - 1} - x^{j + 1}) &= -n(n + 1)\sum_{j = 0}^{\infty}u_jx^j \\ 
+      \Leftrightarrow \sum_{j = 0}^{\infty}j(j - 1)u_jx^{j - 2} - \sum_{j = 0}^{\infty}j(j + 1)u_jx^j &= -n(n + 1)\sum_{j = 0}^{\infty}u_jx^j \\ 
+      \Leftrightarrow \sum_{j = 0}^{\infty}j(j - 1)u_jx^{j - 2} &= \sum_{j = 0}^{\infty}u_j\qty[j(j + 1) - n(n + 1)]x^j \\ 
+      \Leftrightarrow \sum_{j = 2}^{\infty}j(j - 1)u_jx^{j - 2} &= \sum_{j = 0}^{\infty}u_j\qty[j(j + 1) - n(n + 1)]x^j \\ 
+      \Leftrightarrow \sum_{j = 0}^{\infty}(j + 1)(j + 2)u_{j + 2}x^{j} &= \sum_{j = 0}^{\infty}u_j\qty[j(j + 1) - n(n + 1)]x^j 
+    \end{align}
+    となるから，
+    \begin{align}
+      (j + 1)(j + 2)u_{j + 2} = \qty[j(j + 1) - n(n + 1)]u_j\label{legendre-polynominal-u-expantion-recurr}
+    \end{align}
+    なる漸化式が成立する．
+    \refe{legendre-polynominal-u-expantion-recurr}において$j = n$を代入すると，$u_{n + 2} = 0$となる．
+    また，$j = n + 1$を代入すると\refe{legendre-polynominal-u-expantion-np1}より$u_{n + 1} = 0$である．
+    よって，
+    \begin{align}
+      0 = u_{n + 1} = u_{n + 2} = u_{n + 3} = u_{n + 4} = \cdots 
+    \end{align}
+    となる．また，\refe{legendre-polynominal-u-expantion-recurr}に$j = n - 2$を代入すると，
+    \begin{align}
+      u_{n - 2} = -\frac{n(n - 1)}{2(2n - 1)}u_n\label{legendre-polynominal-u-expantion-recurr-2}
+    \end{align}
+    となる．よって，\refe{legendre-polynominal-u-expantion-n}と\refe{legendre-polynominal-u-expantion-recurr-2}を用いて
+    \refe{legendre-polynominal-u-expantion}を表すと，
+    \begin{align}
+      P_n(x) &= \frac{(2n)!}{2^n(n!)^2}\qty[x^n - \frac{n(n - 1)}{2(2n - 1)}x^{n - 2} + \frac{n(n - 1)(n - 2)(n - 3)}{2\cdot 4\cdot (2n - 1)(2n - 3)}x^{n - 4} + \cdots] \\ 
+      &= \sum_{s = 0}^{\lfloor n/2 \rfloor}(-1)^s \frac{(2n - 2s)!}{2^ns!(n - s)!(n - 2s)!}x^{n - 2s}
+    \end{align}
+    となる．
+    なお，Legendre多項式は，
+    \begin{align}
+      \dv[n]{x}\qty(x^2 - 1)^n &= \sum_{s = 0}^{n}\dv[n]{x}(-1)^s\mqty(n \\ k)x^{2n - 2k} \\ 
+      &= \sum_{s = 0}^{\lfloor n/2 \rfloor}(-1)^s\frac{n!}{s!(n - s)!}\frac{(2n - 2s)!}{(n - 2k)!}
+    \end{align}
+    なる関係を用いると，
+    \begin{align}
+      P_n(x) &= \frac{1}{2^nn!}\dv[n]{x}\qty(x^2 - 1)^n\label{legendre-pn-easy}
+    \end{align}
+    となる．
+  \subsection{Legendre陪多項式}
+    Legendre陪多項式$P_n^m(x)$は$m \leq n$として，
+    \begin{align}
+      P_n^m(x) &\coloneqq \qty(1 - x^2)^{m/2}\dv[m]{x}P_n(x)
+    \end{align}
+    と定義されて，\refe{legendre-pn-easy}を用いれば，
+    \begin{align}
+      P_n^m(x) &= \qty(1 - x^2)^{m/2}\dv[m]{x}P_n(x) \\ 
+      &= \qty(1 - x^2)^{m/2}\dv[m]{x}\frac{1}{2^nn!}\dv[n]{x}\qty(x^2 - 1)^n \\ 
+      &= \frac{1}{2^nn!}\qty(1 - x^2)^{m/2}\dv[n + m]{x}\qty(x^2 - 1)^n \label{assos-legendre-polynominal}
+    \end{align}
+    となる．
+    また，$P_n^m$はLegendreの陪微分方程式，
+    \begin{align}
+      \mathcal{L}_mP_n^m(x) + n(n + 1)P_n^m(x) = 0\label{assos-legendre-diff-eq}
+    \end{align}
+    を満たす．
+    Legendre陪多項式の直交性は$\mathcal{L}_m$がHermite演算子であり，その固有関数である$P_n^m(x)$が直交することより従う．
+    自分自身との内積，つまり，$\inner{P_n^m(x)}{P_n^m(x)}$の値を計算する．
+    \refe{assos-legendre-polynominal}を用いて，\refe{inner-prod-legendre}で示した内積の定義に従って計算する．
+    $n + m$回部分積分を行うと，
+    \begin{align}
+      \inner{P_{n}^m(x)}{P_{n}^m(x)} &= \int_{-1}^{1}\frac{1}{2^{2n}\qty(n!)^2}\qty(1 - x^2)^m \qty{\dv[n + m]{x}\qty(x^2 - 1)^m}\qty{\dv[n + m]{x}\qty(x^2 - 1)^m} \dd{x} \\ 
+      &= \frac{1}{2^{2n}\qty(n!)^2}\int_{-1}^{1}\qty(1 - x^2)^m \qty{\dv[n + m]{x}\qty(x^2 - 1)^m}\dv{x}\qty{\dv[n + m - 1]{x}\qty(x^2 - 1)^m} \dd{x} \\ 
+      &= \frac{1}{2^{2n}\qty(n!)^2}\qty[\qty(1 - x^2)^m\qty{\dv[n + m]{x}\qty(x^2 - 1)^m}\qty{\dv[n + m - 1]{x}\qty(x^2 - 1)^m}]_{-1}^{1} \\ 
+      &\ \ -\frac{1}{2^{2n}\qty(n!)^2} \int_{-1}^{1}\qty{\dv{x}\qty(1 - x^2)^m\qty{\dv[n + m]{x}(x^2 - 1)^n}}\qty{\dv[n + m + 1]{x}\qty(x^2 - 1)^m}\dd{x} \\ 
+      &= -\frac{1}{2^{2n}\qty(n!)^2}\int_{-1}^{1}\qty{\dv{x}\qty(1 - x^2)^m\qty{\dv[n + m]{x}(x^2 - 1)^n}}\qty{\dv[n + m + 1]{x}\qty(x^2 - 1)^m} \dd{x} \\
+      &= \cdots \\ 
+      &= \frac{\qty(-1)^{n + m}}{2^{2n}\qty(n!)^2}\int_{-1}^{1}\qty(x^2 - 1)^n\qty{\dv[n + m]{x}\qty(1 - x^2)^m\qty{\dv[n + m]{x}\qty(x^2 - 1)^n}} \dd{x} \\ 
+      &= \frac{\qty(-1)^{n + m}}{2^{2n}\qty(n!)^2}\int_{-1}^{1}\qty(x^2 - 1)^n\qty[\sum_{k = 0}^{n + m}\mqty(n + m \\ k)\qty{\dv[n + m - k]{x}\qty(1 - x^2)^m}\qty{\dv[n + m + k]{x}\qty(x^2 - 1)^n}] \dd{x}\label{use-leibniz-formula}
+    \end{align}
+    となる．最終行でLeibnizの公式を用いた．
+    \refe{use-leibniz-formula}の和の中の$n + m - k$階微分と$n + m - k$階微分を考える．
+    $\qty(1 - x^2)^m$と$(x^2 - 1)^n$の最高次数は，それぞれ$2m$と$2n$であるから，$2m \geq n + m - k$かつ$2n \geq n + m + k$なる$k$でのみ和の中は0でなくなる．
+    つまり，$n - m\leq k$かつ$n - m \geq k$なる$k$は$k = n - m$のみである．
+    よって，\refe{use-leibniz-formula}は，
+    \begin{align}
+      \inner{P_{n}^m(x)}{P_{n}^m(x)} &= \frac{\qty(-1)^{n + m}}{2^{2n}\qty(n!)^2}\int_{-1}^{1}\qty(x^2 - 1)^n\qty[\sum_{k = 0}^{n + m}\mqty(n + m \\ k)\qty{\dv[n + m - k]{x}\qty(1 - x^2)^m}\qty{\dv[n + m + k]{x}\qty(x^2 - 1)^n}] \dd{x} \\ 
+      &= \frac{\qty(-1)^{n + m}}{2^{2n}\qty(n!)^2}\int_{-1}^{1}\qty(x^2 - 1)^n\qty[\mqty(n + m \\ n - m)\qty{\dv[2m]{x}\qty(1 - x^2)^m}\qty{\dv[2n]{x}\qty(x^2 - 1)^n}] \dd{x} \\ 
+      &= \frac{\qty(-1)^{n + m}}{2^{2n}\qty(n!)^2}(-1)^m\qty(2m)!\qty(2n)!\frac{(n + m)!}{(n - m)!(2m)!}\int_{-1}^{1}\qty(x^2 - 1)^n\dd{x} 
+    \end{align}
+    積分は，$x = \cos\theta$と置換すると，
+    \begin{align}
+      \int_{-1}^{1}\qty(x^2 - 1)^n\dd{x} = (-1)n\int_{-1}^{1}\sin^{2n + 1}\theta\dd{\theta}
+    \end{align}
+    となる．$I_{2n + 1}$を，
+    \begin{align}
+      I_{2n + 1} \coloneqq \int_{0}^{\pi}\sin^{2n + 1}\theta\dd{\theta}
+    \end{align}
+    と定義すると，
+    \begin{align}
+      I_{2n + 1} &= \int_{0}^{\pi} \sin^{2n}\theta\dv{\theta}(-\cos\theta)\dd{\theta} \\ 
+      &= \qty[\sin^{2n}\theta\cdot(-\cos\theta)]_{0}^{\pi} + 2n\int_{0}^{\pi}\sin^{2n - 1}\theta \cos^2\theta\dd{\theta} \\ 
+      &= 2nI_{2n - 1} - 2nI_{2n + 1}
+    \end{align}
+    となるので，
+    \begin{align}
+      I_{2n + 1} &= \frac{2n}{2n + 1}I_{2n - 1} \\ 
+      &= \frac{2n}{2n + 1}\frac{2n - 2}{2n - 1}I_{2n - 3} \\ 
+      &= \cdots \\ 
+      &= \frac{(2n)!!}{(2n + 1)!!}I_1 \\ 
+      &= 2\frac{(2n)!!}{(2n + 1)!!} \\ 
+      &= 2\cdot 2^nn! \cdot \frac{2^nn!}{(2n + 1)!}
+    \end{align}
+    となる．2重階乗について，
+    \begin{align}
+      (2n)!! &= 2^nn! \\ 
+      (2n + 1) !! &= \frac{(2n + 1)!}{(2n)!!} = \frac{(2n + 1)!}{2^nn!}
+    \end{align}
+    なる関係が成り立つことを用いると，
+    \begin{align}
+      \inner{P_{n}^m(x)}{P_{n}^m(x)} &= \frac{\qty(-1)^{n + m}}{2^{2n}\qty(n!)^2}(-1)^m\qty(2m)!\qty(2n)!\frac{(n + m)!}{(n - m)!(2m)!}(-1)^n2\frac{(2n)!!}{(2n + 1)!!} \\
+      &=  \frac{\qty(-1)^{n + m}}{2^{2n}\qty(n!)^2}(-1)^m\qty(2m)!\qty(2n)!\frac{(n + m)!}{(n - m)!(2m)!}(-1)^n2\cdot 2^nn! \cdot \frac{2^nn!}{(2n + 1)!} \\
+      &= \frac{2}{2n + 1}\frac{(n + m)!}{(n - m)!}
+    \end{align}
+    となる．
+    Legendre多項式の直交性とまとめて書くと，
+    \begin{align}
+      \inner{P_{n'}^m(x)}{P_{n}^m(x)} = \delta_{n}^{n'}\frac{2}{2n + 1}\frac{(n + m)!}{(n - m)!}\label{pnm-norm}
+    \end{align}
+    となる．
+  \subsection{Bessel関数}
+    Legendre陪多項式を考えていたときとは別のStrum-Liouvillle演算子を考える．
+    \refe{strum-liouville-operator-def}において，$a \to 0$，$b \to a$とする．また，
+    \begin{align}
+      \rho(z) &\coloneqq x \\ 
+      p(z) &\coloneqq x \\ 
+      q(z) &\coloneqq -\frac{\nu^2}{z},\ \nu \geq 0
+    \end{align}
+    とする．
+    すなわち，
+    \begin{align}
+      \mathcal{L}_{\nu} &= \frac{1}{z}\qty[\dv{z}\qty{z\dv{z}} - \frac{\nu^2}{z}] \\ 
+      \inner{f}{g} &= \int_{0}^{a}f^*(z)g(z)x\dd{z}
+    \end{align}
+    である．
+    さて，
+    \begin{align}
+      \mathcal{L}_{\nu}J_{\nu}(z) &= - J_{\nu}(z)  \\ 
+      \Leftrightarrow \qty(\dv[2]{z} + \frac{1}{z}\dv{z} + 1 - \frac{\nu^2}{z^2}) &= 0 \label{bessel-differential-eq-sub}\\ 
+      \Leftrightarrow \dv[2]{z}J_{\nu}(z) + \frac{1}{z}\dv{z}J_{\nu}(z) - \frac{\nu^2}{z^2}J_{\nu}(z) &= J_{\nu}(z) \label{bessel-differential-eq}
+    \end{align}
+    なる$J_{\nu}(z)$を考える．1階微分の項と微分をしない項は$z = 0$で発散するが，それぞれ$z$と$z^2$をかければ発散しないので確定特異点である．
+    このとき，$z = 0$の周りで$J_{\nu}(z)$を指数$\alpha$のFrobenius展開をすると，
+    \begin{align}
+      J_{\nu}(z) = z^{\alpha}\sum_{n}u_nz^n\label{bessel-func-frobenius}
+    \end{align}
+    となる．
+    ただし，計算の簡単のために$n < 0$なる任意の$n$に対して$u_n = 0$と定めた．
+    また，$u_0 \neq 0$とする．
+    \refe{bessel-func-frobenius}を\refe{bessel-differential-eq}に代入することを考える．
+    $J_{\nu}(z)$の1階微分と2階微分が，
+    \begin{align}
+      \dv{z}J_{\nu}(z) &= \sum_{n}(n + \alpha)u_nz^{n + \alpha - 1} \\ 
+      \dv[2]{z}J_{\nu}(z) &= \sum_{n}(n + \alpha)(n + \alpha - 1)u_nz^{n + \alpha - 2} 
+    \end{align}
+    と書けることを用いると，
+    \begin{align}
+      \sum_{n}\qty[(n + \alpha)(n + \alpha - 1) + (n + \alpha) - \nu^2]u_nz^{n + \alpha - 2} &= -\sum_{n}u_nz^{n + \alpha} \\ 
+      \Leftrightarrow \sum_{n}\qty[(n + \alpha)(n + \alpha - 1) + (n + \alpha) - \nu^2]u_nz^{n + \alpha - 2} &= -\sum_{n}u_{n - 2}z^{n + \alpha -2} 
+    \end{align}
+    となる．係数を比較すると，
+    \begin{align}
+      \qty[(n + \alpha)^2 - \nu^2]u_n = -u_{n - 2}\label{bessel-func-recurr}
+    \end{align}
+    となる．
+    \refe{bessel-func-recurr}に$n = 1$を代入すると$u_{-1} = 0$より，
+    \begin{align}
+      0 = u_1 = u_3 = \cdots
+    \end{align}
+    を得る．
+    また，$n = 0$を代入すると$u_0 \neq 0$より，
+    \begin{align}
+      (0 + \alpha)^2 - \nu^2 &= 0 \\ 
+      \Rightarrow \alpha = \pm \mu
+    \end{align}
+    となる．
+    $\alpha = \nu$を採用して\refe{bessel-func-recurr}を用いると，
+    \begin{align}
+      u_{n + 2} = -\frac{1}{(n + \nu + 2)^2 - \nu^2}u_n 
+    \end{align}
+    を得る．
+    $\nu \in \mathbb{Z}$のときは，
+    \begin{align}
+      J_{\nu}(z) &= u_0z^{\nu}\qty(1 - \frac{1}{2(2\nu + 2)}z^2 + \frac{1}{2\cdot 4(2\nu + 2)(2\nu + 4)}z^4 + \cdots + (-1)^n\frac{(2\nu)!!}{(2n)!!(2\nu + 2n)!!}z^{2n} + \cdots) \\ 
+      &= u_0z^{\nu}\sum_{n = 0}(-1)^n\frac{2^{\nu}\nu!}{2^nn!(\nu + n)!2^{\nu + n}} z^{2n} \\ 
+      &= u_0\nu!2^{\nu}\sum_{n = 0}\frac{1}{n!(\nu + n)!}\qty(\frac{z}{2})^{\nu + 2n}
+    \end{align}
+    となる．$\nu \notin \mathbb{Z}$のときも，表せるようにガンマ関数をもちいて一般化する．
+    \refe{bessel-differential-eq}の形より，明らかに定数倍が許容されるから，
+    \begin{align}
+      u_0 = \frac{1}{2^{\nu}\Gamma(\nu + 1)}
+    \end{align}
+    となるように$u_0$を定めておくと，
+    \begin{align}
+      J_{\nu}(z) &= \sum_{n}\frac{(-1)^n}{n!\Gamma(\nu + k + 1)}\qty(\frac{z}{2})^{\nu + 2n}
+    \end{align}
+    を得る．$J_{\nu}(z)$をBessel関数という．
+    また，$\alpha = -\nu$を採用したときは，
+    \begin{align}
+      J_{-\nu}(z) &= \sum_{n}\frac{(-1)^n}{n!\Gamma(-\nu + k + 1)}\qty(\frac{z}{2})^{-\nu + 2n}
+    \end{align}
+    となり，これは$\nu \notin \mathbb{Z}$のときに$J_{\nu}(z)$と独立な解となることが示せる．
+    $J_{-\nu}(z)$をNeumann関数という．
+    \par
+    得られたBessel関数とNeumann関数を用いて，
+    \begin{align}
+      j_n(z) &\coloneqq \sqrt{\frac{\pi}{2z}}J_{n + \frac{1}{2}}(z) \\ 
+      y_n(z) &\coloneqq (-1)^{n + 1}\sqrt{\frac{\pi}{2z}}J_{-n-\frac{1}{2}}(z) \\ 
+    \end{align}
+    を定義する．$j_n(z)$と$y_n(z)$はそれぞれ，球Bessel関数，球Neumann関数という．
+    さらに，球Bessel関数と球Neumann関数を用いて，
+    \begin{align}
+      h_n^{(1)}(z) &\coloneqq j_n(z) + \i y_n(z) \\ 
+      h_n^{(2)}(z) &\coloneqq j_n(z) - \i y_n(z)
+    \end{align}
+    を定義する．$h_n^{(1)}$と$h_n^{(2)}$はそれぞれ，第1種Hankel関数，第2種Hankel関数という．
+  \subsection{Helmholtz方程式}
+    Helmholtz方程式，
+    \begin{align}
+      \qty(\laplacian + \kappa^2)u(\bm{r}) = 0\label{helmholtz-eq-wave}
+    \end{align}
+    を考える．
+    $u(\bm{r})$を正規直交基底である$\e^{\i m\phi}$で展開すると，
+    \begin{align}
+      A_m(r, \theta) &\coloneqq \int_{0}^{2\pi}u(\bm{r})\e^{-\i m\phi}\dd{\phi} \\ 
+      u(\bm{r}) &= \sum_{m}A_m(r, \theta)\e^{\i m\phi}\label{u-expand-with-a} \\ 
+    \end{align}
+    となる．
+    また，極座標ラプラシアンは，
+    \begin{align}
+      \laplacian = \frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r}) + \frac{1}{r^2\sin\theta}\pdv{\theta}\qty(\sin\theta\pdv{\theta}) + \frac{1}{r^2\sin^2\theta}\pdv[2]{\phi} \label{polar-laplacian}
+    \end{align}
+    である．
+    \refe{helmholtz-eq-wave}に\refe{polar-laplacian}を用いて，\refe{u-expand-with-a}を代入すると，
+    \begin{align}
+      &\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r}\sum_{m}A_m(r, \theta)\e^{\i m\phi}) + \frac{1}{r^2\sin\theta}\pdv{\theta}\qty(\sin\theta\pdv{\theta}\sum_{m}A_m(r, \theta)\e^{\i m\phi}) + \frac{1}{r^2\sin^2\theta}\pdv[2]{\phi}\sum_{m}A_m(r, \theta)\e^{\i m\phi} \notag \\ 
+      &+ \kappa^2\sum_{m}A_m(r, \theta)\e^{\i m\phi} = 0 \\ 
+      \Leftrightarrow &\sum_{m}\e^{\i m\phi}\qty[
+        \frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r}A_m(r, \theta)) + 
+        \frac{1}{r^2\sin\theta}\pdv{\theta}\qty(\sin\theta\pdv{\theta}A_m(r, \theta)) 
+        - \frac{m^2}{r^2\sin^2\theta}A_m(r, \theta) + \kappa^2A_m(r, \theta)
+      ] = 0 \label{am-before-int}
+    \end{align}
+    となる．
+    \refe{am-before-int}に左から$\int_{0}^{2\pi}\dd{\phi}\e^{-\i m\phi}$をかける，すなわち，$\e^{\i m\phi}$に射影すると，
+    \begin{align}
+      \frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r}A_m(r, \theta)) + \frac{1}{r^2\sin\theta}\pdv{\theta}\qty(\sin\theta\pdv{\theta}A_m(r, \theta)) - \frac{m^2}{r^2\sin^2\theta}A_m(r, \theta) + \kappa^2A_m(r, \theta) = 0 \label{a-condition}
+    \end{align}
+    を得る．
+    Legendre陪多項式を定義するときに用いた$\mathcal{L}_m$において，$x = \cos\theta$とすると，
+    \begin{align}
+      \mathcal{L}_m &= \dv{x}\qty{(1 - \cos^2\theta)\dv{x}} - \frac{m^2}{1 - \cos^2\theta} \\ 
+      &= \dv{x}\qty{\sin^2\theta\dv{x}} - \frac{m^2}{\sin^2\theta} \\ 
+      &= \dv{\theta}{x}\dv{x}\qty{\sin^2\theta\dv{\theta}{x}\dv{x}} - \frac{m^2}{\sin^2\theta} \\ 
+      &= -\frac{1}{\sin\theta}\dv{x}\qty{\sin^2\theta\qty(-\frac{1}{\sin\theta})} - \frac{m^2}{\sin^2\theta} \\ 
+      &= \frac{1}{\sin\theta}\dv{x}\qty{\sin\theta\dv{\theta}} - \frac{m^2}{\sin^2\theta}
+    \end{align}
+    であるから，\refe{a-condition}は，
+    \begin{align}
+      \frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r}A_m(r, \theta)) + \frac{1}{r^2}\mathcal{L}_{\abs{m}}A_m(r, \theta) + \kappa^2 A_m(r, \theta) = 0 \label{a-condition-use-lm}
+    \end{align}
+    を得る．
+    \par
+    続いて，$A_m(r, \theta)$を直交基底であるLegendre陪多項式を用いて，
+    \begin{align}
+      A_m(r, \theta) = \sum_{n = \abs{m}}^{\infty}B_{nm}(r)P_{n}^{\abs{m}}(\cos\theta)
+    \end{align}
+    と展開する．
+    \refe{a-condition-use-lm}の両辺に$P_{n}^{\abs{m}}(\cos\theta)$との内積をとる．
+    \refe{pnm-norm}より，
+    \begin{align}
+      \inner{P_n^{m}(\cos\theta)}{P_n^{m}(\cos\theta)} = \delta_{n}^{n'}\frac{2}{2n + 1}\frac{(n + m)!}{(n - m)!}
+    \end{align}
+    であることと，\refe{assos-legendre-diff-eq}より，
+    \begin{align}
+      \mathcal{L}_mP_n^m(x) + n(n + 1)P_n^m(x) = 0
+    \end{align}
+    であることを用いれば，
+    \begin{align}
+      & \inner{P_n^{m}(\cos\theta)}{\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r}A_m(r, \theta)) + \frac{1}{r^2}\mathcal{L}_{\abs{m}}A_m(r, \theta) + \kappa^2 A_m(r, \theta)} = 0 \\ 
+      \Leftrightarrow & \frac{1}{r^2}\inner{P_n^{m}(\cos\theta)}{\pdv{r}\qty(r^2\pdv{r}A_m(r, \theta))} + \frac{1}{r^2}\inner{P_n^{m}(\cos\theta)}{\mathcal{L}_{\abs{m}}A_m(r, \theta)} + \inner{P_n^{m}(\cos\theta)}{\kappa^2 A_m(r, \theta)} = 0 \\ 
+      \Leftrightarrow & \frac{1}{r^2}\qty{\dv{r}r^2\qty{\dv{r}B_{nm}(r)}}\inner{P_n^{m}(\cos\theta)}{P_n^{m}(\cos\theta)} + \frac{1}{r^2}B_{nm}(r)\inner{P_n^{m}(\cos\theta)}{\mathcal{L}_{\abs{m}}P_n^{m}(\cos\theta)} \notag \\ 
+      &+ \kappa^2B_{nm}(r)\inner{P_n^{m}(\cos\theta)}{P_n^{m}(\cos\theta)} = 0 \\ 
+      \Leftrightarrow&  \qty(\frac{1}{r^2}\qty{\dv{r}r^2\qty{\dv{r}B_{nm}(r)}} - \frac{1}{r^2}n(n + 1)B_{nm}(r) + \kappa^2 B_{nm}(r))\inner{P_n^{m}(\cos\theta)}{P_n^{m}(\cos\theta)} = 0 \\ 
+      \Rightarrow& \frac{1}{r^2}\qty{\dv{r}r^2\qty{\dv{r}B_{nm}(r)}} - \frac{1}{r^2}n(n + 1)B_{nm}(r) + \kappa^2 B_{nm}(r) = 0\label{bnm-condition}
+    \end{align}
+    を得る．
+    \par
+    \refe{bnm-condition}において，$r = \frac{\rho}{\kappa}$と変数変換して，
+    \begin{align}
+      C_{nm}(\rho) \coloneq \sqrt{\rho}B_{nm}(r)
+    \end{align}
+    と定義して代入すれば，
+    \begin{align}
+      \qty{\dv[2]{\rho} + \frac{1}{\rho}\dv{\rho} + 1 - \frac{1}{\rho^2}\qty(n + \frac{1}{2})^2}C_{nm}(\rho) = 0\label{bessel-form-rho}
+    \end{align}\
+    を得る．
+    \refe{bessel-form-rho}と\refe{bessel-differential-eq-sub}である，
+    \begin{align}
+      \mathcal{L}_{\nu}J_{\nu}(z) &= - J_{\nu}(z)  \\ 
+      \Leftrightarrow \qty(\dv[2]{z} + \frac{1}{z}\dv{z} + 1 - \frac{\nu^2}{z^2}) &= 0 \label{bessel-differential-eq-sub-2}
+    \end{align}
+    を比べると，\refe{bessel-differential-eq-sub-2}において，
+    \begin{align}
+      z &\to x \\ 
+      \nu &= n + \frac{1}{2}
+    \end{align}
+    としたものであると分かる．
+    つまり，$C_{nm}(\rho)$は球Bessel関数$j_n(\rho)$と球Neumann関数$y_n(\rho)$の線型結合で書かれることが分かるので，
+    係数をそれぞれ$a_{nm}$，$b_{nm}$として，
+    \begin{align}
+      C_{nm}(\rho) = a_{nm}j_n(\rho) + b_{nm}y_n(\rho) 
+    \end{align}
+    と書く．
+    \par
+    さて，今Helmholtz方程式の解の基底展開を行っているのであった．
+    今までに定義した展開を全てまとめると，
+    \begin{align}
+      u(\bm{r}) &= \sum_{m = -\infty}^{\infty} A_m(r, \theta) \e^{\i m\phi} \\ 
+      A_m(r, \theta) &= \sum_{n = \abs{m}}^{\infty}B_{nm}(r)P_{n}^{\abs{m}}(\cos\theta) \\ 
+      \rho &= \kappa r \\ 
+      B_{nm}(r) &= \frac{1}{\sqrt{\rho}}C_{nm}(\rho) \\ 
+      C_{nm}(\rho) &= a_{nm}j_n(\rho) + b_{nm}y_n(\rho) 
+    \end{align}
+    となる．下から上に全て代入して整理すると，
+    \begin{align}
+      u(\bm{r}) = \frac{1}{\sqrt{\kappa r}} \sum_{m = -\infty}^{\infty}\sum_{n = \abs{m}}^{\infty}\qty[a_{nm}j_n(\kappa r) + b_{nm}y_n(\kappa r)] P_{n}^{\abs{m}}(\cos\theta)\e^{\i m\phi}
+    \end{align}
+    となる．
+\end{document}
