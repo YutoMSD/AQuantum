@@ -35,7 +35,11 @@
     [\hat{H}, \hat{S}_y] &= \i\hbar c(\alpha_z \hat{p}_x - \alpha_x \hat{p}_z)\\
     [\hat{H}, \hat{S}_x] &= \i\hbar c(\alpha_x \hat{p}_y - \alpha_y \hat{p}_x)
   \end{align}
-  であり，
+  でが得られる．これらは
+  \begin{align}
+    [\hat{H}, \hat{S}_i] = - [\hat{H}, \hat{L}_i]
+  \end{align}
+  であるため，
   \begin{align}
     [\hat{H}, \hat{L}_x + \hat{S}_x] = [\hat{H}, \hat{L}_y + \hat{S}_y] = [\hat{H}, \hat{L}_z + \hat{S}_z] = 0
   \end{align}
@@ -44,7 +48,11 @@
   \begin{align}
     [\hat{H}, \hat{\bm{L}} + \hat{\bm{S}}] = 0
   \end{align}
-  であり，\textbf{全角運動量}$\bm{J} = \bm{L} + \bm{S}$が保存される．ここで，$\bm{S} = \frac{\hbar}{2}\bm{\sigma}$は\textbf{スピン角運動量}である．
+  であり，\textbf{全角運動量}$\bm{J} = \bm{L} + \bm{S}$が保存されることがわかる．ここで，$\bm{S} = \frac{\hbar}{2}\bm{\sigma}$は\textbf{スピン角運動量}である．
+  まとめると，非相対論的量子論では軌道角運動量$\bm{L}$が保存量であった．しかし，相対論を取り入れたDirac方程式ではスピン角運動量$\bm{S}$も含めた全角運動量$\bm{J}$が保存量なのである\footnote{
+    これを実験的に確かめたのが\textbf{Einstein-de Haas効果}や\textbf{Barnett効果}である．前者は，強磁性体の磁化の向きがそろった時，つまりスピン角運動量が変化したとき，強磁性体全体が力学的回転をするというものであり，Einsteinが生涯で
+    行った唯一の実験と言われている．後者は，逆に，力学的回転により磁化の向きがそろうというものである．これらは\textbf{磁気回転効果}(gyromagnetic effect)と言われている．磁気回転効果は常磁性体，核スピン，液体金属流体，常磁性金属薄膜，強磁性金属薄膜，クォーク・グルオンプラズマでも観測されている．
+  }．
 
   以上の議論では，スピンの存在が自然に導入された．この議論に用いた要請は
   \begin{itembox}[l]{スピンの存在のために用いた要請}
