@@ -270,7 +270,37 @@ Dirac方程式を見ると，波動関数も4成分必要であることがわ�
     \psi_1\\\psi_2\\\psi_3\\\psi_4
   \end{pmatrix}
 \end{align}
-である．このような量を\textbf{Dirac spinor}という．
+である．このような量を\textbf{Dirac spinor}という．4成分であるが，4元ベクトルとは異なる数学的性質をもつ．
+
+Dirac方程式が確率の保存則を満たすことを確認する．確率密度を
+\begin{align}
+  \rho=\psi^{\dagger}\psi
+\end{align}
+と定義する．Dirac方程式
+\begin{align}
+  \i\hbar\frac{\partial}{\partial t} \psi = (-\i\hbar c\bm{\alpha}\cdot \nabla + \beta mc^2)\psi
+\end{align}
+より，
+\begin{align}
+  \frac{\partial}{\partial t}\psi &= -c \bm{\alpha} \cdot (\nabla\psi) -\i \frac{mc^2}\hbar \beta\psi\\
+  \frac{\partial}{\partial t}\psi^{\dagger} &= -(\nabla\psi^{\dagger})\cdot c\alpha + \i\frac{mc^2}{\hbar}\psi^{\dagger}\beta
+\end{align}
+が成り立っている．よって，確率密度の時間変化は
+\begin{align}
+  \frac{\partial}{\partial t}\rho &= \qty(\frac{\partial}{\partial t}\psi^{\dagger})\psi + \psi^{\dagger}\qty(\frac{\partial}{\partial t}\psi)\\
+  &= -c\qty(\nabla\psi^{\dagger})\cdot \bm{\alpha}\psi + \i\frac{mc^2}{\hbar}\psi^{\dagger}\beta\psi - c\psi^{\dagger}\bm{\alpha}\cdot(\nabla\psi) - \i\frac{\mc^2}{\hbar}\psi^{\dagger}\beta\psi\\
+  &= -c\qty[(\nabla\psi^{\dagger})\cdot \bm{\alpha}\psi + \psi^{\dagger}\bm{\alpha}\cdot(\nabla\psi)]\\
+  &= -c\nabla\cdot(\psi^{\dagger}\bm{\alpha}\psi)
+\end{align}
+となる．したがって，
+\begin{align}
+  \bm{j} = c\nabla\cdot(\psi^{\dagger}\bm{\alpha}\psi)
+\end{align}
+と定義すれば
+\begin{align}
+  \frac{\partial}{\partial t}\rho = -\nabla\cdot \bm{j}
+\end{align}
+が成立する．
 
 例として，Dirac方程式の平面波解
 \begin{align}
