@@ -3,38 +3,73 @@
 \begin{document}
   量子力学における散乱では，散乱の前後で位相が変化する．これを\textbf{位相シフト}(Phase shift)とよぶ．以下の1次元の例で位相シフトを確認する．
   ポテンシャル
-  \begin{align}
-    V(x) = 
-    \begin{dcases}
-      0\ &(x < 0) \\
-      V_0\ &(x \geq 0)
+  \begin{myex}{1次元の散乱問題}{}
+    ポテンシャル
+    \begin{align}
+      V(x) = 
+      \begin{dcases}
+        0\ &(x < 0) \\
+        V_0\ &(x \geq 0)
+      \end{dcases}
+    \end{align}
+    に左から入射する粒子を考える．入射粒子のエネルギーは$E \leq V_0$とする．Schrödinger方程式は，
+    \begin{align}
+      \begin{dcases}
+      &-\frac{\hbar^2}{2m}\frac{\r{d}^2}{\dd{x}^2} \psi(x) = E\psi(x)\ (x \leq 0)\\
+      &-\frac{\hbar^2}{2m}\frac{\r{d}^2}{\dd{x}^2} \psi(x) + V_0 \psi(x) = E\psi(x)\ (x > 0)
     \end{dcases}
-  \end{align}
-  に左から入射する粒子を考える．入射粒子のエネルギーは$E<V_0$とする．Schrödinger方程式を解くことにより波動関数は
-  \begin{align}
-    \psi(x) = 
-    \begin{dcases}
-      \label{1Dscattering}
-      \e^{\i kx} + \frac{k -\i\alpha}{k + \i\alpha} \e^{-\i kx}\ &(x < 0) \\
-      \frac{2k}{k + \i\alpha}\e^{-\alpha x}\ &(x \geq 0)
-    \end{dcases}
-  \end{align}
-  となる．ただし，$k \equiv \sqrt{\frac{2mE}{\hbar^2}}，\alpha \equiv \sqrt{\frac{2m(V-E)}{\hbar^2}}$とおいた．式(\ref{1Dscattering})において
-  $\e^{\i kx}$は入射波を，$\frac{k -\i\alpha}{k + \i\alpha} \e^{-\i kx}$は反射波を表している．反射波は
-  \begin{align}
-    k + \i\alpha = \sqrt{k^2 + \alpha^2} \e^{\i\delta_k}
-  \end{align}
-  とすると
-  \begin{align}
-    \e^{-2 \i \delta_k}\e^{-\i kx}
-  \end{align}
-  と表される．よって，波動関数は
-  \begin{align}
-    \psi(x) = \e^{\i kx} + \e^{-2 \i \delta_k}\e^{-\i kx}
-  \end{align}
-  となる．この$\delta_k$は位相シフトと呼ばれ，量子力学的散乱を特徴づけるパラメータである．
+    \end{align}
+    である．これを解くと，波動関数として
+    \begin{align}
+      \begin{dcases}
+        \psi(x) = A \e^{\i kx} + B\e^{-\i kx}\ (x\leq0)\\
+        \psi(x) = C \e^{\kappa x} + D \e^{-\kappa x}\ (x >0)
+      \end{dcases}
+    \end{align}
+    を得る．ここで，$k \equiv \sqrt{\frac{2mE}{\hbar^2}}，\alpha \equiv \sqrt{\frac{2m(V-E)}{\hbar^2}}$とした．次に境界条件を考え，係数を求める．簡単のために$A=1$とする．まず，$x\to\infty$で粒子の存在確率は0だから，
+    \begin{align}
+      C = 0
+    \end{align}
+    である．$x=0$での波動関数及びその微係数の連続性より，
+    \begin{align}
+      \begin{dcases}
+        1 + B = D\\
+        \i k -\i kB = -\kappa D
+      \end{dcases}
+    \end{align}
+    である．これを解くと，
+    \begin{align}
+      \begin{dcases}
+        B = \frac{k - \i \kappa}{k + \i\kappa}\\
+        D = \frac{2k}{k + \i\kappa}
+      \end{dcases}
+    \end{align}
+    が得られる．したがって，波動関数は
+    \begin{align}
+      \psi(x) = 
+      \begin{dcases}
+        \label{1Dscattering}
+        \e^{\i kx} + \frac{k -\i\alpha}{k + \i\alpha} \e^{-\i kx}\ &(x < 0) \\
+        \frac{2k}{k + \i\alpha}\e^{-\alpha x}\ &(x \geq 0)
+      \end{dcases}
+    \end{align}
+    である．式(\ref{1Dscattering})において
+    $\e^{\i kx}$は入射波を，$\frac{k -\i\alpha}{k + \i\alpha} \e^{-\i kx}$は反射波を表している．反射波は
+    \begin{align}
+      k + \i\alpha = \sqrt{k^2 + \alpha^2} \e^{\i\delta_k}
+    \end{align}
+    とすると
+    \begin{align}
+      \e^{-2 \i \delta_k}\e^{-\i kx}
+    \end{align}
+    と表される．よって，$x \leq 0$での波動関数は
+    \begin{align}
+      \psi(x) = \e^{\i kx} + \e^{-2 \i \delta_k}\e^{-\i kx}
+    \end{align}
+    となる．反射波の位相が変化していることがわかる．この$\delta_k$は位相シフトと呼ばれ，量子力学的散乱を特徴づけるパラメータである．
+  \end{myex}
 
-  これを3次元に拡張する．式(\ref{PartialWave})において$r\to\infty$とすると，$j_l(kr)\to \frac{\e^{\i(kr - \frac{l\pi}{2})} - \e^{-\i(kr - \frac{l\pi}{2})}}{2\i kr}$であるため，
+  上の例を3次元に拡張する．式(\ref{PartialWave})において$r\to\infty$とすると，$j_l(kr)\to \frac{\e^{\i(kr - \frac{l\pi}{2})} - \e^{-\i(kr - \frac{l\pi}{2})}}{2\i kr}$であるため，
   \begin{align}
     \psi(\bm{r}) = \sum_{l=0}^{\infty} \frac{2l+1}{2\i kr}\qty[\i^l \qty(\e^{\i(kr - \frac{l\pi}{2})} - \e^{-\i(kr - \frac{l\pi}{2})}) + (2\i k) a_l \e^{\i kr}]P_l(\cos\theta)
   \end{align}
