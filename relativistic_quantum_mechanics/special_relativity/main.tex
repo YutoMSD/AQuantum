@@ -8,113 +8,114 @@
   \begin{itembox}[l]{光速度不変の原理}
     あらゆる慣性形で真空中の光の速さは同一である．
   \end{itembox}
-  この原理の下で成り立つ座標変換の法則(Lorentz変換)を導く．
-  まず，慣性系$X$系の原点$O$と$X'$系の原点$O'$が$t=t'=0$で一致している．$t=t'=0$で光が原点($O=O'$)を通過したとする．
-  $X$系の空間座標を$(x,y,z)$，$X'$系の空間座標を$(x',y',z')$とすると，光速度不変の原理より，
-  \begin{align}
-    \frac{\sqrt{x^2 + y^2 + z^2}}{t} = \frac{\sqrt{x'^2 + y'^2 + z'^2}}{t'} = c
-  \end{align}
-  が成り立つ．上式から\textbf{世界長さ}(spacetime interval)
-  \begin{align}
-    s^2 = x^2 + y^2 + z^2 - (ct)^2
-  \end{align}
-  が不変量であることが導かれる．
-  \par
-  次に，世界長さ不変性から，慣性系間の座標変換の法則である\textbf{Lorentz変換}(Lorentz Transformation)を導出する．
-  慣性系$X'$が$x$軸正の方向に速さ$v$で移動しているとする．このとき$y=y'，z=z'$である．わかりやすいように$T=\i t$とおく．光速不変より，
-  \begin{align}
-    x^2 - (ct)^2 &= x'^2 - (ct')^2\\
-    x^2 + (cT)^2 &= x'^2 + (cT)^2
-  \end{align}
-  が成り立つ．これが回転座標変換と類似していることから，
-  \begin{align}
-    \begin{pmatrix}
-      cT' \\ x'
-    \end{pmatrix}
-    =
-    \begin{pmatrix}
-      \cos\theta & -\sin\theta\\
-      \sin\theta & \cos\theta
-    \end{pmatrix}
-    \begin{pmatrix}
-      cT\\x
-    \end{pmatrix}
-  \end{align}
-  と置く．表示を$t$に戻すと
-  \begin{align}
-    \begin{pmatrix}
-      ct' \\ x'
-    \end{pmatrix}
-    =
-    \begin{pmatrix}
-      \cos\theta & \i\sin\theta\\
-      \i\sin\theta & \cos\theta
-    \end{pmatrix}
-    \begin{pmatrix}
-      ct\\x
-    \end{pmatrix}
-  \end{align}
-  である．さらに，$\theta = \i\phi$とすると
-  \begin{align}
-    \begin{pmatrix}
-      ct' \\ x'
-    \end{pmatrix}
-    =
-    \begin{pmatrix}
-      \cosh\phi & -\sinh\phi\\
-      -\sinh\phi & \cosh\phi
-    \end{pmatrix}
-    \begin{pmatrix}
-      ct\\x
-    \end{pmatrix}
-  \end{align}
-  となる．よって，
-  \begin{align}
-    x' = (-\sinh\phi)ct + (\cosh\phi)x
-  \end{align}
-  を得る．$X$系において時刻$t$が経過したとする．$X$系から見る$X'$系の原点の位置は$x=vt$である．一方，$X'$系から見ると$x'=0$である．
-  よって上式から
-  \begin{align}
-    0 = (-\sinh\phi)ct + (\cosh\phi)vt
-  \end{align}
-  が成り立つ．よって，これを変形すると
-  \begin{align}
-    \frac{v}{c} = \frac{\sinh\phi}{\cosh\phi} = \tanh\phi
-  \end{align}
-  である．以上より，
-  \begin{align}
-    \begin{dcases}
-      \sinh\phi = \frac{v/c}{\sqrt{1- (v/c)^2}}\\
-      \cosh\phi = \frac{1}{\sqrt{1- (v/c)^2}}
-    \end{dcases}
-  \end{align}
-  であることがわかる．したがって，
-  \begin{itembox}[l]{Lorentz変換}
+  \subsection{Lorentz変換}
+    特殊相対性原理と光速度不変の原理の下で成り立つ座標変換の法則(Lorentz変換)を導く．
+    まず，慣性系$X$系の原点$O$と$X'$系の原点$O'$が$t = t' = 0$で一致している．$t = t' = 0$で光が原点($O = O'$)を通過したとする．
+    $X$系の空間座標を$(x, y, z)$，$X'$系の空間座標を$(x', y', z')$とすると，光速度不変の原理より，
     \begin{align}
-      \label{LorentzTransformation}
+      \frac{\sqrt{x^2 + y^2 + z^2}}{t} = \frac{\sqrt{x'^2 + y'^2 + z'^2}}{t'} = c
+    \end{align}
+    が成り立つ．上式から\textbf{世界長さ}(spacetime interval)
+    \begin{align}
+      s^2 \coloneqq x^2 + y^2 + z^2 - (ct)^2
+    \end{align}
+    が不変量であることが導かれる．
+    \par
+    次に，世界長さ不変性から，慣性系間の座標変換の法則である\textbf{Lorentz変換}(Lorentz Transformation)を導く．
+    慣性系$X'$が$x$軸正の方向に速さ$v$で移動しているとする．このとき$y=y'，z=z'$である．わかりやすいように$T=\i t$とおく．光速不変より，
+    \begin{align}
+      x^2 - (ct)^2 &= x'^2 - (ct')^2\\
+      x^2 + (cT)^2 &= x'^2 + (cT)^2
+    \end{align}
+    が成り立つ．これが回転座標変換と類似していることから，
+    \begin{align}
+      \begin{pmatrix}
+        cT' \\ x'
+      \end{pmatrix}
+      =
+      \begin{pmatrix}
+        \cos\theta & -\sin\theta\\
+        \sin\theta & \cos\theta
+      \end{pmatrix}
+      \begin{pmatrix}
+        cT\\x
+      \end{pmatrix}
+    \end{align}
+    と置く．表示を$t$に戻すと
+    \begin{align}
       \begin{pmatrix}
         ct' \\ x'
       \end{pmatrix}
       =
-      \frac{1}{\sqrt{1 - (v/c)^2}}
       \begin{pmatrix}
-        1 & -v/c\\
-        -v/c & 1
+        \cos\theta & \i\sin\theta\\
+        \i\sin\theta & \cos\theta
       \end{pmatrix}
       \begin{pmatrix}
         ct\\x
       \end{pmatrix}
     \end{align}
-  \end{itembox}
-  を得る．Lorentz変換
-  \begin{align}
-    x' = \frac{x-vt}{\sqrt{1-(v/c)^2}}
-  \end{align}
-  において$v \ll c$とすると
-  \begin{align}
-    x' = x - vt
-  \end{align}
-  となる．これはGalilei変換と一致している．
+    である．さらに，$\theta = \i\phi$とすると
+    \begin{align}
+      \begin{pmatrix}
+        ct' \\ x'
+      \end{pmatrix}
+      =
+      \begin{pmatrix}
+        \cosh\phi & -\sinh\phi\\
+        -\sinh\phi & \cosh\phi
+      \end{pmatrix}
+      \begin{pmatrix}
+        ct\\x
+      \end{pmatrix}
+    \end{align}
+    となる．よって，
+    \begin{align}
+      x' = (-\sinh\phi)ct + (\cosh\phi)x
+    \end{align}
+    を得る．$X$系において時刻$t$が経過したとする．$X$系から見る$X'$系の原点の位置は$x=vt$である．一方，$X'$系から見ると$x'=0$である．
+    よって上式から
+    \begin{align}
+      0 = (-\sinh\phi)ct + (\cosh\phi)vt
+    \end{align}
+    が成り立つ．よって，これを変形すると
+    \begin{align}
+      \frac{v}{c} = \frac{\sinh\phi}{\cosh\phi} = \tanh\phi
+    \end{align}
+    である．以上より，
+    \begin{align}
+      \begin{dcases}
+        \sinh\phi = \frac{v/c}{\sqrt{1- (v/c)^2}}\\
+        \cosh\phi = \frac{1}{\sqrt{1- (v/c)^2}}
+      \end{dcases}
+    \end{align}
+    であることがわかる．したがって，
+    \begin{itembox}[l]{Lorentz変換}
+      \begin{align}
+        \label{LorentzTransformation}
+        \begin{pmatrix}
+          ct' \\ x'
+        \end{pmatrix}
+        =
+        \frac{1}{\sqrt{1 - (v/c)^2}}
+        \begin{pmatrix}
+          1 & -v/c\\
+          -v/c & 1
+        \end{pmatrix}
+        \begin{pmatrix}
+          ct\\x
+        \end{pmatrix}
+      \end{align}
+    \end{itembox}
+    を得る．Lorentz変換
+    \begin{align}
+      x' = \frac{x-vt}{\sqrt{1-(v/c)^2}}
+    \end{align}
+    において$v \ll c$とすると
+    \begin{align}
+      x' = x - vt
+    \end{align}
+    となる．これはGalilei変換と一致している．
 
   次に，相対論的効果を取り込んだ速度の合成則について示す．状況は，$X$系は静止し，$X'$系が速さ$v$で$x$軸方向に移動しているとする．さらに$X'$系では粒子が速さ$u'$で$x'$軸方向に運動している．
   $X$系から見た粒子の速度$V$を求める．式(\ref{LorentzTransformation})において$v\to -v$とすると
