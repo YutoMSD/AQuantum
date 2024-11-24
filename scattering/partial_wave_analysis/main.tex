@@ -36,7 +36,9 @@
     である．つまり，角運動量が小さい粒子のみ散乱することがわかる．
     \par
     \refe{ConditionofSC}を半古典的な散乱条件へ書き直すことを考える．
-    量子力学では，角運動量の大きさ$L$は，$l = 0, 1, 2, \cdots$の値を取る方位量子数$l$を用いて$L = \hbar \sqrt{l(l + 1)}$と書けるので，
+    量子力学では，角運動量の大きさ$L$は，$l = 0, 1, 2, \cdots$の値を取る方位量子数$l$を用いて$L = \hbar \sqrt{l(l + 1)}$と書ける．
+    また，\refe{assos-legendre-diff-eq}と，\refe{a-condition-use-lm}の第2項以降を見ると，球面分布函数$Y_{lm}(\theta, \phi)$がラプラシアンの角度部分の固有関数に
+    なっていて，ラプラシアンの角度部分は，角運動量演算子を$\hbar$で割ったものであるから角運動量の固有値が$\hbar\sqrt{l(l + 1)}$であることが分かる．
     衝突の条件は，
     \begin{align}
       L = \hbar \sqrt{l(l + 1)} < pa = \hbar ka\label{scattering-condition-of-l}
@@ -44,133 +46,70 @@
     と書ける．\refe{scattering-condition-of-l}を見れば，散乱の影響を受けるのは$l$が小さいときのみであることがわかる．
     よって波動関数を，
     \begin{align}
-      \psi = \phi^{(l = 0)} + \phi^{(l = 1)} + \cdots
+      \psi = \psi^{(l = 0)} + \psi^{(l = 1)} + \cdots
     \end{align}
     のように異なる$l$に属する固有関数で展開し，$l$が小さい状態についてだけ散乱の影響を考える．これを\textbf{部分波展開}という．
-    以下では波動関数をLegendre多項式で基底展開する手順を説明する．
-    Helmholtz方程式，
+  \subsection{部分波展開の計算}
+    波動関数は\refe{u-expand-form2}より，
     \begin{align}
-      [\laplacian + \kappa^2]u(\bm{r}) = 0
+      \psi(r, \theta, \phi) = \sum_{m = -\infty}^{\infty}\sum_{l = \abs{m}}^{\infty}\qty[a_{lm}j_l(\kappa r) + b_{lm}y_l(\kappa r)](-1)^m\sqrt{\frac{2l + 1}{4\pi}\frac{(l - m)!}{(l + m)!}}P_l^m(x)\e^{\i m\phi}
     \end{align}
-    を球座標系で表すと，
+    と書けるのであった．
+    ただし，角運動量演算子の固有関数とラベルを合わせるために$n \to l$とした．
+    散乱において，$\phi$依存性が無いので，$m = 0$のみ和を考えればよく，
     \begin{align}
-      \qty[\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r}) + \frac{1}{r^2 \sin \theta} \pdv{\theta}\qty(\sin\theta\pdv{\theta}) + \frac{1}{r^2 \sin^2\theta}\pdv[2]{\phi} + \kappa^2]u(r, \theta, \phi) = 0 \label{helmholtz-eq-in-sphere}
+      \psi(r, \theta) = \sum_{l = 0}^{\infty}\qty[a_lj_l(\kappa r) + b_ly_l(\kappa r)]\sqrt{\frac{2l + 1}{4\pi}}P_l(x)
+    \end{align} 
+    となる．
+    $a_l \coloneqq a_{l0}$，$b_l \coloneqq b_{l0}$である．また，$P_l^0 = P_l$であることに注意する．
+    球Bessel関数と球Neumann関数は$x \to 0$で，
+    \begin{align}
+      j_l(r) &\sim \frac{r^l}{(2l + 1)!}\qty(1 - \frac{r^2}{2(2l + 3)}\cdots) \\
+      n_l(r) &\sim -\frac{(2l - 1)!!}{r^{l + 1}}
+    \end{align}
+    となることが知られている．
+    $r = 0$で$\psi(r, \theta)$が発散しないために，$\forall l\ b_l = 0$とする．
+    まず，平面波を部分波展開すると，Rayleighの公式より，
+    \begin{align}
+      \e^{\i kr\cos\theta} = \sum_{l = 0}^{\infty} (2l + 1)\i^l j_l(kr)P_l(\cos\theta)
+    \end{align}
+    と書ける．
+    \par
+    球面波は未定係数$a_l$をつけて，
+    \begin{align}
+      \sum_{l = 0}^{\infty} (2l + 1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
+    \end{align}
+    と展開される．
+    したがって，部分波展開した散乱の波動関数は，
+    \begin{align}
+      \psi(\bm{r}) = \sum_{l = 0}^{\infty} (2l + 1)\i^l j_l(kr)P_l(\cos\theta) + \sum_{l = 0}^{\infty} (2l + 1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
     \end{align}
     である．
-  この方程式の解は動径波動関数$R(r)$と球面調和関数$Y_{l, m}(\theta, \phi)$を用いて，
-  \begin{align} 
-    u(r, \theta, \phi) = \sum_{l = 0}^{\infty}\sum_{m = -l}^{l}C_{lm}R(r)Y_{l, m}(\theta, \phi)
-  \end{align}
-  と表される．ここで，球面調和関数とLegendre陪関数，Legendre多項式は以下の関係にある．
-  \begin{align}
-    Y_{l,m}(\theta,\phi) &= (-1)^m \qty[\frac{(2l+1)}{4\pi}\frac{(l-m)!}{(l+m)!}]^{1/2}P_l^m(\cos\theta)\exp(\i m\phi) \\
-    P_l^m(x) &= (1-x^2)^{m/2} \frac{\r{d}^m P_l(x)}{\dd{x}^m}
-  \end{align}
-  いま，角度$\phi$によらないとすると，$m=0$とすることで
-  \begin{align}
-    \psi(r,\theta) = \sum_{l=0}^{\infty} (2l+1)R_l(r)P_l(\cos\theta)
-  \end{align}
-  を得る．$(2l+1)$は縮退の数を表す．これを式(\ref{helmholtz-eq-in-sphere})に代入する．
-  \begin{align}
-    \qty[\frac{1}{r}\frac{\partial^2}{\partial r^2}r + \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\qty(\sin\theta\frac{\partial}{\partial \theta})
-    + \kappa^2] \sum_{l=0}^{\infty} (2l+1)R_l(r)P_l(\cos\theta)= 0
-  \end{align}
-  整理すると
-  \begin{align}
-    \label{Helmholtz separated}
-    \frac{P_l(\cos\theta)}{r}\qty[2\frac{\partial R_l(r)}{\partial r} + r \frac{\partial^2 R_l(r)}{\partial r^2}]
-    + \frac{R_l(r)}{r^2 \sin \theta} \frac{\partial}{\partial \theta}\qty(\sin\theta\frac{\partial}{\partial\theta}P_l(\cos\theta)) + \kappa^2 R_l(r)P_l(\cos\theta) = 0
-  \end{align}
-  である．ここで，Legendre多項式は
-  \begin{align}
-    \frac{\r{d}}{\dd{x}}\qty[(1-x^2)\frac{\r{d}P_l(x)}{\dd{x}}] + l(l+1)P_l(x) = 0
-  \end{align}
-  を満たす．これを変数変換すると
-  \begin{align}
-    \frac{1}{\sin\theta}\frac{\r{d}}{\dd{\theta}}\qty[\sin\theta\frac{\r{d}P_l(\cos\theta)}{\dd{\theta}}] + l(l+1)P_l(\cos\theta) = 0
-  \end{align}
-  となる．よって，式(\ref{Helmholtz separated})は
-  \begin{align}
-    \frac{P_l(\cos\theta)}{r}\qty[2\frac{\partial R_l(r)}{\partial r} + r \frac{\partial^2 R_l(r)}{\partial r^2}]
-    - l(l+1)\frac{R_l(r)}{r^2}P_l(\cos\theta)  + \kappa^2 R_l(r)P_l(\cos\theta) = 0
-  \end{align}
-  と変形される．したがって，$R_l(r)$が満たすべき式は
-  \begin{align}
-    \qty[\frac{\r{d}^2}{\dd{r}^2} + \frac{2}{r} \dv{}{r} + \kappa^2 - \frac{l(l+1)}{r^2}]R_l(r) = 0
-  \end{align}
-  である．この微分方程式の解$R_l(r)$は球面Bessel関数$j_l(\kappa r)$と球面Neumann関数$n_l(\kappa r)$の和で与えられる．よって，波動関数は
-  \begin{align}
-    \psi(r,\theta) = \sum_{l=0}^{\infty} (2l+1)\qty[A_l j_l(\kappa r) + B_l n_l(\kappa r)] P_l(\cos\theta)
-  \end{align} 
-  となる．また，球面Bessel関数と球面Neumann関数は以下の性質を持つ．
-  \begin{align}
-    x \to 0 \\
-    j_l(x) &\to \frac{x^l}{(2l+1)!}\qty(1 - \frac{x^2}{2(2l+3)}\cdots) \\
-    n_l(x) &\to -\frac{(2l -1)!!}{x^{l+1}}
-  \end{align}
-  平面波$\e^{\i  z} = \e^{\i kr\cos\theta}$は明らかにHelmholtz方程式を満たす．さらに，$r=0$で有限の値をもつため，
-  \begin{align}
-    B_l =0
-  \end{align} 
-  であることがわかる．以上の計算から，
-  \begin{align}
-    \e^{\i \kappa r\cos\theta} = \sum_{l=0}^{\infty} (2l+1)A_l j_l(\kappa r) P_l(\cos\theta)
-  \end{align}
-  を得る．左辺を展開すると，
-  \begin{align}
-    \sum_{l=0}^{\infty}\frac{(\i \kappa r \cos\theta)^l}{l!}
-  \end{align}
-  右辺を展開すると，
-  \begin{align}
-    \sum_{l=0}^{\infty} (2l+1)A_l\frac{(\kappa l)^l}{(2l+1)!!}P_l(\cos\theta)
-  \end{align}
-  である．また，$P_l(\cos\theta)$の$(\cos\theta)^l$の項の係数は
-  \begin{align}
-    \frac{1}{2^l l!}\frac{(2l)!}{l!}
-  \end{align}
-  である．よって，左辺と右辺を比較することで
-  \begin{align}
-    \frac{(\i \kappa r \cos\theta)^l}{l!} = (2l+1)A_l \frac{(2l)!}{2^l (l!)^2}\frac{(\kappa r \cos\theta)^l}{(2l+1)!!} \\
-    A_l = \i^l
-  \end{align}
-  を得る．したがって，\textbf{Rayleighの公式}
-  \begin{align}
-    \e^{\i kz} = \e^{\i kr\cos\theta} = \sum_{l=0}^{\infty} (2l+1)\i^l j_l(kr)P_l(\cos\theta)
-  \end{align}
-  が成り立つ．以上で，平面波のLegendre多項式による表現が得られた．同様に，散乱振幅を未定係数$a_l$を用いて
-  \begin{align}
-    f(\theta) = \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta)
-  \end{align}
-  と展開する．これにより球面波は
-  \begin{align}
-    \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
-  \end{align}
-  と展開される．Legendre多項式は完全性と直交性をもつためこの展開は妥当である．
-  したがって，部分波展開した散乱の波動関数は
-  \begin{align}
-    \psi(\bm{r}) = \sum_{l = 0}^{\infty} (2l + 1)\i^l j_l(kr)P_l(\cos\theta) + \sum_{l = 0}^{\infty} (2l + 1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
-  \end{align}
-  である．
-  \begin{itembox}[l]{部分波展開した散乱の波動関数}
-  \begin{align}
-    \psi(\bm{r}) = \sum_{l = 0}^{\infty} (2l + 1)\i^l j_l(kr)P_l(\cos\theta) + \sum_{l = 0}^{\infty} (2l + 1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}\label{PartialWave}
-  \end{align}
-  \end{itembox}
+    \begin{itembox}[l]{部分波展開した散乱の波動関数}
+      \begin{align}
+        \psi(\bm{r}) = \sum_{l = 0}^{\infty} (2l + 1)\i^l j_l(kr)P_l(\cos\theta) + \sum_{l = 0}^{\infty} (2l + 1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}\label{PartialWave}
+      \end{align}
+    \end{itembox}
+    \begin{itembox}[l]{部分波展開した散乱の散乱振幅}
+      \begin{align}
+        f(\theta) = \sum_{l = 0}^{\infty} (2l + 1)a_l P_l(\cos\theta) \label{PartialWave-amp}
+      \end{align}
+    \end{itembox}
   \subsection{散乱断面積と全断面積}
     部分波展開した波動関数より計算した散乱断面積は，
     \begin{align}
       \sigma(\theta) &= \abs{f(\theta)}^2 \\
       &= \sum_{l} \sum_{l'} (2l+1)(2l'+1) a_l^{*}a_{l'} P_l(\cos\theta) P_{l'}(\cos\theta)
     \end{align}
-    である．全断面積は
+    である．全断面積は，
     \begin{align}
       \sigma^{\r{tot}} &= 2\pi \int \sigma(\theta) \sin\theta \dd{\theta} \\
-      &= 2\pi \sum_{l=0}^{\infty} (2l+1)^2\abs{a_l}^2\qty(\frac{2}{2l+1}) \\
-      &= 4\pi \sum_{l=0}^{\infty} (2l+1) \abs{a_l}^2
+      &= 2\pi \sum_{l = 0}^{\infty} (2l + 1)^2\abs{a_l}^2\qty(\frac{2}{2l + 1}) \\
+      &= 4\pi \sum_{l = 0}^{\infty} (2l + 1) \abs{a_l}^2
     \end{align}
-    である．ここで，Legendre多項式の直交性
+    である．ここで，Legendre多項式の直交性，
     \begin{align}
-      \int_{0}^{\pi} P_l(\cos\theta)P_{l'}(\cos\theta) \sin\theta \dd{\theta} = \frac{2}{2l+1}\delta_{l,l'}
+      \int_{0}^{\pi} P_l(\cos\theta)P_{l'}(\cos\theta) \sin\theta \dd{\theta} = \frac{2}{2l+1}\delta_{l, l'}
     \end{align}
     を用いた．
     以上の議論から，部分波展開を用いた散乱問題は未定係数$a_l$を求めることに帰着する．

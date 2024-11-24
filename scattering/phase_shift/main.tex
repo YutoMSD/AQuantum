@@ -1,111 +1,85 @@
 \documentclass{report}
 \input{../../head.tex}
 \begin{document}
-  量子力学における散乱では，散乱の前後で位相が変化する．これを\textbf{位相シフト}(Phase shift)とよぶ．以下の1次元の例で位相シフトを確認する．
-  ポテンシャル
-  \begin{myex}{1次元の散乱問題}{}
-    ポテンシャル
-    \begin{align}
-      V(x) = 
-      \begin{dcases}
-        0\ &(x < 0) \\
-        V_0\ &(x \geq 0)
-      \end{dcases}
-    \end{align}
-    に左から入射する粒子を考える．入射粒子のエネルギーは$E \leq V_0$とする．Schrödinger方程式は，
-    \begin{align}
-      \begin{dcases}
-      &-\frac{\hbar^2}{2m}\frac{\r{d}^2}{\dd{x}^2} \psi(x) = E\psi(x)\ (x \leq 0)\\
-      &-\frac{\hbar^2}{2m}\frac{\r{d}^2}{\dd{x}^2} \psi(x) + V_0 \psi(x) = E\psi(x)\ (x > 0)
+  量子力学における散乱では，散乱の前後で位相が変化する．これを\textbf{位相シフト}(Phase shift)とよぶ．
+  以下の1次元の例で位相シフトを確認する．
+  ポテンシャル$V(x)$の壁が，
+  \begin{align}
+    V(x) = 
+    \begin{dcases}
+      0\ &(x < 0) \\
+      V_0\ &(x \geq 0)
     \end{dcases}
-    \end{align}
-    である．これを解くと，波動関数として
-    \begin{align}
-      \begin{dcases}
-        \psi(x) = A \e^{\i kx} + B\e^{-\i kx}\ (x\leq0)\\
-        \psi(x) = C \e^{\kappa x} + D \e^{-\kappa x}\ (x >0)
-      \end{dcases}
-    \end{align}
-    を得る．ここで，$k \equiv \sqrt{\frac{2mE}{\hbar^2}}，\alpha \equiv \sqrt{\frac{2m(V-E)}{\hbar^2}}$とした．次に境界条件を考え，係数を求める．簡単のために$A=1$とする．まず，$x\to\infty$で粒子の存在確率は0だから，
-    \begin{align}
-      C = 0
-    \end{align}
-    である．$x=0$での波動関数及びその微係数の連続性より，
-    \begin{align}
-      \begin{dcases}
-        1 + B = D\\
-        \i k -\i kB = -\kappa D
-      \end{dcases}
-    \end{align}
-    である．これを解くと，
-    \begin{align}
-      \begin{dcases}
-        B = \frac{k - \i \kappa}{k + \i\kappa}\\
-        D = \frac{2k}{k + \i\kappa}
-      \end{dcases}
-    \end{align}
-    が得られる．したがって，波動関数は
-    \begin{align}
-      \psi(x) = 
-      \begin{dcases}
-        \label{1Dscattering}
-        \e^{\i kx} + \frac{k -\i\alpha}{k + \i\alpha} \e^{-\i kx}\ &(x < 0) \\
-        \frac{2k}{k + \i\alpha}\e^{-\alpha x}\ &(x \geq 0)
-      \end{dcases}
-    \end{align}
-    である．式(\ref{1Dscattering})において
-    $\e^{\i kx}$は入射波を，$\frac{k -\i\alpha}{k + \i\alpha} \e^{-\i kx}$は反射波を表している．反射波は
-    \begin{align}
-      k + \i\alpha = \sqrt{k^2 + \alpha^2} \e^{\i\delta_k}
-    \end{align}
-    とすると
-    \begin{align}
-      \e^{-2 \i \delta_k}\e^{-\i kx}
-    \end{align}
-    と表される．よって，$x \leq 0$での波動関数は
-    \begin{align}
-      \psi(x) = \e^{\i kx} + \e^{-2 \i \delta_k}\e^{-\i kx}
-    \end{align}
-    となる．反射波の位相が変化していることがわかる．この$\delta_k$は位相シフトと呼ばれ，量子力学的散乱を特徴づけるパラメータである．
-  \end{myex}
-
-  上の例を3次元に拡張する．式(\ref{PartialWave})において$r\to\infty$とすると，$j_l(kr)\to \frac{\e^{\i(kr - \frac{l\pi}{2})} - \e^{-\i(kr - \frac{l\pi}{2})}}{2\i kr}$であるため，
-  \begin{align}
-    \psi(\bm{r}) = \sum_{l=0}^{\infty} \frac{2l+1}{2\i kr}\qty[\i^l \qty(\e^{\i(kr - \frac{l\pi}{2})} - \e^{-\i(kr - \frac{l\pi}{2})}) + (2\i k) a_l \e^{\i kr}]P_l(\cos\theta)
   \end{align}
-  を得る．さらに
+  のように書かれて，その壁に左から入射する粒子を考える．
+  入射粒子のエネルギーは$E<V_0$とする．Schrödinger方程式を解くことにより波動関数は，
   \begin{align}
-    \i^l \qty(\e^{\i(kr - \frac{l\pi}{2})} - \e^{-\i(kr - \frac{l\pi}{2})}) &= \i^l \e^{-\i\frac{l\pi}{2}}\qty(\e^{\i kr} - \e^{-\i kr} e^{\i l\pi}) \\
+    \psi(x) = 
+    \begin{dcases}
+      \e^{\i kx} + \frac{k -\i\alpha}{k + \i\alpha} \e^{-\i kx} & x < 0 \label{1Dscattering} \\
+      \frac{2k}{k + \i\alpha}\e^{-\alpha x} & x \geq 0
+    \end{dcases}
+  \end{align}
+  となる．ただし，$k \coloneqq \frac{\sqrt{2mE}}{\hbar}$，$\alpha \coloneqq \frac{\sqrt{2m(V - E)}}{\hbar}$とおいた．
+  \refe{1Dscattering}の第1式において，第1項は入射波を，第2項は反射波を表している．
+  反射波は，$\delta_k \coloneqq \arg\qty(k + \i\alpha)$とすると，
+  波動関数は，
+  \begin{align}
+    \psi(x) = \e^{\i kx} + \e^{-2 \i \delta_k}\e^{-\i kx}
+  \end{align}
+  となる．この$\delta_k$は位相シフトと呼ばれ，量子力学的散乱を特徴づけるパラメータである．
+  \par
+  位相シフトの現象を3次元に拡張する．
+  \refe{PartialWave}において$r\to\infty$とすると，
+  \begin{align}
+    j_l(kr) \to \frac{\exp\qty{\i\qty(kr - \frac{l\pi}{2})} - \exp\qty{-\i\qty(kr - \frac{l\pi}{2})}}{2\i kr}
+  \end{align}
+  であるため，
+  \begin{align}
+    \psi(\bm{r}) = \sum_{l = 0}^{\infty} \frac{2l + 1}{2\i kr}\qty[\i^l \qty(\exp\qty{\i(kr - \frac{l\pi}{2})} - \exp\qty{-\i(kr - \frac{l\pi}{2})}) + (2\i k) a_l \e^{\i kr}]P_l(\cos\theta)
+  \end{align}
+  を得る．さらに，
+  \begin{align}
+    \i^l \qty[\exp\qty{\i(kr - \frac{l\pi}{2})} - \exp\qty{-\i(kr - \frac{l\pi}{2})}] &= \i^l \exp\qty(-\i\frac{l\pi}{2})\qty(\e^{\i kr} - \e^{-\i kr} e^{\i l\pi}) \\
     &= 1\cdot\qty(\e^{\i kr} - (-1)^l) \e^{-\i kr}
   \end{align}
-  と直せるため，波動関数として
+  なる関係を用いると波動関数は，
   \begin{align}
-    \label{SCPartialWave}
-    \psi(\bm{r}) = \sum_{l=0}^{\infty} \qty[(1 + 2\i ka_l)\e^{\i kr} - (-1)^l \e^{-\i kr}]P_l(\cos\theta)
+    \psi(\bm{r}) = \sum_{l = 0}^{\infty} \qty[(1 + 2\i ka_l)\e^{\i kr} - (-1)^l \e^{-\i kr}]P_l(\cos\theta)\label{SCPartialWave}
   \end{align}
-  を得る．第1項は外向き球面波，第2項は内向き球面波を表す．この散乱は全反射であるため入射波と反射波の振幅は等しい．つまり，
+  と書ける．
+  第1項は外向き球面波，第2項は内向き球面波を表す．この散乱は全反射であるため入射波と反射波の振幅は等しい．
+  つまり，
   \begin{align}
     \abs{1 + 2\i ka_l} = 1
   \end{align}
-  が成り立つ．よって，散乱による位相のずれを$\delta_l$とおくと
+  が成り立つ．よって，散乱による位相のずれを$\delta_l$とおくと$a_l$は，
   \begin{align}
-    1 + 2\i ka_l = \e^{2\i \delta_l}
+    &1 + 2\i ka_l = \e^{2\i \delta_l} \\ 
+    &\Leftrightarrow a_l = \frac{1}{2\i k}(\e^{2\i \delta_l} - 1) \\
+    &\Leftrightarrow a_l = \frac{1}{2\i k}(\cos^2\delta_l + 2\i\sin\delta_l\cos\delta_l - \sin^2\delta_l - 1) \\
+    &\Leftrightarrow a_l = \frac{1}{2\i k}(1 - \sin^2\delta_l + 2\i\sin\delta_l\cos\delta_l - \sin^2\delta_l - 1) \\
+    &\Leftrightarrow a_l = \frac{1}{2\i k}(2\i\sin\delta_l\cos\delta_l - 2\sin^2\delta_l) \\
+    &\Leftrightarrow a_l = \frac{1}{k}(\cos\delta_l + \i\sin\delta_l)\sin\delta_l\\
+    &\Leftrightarrow a_l = \frac{1}{k}\e^{\i \delta_l} \sin \delta_l
   \end{align}
-  である．この式から$a_l$を求めると
-  \begin{align}
-    a_l &= \frac{1}{2\i k}(\e^{\i \delta_l} - 1) \\
-    &= \frac{1}{k}\e^{\i \delta_l} \sin \delta_l
-  \end{align}
-  を得る．さらに全断面積と散乱振幅を求めることができる．
+  である．
+  全断面積$\sigma^{\r{tot}}$は，
   \begin{align}
     \sigma^{\r{tot}} &= 4\pi \sum_{l=0}^{\infty} (2l+1)\abs{a_l}^2 \\
-    &= \frac{4\pi}{k^2} \sum_{l=0}^{\infty} (2l+1)\sin^2\delta_l \\
-    f(\theta) &= \sum_{l=0}^{\infty} (2l+1)a_lP_l(\cos\theta) \\
-    &= \frac{1}{k} \sum_{l=0}^{\infty}(2l+1)\e^{\i\delta_l}\sin\delta_lP_l(\cos\theta)
+    &= \frac{4\pi}{k^2} \sum_{l=0}^{\infty} (2l+1)\sin^2\delta_l 
   \end{align}
-  ここで，$\theta = 0$のとき，
+  である．
+  散乱振幅$f(\theta)$は，
   \begin{align}
-    f(0) = \frac{1}{k} \sum_{l=0}^{\infty} (2l+1) (\cos\delta_l + \i \sin\delta_l)\sin\delta_l P_l(1)
+    f(\theta) &= \sum_{l = 0}^{\infty} (2l + 1)a_lP_l(\cos\theta) \\
+    &= \frac{1}{k} \sum_{l = 0}^{\infty}(2l + 1)\e^{\i\delta_l}\sin\delta_lP_l(\cos\theta)
+  \end{align}
+  である．
+  特に$\theta = 0$のとき，
+  \begin{align}
+    f(0) &= \frac{1}{k} \sum_{l = 0}^{\infty} (2l + 1) (\cos\delta_l + \i \sin\delta_l)\sin\delta_l P_l(1) \\ 
+    &= \frac{1}{k} \sum_{l = 0}^{\infty} (2l + 1) (\cos\delta_l + \i \sin\delta_l)\sin\delta_l
   \end{align}
   が成り立つ．したがって以下の\textbf{光学定理}が成り立つ．
   \begin{itembox}[l]{光学定理}
@@ -114,31 +88,31 @@
     \end{align}
   \end{itembox}
   これは全断面積が前方散乱の散乱振幅からわかることを示している\footnote{
-   砂川，散乱の量子論，「光学定理は，前方散乱によって，入射波の強度が減少した分だけ，四方に散乱されるという，まことに当然なことを述べているのである．」 
+    砂川，散乱の量子論，「光学定理は，前方散乱によって，入射波の強度が減少した分だけ，四方に散乱されるという，まことに当然なことを述べているのである．」 
   }．
   \begin{myex}{半径$a$の剛体球による散乱}{}
-    散乱体のポテンシャルを
+    散乱体のポテンシャルを，
     \begin{align}
       V(r) =
       \begin{dcases}
-         \infty\ &(r \leq a) \\
-        0\ &(r \geq a)
+        \infty & r \leq a  \\
+        0 & r \geq a
       \end{dcases}
     \end{align}
-    とする．低エネルギー散乱($ka \ll 1$)とする．このとき，散乱の影響を受けるのはほぼ$l=0$のみである．
-    式(\ref{SCPartialWave})において$l=0$とすることで
+    とする．低エネルギー散乱($ka \ll 1$)とする．このとき，散乱の影響を受けるのはほぼ$l = 0$のみである．
+    \refe{SCPartialWave}において$l = 0$とすることで，
     \begin{align}
       \psi(\bm{r}) = \frac{1}{2\i kr}\qty[(1 + 2\i k a_0)\e^{\i kr} - \e^{-\i kr}] P_0(\cos\theta)
     \end{align}
     を得る．位相シフトを考慮し$\e^{2\i \delta_0} = 1 + 2\i ka_0$とおく．境界条件より
     \begin{align}
-      \psi(r=a) = 0
+      \psi(a) = 0
     \end{align}
     であるから
     \begin{align}
       \e^{2\i \delta_0}\e^{\i ka} - \e^{-\i ka} = 0
     \end{align}
-    が成り立つ．よって位相シフトは
+    が成り立つ．よって位相シフトは，
     \begin{align}
       \delta_0 = -ka
     \end{align}
@@ -151,10 +125,8 @@
     である．これは古典力学における剛体級の散乱$\sigma^{\r{tot}}=\pi a^2$の4倍の値である．波長$\lambda=\frac{2\pi}{k}$が散乱体の半径$a$より十分に大きいため，
     回折によって剛体球を取り囲み，球の表面積を疑似的に増加させたためと説明できる．
   \end{myex}
-
   \begin{myex}{位相シフトの問題}{}
-    散乱体から十分遠方での境界条件を満たし，ポテンシャル外における部分波展開した
-    波動関数として
+    散乱体から十分遠方での境界条件を満たし，ポテンシャル外における部分波展開した波動関数として，
     \begin{align}
       \psi(\bm{r}) = \sum_{l=0}^{\infty} \i^l \frac{2l+1}{2}\qty[\e^{2\i\delta_l} h_l^{(1)} (kr) + h_l^{(2)} (kr)] P_l(\cos\theta)
     \end{align}
@@ -162,8 +134,8 @@
     \begin{align}
       V(r) = 
       \begin{dcases}
-        \infty\ &(r\leq a) \\
-        0\ &(r>a)
+        \infty & r\leq a \\
+        0 & r > a 
       \end{dcases}
     \end{align}
     による散乱を考える．特に，$ka$が小さい低エネルギー散乱において，$l$の増大に伴ってその寄与が散乱に対してどの程度小さくなるか
@@ -174,44 +146,44 @@
     は球Hankel関数であり，$j_l(kr)$は球Bessel関数，$n_l(kr)$は球Neumann関数である．
     \begin{enumerate}
       \item 波動関数の境界条件をかんがえることで，散乱による位相シフト$\tan\delta_l$を$j_l(ka)$と$n_l(ka)$を用いて表せ．
-      \item 低エネルギー散乱($ka \ll 1$)を考える．このとき
-            \begin{align}
-              \label{LimitOfBessel}
-              j_l(ka) \to \frac{(ka)^l}{(2l+1)!!},\ n_l(ka) \to -\frac{(2l-1)!!}{(ka)^{l+1}}
-            \end{align}
-            \begin{align}
-              (2l+1)!! = (2l+1)(2l-1)\cdots5\cdot3\cdot1 \\
-              (2l-1)!! = (2l-1)(2l-3)\cdots3\cdot1\cdot1
-            \end{align}
-            であることを用い，$l=0,1,2$についての位相シフト$\tan\delta_l$を求めよ．得られる$\tan\delta_0$，$\tan\delta_1$，$\tan\delta_2$は
-            $l$の増加と共に位相シフトが急激に小さくなり，$ka$が小さい時，$l=0$だけ考えれば十分であることを示すものである．
+      \item 低エネルギー散乱($ka \ll 1$)を考える．このとき，
+        \begin{align}
+          j_l(ka) \to \frac{(ka)^l}{(2l+1)!!},\ n_l(ka) \to -\frac{(2l-1)!!}{(ka)^{l+1}}\label{LimitOfBessel}
+        \end{align}
+        \begin{align}
+          (2l+1)!! = (2l+1)(2l-1)\cdots5\cdot3\cdot1 \\
+          (2l-1)!! = (2l-1)(2l-3)\cdots3\cdot1\cdot1
+        \end{align}
+        であることを用いて，$l = 0, 1, 2$についての位相シフト$\tan\delta_l$を求めよ．得られる$\tan\delta_0$，$\tan\delta_1$，$\tan\delta_2$は
+        $l$の増加と共に位相シフトが急激に小さくなり，$ka$が小さい時，$l = 0$だけ考えれば十分であることを示すものである．
     \end{enumerate}
     \tcblower
     \begin{enumerate}
       \item 波動関数は剛体球の中に侵入できないため$r=a$で$\psi=0$である．よって，
-            \begin{align}
-              \e^{2\i \delta_l} h_l^{(1)} (ka) + h_l^{(2)}(ka) = 0 \\
-              \e^{2\i \delta_l}\qty(j_l(ka) + \i n_l(ka)) + \qty(j_l(ka) - \i n_l(ka)) = 0 \\
-              \qty(\e^{2\i \delta_l} + 1)j_l(ka) + \i\qty(\e^{2\i \delta_l} - 1)n_l(ka) = 0 \\
-              2\cos\delta_l j_l(ka) -2 \sin\delta_l n_l(ka) = 0
-            \end{align}
-            となり，位相シフト
-            \begin{align}
-              \label{phaseshift}
-              \tan\delta_l = \frac{j_l(ka)}{n_l(ka)}
-            \end{align}
-            が得られる．
-      \item 式(\ref{LimitOfBessel})を式(\ref{phaseshift})に代入する．
-            \begin{align}
-              \tan\delta_l &\to \frac{(ka)^l}{(2l+1)!!} \qty(- \frac{(ka)^{l+1}}{(2l -1)!!}) \\
-              &= -\frac{(ka)^{2l+1}}{(2l+1)!!(2l-1)!!} \\
-            \end{align}
-            $l=0,1,2$を代入する．ここで，$(n-2)!!=\frac{n!}{n}$であることに注意する．
-            \begin{align}
-              \tan\delta_0 = -ka \\
-              \tan\delta_1 = -\frac{1}{3}(ka)^3 \\
-              \tan\delta_2 = -\frac{1}{45}(ka)^5
-            \end{align}
+        \begin{align}
+          \e^{2\i \delta_l} h_l^{(1)} (ka) + h_l^{(2)}(ka) = 0 \\
+          \e^{2\i \delta_l}\qty(j_l(ka) + \i n_l(ka)) + \qty(j_l(ka) - \i n_l(ka)) = 0 \\
+          \qty(\e^{2\i \delta_l} + 1)j_l(ka) + \i\qty(\e^{2\i \delta_l} - 1)n_l(ka) = 0 \\
+          2\cos\delta_l j_l(ka) -2 \sin\delta_l n_l(ka) = 0
+        \end{align}
+        となり，位相シフトとして，
+        \begin{align}
+          \tan\delta_l = \frac{j_l(ka)}{n_l(ka)}\label{phaseshift}
+        \end{align}
+        が得られる．
+      \item \refe{LimitOfBessel}を\refe{phaseshift}に代入すると，
+        \begin{align}
+          \tan\delta_l &\to \frac{(ka)^l}{(2l+1)!!} \qty(- \frac{(ka)^{l+1}}{(2l -1)!!}) \\
+          &= -\frac{(ka)^{2l+1}}{(2l+1)!!(2l-1)!!} \\
+        \end{align}
+        となる．
+        $l = 0, 1, 2$を代入する．ここで，$(n - 2)!! = \frac{n!}{n}$であることに注意すると，
+        \begin{align}
+          \tan\delta_0 &= -ka \\
+          \tan\delta_1 &= -\frac{1}{3}(ka)^3 \\
+          \tan\delta_2 &= -\frac{1}{45}(ka)^5
+        \end{align}
+        となる．
     \end{enumerate}
   \end{myex}
 \end{document}

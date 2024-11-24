@@ -1,135 +1,113 @@
 \documentclass{report}
 \input{../head.tex}
 \begin{document}
-\begin{itembox}[l]{変分法の基本原理}
+  \begin{itembox}[l]{変分法の基本原理}
   任意の状態ベクトル$\ket{\psi}$に対して$\ket{\psi}$でのエネルギー関数$E(\psi)$について，
-  \begin{align}
-    E(\psi) = \cfrac{\mel{\psi}{\hat{H}}{\psi}}{\braket{\psi}} \geq E_0 \label{minimum}
-  \end{align}
+    \begin{align*}
+      E(\psi) = \cfrac{\mel**{\psi}{\hat{H}}{\psi}}{\braket{\psi}} \geq E_0 \label{minimum}
+    \end{align*}
   なる不等式が成り立つ．
   ただし$E_0$は$\hat{H}$の固有エネルギーの中で最低のものである．
-\end{itembox}
-
-\begin{itembox}[l]{1次摂動によるエネルギー補正}
-  \begin{align}
-    E_n^{(1)} = \ev**{\hat{V}}{n^{(0)}}
-  \end{align}
-\end{itembox}
-
-\begin{itembox}[l]{1次摂動による固有ベクトル補正}
-  \begin{align}
-    \ket{n^{(1)}} = \sum_{m\neq n}\cfrac{\mel**{m^{(0)}}{\hat{V}}{n^{(0)}}}{E_n^{(0)} - E_m^{(0)}}\ket{m^{(0)}}
-  \end{align}
-\end{itembox}
-
-\begin{itembox}[l]{2次摂動によるエネルギー補正}
-  \begin{align}
-    E_n^{(2)} = \sum_{m\neq n}\cfrac{\abs{\mel**{m^{(0)}}{\hat{V}}{n^{(0)}}}^2}{E_n^{(0)} - E_m^{(0)}}
-  \end{align}
-\end{itembox}
-
-\begin{itembox}[l]{縮退がある場合の摂動論による1次エネルギー補正}
-  \begin{align}
-    E_n^{(1)} = \frac{1}{2}\qty[(V_{aa} + V_{bb}\pm\sqrt{(V_{aa} - V_{bb})^2 + 4\abs{V_{ab}}^2})]
-  \end{align}
-\end{itembox}
-
-\begin{itembox}[l]{相互作用表示}
-  \begin{align}
-    \ket{\psi(t)}_{\r{I}} \coloneqq \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)}
-  \end{align}
-\end{itembox}
-
-\begin{itembox}[l]{朝永・Schwinger方程式}
-  \begin{align}
-    \begin{dcases}
-      \i\hbar\dv{t}\ket{\psi(t)}_{\r{I}} = \hat{V}_{\r{I}}(t)\ket{\psi(t)}_{\r{I}} \\
-      \hat{V}_{\r{I}}(t) = \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)
-    \end{dcases}
-  \end{align}
-\end{itembox}
-
-\begin{itembox}[l]{非定常摂動量子系の時間発展}
-  \begin{align}
-    \i\hbar\dv{t}c_m(t) &= \sum_{n}c_n(t)V_{mn}(t)\e^{\i\omega_{mn}t}
-  \end{align}
-\end{itembox}
-
-\begin{itembox}[l]{共鳴条件}
-  \begin{align}
-    \omega = \omega_{21} = \frac{E_2 - E_1}{\hbar}
-  \end{align}
-\end{itembox}
-
-\begin{itembox}[l]{$\ket{\psi(t_0)}_{\r{I}} = \ket{i}$の時間発展}
-  \begin{align}
-    \begin{dcases}
-      \ket{\psi(t)}_{\r{I}}& = \qty(1 + c_{i, i}^{(1)}(t))\ket{i} + \sum_{n\neq i}c_{n, i}^{(1)}(t)\ket{n} \\
-      c_{n, i}^{(1)}(t) &= -\frac{\i}{\hbar}\int_{t_0}^{t}V_{n, i}\e^{i\omega_{ni}t}\dd{t}
-    \end{dcases}
-  \end{align}
-\end{itembox}
-
-\begin{itembox}[l]{Fermiの黄金律}
-  \begin{align}
-    \omega_{i\to f} = \frac{2\pi}{\hbar}\abs{\mel**{f}{\hat{V}}{i}}^2\delta(E_f - E_i)
-  \end{align}
-\end{itembox}
-
-\begin{itembox}[l]{電磁場中の電子のハミルトニアン}
-  \begin{align}
-    H = \frac{1}{2m}\qty(\bm{p} + e\bm{A})^2 - e\phi
-  \end{align}
-\end{itembox}
-
-\begin{itembox}[l]{局所ゲージ変換に対して不変なSchrödinger方程式}
-  \begin{align}
-    \i\hbar\pdv{t}\psi = \qty[\frac{1}{2m}\qty(\hat{\bm{p}} + e\hat{\bm{A}})^2 - e\phi]\psi
-  \end{align}
-\end{itembox}
-
-\begin{itembox}[l]{散乱問題の境界条件}
-  \begin{equation}
-    \psi(\bm{r}) = \e^{\i kz} + f(\theta) \frac{\e^{\i kr}}{r}
-  \end{equation}
-\end{itembox}
-
-\begin{itembox}[l]{散乱振幅と微分断面積の関係}
-  \begin{align}
-    \sigma(\theta) = \abs{f(\theta)}^2
-  \end{align}
-\end{itembox}
-
-\begin{itembox}[l]{球対称ポテンシャルの散乱振幅}
-  \begin{align}
-    \label{SCamp1st}
-    f^{(1)}(\theta) =  -\frac{2m}{\hbar^2 q} \int_{0}^{\infty} rV(r)\sin qr \dd{r}
-  \end{align}
-\end{itembox}
-
-\begin{itembox}[l]{部分波展開した散乱の波動関数}
-  \begin{align}
-    \label{PartialWave}
-    \psi(\bm{r}) = \sum_{l=0}^{\infty} (2l+1)\i^l j_l(kr)P_l(\cos\theta) + \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
-  \end{align}
-\end{itembox}
-
-  \begin{itembox}[l]{光学定理}
-    \begin{align}
-      \sigma^{\r{tot}} = \frac{4\pi}{k} \Im f(0)
-    \end{align}
   \end{itembox}
-
+  \begin{itembox}[l]{1次摂動によるエネルギー補正}
+    \begin{align*}
+      E_n^{(1)} = \ev**{\hat{V}}{n^{(0)}}
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{1次摂動による固有ベクトル補正}
+    \begin{align*}
+      \ket{n^{(1)}} = \sum_{m\neq n}\cfrac{\mel**{m^{(0)}}{\hat{V}}{n^{(0)}}}{E_n^{(0)} - E_m^{(0)}}\ket{m^{(0)}}
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{2次摂動によるエネルギー補正}
+    \begin{align*}
+      E_n^{(2)} = \sum_{m\neq n}\cfrac{\abs{\mel**{m^{(0)}}{\hat{V}}{n^{(0)}}}^2}{E_n^{(0)} - E_m^{(0)}}
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{縮退がある場合の摂動論による1次エネルギー補正}
+    \begin{align*}
+      E_n^{(1)} = \frac{1}{2}\qty[(V_{aa} + V_{bb}\pm\sqrt{(V_{aa} - V_{bb})^2 + 4\abs{V_{ab}}^2})]
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{相互作用表示}
+    \begin{align*}
+      \ket{\psi(t)}_{\r{I}} \coloneqq \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)}
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{朝永・Schwinger方程式}
+    \begin{align*}
+      \begin{dcases}
+        \i\hbar\dv{t}\ket{\psi(t)}_{\r{I}} = \hat{V}_{\r{I}}(t)\ket{\psi(t)}_{\r{I}} \\
+        \hat{V}_{\r{I}}(t) = \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)
+      \end{dcases}
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{非定常摂動量子系の時間発展}
+    \begin{align*}
+      \i\hbar\dv{t}c_m(t) &= \sum_{n}c_n(t)V_{mn}(t)\e^{\i\omega_{mn}t}
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{共鳴条件}
+    \begin{align*}
+      \omega = \omega_{21} = \frac{E_2 - E_1}{\hbar}
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{$\ket{\psi(t_0)}_{\r{I}} = \ket{i}$の時間発展}
+    \begin{align*}
+      \begin{dcases}
+        \ket{\psi(t)}_{\r{I}}& = \qty(1 + c_{i, i}^{(1)}(t))\ket{i} + \sum_{n\neq i}c_{n, i}^{(1)}(t)\ket{n} \\
+        c_{n, i}^{(1)}(t) &= -\frac{\i}{\hbar}\int_{t_0}^{t}V_{n, i}\e^{i\omega_{ni}t}\dd{t}
+      \end{dcases}
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{Fermiの黄金律}
+    \begin{align*}
+      \omega_{i\to f} = \frac{2\pi}{\hbar}\abs{\mel**{f}{\hat{V}}{i}}^2\delta(E_f - E_i)
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{電磁場中の電子のハミルトニアン}
+    \begin{align*}
+      H = \frac{1}{2m}\qty(\bm{p} + e\bm{A})^2 - e\phi
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{局所ゲージ変換に対して不変なSchrödinger方程式}
+    \begin{align*}
+      \i\hbar\pdv{t}\psi = \qty[\frac{1}{2m}\qty(\hat{\bm{p}} + e\hat{\bm{A}})^2 - e\phi]\psi
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{散乱問題の境界条件}
+    \begin{align*}
+      \psi(\bm{r}) = \e^{\i kz} + f(\theta) \frac{\e^{\i kr}}{r}
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{散乱振幅と微分断面積の関係}
+    \begin{align*}
+      \sigma(\theta) = \abs{f(\theta)}^2
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{球対称ポテンシャルの散乱振幅}
+    \begin{align*}
+      f^{(1)}(\theta) =  -\frac{2m}{\hbar^2 q} \int_{0}^{\infty} rV(r)\sin qr \dd{r}
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{部分波展開した散乱の波動関数}
+    \begin{align*}
+      \psi(\bm{r}) = \sum_{l=0}^{\infty} (2l+1)\i^l j_l(kr)P_l(\cos\theta) + \sum_{l=0}^{\infty} (2l+1)a_l P_l(\cos\theta) \frac{\e^{\i kr}}{r}
+    \end{align*}
+  \end{itembox}
+  \begin{itembox}[l]{光学定理}
+    \begin{align*}
+      \sigma^{\r{tot}} = \frac{4\pi}{k} \Im f(0)
+    \end{align*}
+  \end{itembox}
   \begin{itembox}[l]{特殊相対性原理}
     あらゆる慣性系で同じ物理法則が成り立つ．
   \end{itembox}
-
   \begin{itembox}[l]{光速度不変の原理}
     あらゆる慣性形で真空中の光の速さは同一である．
   \end{itembox}
-
   \begin{itembox}[l]{Lorentz変換}
-    \begin{align}
+    \begin{align*}
       \begin{pmatrix}
         ct' \\ x'
       \end{pmatrix}
@@ -142,45 +120,38 @@
       \begin{pmatrix}
         ct\\x
       \end{pmatrix}
-    \end{align}
+    \end{align*}
   \end{itembox}
-
   \begin{itembox}[l]{速度の合成}
-    \begin{align}
+    \begin{align*}
       V = \frac{v + u'}{1 + \frac{vu'}{c^2}}
-    \end{align}
+    \end{align*}
   \end{itembox}
-
   \begin{itembox}[l]{Lorentz収縮}
-    \begin{align}
+    \begin{align*}
       L' = \sqrt{1-\qty(\frac{v}{c})^2}L
-    \end{align}
+    \end{align*}
   \end{itembox}
-
   \begin{itembox}[l]{時間の遅れ}
-    \begin{align}
+    \begin{align*}
       \Delta T = \frac{1}{\sqrt{1 - (v/c)^2}} \Delta \tau
-    \end{align}
+    \end{align*}
   \end{itembox}
-
   \begin{itembox}[l]{Lorentz変換に対して共変なMaxwell方程式}
-    \begin{align}
+    \begin{align*}
       &\partial_\mu F_{\nu\lambda} + \partial_\nu F_{\lambda\mu} + \partial_\lambda F_{\mu\nu} = 0\\
       &\partial^{\nu}H_{\nu\mu}=j_\mu\\
       &\partial_\mu j^\mu = 0
-    \end{align}
+    \end{align*}
   \end{itembox}
-
   \begin{itembox}[l]{Klein-Gordon方程式}
-    \begin{equation}
-      \qty(\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \nabla^2 + \qty(\frac{mc}{\hbar})^2)\psi = 0
-    \end{equation}
+    \begin{align*}
+      \qty(\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \grad^2 + \qty(\frac{mc}{\hbar})^2)\psi = 0
+    \end{align*}
   \end{itembox}
-
   \begin{itembox}[l]{Dirac方程式}
-    \begin{align}
-      \qty(\i\hbar \frac{\partial}{\partial t} + \i \hbar c \bm{\alpha}\cdot \nabla - \beta mc^2)\psi = 0
-    \end{align}
-    \end{itembox}
-
+    \begin{align*}
+      \qty(\i\hbar \frac{\partial}{\partial t} + \i \hbar c \bm{\alpha}\cdot \grad - \beta mc^2)\psi = 0
+    \end{align*}
+  \end{itembox}
 \end{document}

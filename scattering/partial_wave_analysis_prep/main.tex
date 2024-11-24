@@ -130,7 +130,7 @@
     \begin{align}
       P_n(x) &= \frac{1}{2^nn!}\dv[n]{x}\qty(x^2 - 1)^n\label{legendre-pn-easy}
     \end{align}
-    となる．
+    となる．なお，\refe{legendre-pn-easy}はRodriguesの公式として知られている．
   \subsection{Legendre陪多項式}
     Legendre陪多項式$P_n^m(x)$は$m \leq n$として，
     \begin{align}
@@ -314,7 +314,7 @@
       \qty(\laplacian + \kappa^2)u(r, \theta, \phi) = 0\label{helmholtz-eq-wave}
     \end{align}
     を考える．
-    $u(\bm{r})$を正規直交基底である$\e^{\i m\phi}$で展開すると，
+    $u(\bm{r})$を直交基底である$\e^{\i m\phi}$で展開すると，
     \begin{align}
       A_m(r, \theta) &\coloneqq \int_{0}^{2\pi}u(r, \theta, \phi)\e^{-\i m\phi}\dd{\phi} \\ 
       u(r, \theta, \phi) &= \sum_{m}A_m(r, \theta)\e^{\i m\phi}\label{u-expand-with-a} \\ 
@@ -367,7 +367,7 @@
     \end{align}
     であることと，\refe{assos-legendre-diff-eq}より，
     \begin{align}
-      \mathcal{L}_mP_n^m(x) + n(n + 1)P_n^m(x) = 0
+      \mathcal{L}_mP_n^m(x) + n(n + 1)P_n^m(x) = 0\label{angular-momentum-prep}
     \end{align}
     であることを用いれば，
     \begin{align}
@@ -426,7 +426,7 @@
     さて，今Helmholtz方程式の解の基底展開を行っているのであった．
     今までに定義した展開を全てまとめると，
     \begin{align}
-      \text{\refe{u-expand-with-a}より}&\ u(\bm{r}) = \sum_{m = -\infty}^{\infty} A_m(r, \theta) \e^{\i m\phi} \\ 
+      \text{\refe{u-expand-with-a}より}&\ u(r, \theta, \phi) = \sum_{m = -\infty}^{\infty} A_m(r, \theta) \e^{\i m\phi} \\ 
       \text{\refe{am-expand-with-pnm}より}&\ A_m(r, \theta) = \sum_{n = \abs{m}}^{\infty}B_{nm}(r)P_{n}^{\abs{m}}(\cos\theta) \\ 
       \text{\refe{rho-def}より}&\ \rho = \kappa r \\ 
       \text{\refe{cnm-def}より}&\ B_{nm}(r) = \frac{1}{\sqrt{\rho}}C_{nm}(\rho) \\ 
@@ -434,7 +434,23 @@
     \end{align}
     となる．下から上に全て代入して整理すると，
     \begin{align}
-      u(\bm{r}) = \sum_{m = -\infty}^{\infty}\sum_{n = \abs{m}}^{\infty}\qty[a_{nm}j_n(\kappa r) + b_{nm}y_n(\kappa r)] P_{n}^{\abs{m}}(\cos\theta)\e^{\i m\phi}
+      u(r, \theta, \phi) = \sum_{m = -\infty}^{\infty}\sum_{n = \abs{m}}^{\infty}\qty[a_{nm}j_n(\kappa r) + b_{nm}y_n(\kappa r)] P_{n}^{\abs{m}}(\cos\theta)\e^{\i m\phi} \label{u-expand-form1}
     \end{align}
     となる．
+    今後の計算を行うとき，
+    \begin{align}
+      \inner{\e^{\i m'\phi}}{\e^{\i m\phi}} &= 2\pi\delta_m^{m'} \\ 
+      \inner{P_{n'}^m(x)}{P_n^m(x)} &= \delta_{n}^{n'}\frac{2}{2n + 1}\frac{(n + m)!}{(n - m)!}
+    \end{align}
+    となっているのはいささか都合が悪いので，球面分布函数$Y_{nm}(\theta, \phi)$を，
+    \begin{align}
+      Y_{nm}(\theta, \phi) &\coloneqq (-1)^m\qty(\frac{1}{2\pi})^{1/2}\qty(\frac{2n + 1}{2}\frac{(n - m)!}{(n + m)!})P_n^m(x)\e^{\i m\phi} \\ 
+      &= (-1)^m\sqrt{\frac{2n + 1}{4\pi}\frac{(n - m)!}{(n + m)!}}P_n^m(x)\e^{\i m\phi}
+    \end{align}
+    として定義しておく．
+    球面分布函数を用いて\refe{u-expand-form1}を書き換えれば，
+    \begin{align}
+      u(r, \theta, \phi) = \sum_{m = -\infty}^{\infty}\sum_{n = \abs{m}}^{\infty}\qty[a_{nm}j_n(\kappa r) + b_{nm}y_n(\kappa r)](-1)^m\sqrt{\frac{2n + 1}{4\pi}\frac{(n - m)!}{(n + m)!}}P_n^m(x)\e^{\i m\phi} \label{u-expand-form2}
+    \end{align}
+    となる．定数倍は$a_{nm}$や$b_{nm}$で吸収することにする．
 \end{document}

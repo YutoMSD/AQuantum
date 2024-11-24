@@ -5,7 +5,6 @@
   \begin{itembox}[l]{特殊相対性原理}
     あらゆる慣性系で同じ物理法則が成り立つ．
   \end{itembox}
-
   \begin{itembox}[l]{光速度不変の原理}
     あらゆる慣性形で真空中の光の速さは同一である．
   \end{itembox}
@@ -288,18 +287,18 @@
   電磁場の双対性について説明する．マクスウェル方程式は3次元では次の4つの式である．
   \begin{align}
     \begin{dcases}
-      \nabla \cdot \bm{D} = \rho \\
-      \nabla \cdot \bm{B} = 0\\
-      \nabla \times \bm{E} = - \frac{\partial \bm{B}}{\partial t}\\
-      \nabla \times \bm{H} = \frac{\partial \bm{D}}{\partial t} + \bm{j}
+      \grad \cdot \bm{D} = \rho \\
+      \grad \cdot \bm{B} = 0\\
+      \grad \times \bm{E} = - \frac{\partial \bm{B}}{\partial t}\\
+      \grad \times \bm{H} = \frac{\partial \bm{D}}{\partial t} + \bm{j}
     \end{dcases}
   \end{align}
   これをLorentz変換に対して共変な形式に書き直す．まず，$\bm{B}$と$bm{E}$はベクトルポテンシャル$\bm{A}$とスカラーポテンシャル$\phi$を
   用いて
   \begin{align}
     \begin{dcases}
-      \bm{E} = -\nabla \phi - \frac{\partial \bm{A}}{\partial t}\\
-      \bm{B} = \nabla \times \bm{A}
+      \bm{E} = -\grad \phi - \frac{\partial \bm{A}}{\partial t}\\
+      \bm{B} = \grad \times \bm{A}
     \end{dcases}
   \end{align}
   と表される．ここで，座標を
@@ -360,13 +359,13 @@
   \begin{align}
     &\partial_0 F_{12} + \partial_1 F_{20} + \partial_2 F_{01}\\
     &= -\frac{\partial (cB_z)}{\partial (ct)} + \frac{\partial}{\partial x}(-E_y) + \frac{\partial}{\partial y}(-E_x)\\
-    &= -(\nabla\times \bm{E})_z - \frac{\partial B_z}{\partial t} = 0
+    &= -(\grad\times \bm{E})_z - \frac{\partial B_z}{\partial t} = 0
   \end{align}
   $\mu=1,\nu=2,\lambda=3$とすると
   \begin{align}
     &\partial_1 F_{23} + \partial_2 F_{31} + \partial_3 F_{12}\\
     &= c(\partial_xB_x + \partial_yB_y + \partial_zB_Z)\\
-    &= c\nabla\cdot\bm{B} = 0
+    &= c\grad\cdot\bm{B} = 0
   \end{align}
   が得られる．さらに，磁場/電束密度テンソル$H_{\mu\nu}$を
   \begin{align}
@@ -398,15 +397,15 @@
   \begin{align}
     \partial^1H_{10}+\partial^2H_{20} + \partial^3H_{30} &= j_0\\
     \partial_xD_x + \partial_yD_y + \partial_zD_z = \rho\\
-    \nabla\cdot\bm{D} = \rho
+    \grad\cdot\bm{D} = \rho
   \end{align}
   が導かれる．さらに，電荷保存則
   \begin{align}
-    \frac{\partial \rho}{\partial t} + \nabla\cdot\bm{j} = 0
+    \frac{\partial \rho}{\partial t} + \grad\cdot\bm{j} = 0
   \end{align}
   から
   \begin{align}
-    \frac{\partial (c\rho)}{\partial (ct)} + \nabla\cdot\bm{j} = 0
+    \frac{\partial (c\rho)}{\partial (ct)} + \grad\cdot\bm{j} = 0
   \end{align}
   よって
   \begin{align}

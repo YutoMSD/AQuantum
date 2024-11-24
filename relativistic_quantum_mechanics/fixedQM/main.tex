@@ -5,11 +5,11 @@
 
 Shrödinger方程式は，ハミルトニアン$H=\frac{\bm{p}^2}{2m} + V=E$と運動量$\bm{p}$に対して
 \begin{align}
-  E \Rightarrow \i\hbar\frac{\partial}{\partial t} + V,\ \bm{p} \Rightarrow -\i\hbar \nabla 
+  E \Rightarrow \i\hbar\frac{\partial}{\partial t} + V,\ \bm{p} \Rightarrow -\i\hbar \grad 
 \end{align}
 という置き換えをすることにより得られた．
 \begin{align}
-  \i\hbar \frac{\partial}{\partial t}\psi = \qty(-\frac{\hbar^2}{2m}\nabla^2 + V)\psi   \label{TDSE}
+  \i\hbar \frac{\partial}{\partial t}\psi = \qty(-\frac{\hbar^2}{2m}\grad^2 + V)\psi   \label{TDSE}
 \end{align}
 しかし，\refe{TDSE}はLorentz共変性をもたない，つまり，相対論と矛盾している．なぜなら，相対論によると時間と空間は同等であるが，\refe{TDSE}は
 時間の1階微分，空間の2階微分をなっているからである．
@@ -63,24 +63,24 @@ $p_0$について計算を進めると，
 \end{align}
 これに対し素直に
 \begin{align}
-  E \Rightarrow \i\hbar\frac{\partial}{\partial t} + V,\ \bm{p} \Rightarrow -\i\hbar \nabla 
+  E \Rightarrow \i\hbar\frac{\partial}{\partial t} + V,\ \bm{p} \Rightarrow -\i\hbar \grad 
 \end{align}
 という量子化を実行し，波動関数に作用させる．
 \begin{align}
-  \qty(-\hbar^2\nabla^2 + \frac{\hbar^2}{c^2}\frac{\partial^2}{\partial t^2})\psi = -m^2c^2\psi
+  \qty(-\hbar^2\grad^2 + \frac{\hbar^2}{c^2}\frac{\partial^2}{\partial t^2})\psi = -m^2c^2\psi
 \end{align}
 これを変形するとKlein-Gordon方程式
 \begin{align}
-  \qty(\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \nabla^2 + \qty(\frac{mc}{\hbar})^2)\psi = 0 \label{Klein-Gordon-equation}
+  \qty(\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \grad^2 + \qty(\frac{mc}{\hbar})^2)\psi = 0 \label{Klein-Gordon-equation}
 \end{align}
-が得られる．また，これはダランベルシアン(d'Alembertian)$\Box = \frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \nabla^2 = \partial^\mu\partial_\mu = \partial^2$を用いて，
+が得られる．また，これはダランベルシアン(d'Alembertian)$\Box = \frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \grad^2 = \partial^\mu\partial_\mu = \partial^2$を用いて，
 \begin{align}
   \qty(\Box + \qty(\frac{mc}{\hbar})^2)\psi = 0
 \end{align}
 と書くことができる．
 \begin{itembox}[l]{Klein-Gordon方程式}
   \begin{equation}
-    \qty(\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \nabla^2 + \qty(\frac{mc}{\hbar})^2)\psi = 0
+    \qty(\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \grad^2 + \qty(\frac{mc}{\hbar})^2)\psi = 0
   \end{equation}
 \end{itembox}
 Klein-Gordon方程式は時間と空間を同等に扱っており，Lorentz共変性を満たしている．しかし，これには波動関数の確率解釈が
@@ -137,20 +137,20 @@ $\psi$と$\frac{\partial \psi}{\partial t}$は独立に指定される．その�
 時間と空間の1階微分であることが必要だと推察される．Diracはこの問題を次のように解決した．
 まずは
 \begin{align}
-  \qty(\frac{1}{c}\frac{\partial}{\partial t} + \hat{\bm{\alpha}} \cdot \nabla + \i\hat{\beta} \frac{mc}{\hbar})\psi = 0 \label{Dirac-pre}
+  \qty(\frac{1}{c}\frac{\partial}{\partial t} + \hat{\bm{\alpha}} \cdot \grad + \i\hat{\beta} \frac{mc}{\hbar})\psi = 0 \label{Dirac-pre}
 \end{align}
 を出発点とする．\refe{Klein-Gordon-equation}と\refe{Dirac-pre}を見比べて演算子が
 \begin{align}
-  \qty(\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \nabla^2 + \qty(\frac{mc}{\hbar})^2) = \qty(\frac{1}{c}\frac{\partial}{\partial t} - \hat{\bm{\alpha}} \cdot \nabla - \i\hat{\beta} \frac{mc}{\hbar})\qty(\frac{1}{c}\frac{\partial}{\partial t} + \hat{\bm{\alpha}} \cdot \nabla + \i\hat{\beta} \frac{mc}{\hbar})
+  \qty(\frac{1}{c^2}\frac{\partial^2}{\partial t^2} - \grad^2 + \qty(\frac{mc}{\hbar})^2) = \qty(\frac{1}{c}\frac{\partial}{\partial t} - \hat{\bm{\alpha}} \cdot \grad - \i\hat{\beta} \frac{mc}{\hbar})\qty(\frac{1}{c}\frac{\partial}{\partial t} + \hat{\bm{\alpha}} \cdot \grad + \i\hat{\beta} \frac{mc}{\hbar})
 \end{align}
 のように因数分解できればよいとわかる\footnote{$\alpha$(の各成分)と$\beta$が交換関係を満たす数字であるか否かは明確ではないのでハットをつけた．}．
 見やすくするために少し表記を変える．
 \begin{align}
-  \frac{1}{c}\frac{\partial}{\partial t} + \hat{\bm{\alpha}} \cdot \nabla + \i\hat{\beta} \frac{mc}{\hbar} = \frac{1}{c}\partial_t + \sum_{i=x,y,z} \hat{\alpha}_i \partial_i + \i\hat{\beta} \frac{mc}{\hbar}
+  \frac{1}{c}\frac{\partial}{\partial t} + \hat{\bm{\alpha}} \cdot \grad + \i\hat{\beta} \frac{mc}{\hbar} = \frac{1}{c}\partial_t + \sum_{i=x,y,z} \hat{\alpha}_i \partial_i + \i\hat{\beta} \frac{mc}{\hbar}
 \end{align}
 こうすると，
 \begin{align}
-  &\qty(\frac{1}{c}\frac{\partial}{\partial t} - \hat{\bm{\alpha}} \cdot \nabla - \i\hat{\beta} \frac{mc}{\hbar})\qty(\frac{1}{c}\frac{\partial}{\partial t} + \hat{\bm{\alpha}} \cdot \nabla + \i\hat{\beta} \frac{mc}{\hbar}) \\
+  &\qty(\frac{1}{c}\frac{\partial}{\partial t} - \hat{\bm{\alpha}} \cdot \grad - \i\hat{\beta} \frac{mc}{\hbar})\qty(\frac{1}{c}\frac{\partial}{\partial t} + \hat{\bm{\alpha}} \cdot \grad + \i\hat{\beta} \frac{mc}{\hbar}) \\
   &=\qty(\frac{1}{c}\partial_t - \sum_{i=x,y,z} \hat{\alpha}_i \partial_i - \i\hat{\beta} \frac{mc}{\hbar}) \qty(\frac{1}{c}\partial_t + \sum_{j=x,y,z} \hat{\alpha}_j \partial_j + \i\hat{\beta} \frac{mc}{\hbar})\\
   &= \frac{1}{c^2}\partial_t^2 + \frac{1}{c} \partial_t \qty(-\sum_{i=x,y,z} \hat{\alpha}_i \partial_i + \sum_{j = x,y,z} \hat{\alpha}_j \partial_j) + \frac{1}{c}\i\hat{\beta}\frac{mc}{\hbar} - \frac{1}{c}\i\hat{\beta}\frac{mc}{\hbar} 
   - \sum_{i=x,y,z} \sum_{j=x,y,z} \hat{\alpha}_i \hat{\alpha}_j \partial_i \partial_j\\ 
@@ -274,17 +274,15 @@ $\psi$と$\frac{\partial \psi}{\partial t}$は独立に指定される．その�
 \refe{Dirac-pre}を変形することで\textbf{Dirac方程式}が得られる．
 \begin{itembox}[l]{Dirac方程式}
 \begin{align}
-  \qty(\i\hbar \frac{\partial}{\partial t} + \i \hbar c \bm{\alpha}\cdot \nabla - \beta mc^2)\psi = 0
+  \qty(\i\hbar \frac{\partial}{\partial t} + \i \hbar c \bm{\alpha}\cdot \grad - \beta mc^2)\psi = 0
 \end{align}
 \end{itembox}
-$\bm{\alpha},\beta$は\refe{conditons-of-coefficients-of-dirac}を満たす．また，Dirac-Pauli表示を用いると
+$\bm{\alpha}$，$\beta$は\refe{conditons-of-coefficients-of-dirac}を満たす．また，Dirac-Pauli表示を用いると
 \begin{align}
-  \i\hbar \frac{\partial}{\partial t}\psi = 
-  \begin{pmatrix}
-    mc^2 I & -\i\hbar c \bm{\sigma\cdot\nabla}\\
-    -\i\hbar c \bm{\sigma\cdot\nabla} & -mc^2 I
-  \end{pmatrix}
-  \psi
+  \i\hbar \pdv{t}\psi = 
+  \mqty(mc^2 I & -\i\hbar c\bm{\sigma\cdot\bm{\nabla} } \\ 
+    -\i\hbar c\bm{\sigma\cdot\bm{nabla} } & -mc^2 I
+    )\psi
 \end{align}
 と書ける．成分表示で
 \begin{align}
