@@ -1,0 +1,188 @@
+\documentclass{report}
+\input{../../head.tex}
+\begin{document}
+  \begin{myexc}{Griffith Problem10.21 Neutron diffraction}{}
+  結晶による中性子散乱を考える．中性子と原子核の相互作用は短距離で，
+  \begin{align}
+    V(\bm{r}) = \frac{2\pi\hbar^2 b}{m} \sum_{i}\delta(\bm{r} - \bm{r}_i)
+  \end{align}
+  と近似されるとする．ここで，$\bm{r}_i$は$i$番目の原子核の位置である．$b$はnuclear scattering lengthである．
+  \begin{enumerate}
+    \item 第1Born近似により散乱断面積は
+          \begin{align}
+            \sigma = b^2 \abs{\sum_{i} \e^{-\i \bm{q}\cdot\bm{r}_i}}^2
+          \end{align}
+          となることを示せ．ここで，$\bm{q}\equiv\bm{k}' - \bm{k}$，$\bm{k}$は入射波，$\bm{k}'$は散乱波とする．
+    \item 原子核が間隔$a$の格子状で並んでいるとし，
+          \begin{align}
+            \bm{r}_i = la\bm{e}_x + ma\bm{e}_y + na\bm{e}_z
+          \end{align}
+          とする．ここで$l,m,n$は0から$N-1$の整数である．
+          \begin{align}
+            \sigma = b^2 \Pi_{i =x,y,z} \frac{\sin^2(Nq_i a/2)}{\sin^2 (q_i a/2)}
+          \end{align}
+          となることを示せ．
+    \item \begin{align}
+            \frac{1}{N}\frac{\sin^2(Nq_x a/2)}{\sin^2 (q_x a/2)}
+          \end{align}
+          を$N=1,5,10$について横軸を$q_xa$としたグラフを図示せよ．
+  \end{enumerate}
+  \tcblower
+  \begin{enumerate}
+    \item 散乱振幅を計算する．
+          \begin{align}
+            f^{(1)}(\theta) &= -\frac{1}{4\pi} \int \e^{-\i\bm{k}' \cdot \bm{r}'} \frac{2m}{\hbar^2} \qty(\frac{2\pi\hbar^2 b}{m} \sum_{i} \delta(\bm{r}' - \bm{r}'))\e^{\i \bm{k}\cdot\bm{r}'} \dd{\bm{r}'}\\
+            &= -b \sum_{i} \int \e^{-\i\bm{q}\cdot \bm{r}'} \delta(\bm{r}' - \bm{r}_i) \dd{\bm{r}'}\\
+            &= -b \sum_{i} \e^{-\i \bm{q}\cdot\bm{r}_i}
+          \end{align}
+          よって散乱断面積は
+          \begin{align}
+            \sigma = \abs{f^{(1)}(\theta)}^2 = b^2\abs{\sum_{i} \e^{-\i \bm{q}\cdot\bm{r}_i}}^2
+          \end{align}
+          である．
+    \item \begin{align}
+            \sum_{i} \e^{-\i \bm{q}\cdot\bm{r}_i} &= \sum_{l=0}^{N-1} \sum_{m=0}^{N-1} \sum_{n=0}^{N-1} \e^{-\i(laq_x + maq_y + naq_z)}\\
+            &= \sum_{l=0}^{N-1} \e^{-\i laq_x} \sum_{m=0}^{N-1} \e^{-\i maq_y} \sum_{n=0}^{N-1} \e^{-\i naq_z}\\
+            &= \Pi_{i=x,y,z} \frac{1-\e^{-\i Naq_i}}{1-\e^{-\i aq_i}}\\
+            &= \Pi_{i =x,y,z} \frac{\sin(Nq_i a/2)}{\sin (q_i a/2)}
+          \end{align}
+          よって，
+          \begin{align}
+            \sigma = b^2 \Pi_{i =x,y,z} \frac{\sin^2(Nq_i a/2)}{\sin^2 (q_i a/2)}
+          \end{align}
+          が得られる．
+    \item 散乱パターンは下図のようになる．
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\columnwidth]{fig/neutron_diffraction.jpg}
+            \caption{散乱パターン}
+            \label{neutron-diffraction}
+          \end{figure}
+  \end{enumerate}
+  \end{myexc}
+  \begin{myexc}{Griffith Problem10.22 2次元散乱理論}{}
+    2次元の散乱を考える．
+  \begin{enumerate}
+    \item 極座標ラプラシアン
+    \begin{align}
+      \nabla^2 = \frac{\partial^2}{\partial r} + \frac{1}{r}\frac{\partial}{\partial} + \frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}
+    \end{align}
+    を用いてポテンシャル$V(r)$の下での波動関数を求めよ．ここで$u(r)=\sqrt{r}R(r)$が
+    \begin{align}
+      -\frac{\hbar^2}{2m}\frac{\r{d}^2 u}{\dd{r}^2} + \qty[V(r) + \frac{\hbar^2}{2m}\frac{(j^2 - 1/4)}{r^2}]u = Eu \label{eq-for-u}
+    \end{align}
+    を満たすことを用いてよい．$j$は整数である．
+    \item $r$が十分大きいときの\refe{eq-for-u}を考えることにより，
+    \begin{align}
+      R(r) \sim \frac{\e^{\i kr}}{\sqrt{r}}
+    \end{align}
+    であることを示せ．ここで，$k\equiv \sqrt{2mE}/\hbar$である．
+  \end{enumerate}
+    \tcblower
+    \begin{align}
+      &\qty[-\frac{\hbar^2}{2m}\nabla^2 + V(r)]\psi(r,\theta) = E\psi(r,\theta)\\
+      &\qty[\frac{\hbar^2}{2m}\qty(\frac{\partial^2}{\partial r^2} + \frac{1}{r}\frac{\partial}{\partial r} + \frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}) + V(r)]\psi(r,\theta) = E\psi(r,\theta)
+    \end{align}
+    $\psi(r,\theta) = R(r)\Theta(\theta)$とし，上式を整理すると
+    \begin{align}
+      \frac{r^2}{R(r)}\qty(\frac{\partial^2}{\partial r^2}R(r)) - \frac{r}{R(r)}\qty(\frac{\partial}{\partial r}R(r)) + \frac{2mr^2}{\hbar^2}(V(r) - E) - \frac{1}{\Theta(\theta)} \frac{\partial^2}{\partial \theta^2}\Theta(\theta) = 0
+    \end{align}
+    となる．
+    \begin{align}
+      - \frac{1}{\Theta(\theta)} \frac{\partial^2}{\partial \theta^2}\Theta(\theta) = j^2
+    \end{align}
+    とすれば
+    \begin{align}
+      \Theta(\theta) = \e^{\i j\theta}
+    \end{align}
+    が得られる．さらに，
+    \begin{align}
+      \Theta(\theta) = \Theta(\theta + 2\pi)
+    \end{align}
+    だから$j$は整数であることがわかる．よって$r$に関する部分は
+    \begin{align}
+      \frac{r^2}{R(r)}\qty(\frac{\partial^2}{\partial r^2}R(r)) - \frac{r}{R(r)}\qty(\frac{\partial}{\partial r}R(r)) + \frac{2mr^2}{\hbar^2}(V(r) - E) = -j^2
+    \end{align}
+    である．整理すると
+    \begin{align}
+      -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial r^2}R(r) - \frac{\hbar^2}{2mr}\frac{\partial}{\partial r}R(r) + (V(r) - E)R(r) + \frac{\hbar^2 j^2}{2mr^2}R(r) = 0
+    \end{align}
+    である．これは\refe{eq-for-u}に$u=\sqrt{r}R$を代入した式と同一である．よって波動関数は
+    \begin{align}
+      \psi(r,\theta) = R(r)\e^{\i j\theta}
+    \end{align}
+    と表されることがわかる．ただし，$j$は整数，$u=\sqrt{r}R$が
+    \begin{align}
+      -\frac{\hbar^2}{2m}\frac{\r{d}^2 u}{\dd{r}^2} + \qty[V(r) + \frac{\hbar^2}{2m}\frac{(j^2 - 1/4)}{r^2}]u = Eu
+    \end{align}
+    を満たすとする．
+    
+    \refe{eq-for-u}で$r\to\infty$とすれば
+    \begin{align}
+      -\frac{\hbar^2}{2m}\frac{\r{d}^2 u}{\dd{u}^2} = Eu
+    \end{align}
+    であるため，
+    \begin{align}
+      R(r) = \frac{u}{\sqrt{r}} = \frac{\e^{\i kr}}{\sqrt{r}}
+    \end{align}
+    であることがわかる．
+
+    以上の結果は2次元の散乱問題の境界条件が
+    \begin{align}
+      \psi(r,\theta) \simeq \e^{\i kx} + f(\theta)\frac{\e^{\i kr}}{\sqrt{r}},\ \r{for}\ r \to \infty
+    \end{align}
+    であることを示唆している．また，2次元の部分波展開はHankel関数$H^{(1)}$を用いて，
+    \begin{align}
+      \psi(r,\theta) = \e^{\i kx} + \sum_{j} c_j H^{(1)}_j (kr) \e^{\i j\theta}
+    \end{align}
+    となる．
+  \end{myexc}
+  \begin{myexc}{Griffith example11.2}{}
+    Fermiの黄金律を用いてポテンシャル$V(\bm{r})$に対する散乱断面積を求めよ．
+    \tcblower
+    初期状態と終状態はそれぞれ入射波と散乱波であるため
+    \begin{align}
+      \psi_i = \frac{1}{\sqrt{L^3}} \e^{\i \bm{k}\cdot\bm{r}}\\
+      \psi_f = \frac{1}{\sqrt{L^3}} \e^{\i \bm{k}'\cdot\bm{r}}
+    \end{align}
+    と表される．ここで，規格化のために周期$L$の周期的境界条件を課した．また，この周期的境界条件により，
+    \begin{align}
+      \bm{k}' = \frac{2\pi}{L}(n_x \bm{e}_x + n_y \bm{e}_y + n_z \bm{e}_z)
+    \end{align}
+    が得られる．$n_x,n_y,n_z$は整数である．散乱体のポテンシャル$V(\bm{r})$を摂動として取り入れると
+    \begin{align}
+      \bra{f}\hat{V}\ket{i} = \int \psi_f^{*}V(\bm{r})\psi_i \dd{\bm{r}} = \frac{1}{L^3} \int \e^{\i(\bm{k} - \bm{k}')\cdot \bm{r}} V(\bm{r}) \dd{\bm{r}}
+    \end{align}
+    を得る．
+
+    次に，状態密度を決定する．エネルギーが$[E,E+\dd{E}]$の状態は，厚さ$k$，立体角$\dd{\Omega}$の球殻の中に
+    \begin{align}
+      \frac{k^2 \dd{k} \dd{\Omega}}{(2\pi/L)^3}
+    \end{align}
+    個含まれている．よって，
+    \begin{align}
+      \rho(E) \dd{E} = \frac{k^2 \dd{k} \dd{\Omega}}{(2\pi/L)^3} = \qty(\frac{L}{2\pi})^3 k^2 \dv{k}{E} \dd{E} \dd{\Omega}
+    \end{align}
+    $E= \frac{\hbar^2 k^2}{2m}$なので，
+    \begin{align}
+      \rho(E) = \qty(\frac{L}{2\pi})^3 \frac{\sqrt{2m^3E}}{\hbar^3} \dd{\Omega}
+    \end{align}
+    が得られる．よって，Fermiの黄金律から，単位時間に立体角$\dd{\Omega}$に粒子が到達する確率は
+    \begin{align}
+      \omega_{i\to\dd{\Omega}} = \frac{2\pi}{\hbar} \frac{1}{L^6} \abs{\int \e^{\i(\bm{k} - \bm{k}')\cdot \bm{r}} V(\bm{r}) \dd{\bm{r}}}^2 \qty(\frac{L}{2\pi})^3 \frac{\sqrt{2m^3E_f}}{\hbar^3} \dd{\Omega}
+    \end{align}
+    である．さらに，
+    \begin{align}
+      \sigma \dd{\Omega} = \frac{(\text{単位時間に立体角$\dd{\Omega}$に粒子が到達する確率})}{(単位時間単位面積当たりに粒子が入射する確率)}
+    \end{align}
+    であり，分子は入射波の確率の流れである．これは
+    \begin{align}
+      J = \frac{1}{L^3}\frac{\hbar k}{m}
+    \end{align}
+    である．以上より，散乱断面積
+    \begin{align}
+      \sigma = \frac{\omega_{i\to\dd{\Omega}}}{J \dd{\Omega}} = \abs{-\frac{m}{2\pi\hbar^2}\int \e^{\i(\bm{k}' - \bm{k})\cdot\bm{r}}V(\bm{r})\dd{\bm{r}}}^2
+    \end{align}
+    が得られる．これは第1Born近似で得られた式と同一である．
+  \end{myexc}
+\end{document}
