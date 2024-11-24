@@ -69,4 +69,65 @@
   を得る．
   \par
   以上の流れをまとめると，局所ゲージ不変性を要請することにより，ゲージ場$\bm{A}$が導入された．逆に，電磁場の起源は局所ゲージ不変性であるといえる．
+
+  \begin{myexc}{電磁場中のSchrödinger方程式}{}
+  \begin{enumerate}
+    \item 共変微分
+      \begin{align}
+        \hat{\bm{D}} = \nabla + \i\frac{e}{\hbar}\bm{A}
+      \end{align}
+      において，
+      \begin{align}
+        \hat{\bm{D}} \times \hat{\bm{D}} = \i\frac{e}{\hbar}\bm{B}
+      \end{align}
+      が成り立つことを示せ．
+    \item 電磁場中のSchrödinger方程式
+    \begin{align}
+      \i\hbar\pdv{t}\psi = \qty[\frac{1}{2m}\qty(\hat{\bm{p}} + e\hat{\bm{A}})^2 - e\phi]\psi
+    \end{align}
+    においては
+    \begin{align}
+      \frac{\partial}{\partial t} \rho + \nabla\cdot \bm{j} = 0 \label{prob-current-exercise}
+    \end{align}
+    が成り立たない．ここで，
+    \begin{align}
+      \bm{j} = \frac{\i\hbar}{2m}\qty[(\nabla \psi^{*})\psi - \psi^{*} (\nabla\psi)],\ \rho = \psi^{*}\psi
+    \end{align}
+    である．\refe{prob-current-exercise}が成り立つように確率の流れを再定義せよ．
+  \end{enumerate}
+  \tcblower
+  \begin{enumerate}
+    \item \begin{align}
+      (\hat{\bm{D}} \times \hat{\bm{D}})\psi &= \qty(\nabla + \i\frac{e}{\hbar}\bm{A}) \times \qty(\nabla + \i\frac{e}{\hbar}\bm{A})\psi\\
+      &= \qty(\nabla\times\nabla + \i\frac{e}{\hbar}\bm{A}\times\nabla + \i\frac{e}{\hbar}\nabla\times\bm{A} - \frac{e^2}{\hbar^2})\psi\\
+      &= \i\frac{e}{\hbar}\bm{A}\times(\nabla\psi) + \i\frac{e}{\hbar}(\nabla\psi)\times\bm{A} + \i\frac{e}{\hbar}(\nabla\times\bm{A})\psi\\
+      &= \bm{B}\psi
+    \end{align}
+    \item まず，確率密度の時間微分は
+      \begin{align}
+        \frac{\partial}{\partial t}\rho = \qty(\frac{\partial}{\partial t}\psi^{*}) + \psi^{*}\qty(\frac{\partial}{\partial t}\psi)
+      \end{align}
+      である．次に，電磁場中のSchrödinger方程式より，
+      \begin{align}
+        \i\hbar \frac{\partial}{\partial t} \psi &= -\frac{\hbar^2}{2m}\qty(\nabla + \i\frac{e}{\hbar}\bm{A})^2\psi - e\phi\psi\\
+        \i\hbar \frac{\partial}{\partial t} \psi^{*} &= \frac{\hbar^2}{2m}\qty(\nabla - \i\frac{e}{\hbar}\bm{A})^2\psi^{*} - e\phi\psi^{*}
+      \end{align}
+      を得る．ここで，
+      \begin{align}
+        \qty(\nabla - \i\frac{e}{\hbar}\bm{A})^2\psi^{*} &= \nabla^2\psi^{*} - \i\frac{e}{\hbar}\bm{A}\cdot(\nabla\psi^{*}) - \i\frac{e}{\hbar}(\nabla\psi^{*})\cdot\bm{A} - \i\frac{e}{\hbar}(\nabla\cdot\bm{A})\psi^{*} - \frac{e^2}{\hbar^2}\psi^{*}\\
+        &= \nabla^2\psi^{*} - 2\i\frac{e}{\hbar}\bm{A}\cdot(\nabla\psi^{*}) - \i\frac{e}{\hbar}(\nabla\cdot\bm{A})\psi^{*} - \frac{e^2}{\hbar^2}\psi^{*}\\
+        \qty(\nabla + \i\frac{e}{\hbar}\bm{A})^2\psi &=\nabla^2\psi + 2\i\frac{e}{\hbar}\bm{A}\cdot(\nabla\psi) + \i\frac{e}{\hbar}(\nabla\cdot\bm{A})\psi - \frac{e^2}{\hbar^2}\psi
+      \end{align}
+      である．よって，
+      \begin{align}
+        2m\i\frac{\partial}{\partial t}\rho &= -\nabla\cdot\qty[\psi^{*}\nabla\psi - (\nabla\psi^{*})\psi - 2\i \frac{e}{\hbar}\bm{A}\psi^{*}\psi]\\
+        &= -\nabla\cdot\qty[\psi^{*}(\nabla - \i\frac{e}{\hbar} \bm{A})\psi - ((\nabla - \i \frac{e}{\hbar}\bm{A})\psi)^{*}\psi]
+      \end{align}
+      となるため，
+      \begin{align}
+        \bm{j} = \frac{\i}{2m}\qty[\psi^{*}(\bm{D}\psi) - (\bm{D}^{*}\psi^{*})\psi]
+      \end{align}
+      と定義すればよいことがわかる．
+  \end{enumerate}
+  \end{myexc}
 \end{document}
