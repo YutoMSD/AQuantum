@@ -3,103 +3,83 @@
 \begin{document}
   全角運動量が保存するために，
   \begin{align}
-    [\hat{H}, \hat{\bm{L}} + \hat{\bm{S}}] = 0
+    \qty[\hat{H}, \hat{\bm{L}} + \hat{\bm{S}}] = 0
   \end{align}
-  を満たす$\bm{S}$がDirac方程式に含まれていると考える．
-  スピン演算子を次のように導入する．
+  なる物理量として，スピン$\hat{\bm{S}}$が存在すると考える．
+  スピン演算子を，
   \begin{align}
-    \hat{S}_x &= \frac{\hbar}{2}
-    \begin{pmatrix}
+    \hat{S}_x &\coloneqq \frac{\hbar}{2}
+    \mqty(
       \sigma_x & 0\\
-      0& \sigma_x
-    \end{pmatrix}\\
-    \hat{S}_y &= \frac{\hbar}{2}
-    \begin{pmatrix}
+      0 & \sigma_x
+    ) \\
+    \hat{S}_y &\coloneqq \frac{\hbar}{2}
+    \mqty(
       \sigma_y & 0\\
-      0& \sigma_y
-    \end{pmatrix}\\
-    \hat{S}_z &= \frac{\hbar}{2}
-    \begin{pmatrix}
+      0 & \sigma_y
+    ) \\
+    \hat{S}_z &\coloneqq \frac{\hbar}{2}
+    \mqty(
       \sigma_z & 0\\
-      0& \sigma_z
-    \end{pmatrix}
+      0 & \sigma_z
+    )
   \end{align}
-  $\sigma_i\ (i=x,y,z)$はPauli行列である．このようにスピン演算子を導入すると，これらは交換関係
+  ただし，$\sigma_i\ (i = x, y, z)$はPauli行列である．
+  このようにスピン演算子を導入すると，これらは$\alpha_i$や$\beta$との交換関係において，
   \begin{align}
-    [\alpha_i, \hat{S}_j] &= \i \hbar \epsilon_{ijk} \alpha_k\\
-    [\beta, \hat{S}_i] &= 0
+    \qty[\alpha_i, \hat{S}_j] &= \i \hbar \epsilon_{ijk} \alpha_k\\
+    \qty[\beta, \hat{S}_i] &= 0
   \end{align}
-  を満たすため
+  を満たすため，
   \begin{align}
-    [\hat{H}, \hat{S}_x] &= \i\hbar c(\alpha_y \hat{p}_z - \alpha_z \hat{p}_y)\\
-    [\hat{H}, \hat{S}_y] &= \i\hbar c(\alpha_z \hat{p}_x - \alpha_x \hat{p}_z)\\
-    [\hat{H}, \hat{S}_x] &= \i\hbar c(\alpha_x \hat{p}_y - \alpha_y \hat{p}_x)
+    \qty[\hat{H}, \hat{S}_x] &= \i\hbar c\qty(\alpha_y \hat{p}_z - \alpha_z \hat{p}_y)\\
+    \qty[\hat{H}, \hat{S}_y] &= \i\hbar c\qty(\alpha_z \hat{p}_x - \alpha_x \hat{p}_z)\\
+    \qty[\hat{H}, \hat{S}_x] &= \i\hbar c\qty(\alpha_x \hat{p}_y - \alpha_y \hat{p}_x)
   \end{align}
-  でが得られる．これらは
+  が得られる．$\hat{\bm{S}}$の定義より，
   \begin{align}
-    [\hat{H}, \hat{S}_i] = - [\hat{H}, \hat{L}_i]
+    \qty[\hat{H}, \hat{S}_i] = - \qty[\hat{H}, \hat{L}_i]
   \end{align}
   であるため，
   \begin{align}
-    [\hat{H}, \hat{L}_x + \hat{S}_x] = [\hat{H}, \hat{L}_y + \hat{S}_y] = [\hat{H}, \hat{L}_z + \hat{S}_z] = 0
+    \qty[\hat{H}, \hat{L}_x + \hat{S}_x] = \qty[\hat{H}, \hat{L}_y + \hat{S}_y] = \qty[\hat{H}, \hat{L}_z + \hat{S}_z] = 0
   \end{align}
   が成り立つ．よって，
   Dirac方程式において
   \begin{align}
-    [\hat{H}, \hat{\bm{L}} + \hat{\bm{S}}] = 0
+    \qty[\hat{H}, \hat{\bm{L}} + \hat{\bm{S}}] = 0
   \end{align}
-  であり，\textbf{全角運動量}$\bm{J} = \bm{L} + \bm{S}$が保存されることがわかる．ここで，$\bm{S} = \frac{\hbar}{2}\bm{\sigma}$は\textbf{スピン角運動量}である．
-  まとめると，非相対論的量子論では軌道角運動量$\bm{L}$が保存量であった．しかし，相対論を取り入れたDirac方程式ではスピン角運動量$\bm{S}$も含めた全角運動量$\bm{J}$が保存量なのである\footnote{
-    これを実験的に確かめたのが\textbf{Einstein-de Haas効果}や\textbf{Barnett効果}である．前者は，強磁性体の磁化の向きがそろった時，つまりスピン角運動量が変化したとき，強磁性体全体が力学的回転をするというものであり，Einsteinが生涯で
-    行った唯一の実験と言われている．後者は，逆に，力学的回転により磁化の向きがそろうというものである．これらは\textbf{磁気回転効果}(gyromagnetic effect)と言われている．磁気回転効果は常磁性体，核スピン，液体金属流体，常磁性金属薄膜，強磁性金属薄膜，クォーク・グルオンプラズマでも観測されている．
+  であり，\textbf{全角運動量}$\bm{J} \coloneqq \bm{L} + \bm{S}$が保存されることがわかる． 
+  ただし，$\bm{S} = \frac{\hbar}{2}\bm{\sigma}$は\textbf{スピン角運動量}である．
+  まとめると，非相対論的量子論では軌道角運動量$\bm{L}$が保存量であった．
+  しかし，相対論を取り入れたDirac方程式ではスピン角運動量$\bm{S}$も含めた全角運動量$\bm{J}$が保存量なのである\footnote{
+    これを実験的に確かめたのが\textbf{Einstein - de Haas効果}や\textbf{Barnett効果}である．
+    前者は，強磁性体の磁化の向きがそろった時，つまりスピン角運動量が変化したとき，強磁性体全体が力学的回転をするというものであり，Einsteinが生涯で行った唯一の実験と言われている．
+    後者は，逆に，力学的回転により磁化の向きがそろうというものである．これらは\textbf{磁気回転効果}(gyromagnetic effect)と言われている．
+    磁気回転効果は常磁性体，核スピン，液体金属流体，常磁性金属薄膜，強磁性金属薄膜，クォーク・グルオンプラズマでも観測されている．
   }．
-
-  以上の議論では，スピンの存在が自然に導入された．この議論に用いた要請は
+  以上の議論では，スピンの存在が自然に導入された．この議論に用いた要請は，
   \begin{itembox}[l]{スピンの存在のために用いた要請}
-  \begin{enumerate}
-    \item Lorentz共変性
-    \item 状態の時間発展が時間の1階微分で表されること
-  \end{enumerate}
+    \begin{enumerate}
+      \item Lorentz共変性
+      \item 状態の時間発展が時間の1階微分で表されること
+    \end{enumerate}
   \end{itembox}
-  である．1はSchrödinger方程式と相対論の矛盾を解決するために用いた．2は波動関数の確率解釈を可能にするために用いた．以上の要請からDirac方程式が
-  導かれ，その式にはスピンの存在が内包されていた．
-
-  ここで，Dirac方程式の平面波解
-  \begin{align}
-    \psi_{\uparrow}^{+}
-    =
-    \e^{\i(kz-\omega t)}
-    \begin{pmatrix}
-      1\\0\\0\\0
-    \end{pmatrix}\ 
-    \psi_{\downarrow}^{+}
-    =
-    \e^{\i(kz-\omega t)}
-    \begin{pmatrix}
-      0\\1\\0\\0
-    \end{pmatrix}\ 
-    \psi_{\uparrow}^{-}
-    =
-    \e^{\i(kz-\omega t)}
-    \begin{pmatrix}
-      0\\0\\1\\0
-    \end{pmatrix}\ 
-    \psi_{\downarrow}^{-}
-    =
-    \e^{\i(kz-\omega t)}
-    \begin{pmatrix}
-      0\\0\\0\\1
-    \end{pmatrix}
-  \end{align}
-  に$\hat{S}_z$を作用させてみると，
+  である．
+  1. はSchrödinger方程式と相対論の矛盾を解決するために用いた．
+  2. は波動関数の確率解釈を可能にするために用いた．
+  以上の要請からDirac方程式が導かれ，その式にはスピンの存在が内包されていた．
+  \par
+  \refe{dirac-plane-particle-up}から\refe{dirac-plane-antiparticle-down}で表したDirac方程式の平面波解と，$\hat{S}_z$の関係を調べる．
+  平面波解に$\hat{S}_z$を作用させてみると，
   \begin{align}
     \begin{dcases}
-      \hat{S}_z \psi^{+}_{\uparrow} &= \frac{\hbar}{2}\psi^{+}_{\uparrow}\\
-      \hat{S}_z \psi^{+}_{\downarrow} &= -\frac{\hbar}{2}\psi^{+}_{\downarrow}
+      \hat{S}_z \psi^{+}_{\uparrow} = \frac{\hbar}{2}\psi^{+}_{\uparrow}\\
+      \hat{S}_z \psi^{+}_{\downarrow} = -\frac{\hbar}{2}\psi^{+}_{\downarrow}
     \end{dcases}\\
     \begin{dcases}
-      \hat{S}_z \psi^{-}_{\uparrow} &= \frac{\hbar}{2}\psi^{-}_{\uparrow}\\
-      \hat{S}_z \psi^{-}_{\downarrow} &= -\frac{\hbar}{2}\psi^{-}_{\downarrow}
+      \hat{S}_z \psi^{-}_{\uparrow} = \frac{\hbar}{2}\psi^{-}_{\uparrow}\\
+      \hat{S}_z \psi^{-}_{\downarrow} = -\frac{\hbar}{2}\psi^{-}_{\downarrow}
     \end{dcases}
   \end{align}
   が成り立つ．よって，平面波解は$\hat{S}_z$の固有状態であることがわかる．
@@ -107,10 +87,10 @@
   全角運動量以外の保存量として\textbf{ヘリシティ}がある\footnote{授業では触れていない．}．
   \begin{align}
     \bm{\bm{S}} = 
-    \begin{pmatrix}
+    \mqty(
       \bm{\sigma} & 0\\
       0 & \bm{\sigma}
-    \end{pmatrix}
+    )
   \end{align}
   として，ヘリシティは
   \begin{align}
@@ -120,24 +100,24 @@
   これが保存量であることは以下のように確かめられる．
   \begin{align}
     (\bm{\alpha} \cdot \hat{\bm{p}}) \hat{h} &= \frac{1}{p}
-    \begin{pmatrix}
+    \mqty(
       0 & \bm{\sigma} \cdot \hat{\bm{p}}\\
       \bm{\sigma} \cdot \hat{\bm{p}} & 0
-    \end{pmatrix}
-    \begin{pmatrix}
+    )
+    \mqty(
       \bm{\sigma} \cdot \hat{\bm{p}} & 0\\
       0 & \bm{\sigma} \cdot \hat{\bm{p}}
-    \end{pmatrix}\\
+    )\\
     &= \frac{1}{p}
-    \begin{pmatrix}
+    \mqty(
       0 & (\bm{\sigma} \cdot \hat{\bm{p}})(\bm{\sigma} \cdot \hat{\bm{p}})\\
       (\bm{\sigma} \cdot \hat{\bm{p}})(\bm{\sigma} \cdot \hat{\bm{p}}) & 0
-    \end{pmatrix}\\
+    )\\
     &=\frac{1}{p}
-    \begin{pmatrix}
+    \mqty(
       0 & \hat{\bm{p}}^2\\
       \hat{\bm{p}}^2 & 0
-    \end{pmatrix}\\
+    )\\
     &= \hat{h}(\bm{\alpha}\cdot \hat{\bm{p}})
   \end{align}
   よって

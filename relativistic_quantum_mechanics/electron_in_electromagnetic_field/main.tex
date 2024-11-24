@@ -1,0 +1,140 @@
+\documentclass{report}
+\input{../../head.tex}
+\begin{document}
+  最後に，電磁場中の電子を考え，Dirac方程式の非相対論的極限($\abs{\hat{\bm{p}}} \ll c$)がSchrödinger方程式であることを示す．
+  Dirac方程式は，
+  \begin{align}
+    \i\hbar\pdv{t}\psi = (c \bm{\alpha}\cdot \hat{\bm{p}} + \beta mc^2)\psi
+  \end{align}
+  と書けるのであった．
+  Dirac方程式に電磁場を，
+  \begin{align}
+    \begin{dcases}
+      \hat{\bm{p}} \to \hat{\bm{p}} + e\bm{A} & e > 0 \label{how-to-introduce-emfield}\\
+      \phi = 0
+    \end{dcases}
+  \end{align}
+  のように導入する．
+  \refe{how-to-introduce-emfield}を用いると，
+  \begin{align}
+    \i\hbar\pdv{t}\psi = \qty[c \bm{\alpha}\cdot \qty(\hat{\bm{p}} + e\bm{A}) + \beta mc^2]\psi \label{dirac-eq-in-emfield}
+  \end{align}
+  である．解の形を，
+  \begin{align}
+    \psi = \mqty(\psi_1 \\ \psi_2 \\ \psi_3 \\ \psi_4) =
+    \mqty(\psi_a \\ \psi_b)\label{psi-change-form}
+  \end{align}
+  とする．
+  \refe{psi-change-form}を\refe{dirac-eq-in-emfield}に代入すると，
+  \begin{align}
+    \i\hbar\pdv{t}\mqty(\psi_a\\ \psi_b) &= \mqty(
+      0 & c\bm{\sigma} \cdot (\hat{\bm{p}} + e \bm{A})\\
+      c\bm{\sigma} \cdot (\hat{\bm{p}} + e \bm{A}) & 0
+    )\mqty(\psi_a \\ \psi_b) + \mqty(
+      mc^2 & 0 \\
+      0 & -mc^2
+    )\mqty(\psi_a\\ \psi_b)\\
+    \Leftrightarrow \i\hbar\pdv{t}\mqty(\psi_a\\ \psi_b) &= c\bm{\sigma}\cdot(\hat{\bm{p}} + e\bm{A})\mqty(\psi_b \\ \psi_a) + mc^2\mqty(\psi_a \\ -\psi_b)\label{psi-change-form-2}
+  \end{align}
+  となる．
+  また，粒子のエネルギーを静止質量エネルギー($mc^2$)と非相対論的エネルギーの項($\epsilon_{\r{NR}}$)に分けて，
+  \begin{align}
+    \epsilon \sim mc^2 + \epsilon_{\r{NR}}
+  \end{align}
+  とする．
+  波動関数の時間発展を，
+  \begin{align}
+    \mqty(\psi_a \\ \psi_b)
+    = \mqty(\psi_a^{(0)} \\ \psi_b^{(0)})
+    \exp\qty(-\i \frac{mc^2}{\hbar}t)\label{wave-func-change-into-2}
+  \end{align}
+  のように書く．\refe{wave-func-change-into-2}を用いると\refe{psi-change-form-2}は，
+  \begin{align}
+    \i\hbar\pdv{t}\mqty(\psi_a\\ \psi_b) &= c\bm{\sigma}\cdot(\hat{\bm{p}} + e\bm{A})\mqty(\psi_b \\ \psi_a) + mc^2\mqty(\psi_a \\ -\psi_b) \\ 
+    \Leftrightarrow \i\hbar\qty[\pdv{t}\mqty(\psi_a^{(0)} \\ \psi_b^{(0)}) + \qty(-\i\frac{mc^2}{\hbar})\mqty(\psi_a^{(0)} \\ \psi_b^{(0)})]\exp\qty(-\i\frac{mc^2}{\hbar}t)
+    &= c\bm{\sigma}\cdot(\hat{\bm{p}} + e\bm{A})\mqty(\psi_b^{(0)} \\ \psi_a^{(0)})\exp\qty(-\i\frac{mc^2}{\hbar}t) + mc^2\mqty(\psi_a^{(0)} \\ -\psi_b^{(0)})\exp\qty(-\i\frac{mc^2}{\hbar}t) \\ 
+    \Leftrightarrow \i\hbar\pdv{t}\mqty(\psi_a^{(0)} \\ \psi_b^{(0)}) &= c\bm{\sigma}\cdot(\hat{\bm{p}} + e\bm{A})\mqty(\psi_b^{(0)} \\ \psi_a^{(0)}) -2mc^2\mqty(0 \\ -\psi_b^{(0)}) \label{before-divide-mc2}
+  \end{align}
+  が得られる．
+  \refe{before-divide-mc2}の第2成分を抜き出して考える．
+  両辺を$mc^2$で割ると，
+  \begin{align}
+    \frac{1}{mc^2}\qty(\i\hbar\pdv{t}\psi_b^{(0)}) = \frac{\bm{\sigma}\cdot(\hat{\bm{p}} + e\bm{A})}{mc}\psi^{(0)}_a - 2 \psi^{(0)}_b
+  \end{align}
+  である．左辺は，
+  \begin{align}
+    \frac{1}{mc^2}\qty[\i\hbar\pdv{t}\exp\qty(-\i\frac{\epsilon_{\r{NR}}}{\hbar} t)] \propto \frac{\epsilon_{\r{NR}}}{mc^2}
+  \end{align}
+  である．
+  また，
+  \begin{align}
+    \epsilon_{\r{NR}} = \frac{\hat{\bm{p}}^2}{2m}
+  \end{align}
+  だから非相対論的極限($\abs{\hat{\bm{p}}} \ll c$)で左辺は0となる．よって，
+  \begin{align}
+    \psi_b^{(0)} = \frac{\bm{\sigma}\cdot(\hat{\bm{p}} + e\bm{A})}{2mc}\psi^{(0)}_a\label{particle-antiparticle}
+  \end{align}
+  を得る．
+  \refe{particle-antiparticle}は粒子解と反粒子解を結ぶ式である．
+  また，\refe{particle-antiparticle}から，反粒子の成分$\psi^{(0)}_b$は粒子の成分$\psi^{(0)}_a$より$v/c$のオーダーで小さく，非相対論的極限では重要ではないことがわかる．
+  \refe{particle-antiparticle}を用いると\refe{before-divide-mc2}の第1成分は，
+  \begin{align}
+    \i\hbar\pdv{t}\psi^{(0)}_a &= c\bm{\sigma} \cdot (\hat{\bm{p}} + e\bm{A})\psi_b^{(0)}\\
+    &= \frac{\qty[\bm{\sigma}\cdot\qty(\hat{\bm{p}} + e\bm{A})]\qty[\bm{\sigma}\cdot\qty(\hat{\bm{p}} + e\bm{A})]}{2m}\psi^{(0)}_a
+  \end{align}
+  と書き直される．$\qty[\bm{\sigma}\cdot\qty(\hat{\bm{p}} + e\bm{A})]\qty[\bm{\sigma}\cdot\qty(\hat{\bm{p}} + e\bm{A})]$を計算する．
+  Pauli行列には，
+  \begin{align}
+    (\bm{\sigma}\cdot\hat{\bm{a}})(\bm{\sigma}\cdot\hat{\bm{b}}) &= (\sum_{i} \sigma_i \hat{a}_i) (\sum_{j} \sigma_j \hat{a}_j)\\
+    &= \sum_{i} \sum_{j} \sigma_{i} \sigma_{j} \hat{a}_i \hat{b}_j\\
+    &= \sum_{i} \sum_{j} \frac{1}{2}(\qty{\sigma_i, \sigma_j} + [\sigma_i, \sigma_j]) \hat{a}_i \hat{b}_j\\
+    &= \sum_{i} \sum_{j} \frac{1}{2}(2 \delta_{i,j} + 2\i \sum_{k} \epsilon_{ijk} \sigma_k) \hat{a}_i \hat{b}_j\\
+    &= \sum_{i} \hat{a}_i \hat{b}_i + \i \sigma_k \sum_{i} \sum_{j} \sum_{k} \epsilon_{ijk} \hat{a}_i \hat{b}_j\\
+    &= \hat{\bm{a}}\cdot\hat{\bm{b}} + \i \sum_{k} \sigma_k (\hat{\bm{a}} \times \hat{\bm{b}})_k\\
+    &= \hat{\bm{a}}\cdot\hat{\bm{b}} + \i \bm{\sigma} \cdot (\hat{\bm{a}} \times \hat{\bm{b}}) \label{pauli-inner-product}
+  \end{align}
+  なる性質がある．
+  ここで$\epsilon_{ijk}$はLevi-Civitaの完全反対称テンソルで
+  \begin{align}
+    \epsilon_{ijk} = 
+    \begin{dcases}
+      1 & (i, j, k) = (x, y, z), (y, z, x), (z, x, y) \\
+      -1 & (i, j, k) = (z, y, x), (y, x, z), (x, z, y) \\
+      0 & \text{otherwise}
+    \end{dcases}
+  \end{align}
+  である．
+  Levi-Civitaの完全反対称テンソルを使えば外積は，
+  \begin{align}
+    \qty(\bm{a} \times \bm{b})_k = \sum_{i} \sum_{j} \epsilon_{ijk} a_i b_j
+  \end{align}
+  と表される．また，$\qty{\hat{A},\hat{B}}$は反交換関係で
+  \begin{align}
+    \qty{\hat{A},\hat{B}} \coloneqq \hat{A}\hat{B} + \hat{B}\hat{A}
+  \end{align}
+  という演算子である．
+  \refe{pauli-inner-product}を用いると，
+  \begin{align}
+    \qty[\bm{\sigma}\cdot\qty(\hat{\bm{p}} + e\bm{A})]\qty[\bm{\sigma}\cdot\qty(\hat{\bm{p}} + e\bm{A})] &= \qty(\hat{\bm{p}} + e\bm{A})^2 + \i \bm{\sigma} \cdot \qty[\qty(\hat{\bm{p}} + e\bm{A}) \times (\hat{\bm{p}} + e\bm{A})]\\
+    &= \qty(\hat{\bm{p}} + e\bm{A})^2 + \i e \bm{\sigma} \cdot \qty[\qty(\bm{A} \times \hat{\bm{p}}) + \qty(\hat{\bm{p}} \times e\bm{A})]\\
+  \end{align}
+  と変形される．ここで，
+  \begin{align}
+    \qty[\qty(\bm{A} \times \hat{\bm{p}}) + \qty(\hat{\bm{p}} \times e\bm{A})]\psi &= \qty(\bm{A} \times \hat{\bm{p}})\psi + \qty(\hat{\bm{p}} \times \bm{A})\psi\\
+    &= -\i \hbar \qty[\qty(\bm{A} \times \grad) \psi + \qty(\grad \times \bm{A}) \psi]\\
+    &= -\i\hbar \qty[\bm{A} \times \qty(\grad \psi) + \qty(\grad\psi)\times \bm{A} + \qty(\grad \times \bm{A}) \psi]\\
+    &= -\i\hbar \qty[-\qty(\grad\psi)\times \bm{A} + \qty(\grad\psi)\times \bm{A} + \qty(\grad \times \bm{A}) \psi]\\
+    &= -\i\hbar\qty(\grad \times \bm{A}) \psi
+  \end{align}
+  が成り立つ．以上より，
+  \begin{align}
+    \qty[\bm{\sigma}\cdot\qty(\hat{\bm{p}} + e\bm{A})]\qty[\bm{\sigma}\cdot\qty(\hat{\bm{p}} + e\bm{A})] &= \qty(\hat{\bm{p}} + e\bm{A})^2 + e\hbar \bm{\sigma}\cdot\qty(\grad \times \bm{A})\\
+    &= \qty(\hat{\bm{p}} + e\bm{A})^2 + e\hbar \bm{\sigma} \cdot \bm{B}
+  \end{align}
+  したがって，
+  \begin{align}
+    \i\hbar \pdv{t} \psi_a^{(0)} = \qty[\frac{1}{2m} (\hat{\bm{p}} + e\bm{A})^2 + \frac{e\hbar}{2m}\bm{\sigma}\cdot\bm{B}] \psi_a^{(0)}
+  \end{align}
+  が得られる．右辺第2項$\frac{e\hbar}{2m}\bm{\sigma}\cdot\bm{B}$はZeeman相互作用によるエネルギーを表す．これは磁場中の自由粒子のSchrödinger方程式と一致している．つまり，
+  電磁場中の自由粒子のDirac方程式の非相対論的極限は，電磁場中の自由粒子のSchrödinger方程式と一致する．
+  \end{document}

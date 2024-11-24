@@ -21,64 +21,52 @@
     \end{align}
     が不変量であることが導かれる．
     \par
-    次に，世界長さ不変性から，慣性系間の座標変換の法則である\textbf{Lorentz変換}(Lorentz Transformation)を導く．
-    慣性系$X'$が$x$軸正の方向に速さ$v$で移動しているとする．このとき$y=y'，z=z'$である．わかりやすいように$T=\i t$とおく．光速不変より，
+    次に，世界長さ不変性から，慣性系間の座標変換の法則である\textbf{Lorentz変換}(Lorentz Transformation)を導く
+    慣性系$X'$が$x$軸正の方向に速さ$v$で移動しているとする．このとき$y=y'，z=z'$である．わかりやすいように$T=\i t$とおく．
+    世界長さは座標系に依らないから，
     \begin{align}
       x^2 - (ct)^2 &= x'^2 - (ct')^2\\
       x^2 + (cT)^2 &= x'^2 + (cT)^2
     \end{align}
     が成り立つ．これが回転座標変換と類似していることから，
     \begin{align}
-      \begin{pmatrix}
-        cT' \\ x'
-      \end{pmatrix}
-      =
-      \begin{pmatrix}
+      \mqty(cT' \\ x') 
+      = \mqty(
         \cos\theta & -\sin\theta\\
         \sin\theta & \cos\theta
-      \end{pmatrix}
-      \begin{pmatrix}
-        cT\\x
-      \end{pmatrix}
+      )
+      \mqty(cT \\ x)
     \end{align}
-    と置く．表示を$t$に戻すと
+    と書ける．表示を$t$に戻すと，
     \begin{align}
-      \begin{pmatrix}
-        ct' \\ x'
-      \end{pmatrix}
+      \mqty(ct' \\ x')
       =
-      \begin{pmatrix}
+      \mqty(
         \cos\theta & \i\sin\theta\\
         \i\sin\theta & \cos\theta
-      \end{pmatrix}
-      \begin{pmatrix}
-        ct\\x
-      \end{pmatrix}
+      )
+      \mqty(ct\\ x)
     \end{align}
     である．さらに，$\theta = \i\phi$とすると
     \begin{align}
-      \begin{pmatrix}
-        ct' \\ x'
-      \end{pmatrix}
+      \mqty(ct' \\ x')
       =
-      \begin{pmatrix}
+      \mqty(
         \cosh\phi & -\sinh\phi\\
         -\sinh\phi & \cosh\phi
-      \end{pmatrix}
-      \begin{pmatrix}
-        ct\\x
-      \end{pmatrix}
+      )
+      \mqty(ct\\ x)
     \end{align}
     となる．よって，
     \begin{align}
       x' = (-\sinh\phi)ct + (\cosh\phi)x
     \end{align}
     を得る．$X$系において時刻$t$が経過したとする．$X$系から見る$X'$系の原点の位置は$x=vt$である．一方，$X'$系から見ると$x'=0$である．
-    よって上式から
+    よって上式から，
     \begin{align}
       0 = (-\sinh\phi)ct + (\cosh\phi)vt
     \end{align}
-    が成り立つ．よって，これを変形すると
+    が成り立つ．よって，
     \begin{align}
       \frac{v}{c} = \frac{\sinh\phi}{\cosh\phi} = \tanh\phi
     \end{align}
@@ -92,19 +80,14 @@
     であることがわかる．したがって，
     \begin{itembox}[l]{Lorentz変換}
       \begin{align}
-        \label{LorentzTransformation}
-        \begin{pmatrix}
-          ct' \\ x'
-        \end{pmatrix}
+        \mqty(ct' \\ x')
         =
         \frac{1}{\sqrt{1 - (v/c)^2}}
-        \begin{pmatrix}
+        \mqty(
           1 & -v/c\\
           -v/c & 1
-        \end{pmatrix}
-        \begin{pmatrix}
-          ct\\x
-        \end{pmatrix}
+        )
+        \mqty(ct\\ x)\label{LorentzTransformation}
       \end{align}
     \end{itembox}
     を得る．Lorentz変換
@@ -116,335 +99,332 @@
       x' = x - vt
     \end{align}
     となる．これはGalilei変換と一致している．
-
-  次に，相対論的効果を取り込んだ速度の合成則について示す．状況は，$X$系は静止し，$X'$系が速さ$v$で$x$軸方向に移動しているとする．さらに$X'$系では粒子が速さ$u'$で$x'$軸方向に運動している．
-  $X$系から見た粒子の速度$V$を求める．式(\ref{LorentzTransformation})において$v\to -v$とすると
-  \begin{align}
-    \begin{pmatrix}
-      c\dd{t} \\ \dd{x}
-    \end{pmatrix}
-    =
-    \frac{1}{\sqrt{1 - (v/c)^2}}
-    \begin{pmatrix}
-      1 & v/c\\
-      v/c & 1
-    \end{pmatrix}
-    \begin{pmatrix}
-      c\dd{t'}\\\dd{x'}
-    \end{pmatrix}
-  \end{align}
-  となる．$V=\dv{x}{t}$なので
-  \begin{align}
-    V = \dv{x}{t} &= \frac{v \dd{t'} + \dd{x'}}{\dd{t'} + (v/c^2)\dd{x'}}\\
-    &= \frac{v + \dv{x'}{t'}}{1 + (v/c^2)\dv{x'}{t'}}\\
-    &= \frac{v + u'}{1 + \frac{vu'}{c^2}}
-  \end{align}
-  を得る．
-  \begin{itembox}[l]{速度の合成}
+  \subsection{速度の合成則}
+    次に，相対論的効果を取り込んだ速度の合成則について示す．
+    $X$系は静止し，$X'$系が速さ$v$で$x$軸方向に移動しているとする．
+    さらに$X'$系では粒子が速さ$u'$で$x'$軸方向に運動している．
+    $X$系から見た粒子の速度$V$を求める．\refe{LorentzTransformation}において$v\to -v$とすると，
     \begin{align}
-      V = \frac{v + u'}{1 + \frac{vu'}{c^2}}
+      \mqty(c\dd{t} \\ \dd{x})
+      =
+      \frac{1}{\sqrt{1 - (v/c)^2}}
+      \mqty(
+        1 & v/c\\
+        v/c & 1
+      )
+      \mqty(c\dd{t'}\\ \dd{x'})
     \end{align}
-  \end{itembox}
-  例として$u' = v = c$とすると
-  \begin{align}
-    V = \frac{2c}{1+c^2/c^2} = c
-  \end{align}
-  である．速度が合成されても光速を超えることは決してないことがわかる．
-
-  \textbf{Lorentz収縮}(Length Contractions)について説明する．速さ$v$で運動している$X'$系から，$t'=0$において，静止している$X$系の2点を見る．1点は原点$O:(x,t)=(0,0)$
-  もう1点は$P:(x,t)=(L,t)$とする．まず，原点$O$は$X'$系から見ると
-  \begin{align}
-    \begin{pmatrix}
-      ct' \\ x'
-    \end{pmatrix}
-    =
-    \frac{1}{\sqrt{1 - (v/c)^2}}
-    \begin{pmatrix}
-      1 & -v/c\\
-      -v/c & 1
-    \end{pmatrix}
-    \begin{pmatrix}
-      0\\0
-    \end{pmatrix}
-    =
-    \begin{pmatrix}
-      0\\0
-    \end{pmatrix}
-  \end{align}
-  である．点$P$を$X'$系から見ると，
-  \begin{align}
-    \begin{pmatrix}
-      ct' \\ x'
-    \end{pmatrix}
-    =
-    \frac{1}{\sqrt{1 - (v/c)^2}}
-    \begin{pmatrix}
-      1 & -v/c\\
-      -v/c & 1
-    \end{pmatrix}
-    \begin{pmatrix}
-      ct\\L
-    \end{pmatrix}
-    =
-    \frac{1}{\sqrt{1 - (v/c)^2}}
-    \begin{pmatrix}
-      ct - \frac{v}{c}L\\-vt + L
-    \end{pmatrix}
-  \end{align}
-  である．$t'=0$で観測しているため，$t'=0$を代入し
-  \begin{align}
-    0 = ct - \frac{v}{c}L\\
-    t = \frac{v}{c^2}L
-  \end{align}
-  を得る．よって，
-  \begin{align}
-    x' = \frac{1}{\sqrt{1 - (v/c)^2}} \qty(-\qty(\frac{v}{c})^2 L + L) = \sqrt{1-\qty(\frac{v}{c})^2}L
-  \end{align}
-  である．これは動いている慣性系から静止系での距離($L$)を測る($L'$)と縮んで見えることを意味している．
-  \begin{itembox}[l]{Lorentz収縮}
+    となる．$V=\dv{x}{t}$なので，
     \begin{align}
-      L' = \sqrt{1-\qty(\frac{v}{c})^2}L
+      V = \dv{x}{t} &= \frac{v \dd{t'} + \dd{x'}}{\dd{t'} + (v/c^2)\dd{x'}}\\
+      &= \frac{v + \dv{x'}{t'}}{1 + (v/c^2)\dv{x'}{t'}}\\
+      &= \frac{v + u'}{1 + vu' / c^2}
     \end{align}
-  \end{itembox}
-  また，その対象に対して静止している観測者が測った距離を\textbf{固有長さ}(proper length)という．今回は$L$が固有長さである．
-
-  次に\textbf{時間の遅れ}(Time Dilations)について説明する．同様の$X$系と$X'$系を考える．時計が$X'$系の原点$x'=0$に置かれており，観測者は$X'$系においてこの時計を見ている．
-  $X'$系に置かれた時計の時刻が$t'$のときの時空点$P_1$，$t'+\Delta T_0$の時空点を$P_2$とする．$P_1$は，
-  \begin{align}
-    \begin{pmatrix}
-      ct_1 \\ x_1
-    \end{pmatrix}
-    =
-    \frac{1}{\sqrt{1 - (v/c)^2}}
-    \begin{pmatrix}
-      1 & v/c\\
-      v/c & 1
-    \end{pmatrix}
-    \begin{pmatrix}
-      ct'\\0
-    \end{pmatrix}
-    =
-    \frac{1}{\sqrt{1 - (v/c)^2}}
-    \begin{pmatrix}
-      ct'\\vt'
-    \end{pmatrix}
-  \end{align}
-  $P_2$は，
-  \begin{align}
-    \begin{pmatrix}
-      ct_1 \\ x_1
-    \end{pmatrix}
-    =
-    \frac{1}{\sqrt{1 - (v/c)^2}}
-    \begin{pmatrix}
-      1 & v/c\\
-      v/c & 1
-    \end{pmatrix}
-    \begin{pmatrix}
-      c(t' + \Delta T_0)\\0
-    \end{pmatrix}
-    =
-    \frac{1}{\sqrt{1 - (v/c)^2}}
-    \begin{pmatrix}
-      c(t' + \Delta T_0)\\v(t' + \Delta T_0)
-    \end{pmatrix}
-  \end{align}
-  である．よって，$X$系での時間経過$\Delta T = t_2 - t_1$は，
-  \begin{align}
-    \Delta T = t_2 - t_1 = \frac{1}{\sqrt{1 - (v/c)^2}} \Delta T_0
-  \end{align}
-  である．これは$X'$系は$X$系に比べて時間の流れが遅いことを示している．
-  \begin{itembox}[l]{時間の遅れ}
+    を得る．
+    \begin{itembox}[l]{速度の合成}
+      \begin{align}
+        V = \frac{v + u'}{1 + vu'/ c^2}
+      \end{align}
+    \end{itembox}
+    例として$u' = v = c$とすると
     \begin{align}
-      \Delta T = \frac{1}{\sqrt{1 - (v/c)^2}} \Delta \tau
+      V = \frac{2c}{1+c^2/c^2} = c
     \end{align}
-  \end{itembox}
-  観測者に対して2つの事象が同一の空間座標で起きたとき，その時間間隔$\Delta \tau$を\textbf{固有時間}(proper time)という．
-
-  電磁場の双対性について説明する．マクスウェル方程式は3次元では次の4つの式である．
-  \begin{align}
-    \begin{dcases}
-      \grad \cdot \bm{D} = \rho \\
-      \grad \cdot \bm{B} = 0\\
-      \grad \times \bm{E} = - \frac{\partial \bm{B}}{\partial t}\\
-      \grad \times \bm{H} = \frac{\partial \bm{D}}{\partial t} + \bm{j}
-    \end{dcases}
-  \end{align}
-  これをLorentz変換に対して共変な形式に書き直す．まず，$\bm{B}$と$bm{E}$はベクトルポテンシャル$\bm{A}$とスカラーポテンシャル$\phi$を
-  用いて
-  \begin{align}
-    \begin{dcases}
-      \bm{E} = -\grad \phi - \frac{\partial \bm{A}}{\partial t}\\
-      \bm{B} = \grad \times \bm{A}
-    \end{dcases}
-  \end{align}
-  と表される．ここで，座標を
-  \begin{align}
-    (x^0, x^1, x^2, x^3) = (ct, x, y, z)
-  \end{align}
-  と表し\footnote{
-   このような4次元空間を\textbf{Minkovski空間}という． 
-  }，
-  4元ベクトルポテンシャルを
-  \begin{align}
-    A^{\mu} &= (\phi, c\bm{A})\\
-    A_{\mu} &= (\phi, -c\bm{A})
-  \end{align}
-  と定義する．この4元ベクトルポテンシャルを使うと電場と磁場は
-  \begin{align}
-    B_x &= c \frac{\partial A_z}{\partial y} - c \frac{\partial A_y}{\partial z}\\
-    &= -\frac{\partial A_3}{\partial x^2} + \frac{\partial A_2}{\partial x^3}\\
-    &= \partial_3 A_2 - \partial_2 A_3\\
-    E_x &= -\frac{\partial \phi}{\partial x} - \frac{\partial A_x}{\partial t}\\
-    &= -\frac{\partial A_0}{\partial x^1} + \frac{\partial A_1}{\partial x^0}\\
-    &= \partial_0 A_1 - \partial_1 A_0
-  \end{align}
-  のように書ける．ここで，電磁場テンソル
-  \begin{align}
-    F_{\mu\nu} = \partial_{\mu}A_\nu - \partial_\nu A_\mu
-  \end{align}
-  を定義する．これを行列の形で表すと
-  \begin{align}
-    F_{\mu\nu}=
-    \begin{pmatrix}
-      F_{00} & F_{01} & F_{02} & F_{03}\\
-      F_{10} & F_{11} & F_{12} & F_{13}\\
-      F_{20} & F_{21} & F_{22} & F_{23}\\
-      F_{30} & F_{31} & F_{32} & F_{33}
-    \end{pmatrix}
-    =
-    \begin{pmatrix}
-      0 & E_x & E_y & E_z \\
-      -E_x & 0 & -cB_z & cB_y\\
-      -E_y & cB_z & 0 & -cB_x\\
-      -E_z& -cB_y & cB_x & 0
-    \end{pmatrix}
-  \end{align}
-  である．明らかに$F_{\mu\nu} = -F_{\nu\mu}$である．また，この定義から
-  \begin{align}
-    \partial_\mu F_{\nu\lambda} + \partial_\nu F_{\lambda\mu} + \partial_\lambda F_{\mu\nu} = 0
-  \end{align}
-  が成り立つ．実際に計算してみると
-  \begin{align}
-    &\partial_\mu F_{\nu\lambda} + \partial_\nu F_{\lambda\mu} + \partial_\lambda F_{\mu\nu} \\
-    &= (\partial_\mu\partial_\nu A_\lambda - \partial_\mu\partial_\lambda A_\nu) + (\partial_\nu\partial_\lambda A_\mu - \partial_\nu\partial_\mu A_\lambda)
-    + (\partial_\lambda\partial_\mu A_\nu - \partial_\lambda\partial_\nu A_\mu)\\
-    &= 0
-  \end{align}
-  である．これはFaradayの電磁誘導の法則と磁束密度に関するGaussの法則を表している．
-  例えば$\mu = 0,\nu = 1, \lambda =2$とすると
-  \begin{align}
-    &\partial_0 F_{12} + \partial_1 F_{20} + \partial_2 F_{01}\\
-    &= -\frac{\partial (cB_z)}{\partial (ct)} + \frac{\partial}{\partial x}(-E_y) + \frac{\partial}{\partial y}(-E_x)\\
-    &= -(\grad\times \bm{E})_z - \frac{\partial B_z}{\partial t} = 0
-  \end{align}
-  $\mu=1,\nu=2,\lambda=3$とすると
-  \begin{align}
-    &\partial_1 F_{23} + \partial_2 F_{31} + \partial_3 F_{12}\\
-    &= c(\partial_xB_x + \partial_yB_y + \partial_zB_Z)\\
-    &= c\grad\cdot\bm{B} = 0
-  \end{align}
-  が得られる．さらに，磁場/電束密度テンソル$H_{\mu\nu}$を
-  \begin{align}
-    H_{\mu\nu}=
-    \begin{pmatrix}
-      H_{00} & H_{01} & H_{02} & H_{03}\\
-      H_{10} & H_{11} & H_{12} & H_{13}\\
-      H_{20} & H_{21} & H_{22} & H_{23}\\
-      H_{30} & H_{31} & H_{32} & H_{33}
-    \end{pmatrix}
-    =
-    \begin{pmatrix}
-      0 & cD_x & cD_y & cD_z \\
-      -cD_x & 0 & -H_z & H_y\\
-      -cD_y & H_z & 0 & -H_x\\
-      -cD_z& -H_y & H_x & 0
-    \end{pmatrix}
-  \end{align}
-  4次元の電流密度を$j^{\mu}$を
-  \begin{align}
-    j^{\mu} = (c\rho, \bm{j})
-  \end{align}
-  と定義する．明らかに$H_{\mu\nu} = -H_{\nu\mu}$である．
-  すると，電束密度に関するGaussの法則とAmpèreの法則は次の式で表される．
-  \begin{align}
-    \partial^{\nu}H_{\nu\mu}=j_\mu
-  \end{align}
-  例えば$\mu=0$とすると
-  \begin{align}
-    \partial^1H_{10}+\partial^2H_{20} + \partial^3H_{30} &= j_0\\
-    \partial_xD_x + \partial_yD_y + \partial_zD_z = \rho\\
-    \grad\cdot\bm{D} = \rho
-  \end{align}
-  が導かれる．さらに，電荷保存則
-  \begin{align}
-    \frac{\partial \rho}{\partial t} + \grad\cdot\bm{j} = 0
-  \end{align}
-  から
-  \begin{align}
-    \frac{\partial (c\rho)}{\partial (ct)} + \grad\cdot\bm{j} = 0
-  \end{align}
-  よって
-  \begin{align}
-    \partial_\mu j^\mu = 0
-  \end{align}
-  が得られる．以上をまとめるとMaxwell方程式は
-  \begin{align}
-    \begin{dcases}
-      \partial_\mu F_{\nu\lambda} + \partial_\nu F_{\lambda\mu} + \partial_\lambda F_{\mu\nu} = 0\\
-      \partial^{\nu}H_{\nu\mu}=j_\mu\\
-      \partial_\mu j^\mu = 0
-    \end{dcases}
-  \end{align}
-  と書くことができる．これらの式はテンソルとテンソル，ベクトルとベクトルというように，Lorentz変換に対して
-  同じ変換則をもつものどうしが結ばれている．よってこれらはLorentz変換に対して共変である．
-  \begin{itembox}[l]{Lorentz変換に対して共変なMaxwell方程式}
+    である．速度が合成されても光速を超えることは決してないことがわかる．
+  \subsection{Lorentz収縮}
+    \textbf{Lorentz収縮}(Length Contractions)について説明する．
+    速さ$v$で運動している$X'$系から，$t' = 0$において，静止している$X$系の2点を見る．
+    1点は原点$O:(x, t) = (0, 0)$，もう1点は$P:(x, t) = (L, t)$である．
+    まず，原点$O$は$X'$系から見ると，
     \begin{align}
-      &\partial_\mu F_{\nu\lambda} + \partial_\nu F_{\lambda\mu} + \partial_\lambda F_{\mu\nu} = 0\\
-      &\partial^{\nu}H_{\nu\mu}=j_\mu\\
-      &\partial_\mu j^\mu = 0
+      \mqty(ct' \\ x')
+      =
+      \frac{1}{\sqrt{1 - (v/c)^2}}
+      \mqty(
+        1 & -v/c \\
+        -v/c & 1
+      )
+      \mqty(0 \\ 0)
+      =
+      \mqty(0 \\ 0)
     \end{align}
-  \end{itembox}
-
-  運動する電荷と電流を例に電磁場の双対性を確認してみよう．導線には$z$軸上向きに電流$I$が流れている．電荷$+q$が$z$軸上向きに速さ$v_0$で運動している．
-  導線の中では面電荷密度$\lambda_{\pm} = \pm\lambda/2$の正(負)電荷が速さ$v$で上(下)向きに動いているとする．
-  まずは静止系で考える．導線の中では
-  \begin{align}
-    \lambda_{+} + \lambda_{-} = 0
-  \end{align}
-  が成り立つため，電気的に中性である．よってｍ導線の周りには電場は無い．電流は$I=\lambda v$と表される．
-  導線の周りには
-  \begin{align}
-    \bm{B} = \frac{\mu_0I}{2\pi r} \bm{e}_{\phi} = \frac{\mu_0 \lambda v}{2\pi r} \bm{e}_{\phi}
-  \end{align}
-  の磁束密度が発生している．よって電荷は
-  \begin{align}
-    \bm{F} = q\bm{v}\times\bm{B} = -qv_0\frac{\mu_0 \lambda v}{2\pi r}\bm{e}_r
-  \end{align}
-  の力を感じる．
-
-  これを電荷とともに動く系で考える．非相対論的に考えると$\bm{v}=0$であるため電荷は力を感じない．しかし，特殊相対性原理よりこれはありえない．
-  相対論的効果を考慮してこの状況を眺める必要がある．
-  観測者からは導線中の正電荷は$v-v_0$で，負電荷は$v+v_0$で運動して見える．それぞれでLorentz収縮を計算する．
-  \begin{align}
-    \lambda_{+} &= \frac{1}{\sqrt{1-\qty(\frac{v-v_0}{c})^2}}\frac{\lambda}{2}\\
-    \lambda_{-} &= \frac{1}{\sqrt{1-\qty(\frac{v+v_0}{c})^2}}\qty(-\frac{\lambda}{2})
-  \end{align}
-  明らかに
-  \begin{align}
-    \lambda_{+} + \lambda_{-} \neq 0
-  \end{align}
-  であることがわかる．よって，導線の周りには電場が発生している．$v,v_0 \ll c$とすると
-  \begin{align}
-    \lambda_{+} + \lambda_{-} &= \frac{1}{\sqrt{1-\qty(\frac{v-v_0}{c})^2}}\frac{\lambda}{2} - \frac{1}{\sqrt{1-\qty(\frac{v+v_0}{c})^2}}\frac{\lambda}{2}\\
-    &\simeq \qty(1 + \frac{1}{2}\qty(\frac{v-v_0}{c})^2)\frac{\lambda}{2} - \qty(1 + \frac{1}{2}\qty(\frac{v+v_0}{c})^2)\frac{\lambda}{2}\\
-    &= - \frac{\lambda v_0 v}{c^2}
-    &\equiv \Delta \lambda
-  \end{align}
-  と計算でき，導線は負に帯電していることがわかる．よって，電荷の受ける力は
-  \begin{align}
-    \bm{F} &= q\frac{\Delta \lambda}{2\pi r \epsilon_0}\bm{e}_r\\
-    &=-qv_0\frac{\mu_0 \lambda v}{2\pi r}\bm{e}_r
-  \end{align}
-  これは先ほどの計算結果と一致している．以上の考察から，電場と磁場は観測する系によって入り混じることがわかる．
+    である．点$P$を$X'$系から見ると，
+    \begin{align}
+      \mqty(ct' \\ x')
+      =
+      \frac{1}{\sqrt{1 - (v/c)^2}}
+      \mqty(
+        1 & -v/c\\
+        -v/c & 1
+      )
+      \mqty(ct \\ L)
+      =
+      \frac{1}{\sqrt{1 - (v/c)^2}}
+      \mqty(ct - \frac{v}{c}L \\ -vt + L)
+    \end{align}
+    である．$t' = 0$で観測しているため，$t' = 0$を代入し
+    \begin{align}
+      0 &= ct - \frac{v}{c}L \\
+      t &= \frac{v}{c^2}L
+    \end{align}
+    を得る．よって，
+    \begin{align}
+      x' = \frac{1}{\sqrt{1 - (v/c)^2}} \qty[-\qty(\frac{v}{c})^2 L + L] = \sqrt{1-\qty(\frac{v}{c})^2}L
+    \end{align}
+    である．
+    これは動いている慣性系から静止系での距離($L$)を測ると縮んで見える($L'$)ことを意味している．
+    \begin{itembox}[l]{Lorentz収縮}
+      \begin{align}
+        L' = \sqrt{1 - \qty(\frac{v}{c})^2}L
+      \end{align}
+    \end{itembox}
+    また，ある対象に対して静止している観測者が測った距離を\textbf{固有長さ}(proper length)という．
+    今回は$L$が固有長さである．
+  \subsection{時間の遅れ}
+    次に\textbf{時間の遅れ}(Time Dilations)について説明する．
+    同様の$X$系と$X'$系を考える．
+    時計が$X'$系の原点$x' = 0$に置かれていて，観測者は$X'$系においてこの時計を見ている．
+    $X'$系に置かれた時計の時刻が$t'$のときの時空点$P_1$，$t' + \Delta T_0$の時空点を$P_2$とする．
+    $P_1$は，
+    \begin{align}
+      \mqty(ct_1 \\ x_1)
+      =
+      \frac{1}{\sqrt{1 - (v/c)^2}}
+      \mqty(
+        1 & v/c \\
+        v/c & 1
+      )
+      \mqty(ct' \\ 0)
+      =
+      \frac{1}{\sqrt{1 - (v/c)^2}}
+      \mqty(ct' \\ vt')
+    \end{align}
+    $P_2$は，
+    \begin{align}
+      \mqty(ct_1 \\ x_1)
+      =
+      \frac{1}{\sqrt{1 - (v/c)^2}}
+      \mqty(
+        1 & v/c \\
+        v/c & 1
+      )
+      \mqty(c(t' + \Delta T_0) \\ 0)
+      =
+      \frac{1}{\sqrt{1 - (v/c)^2}}
+      \mqty(c(t' + \Delta T_0) \\ v(t' + \Delta T_0))
+    \end{align}
+    である．よって，$X$系での時間経過$\Delta T = t_2 - t_1$は，
+    \begin{align}
+      \Delta T = t_2 - t_1 = \frac{1}{\sqrt{1 - (v/c)^2}} \Delta T_0
+    \end{align}
+    である．これは$X'$系は$X$系に比べて時間の流れが遅いことを示している．
+    \begin{itembox}[l]{時間の遅れ}
+      \begin{align}
+        \Delta T = \frac{1}{\sqrt{1 - (v/c)^2}} \Delta \tau
+      \end{align}
+    \end{itembox}
+    観測者に対して2つの事象が同一の空間座標で起きたとき，その時間間隔$\Delta \tau$を\textbf{固有時間}(proper time)という．
+  \subsection{電磁場の双対性♠}
+    電磁場の双対性について説明する．マクスウェル方程式は，
+    \begin{align}
+      \begin{dcases}
+        \div \bm{D} = \rho \\
+        \div \bm{B} = 0 \\
+        \curl \bm{E} = - \pdv{\bm{B}}{t} \\
+        \curl \bm{H} = \pdv{\bm{D}}{t} + \bm{j}
+      \end{dcases}
+    \end{align}
+    の4つである．
+    これをLorentz変換に対して共変な形式に書き直す．
+    まず，$\bm{B}$と$\bm{E}$はベクトルポテンシャル$\bm{A}$とスカラーポテンシャル$\phi$を用いて，
+    \begin{align}
+      \begin{dcases}
+        \bm{E} = -\grad \phi - \pdv{\bm{A}}{t} \\
+        \bm{B} = \curl \bm{A}
+      \end{dcases}
+    \end{align}
+    と表される．座標を，
+    \begin{align}
+      (x^0, x^1, x^2, x^3) \coloneqq (ct, x, y, z)
+    \end{align}
+    と定義する\footnote{
+      このような4次元空間を\textbf{Minkovski空間}という． 
+    }．
+    また4元ベクトルポテンシャルを，
+    \begin{align}
+      A^{\mu} &\coloneqq (\phi, c\bm{A}) \\
+      A_{\mu} &\coloneqq (\phi, -c\bm{A})
+    \end{align}
+    と定義する．
+    4元ベクトルポテンシャルを使うと電場と磁場は，
+    \begin{align}
+      B_1 \coloneqq B_x &= c\pdv{A_z}{y} - c\pdv{A_y}{z} \\
+      &= -\pdv{A_3}{x^2}  + \pdv{A_2}{x^3} \\
+      &= \partial_3 A_2 - \partial_2 A_3\\
+      E_1 \coloneqq E_x = &= -\pdv{\phi}{x} - \pdv{A_x}{t} \\
+      &= -\pdv{A_0}{x^1} + \pdv{A_1}{x^0} \\
+      &= \partial_0 A_1 - \partial_1 A_0
+    \end{align}
+    のように書ける．電磁場テンソルを，
+    \begin{align}
+      F_{\mu\nu} \coloneqq \partial_{\mu}A_{\nu} - \partial_{\nu} A_{\mu}
+    \end{align}
+    を定義する．これを行列の形で表すと，
+    \begin{align}
+      F_{\mu\nu}=
+      \mqty(
+        F_{00} & F_{01} & F_{02} & F_{03}\\
+        F_{10} & F_{11} & F_{12} & F_{13}\\
+        F_{20} & F_{21} & F_{22} & F_{23}\\
+        F_{30} & F_{31} & F_{32} & F_{33}
+      )
+      =
+      \mqty(
+        0 & E_x & E_y & E_z \\
+        -E_x & 0 & -cB_z & cB_y\\
+        -E_y & cB_z & 0 & -cB_x\\
+        -E_z& -cB_y & cB_x & 0
+      )
+    \end{align}
+    である．
+    明らかに$F_{\mu\nu} = -F_{\nu\mu}$である．
+    また電磁場テンソルの定義から，
+    \begin{align}
+      \partial_{\mu} F_{\nu\lambda} + \partial_{\nu} F_{\lambda\mu} + \partial_{\lambda} F_{\mu\nu} = 0
+    \end{align}
+    が成り立つ．実際に計算してみると
+    \begin{align}
+      \partial_{\mu} F_{\nu\lambda} + \partial_{\nu} F_{\lambda\mu} + \partial_{\lambda} F_{\mu\nu} &= 
+      \partial_{\mu}\qty(\partial_{\nu}A_{\lambda} - \partial_{\lambda} A_{\nu}) + \partial_{\nu}\qty(\partial_{\lambda}A_{\mu} - \partial_{\mu} A_{\lambda}) + \partial_{\lambda}\qty(\partial_{\mu}A_{\nu} - \partial_{\nu} A_{\mu}) \\ 
+      &= (\partial_{\mu}\partial_{\nu} A_\lambda - \partial_{\mu}\partial_{\lambda} A_{\nu}) + (\partial_{\nu}\partial_{\lambda} A_{\mu} - \partial_{\nu}\partial_{\mu} A_\lambda)
+      + (\partial_{\lambda}\partial_{\mu} A_{\nu} - \partial_{\lambda}\partial_{\nu} A_{\mu}) \\
+      &= 0
+    \end{align}
+    である．これはFaradayの電磁誘導の法則と磁束密度に関するGaussの法則を表している．
+    例えば$\mu = 0$，$\nu = 1$，$\lambda = 2$とすると，
+    \begin{align}
+      &\partial_0 F_{12} + \partial_1 F_{20} + \partial_2 F_{01}\\
+      &= -\pdv{(cB_z)}{(ct)} + \pdv{x}(-E_y) + \pdv{y}(-E_x)\\
+      &= -(\grad\times \bm{E})_z - \pdv{B_z}{t} = 0
+    \end{align}
+    また，$\mu = 1$，$\nu = 2$，$\lambda = 3$とすると，
+    \begin{align}
+      &\partial_1 F_{23} + \partial_2 F_{31} + \partial_3 F_{12}\\
+      &= c(\partial_xB_x + \partial_yB_y + \partial_zB_Z)\\
+      &= c\div\bm{B} = 0
+    \end{align}
+    が得られる．
+    \par
+    磁場/電束密度テンソル$H_{\mu\nu}$を，
+    \begin{align}
+      H_{\mu\nu} =
+      \mqty(
+        H_{00} & H_{01} & H_{02} & H_{03} \\
+        H_{10} & H_{11} & H_{12} & H_{13} \\
+        H_{20} & H_{21} & H_{22} & H_{23} \\
+        H_{30} & H_{31} & H_{32} & H_{33}
+      )
+      =
+      \mqty(
+        0 & cD_x & cD_y & cD_z \\
+        -cD_x & 0 & -H_z & H_y\\
+        -cD_y & H_z & 0 & -H_x\\
+        -cD_z& -H_y & H_x & 0
+      )
+    \end{align}
+    4次元の電流密度を$j^{\mu}$を，
+    \begin{align}
+      j^{\mu} \coloneqq (c\rho, \bm{j})
+    \end{align}
+    と定義する．
+    明らかに$H_{\mu\nu} = -H_{\nu\mu}$である．
+    すると，電束密度に関するGaussの法則とAmpèreの法則は，
+    \begin{align}
+      \partial^{\nu}H_{\nu\mu} = j_\mu
+    \end{align}
+    と表される．Einsteinの縮約記法を用いた．
+    例えば$\mu = 0$とすると
+    \begin{align}
+      \partial^1H_{10} + \partial^2H_{20} + \partial^3H_{30} &= j_0\\
+      \partial_xD_x + \partial_yD_y + \partial_zD_z &= \rho\\
+      \div\bm{D} &= \rho
+    \end{align}
+    が導かれる．さらに電荷保存則，
+    \begin{align}
+      \pdv{\rho}{t} + \div\bm{j} &= 0 \\ 
+      \Leftrightarrow \pdv{(c\rho)}{(ct)} + \div\bm{j} &= 0
+    \end{align}
+    を用いて，
+    \begin{align}
+      \partial_{\mu} j^\mu = 0
+    \end{align}
+    が得られる．以上をまとめるとMaxwell方程式は，
+    \begin{align}
+      \begin{dcases*}
+        \partial_{\mu} F_{\nu\lambda} + \partial_{\nu} F_{\lambda\mu} + \partial_{\lambda} F_{\mu\nu} = 0 & Faradayの電磁誘導の法則・磁束密度に関するGaussの法則 \\
+        \partial^{\nu}H_{\nu\mu} = j_\mu & 電束密度に関するGaussの法則・Ampèreの法則 \\
+        \partial_{\mu} j^\mu = 0 & 電荷保存則
+      \end{dcases*}
+    \end{align}
+    と書くことができる．これらの式はテンソルとテンソル，ベクトルとベクトルというように，Lorentz変換に対して
+    同じ変換則をもつものどうしが結ばれている．よってこれらはLorentz変換に対して共変である．
+    \begin{itembox}[l]{Lorentz変換に対して共変なMaxwell方程式}
+      \begin{align}
+        &\partial_{\mu} F_{\nu\lambda} + \partial_{\nu} F_{\lambda\mu} + \partial_{\lambda} F_{\mu\nu} = 0\\
+        &\partial^{\nu}H_{\nu\mu} = j_\mu\\
+        &\partial_{\mu} j^\mu = 0
+      \end{align}
+    \end{itembox}
+  \subsection{電磁場の双対性の例題}
+    \begin{myex}{}{}
+      運動する電荷と電流を例に電磁場の双対性を確認してみよう．
+      座標系は導線の中心を$z$軸とした円筒座標系を入れる．
+      導線に$z$軸上向きに電流$I$が流れている．
+      電荷$+q$が$z$軸上向きに速さ$v_0$で運動している．
+      導線の中では面電荷密度$\lambda_{\pm} = \pm\lambda/2$の正(負)電荷が速さ$v$で上(下)向きに動いているとする．
+      まずは静止系で考える．
+      導線の中では，
+      \begin{align}
+        \lambda_{+} + \lambda_{-} = 0
+      \end{align}
+      が成り立つため，電気的に中性である．
+      よって導線の周りには電場は無い．
+      電流は$I = \lambda v$と表される．
+      導線の周りには，
+      \begin{align}
+        \bm{B} = \frac{\mu_0I}{2\pi r} \bm{e}_{\phi} = \frac{\mu_0 \lambda v}{2\pi r} \bm{e}_{\phi}
+      \end{align}
+      の磁束密度が発生している．
+      よって電荷は，
+      \begin{align}
+        \bm{F} = q\bm{v}\times\bm{B} = -qv_0\frac{\mu_0 \lambda v}{2\pi r}\bm{e}_r
+      \end{align}
+      の力を感じる．
+      \par
+      同様の設定を電荷とともに動く系で考える．
+      非相対論的に考えると$\bm{v} = 0$であるため電荷は力を感じないことになるが，電子が力を受けて運動している実験事実に矛盾する．
+      相対論的効果を考慮してこの状況を眺める必要がある．
+      観測者からは導線中の正電荷は$v - v_0$で，負電荷は$v + v_0$で運動して見える．
+      それぞれでLorentz収縮を計算する．
+      \begin{align}
+        \lambda_{+} &= \frac{1}{\sqrt{1-\qty(\cfrac{v - v_0}{c})^2}} \cdot \frac{\lambda}{2}\\
+        \lambda_{-} &= \frac{1}{\sqrt{1-\qty(\cfrac{v + v_0}{c})^2}} \cdot \qty(-\frac{\lambda}{2})
+      \end{align}
+      明らかに，
+      \begin{align}
+        \lambda_{+} + \lambda_{-} \neq 0
+      \end{align}
+      であることがわかる．よって，導線の周りには電場が発生している．$v,v_0 \ll c$とすると
+      \begin{align}
+        \Delta \lambda \coloneqq \lambda_{+} + \lambda_{-} &= \frac{1}{\sqrt{1 - \qty(\cfrac{v - v_0}{c})^2}}\frac{\lambda}{2} - \frac{1}{\sqrt{1 - \qty(\cfrac{v + v_0}{c})^2}}\frac{\lambda}{2}\\
+        &\simeq \qty[1 + \frac{1}{2}\qty(\frac{v - v_0}{c})^2]\frac{\lambda}{2} - \qty[1 + \frac{1}{2}\qty(\frac{v + v_0}{c})^2]\frac{\lambda}{2}\\
+        &= - \frac{\lambda v_0 v}{c^2} 
+      \end{align}
+      と計算できて，導線は負に帯電していることがわかる．よって電荷の受ける力は，
+      \begin{align}
+        \bm{F} &= q\frac{\Delta \lambda}{2\pi r \epsilon_0}\bm{e}_r\\
+        &= -qv_0\frac{\mu_0 \lambda v}{2\pi r}\bm{e}_r
+      \end{align}
+      これは先ほどの計算結果と一致している．以上の考察から，電場と磁場は観測する系によって入り混じることがわかる．
+    \end{myex}
 \end{document}

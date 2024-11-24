@@ -1,0 +1,454 @@
+\documentclass{report}
+\input{../../head.tex}
+\begin{document}
+  本節ではShrödinger方程式を修正し，Lorentz共変性を有する\textbf{Dirac方程式}を導く．
+  Shrödinger方程式は，ハミルトニアン$H=\frac{\bm{p}^2}{2m} + V = E$と運動量$\bm{p}$に対して，
+  \begin{align}
+    E &\to \i\hbar\pdv{t} + V \\ 
+    \bm{p} &\to - \i\hbar\grad 
+  \end{align}
+  という置き換えをすることにより得られた．
+  \begin{align}
+    \i\hbar \pdv{t}\psi = \qty(-\frac{\hbar^2}{2m}\laplacian + V)\psi \label{TDSE}
+  \end{align}
+  しかし，\refe{TDSE}はLorentz共変性をもたない，つまり，相対論と矛盾している．なぜなら，相対論によると時間と空間は同等であるが，\refe{TDSE}は
+  時間の1階微分，空間の2階微分をなっているからである．
+  相対論的な電子の運動を記述する試みの一つに\textbf{Klein-Gordon方程式}がある\footnote{
+    O.Klein(1894-1977)，W.Gordon(??)
+  }．
+  \subsection{静止質量エネルギー}
+    静止している$X$系と一定の速さ$v$で動く$X'$系を考える．
+    $t = \dd{t}$における$X'$系の原点$O'$の座標は，
+    \begin{align}
+      \begin{dcases}
+        \text{$X'$系} & (c\dd{\tau}, 0, 0, 0) \\
+        \text{$X$系} & (c\dd{t}, \dd{x}, \dd{y}, \dd{z})
+      \end{dcases}
+    \end{align}
+    である．
+    世界長さ不変性より，
+    \begin{align}
+      \dd{x}^2 + \dd{y}^2 + \dd{z}^2 - (c\dd{t})^2 = -(c\dd{\tau})^2
+    \end{align}
+    が成り立つ．上式に$m^2$を乗じ，$(\dd{\tau}^2)$で割る．
+    \begin{align}
+      \qty(m \dv{x}{t})^2 + \qty(m \dv{z}{t})^2 + \qty(m \dv{y}{t})^2 - \qty(mc \dv{t}{\tau})^2 = -(mc)^2 
+    \end{align}
+    左辺の第1項から第3項は運動量$p_x,p_y,p_z$と同じ形をしているので
+    \begin{align}
+      \bm{p}^2 \coloneqq \qty(m \dv{x}{t})^2 + \qty(m \dv{z}{t})^2 + \qty(m \dv{y}{t})^2
+    \end{align}
+    と置く．左辺第4項はとりあえず$p_0$と置いておく．つまり，
+    \begin{align}
+      \bm{p}^2 - p_0^2 = -(mc)^2 \label{4momentum}
+    \end{align}
+    である．
+    $p_0$について計算を進めると，
+    \begin{align}
+      \bm{p}^2 - p_0^2 &= -(mc)^2 \\
+      \Leftrightarrow p_0^2 &= \bm{p}^2 + (mc)^2 \\
+      \Leftrightarrow p_0 &= \sqrt{\bm{p}^2 + (mc)^2} \\
+      &= mc\sqrt{1 + \frac{\bm{p}^2}{m^2c^2}} \\
+      &\simeq mc + \frac{1}{2}mc\frac{\bm{p}^2}{m^2c^2}\ (\abs{\bm{p}} \ll mc^2)\\
+      &= mc + \frac{\bm{p}^2}{2mc}
+    \end{align}
+    を得る．最後の式の右辺第2項はエネルギーを$c$で割ったものになっていることに気づく．よって，$p_0$に$c$を乗じたものはエネルギーを表すと解釈する．
+    したがって，
+    \begin{align}
+      E \coloneqq p_0c = mc^2 + \frac{\bm{p}^2}{2m}
+    \end{align}
+    が得られる．これが相対論的な粒子のエネルギーであり，$mc^2$は\textbf{静止質量エネルギー}と呼ばれている\footnote{有名な$E=mc^2$である．}．
+  \subsection{Klein-Gordon方程式}
+    \refe{4momentum}に$p_0 = E/c$を代入すると，
+    \begin{align}
+      \bm{p}^2 - \qty(\frac{E}{c})^2 = -(mc)^2
+    \end{align}
+    となる．
+    これに対し素直に，
+    \begin{align}
+      E &\to \i\hbar\pdv{t} + V \\ 
+      \bm{p} &\to - \i\hbar\grad 
+    \end{align}
+    という量子化を実行し，波動関数に作用させると，
+    \begin{align}
+      \qty(-\hbar^2\laplacian + \frac{\hbar^2}{c^2}\pdv[2]{t})\psi = -m^2c^2\psi
+    \end{align}
+    となる．
+    これを変形するとKlein-Gordon方程式，
+    \begin{align}
+      \qty[\frac{1}{c^2}\pdv[2]{t} - \laplacian + \qty(\frac{mc}{\hbar})^2]\psi = 0 
+    \end{align}
+    が得られる．また，これはダランベルシアン(d'Alembertian)，
+    \begin{align}
+      \Box \coloneqq \frac{1}{c^2}\pdv[2]{t} - \laplacian = \partial^\mu\partial_\mu = \partial^2
+    \end{align}
+    を用いて，
+    \begin{align}
+      \qty[\Box + \qty(\frac{mc}{\hbar})^2]\psi = 0
+    \end{align}
+    と書くことができる．
+    \begin{itembox}[l]{Klein-Gordon方程式}
+      \begin{align}
+        \qty[\Box + \qty(\frac{mc}{\hbar})^2]\psi = 0 \label{Klein-Gordon-equation}
+      \end{align}
+    \end{itembox}
+    \par
+    Klein-Gordon方程式は時間と空間を同等に扱っており，Lorentz共変性を満たしている．
+    しかし，これには波動関数の確率解釈が成り立たないという問題がある．
+    これは以下のように説明される．
+    \refe{Klein-Gordon-equation}は2階の微分方程式である．
+    よって，$\psi$と$\pdv{\psi}{t}$は独立に指定される．そのため，粒子の存在確率が保存するためには
+    \begin{align}
+      \dv{t}\qty[\int \abs{\psi(\bm{r}, t)} \dd{\bm{r}}] = 0
+    \end{align}
+    が必要であるが，$\psi$と$\pdv{\psi}{t}$が独立に決められるため，
+    \begin{align}
+      &\dv{t}\qty[\int \abs{\psi(\bm{r}, t)} \dd{\bm{r}}]\\
+      &= \int \qty[\pdv{\psi^*}{t}\psi^{*} + \psi^*\pdv{\psi}{t}] \dd{\bm{r}} \neq 0
+    \end{align}
+    となってしまう．よって，波動関数の確率解釈が成り立たないため，量子状態を記述する方程式として不適である\footnote{Klein-Gordon方程式はスピン0の粒子の場の方程式である．}．
+  \subsection{Dirac方程式の準備♠}
+    前節での議論から，相対論的粒子の運動を記述する方程式は時間と空間の1階微分であることが要請される．
+    \refe{Klein-Gordon-equation}において，2階微分を1階微分に「因数分解」することで，Lorentz共変な量子力学の方程式を導く．
+    Dirac方程式は，
+    \begin{align}
+      \qty(\frac{1}{c}\pdv{t} + \hat{\bm{\alpha}} \cdot \grad + \i\hat{\beta} \frac{mc}{\hbar})\psi = 0 \label{Dirac-pre}
+    \end{align}
+    のような形をしていることを仮定して，\refe{Klein-Gordon-equation}と矛盾が生じないように$\hat{\bm{alpha}}$と$\hat{\beta}$を定める．
+    つまり，\refe{Klein-Gordon-equation}と\refe{Dirac-pre}を見比べて演算子が
+    \begin{align}
+      \qty(\frac{1}{c^2}\pdv[2]{t} - \laplacian + \qty(\frac{mc}{\hbar})^2) = \qty(\frac{1}{c}\pdv{t} - \hat{\bm{\alpha}} \cdot \grad - \i\hat{\beta} \frac{mc}{\hbar})\qty(\frac{1}{c}\pdv{t} + \hat{\bm{\alpha}} \cdot \grad + \i\hat{\beta} \frac{mc}{\hbar})
+    \end{align}
+    のように因数分解できればよいとわかる\footnote{$\alpha$(の各成分)と$\beta$が交換関係を満たす数字であるか否かは明確ではないのでハットをつけた．}．
+    見やすくするために少し表記を変えると，
+    \begin{align}
+      \frac{1}{c}\pdv{t} + \hat{\bm{\alpha}} \cdot \grad + \i\hat{\beta} \frac{mc}{\hbar} = \frac{1}{c}\partial_t + \sum_{i = x, y, z} \hat{\alpha}_i \partial_i + \i\hat{\beta} \frac{mc}{\hbar}
+    \end{align}
+    となる．
+    \refe{Klein-Gordon-equation}の左辺は，
+    \begin{align}
+      &\qty(\frac{1}{c}\pdv{t} - \hat{\bm{\alpha}} \cdot \grad - \i\hat{\beta} \frac{mc}{\hbar})\qty(\frac{1}{c}\pdv{t} + \hat{\bm{\alpha}} \cdot \grad + \i\hat{\beta} \frac{mc}{\hbar}) \\
+      &=\qty(\frac{1}{c}\partial_t - \sum_{i = x, y, z} \hat{\alpha}_i \partial_i - \i\hat{\beta} \frac{mc}{\hbar}) \qty(\frac{1}{c}\partial_t + \sum_{j = x, y, z} \hat{\alpha}_j \partial_j + \i\hat{\beta} \frac{mc}{\hbar})\\
+      &= \frac{1}{c^2}\partial_t^2 + \frac{1}{c} \partial_t \qty(-\sum_{i = x, y, z} \hat{\alpha}_i \partial_i + \sum_{j = x,y,z} \hat{\alpha}_j \partial_j) + \frac{1}{c}\i\hat{\beta}\frac{mc}{\hbar} - \frac{1}{c}\i\hat{\beta}\frac{mc}{\hbar} 
+      - \sum_{i = x, y, z} \sum_{j = x, y, z} \hat{\alpha}_i \hat{\alpha}_j \partial_i \partial_j\\ 
+      &-\i\frac{mc}{\hbar}\qty(\sum_{i = x, y, z} \hat{\alpha}_i \hat{\beta} \partial_i + \sum_{j = x, y, z} \hat{\beta} \hat{\alpha}_j \partial_j)
+      + \hat{\beta}^2\qty(\frac{mc}{\hbar})^2\\
+      &= \frac{1}{c^2}\partial_t^2 - \sum_{i = x, y, z} \hat{\alpha_i}^2 \partial_i^2 - \sum_{i = x, y, z} \sum_{j = x, y, z,\ i \neq j} \hat{\alpha}_i \hat{\alpha}_j \partial_i \partial_j
+      -\i\frac{mc}{\hbar}\qty(\sum_{i = x, y, z} \qty( \hat{\alpha}_i \hat{\beta} + \hat{\beta} \hat{\alpha}_i )\partial_i) + \hat{\beta}^2\qty(\frac{mc}{\hbar})^2
+    \end{align}
+    となる．
+    よって，この因数分解が成り立つには$\bm{\hat{\alpha}}$と$\hat{\beta}$が，
+    \begin{align}
+      \begin{dcases}
+        \sum_{i = x, y, z} \hat{\alpha}_i^2 = \hat{\beta}^2 = 1 \label{conditons-of-coefficients-of-dirac} \\
+        \hat{\alpha}_j \hat{\alpha}_k + \hat{\alpha}_k \hat{\alpha}_j = 0\ (j \neq k)\\
+        \hat{\alpha}_j \hat{\beta} + \hat{\beta} \hat{\alpha}_j = 0
+      \end{dcases}
+    \end{align}
+    を満たさなければならない．この条件を満たすには$\bm{\hat{\alpha}}$と$\hat{\beta}$が行列である必要がある\footnote{行列であることが明確なのでハットを外す．}．
+    \par
+    次に，$\alpha_i$と$\beta$を求める．
+    ハミルトニアンはエルミート演算子なので，$\alpha_i$，$\beta$もエルミート行列であることが要請される．
+    さらに，\refe{conditons-of-coefficients-of-dirac}の第1式より，
+    \begin{align}
+      \alpha_i^2 &= I \\ 
+      \beta^2 &= I
+    \end{align}
+    である．
+    まず$\beta$に関して考える．
+    エルミート行列は適当なユニタリ行列によって対角化される．
+    つまり，適当なユニタリ行列$V$を用いて，
+    \begin{align}
+      \beta' = V^\dagger \beta V = \diag(b_1, b_2, \cdots, b_n)
+    \end{align}
+    とできる．$\diag(x_1, x_2, \cdots)$は$x_1, x_2, \cdots$対角成分とする対角行列を表す．
+    $n$は行列の次元である．
+    さらに，
+    \begin{align}
+      \beta'^2 = \qty(V^\dagger \beta V)^2 = V^\dagger \beta^2 V = \diag(b_1^2, b_2^2, \cdots, b_n^2)
+    \end{align}
+    である．$\beta^2 = I$より，
+    \begin{align}
+      \beta'^2 = V^\dagger I V = I
+    \end{align}
+    だから，
+    \begin{align}
+      b_1^2 = b_2^2 = \cdots = b_n^2 = 1
+    \end{align}
+    を得る．よって，$\beta$の固有値は$\pm1$であることがわかる．また，\refe{conditons-of-coefficients-of-dirac}の第3式より，
+    \begin{align}
+      \beta = - \alpha_i\beta\alpha_i^{-1} = -\alpha_i\beta\alpha_i
+    \end{align}
+    が成り立つ．これを用いて$\beta$のトレースを計算する．
+    \begin{align}
+      \tr(\beta) &= \tr(\beta I)\\
+      &= \tr(\beta \alpha_i^2)\\
+      &= \tr(\alpha_i\beta\alpha_i) \\
+      &= -\tr(\beta)\\
+      \Rightarrow 2\tr(\beta) &= 0
+    \end{align}
+    よって，$\beta$の対角成分の和は0である．対角成分は$\pm1$であることがわかっているので，$\beta$は偶数次元の行列であることがわかる．以上の議論は$\alpha^i$でも同様である．
+    ここで\refe{Dirac-pre}を眺めてみると，$m\neq0$の場合，独立な4つの行列が必要なことが確認できる．偶数次元で最小行列は2行2列である．しかし，2行2列で独立なエルミート行列は3つ(Pauli行列など)しかない．
+    よって，質量をもつ粒子の運動を記述するのに必要なエルミート行列の次元は4以上であることがわかる\footnote{質量0の粒子を記述するWeyl行列は2行2列の行列を用いる．}．
+  \subsection{Dirac方程式とDirac-Pauli表示}
+    \refe{conditons-of-coefficients-of-dirac}を満たす$\bm{\alpha}$と$\beta$の組の1つが\textbf{Dirac-Pauli表示}で，
+    \begin{align}
+      \alpha_x &= 
+      \mqty(
+        0 & 0 & 0 & 1\\
+        0 & 0 & 1 & 0\\
+        0 & 1 & 0 & 0\\
+        1 & 0 & 0 & 0\\
+      )
+      =
+      \mqty(
+        0 & \sigma_x\\
+        \sigma_x & 0
+      )\\
+      \alpha_y &= 
+      \mqty(
+        0 & 0 & 0 & -\i\\
+        0 & 0 & \i & 0\\
+        0 & -\i & 0 & 0\\
+        \i & 0 & 0 & 0\\
+      )
+      =
+      \mqty(
+        0 & \sigma_y\\
+        \sigma_y & 0
+      )\\
+      \alpha_z &= 
+      \mqty(
+        0 & 0 & 1 & 0\\
+        0 & 0 & 0 & -1\\
+        1 & 0 & 0 & 0\\
+        0 & -1 & 0 & 0\\
+      )
+      =
+      \mqty(
+        0 & \sigma_z\\
+        \sigma_z & 0
+      )\\
+      \beta &= 
+      \mqty(
+        1 & 0 & 0 & 1\\
+        0 & 1 & 0 & 0\\
+        0 & 0 & -1 & 0\\
+        0 & 0 & 0 & -1\\
+      )
+      =
+      \mqty(
+        I & 0\\
+        0 & -I
+      )
+    \end{align}
+    のように表される\footnote{実際に計算して確かめよ．}．
+    4行4列のエルミート行列で\refe{conditons-of-coefficients-of-dirac}を満たすものは，これらか，それのユニタリ同値なものしかない\footnote{
+      これはClifford代数を考えることで導ける．らしい．Clifford代数とは，
+      \begin{align}
+        \qty{ \gamma^\mu, \gamma^\nu } = 2\eta^{\mu\nu} I
+      \end{align}
+      という関係のことである．$\eta^{\mu\nu}$は計量テンソル．
+    }．
+    \refe{Dirac-pre}を変形することで\textbf{Dirac方程式}が得られる．
+    \begin{itembox}[l]{Dirac方程式}
+    \begin{align}
+      \qty(\i\hbar \pdv{t} + \i \hbar c \bm{\alpha}\cdot \grad - \beta mc^2)\psi = 0
+    \end{align}
+    \end{itembox}
+    $\bm{\alpha}$，$\beta$は\refe{conditons-of-coefficients-of-dirac}を満たす．また，Dirac-Pauli表示を用いると
+    \begin{align}
+      \i\hbar \pdv{t}\psi = 
+      \mqty(mc^2 I & -\i\hbar c\bm{\sigma\cdot\bm{\nabla} } \\ 
+        -\i\hbar c\bm{\sigma\cdot\bm{\nabla} } & -mc^2 I
+        )\psi
+    \end{align}
+    と書ける．成分表示に書き換えれば，
+    \begin{align}
+      \i\hbar\pdv{t}\psi =
+      \mqty(
+        mc^2 & 0 & -\i\hbar c\partial_z & -\i\hbar c(\partial_x - \i \partial_y)\\
+        0 & mc^2 & -\i\hbar c(\partial_x + \i \partial_y) & \i\hbar c\partial_z \\
+        -\i\hbar c\partial_z & -\i\hbar c(\partial_x - \i \partial_y) & -mc^2 & 0\\
+        -\i\hbar c(\partial_x + \i \partial_y) & \i\hbar c\partial_z & 0 & -mc^2
+      )
+      \psi\label{dirac-eq-matrix}
+    \end{align}
+    である．
+    Dirac方程式を見ると，波動関数も4成分必要であることがわかる．つまり，
+    \begin{align}
+      \psi = 
+      \mqty(
+        \psi_1\\\psi_2\\\psi_3\\\psi_4
+      )
+    \end{align}
+    である．このような量を\textbf{Dirac スピノル}という．4成分であるが，4元ベクトルとは異なる数学的性質をもつ．
+    まず，Dirac方程式が確率の保存則を満たすことを確認する．確率密度を，
+    \begin{align}
+      \rho \coloneqq \psi^{\dagger}\psi
+    \end{align}
+    と定義する．Dirac方程式，
+    \begin{align}
+      \i\hbar\pdv{t} \psi = (-\i\hbar c\bm{\alpha}\cdot \grad + \beta mc^2)\psi
+    \end{align}
+    より，
+    \begin{align}
+      \pdv{t}\psi &= -c \bm{\alpha} \cdot (\grad\psi) -\i \frac{mc^2}\hbar \beta\psi\\
+      \pdv{t}\psi^{\dagger} &= -c(\grad\psi^{\dagger})\cdot \bm{\alpha} + \i\frac{mc^2}{\hbar}\psi^{\dagger}\beta
+    \end{align}
+    が成り立っている．よって，確率密度の時間変化は
+    \begin{align}
+      \pdv{t}\rho &= \qty(\pdv{t}\psi^{\dagger})\psi + \psi^{\dagger}\qty(\pdv{t}\psi)\\
+      &= -c\qty(\grad\psi^{\dagger})\cdot \bm{\alpha}\psi + \i\frac{mc^2}{\hbar}\psi^{\dagger}\beta\psi - c\psi^{\dagger}\bm{\alpha}\cdot(\grad\psi) - \i\frac{mc^2}{\hbar}\psi^{\dagger}\beta\psi\\
+      &= -c\qty[(\grad\psi^{\dagger})\cdot \bm{\alpha}\psi + \psi^{\dagger}\bm{\alpha}\cdot(\grad\psi)]\\
+      &= -c\grad\cdot(\psi^{\dagger}\bm{\alpha}\psi)
+    \end{align}
+    となる．したがって，
+    \begin{align}
+      \bm{j} \coloneqq c\grad\cdot(\psi^{\dagger}\bm{\alpha}\psi)
+    \end{align}
+    と定義すれば，
+    \begin{align}
+      \pdv{t}\rho = -\grad\cdot \bm{j}
+    \end{align}
+    が成立する．
+    \par
+    例えば，Dirac方程式の平面波解
+    \begin{align}
+      \psi = \e^{\i(kz - \omega t)}
+      \mqty(
+        a_1\\a_2\\a_3\\a_4
+      )
+    \end{align}
+    を考える．これを\refe{dirac-eq-matrix}に代入すると，
+    \begin{align}
+      \hbar\omega
+      \mqty(
+        a_1\\ a_2\\ a_3\\ a_4
+      )
+      =
+      \mqty(
+        mc^2 & 0 & \hbar ck & 0\\
+        0 & mc^2 & 0 & -\hbar ck \\
+        \hbar ck & 0 & -mc^2 & 0\\
+        0 & -\hbar ck & 0 & -mc^2
+      )
+      \mqty(
+        a_1\\a_2\\a_3\\a_4
+      )
+      =
+      \mqty(
+        mc^2 a_1 + \hbar c k a_3\\
+        mc^2 a_2 - \hbar c k a_4\\
+        -mc^2 a_3 + \hbar c k a_1\\
+        -mc^2 a_1 - \hbar c k a_2
+      )\label{plane-wave-in-dirac}
+    \end{align}
+    となる．
+    $a_1$と$a_3$，$a_2$と$a_4$に分けて書くと
+    \begin{align}
+      \hbar \omega
+      \mqty(a_1 \\ a_3)
+      &=
+      \mqty(
+        mc^2 & cp\\
+        cp & -mc^2
+      )
+      \mqty(a_1 \\ a_3)\label{up-spin} \\ 
+      \hbar \omega
+      \mqty(a_2 \\ a_4)
+        &=
+        \mqty(
+          mc^2 & -cp\\
+          -cp & -mc^2
+        )
+        \mqty(a_2 \\ a_4)\label{down-spin}
+    \end{align}
+    である．\refe{up-spin}や\refe{down-spin}で非自明な解が存在するには，
+    \begin{align}
+      \mdet{
+        \hbar \omega - mc^2 & \pm cp\\
+        \pm cp & \hbar\omega + mc^2
+      }
+      = 0
+    \end{align}
+    となればよい．
+    よって，
+    \begin{align}
+      \hbar \omega = \pm \sqrt{\qty(mc^2)^2 + \qty(cp)^2}
+    \end{align}
+    が得られる．
+    $\theta$を，
+    \begin{align}
+      \tan 2\theta \coloneqq \frac{p}{mc}
+    \end{align}
+    なるものとして定義すると\refe{up-spin}と\refe{down-spin}の固有関数は，
+    \begin{enumerate}
+      \item $\hbar\omega = \sqrt{(mc^2)^2 + (cp)^2}$のとき \par
+        \begin{align}
+          \mqty(a_1 \\ a_3) &= \mqty(\cos\theta \\ \sin\theta) \\ 
+          \mqty(a_2 \\ a_4) &= \mqty(\cos\theta \\ -\sin\theta)
+        \end{align}
+        となる．
+      \item $\hbar\omega = -\sqrt{(mc^2)^2 + (cp)^2}$のとき \par
+        \begin{align}
+          \mqty(a_1 \\ a_3) &= \mqty(-\sin\theta \\ \cos\theta) \\ 
+          \mqty(a_2 \\ a_4) &= \mqty(\sin\theta \\ \cos\theta)
+        \end{align}
+        となる．
+    \end{enumerate}
+    である．また，\refe{plane-wave-in-dirac}の固有値問題の解は，
+    \begin{align}
+      \begin{dcases}
+        \mqty(a_1 \\ a_3) \neq \mqty(0 \\ 0) \\
+        \mqty(a_2 \\ a_4) = \mqty(0 \\ 0)
+      \end{dcases},\ 
+      \begin{dcases}
+        \mqty(a_1 \\ a_3) = \mqty(0 \\ 0) \\ 
+        \mqty(a_2 \\ a_4) \neq \mqty(0 \\ 0)
+      \end{dcases}
+    \end{align}
+    の線形結合で表される．これら2つの独立解の意味を考えてみる．$p \ll mc$とする．
+    \begin{enumerate}
+      \item $\hbar\omega = \sqrt{(mc^2)^2 + (cp)^2}$のとき \par
+        独立解は，
+        \begin{align}
+          \psi_{\uparrow}^{+} &= \e^{\i(kz-\omega t)}\mqty(\cos\theta \\ 0 \\ \sin\theta \\ 0)
+          \simeq
+          \e^{\i(kz-\omega t)}
+          \mqty(1 \\ 0 \\ 0 \\ 0) \label{dirac-plane-particle-up}\\ 
+          \psi_{\downarrow}^{+} &= \e^{\i(kz-\omega t)}
+          \mqty(0 \\ \cos\theta \\ 0 \\ -\sin\theta)
+          \simeq
+          \e^{\i(kz-\omega t)}
+          \mqty(0 \\ 1 \\ 0 \\ 0)\label{dirac-plane-particle-down}
+        \end{align}
+        である．これらは上2成分は今まで慣れ親しんできたアップスピンとダウンスピンの固有ベクトルと一致していることに気づくだろう．
+        これは粒子解を示している．
+      \item $\hbar\omega = -\sqrt{(mc^2)^2 + (cp)^2}$のとき \par
+        独立解は，
+        \begin{align}
+          \psi_{\uparrow}^{-} &= \e^{\i(kz-\omega t)}
+          \simeq
+          \e^{\i(kz-\omega t)}
+          \mqty(0 \\ 0 \\ 1 \\ 0) \label{dirac-plane-antiparticle-up}\\ 
+          \psi_{\downarrow}^{-} &= \e^{\i(kz-\omega t)}
+          \simeq
+          \e^{\i(kz-\omega t)}
+          \mqty(0 \\ 0 \\ 0 \\ 1)\label{dirac-plane-antiparticle-down}
+        \end{align}
+    \end{enumerate}
+    である．これらは下2成分のみで表されており，反粒子解である．
+    ところで，負のエネルギーが存在すると，正エネルギーの電子が負エネルギーの状態に落ち込み，電子が安定でなくなってしまう．
+    負エネルギー解の存在は深刻な問題である．
+    この問題を解決するために，Diracは\textbf{空孔理論}(hole theory)を提案した．
+    空孔理論は，真空を，負エネルギーの電子が完全に埋まっている状態として定義する．
+    この負エネルギー状態が電子で埋め尽くされている状態を\textbf{Diracの海}という．
+    真空状態に1個の電子を導入したとき，Pauliの排他律により電子は正エネルギー状態に配置される．
+    これにより，電子の安定性は保証される．
+    また，電磁場を真空に加えたとき，負エネルギー状態の電子がDiracの海を飛び出し正エネルギー状態に励起される．
+    負エネルギー電子が減ったので，エネルギーは増えたとして観測される．
+    Diracの海に空いた穴は電子と同じ質量，反対の電荷をもつ．
+    これを\textbf{陽電子}という．
+    一般に，同じ質量をもち同じ大きさの異符号の電荷をもつ粒子は\textbf{反粒子}と呼ばれる．
+\end{document}

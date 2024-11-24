@@ -1,0 +1,48 @@
+\documentclass{report}
+\input{../../head.tex}
+\begin{document}
+  全角運動量以外の保存量として\textbf{ヘリシティ}がある．
+  \begin{align}
+    \bm{\bm{S}} = 
+    \mqty(
+      \bm{\sigma} & 0\\
+      0 & \bm{\sigma}
+    )
+  \end{align}
+  として，ヘリシティは，
+  \begin{align}
+    h \coloneqq \frac{\bm{\bm{S}} \cdot \bm{p}}{\abs{\bm{p}}}
+  \end{align}
+  と定義される．
+  これが保存量であることは，
+  \begin{align}
+    \qty(\bm{\alpha} \cdot \hat{\bm{p}}) \hat{h} 
+    &= \frac{1}{p}\mqty(
+      0 & \bm{\sigma} \cdot \hat{\bm{p}}\\
+      \bm{\sigma} \cdot \hat{\bm{p}} & 0
+    )\mqty(
+      \bm{\sigma} \cdot \hat{\bm{p}} & 0\\
+      0 & \bm{\sigma} \cdot \hat{\bm{p}}
+    ) \\
+    &= \frac{1}{p}\mqty(
+      0 & (\bm{\sigma} \cdot \hat{\bm{p}})(\bm{\sigma} \cdot \hat{\bm{p}})\\
+      (\bm{\sigma} \cdot \hat{\bm{p}})(\bm{\sigma} \cdot \hat{\bm{p}}) & 0
+    ) \\
+    &= \frac{1}{p}\mqty(
+      0 & \hat{\bm{p}}^2\\
+      \hat{\bm{p}}^2 & 0
+    ) \\
+    &= \hat{h}(\bm{\alpha}\cdot \hat{\bm{p}})
+  \end{align}
+  であるから，
+  \begin{align}
+    \qty[\bm{\alpha} \cdot \hat{\bm{p}}, \hat{h}] = 0\\
+    \qty[\beta, \hat{h}] = 0
+  \end{align}
+  となることより，
+  \begin{align}
+    \qty[\hat{H}, \hat{h}] = 0
+  \end{align}
+  となることから従う．
+  Dirac方程式において，ヘリシティは保存量である．
+\end{document}
