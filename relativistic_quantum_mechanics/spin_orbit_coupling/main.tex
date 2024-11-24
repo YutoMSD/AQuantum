@@ -80,21 +80,21 @@
   \end{align}
   ここで，
   \begin{align}
-    \hat{\bm{p}}(e\phi) = (e\phi)\hat{\bm{p}} - \i e \hbar \nabla\phi
+    \hat{\bm{p}}(e\phi) = (e\phi)\hat{\bm{p}} - \i e \hbar \grad\phi
   \end{align}
   であるため，さらに変形を進めて，
   \begin{align}
-    (\hat{E}' - e\phi) \psi_a &= \frac{1}{2m}\bm{\sigma}\cdot\qty(\hat{\bm{p}} - \frac{\hat{E}' - (e\phi)\hat{\bm{p}} + \i e\hbar \nabla\phi}{2mc^2})(\bm{\sigma}\cdot\hat{\bm{p}}) \psi_a\\
-    &= \qty[\frac{1}{2m}(\bm{\sigma}\cdot\hat{\bm{p}})(\bm{\sigma}\cdot\hat{\bm{p}}) - \frac{\hat{E}' - e\phi}{4m^2c^2}(\bm{\sigma}\cdot\hat{\bm{p}})(\bm{\sigma}\cdot\hat{\bm{p}}) - \i \frac{e\hbar}{4m^2c^2}(\bm{\sigma}\cdot\nabla\phi)(\bm{\sigma}\cdot\hat{\bm{p}})]\psi_a\\
-    &= \qty[\qty(1 - \frac{\hat{E}' - e\phi}{2mc^2})\frac{\hat{\bm{p}}^2}{2m} - \i \frac{e\hbar}{4m^2c^2}(\nabla\phi)\cdot\hat{\bm{p}} + \frac{e\hbar}{4m^2c^2}\bm{\sigma}\cdot(\nabla\phi\times\hat{\bm{p}})]\psi_a
+    (\hat{E}' - e\phi) \psi_a &= \frac{1}{2m}\bm{\sigma}\cdot\qty(\hat{\bm{p}} - \frac{\hat{E}' - (e\phi)\hat{\bm{p}} + \i e\hbar \grad\phi}{2mc^2})(\bm{\sigma}\cdot\hat{\bm{p}}) \psi_a\\
+    &= \qty[\frac{1}{2m}(\bm{\sigma}\cdot\hat{\bm{p}})(\bm{\sigma}\cdot\hat{\bm{p}}) - \frac{\hat{E}' - e\phi}{4m^2c^2}(\bm{\sigma}\cdot\hat{\bm{p}})(\bm{\sigma}\cdot\hat{\bm{p}}) - \i \frac{e\hbar}{4m^2c^2}(\bm{\sigma}\cdot\grad\phi)(\bm{\sigma}\cdot\hat{\bm{p}})]\psi_a\\
+    &= \qty[\qty(1 - \frac{\hat{E}' - e\phi}{2mc^2})\frac{\hat{\bm{p}}^2}{2m} - \i \frac{e\hbar}{4m^2c^2}(\grad\phi)\cdot\hat{\bm{p}} + \frac{e\hbar}{4m^2c^2}\bm{\sigma}\cdot(\grad\phi\times\hat{\bm{p}})]\psi_a
   \end{align}
   が得られる．4項目
   \begin{align}
-    \frac{e\hbar}{4m^2c^2}\bm{\sigma}\cdot(\nabla\phi\times\hat{\bm{p}})
+    \frac{e\hbar}{4m^2c^2}\bm{\sigma}\cdot(\grad\phi\times\hat{\bm{p}})
   \end{align}
   がスピン軌道相互作用を表している．特に，球対称ポテンシャルのとき，
   \begin{align}
-    \frac{e\hbar}{4m^2c^2}\bm{\sigma}\cdot(\nabla\phi\times\hat{\bm{p}}) &= \frac{e\hbar}{4m^2c^2}\frac{2}{\hbar}\bm{\bm{S}}\cdot(\frac{1}{r}\dv{\phi}{r}\bm{r}\times\hat{\bm{p}})\\
+    \frac{e\hbar}{4m^2c^2}\bm{\sigma}\cdot(\grad\phi\times\hat{\bm{p}}) &= \frac{e\hbar}{4m^2c^2}\frac{2}{\hbar}\bm{\bm{S}}\cdot(\frac{1}{r}\dv{\phi}{r}\bm{r}\times\hat{\bm{p}})\\
     &= \frac{e}{2m^2c^2r}\dv{\phi}{r}\hat{\bm{S}}\cdot\hat{\bm{L}}
   \end{align}
   となり，スピン角運動量と軌道角運動量がカップリングしていることがわかる．
