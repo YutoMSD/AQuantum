@@ -4,7 +4,7 @@
   真の基底状態$\ket{E_0}$に第1励起状態$\ket{E_1}$を10\%含んだ試行関数$\ket{\psi} = \ket{E_0} + \cfrac{1}{10}\ket{E_1}$を使ってエネルギーを計算する．
   \begin{align}
     E(\psi) &= \frac{\mel**{\psi}{\hat{H}}{\psi}}{\braket{\psi}} \\
-    &= \cfrac{\mel**{E_0}{\hat{H}}{E_0} + \cfrac{1}{100}\me**l{E_1}{\hat{H}}{E_1}}{1 + \cfrac{1}{100}} \\
+    &= \cfrac{\mel**{E_0}{\hat{H}}{E_0} + \cfrac{1}{100}\mel**{E_1}{\hat{H}}{E_1}}{1 + \cfrac{1}{100}} \\
     &= \cfrac{E_0 + 0.01E_1}{1.01}\\
     &\approx 0.99E_0 + 0.01E_1
   \end{align}
