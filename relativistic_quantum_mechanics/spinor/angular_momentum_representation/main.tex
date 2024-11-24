@@ -1,0 +1,142 @@
+\documentclass{report}
+\input{../../../head.tex}
+\begin{document}
+角運動量演算子の行列表現を求める．使うのは交換関係
+\begin{align}
+  [\hat{L}_i,\hat{L}_j] = \i\hbar\epsilon_{ijk}\hat{L}_k \label{commutation-of-am}
+\end{align}
+のみである．まず，
+\begin{align}
+  [\hat{L}^2, \hat{L}_i] = 0
+\end{align}
+は簡単に確かめられる．よって，$\hat{L}^2$と$\hat{L}_z$は同時固有状態を持つ．同時固有状態を$\ket{\alpha\beta}$とし固有値を
+\begin{align}
+  \hat{L}^2\ket{\alpha,\beta} &= \alpha\ket{\alpha,\beta}\\
+  \hat{L}_z\ket{\alpha,\beta} &= \beta\ket{\alpha,\beta}
+\end{align}
+と定める．
+
+次に，\textbf{昇降演算子}(ladder operator)を
+\begin{align}
+  \hat{L}_{\pm} \equiv \hat{L}_x \pm \i \hat{L}_y
+\end{align}
+と定義する．
+\begin{align}
+  \hat{L}_z(\hat{L}_{+}\ket{\alpha,\beta}) = (\beta + \hbar)\hat{L}_{+}\ket{\alpha,\beta}
+\end{align}
+が計算により確かめられるため，$\hat{L}_{+}\ket{\alpha\beta}$は$\hat{L}_z$の固有値$\beta+\hbar$の固有状態である．一方，$[\hat{L}^2, \hat{L}_{\pm}]=0$であるため
+昇降演算子は$L$の大きさを変化させない．変化するのは$\beta$のみである．また，
+\begin{align}
+  &\bra{\psi}\hat{L}^2 - \hat{L}_z^2 \ket{\psi}\\
+  &= \bra{\psi}\hat{L}_x^2\ket{\psi} + \bra{\psi}\hat{L}_y^2\ket{\psi} \geq 0\\
+  &\Rightarrow \langle \hat{L}_z^2 \rangle \leq \langle \hat{L}^2 \rangle
+\end{align}
+であるため，$\beta$には最大値$\beta_{\r{max}}$が存在する．よって，あるところで
+\begin{align}
+  \hat{L}_{+}\ket{\alpha,\beta_{\r{max}}} &= 0\\
+  \hat{L}_{-}\ket{\alpha,\beta_{\r{min}}} &= 0
+\end{align}
+が成り立つ．
+\begin{align}
+  \hat{L}_{-}\hat{L}_{+} = \hat{L}^2 - \hat{L}_z^2 - \hbar \hat{L}_z
+\end{align}
+だから，
+\begin{align}
+  0 = (\alpha - \beta_{\r{max}}^2 - \hbar \beta_{\r{\max}})\ket{\alpha,\beta_{\r{max}}}
+\end{align}
+である．よって，
+\begin{align}
+  \alpha = \beta_{\r{max}}(\beta_{\r{max}} + \hbar)
+\end{align}
+が得られる．同様に
+\begin{align}
+  \alpha = \beta_{\r{min}}(\beta_{\r{min}} - \hbar)
+\end{align}
+である．この2式を比べると
+\begin{align}
+  \beta_{\r{max}} = \beta_{\r{min}}
+\end{align}
+がわかる．また$\hat{L}_z$の固有値は昇降演算子により$\hbar$の整数倍で増減するから$k$を自然数として
+\begin{align}
+  \beta_{\r{max}} = \beta_{\r{min}} + k\hbar
+\end{align}
+と書ける．よって，
+\begin{align}
+  \beta_{\r{max}} = \frac{k}{2}\hbar
+\end{align}
+である．つまり，$\hat{L}_z$の最大値は$\frac{\hbar}{2}$の自然数倍の値しかとらない．さらに，
+\begin{align}
+  \alpha = \hbar^2\qty(\frac{k}{2})\qty(\frac{k}{2} + 1)
+\end{align}
+である．ここで
+\begin{align}
+  l \equiv \frac{k}{2}
+\end{align}
+とすれば
+\begin{align}
+  \hat{L}^2\ket{l,m} &= \hbar^2 l(l+1)\ket{l,m} \label{abs-of-l}\\
+  \hat{L}_z\ket{l,m} &= m\hbar\ket{l,m} \label{magnitude-of-lz}
+\end{align}
+と書ける．ここで，
+\begin{align}
+  l &= 0,\frac{1}{2},1,\frac{3}{2},\cdots\\
+  m &= -l,-l+1,-l+2,\cdots,l-2,l-1,l
+\end{align}
+である．
+
+次に，
+\begin{align}
+  \hat{L}_{+}\ket{l,m} = C_{+}\ket{l,m+1}
+\end{align}
+とおく．$\hat{L}_{+}^{\dagger} = \hat{L}_{-}$だから，
+\begin{align}
+  &\abs{C_{+}}^2 = \bra{l,m}\hat{L}_{-}\hat{L}_{+}\ket{l,m} = \qty[l(l+1) -m(m+1)]\hbar^2\\
+  &\Rightarrow C_{+} = \hbar\sqrt{(l-m)(l+m+1)}
+\end{align}
+である．$\hat{L}_{-}$に関しても同様に計算すると，
+\begin{align}
+  \hat{L}_{+}\ket{l,m} = \hbar\sqrt{(l-m)(l+m+1)}\ket{l,m+1}\\
+  \hat{L}_{-}\ket{l,m} = \hbar\sqrt{(l+m)(l-m+1)}\ket{l,m+1}
+\end{align}
+を得る．よって，上2式と\refe{abs-of-l}と\refe{magnitude-of-lz}を使えば$\hat{L}_z$と$\hat{L}^2$の行列表現が得られる．
+\begin{align}
+  \hat{L}_z &=
+  \begin{pmatrix} 
+    \bra{0,0}\hat{L}_z\ket{0,0} & \bra{0,0}\hat{L}_z\ket{1/2,1/2} & \bra{0,0}\hat{L}_z\ket{1/2,-1/2} & \bra{0,0}\hat{L}_z\ket{1,1} & \bra{0,0}\hat{L}_z\ket{1,0} & \cdots \\
+    \bra{1/2,1/2}\hat{L}_z\ket{0,0} & \bra{1/2,1/2}\hat{L}_z\ket{1/2,1/2} & \bra{1/2,1/2}\hat{L}_z\ket{1/2,-1/2} & \bra{1/2,1/2}\hat{L}_z\ket{1,1} & \bra{1/2,1/2}\hat{L}_z\ket{1,0} & \cdots \\
+    \bra{1/2,-1/2}\hat{L}_z\ket{0,0} & \bra{1/2,-1/2}\hat{L}_z\ket{1/2,1/2} & \bra{1/2,-1/2}\hat{L}_z\ket{1/2,-1/2} & \bra{1/2,-1/2}\hat{L}_z\ket{1,1} & \bra{1/2,-1/2}\hat{L}_z\ket{1,0} & \cdots \\
+    \bra{1,1}\hat{L}_z\ket{0,0} & \bra{1,1}\hat{L}_z\ket{1/2,1/2} & \bra{1,1}\hat{L}_z\ket{1/2,-1/2} & \bra{1,1}\hat{L}_z\ket{1,1} & \bra{1,1}\hat{L}_z\ket{1,0} & \cdots \\
+    \bra{1,0}\hat{L}_z\ket{0,0} & \bra{1,0}\hat{L}_z\ket{1/2,1/2} & \bra{1,0}\hat{L}_z\ket{1/2,-1/2} & \bra{1,0}\hat{L}_z\ket{1,1} & \bra{1,0}\hat{L}_z\ket{1,0} & \cdots \\
+    \vdots & \vdots & \vdots & \vdots  & &
+  \end{pmatrix} \\
+  &=
+  \begin{pmatrix}
+    0 & 0 & 0 & 0 & 0 & \cdots\\
+    0 & \frac{\hbar}{2} &  &  &  & \\
+    0  & & -\frac{\hbar}{2} &  & & \\
+    \vdots & & & \hbar & & \cdots \\
+    \vdots & & & & 0 &  \cdots\\
+    \vdots & & & & & -\hbar 
+  \end{pmatrix}
+\end{align}
+\begin{align}
+  \hat{L}^2 =
+  \begin{pmatrix}
+    0 & 0 & & & & \\
+    0 & \frac{3}{4}\hbar^2 & & & & \\
+    & & \frac{3}{4}\hbar^2 & & & \\
+    & & & 2\hbar^2 & & \\
+    & & & & 2\hbar^2 & \\
+    & & & & & 2\hbar^2 \\
+  \end{pmatrix}
+\end{align}
+注目すべきは$l$ごとにブロック状になっていることである．$l=1/2$の部分だけ取り出せば
+\begin{align}
+  \hat{L}_z = \frac{\hbar}{2}
+  \begin{pmatrix}
+    1 & 0\\
+    0 & -1
+  \end{pmatrix}
+\end{align}
+が得られる．
+\end{document}
