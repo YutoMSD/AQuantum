@@ -1,0 +1,87 @@
+\documentclass{report}
+\input{../../../head.tex}
+\begin{document}
+　前小節までで，角運動量の交換関係を満たす演算子は回転操作を生むことが分かった．まとめると，$\bm{n}$方向の角度$\phi$の回転は$\bm{\phi} = \phi\bm{n}$として，
+\begin{align}
+  R(\bm{\phi}) = \exp\qty(\frac{\i}{\hbar}\bm{\phi}\cdot\bm{J})
+\end{align}
+で与えられる．ここで，$\bm{J} = (J_1,J_2,J_3)$は
+\begin{align}
+  [J_i,J_j] = \i\hbar\epsilon_{ijk}J_k
+\end{align}
+を満たす．その一例として以下の行列がある．
+\begin{align}
+  J_1 = \i\hbar
+  \begin{pmatrix}
+    0 & 0 & 0\\
+    0 & 0 & -1\\
+    0 & 1 & 0
+  \end{pmatrix}
+  ,\ 
+  J_2 = \i\hbar
+  \begin{pmatrix}
+    0 & 0 & 1\\
+    0 & 0 & 0\\
+    -1 & 0 & 0
+  \end{pmatrix}
+  ,\ 
+  J_3 = \i\hbar
+  \begin{pmatrix}
+    0 & -1 & 0\\
+    1 & 0 & 0\\
+    0 & 0 & 0
+  \end{pmatrix}
+\end{align}
+$z$軸に関する回転は
+\begin{align}
+  R(\phi\bm{e}_z) &= \exp\qty(\frac{i}{\hbar}\phi J_3)\\
+  &= 
+  \begin{pmatrix}
+    \cos\phi & \sin\phi & 0\\
+    -\sin\phi & \cos\phi & 0\\
+    0 & 0 & 1
+  \end{pmatrix}
+\end{align}
+となる．よく見る回転行列である．このような$R(\bm{\phi})$が作用する3成分をもつ対象が3次元\textbf{ベクトル}である．
+
+角運動量としてPauli行列を採用してみる．
+\begin{align}
+  U(\bm{\phi}) = \exp\qty(\i\bm{\phi}\cdot\frac{\bm{\sigma}}{2})
+\end{align}
+この$U(\bm{\phi})$が作用する対象が\textbf{スピノル}である．スピノルには驚くべき特徴がある．
+$z$軸方向の回転を考えてみる．
+\begin{align}
+  U(\phi\bm{e}_z) &= \exp\qty(\i\phi\sigma_z /2)\\
+  &= \exp\qty[
+    \begin{pmatrix}
+      -\i\frac{\phi}{2} & 0\\
+      0 & \i\frac{\phi}{2}
+    \end{pmatrix}
+  ]\\
+  &=
+  \begin{pmatrix}
+    \e^{-\i\phi/2} & 0\\
+    0 & \e^{\i\phi/2}
+  \end{pmatrix}
+\end{align}
+に$\phi = 2\pi$を代入してみる．
+\begin{align}
+  U(2\pi\bm{e}_z) =
+  \begin{pmatrix}
+    -1 & 0\\
+    0 & -1
+  \end{pmatrix}
+\end{align}
+これは
+\begin{align}
+  U(2\pi\bm{e}_z)\ket{\psi} = -\ket{\psi}
+\end{align}
+となり，$z$軸まわりに1周回転させたときに，符号が逆になることを示している．さらにもう1回転させると元に戻る．これがベクトルとは大きく異なる特徴である．
+2$\pi$回転による符号の反転は半整数スピンに共通のものである．また，$R$と$U$がそれぞれ群をなすことは確かめられる．$R$の群は行列式が1(special)の3次元直行行列(orthogonal)
+の群なのでSO(3)，$U$の群は行列式が1の2次元ユニタリ行列なのでSU(2)と呼ばれる．重要なのは，ベクトルとスピノルが異なる変観測を持つということである．ここで，スピノル$\psi$を
+\begin{align}
+  \psi^{\dagger}\bm{\sigma}\psi
+\end{align}
+と変換するとこれはベクトルとなる．この事実は，Dirac方程式で$\psi^{\dagger}\bm{\alpha}\psi$が保存流であったことにも整合する．
+なお，位相の違いは観測に引っかからないため，回転操作で符号が反転することは物理的には問題はない．Ehrenfestはスピノルに対し，「等方的な3次元空間に棲む神秘的な種族」と言った．
+\end{document}

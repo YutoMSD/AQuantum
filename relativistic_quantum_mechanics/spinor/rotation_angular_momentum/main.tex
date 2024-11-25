@@ -1,0 +1,136 @@
+\documentclass{report}
+\input{../../../head.tex}
+\begin{document}
+  $z$方向の角運動量は
+  \begin{align}
+    L_z = xp_y - y p_x
+  \end{align}
+  で定義される．量子力学では演算子を用いて，
+  \begin{align}
+    \hat{L}_z = -\i\hbar(x\partial_y - y\partial_x)
+  \end{align}
+  と表される．上式を極座標に変換すると，
+  \begin{align}
+    \hat{L}_z = -\i\hbar\frac{\partial}{\partial \phi}
+  \end{align}
+  となる．ここで，$\epsilon_z$を微小量とし，
+  \begin{align}
+    \hat{U}(\epsilon_z) = \e^{\i \epsilon_z\hat{L}_z/\hbar} \label{rotation-operator-of-z}
+  \end{align}
+  を定義する．波動関数$\psi(r,\theta,\phi)$に\refe{rotation-operator-of-z}を作用させると，
+  \begin{align}
+    \hat{U}(\epsilon_z)\psi(r,\theta,\phi) &\simeq \qty(\hat{I} - \i\epsilon_z\frac{\hat{L}_z}{\hbar})\psi(r,\theta,\phi)\\
+    &= \qty(1 - \epsilon_z \frac{\partial}{\partial \phi})\psi(r,\theta,\phi)\\
+    &= \psi(r,\theta,\phi - \epsilon_z)
+  \end{align}
+  が得られる．よって，角運動量演算子から回転操作をつくることができることがわかる．
+  同様に，$\hat{L}_x$は$x$軸まわりの回転を，$\hat{L}_y$は$y$軸まわりの回転を生む．
+
+  次に，角運動量の交換関係
+  \begin{align}
+    [\hat{L}_i, \hat{L}_j] = \i\hbar\epsilon_{ijk} \hat{L}_k \label{commutation-of-am}
+  \end{align}
+  が回転操作を定義することを確認する．以下の図\ref{rotation-image}のような状況を考える．$\epsilon_x,\epsilon_y$は微小量とする．
+  一方のルートでは$x$軸中心に$\epsilon_x$回転，$y$軸中心に$\epsilon_y$回転させた後，$x$軸中心に$-\epsilon_x$回転，$y$軸中心に$-\epsilon_y$回転させている．
+  これらの操作を加えた後の状況は，もう一方のルート，$z$軸中心に$\theta_z$回転させたときと一致している．これを数式的に書く．
+  あるベクトル$\bm{V}$があるとする．これを$x$軸，$y$軸中心で回転させる行列はそれぞれ
+  \begin{align}
+    \epsilon_x R_x &=
+    \begin{pmatrix}
+      1 & 0 & 0\\
+      0 & \cos\epsilon_x & -\sin\epsilon_x\\
+      0 & \sin\epsilon_x & \cos\epsilon_x
+    \end{pmatrix}
+    \simeq
+    \begin{pmatrix}
+      1 & 0 & 0\\
+      0 & 1 - \frac{1}{2}\epsilon_x^2 & -\epsilon_x\\
+      0 & \epsilon_x & 1 - \frac{1}{2}\epsilon_x^2
+    \end{pmatrix}\\
+    \epsilon_y R_y &=
+    \begin{pmatrix}
+      \cos\epsilon_y & 0 & 0\\
+      0 & 1 & 0\\
+      -\sin\epsilon_y & 0 & \cos\epsilon_y
+    \end{pmatrix}
+    \simeq
+    \begin{pmatrix}
+      1 - \frac{1}{2}\epsilon_y^2 & 0 & \epsilon_y\\
+      0 & 1 & 0\\
+      -\epsilon_y & 0 & 1 - \frac{1}{2}\epsilon_y^2
+    \end{pmatrix}
+  \end{align}
+  である．これを使うと，
+  \begin{align}
+    \epsilon_xR_x \to \epsilon_y R_y \to -\epsilon_x R_x \to -\epsilon_yR_y
+  \end{align}
+  という操作は
+  \begin{align}
+    &\begin{pmatrix}
+      1 - \frac{1}{2}\epsilon_y^2 & 0 & -\epsilon_y\\
+      0 & 1 & 0\\
+      \epsilon_y & 0 & 1 - \frac{1}{2}\epsilon_y^2
+    \end{pmatrix}
+    \begin{pmatrix}
+      1 & 0 & 0\\
+      0 & 1 - \frac{1}{2}\epsilon_x^2 & \epsilon_x\\
+      0 & -\epsilon_x & 1 - \frac{1}{2}\epsilon_x^2
+    \end{pmatrix}
+    \begin{pmatrix}
+      1 - \frac{1}{2}\epsilon_y^2 & 0 & \epsilon_y\\
+      0 & 1 & 0\\
+      -\epsilon_y & 0 & 1 - \frac{1}{2}\epsilon_y^2
+    \end{pmatrix}
+    \begin{pmatrix}
+      1 & 0 & 0\\
+      0 & 1 - \frac{1}{2}\epsilon_x^2 & -\epsilon_x\\
+      0 & \epsilon_x & 1 - \frac{1}{2}\epsilon_x^2
+    \end{pmatrix}\\
+    &\simeq
+    \begin{pmatrix}
+      1 & \epsilon_x\epsilon_y & 0\\
+      -\epsilon_x\epsilon_y & 1 & 0\\
+      0 & 0 & 1
+    \end{pmatrix}\\
+    &= - \epsilon_x\epsilon_y R_z
+  \end{align}
+  と計算できる．よって，前述の図を用いた議論は数式的に保証されている．つまり，
+  \begin{align}
+    \epsilon_xR_x \to \epsilon_y R_y \to -\epsilon_x R_x \to -\epsilon_yR_y = -\epsilon_x\epsilon_y R_z
+  \end{align}
+  ということである．この関係からも\refe{commutation-of-am}が回転操作を定義していることがわかるだろう．
+  さらに，\refe{rotation-operator-of-z}より，$z$軸まわりに$\epsilon_z$回転させるユニタリ演算子$\hat{U}[\epsilon_zR_z]$は
+  \begin{align}
+    \hat{U}[\epsilon_zR_z] = \e^{-\i\epsilon_z\hat{L}_z/\hbar} \simeq \hat{I} - \i\frac{\epsilon_z}{\hbar}\hat{L}_z + \qty(\frac{-\i}{\hbar})^2\epsilon_z^2 \hat{L}_z^2 + \cdots
+  \end{align}
+  と表される．$x$．$y$に関しても同様である．これらを用いて，
+  \begin{align}
+    \epsilon_xR_x \to \epsilon_y R_y \to -\epsilon_x R_x \to -\epsilon_yR_y = -\epsilon_x\epsilon_y R_z
+  \end{align}
+  を角運動量演算子で表すと
+  \begin{align}
+    \qty(\hat{I} + \i\frac{\epsilon_y}{\hbar}\hat{L}_y + \qty(\frac{\i}{\hbar})^2\epsilon_y^2 \hat{L}_y^2 + \cdots) \qty(\hat{I} + \i\frac{\epsilon_x}{\hbar}\hat{L}_x + \qty(\frac{\i}{\hbar})^2\epsilon_x^2 \hat{L}_x^2 + \cdots) \qty(\hat{I} - \i\frac{\epsilon_y}{\hbar}\hat{L}_y + \qty(\frac{-\i}{\hbar})^2\epsilon_y^2 \hat{L}_y^2 + \cdots)\\ \qty(\hat{I} - \i\frac{\epsilon_x}{\hbar}\hat{L}_x + \qty(\frac{-\i}{\hbar})^2\epsilon_x^2 \hat{L}_x^2 + \cdots)
+    =\qty(\hat{I} + \frac{\i}{\hbar}\epsilon_x\epsilon_y \hat{L}_z + \cdots)
+  \end{align}
+  と書ける．上式の左辺を整理すると
+  \begin{align}
+    \hat{I} - \qty(\frac{\i}{\hbar})^2\epsilon_x\epsilon_y[\hat{L}_x, \hat{L}_y]
+  \end{align}
+  である．よって，
+  \begin{align}
+    [\hat{L}_x, \hat{L}_y] = \i\hbar\hat{L}_z
+  \end{align}
+  が成立する．角運動量演算子の交換関係$[\hat{L}_x, \hat{L}_y] = \i\hbar\hat{L}_z$は$z$軸まわりの回転操作を意味していたのである．逆に，交換関係\refe{rotation-operator-of-z}を満たす
+  演算子$\hat{\bm{L}}$で
+  \begin{align}
+    \hat{R}(\phi\bm{n}) = \exp\qty(\frac{\i}{\hbar}\phi\bm{n}\cdot\bm{L})
+  \end{align}
+  というユニタリ演算子を作れば，それは$\bm{n}$軸まわりの角度$\phi$の回転操作を意味するのである．注目すべきは，以上の議論で$\hat{\bm{L}}$の行列の次元や表現を指定していないことである．
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{fig/rotation.pdf}
+    \caption{回転操作}
+    \label{rotation-image}
+  \end{figure}
+\end{document}
