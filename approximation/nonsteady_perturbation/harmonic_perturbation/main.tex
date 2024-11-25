@@ -2,30 +2,32 @@
 \input{../../../head.tex}
 \begin{document}
   時間に依存する摂動を調和摂動という．
-  以下の摂動を考える\footnote{光のイメージ}．
+  摂動$\hat{V}$が，
   \begin{align}
     \hat{V}(t) = 
     \begin{dcases}
       0 & t\leq 0 \\
-      2V\cos\omega t & t > 0
+      2\hat{V}\cos\omega t & t > 0
     \end{dcases}
   \end{align}
-  $2V\cos\omega t = V(\e^{i\omega t} + \e^{-i\omega t})$であるので，
+  で与えられるときを考える\footnote{光のイメージ}\footnote{2023年度期末試験第2問(3)．}．
+  $2\hat{V}\cos\omega t = \hat{V}(\e^{i\omega t} + \e^{-i\omega t})$であるので，
   \begin{align}
-    c^{(1)}_{f, i}(t) &= \frac{i}{\hbar}\int_{0}^{t}\mel**{f}{\hat{V}}{i}(\e^{\i\omega t} + \e^{-\i\omega t})\e^{\i\omega_{fi}t}\dd{t} \label{3.6} \\
-    &= -\frac{V_{fi}}{\hbar}\qty(\frac{\e^{\i(\omega_{fi} + \omega)t} - 1}{\omega_{fi} + \omega} + \frac{\e^{\i(\omega_{fi} - \omega)t} - 1}{\omega_{fi} - \omega})
+    c^{(1)}_{f, i}(t) &= -\frac{\i}{\hbar}\int_{0}^{t}V_{fi}(t')\e^{\i\omega_{fi}t'}\dd{t'} \\ 
+    &= -\frac{i}{\hbar}\int_{0}^{t}\mel**{f}{\hat{V}}{i}(\e^{\i\omega t'} + \e^{-\i\omega t'})\e^{\i\omega_{fi}t'}\dd{t'} \\
+    &= -\i\frac{V_{fi}}{\hbar}\qty(\frac{\e^{\i(\omega_{fi} + \omega)t} - 1}{\omega_{fi} + \omega} + \frac{\e^{\i(\omega_{fi} - \omega)t} - 1}{\omega_{fi} - \omega})\label{harmonic-perturbation-cnt}
   \end{align}
   を得る．ここで$V_{fi} = \mel**{f}{\hat{V}}{i}$とした．
   \begin{enumerate}
     \item $\omega_{fi} - \omega \approx 0$のとき\par
-      \refe{3.6}の第2項は第1項より十分大きい．よって，
+      \refe{harmonic-perturbation-cnt}の第2項は第1項より十分大きい．よって，
       \begin{align}
-        c_{f, i}^{(1)}(t)\approx - \frac{V_{fi}}{\hbar}\frac{\e^{\i(\omega_{fi} - \omega)t} - 1}{\omega_{fi} - \omega} = -\frac{V_{fi}}{\hbar}\e^{\i\frac{\omega_{fi} - \omega}{2}t}\frac{\sin\frac{\omega_{fi} - \omega}{2}t}{\frac{\omega_{fi} - \omega}{2}}
+        c_{f, i}^{(1)}(t)\approx -\i\frac{V_{fi}}{\hbar}\frac{\e^{\i(\omega_{fi} - \omega)t} - 1}{\omega_{fi} - \omega} = -\i\frac{V_{fi}}{\hbar}\exp\qty(\i\frac{\omega_{fi} - \omega}{2}t)\frac{\sin\qty(\frac{\omega_{fi} - \omega}{2}t)}{\frac{\omega_{fi} - \omega}{2}}
       \end{align}
       と近似できる．
       このとき$\ket{i}\to\ket{f}$の遷移確率は，
       \begin{align}
-        \abs{c_{f, i}^{(1)}(t)}^2 = \frac{V_{fi}^2}{\hbar^2}\frac{\sin^2\frac{\omega_{fi} - \omega}{2}t}{\qty(\frac{\omega_{fi} - \omega}{2})^2}
+        \abs{c_{f, i}^{(1)}(t)}^2 = \frac{V_{fi}^2}{\hbar^2}\frac{\sin^2\qty(\frac{\omega_{fi} - \omega}{2}t)}{\qty(\frac{\omega_{fi} - \omega}{2})^2}
       \end{align}
       $\frac{\sin^2\frac{\omega_{fi} - \omega}{2}t}{\qty(\frac{\omega_{fi} - \omega}{2})^2}$は$t\to\infty$で$2\pi t\delta(\omega_{fi} - \omega) = 2\pi t\hbar\delta(E_f - E_i - \hbar\omega)$
       と近似できるので
@@ -35,7 +37,8 @@
       \end{align}
       である．これもFermiの黄金律という．$E_f = E_i + \hbar\omega$へと遷移することがわかる．
     \item $\omega_{fi} + \omega\approx 0$のとき\par
-      \refe{3.6}の第1項が支配的となる．上記の議論を$\omega\to\omega$と置き換えて繰り返すと単位時間当たりの遷移確率として
+      \refe{harmonic-perturbation-cnt}の第1項が支配的となる．
+      $\omega_{fi} - \omega \approx 0$のときの議論を$\omega\to-\omega$と置き換えて繰り返すと単位時間当たりの遷移確率として
       \begin{align}
         \omega_{i\to f} = \frac{\abs{c_{f,i}^{(1)}(t)}^2}{t} = \frac{2\pi}{\hbar}\abs{V_{fi}}^2\delta(E_f - E_i + \hbar\omega)
       \end{align}

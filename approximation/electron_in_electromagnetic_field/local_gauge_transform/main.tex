@@ -4,10 +4,10 @@
   次に局所ゲージ変換を議論する．
   波動関数$\psi(\bm{r}, t)$を，
   \begin{align}
-    \psi(\bm{r}, t) \to \psi'(\bm{r}, t) \coloneqq \e^{\i\alpha(\bm{r}), t}\psi(\bm{r}, t)
+    \psi(\bm{r}, t) \to \e^{\i\alpha(\bm{r}, t)}\psi(\bm{r}, t) \eqqcolon \psi'(\bm{r}, t)
   \end{align}
   のように変換することを局所ゲージ変換という．
-  局所ゲージ変換では，$\alpha$が$\bm{r}$に依存することに注意する．
+  局所ゲージ変換では，$\alpha$が$\bm{r}$と$t$に依存することに注意する．
   簡単な考察により，局所ゲージ変換にSchr\"odinger方程式は影響を受けることが分かる．
   \par
   例えば波動関数の勾配を計算すると，
@@ -27,22 +27,22 @@
   である．したがって，局所ゲージ変換に対して物理は不変ではない．そこで，\textbf{局所ゲージ不変性を基本原理とする物理を再構築する．}% モチベ？？相対論？
   \par
   今まで用いていた物理の模型の欠点は，積の微分をおこなったときに余分な項が出てきてしまうことであった．
-  そこで，局所ゲージ不変性を満たすように物理の模型を変更するために，微分の定義を変更することを考える．
-  以下では，今まで考えていた模型において空間に対する微分であった勾配を，共変微分$\hat{\bm{D}}$で，時間微分を$\hat{D}_t$で書き換えることよって，局所ゲージ不変な物理模型を作る．
+  そこで，局所ゲージ不変性を満たすような物理の模型を構成するために，微分の定義を変更することを考える．
+  以下では，今まで考えていた模型において空間に対する微分であった勾配を，共変微分$\hat{\bm{D}}$で，時間微分を$\hat{D}_t$で書き換えることよって，局所ゲージ不変な物理の模型を作る．
   $\hat{\bm{D}}$と$\hat{D}_t$を，
   \begin{align}
-    \hat{\bm{D}} &\coloneqq \grad + \i\frac{e}{\hbar}\hat{\bm{A}} \label{hatd-def}\\ 
+    \hat{\bm{D}} &\coloneqq \grad + \i\frac{e}{\hbar}\bm{A} \label{hatd-def}\\ 
     \hat{D}_t &\coloneqq \pdv{t} - \i\frac{e}{\hbar}\phi \label{hatdt-def}
   \end{align}
   と定義する．
-  また，$\hat{\bm{A}}$と$\phi$の局所ゲージ変換則を，
+  また，$\bm{A}$と$\phi$の局所ゲージ変換則を，
   \begin{align}
-    \hat{\bm{A}} &\to \hat{\bm{A}} - \frac{\hbar}{e}\grad\alpha(\bm{r}, t) \eqqcolon \hat{\bm{A}}' \\ 
-    \phi &\to \phi + \frac{\hbar}{e}\pdv{t}\alpha(\bm{r}, t) \eqqcolon \phi'  
+    \bm{A} &\to \bm{A} - \frac{\hbar}{e}\grad\alpha(\bm{r}, t) \eqqcolon \bm{A}' \\ 
+    \phi &\to \phi + \frac{\hbar}{e}\pdv{t}\alpha(\bm{r}, t) \eqqcolon \phi' 
   \end{align}
   と定義する．$\hat{\bm{D}}$と$\hat{D}_t$を局所ゲージ変換すると，
   \begin{align}
-    \hat{\bm{D}} &\to \hat{\bm{D}}' = \grad + \i\frac{e}{\hbar}\hat{\bm{A}'} = \grad + \i\frac{e}{\hbar}\bm{\hat{A}} - \i\grad\alpha(\bm{r}, t) \\ 
+    \hat{\bm{D}} &\to \hat{\bm{D}}' = \grad + \i\frac{e}{\hbar}\bm{A'} = \grad + \i\frac{e}{\hbar}\bm{A} - \i\grad\alpha(\bm{r}, t) \\ 
     \hat{D}_t &\to \hat{D}_t' = \pdv{t} - \i\frac{e}{\hbar}\phi' = \pdv{t} - \i\frac{e}{\hbar}\phi - \i\pdv{t}\alpha(\bm{r}, t)
   \end{align}
   となる．
@@ -63,71 +63,71 @@
   また，\refe{local-gauge-psi}において\refe{hatd-def}と\refe{hatdt-def}を\refe{local-gauge-psi}に代入すると，
   \begin{itembox}[l]{局所ゲージ変換に対して不変なSchrödinger方程式}
     \begin{align}
-      \i\hbar\pdv{t}\psi = \qty[\frac{1}{2m}\qty(\hat{\bm{p}} + e\hat{\bm{A}})^2 - e\phi]\psi
+      \i\hbar\pdv{t}\psi = \qty[\frac{1}{2m}\qty(\hat{\bm{p}} + e\bm{A})^2 - e\phi]\psi
     \end{align}
   \end{itembox}
-  を得る．
+  を得る\footnote{2023年度期末試験第2問(1)}．
   \par
   以上の流れをまとめると，局所ゲージ不変性を要請することにより，ゲージ場$\bm{A}$が導入された．逆に，電磁場の起源は局所ゲージ不変性であるといえる．
-
   \begin{myexc}{電磁場中のSchrödinger方程式}{}
-  \begin{enumerate}
-    \item 共変微分
+    \begin{enumerate}
+      \item 共変微分
+        \begin{align}
+          \hat{\bm{D}} = \grad + \i\frac{e}{\hbar}\bm{A}
+        \end{align}
+        において，
+        \begin{align}
+          \hat{\bm{D}} \times \hat{\bm{D}} = \i\frac{e}{\hbar}\bm{B}
+        \end{align}
+        が成り立つことを示せ．
+      \item 電磁場中のSchrödinger方程式
       \begin{align}
-        \hat{\bm{D}} = \nabla + \i\frac{e}{\hbar}\bm{A}
+        \i\hbar\pdv{t}\psi = \qty[\frac{1}{2m}\qty(\hat{\bm{p}} + e\bm{A})^2 - e\phi]\psi
       \end{align}
-      において，
+      においては
       \begin{align}
-        \hat{\bm{D}} \times \hat{\bm{D}} = \i\frac{e}{\hbar}\bm{B}
+        \pdv{t} \rho + \div \bm{j} = 0 \label{prob-current-exercise}
       \end{align}
-      が成り立つことを示せ．
-    \item 電磁場中のSchrödinger方程式
-    \begin{align}
-      \i\hbar\pdv{t}\psi = \qty[\frac{1}{2m}\qty(\hat{\bm{p}} + e\hat{\bm{A}})^2 - e\phi]\psi
-    \end{align}
-    においては
-    \begin{align}
-      \frac{\partial}{\partial t} \rho + \nabla\cdot \bm{j} = 0 \label{prob-current-exercise}
-    \end{align}
-    が成り立たない．ここで，
-    \begin{align}
-      \bm{j} = \frac{\i\hbar}{2m}\qty[(\nabla \psi^{*})\psi - \psi^{*} (\nabla\psi)],\ \rho = \psi^{*}\psi
-    \end{align}
-    である．\refe{prob-current-exercise}が成り立つように確率の流れを再定義せよ．
-  \end{enumerate}
-  \tcblower
-  \begin{enumerate}
-    \item \begin{align}
-      (\hat{\bm{D}} \times \hat{\bm{D}})\psi &= \qty(\nabla + \i\frac{e}{\hbar}\bm{A}) \times \qty(\nabla + \i\frac{e}{\hbar}\bm{A})\psi\\
-      &= \qty(\nabla\times\nabla + \i\frac{e}{\hbar}\bm{A}\times\nabla + \i\frac{e}{\hbar}\nabla\times\bm{A} - \frac{e^2}{\hbar^2})\psi\\
-      &= \i\frac{e}{\hbar}\bm{A}\times(\nabla\psi) + \i\frac{e}{\hbar}(\nabla\psi)\times\bm{A} + \i\frac{e}{\hbar}(\nabla\times\bm{A})\psi\\
-      &= \bm{B}\psi
-    \end{align}
-    \item まず，確率密度の時間微分は
+      が成り立たない．ここで，
       \begin{align}
-        \frac{\partial}{\partial t}\rho = \qty(\frac{\partial}{\partial t}\psi^{*}) + \psi^{*}\qty(\frac{\partial}{\partial t}\psi)
+        \bm{j} = \frac{\i\hbar}{2m}\qty[(\grad \psi^{*})\psi - \psi^{*} (\grad\psi)],\ \rho = \psi^{*}\psi
       \end{align}
-      である．次に，電磁場中のSchrödinger方程式より，
-      \begin{align}
-        \i\hbar \frac{\partial}{\partial t} \psi &= -\frac{\hbar^2}{2m}\qty(\nabla + \i\frac{e}{\hbar}\bm{A})^2\psi - e\phi\psi\\
-        \i\hbar \frac{\partial}{\partial t} \psi^{*} &= \frac{\hbar^2}{2m}\qty(\nabla - \i\frac{e}{\hbar}\bm{A})^2\psi^{*} - e\phi\psi^{*}
+      である．\refe{prob-current-exercise}が成り立つように確率の流れを再定義せよ．
+    \end{enumerate}
+    \tcblower
+    \begin{enumerate}
+      \item 
+        \begin{align}
+        (\hat{\bm{D}} \times \hat{\bm{D}})\psi &= \qty(\grad + \i\frac{e}{\hbar}\bm{A}) \times \qty(\grad + \i\frac{e}{\hbar}\bm{A})\psi\\
+        &= \qty(\curl\grad + \i\frac{e}{\hbar}\bm{A}\times\grad + \i\frac{e}{\hbar}\curl\bm{A} - \frac{e^2}{\hbar^2})\psi\\
+        &= \i\frac{e}{\hbar}\bm{A}\times(\grad\psi) + \i\frac{e}{\hbar}(\grad\psi)\times\bm{A} + \i\frac{e}{\hbar}(\curl\bm{A})\psi\\
+        &= \bm{B}\psi
       \end{align}
-      を得る．ここで，
-      \begin{align}
-        \qty(\nabla - \i\frac{e}{\hbar}\bm{A})^2\psi^{*} &= \nabla^2\psi^{*} - \i\frac{e}{\hbar}\bm{A}\cdot(\nabla\psi^{*}) - \i\frac{e}{\hbar}(\nabla\psi^{*})\cdot\bm{A} - \i\frac{e}{\hbar}(\nabla\cdot\bm{A})\psi^{*} - \frac{e^2}{\hbar^2}\psi^{*}\\
-        &= \nabla^2\psi^{*} - 2\i\frac{e}{\hbar}\bm{A}\cdot(\nabla\psi^{*}) - \i\frac{e}{\hbar}(\nabla\cdot\bm{A})\psi^{*} - \frac{e^2}{\hbar^2}\psi^{*}\\
-        \qty(\nabla + \i\frac{e}{\hbar}\bm{A})^2\psi &=\nabla^2\psi + 2\i\frac{e}{\hbar}\bm{A}\cdot(\nabla\psi) + \i\frac{e}{\hbar}(\nabla\cdot\bm{A})\psi - \frac{e^2}{\hbar^2}\psi
-      \end{align}
-      である．よって，
-      \begin{align}
-        2m\i\frac{\partial}{\partial t}\rho &= -\nabla\cdot\qty[\psi^{*}\nabla\psi - (\nabla\psi^{*})\psi - 2\i \frac{e}{\hbar}\bm{A}\psi^{*}\psi]\\
-        &= -\nabla\cdot\qty[\psi^{*}(\nabla - \i\frac{e}{\hbar} \bm{A})\psi - ((\nabla - \i \frac{e}{\hbar}\bm{A})\psi)^{*}\psi]
-      \end{align}
-      となるため，
-      \begin{align}
-        \bm{j} = \frac{\i}{2m}\qty[\psi^{*}(\bm{D}\psi) - (\bm{D}^{*}\psi^{*})\psi]
-      \end{align}
-      と定義すればよいことがわかる．
-  \end{enumerate}
+      \item まず，確率密度の時間微分は
+        \begin{align}
+          \pdv{t}\rho = \qty(\pdv{t}\psi^{*}) + \psi^{*}\qty(\pdv{t}\psi)
+        \end{align}
+        である．次に，電磁場中のSchrödinger方程式より，
+        \begin{align}
+          \i\hbar \pdv{t} \psi &= -\frac{\hbar^2}{2m}\qty(\grad + \i\frac{e}{\hbar}\bm{A})^2\psi - e\phi\psi\\
+          \i\hbar \pdv{t} \psi^{*} &= \frac{\hbar^2}{2m}\qty(\grad - \i\frac{e}{\hbar}\bm{A})^2\psi^{*} - e\phi\psi^{*}
+        \end{align}
+        を得る．ここで，
+        \begin{align}
+          \qty(\grad - \i\frac{e}{\hbar}\bm{A})^2\psi^{*} &= \laplacian\psi^{*} - \i\frac{e}{\hbar}\bm{A}\cdot(\grad{\psi^{*}}) - \i\frac{e}{\hbar}(\grad\psi^{*})\cdot\bm{A} - \i\frac{e}{\hbar}(\curl\bm{A})\psi^{*} - \frac{e^2}{\hbar^2}\psi^{*}\\
+          &= \laplacian\psi^{*} - 2\i\frac{e}{\hbar}\bm{A}\cdot(\grad\psi^{*}) - \i\frac{e}{\hbar}(\curl\bm{A})\psi^{*} - \frac{e^2}{\hbar^2}\psi^{*}\\
+          \qty(\grad + \i\frac{e}{\hbar}\bm{A})^2\psi &= \laplacian\psi + 2\i\frac{e}{\hbar}\bm{A}\cdot(\grad \psi) + \i\frac{e}{\hbar}(\curl\bm{A})\psi - \frac{e^2}{\hbar^2}\psi
+        \end{align}
+        である．よって，
+        \begin{align}
+          2m\i\pdv{t}\rho &= -\curl\qty[\psi^{*}\grad\psi - (\grad\psi^{*})\psi - 2\i \frac{e}{\hbar}\bm{A}\psi^{*}\psi]\\
+          &= -\curl\qty[\psi^{*}\qty(\grad - \i\frac{e}{\hbar} \bm{A})\psi - \qty(\qty(\grad - \i \frac{e}{\hbar}\bm{A})\psi)^{*}\psi]
+        \end{align}
+        となるため，
+        \begin{align}
+          \bm{j} = \frac{\i}{2m}\qty[\psi^{*}(\bm{D}\psi) - (\bm{D}^{*}\psi^{*})\psi]
+        \end{align}
+        と定義すればよいことがわかる．
+    \end{enumerate}
   \end{myexc}
 \end{document}

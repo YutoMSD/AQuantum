@@ -22,6 +22,7 @@
       )
     \end{align}
     によって与えられる\footnote{$\gamma$は摂動の強さを表す．}．
+    ただし，$\gamma \in \mathbb{R}$である．
     系全体のハミルトニアンを$\hat{H} \coloneqq \hat{H}^{(0)} + \hat{V}(t)$とする．
     系の状態ベクトルを相互作用表示を用いて，
     \begin{align}
@@ -57,7 +58,7 @@
         \end{align}
         2階の斉次微分方程式の解は$c_2(t) = \e^{\i\lambda t}$と書けるので，これを\refe{rabi-cnt-eq-c2}に代入すると，
         \begin{align}
-          \lambda^2 + \Delta\omega\lambda - \qty(\frac{\gamma}{\hbar}) &= 0 \\
+          \lambda^2 + \Delta\omega\lambda - \qty(\frac{\gamma}{\hbar})^2 &= 0 \\
           \Rightarrow \lambda &= -\frac{\Delta\omega}{2}\pm\sqrt{\qty(\frac{\Delta\omega}{2})^2 + \qty(\frac{\gamma}{\hbar})^2}
         \end{align} 
         を得る．$\Omega$を，
@@ -108,7 +109,7 @@
   \exref{rabi-cycle}では，Rabi振動に関する2つの重要な物理量を得たので，下にまとめる．
   \begin{itembox}[l]{Rabi周波数}
     \begin{align}
-    \Omega = \sqrt{\qty(\Delta\omega/2)^2 + \qty(\gamma/\hbar)^2}   
+    \Omega = \sqrt{\qty(\frac{\Delta\omega}{2})^2 + \qty(\frac{\gamma}{\hbar})^2}
     \end{align}
   \end{itembox}
   \begin{itembox}[l]{共鳴条件}

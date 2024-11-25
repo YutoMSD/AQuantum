@@ -25,16 +25,16 @@
   \end{align}
   と計算できる．
   \par
-  次に，相互作用表示の時間微分を計算してみる．
+  次に，相互作用表示の時間微分を計算する．
   相互作用表示での摂動項$\hat{V}_{\r{I}}$を，
   \begin{align}
     \hat{V}_{\r{I}} \coloneqq \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t) \label{time-dependent-schrodinger-eq-re-2nd-eq-interaction-picture}
   \end{align}
   とする．計算の途中で，\refe{time-dependent-schrodinger-eq-re}の第1式を用いると，
   \begin{align}
-    \i\hbar\dv{t}\ket{\psi(t)}_{\r{I}} &= \dv{t}\qty[\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)]\ket{\psi(t)} + \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\dv{t}\ket{\psi(t)} \\
-    &= \i\frac{\hat{H}^{(0)}}{\hbar}\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)} + \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\frac{1}{\i\hbar}\qty(\hat{H}^{(0)} + \hat{V}(t))\ket{\psi(t)} \\ 
-    &= \frac{\i}{\hbar}\qty[\hat{H}^{(0)}, \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)]\ket{\psi(t)} + \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\ket{\psi(t)} \\ 
+    \i\hbar\dv{t}\ket{\psi(t)}_{\r{I}} &= \i\hbar\dv{t}\qty[\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)]\ket{\psi(t)} + \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\i\hbar\dv{t}\ket{\psi(t)} \\
+    &= -\hat{H}^{(0)}\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)} + \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\qty(\hat{H}^{(0)} + \hat{V}(t))\ket{\psi(t)} \\ 
+    &= \qty[\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t), \hat{H}^{(0)}]\ket{\psi(t)} + \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\ket{\psi(t)} \\ 
     &= \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\ket{\psi(t)} \\
     &= \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)} \\
     &= \exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)\ket{\psi(t)}_{\r{I}} \\
@@ -43,8 +43,7 @@
   を得る．\refe{time-dependent-schrodinger-eq-re-1st-eq-interaction-picture}と\refe{time-dependent-schrodinger-eq-re-2nd-eq-interaction-picture}はSch\"odinger表示の非定常摂動基本方程式と等価な方程式であるから，
   これを\textbf{朝永・Schwinger方程式}と呼ぶ．
   \footnote{Schrödinger描像は量子状態が時間発展するとみなす．Heisenberg描像は物理量が時間発展するとみなす．相互作用表示はその中間であるといえる．}  
-  \footnote{朝永振一郎(1906-1979)}
-  \footnote{Julian Schwinger(1918-1994)}
+  \footnote{朝永振一郎(1906-1979)，Julian Schwinger(1918-1994)}
   \footnote{朝永とSchwingerは1964年にRichard Feynmannとともにノーベル賞を受賞．}．
   \begin{itembox}[l]{朝永・Schwinger方程式}
     \begin{align}
@@ -65,7 +64,7 @@
   また，$\hat{V}_{\r{I}}(t)$は$c_n(t)$に作用しないものとすると，
   \begin{align}
     \mel**{m}{\i\hbar\dv{t}}{\psi(t)}_{\r{I}} &= \mel**{m}{\hat{V}_{\r{I}}(t)}{\psi(t)}_{\r{I}} \\ 
-    \Leftrightarrow \bra{m}\i\hbar\sum_{n}c_n(t)\ket{n} &= \sum_{n}c_n(t)\mel**{m}{\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)}{n} \\ 
+    \Leftrightarrow \bra{m}\i\hbar\sum_{n}\dv{t}c_n(t)\ket{n} &= \sum_{n}c_n(t)\mel**{m}{\exp\qty(\i\frac{\hat{H}^{(0)}}{\hbar}t)\hat{V}(t)\exp\qty(-\i\frac{\hat{H}^{(0)}}{\hbar}t)}{n} \\ 
     \Leftrightarrow \i\hbar\sum_{n}\dv{t}c_n(t)\braket{m}{n} &= \sum_{n}c_n(t)\exp\qty(-\i\frac{E_n - E_m}{\hbar}t)\mel**{m}{\hat{V}(t)}{n} \\ 
     \Leftrightarrow \i\hbar \dv{t}c_m(t) &= \sum_{n}c_n(t)\exp\qty(\i\frac{E_m - E_n}{\hbar}t)\mel**{m}{\hat{V}(t)}{n}
   \end{align}
@@ -79,7 +78,7 @@
   非定常摂動量子系の時間発展は以下の式を満たす．
   \begin{itembox}[l]{非定常摂動量子系の時間発展}
     \begin{align}
-      \i\hbar\dv{t}c_m(t) &= \sum_{n}c_n(t)V_{mn}(t)\e^{\i\omega_{mn}t}\label{cnt-eq}
+      \forall m\ \i\hbar\dv{t}c_m(t) &= \sum_{n}c_n(t)V_{mn}(t)\e^{\i\omega_{mn}t}\label{cnt-eq}
     \end{align}
   \end{itembox}
   これは$c_n(t)$の連立方程式になっていて，一般に解くことは困難である．
@@ -87,19 +86,19 @@
   \begin{align}
     \i\hbar\dv{t}\mqty(c_1 \\ c_2 \\ \vdots \\ c_n) 
     = \mqty(
-      V_{11}(t) & V_{12}(t)\e^{\i\omega_{12}t} & \cdots & V_{1n(t)}\e^{\i\omega_{1n}t} \\ 
-      (V_{12}(t)\e^{\i\omega_{12}t})^* & V_{22}(t) & \cdots & V_{2n}(t)\e^{\i\omega_{2n}t} \\ 
+      V_{11}(t) & V_{12}(t)\e^{\i\omega_{12}t} & \cdots & V_{1n}(t)\e^{\i\omega_{1n}t} \\ 
+      \qty(V_{12}(t)\e^{\i\omega_{12}t})^* & V_{22}(t) & \cdots & V_{2n}(t)\e^{\i\omega_{2n}t} \\ 
       \vdots & \vdots & \ddots & \vdots \\ 
-      (V_{1n}(t)\e^{\i\omega_{1n}t})^* & (V_{2n}(t)\e^{\i\omega_{2n}t})^* & \cdots & V_{nn}(t)
+      \qty(V_{1n}(t)\e^{\i\omega_{1n}t})^* & \qty(V_{2n}(t)\e^{\i\omega_{2n}t})^* & \cdots & V_{nn}(t)
       ) 
       \mqty(c_1 \\ c_2 \\ \vdots \\ c_n)\label{cnt-matrix}
   \end{align}
   となる．途中で，
   \begin{align}
-    (V_{mn}(t)\e^{\i\omega_{mn}t})^* &= V_{mn}(t)^* \qty(\e^{\i\omega_{mn}t})^* \\ 
+    \qty(V_{mn}(t)\e^{\i\omega_{mn}t})^* &= V_{mn}(t)^* \qty(\e^{\i\omega_{mn}t})^* \\ 
     &= \mel**{m}{\hat{V}(t)}{n}^*\exp\qty(-\i\frac{E_m - E_n}{\hbar}t) \\ 
     &= \mel**{n}{\hat{V}(t)}{m}\exp\qty(\i\frac{E_n - E_m}{\hbar}t) \\ 
-    &= (V_{nm}(t)\e^{\i\omega_{nm}t})
+    &= \qty(V_{nm}(t)\e^{\i\omega_{nm}t})
   \end{align}
   を用いた．\refe{cnt-matrix}の行列の部分も時間に依存することを考えると$n$が大きなときに厳密に解くことは困難である．
 \end{document}

@@ -1,26 +1,27 @@
 \documentclass{report}
 \input{../../head.tex}
 \begin{document}
-  $z$軸に沿って粒子を単位時間単位面積当たり$n$個入射する．$z$軸から距離$b$ (衝突パラメータ)，角度$\dd{\phi}$，面積$\dd{S'}$のスリットを単位時間当たりに通過する粒子数は，
-  \begin{align}
-    n\dd{S'} = n \dd{\phi} (b \dd{\phi})
-  \end{align}
-  を満たす．
-  
+  $z$軸に沿って粒子を単位時間単位面積当たり$n$個入射する．
   \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\columnwidth]{fig/scattering_cm.pdf}
     \caption{古典力学における散乱}
     \label{sc-in-cm-image}
   \end{figure}
-
+  $z$軸から距離$b$ (衝突パラメータ)，角度$\dd{\phi}$，面積$\dd{S'}$のスリットを単位時間当たりに通過する粒子数は，
+  \begin{align}
+    n\dd{S'} = n \dd{\phi} (b \dd{b})
+  \end{align}
+  を満たす．
   また，単位時間に検出器に到達する粒子数は微分断面積の定義から，
   \begin{align}
-    \dd{N} = \sigma (\theta) N \dd{\Omega}
+    \dd{N} = \sigma(\theta) n \dd{\Omega}
   \end{align}
-  である．古典力学ではこれらは必ず一致するため，
+  である．
+  古典力学ではスリットを通過した粒子は，必ず検出器で検出されるので，
   \begin{align}
-    \sigma (\theta) n \dd{\Omega} = n \dd{\phi} (b \dd{\phi})
+    n\dd{S'} &= \dd{N} \\ 
+    \Leftrightarrow \sigma (\theta) n \dd{\Omega} &= n \dd{\phi} (b \dd{\phi})
   \end{align}
   を得る．よって，微分断面積は，
   \begin{align}
@@ -28,7 +29,7 @@
   \end{align}
   と表される．
   \begin{myex}{剛体球}{}
-    散乱体を半径$a$の剛体球
+    散乱体を半径$a$の剛体球のポテンシャル$V(r)$を，
     \begin{align}
       V(r) = 
       \begin{dcases}
@@ -36,7 +37,8 @@
         0 & r > a
       \end{dcases}
     \end{align}
-    とする．衝突パラメータを$b$，粒子が散乱体の角度$\phi$の位置で散乱し，その散乱角を$\theta$とする．
+    とする．
+    衝突パラメータを$b$として，粒子が散乱体の角度$\phi$の位置で散乱し，その散乱角を$\theta$とする．
     これらのパラメータは，
     \begin{align}
       \begin{dcases}
@@ -46,14 +48,15 @@
     \end{align}
     を満たすため，
     \begin{align}
-      b = a\cos \frac{\theta}{2}
+      b = a\cos\qty(\frac{\theta}{2})
     \end{align}
-    を得る．よって，微分断面積は
+    を得る．よって，微分断面積は，
     \begin{align}
-    \sigma(\theta) &= \frac{1}{\sin \theta} b \abs{\frac{\dd{b}}{\dd{\theta}}}\\
-    &= \frac{a^2}{4}
+      \sigma(\theta) &= \frac{1}{\sin \theta} b \abs{\dv{b}{\theta}} \\
+      &= \frac{a\cos\qty(\frac{\theta}{2})}{\sin\theta}\abs{-\frac{a}{2}\sin\qty(\frac{\theta}{2})} \\ 
+      &= \frac{a^2}{4}
     \end{align}
-    となる．$\theta$に依存しない等方散乱であることがわかる．また，全断面積は
+    となる．$\theta$に依存しない等方散乱であることがわかる．また，全断面積は，
     \begin{align}
       \sigma^{\r{tot}} = \int \sigma(\theta) \dd{\Omega} = \pi a^2
     \end{align}

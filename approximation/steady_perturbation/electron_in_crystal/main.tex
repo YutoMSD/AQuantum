@@ -1,7 +1,7 @@
 \documentclass{report}
 \input{../../../head.tex}
 \begin{document}
-  \begin{myex}{バンドギャップ}{}
+  \begin{myex}{バンドギャップ(2023年度期末試験第1問)}{}
     長さ$L$の無限井戸型ポテンシャル中の1次元自由電子のエネルギー固有値$\epsilon_0(k)$と，そのときの波動関数$\phi_k(x)$は，
     \begin{align}
       \epsilon_0(k) &= \frac{\hbar^2k^2}{2m}\ \qty(k = \frac{2\pi}{L}N,\ N\in\mathbb{Z}) \\ 
@@ -31,7 +31,6 @@
     \tcblower
     \begin{enumerate}
       \item バンドギャップの成り立ち \par
-        
         2次の摂動によるエネルギー補正は，
         \begin{align}
           E_n = E_n^{(0)} + \mel**{n^{(0)}}{\hat{V}}{n^{(0)}} + \sum_{m\neq n}\frac{\abs{\mel**{m^{(0)}}{\hat{V}}{n^{(0)}}}^2}{E_n^{(0)} - E_m^{(0)}} \label{2nd-order-perturbation-eigenvalue-re}
@@ -65,7 +64,7 @@
         である．なお，$q_+ = q_- = 0$となるのは$g = 0$であるが，$g$の定義である\refe{wave-number-g-def}よりありえない．
         摂動によって補正したエネルギーは，
         \begin{align}
-          E(k) &= \epsilon^{(0)}(k) + \frac{V^2}{\epsilon^{(0)}(k) - \epsilon^{(0)}(k + g)} + \frac{V^2}{\epsilon^{(0)}(k) - \epsilon^{(0)}(k - g)}
+          E(k) &= \epsilon^{(0)}(k) + \frac{V^2}{\epsilon^{(0)}(k) - \epsilon^{(0)}(k + g)} + \frac{V^2}{\epsilon^{(0)}(k) - \epsilon^{(0)}(k - g)} \\ 
           &= \epsilon^{(0)}(k) + \frac{V^2}{\epsilon^{(0)}(k) - \epsilon^{(0)}\qty(k + \frac{2\pi}{a})} + \frac{V^2}{\epsilon^{(0)}(k) - \epsilon^{(0)}\qty(k - \frac{2\pi}{a})}\label{2nd-order-perturbation-eigenvalue-in-electron}
         \end{align}
         となる．
@@ -74,16 +73,16 @@
         ポテンシャルの対称性から右側のみを計算すればよい．
         \begin{enumerate}
           \item 第1 Brillouinゾーン内側$\qty(k < \frac{\pi}{a})$の振る舞い\par
-          $\epsilon^{(0)}(k)$は放物線なので，
-          \begin{align}
-            \begin{dcases}
-              \epsilon^{(0)}(k) \ll \epsilon^{(0)}(k + g) \\
-              \epsilon^{(0)}(k) < \epsilon^{(0)}(k - g)
-            \end{dcases}
-          \end{align}
-          が成りたつ．
-          よって，\refe{2nd-order-perturbation-eigenvalue-in-electron}の第2項が0に，第3項が負になるので，$E(k) < \epsilon^{(0)}(k)$が成り立つ．
-          つまり，摂動が加わった後のエネルギーは加わる前のエネルギーより小さくなる．
+            $\epsilon^{(0)}(k)$は放物線なので，
+            \begin{align}
+              \begin{dcases}
+                \epsilon^{(0)}(k) \ll \epsilon^{(0)}(k + g) \\
+                \epsilon^{(0)}(k) < \epsilon^{(0)}(k - g)
+              \end{dcases}
+            \end{align}
+            が成立する．
+            よって，\refe{2nd-order-perturbation-eigenvalue-in-electron}の第2項が0に，第3項が負になるので，$E(k) < \epsilon^{(0)}(k)$が成り立つ．
+            つまり，摂動が加わった後のエネルギーは加わる前のエネルギーより小さくなる．
           \item 第1 Brillouinゾーン外側$\qty(k > \frac{\pi}{a})$の振る舞い\par
             第1 Brillouinゾーン内側のときと同様に考えると，
             \begin{align}
@@ -92,11 +91,11 @@
                 \epsilon^{(0)}(k) > \epsilon^{(0)}(k - g)
               \end{dcases}
             \end{align}
-            を得る．
+            が成立する．
             よって，\refe{2nd-order-perturbation-eigenvalue-in-electron}の第2項が0に，第3項が正になるので，$E(k) > \epsilon^{(0)}(k)$が成り立つ．
             つまり，摂動が加わった後のエネルギーは加わる前のエネルギーより大きくなる．
-          \end{enumerate}
-          以上の議論により，結晶中の周期ポテンシャルによりバンドギャップが形成されることがわかった．
+        \end{enumerate}
+        以上の議論により，結晶中の周期ポテンシャルによりバンドギャップが形成されることがわかった．
       \item バンドギャップエネルギーの見積もりと波動関数\par
         \refe{2nd-order-perturbation-eigenvalue-in-electron}に$k = \pm\frac{\pi}{a}$を代入すると発散してしまう．
         以下では2重縮退があるときの摂動を考えバンドギャップエネルギー$\Delta E$を求める．$k_+$と$k_-$を，
@@ -131,20 +130,20 @@
           \psi_{-}& = \frac{1}{\sqrt{2}}\qty(\phi_{\pi/a} - \phi_{-\pi/a})\propto\sin\qty(\frac{\pi}{a}x)\label{degeneracy-wave-function-negative}
         \end{align}
         であり，定在波が生じる．
-    \item バンドギャップとBragg反射\par
-      バンドギャップの起源はBragg反射である．Bragg反射は，
-      \begin{align}
-        2a\sin\theta = \lambda
-      \end{align}
-      を満たす．
-      今回の場合は1次元なので$\theta = \pi/2$であり，波数は$k = 2\pi/\lambda$である．よって，Bragg条件は，
-      \begin{align}
-        k = \frac{\pi}{a}\label{1d-bragg-k-condition}
-      \end{align}
-      と書き換えられる．つまり，\refe{1d-bragg-k-condition}を満たす波数のみが反射し定在波をつくる．$V(x) = 2V\cos\qty(\frac{2\pi}{a}x)$であったから，
-      \refe{degeneracy-wave-function-positive}で表される波動関数はポテンシャルが最小となる波数で確率振幅が最大となる．
-      \refe{degeneracy-wave-function-negative}で表される波動関数はポテンシャルが最大となる波数で確率振幅が最大となる．
-      よって，エネルギーは$\psi_+$が$\psi_-$より低くなる．これによりバンドギャップが生じる．
-  \end{enumerate}
+      \item バンドギャップとBragg反射\par
+        バンドギャップの起源はBragg反射である．Bragg反射は，
+        \begin{align}
+          2a\sin\theta = \lambda
+        \end{align}
+        を満たす．
+        今回の場合は1次元なので$\theta = \pi/2$であり，波数は$k = 2\pi/\lambda$である．よって，Bragg条件は，
+        \begin{align}
+          k = \frac{\pi}{a}\label{1d-bragg-k-condition}
+        \end{align}
+        と書き換えられる．つまり，\refe{1d-bragg-k-condition}を満たす波数のみが反射し定在波をつくる．$V(x) = 2V\cos\qty(\frac{2\pi}{a}x)$であったから，
+        \refe{degeneracy-wave-function-positive}で表される波動関数はポテンシャルが最小となる波数で確率振幅が最大となる．
+        \refe{degeneracy-wave-function-negative}で表される波動関数はポテンシャルが最大となる波数で確率振幅が最大となる．
+        よって，エネルギーは$\psi_+$が$\psi_-$より低くなる．これによりバンドギャップが生じる．
+    \end{enumerate}
   \end{myex}
 \end{document}

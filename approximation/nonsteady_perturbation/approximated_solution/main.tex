@@ -5,7 +5,7 @@
   \begin{align}
     \begin{dcases}
       \ket{\psi(t)}_{\r{I}} = \sum_{n}c_n(t)\ket{n} \label{non-steady-quantum-system-re} \\
-      \forall \i\ \hbar\dv{t}c_m(t) = \sum_{n}V_{mn}(t)\e^{i\omega_{mn}t}c_n(t)
+      \forall m\ \i\hbar\dv{t}c_m(t) = \sum_{n}V_{mn}(t)\e^{i\omega_{mn}t}c_n(t)
     \end{dcases}
   \end{align}
   で表されるのであった．
@@ -33,7 +33,7 @@
   である．
   \par
   $t = t_0$から摂動$\hat{V}(t)$を加え始めたときを考える．
-  $t = t_0$で系の量子状態が$\ket{i}$であったとする．
+  $t = t_0$で系の量子状態が$\hat{H}^{(0)}$の固有ベクトルのうちの1つである$\ket{i}$であったとする．
   このとき，
   \begin{align}
     c_m^{(0)}(t_0) = \delta_m^i
@@ -48,8 +48,8 @@
   \refe{non-steady-quantum-system-re-expantion}の$\lambda^1$の係数より，
   \begin{align}
     \i\hbar\dv{t}c_{m, i}^{(1)}(t)& = \sum_{n}V_{mn}(t)\e^{\i\omega_{mn}t}c_{n, i}^{(0)}(t)\\
-    & = V_{m, i}(t)\e^{\i\omega_{mi}t} \\
-    \Rightarrow c_{m, i}^{(1)}(t)& = -\frac{\i}{\hbar}\int_{t_0}^{t}V_{m, i}(t)\e^{i\omega_{mi}t}\dd{t}\label{cmi1t-progress}
+    & = V_{m i}(t)\e^{\i\omega_{mi}t} \\
+    \Rightarrow c_{m, i}^{(1)}(t)& = -\frac{\i}{\hbar}\int_{t_0}^{t}V_{m i}(t)\e^{\i\omega_{mi}t}\dd{t}\label{cmi1t-progress}
   \end{align}
   となり，$c_{m, i}^{(1)}(t)$が求まった．
   また，系の量子状態を$\lambda^1$の項までで近似すると，
@@ -64,17 +64,18 @@
   \begin{itembox}[l]{$\ket{\psi(t_0)}_{\r{I}} = \ket{i}$の時間発展}
     \begin{align}
       \begin{dcases}
-        \ket{\psi(t)}_{\r{I}}& = \qty(1 + c_{i, i}^{(1)}(t))\ket{i} + \sum_{n\neq i}c_{n, i}^{(1)}(t)\ket{n}\label{interaction-picture-time-development-of-qc} \\
-        c_{n, i}^{(1)}(t) &= -\frac{\i}{\hbar}\int_{t_0}^{t}V_{n, i}\e^{i\omega_{ni}t}\dd{t}
+        \ket{\psi(t)}_{\r{I}} = \qty(1 + c_{i, i}^{(1)}(t))\ket{i} + \sum_{n\neq i}c_{n, i}^{(1)}(t)\ket{n}\label{interaction-picture-time-development-of-qc} \\
+        c_{n, i}^{(1)}(t) = -\frac{\i}{\hbar}\int_{t_0}^{t}V_{ni}(t)\e^{\i\omega_{ni}t}\dd{t}
       \end{dcases}
     \end{align}
   \end{itembox}
-  また，始状態$\ket{i}$から終状態$\ket{f}\ (f\neq i)$への遷移確率は，
+  また，終状態$\ket{f}$が$\hat{H}^{(0)}$の固有ベクトルのうちの1つであり，$f \neq i$なるものであったとき，始状態$\ket{i}$からへの遷移確率は，
   \begin{align}
     \abs{\braket{f}{\psi(t)}_{\r{I}}}^2 &= \abs{\qty(1 + c_{i, i}^{(1)}(t))\braket{f}{i} + \sum_{n\neq i}c_{n, i}^{(1)}(t)\braket{f}{n}}^2 \\ 
     &= \abs{c_{f, i}^{(1)}(t)}^2
   \end{align}
   である．
+  計算の途中に$\braket{f}{i} = 0$を用いた．
   \par
   さて，このようにして得られた$\ket{\psi}_{\r{I}}$の時間発展について，次節では$\hat{V}$が一定のときを，次々節では$\hat{V}$が余弦関数で書けるときを議論する．
 \end{document}

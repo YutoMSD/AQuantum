@@ -6,12 +6,12 @@
   次に，散乱振幅と微分断面積の関係を調べる．
   最後に，具体的に散乱振幅の表式を導く．
   \subsection{散乱問題の境界条件}
-    散乱体が球対称ポテンシャル$V(r)$を持つとする．Schrödinger方程式は
+    散乱体が球対称ポテンシャル$V(r)$を持つとする．Schrödinger方程式は，
     \begin{align}
       \qty(-\frac{\hbar^2}{2m}\laplacian + V(r))\psi(\bm{r}) = E \psi(\bm{r})\label{se-scattering}
     \end{align}
     である．
-    ここで，$V(r)$は$r \to \infty$で$r^{-1}$より早く$V \to 0$となるとする．
+    $V(r)$は$r \to \infty$で$r^{-1}$より早く$V \to 0$となるとする．
     なお，$r \to \infty$で$r^{-1}$より早く$0$に収束することを，十分早く収束するということにする．
     $z$軸方向への進行波である入射波は平面波なので，
     \begin{align}
@@ -34,7 +34,7 @@
       \end{align}
     \end{itembox}
   \subsection{散乱振幅と微分断面積の関係}
-    この問題を解くための準備として確率密度$\rho \coloneqq \psi^{*} \psi$の時間変化を考える．
+    この問題を解くための準備として確率密度$\rho \coloneqq \psi^{*} \psi$の時間変化を考える\footnote{2023年度期末試験第3問(1)．}．
     時間変化するSchr\"odinger方程式より，
     \begin{align}
       \i\hbar\pdv{\psi}{t} &= \hat{H}\psi \\ 
@@ -43,16 +43,17 @@
     \end{align}
     であることを用いると，
     \begin{align}
-      \pdv{t}\rho &= \pdv{t}(\psi^{*}\psi) \\
-      &= \pdv{\psi^*}{t}\psi + \psi^{*}\pdv{\psi}{t} \\
+      \pdv{\rho}{t} &= \pdv{t}(\psi^{*}\psi) \\
       &= -\frac{1}{\i\hbar}\qty[\qty(-\frac{\hbar^2}{2m}\laplacian + V)\psi^{*}]\psi + \psi^{*}\frac{1}{\i\hbar}\qty[\qty(-\frac{\hbar^2}{2m}\laplacian + V)\psi] \\
       &= \frac{\hbar}{2\i m}\qty[\qty(\laplacian \psi^{*})\psi - \psi^{*}\qty(\laplacian\psi)] \\
-      &= -\frac{\hbar}{2\i m}\div \qty(\psi^{*}\grad\psi - \psi \grad\psi^{*})\label{prob-density}
+      &= -\frac{\hbar}{2\i m}\div \qty(\psi^{*}\grad\psi - \psi \grad\psi^{*})
+      &= -\frac{\hbar}{2\i m}\div \qty(\psi^{*}\grad\psi - \qty(\psi^{*}\grad\psi)^*)\label{prob-density}
     \end{align}
+    となる．
     確率流密度を，
     \begin{align}
-      \bm{j} &\coloneqq \frac{\hbar}{2\i m} \qty(\psi^{*}\grad\psi - \psi \grad\psi^{*})\label{prob-flow} \\
-      &= \frac{\hbar}{m}\Im \qty(\psi^{*}\grad\psi)
+      \bm{j} &\coloneqq \frac{\hbar}{2\i m} \qty(\psi^{*}\grad\psi - \psi \grad\psi^{*}) \\
+      &= \frac{\hbar}{m}\Im \qty(\psi^{*}\grad\psi)\label{prob-flow}
     \end{align}
     と定義する．
     \refe{prob-flow}を\refe{prob-density}に代入すると，確率密度に対する連続の式である，
@@ -61,15 +62,15 @@
     \end{align}
     を得る\footnote{両辺に電荷をかければ電荷保存の法則となる． }．
     \par
-    次に微分断面積と散乱振幅の関係を考える．
+    次に微分断面積と散乱振幅の関係を考える\footnote{2023年度期末試験第3問(2)．}．
     $z$軸方向へ進行波である入射波は，
     \begin{align}
       \psi_{\r{in}} = \e^{\i kz}
     \end{align}
     と書けるのであった．
-    入射波は$z$軸方向にのみ進行するので，その確率流密度の$z$成分$j_z$は\refe{psi-in-grad}より，
+    入射波は$z$軸方向にのみ進行するので，その確率流密度の$z$成分$j_z$は\refe{prob-flow}より，
     \begin{align}
-      j_z &= \frac{\hbar}{m}\Im \qty(\psi^{*}\pdv{z}\psi) \\ 
+      j_z &= \frac{\hbar}{m}\Im \qty(\psi^{*}\pdv{\psi}{z}) \\ 
       &= \frac{\hbar}{m} \Im \qty(\e^{-\i kz} \i k e^{\i kz}) \\
       &= \frac{\hbar k}{m}
     \end{align}% メモ: 図にr軸を追加する．
@@ -82,7 +83,7 @@
     と書けるのであった．
     散乱波は$r$軸方向にのみ進行するので，その確率流密度の$r$成分$j_r(\theta)$は，
     \begin{align}
-      j_r(\theta) &= \frac{\hbar}{m}\Im \qty(\psi^{*}_{\r{sc}}\pdv{r}\psi_{\r{sc}}) \\
+      j_r(\theta) &= \frac{\hbar}{m}\Im \qty(\psi^{*}_{\r{sc}}\pdv{\psi_{\r{sc}}}{r}) \\
       &= \frac{\hbar}{m} \Im \qty[\frac{f(\theta)^*}{r} \e^{-\i kr}\qty(\frac{\i k}{r} - \frac{1}{r^2})f(\theta)\e^{\i kr}] \\
       &= \frac{\hbar}{m} \Im \qty[-\frac{\abs{f(\theta)}^2}{r^3} + \i k\frac{\abs{f(\theta)}^2}{r^2}] \\
       &= \frac{\hbar}{m} k\frac{\abs{f(\theta)}^2}{r^2} \\
@@ -96,7 +97,7 @@
       \dd{N} &= \sigma (\theta) n \dd{\Omega} \\ 
       \Leftrightarrow \frac{\dd{N}}{n} &= \sigma (\theta) \dd{\Omega}
     \end{align}
-    となる．$\frac{\dd{N}}{n}$は，
+    となる．$\dd{N}/n$は，
     \begin{align}
       \frac{\dd{N}}{n} &= \frac{\qty(\text{単位時間に位置$(r,\theta)$にある$検出器\dd{S}$に入射する粒子数})}{\qty(\text{単位時間単位面積当たりの入射粒子数})} \\ 
       &= \frac{\qty(\text{単位時間に位置$(r,\theta)$にある検出器$\dd{S}$に粒子が入射する確率})}{\qty(\text{単位時間単位面積当たりに粒子が入射する確率})} \\ 
@@ -117,7 +118,7 @@
         \sigma(\theta) = \abs{f(\theta)}^2
       \end{align}
     \end{itembox}
-  \subsection{散乱振幅の表式}
+  \subsection{散乱振幅の表式の導出♠}
     最後に散乱振幅$f(\theta)$の表式を求める．
     散乱のSchrödinger方程式は，
     \begin{align}
@@ -126,8 +127,8 @@
     であった．
     $\kappa$，$U(\bm{r})$を，
     \begin{align}
-        \kappa &\coloneqq \frac{\sqrt{2mE}}{\hbar} \label{kappa-def}\\
-        U(\bm{r}) &\coloneqq \frac{2m}{\hbar^2} V(\bm{r})
+      \kappa &\coloneqq \frac{\sqrt{2mE}}{\hbar} \label{kappa-def}\\
+      U(\bm{r}) &\coloneqq \frac{2m}{\hbar^2} V(\bm{r})
     \end{align}
     と定義すると，
     \begin{align}
@@ -276,7 +277,7 @@
       \psi(\bm{r}) = \e^{\i\kappa z} - \qty(\frac{1}{4\pi} \int \e^{-\i\bm{\kappa'}\cdot \bm{r'}} \frac{2m}{\hbar^2}V(\bm{r'})\psi(\bm{r'})\dd{\bm{r'}})\frac{\e^{\i\kappa r}}{r}\label{psi-r-in-sc-kappa}
     \end{align}
     を得る．
-    \par
+  \subsection{散乱振幅の表式}
     さて，考えている散乱問題の波動関数は\refe{psi-r-in-sc-k}より，
     \begin{align}
       \psi(\bm{r}) = \e^{\i kz} + f(\theta) \frac{\e^{\i kr}}{r}\label{psi-r-in-sc-k-re}
@@ -287,11 +288,16 @@
       \psi(\bm{r}) = \e^{\i kz} - \qty(\frac{1}{4\pi} \int \e^{-\i\bm{k'}\cdot \bm{r'}} \frac{2m}{\hbar^2}V(\bm{r'})\psi(\bm{r'})\dd{\bm{r'}})\frac{\e^{\i kr}}{r}
     \end{align}
     となる．
-    したがって散乱振幅は，
+    \begin{itembox}[l]{一般のポテンシャルでの散乱振幅}
+      \begin{align}
+        \psi(\bm{r}) = \e^{\i kz} - \qty(\frac{1}{4\pi} \int \e^{-\i\bm{k'}\cdot \bm{r'}} \frac{2m}{\hbar^2}V(\bm{r'})\psi(\bm{r'})\dd{\bm{r'}})\frac{\e^{\i kr}}{r}
+      \end{align}
+    \end{itembox}
+    散乱振幅は，
     \begin{align}
       f(\theta) = -\frac{1}{4\pi} \int \e^{- \i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(\bm{r'})\psi(\bm{r'})\dd{\bm{r'}}
     \end{align}
-    となる．
+    となる\footnote{2023年度期末試験第3問(4)．}．
     \begin{itembox}[l]{一般のポテンシャルでの散乱振幅}
       \begin{align}
         f(\theta) = -\frac{1}{4\pi} \int \e^{- \i \bm{k'} \cdot \bm{r'}} \frac{2m}{\hbar^2}V(\bm{r'})\psi(\bm{r'})\dd{\bm{r'}}\label{scattering-amp-general}
