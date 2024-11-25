@@ -99,6 +99,31 @@
       x' = x - vt
     \end{align}
     となる．これはGalilei変換と一致している．
+
+    \begin{myexc}{Lorentz変換の問題}{}
+      \begin{enumerate}
+        \item Lorentz変換\refe{LorentzTransformation}において，$x^2 - (ct)^2$が不変であることを確認せよ．
+        \item $X'$系の原点が$X$系から見ると速さ$v$で$x$軸正方向へ運動していることを示せ．
+      \end{enumerate}
+      \tcblower
+      \begin{enumerate}
+        \item \refe{LorentzTransformation}より，
+          \begin{align}
+            x'^2 - (ct')^2 &= \frac{x^2 -2xvt + v^2t^2}{1 - (v/c)^2} - \frac{c^2t^2 - 2xvt + (v/c)^2x^2}{1 - (v/c)^2}\\
+            &= \frac{[1-(v/c)^2]x^2 - [1 - (v/c)^2](ct)^2}{1 - (v/c)^2}\\
+            &= x^2 - (ct)^2
+          \end{align}
+        \item $X'$系の原点は
+          \begin{align}
+            x' = \frac{-vt + x}{\sqrt{1-(v/c)^2}} = 0
+          \end{align}
+          より，$X$系から見ると
+          \begin{align}
+            x = vt
+          \end{align}
+          となる．よって，速さ$v$で$x$軸正方向へ運動していることがわかる．
+      \end{enumerate}
+    \end{myexc}
   \subsection{速度の合成則}
     次に，相対論的効果を取り込んだ速度の合成則について示す．
     $X$系は静止し，$X'$系が速さ$v$で$x$軸方向に移動しているとする．
