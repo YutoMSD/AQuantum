@@ -99,14 +99,47 @@
     \refe{Klein-Gordon-equation}は2階の微分方程式である．
     よって，$\psi$と$\pdv{\psi}{t}$は独立に指定される．そのため，粒子の存在確率が保存するためには
     \begin{align}
-      \dv{t}\qty[\int \abs{\psi(\bm{r}, t)} \dd{\bm{r}}] = 0
+      \dv{t}\qty[\int \abs{\psi(\bm{r}, t)}^2 \dd{\bm{r}}] = 0
     \end{align}
     が必要であるが，$\psi$と$\pdv{\psi}{t}$が独立に決められるため，
     \begin{align}
-      &\dv{t}\qty[\int \abs{\psi(\bm{r}, t)} \dd{\bm{r}}]\\
+      &\dv{t}\qty[\int \abs{\psi(\bm{r}, t)}^2 \dd{\bm{r}}]\\
       &= \int \qty[\pdv{\psi^*}{t}\psi^{*} + \psi^*\pdv{\psi}{t}] \dd{\bm{r}} \neq 0
     \end{align}
     となってしまう．よって，波動関数の確率解釈が成り立たないため，量子状態を記述する方程式として不適である\footnote{Klein-Gordon方程式はスピン0の粒子の場の方程式である．}．
+
+    \begin{myexc}{Klein-Gordon方程式の保存流}{}
+      しかし，Klein-Gordon方程式にも保存流が存在する．連続の式
+      \begin{align}
+        \frac{\partial}{\partial t}\rho = -\nabla \cdot \bm{j}
+      \end{align}
+      は，
+      \begin{align}
+        \partial^{\mu} = (\frac{1}{c}\frac{\partial}{\partial t}, -\nabla),\ j^\mu = (c\rho, \bm{j})
+      \end{align}
+      と定義すると
+      \begin{align}
+        \partial_\mu j^\mu = 0
+      \end{align}
+      と書くことができる．Klein-Gordon方程式において
+      \begin{align}
+        j^\mu = \frac{i}{2m}[\psi^{*}\partial^\mu\psi - \partial^\mu \psi^{*}\psi]
+      \end{align}
+      とすれば
+      \begin{align}
+        \partial_\mu j^\mu = 0
+      \end{align}
+      となる．これを示せ．
+      \tcblower
+      \begin{align}
+        \partial_\mu j^\mu &= \frac{i}{2m}\partial_\mu[\psi^{*}\partial^\mu\psi - \partial^\mu \psi^{*}\psi]\\
+        &= \frac{i}{2m}[\psi^{*}\Box\psi - \Box \psi^{*}\psi]\\
+        &= \frac{i}{2m}\qty[-\qty(\frac{mc}{\hbar})^2\psi^{*}\psi + \qty(\frac{mc}{\hbar})^2 \partial^\mu \psi^{*}\psi]\\
+        &= 0
+      \end{align}
+      しかし，時間成分に関する流れが負になることが問題なのである．
+      \end{myexc}
+
   \subsection{Dirac方程式の準備♠}
     前節での議論から，相対論的粒子の運動を記述する方程式は時間と空間の1階微分であることが要請される．
     \refe{Klein-Gordon-equation}において，2階微分を1階微分に「因数分解」することで，Lorentz共変な量子力学の方程式を導く．
