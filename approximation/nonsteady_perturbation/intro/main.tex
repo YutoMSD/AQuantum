@@ -24,7 +24,7 @@
           \ket{\psi(\Delta t)} = \exp\qty[-\i\frac{\hat{H}}{\hbar}\Delta t]\ket{\psi(0)} \approx\qty(\hat{I} - \i\frac{\hat{H}}{\hbar}\Delta t)\ket{\psi(0)}
           = \ket{\psi(0)} + \Delta t \left.\qty(\dv{t}\ket{\psi(t)})\right|_{t = 0}
         \end{align*}
-        より微分の形で書けることから，確かに時間発展すると私は解釈する．}
+        より微分の形で書けることから，確かに時間発展すると解釈できる．}
       \footnote{
         演算子が交換するときは数字と同じ扱いをしても良いと考える．
         一般に演算子は，
@@ -59,11 +59,11 @@
       \begin{align}
         \psi(t) = \sum_{n}c_n(t)\exp\qty(-\i\frac{E_n}{\hbar}t)\ket{n}\label{nonsteady-perturbation-cnt-eq}
       \end{align}
-      と展開しておく．なお，$c_n(t)$が定数のときの$\ket{\psi(t)}$との整合性をとるために$\exp\qty(-\i\frac{E_n}{\hbar}t)$をかけてある．
+      と展開しておく．なお，$c_n(t)$が定数のときの$\ket{\psi(t)}$との整合性をとるために$c_n(t)$に$\exp\qty(-\i\frac{E_n}{\hbar}t)$をかけてある．
       原理的には$c_n(t)$が求まれば量子系の時間発展の様子がわかる．% 暇になったら時間順序積のことを書く．
   \end{enumerate}
   \par
   さて，いずれの場合でも，量子系の性質を調べるには$c_n(t)$の具体的な形がわかればよいことを発見した．
-  本節では，まずSchr\"odinger表示から相互作用表示に書き換え，$c_n(t)$を厳密に知ることが困難であることを知り，$c_n(t)$の近似解を導く．
+  本節では，まずSchr\"odinger表示から相互作用表示に書き換え，$c_n(t)$を厳密に特定することが困難であることを知り，$c_n(t)$の近似解を導く．
   \refe{time-dependent-schrodinger-eq}と\refe{nonsteady-perturbation-cnt-eq}をまとめて，Schr\"odinger表示の非定常摂動基本方程式と呼ぶ．
 \end{document}

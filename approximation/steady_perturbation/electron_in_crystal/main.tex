@@ -2,10 +2,10 @@
 \input{../../../head.tex}
 \begin{document}
   \begin{myex}{バンドギャップ}{}
-    長さ$L$の無限井戸型ポテンシャル中の1次元自由電子の波動関数$\phi_k(x)$とエネルギー固有値$\epsilon_0(k)$は，
+    長さ$L$の無限井戸型ポテンシャル中の1次元自由電子のエネルギー固有値$\epsilon_0(k)$と，そのときの波動関数$\phi_k(x)$は，
     \begin{align}
-      \phi_k(x) &= \braket{x}{k} = \frac{1}{\sqrt{L}}\e^{\i kx} \\ 
-      \epsilon_0(k) &= \frac{\hbar^2k^2}{2m}\ \qty(k = \frac{2\pi}{L}N,\ N\in\mathbb{N})
+      \epsilon_0(k) &= \frac{\hbar^2k^2}{2m}\ \qty(k = \frac{2\pi}{L}N,\ N\in\mathbb{Z}) \\ 
+      \phi_k(x) &= \braket{x}{k} = \frac{1}{\sqrt{L}}\e^{\i kx} 
     \end{align}
     である．
     無限井戸型ポテンシャルに$V(x + a) = V(x)$を満たすポテンシャル$V(x)$が加わったときを考える．
@@ -25,12 +25,13 @@
     以下の問いに答えよ．
     \begin{enumerate}
       \item 結晶中の周期ポテンシャルによりバンドギャップができることを2次までの摂動論を用いて説明せよ．
-      \item 縮退のある場合の摂動論を用いてバンドギャップエネルギーを見積もれ．また，Brillouinゾーン端近傍で近似した波動関数を表せ．
+      \item 縮退のある場合の摂動論を用いてバンドギャップエネルギーの大きさを見積もれ．また，Brillouinゾーン端近傍で近似した波動関数は，どのような関数に比例するか．
       \item バンドギャップとBraggの回折条件との関係について議論せよ．
     \end{enumerate}
     \tcblower
     \begin{enumerate}
       \item バンドギャップの成り立ち \par
+        
         2次の摂動によるエネルギー補正は，
         \begin{align}
           E_n = E_n^{(0)} + \mel**{n^{(0)}}{\hat{V}}{n^{(0)}} + \sum_{m\neq n}\frac{\abs{\mel**{m^{(0)}}{\hat{V}}{n^{(0)}}}^2}{E_n^{(0)} - E_m^{(0)}} \label{2nd-order-perturbation-eigenvalue-re}
@@ -61,31 +62,39 @@
             0 & \r{otherwise}
           \end{dcases}
         \end{align}
-        である．なお，$q_+ = q_- = 0$となるのは$g = 0$であるが，$g$の定義である\refe{wave-number-g-def}よりありえない．エネルギーは，
+        である．なお，$q_+ = q_- = 0$となるのは$g = 0$であるが，$g$の定義である\refe{wave-number-g-def}よりありえない．
+        摂動によって補正したエネルギーは，
         \begin{align}
-          E(k) = \epsilon^{(0)}(k) + \frac{V^2}{\epsilon(k) - \epsilon(k + g)} + \frac{V^2}{\epsilon(k) - \epsilon(k - g)}\label{2nd-order-perturbation-eigenvalue-in-electron}
+          E(k) &= \epsilon^{(0)}(k) + \frac{V^2}{\epsilon^{(0)}(k) - \epsilon^{(0)}(k + g)} + \frac{V^2}{\epsilon^{(0)}(k) - \epsilon^{(0)}(k - g)}
+          &= \epsilon^{(0)}(k) + \frac{V^2}{\epsilon^{(0)}(k) - \epsilon^{(0)}\qty(k + \frac{2\pi}{a})} + \frac{V^2}{\epsilon^{(0)}(k) - \epsilon^{(0)}\qty(k - \frac{2\pi}{a})}\label{2nd-order-perturbation-eigenvalue-in-electron}
         \end{align}
-        となる．\refe{2nd-order-perturbation-eigenvalue-in-electron}の振る舞いを第1 Brillouinゾーンの内側と外側で確認する．
+        となる．
+        定義より，$q_+ = 0 \Leftrightarrow k' = k + g$，$q_- = 0 \Leftrightarrow k' = k - g$であることに注意する．
+        \refe{2nd-order-perturbation-eigenvalue-in-electron}の振る舞いを第1 Brillouinゾーンの内側と外側で確認する．
         ポテンシャルの対称性から右側のみを計算すればよい．
         \begin{enumerate}
-          \item 第1 Brillouinゾーン内側$\qty(k = k_1 < \frac{\pi}{a})$の振る舞い\par
-          $\epsilon(k)$は放物線なので，
+          \item 第1 Brillouinゾーン内側$\qty(k < \frac{\pi}{a})$の振る舞い\par
+          $\epsilon^{(0)}(k)$は放物線なので，
           \begin{align}
             \begin{dcases}
-              \epsilon(k_1) \ll \epsilon^{(0)}(k_1 + g) \\
-              \epsilon(k_1) < \epsilon^{(0)}(k_1 - g)
+              \epsilon^{(0)}(k) \ll \epsilon^{(0)}(k + g) \\
+              \epsilon^{(0)}(k) < \epsilon^{(0)}(k - g)
             \end{dcases}
           \end{align}
-          が成りたつ．よって，$E(k) < \epsilon^{(0)}(k)$が成り立ち，摂動が加わった後のエネルギーは加わる前のエネルギーより小さくなる．
-          \item 第1 Brillouinゾーン外側$\qty(k = k_2 > \frac{\pi}{a})$の振る舞い\par
+          が成りたつ．
+          よって，\refe{2nd-order-perturbation-eigenvalue-in-electron}の第2項が0に，第3項が負になるので，$E(k) < \epsilon^{(0)}(k)$が成り立つ．
+          つまり，摂動が加わった後のエネルギーは加わる前のエネルギーより小さくなる．
+          \item 第1 Brillouinゾーン外側$\qty(k > \frac{\pi}{a})$の振る舞い\par
             第1 Brillouinゾーン内側のときと同様に考えると，
             \begin{align}
               \begin{dcases}
-                \epsilon(k_2) \ll \epsilon^{(0)}(k_2 + g)\\
-                \epsilon(k_2) > \epsilon^{(0)}(k_2 - g)
+                \epsilon^{(0)}(k) \ll \epsilon^{(0)}(k + g)\\
+                \epsilon^{(0)}(k) > \epsilon^{(0)}(k - g)
               \end{dcases}
             \end{align}
-            を得る．よって，$E(k) > \epsilon^{(0)}(k)$が成り立ち，摂動が加わった後のエネルギーは加わる前のエネルギーより大きくなる．
+            を得る．
+            よって，\refe{2nd-order-perturbation-eigenvalue-in-electron}の第2項が0に，第3項が正になるので，$E(k) > \epsilon^{(0)}(k)$が成り立つ．
+            つまり，摂動が加わった後のエネルギーは加わる前のエネルギーより大きくなる．
           \end{enumerate}
           以上の議論により，結晶中の周期ポテンシャルによりバンドギャップが形成されることがわかった．
       \item バンドギャップエネルギーの見積もりと波動関数\par
@@ -95,10 +104,11 @@
           k_+ &\coloneqq \frac{\pi}{a} \\ 
           k_- &\coloneqq -\frac{\pi}{a}
         \end{align}
-        と定義する．$V_{k_+k_+} = V_{k_-k_-} = 0$，$V_{k_+k_-} = V_{k_-k_+} = V$なので，
+        と定義する．
+        簡単な計算により，$V_{k_+k_+} = V_{k_-k_-} = 0$，$V_{k_+k_-} = V_{k_-k_+} = V$である．
         \refe{1st-order-energy-with-degeneracy}より，1次摂動によるエネルギーは，
         \begin{align}
-          E_n^{(1)} &= \frac{1}{2}\qty[(V_{k_+k_+} + V_{k_-k_-}\pm\sqrt{(V_{k_+k_+} - V_{k_-k_-})^2 + 4\abs{V_{k_+k_-}}^2})] \\ 
+          E_n^{(1)} &= \frac{1}{2}\qty[\qty(V_{k_+k_+} + V_{k_-k_-})\pm\sqrt{(V_{k_+k_+} - V_{k_-k_-})^2 + 4\abs{V_{k_+k_-}}^2}] \\ 
           &= \pm V
         \end{align}
         である．2つのエネルギー補正の差がバンドギャップエネルギー$\Delta E$と解釈できるので，
@@ -127,7 +137,7 @@
         2a\sin\theta = \lambda
       \end{align}
       を満たす．
-      今回の場合は1次元なので$\theta = \pi/2$であり，波数は$k = 2\pi/\lambda$である．よって，Bragg条件は
+      今回の場合は1次元なので$\theta = \pi/2$であり，波数は$k = 2\pi/\lambda$である．よって，Bragg条件は，
       \begin{align}
         k = \frac{\pi}{a}\label{1d-bragg-k-condition}
       \end{align}
