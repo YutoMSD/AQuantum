@@ -19,7 +19,7 @@
           \end{align}
           とする．ここで$l,m,n$は0から$N-1$の整数である．
           \begin{align}
-            \sigma = b^2 \Pi_{i =x,y,z} \frac{\sin^2(Nq_i a/2)}{\sin^2 (q_i a/2)}
+            \sigma = b^2 \prod_{i =x,y,z} \frac{\sin^2(Nq_i a/2)}{\sin^2 (q_i a/2)}
           \end{align}
           となることを示せ．
     \item \begin{align}
@@ -43,12 +43,12 @@
     \item \begin{align}
             \sum_{i} \e^{-\i \bm{q}\cdot\bm{r}_i} &= \sum_{l=0}^{N-1} \sum_{m=0}^{N-1} \sum_{n=0}^{N-1} \e^{-\i(laq_x + maq_y + naq_z)}\\
             &= \sum_{l=0}^{N-1} \e^{-\i laq_x} \sum_{m=0}^{N-1} \e^{-\i maq_y} \sum_{n=0}^{N-1} \e^{-\i naq_z}\\
-            &= \Pi_{i=x,y,z} \frac{1-\e^{-\i Naq_i}}{1-\e^{-\i aq_i}}\\
-            &= \Pi_{i =x,y,z} \frac{\sin(Nq_i a/2)}{\sin (q_i a/2)}
+            &= \prod_{i=x,y,z} \frac{1-\e^{-\i Naq_i}}{1-\e^{-\i aq_i}}\\
+            &= \prod_{i =x,y,z} \frac{\sin(Nq_i a/2)}{\sin (q_i a/2)}
           \end{align}
           よって，
           \begin{align}
-            \sigma = b^2 \Pi_{i =x,y,z} \frac{\sin^2(Nq_i a/2)}{\sin^2 (q_i a/2)}
+            \sigma = b^2 \prod_{i =x,y,z} \frac{\sin^2(Nq_i a/2)}{\sin^2 (q_i a/2)}
           \end{align}
           が得られる．
     \item 散乱パターンは下図のようになる．
@@ -65,7 +65,7 @@
   \begin{enumerate}
     \item 極座標ラプラシアン
     \begin{align}
-      \nabla^2 = \frac{\partial^2}{\partial r} + \frac{1}{r}\frac{\partial}{\partial} + \frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}
+      \laplacian= \frac{\partial^2}{\partial r} + \frac{1}{r}\frac{\partial}{\partial} + \frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}
     \end{align}
     を用いてポテンシャル$V(r)$の下での波動関数を求めよ．ここで$u(r)=\sqrt{r}R(r)$が
     \begin{align}
@@ -76,11 +76,11 @@
     \begin{align}
       R(r) \sim \frac{\e^{\i kr}}{\sqrt{r}}
     \end{align}
-    であることを示せ．ここで，$k\equiv \sqrt{2mE}/\hbar$である．
+    であることを示せ．ここで，$k\coloneqq \sqrt{2mE}/\hbar$である．
   \end{enumerate}
     \tcblower
     \begin{align}
-      &\qty[-\frac{\hbar^2}{2m}\nabla^2 + V(r)]\psi(r,\theta) = E\psi(r,\theta)\\
+      &\qty[-\frac{\hbar^2}{2m}\laplacian + V(r)]\psi(r,\theta) = E\psi(r,\theta)\\
       &\qty[\frac{\hbar^2}{2m}\qty(\frac{\partial^2}{\partial r^2} + \frac{1}{r}\frac{\partial}{\partial r} + \frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}) + V(r)]\psi(r,\theta) = E\psi(r,\theta)
     \end{align}
     $\psi(r,\theta) = R(r)\Theta(\theta)$とし，上式を整理すると
@@ -183,6 +183,6 @@
     \begin{align}
       \sigma = \frac{\omega_{i\to\dd{\Omega}}}{J \dd{\Omega}} = \abs{-\frac{m}{2\pi\hbar^2}\int \e^{\i(\bm{k}' - \bm{k})\cdot\bm{r}}V(\bm{r})\dd{\bm{r}}}^2
     \end{align}
-    が得られる．これは第1Born近似で得られた式と同一である．
+    が得られる．これは第1 Born近似で得られた式と同一である．
   \end{myexc}
 \end{document}

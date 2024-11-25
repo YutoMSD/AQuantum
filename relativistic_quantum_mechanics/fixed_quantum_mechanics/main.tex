@@ -103,28 +103,28 @@
     \end{align}
     が必要であるが，$\psi$と$\pdv{\psi}{t}$が独立に決められるため，
     \begin{align}
-      &\dv{t}\qty[\int \abs{\psi(\bm{r}, t)}^2 \dd{\bm{r}}]\\
-      &= \int \qty[\pdv{\psi^*}{t}\psi^{*} + \psi^*\pdv{\psi}{t}] \dd{\bm{r}} \neq 0
+      \dv{t}\qty[\int \abs{\psi(\bm{r}, t)}^2 \dd{\bm{r}}]= \int \qty[\pdv{\psi^*}{t}\psi^{*} + \psi^*\pdv{\psi}{t}] \dd{\bm{r}} \neq 0
     \end{align}
     となってしまう．よって，波動関数の確率解釈が成り立たないため，量子状態を記述する方程式として不適である\footnote{Klein-Gordon方程式はスピン0の粒子の場の方程式である．}．
     \begin{myexc}{Klein-Gordon方程式の保存流}{}
-      しかし，Klein-Gordon方程式にも保存流が存在する．連続の式
+      実は，Klein-Gordon方程式にも保存流が存在する．
+      連続の式，
       \begin{align}
-        \frac{\partial}{\partial t}\rho = -\nabla \cdot \bm{j}
+        \frac{\partial}{\partial t}\rho = -\div \bm{j}
       \end{align}
       は，
       \begin{align}
-        \partial^{\mu} = (\frac{1}{c}\frac{\partial}{\partial t}, -\nabla),\ j^\mu = (c\rho, \bm{j})
+        \partial^{\mu} = (\frac{1}{c}\frac{\partial}{\partial t}, -\grad ),\ j^\mu = (c\rho, \bm{j})
       \end{align}
-      と定義すると
+      と定義すると，
       \begin{align}
         \partial_\mu j^\mu = 0
       \end{align}
-      と書くことができる．Klein-Gordon方程式において
+      と書くことができる．Klein-Gordon方程式において，
       \begin{align}
         j^\mu = \frac{i}{2m}[\psi^{*}\partial^\mu\psi - \partial^\mu \psi^{*}\psi]
       \end{align}
-      とすれば
+      とすれば，
       \begin{align}
         \partial_\mu j^\mu = 0
       \end{align}
@@ -145,7 +145,7 @@
     \begin{align}
       \qty(\frac{1}{c}\pdv{t} + \hat{\bm{\alpha}} \cdot \grad + \i\hat{\beta} \frac{mc}{\hbar})\psi = 0 \label{Dirac-pre}
     \end{align}
-    のような形をしていることを仮定して，\refe{Klein-Gordon-equation}と矛盾が生じないように$\hat{\bm{alpha}}$と$\hat{\beta}$を定める．
+    のような形をしていることを仮定して，\refe{Klein-Gordon-equation}と矛盾が生じないように$\hat{\bm{\alpha}}$と$\hat{\beta}$を定める．
     つまり，\refe{Klein-Gordon-equation}と\refe{Dirac-pre}を見比べて演算子が
     \begin{align}
       \qty(\frac{1}{c^2}\pdv[2]{t} - \laplacian + \qty(\frac{mc}{\hbar})^2) = \qty(\frac{1}{c}\pdv{t} - \hat{\bm{\alpha}} \cdot \grad - \i\hat{\beta} \frac{mc}{\hbar})\qty(\frac{1}{c}\pdv{t} + \hat{\bm{\alpha}} \cdot \grad + \i\hat{\beta} \frac{mc}{\hbar})

@@ -106,13 +106,13 @@
   \end{align}
   だから$\hat{\bm{L}}\cdot\hat{\bm{S}}$の期待値は
   \begin{align}
-    \langle\hat{\bm{L}}\cdot\hat{\bm{S}} \rangle = \frac{1}{2}\qty[j(j+1) - l(l+1) - \frac{1}{2}\qty(\frac{1}{2}+1)]\hbar^2
+    \ev{\hat{\bm{L}}\cdot\hat{\bm{S}} } = \frac{1}{2}\qty[j(j+1) - l(l+1) - \frac{1}{2}\qty(\frac{1}{2}+1)]\hbar^2
   \end{align}
   である．$j = l \pm 1/2$だから，
-  $\langle\hat{\bm{L}}\cdot\hat{\bm{S}} \rangle = \frac{1}{2}l\hbar^2,-\frac{1}{2}(l+1)\hbar^2$である．これを$\nu\hbar^2$とおく．
+  $\ev{\hat{\bm{L}}\cdot\hat{\bm{S}} } = \frac{1}{2}l\hbar^2,-\frac{1}{2}(l+1)\hbar^2$である．これを$\nu\hbar^2$とおく．
   $\phi(r) = -Ze/r$($Z$は原子番号)とすると，
   \begin{align}
-    \langle \frac{e}{2m^2c^2r}\dv{\phi}{r}\hat{\bm{S}}\cdot\hat{\bm{L}} \rangle &= \nu\hbar^2 \langle \frac{e}{2m^2c^2r}\dv{\phi}{r} \rangle\\
+    \ev{\frac{e}{2m^2c^2r}\dv{\phi}{r}\hat{\bm{S}}\cdot\hat{\bm{L}} } &= \nu\hbar^2 \ev{\frac{e}{2m^2c^2r}\dv{\phi}{r} }\\
     &= \mu\hbar^2 \int_{0}^{\infty} r^2 \dd{r} \abs{R_{nl}}^2 \qty(\frac{e}{2m^2c^2r}\dv{\phi}{r})\\
     &= \frac{\mu\hbar^2 Z e^2}{2m^2c^2}\int_{0}^{\infty} \frac{1}{r}R_{nl}^2 \dd{r}\\
     &= \frac{\mu\hbar^2 Z^4 e^2}{2m^2 c^2 a_0^3n^3l(l+1/2)(l+1)}

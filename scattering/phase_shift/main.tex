@@ -25,27 +25,29 @@
   反射波は，$\delta_k \coloneqq \arg\qty(k + \i\alpha)$とすると，
   波動関数は，
   \begin{align}
-    \psi(x) = \e^{\i kx} + \e^{-2 \i \delta_k}\e^{-\i kx}
+    \psi(x) &= \e^{\i kx} + \e^{-2 \i \delta_k}\e^{-\i kx} \\ 
+    &= \e^{2\i\delta_k}\qty(\e^{\i jx}\e^{2\i\delta_k} + \e^{-\i kx})
   \end{align}
   となる．この$\delta_k$は位相シフトと呼ばれ，量子力学的散乱を特徴づけるパラメータである．
   \par
   位相シフトの現象を3次元に拡張する．
+  今回は全反射が起こるとする．
   \refe{PartialWave}において$r\to\infty$とすると，
   \begin{align}
     j_l(kr) \to \frac{\exp\qty{\i\qty(kr - \frac{l\pi}{2})} - \exp\qty{-\i\qty(kr - \frac{l\pi}{2})}}{2\i kr}
   \end{align}
   であるため，
   \begin{align}
-    \psi(\bm{r}) = \sum_{l = 0}^{\infty} \frac{2l + 1}{2\i kr}\qty[\i^l \qty(\exp\qty{\i(kr - \frac{l\pi}{2})} - \exp\qty{-\i(kr - \frac{l\pi}{2})}) + (2\i k) a_l \e^{\i kr}]P_l(\cos\theta)
+    \psi(\bm{r}) = \sum_{l = 0}^{\infty} \frac{2l + 1}{2\i kr}\qty[\i^l \qty(\exp\qty{\i\qty(kr - \frac{l\pi}{2})} - \exp\qty{-\i\qty(kr - \frac{l\pi}{2})}) + (2\i k) a_l \e^{\i kr}]P_l(\cos\theta)
   \end{align}
   を得る．さらに，
   \begin{align}
-    \i^l \qty[\exp\qty{\i(kr - \frac{l\pi}{2})} - \exp\qty{-\i(kr - \frac{l\pi}{2})}] &= \i^l \exp\qty(-\i\frac{l\pi}{2})\qty(\e^{\i kr} - \e^{-\i kr} e^{\i l\pi}) \\
+    \i^l \qty[\exp\qty{\i\qty(kr - \frac{l\pi}{2})} - \exp\qty{-\i\qty(kr - \frac{l\pi}{2})}] &= \i^l \exp\qty(-\i\frac{l\pi}{2})\qty(\e^{\i kr} - \e^{-\i kr} e^{\i l\pi}) \\
     &= 1\cdot\qty(\e^{\i kr} - (-1)^l) \e^{-\i kr}
   \end{align}
   なる関係を用いると波動関数は，
   \begin{align}
-    \psi(\bm{r}) = \sum_{l = 0}^{\infty} \qty[(1 + 2\i ka_l)\e^{\i kr} - (-1)^l \e^{-\i kr}]P_l(\cos\theta)\label{SCPartialWave}
+    \psi(\bm{r}) = \sum_{l = 0}^{\infty} \qty[\qty(1 + 2\i ka_l)\e^{\i kr} - (-1)^l \e^{-\i kr}]P_l(\cos\theta)\label{SCPartialWave}
   \end{align}
   と書ける．
   第1項は外向き球面波，第2項は内向き球面波を表す．この散乱は全反射であるため入射波と反射波の振幅は等しい．
@@ -66,8 +68,8 @@
   である．
   全断面積$\sigma^{\r{tot}}$は，
   \begin{align}
-    \sigma^{\r{tot}} &= 4\pi \sum_{l=0}^{\infty} (2l+1)\abs{a_l}^2 \\
-    &= \frac{4\pi}{k^2} \sum_{l=0}^{\infty} (2l+1)\sin^2\delta_l 
+    \sigma^{\r{tot}} &= 4\pi \sum_{l=0}^{\infty} (2l + 1)\abs{a_l}^2 \\
+    &= \frac{4\pi}{k^2} \sum_{l=0}^{\infty} (2l + 1)\sin^2\delta_l 
   \end{align}
   である．
   散乱振幅$f(\theta)$は，
@@ -90,7 +92,7 @@
   これは全断面積が前方散乱の散乱振幅からわかることを示している\footnote{
     砂川，散乱の量子論，「光学定理は，前方散乱によって，入射波の強度が減少した分だけ，四方に散乱されるという，まことに当然なことを述べているのである．」 
   }．
-  \begin{myex}{半径$a$の剛体球による散乱}{}
+  \begin{myex}{半径$a$の剛体球による散乱(再考)}{}
     散乱体のポテンシャルを，
     \begin{align}
       V(r) =
@@ -116,7 +118,7 @@
     \begin{align}
       \delta_0 = -ka
     \end{align}
-    である．全断面積は
+    である．全断面積は，
     \begin{align}
       \sigma^{\r{tot}} &= \frac{4\pi}{k^2}\sin^2\delta_0 \\
       &\simeq \frac{4\pi}{k^2}\delta_0 \\
@@ -130,7 +132,7 @@
     \begin{align}
       \psi(\bm{r}) = \sum_{l=0}^{\infty} \i^l \frac{2l+1}{2}\qty[\e^{2\i\delta_l} h_l^{(1)} (kr) + h_l^{(2)} (kr)] P_l(\cos\theta)
     \end{align}
-    を用い，半径$a$の剛体球
+    を用いて，半径$a$の剛体球，
     \begin{align}
       V(r) = 
       \begin{dcases}
@@ -141,14 +143,14 @@
     による散乱を考える．特に，$ka$が小さい低エネルギー散乱において，$l$の増大に伴ってその寄与が散乱に対してどの程度小さくなるか
     調べる．ここで，
     \begin{align}
-      h_l^{(1)}(kr) = j_l(kr) + \i n_l(kr),\ h_l^{(2)}(kr) = j_l(kr) - \i n_l(kr)
+      h_l^{(1)}(kr) = j_l(kr) + \i y_l(kr),\ h_l^{(2)}(kr) = j_l(kr) - \i y_l(kr)
     \end{align}
-    は球Hankel関数であり，$j_l(kr)$は球Bessel関数，$n_l(kr)$は球Neumann関数である．
+    は球Hankel関数であり，$j_l(kr)$は球Bessel関数，$y_l(kr)$は球Neumann関数である．
     \begin{enumerate}
-      \item 波動関数の境界条件をかんがえることで，散乱による位相シフト$\tan\delta_l$を$j_l(ka)$と$n_l(ka)$を用いて表せ．
+      \item 波動関数の境界条件を考えることで，散乱による位相シフト$\tan\delta_l$を$j_l(ka)$と$y_l(ka)$を用いて表せ．
       \item 低エネルギー散乱($ka \ll 1$)を考える．このとき，
         \begin{align}
-          j_l(ka) \to \frac{(ka)^l}{(2l+1)!!},\ n_l(ka) \to -\frac{(2l-1)!!}{(ka)^{l+1}}\label{LimitOfBessel}
+          j_l(ka) \to \frac{(ka)^l}{(2l+1)!!},\ y_l(ka) \to -\frac{(2l-1)!!}{(ka)^{l+1}}\label{LimitOfBessel}
         \end{align}
         \begin{align}
           (2l+1)!! = (2l+1)(2l-1)\cdots5\cdot3\cdot1 \\
@@ -162,19 +164,19 @@
       \item 波動関数は剛体球の中に侵入できないため$r=a$で$\psi=0$である．よって，
         \begin{align}
           \e^{2\i \delta_l} h_l^{(1)} (ka) + h_l^{(2)}(ka) = 0 \\
-          \e^{2\i \delta_l}\qty(j_l(ka) + \i n_l(ka)) + \qty(j_l(ka) - \i n_l(ka)) = 0 \\
-          \qty(\e^{2\i \delta_l} + 1)j_l(ka) + \i\qty(\e^{2\i \delta_l} - 1)n_l(ka) = 0 \\
-          2\cos\delta_l j_l(ka) -2 \sin\delta_l n_l(ka) = 0
+          \e^{2\i \delta_l}\qty(j_l(ka) + \i y_l(ka)) + \qty(j_l(ka) - \i y_l(ka)) = 0 \\
+          \qty(\e^{2\i \delta_l} + 1)j_l(ka) + \i\qty(\e^{2\i \delta_l} - 1)y_l(ka) = 0 \\
+          2\cos\delta_l j_l(ka) -2 \sin\delta_l y_l(ka) = 0
         \end{align}
         となり，位相シフトとして，
         \begin{align}
-          \tan\delta_l = \frac{j_l(ka)}{n_l(ka)}\label{phaseshift}
+          \tan\delta_l = \frac{j_l(ka)}{y_l(ka)}\label{phaseshift}
         \end{align}
         が得られる．
       \item \refe{LimitOfBessel}を\refe{phaseshift}に代入すると，
         \begin{align}
-          \tan\delta_l &\to \frac{(ka)^l}{(2l+1)!!} \qty(- \frac{(ka)^{l+1}}{(2l -1)!!}) \\
-          &= -\frac{(ka)^{2l+1}}{(2l+1)!!(2l-1)!!} \\
+          \tan\delta_l &\to \frac{(ka)^l}{(2l+1)!!} \qty(- \frac{(ka)^{l + 1}}{(2l -1)!!}) \\
+          &= -\frac{(ka)^{2l + 1}}{(2l + 1)!!(2l - 1)!!} \\
         \end{align}
         となる．
         $l = 0, 1, 2$を代入する．ここで，$(n - 2)!! = \frac{n!}{n}$であることに注意すると，
