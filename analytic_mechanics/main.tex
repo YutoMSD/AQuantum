@@ -1,0 +1,136 @@
+\documentclass{report}
+\input{../head.tex}
+\begin{document}
+  この章では解析力学から量子力学への接続を駆け足で書く．
+  座標と運動量に依存するある物理量$\omega(x_i,p_i)$を考える．$\omega$の時間微分は
+  \begin{align}
+    \dv{\omega}{t} = \frac{\partial\omega}{\partial x_i}\dot{x}_i + \frac{\partial \omega}{\partial p_i}\dot{p}_i \label{time-derivative-omega}
+  \end{align}
+  である．ここで正準方程式
+  \begin{align}
+    \begin{dcases}
+      \dot{x}_i = \frac{\partial H}{\partial p_i}\\
+      \dot{p}_i = -\frac{\partial H}{\partial x_i}
+    \end{dcases}
+  \end{align}
+  より，\refe{time-derivative-omega}の右辺は
+  \begin{align}
+    \frac{\partial\omega}{\partial x_i}\dot{x}_i + \frac{\partial \omega}{\partial p_i}\dot{p}_i
+    =
+    \frac{\partial\omega}{\partial x_i}\frac{\partial H}{\partial p_i} - \frac{\partial \omega}{\partial p_i}\frac{\partial H}{\partial x_i}
+  \end{align}
+  と書ける．上式の右辺を
+  \begin{align}
+    \qty{\omega,H} \equiv   \frac{\partial\omega}{\partial x_i}\frac{\partial H}{\partial p_i} - \frac{\partial \omega}{\partial p_i}\frac{\partial H}{\partial x_i}
+  \end{align}
+  とおき，これを\textbf{Poisson括弧}という．つまり，$\omega$の時間微分は
+  \begin{align}
+    \dv{\omega}{t} = \qty{\omega,H} \label{poisson-h}
+  \end{align}
+  と書ける．Poisson括弧は一般の物理量$\lambda$で
+  \begin{align}
+    \qty{\omega,\lambda} \equiv   \frac{\partial\omega}{\partial x_i}\frac{\partial \lambda}{\partial p_i} - \frac{\partial \omega}{\partial p_i}\frac{\partial \lambda}{\partial x_i}
+  \end{align}
+  と定義される．
+
+  $\omega$の時間発展
+  \begin{align}
+    \omega(t) = \omega(t+\epsilon) = \omega(t) + \epsilon\dv{\omega}{t}
+  \end{align}
+  を考える．これは\refe{poisson-h}を用いると，
+  \begin{align}
+    \omega(t+\epsilon) = \omega(t) + \epsilon\qty{\omega,H}
+  \end{align}
+  と書くことができる．つまり，$\omega$の時間発展による変化量$\delta\omega=\epsilon\dv{\omega}{t}$はPoisson括弧により，
+  \begin{align}
+    \delta\omega = \epsilon\qty{\omega,H} \label{time-evolution-by-poisson}
+  \end{align}
+  と表される．\refe{time-evolution-by-poisson}から，\textbf{$\omega$の時間発展が$\omega$と$H$のPoisson括弧をとることにより生み出される}ことがわかる．
+  もし$\omega$が保存量であれば
+  \begin{align}
+    \qty{\omega,H}=0
+  \end{align}
+  である．
+
+  この概念を一般化する．物理量$\omega$が何らかの変換により，
+  \begin{align}
+    \omega \to \omega + \delta\omega = \omega + \epsilon\qty[    \frac{\partial\omega}{\partial x_i}\delta x_i + \frac{\partial \omega}{\partial p_i}\delta p_i
+    ]
+  \end{align}
+  と変化したとする．ここである関数$Q(x_i,p_i)$が$\delta x_i,\delta p_i$を生み出したとする．つまり，
+  \begin{align}
+    \delta x_i &= \frac{\partial Q}{\partial p_i}\\
+    \delta p_i &= -\frac{\partial Q}{\partial x_i}
+  \end{align}
+  とすると，
+  $\omega$の変化は，
+  \begin{align}
+    \omega + \epsilon\qty{\omega,Q}
+  \end{align}
+  と書ける．$Q$はPoisson括弧をとることにより変換を生み出したとみなせるので，$Q$は\textbf{Generator}と呼ばれる．
+  \begin{myex}{}{}
+  $\omega=x_i$，$Q=p_j$とする．
+  \begin{align}
+    \qty{x_i, p_j} &= \frac{\partial\x_i}{\partial x_i}\frac{\partial p_j}{\partial p_i} + \frac{\partial \x_i}{\partial p_i}\frac{\partial p_i}{\partial x_i}\\
+    &= \delta_{ji}
+  \end{align}
+  よって，
+  \begin{align}
+    x_i \to x_i + \delta x_i = x_i + \epsilon \delta_{ji}
+  \end{align}
+  したがって，$j$方向の運動量は$j$方向への並進操作を生成する．
+  \end{myex}
+  まとめると，$H$のPoisson括弧は時間発展，$p$のPoisson括弧は並進操作を生み出す．同様に角運動量$l$のPoisson括弧が回転操作に対応することも
+  確認できる．また，$x$と$p$の間には
+  \begin{align}
+    \qty{x,p} = 1 \label{xp-poisson}
+  \end{align}
+  が成り立つ．
+
+  量子力学の世界に入る．$p$は並進操作を生むので，運動量演算子$\hat{p}$が並進操作のgeneratorと考える．
+  並進操作の演算子を
+  \begin{align}
+    \e^{-\i\frac{a\hat{p}}{\hbar}}\ket{x} = \ket{x+a}
+  \end{align}
+  と定義する．$a$が微小量$\epsilon$のとき，
+  \begin{align}
+    \qty(\hat{I} - \frac{\i}{\hbar}\epsilon\hat{p}) \ket{x} = \ket{x+\epsilon}
+  \end{align}
+  と書ける．これを用いて座標空間での$\hat{p}$の形を導出する．ここで，座標空間では
+  \begin{align}
+    \hat{x}\ket{\psi} \to x\psi(x)
+  \end{align}
+  である．
+
+  一般の量子状態$\ket{\psi}$に$\ket{x+\epsilon}$を作用させて，
+  \begin{align}
+    \bra{x+\epsilon}\ket{\psi} &= \bra{x}\qty(\hat{I} + \frac{\i}{\hbar}\epsilon\hat{p})\ket{\psi}\\
+    &=\braket{x}{\psi} + \frac{\i}{\hbar}\epsilon\bra{x}\hat{p}\ket{\psi}\\
+    &= \braket{x}{\psi} + \frac{\i}{\hbar} \epsilon\int\dd{x'}\bra{x}\hat{p}\ket{x'}\bra{x'}\ket{\psi}
+  \end{align}
+  を得る．
+  また，$\braket{x+\epsilon}{\psi}$は波動関数$\psi(x)$を用いて，
+  \begin{align}
+    \braket{x+\epsilon}{\psi} &= \psi(x+\epsilon)\\
+    &= \psi(x) + \epsilon\dv{\psi}{x}\\
+    &= \psi(x) + \epsilon \int \dd{x'}\delta(x-x')\dv{\psi(x')}{x'}\\
+    &= \psi(x) - \epsilon\int\dd{x'}\dv{\delta(x-x')}{x'}\psi(x')
+  \end{align}
+  とも書ける．これら2式を見比べると，
+  \begin{align}
+    \bra{x}\hat{p}\ket{x'} = -\i\hbar\dv{\delta(x-x')}{x}
+  \end{align}
+  が得られる．よって，
+  \begin{align}
+    \bra{x}\hat{p}\ket{\psi} = -\i\hbar\dv{\psi}{x}
+  \end{align}
+  である．したがって，
+  \begin{align}
+    \hat{p} \to -\i\hbar\frac{\partial}{\partial x}
+  \end{align}
+  とできる．さらに，$\hat{x}$と$\hat{p}$の間には交換関係
+  \begin{align}
+    [\hat{x},\hat{p}] = \i\hbar
+  \end{align}
+  が成り立つ．これは解析力学でのPoisson括弧\refe{xp-poisson}の$\i\hbar$倍である．
+\end{document}
